@@ -378,7 +378,7 @@ function App() {
                 key={selectedSentence.id}
                 className="glass-panel px-6 sm:px-10 py-4 sm:py-5 rounded-3xl flex flex-col items-center shadow-2xl border border-slate-500/30 bg-slate-900/80 backdrop-blur-xl w-full max-w-xl"
               >
-                <RubyText hanzi={selectedSentence.chinese} pinyin={selectedSentence.pinyin} large className="!text-2xl sm:!text-4xl shadow-sm" />
+                <RubyText hanzi={selectedSentence.chinese} pinyin={selectedSentence.pinyin} large displayFont className="!text-2xl sm:!text-4xl shadow-sm" />
                 <div className="mt-3 text-xs sm:text-sm text-slate-300 italic font-medium tracking-wide">"{selectedSentence.translation}"</div>
               </motion.div>
 

@@ -6,6 +6,7 @@ interface RubyTextProps {
     pinyin: string;
     className?: string;
     large?: boolean;
+    displayFont?: boolean;
 }
 
 // Characters that are punctuation and should NOT consume a pinyin syllable.
@@ -18,7 +19,7 @@ const isPunctuation = (char: string) =>
  * directly above its character. Punctuation characters pass through without
  * consuming a syllable slot so alignment is never thrown off.
  */
-export const RubyText: React.FC<RubyTextProps> = ({ hanzi, pinyin, className = '', large = false }) => {
+export const RubyText: React.FC<RubyTextProps> = ({ hanzi, pinyin, className = '', large = false, displayFont = false }) => {
     const chars = Array.from(hanzi);
     // Strip punctuation-only tokens from the pinyin string (e.g. commas written
     // into the pinyin field as ", " separators) so they don't consume syllable slots.
@@ -42,7 +43,7 @@ export const RubyText: React.FC<RubyTextProps> = ({ hanzi, pinyin, className = '
         >
             {pairs.map(({ char, syllable }, i) => (
                 <ruby key={i} className="inline-flex flex-col items-center" style={{ rubyAlign: 'center' }}>
-                    <span className={`font-semibold text-slate-50 tracking-widest ${large ? 'font-chinese-display' : 'font-chinese-ui'}`}>{char}</span>
+                    <span className={`font-semibold text-slate-50 tracking-widest ${displayFont ? 'font-chinese-display' : 'font-chinese-ui'}`}>{char}</span>
                     <rt className="text-[0.42em] text-[var(--color-mandarin-gold)] font-medium not-italic mb-0.5 whitespace-nowrap">
                         {syllable}
                     </rt>
