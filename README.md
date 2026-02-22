@@ -1,73 +1,61 @@
-# React + TypeScript + Vite
+# 🌳 Mandarin Syntax Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive visualizer for Mandarin Chinese grammar structures. Select an example sentence and explore its syntactic tree — with pinyin, translations, and plain-English explanations of every grammatical concept.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Interactive syntax trees** — Nodes expand and collapse; pan and zoom the canvas freely
+- **Curated example sentences** — Covers a range of structures from simple topic–comment to advanced constructions
+- **Grammar categories** covered:
+  - Basic Topic–Comment
+  - 把 (Bǎ) Construction
+  - 被 (Bèi) Passive
+  - 是…的 (Shì–de) Emphasis
+  - Comparatives with 比 (Bǐ)
+  - Separable Verbs (离合词)
+  - Rhetorical Questions & Double Negation
+- **Pinyin & translations** on every node
+- **Rich explanations** written for learners, not linguists
+- **Responsive layout** with mobile zoom support
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Layer | Library |
+|---|---|
+| Framework | React 19 + TypeScript |
+| Build tool | Vite |
+| Tree rendering | [@xyflow/react](https://reactflow.dev/) |
+| Graph layout | [dagre](https://github.com/dagrejs/dagre) |
+| Animations | [framer-motion](https://www.framer.com/motion/) |
+| Styling | Tailwind CSS v4 |
+| Icons | [lucide-react](https://lucide.dev/) |
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Then open [http://localhost:5173](http://localhost:5173).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Project Structure
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/       # React UI components (tree nodes, panels, controls)
+├── data/
+│   ├── sentences.ts  # All example sentences with full tree data
+│   └── glossary.ts   # Grammar term definitions
+└── types/            # TypeScript type definitions
+```
+
+## Adding Sentences
+
+Each sentence lives in `src/data/sentences.ts` as a `SentenceData` object with:
+- `category` — the grammar group it belongs to
+- `chinese`, `pinyin`, `translation` — the sentence itself
+- `explanation` — a learner-friendly description (supports markdown bold)
+- `tree` — a recursive node tree defining the syntactic structure
+
+See existing entries for reference on how to build the tree shape.
