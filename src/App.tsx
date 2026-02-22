@@ -8,7 +8,7 @@ import { RubyText } from './components/RubyText';
 
 function App() {
   const [selectedId, setSelectedId] = useState<string>(sampleSentences[0].id);
-  const [explainerOpen, setExplainerOpen] = useState(true);
+  const [explainerOpen, setExplainerOpen] = useState(false);
   const [explainerTab, setExplainerTab] = useState<'framework' | 'sentence'>('framework');
   const [mobileView, setMobileView] = useState<'list' | 'tree'>('list');
 
@@ -184,7 +184,7 @@ function App() {
             </div>
 
             {/* ── Explainer Card (two-tab) ─────────────────────────────── */}
-            <div className="mt-5 rounded-2xl bg-slate-900/60 border border-slate-700/50 overflow-hidden flex-shrink-0">
+            <div className="hidden sm:block mt-5 rounded-2xl bg-slate-900/60 border border-slate-700/50 overflow-hidden flex-shrink-0">
 
               {/* Toggle header */}
               <button
