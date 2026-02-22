@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useEffect, useCallback } from 'react';
-import { ReactFlow, Controls, Background, Position, MarkerType, type Edge, type Node, type NodeMouseHandler } from '@xyflow/react';
+import { ReactFlow, Controls, Background, Position, MarkerType, useReactFlow, type Edge, type Node, type NodeMouseHandler } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { Eye, EyeOff } from 'lucide-react';
 
@@ -275,6 +275,18 @@ const parseTreeToFlow = (root: AppGrammarNodeData | undefined, expandedIds: Set<
     };
 };
 
+/** Inner component: imperatively calls fitView() after nodes settle, fixing
+ *  the mobile over-zoom-out where the declarative fitView prop fires too early.
+ */
+const FitViewOnChange: React.FC<{ nodes: Node[] }> = ({ nodes }) => {
+    const { fitView } = useReactFlow();
+    useEffect(() => {
+        const id = setTimeout(() => fitView({ padding: 0.15, duration: 200 }), 50);
+        return () => clearTimeout(id);
+    }, [nodes, fitView]);
+    return null;
+};
+
 interface SyntaxTreeProps {
     tree?: AppGrammarNodeData;
 }
@@ -349,8 +361,6 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree }) => {
                 nodeTypes={nodeTypes}
                 edgeTypes={edgeTypes}
                 onNodeClick={onNodeClick}
-                fitView
-                fitViewOptions={{ padding: 0.15 }}
                 minZoom={0.3}
                 maxZoom={1.5}
                 proOptions={{ hideAttribution: true }}
@@ -359,6 +369,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree }) => {
             >
                 <Background color="#1e293b" gap={24} size={1} />
                 <Controls position="top-right" className="!bg-slate-800 !border-slate-700 !text-slate-300 !fill-slate-300" />
+                <FitViewOnChange nodes={nodes} />
             </ReactFlow>
         </div>
     );
