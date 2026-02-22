@@ -60,9 +60,9 @@ export const glossary: Record<GrammarRole, { headline: string; detail: string }>
             'The thing the verb acts on. In "她看书", 书 (book) is the object.',
     },
     Adverb: {
-        headline: 'A word that modifies the verb',
+        headline: 'A word or phrase that modifies the verb',
         detail:
-            'Usually appears right before the verb to tell us how, when, how often, or to what degree it happens. E.g. 都 (all), 还是 (still), 难道 (really?).',
+            'Usually appears right before the verb to tell us how, when, how often, or to what degree it happens. E.g. 都 (all), 还是 (still), 难道 (really?). In Mandarin, this pre-verbal position (called 状语 zhuàngyǔ) also includes location phrases (e.g. 在厨房里 "in the kitchen") and manner phrases (e.g. 生气地 "angrily") — things English would call adverbial phrases rather than adverbs.',
     },
     Preposition: {
         headline: 'A linking word showing relationship',

@@ -83,7 +83,7 @@ export const GrammarNode = ({ data, isConnectable }: NodeProps<GrammarNodeType>)
                         pro-drop
                     </span>
                 )}
-                {data.role === 'Head Verb' && data.subRole?.includes('separable verb') && (
+                {(data.role === 'Head Verb' || data.role === 'Verb Phrase') && data.subRole?.includes('separable verb') && (
                     <span title="离合词 — Separable verb: a V-O compound that can be split by particles or other words (e.g. 见面 → 见过面)" className="ml-1 text-[9px] text-amber-300 font-bold bg-amber-900/40 border border-amber-500/50 px-1 py-0.5 rounded tracking-normal normal-case">
                         离合词
                     </span>
@@ -108,7 +108,7 @@ export const GrammarNode = ({ data, isConnectable }: NodeProps<GrammarNodeType>)
                         被字句
                     </span>
                 )}
-                {(data.subRole === 'emphatic copula' || data.subRole === 'emphatic closure') && (
+                {(data.subRole === 'emphatic copula' || data.subRole === 'emphatic copula (是…的)' || data.subRole === 'emphatic closure') && (
                     <span title="是…的 — Shì-de construction: 是 and 的 bracket the verb phrase to focus on time, place, or manner of a past event" className="ml-1 text-[9px] text-cyan-300 font-bold bg-cyan-900/40 border border-cyan-500/50 px-1 py-0.5 rounded tracking-normal normal-case">
                         是…的
                     </span>

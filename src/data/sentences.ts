@@ -213,7 +213,13 @@ export const sampleSentences: SentenceData[] = [
                                         {
                                             id: 'n3-p-vp-comp-n',
                                             role: 'Noun',
-                                            text: { hanzi: '出租车上', pinyin: 'chū zū chē shàng', translation: 'taxi (on)' }
+                                            text: { hanzi: '出租车', pinyin: 'chū zū chē', translation: 'taxi' }
+                                        },
+                                        {
+                                            id: 'n3-p-vp-comp-loc',
+                                            role: 'Particle',
+                                            subRole: 'localizer',
+                                            text: { hanzi: '上', pinyin: 'shàng', translation: '(on/in — localizer)' }
                                         }
                                     ]
                                 },
@@ -386,7 +392,7 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n5-p-vp1-v',
-                                    role: 'Verb',
+                                    role: 'Head Verb',
                                     text: { hanzi: '决定', pinyin: 'jué dìng', translation: 'decide' }
                                 }
                             ]
@@ -398,7 +404,7 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n5-p-vp2-v',
-                                    role: 'Verb',
+                                    role: 'Head Verb',
                                     text: { hanzi: '开始', pinyin: 'kāi shǐ', translation: 'start' }
                                 }
                             ]
@@ -410,7 +416,7 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n5-p-vp3-v',
-                                    role: 'Verb',
+                                    role: 'Head Verb',
                                     text: { hanzi: '学', pinyin: 'xué', translation: 'learn' }
                                 }
                             ]
@@ -422,7 +428,7 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n5-p-vp4-v',
-                                    role: 'Verb',
+                                    role: 'Head Verb',
                                     text: { hanzi: '开', pinyin: 'kāi', translation: 'drive' }
                                 },
                                 {
@@ -794,14 +800,13 @@ export const sampleSentences: SentenceData[] = [
                         },
                         {
                             id: 'n9-p-adj',
-                            role: 'Adverb',
-                            subRole: 'head adjective (acts as verb)',
+                            role: 'Adjective',
                             text: { hanzi: '高', pinyin: 'gāo', translation: 'tall/high' }
                         },
                         {
                             id: 'n9-p-part',
                             role: 'Particle',
-                            subRole: 'structural',
+                            subRole: 'degree complement linker',
                             text: { hanzi: '得', pinyin: 'de', translation: '(links degree)' }
                         },
                         {
@@ -869,7 +874,7 @@ export const sampleSentences: SentenceData[] = [
                                             children: [
                                                 {
                                                     id: 'n10-p-lian-obj-attr2-adj',
-                                                    role: 'Adverb',
+                                                    role: 'Adjective',
                                                     text: { hanzi: '简单', pinyin: 'jiǎn dān', translation: 'simple' }
                                                 },
                                                 {
@@ -1142,7 +1147,7 @@ export const sampleSentences: SentenceData[] = [
                             subRole: 'clause 2',
                             children: [
                                 {
-                                    id: 'n13-vp2-adv',
+                                    id: 'n13-vp2-hv',
                                     role: 'Head Verb',
                                     text: { hanzi: '想', pinyin: 'xiǎng', translation: 'want to / feel like' }
                                 },
@@ -1152,7 +1157,7 @@ export const sampleSentences: SentenceData[] = [
                                     children: [
                                         {
                                             id: 'n13-vp2-obj-hv',
-                                            role: 'Head Verb',
+                                            role: 'Verb Phrase',
                                             subRole: 'separable verb (离合词) — 睡觉',
                                             children: [
                                                 {
@@ -1392,7 +1397,7 @@ export const sampleSentences: SentenceData[] = [
                                     children: [
                                         {
                                             id: 'n16-vp-obj-hv',
-                                            role: 'Head Verb',
+                                            role: 'Verb Phrase',
                                             subRole: 'separable verb (离合词) — 唱歌',
                                             children: [
                                                 {
@@ -1923,8 +1928,8 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n23-shi',
-                            role: 'Head Verb',
-                            subRole: 'focus launcher (是)',
+                            role: 'Particle',
+                            subRole: 'emphatic copula (是…的)',
                             text: { hanzi: '是', pinyin: 'shì', translation: 'is (it was …)' }
                         },
                         {
