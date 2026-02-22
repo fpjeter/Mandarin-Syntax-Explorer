@@ -849,6 +849,7 @@ export const sampleSentences: SentenceData[] = [
                                 {
                                     id: 'n10-p-lian-prep',
                                     role: 'Preposition',
+                                    subRole: 'lián opener (连…都 bracket)',
                                     text: { hanzi: '连', pinyin: 'lián', translation: 'even' }
                                 },
                                 {

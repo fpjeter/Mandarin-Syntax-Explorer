@@ -84,18 +84,43 @@ export const GrammarNode = ({ data, isConnectable }: NodeProps<GrammarNodeType>)
                     </span>
                 )}
                 {data.role === 'Head Verb' && data.subRole?.includes('separable verb') && (
-                    <span className="ml-1 text-[9px] text-amber-300 font-bold bg-amber-900/40 border border-amber-500/50 px-1 py-0.5 rounded tracking-normal normal-case">
+                    <span title="离合词 — Separable verb: a V-O compound that can be split by particles or other words (e.g. 见面 → 见过面)" className="ml-1 text-[9px] text-amber-300 font-bold bg-amber-900/40 border border-amber-500/50 px-1 py-0.5 rounded tracking-normal normal-case">
                         离合词
                     </span>
                 )}
                 {data.role === 'Complement' && data.subRole?.includes('resultative') && (
-                    <span className="ml-1 text-[9px] text-violet-300 font-bold bg-violet-900/40 border border-violet-500/50 px-1 py-0.5 rounded tracking-normal normal-case">
+                    <span title="结果补语 — Resultative complement: expresses the result achieved by the verb (e.g. 碎 in 打碎 = hit→shatter)" className="ml-1 text-[9px] text-violet-300 font-bold bg-violet-900/40 border border-violet-500/50 px-1 py-0.5 rounded tracking-normal normal-case">
                         结果补语
                     </span>
                 )}
                 {(data.role === 'Complement' || data.role === 'Particle') && data.subRole?.includes('potential') && (
-                    <span className="ml-1 text-[9px] text-sky-300 font-bold bg-sky-900/40 border border-sky-500/50 px-1 py-0.5 rounded tracking-normal normal-case">
+                    <span title="可能补语 — Potential complement: V+得/不+RC expressing ability/possibility (e.g. 看不了 = unable to finish reading)" className="ml-1 text-[9px] text-sky-300 font-bold bg-sky-900/40 border border-sky-500/50 px-1 py-0.5 rounded tracking-normal normal-case">
                         可能补语
+                    </span>
+                )}
+                {data.role === 'Preposition' && (data.subRole?.includes('bǎ') || data.subRole?.includes('ba-')) && (
+                    <span title="把字句 — BĂ construction: fronts the object before the verb to focus on the action's effect on it" className="ml-1 text-[9px] text-orange-300 font-bold bg-orange-900/40 border border-orange-500/50 px-1 py-0.5 rounded tracking-normal normal-case">
+                        把字句
+                    </span>
+                )}
+                {data.role === 'Preposition' && data.subRole?.includes('bei') && (
+                    <span title="被字句 — BÈI passive: marks the agent of a passive construction; subject receives the action" className="ml-1 text-[9px] text-rose-300 font-bold bg-rose-900/40 border border-rose-500/50 px-1 py-0.5 rounded tracking-normal normal-case">
+                        被字句
+                    </span>
+                )}
+                {(data.subRole === 'emphatic copula' || data.subRole === 'emphatic closure') && (
+                    <span title="是…的 — Shì-de construction: 是 and 的 bracket the verb phrase to focus on time, place, or manner of a past event" className="ml-1 text-[9px] text-cyan-300 font-bold bg-cyan-900/40 border border-cyan-500/50 px-1 py-0.5 rounded tracking-normal normal-case">
+                        是…的
+                    </span>
+                )}
+                {data.subRole?.includes('double-negation') && (
+                    <span title="双重否定 — Double negation: 非…不可 = 'must without exception'; two negative forms combine for strong affirmation" className="ml-1 text-[9px] text-indigo-300 font-bold bg-indigo-900/40 border border-indigo-500/50 px-1 py-0.5 rounded tracking-normal normal-case">
+                        双重否定
+                    </span>
+                )}
+                {data.subRole?.includes('lián') && (
+                    <span title="连…都 — Emphatic bracket: 连 (even) and 都 (all/even) surround the focused element to express that it holds true without exception" className="ml-1 text-[9px] text-lime-300 font-bold bg-lime-900/40 border border-lime-500/50 px-1 py-0.5 rounded tracking-normal normal-case">
+                        连…都
                     </span>
                 )}
             </div>

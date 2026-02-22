@@ -6,6 +6,7 @@ import { Eye, EyeOff } from 'lucide-react';
 import type { GrammarNodeData as AppGrammarNodeData } from '../types/grammar';
 import { GrammarNode } from './GrammarNode';
 import { CoRefEdge } from './CoRefEdge';
+import { BadgeLegend } from './BadgeLegend';
 
 const nodeTypes = {
     grammarNode: GrammarNode,
@@ -384,6 +385,8 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
                 <Controls position="top-right" className="!bg-slate-800 !border-slate-700 !text-slate-300 !fill-slate-300" />
                 <FitViewOnChange nodes={nodes} isVisible={isVisible} />
             </ReactFlow>
+
+            <BadgeLegend />
         </div>
     );
 };
