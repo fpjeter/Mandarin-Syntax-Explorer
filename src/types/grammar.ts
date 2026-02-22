@@ -20,7 +20,9 @@ export type GrammarRole =
     | 'Complement'
     | 'Head Noun'
     | 'Head Verb'
-    | 'Measure Word';
+    | 'Measure Word'
+    | 'Verb Morpheme'
+    | 'Object Morpheme';
 
 export interface MandarinWord {
     hanzi: string;

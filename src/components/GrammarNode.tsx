@@ -37,6 +37,8 @@ export const GrammarNode = ({ data, isConnectable }: NodeProps<GrammarNodeType>)
             case 'Head Noun': return 'bg-orange-800/60 text-orange-100 border-orange-500/70 border-b-2';
             case 'Head Verb': return 'bg-teal-800/60 text-teal-100 border-teal-500/70 border-b-2';
             case 'Measure Word': return 'bg-cyan-900/40 text-cyan-200 border-cyan-500/50';
+            case 'Verb Morpheme': return 'bg-green-900/50 text-green-200 border-green-500/60 shadow-[0_0_12px_rgba(34,197,94,0.2)]';
+            case 'Object Morpheme': return 'bg-amber-900/50 text-amber-200 border-amber-500/60 shadow-[0_0_12px_rgba(245,158,11,0.2)]';
             default: return 'bg-slate-900/60 text-slate-300 border-slate-700/50';
         }
     };
@@ -79,6 +81,11 @@ export const GrammarNode = ({ data, isConnectable }: NodeProps<GrammarNodeType>)
                 {isGhost && (
                     <span className="ml-1 text-[9px] text-rose-400 font-bold bg-rose-900/30 border border-rose-500/40 px-1 py-0.5 rounded tracking-normal normal-case">
                         pro-drop
+                    </span>
+                )}
+                {data.role === 'Head Verb' && data.subRole?.includes('separable verb') && (
+                    <span className="ml-1 text-[9px] text-amber-300 font-bold bg-amber-900/40 border border-amber-500/50 px-1 py-0.5 rounded tracking-normal normal-case">
+                        离合词
                     </span>
                 )}
             </div>

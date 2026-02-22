@@ -1042,8 +1042,8 @@ export const sampleSentences: SentenceData[] = [
                                 {
                                     id: 'n12-p-verb-v',
                                     role: 'Head Verb',
-                                    subRole: 'verb morpheme of 见面',
-                                    text: { hanzi: '见', pinyin: 'jiàn', translation: 'see/meet' }
+                                    subRole: 'separable verb (离合词) — verb morpheme of 见面',
+                                    text: { hanzi: '见', pinyin: 'jiàn', translation: 'see / meet' },
                                 },
                                 {
                                     id: 'n12-p-verb-asp',
@@ -1152,7 +1152,19 @@ export const sampleSentences: SentenceData[] = [
                                         {
                                             id: 'n13-vp2-obj-hv',
                                             role: 'Head Verb',
-                                            text: { hanzi: '睡觉', pinyin: 'shuì jiào', translation: 'sleep' }
+                                            subRole: 'separable verb (离合词) — 睡觉',
+                                            children: [
+                                                {
+                                                    id: 'n13-vp2-obj-hv-vm',
+                                                    role: 'Verb Morpheme',
+                                                    text: { hanzi: '睡', pinyin: 'shuì', translation: 'sleep (verb)' },
+                                                },
+                                                {
+                                                    id: 'n13-vp2-obj-hv-om',
+                                                    role: 'Object Morpheme',
+                                                    text: { hanzi: '觉', pinyin: 'jiào', translation: 'sleep (noun)' },
+                                                },
+                                            ],
                                         }
                                     ]
                                 }
@@ -1380,7 +1392,19 @@ export const sampleSentences: SentenceData[] = [
                                         {
                                             id: 'n16-vp-obj-hv',
                                             role: 'Head Verb',
-                                            text: { hanzi: '唱歌', pinyin: 'chàng gē', translation: 'sing (songs)' }
+                                            subRole: 'separable verb (离合词) — 唱歌',
+                                            children: [
+                                                {
+                                                    id: 'n16-vp-obj-hv-vm',
+                                                    role: 'Verb Morpheme',
+                                                    text: { hanzi: '唱', pinyin: 'chàng', translation: 'sing' },
+                                                },
+                                                {
+                                                    id: 'n16-vp-obj-hv-om',
+                                                    role: 'Object Morpheme',
+                                                    text: { hanzi: '歌', pinyin: 'gē', translation: 'song(s)' },
+                                                },
+                                            ],
                                         }
                                     ]
                                 }
@@ -1975,8 +1999,8 @@ export const sampleSentences: SentenceData[] = [
                                 {
                                     id: 'n24-vp-v',
                                     role: 'Head Verb',
-                                    subRole: 'verb morpheme of 散步',
-                                    text: { hanzi: '散', pinyin: 'sàn', translation: 'stroll / disperse' }
+                                    subRole: 'separable verb (离合词) — verb morpheme of 散步',
+                                    text: { hanzi: '散', pinyin: 'sàn', translation: 'stroll / disperse' },
                                 },
                                 {
                                     id: 'n24-vp-le',

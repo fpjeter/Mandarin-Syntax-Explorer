@@ -114,4 +114,14 @@ export const glossary: Record<GrammarRole, { headline: string; detail: string }>
         detail:
             'Mandarin requires a special word between a number/demonstrative and a noun. E.g. 只 for animals (那只猫), 个 for general things, 座 for mountains.',
     },
+    'Verb Morpheme': {
+        headline: 'The verb half of a separable verb (离合词)',
+        detail:
+            'Separable verbs (离合词) are VO compounds that can be split apart. This is the verb morpheme — the action half. E.g. 见 in 见面, 睡 in 睡觉, 散 in 散步. Particles, frequency words, and duration complements insert between this morpheme and its object half.',
+    },
+    'Object Morpheme': {
+        headline: 'The object half of a separable verb (离合词)',
+        detail:
+            'Separable verbs (离合词) are VO compounds that can be split apart. This is the noun/object morpheme — the "thing" the verb acts on internally. E.g. 面 in 见面, 觉 in 睡觉, 步 in 散步. When the verb is split, this morpheme moves to the end.',
+    },
 };
