@@ -88,6 +88,16 @@ export const GrammarNode = ({ data, isConnectable }: NodeProps<GrammarNodeType>)
                         离合词
                     </span>
                 )}
+                {data.role === 'Complement' && data.subRole?.includes('resultative') && (
+                    <span className="ml-1 text-[9px] text-violet-300 font-bold bg-violet-900/40 border border-violet-500/50 px-1 py-0.5 rounded tracking-normal normal-case">
+                        结果补语
+                    </span>
+                )}
+                {(data.role === 'Complement' || data.role === 'Particle') && data.subRole?.includes('potential') && (
+                    <span className="ml-1 text-[9px] text-sky-300 font-bold bg-sky-900/40 border border-sky-500/50 px-1 py-0.5 rounded tracking-normal normal-case">
+                        可能补语
+                    </span>
+                )}
             </div>
 
             {/* Ghost placeholder: bracketed implied pronoun */}
