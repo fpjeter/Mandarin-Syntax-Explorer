@@ -10,7 +10,7 @@ function App() {
   const [selectedId, setSelectedId] = useState<string>(sampleSentences[0].id);
   const [explainerOpen, setExplainerOpen] = useState(false);
   const [explainerTab, setExplainerTab] = useState<'framework' | 'sentence'>('framework');
-  const [mobileView, setMobileView] = useState<'list' | 'tree' | 'guide'>('list');
+  const [mobileView, setMobileView] = useState<'list' | 'tree' | 'guide'>('guide');
 
   // Group sentences by category, preserving declaration order
   const groupedSentences = useMemo(() => {
