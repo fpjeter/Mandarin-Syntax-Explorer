@@ -404,7 +404,7 @@ function App() {
 
           {/* Canvas */}
           <div className="flex-1 min-h-0 w-full relative z-0">
-            <SyntaxTree tree={selectedSentence?.tree} />
+            <SyntaxTree tree={selectedSentence?.tree} isVisible={mobileView === 'tree'} />
           </div>
         </div>
 
@@ -416,8 +416,8 @@ function App() {
               <button
                 onClick={() => setExplainerTab('framework')}
                 className={`flex-1 py-2 text-[10px] font-bold uppercase tracking-widest transition-colors ${explainerTab === 'framework'
-                    ? 'text-fuchsia-300 bg-fuchsia-900/20 border-b-2 border-fuchsia-400'
-                    : 'text-slate-400 hover:text-slate-200'
+                  ? 'text-fuchsia-300 bg-fuchsia-900/20 border-b-2 border-fuchsia-400'
+                  : 'text-slate-400 hover:text-slate-200'
                   }`}
               >
                 The Framework
@@ -425,8 +425,8 @@ function App() {
               <button
                 onClick={() => setExplainerTab('sentence')}
                 className={`flex-1 py-2 text-[10px] font-bold uppercase tracking-widest transition-colors ${explainerTab === 'sentence'
-                    ? 'text-emerald-300 bg-emerald-900/20 border-b-2 border-emerald-400'
-                    : 'text-slate-400 hover:text-slate-200'
+                  ? 'text-emerald-300 bg-emerald-900/20 border-b-2 border-emerald-400'
+                  : 'text-slate-400 hover:text-slate-200'
                   }`}
               >
                 This Sentence

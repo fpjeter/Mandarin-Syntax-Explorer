@@ -278,20 +278,33 @@ const parseTreeToFlow = (root: AppGrammarNodeData | undefined, expandedIds: Set<
 /** Inner component: imperatively calls fitView() after nodes settle, fixing
  *  the mobile over-zoom-out where the declarative fitView prop fires too early.
  */
-const FitViewOnChange: React.FC<{ nodes: Node[] }> = ({ nodes }) => {
+const FitViewOnChange: React.FC<{ nodes: Node[]; isVisible?: boolean }> = ({ nodes, isVisible }) => {
     const { fitView } = useReactFlow();
+
+    // Re-fit whenever the node layout changes (e.g. sentence switch)
     useEffect(() => {
         const id = setTimeout(() => fitView({ padding: 0.15, duration: 200 }), 50);
         return () => clearTimeout(id);
     }, [nodes, fitView]);
+
+    // Re-fit when the pane transitions from hidden → visible on mobile.
+    // The initial fit above fires against a 0×0 hidden container; this one
+    // fires after the container has real dimensions.
+    useEffect(() => {
+        if (!isVisible) return;
+        const id = setTimeout(() => fitView({ padding: 0.15, duration: 200 }), 100);
+        return () => clearTimeout(id);
+    }, [isVisible, fitView]);
+
     return null;
 };
 
 interface SyntaxTreeProps {
     tree?: AppGrammarNodeData;
+    isVisible?: boolean;
 }
 
-export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree }) => {
+export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
     const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set());
     const [showGhost, setShowGhost] = useState(true);
 
@@ -369,7 +382,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree }) => {
             >
                 <Background color="#1e293b" gap={24} size={1} />
                 <Controls position="top-right" className="!bg-slate-800 !border-slate-700 !text-slate-300 !fill-slate-300" />
-                <FitViewOnChange nodes={nodes} />
+                <FitViewOnChange nodes={nodes} isVisible={isVisible} />
             </ReactFlow>
         </div>
     );
