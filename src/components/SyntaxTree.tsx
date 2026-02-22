@@ -315,7 +315,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree }) => {
 
     if (!tree) {
         return (
-            <div className="w-full h-full min-h-[600px] border border-slate-700/50 rounded-2xl flex items-center justify-center glass-panel">
+            <div className="w-full h-full border border-slate-700/50 rounded-2xl flex items-center justify-center glass-panel">
                 <p className="text-slate-400 tracking-wide">Select a sentence to visualize</p>
             </div>
         );
@@ -350,15 +350,15 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree }) => {
                 edgeTypes={edgeTypes}
                 onNodeClick={onNodeClick}
                 fitView
-                fitViewOptions={{ padding: 0.35 }}
-                minZoom={0.2}
+                fitViewOptions={{ padding: 0.15 }}
+                minZoom={0.3}
                 maxZoom={1.5}
                 proOptions={{ hideAttribution: true }}
                 nodesDraggable={true}
                 nodesConnectable={false}
             >
                 <Background color="#1e293b" gap={24} size={1} />
-                <Controls className="!bg-slate-800 !border-slate-700 !text-slate-300 !fill-slate-300" />
+                <Controls position="top-right" className="!bg-slate-800 !border-slate-700 !text-slate-300 !fill-slate-300" />
             </ReactFlow>
         </div>
     );
