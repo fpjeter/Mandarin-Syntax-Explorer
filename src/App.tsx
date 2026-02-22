@@ -10,7 +10,7 @@ function App() {
   const [selectedId, setSelectedId] = useState<string>(sampleSentences[0].id);
   const [explainerOpen, setExplainerOpen] = useState(false);
   const [explainerTab, setExplainerTab] = useState<'framework' | 'sentence'>('framework');
-  const [mobileView, setMobileView] = useState<'list' | 'tree'>('list');
+  const [mobileView, setMobileView] = useState<'list' | 'tree' | 'guide'>('list');
 
   // Group sentences by category, preserving declaration order
   const groupedSentences = useMemo(() => {
@@ -109,13 +109,23 @@ function App() {
             <span className="ml-1 w-1.5 h-1.5 rounded-full bg-purple-400 inline-block" />
           )}
         </button>
+        <button
+          onClick={() => setMobileView('guide')}
+          className={`flex-1 flex items-center justify-center gap-2 py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors border-b-2 ${mobileView === 'guide'
+            ? 'text-blue-300 border-blue-500 bg-blue-500/10'
+            : 'text-slate-400 border-transparent hover:text-slate-200'
+            }`}
+        >
+          <Info className="w-3.5 h-3.5" />
+          Guide
+        </button>
       </div>
 
       {/* Main Layout */}
       <main className="flex-1 min-h-0 flex flex-col lg:flex-row p-4 sm:p-6 gap-6 z-10 overflow-hidden">
 
-        {/* Sidebar — hidden on mobile when tree is active */}
-        <div className={`lg:w-96 flex flex-col gap-4 flex-shrink-0 h-full ${mobileView === 'tree' ? 'hidden lg:flex' : 'flex'}`}>
+        {/* Sidebar — hidden on mobile when tree or guide is active */}
+        <div className={`lg:w-96 flex flex-col gap-4 flex-shrink-0 h-full ${mobileView !== 'list' ? 'hidden lg:flex' : 'flex'}`}>
           <div className="glass-panel rounded-3xl p-5 flex flex-col h-full overflow-hidden border border-slate-700/50 shadow-2xl relative">
 
             {/* Ambient glow inside sidebar */}
@@ -329,8 +339,8 @@ function App() {
           </div>
         </div>
 
-        {/* Visualization Pane — hidden on mobile when list is active */}
-        <div className={`flex-1 flex flex-col min-h-0 gap-2 ${mobileView === 'list' ? 'hidden lg:flex' : 'flex'}`}>
+        {/* Visualization Pane — hidden on mobile when list or guide is active */}
+        <div className={`flex-1 flex flex-col min-h-0 gap-2 ${mobileView !== 'tree' ? 'hidden lg:flex' : 'flex'}`}>
 
           {/* ── Sentence header card (in-flow, not absolute) ── */}
           {selectedSentence && (
@@ -397,6 +407,110 @@ function App() {
             <SyntaxTree tree={selectedSentence?.tree} />
           </div>
         </div>
+
+        {/* ── Mobile Guide Pane ── only on < lg, only when guide tab is active */}
+        {mobileView === 'guide' && (
+          <div className="lg:hidden flex-1 min-h-0 overflow-y-auto custom-scrollbar glass-panel rounded-3xl border border-slate-700/50 shadow-2xl p-5">
+            {/* Sub-tab bar */}
+            <div className="flex rounded-xl overflow-hidden border border-slate-700/50 mb-5">
+              <button
+                onClick={() => setExplainerTab('framework')}
+                className={`flex-1 py-2 text-[10px] font-bold uppercase tracking-widest transition-colors ${explainerTab === 'framework'
+                    ? 'text-fuchsia-300 bg-fuchsia-900/20 border-b-2 border-fuchsia-400'
+                    : 'text-slate-400 hover:text-slate-200'
+                  }`}
+              >
+                The Framework
+              </button>
+              <button
+                onClick={() => setExplainerTab('sentence')}
+                className={`flex-1 py-2 text-[10px] font-bold uppercase tracking-widest transition-colors ${explainerTab === 'sentence'
+                    ? 'text-emerald-300 bg-emerald-900/20 border-b-2 border-emerald-400'
+                    : 'text-slate-400 hover:text-slate-200'
+                  }`}
+              >
+                This Sentence
+              </button>
+            </div>
+
+            {/* Framework tab */}
+            {explainerTab === 'framework' && (
+              <div className="space-y-4">
+                <section>
+                  <h3 className="text-[10px] font-bold uppercase tracking-widest text-fuchsia-400 mb-1.5">The big idea</h3>
+                  <p className="text-[11px] text-slate-300 leading-relaxed">
+                    In English, you build a sentence around a <em>subject</em> — the person or thing doing the action.
+                    Mandarin works differently: you first say <em>what you want to talk about</em>,
+                    then say something about it. That opening word or phrase is the{' '}
+                    <span className="text-fuchsia-400 font-bold">Topic</span>, and everything
+                    said about it is the{' '}
+                    <span className="text-blue-400 font-bold">Comment</span>.
+                  </p>
+                </section>
+                <section>
+                  <h3 className="text-[10px] font-bold uppercase tracking-widest text-blue-400 mb-2">Topic vs. Comment</h3>
+                  <div className="grid grid-cols-2 gap-2">
+                    <div className="bg-fuchsia-900/20 border border-fuchsia-600/30 rounded-xl p-2.5">
+                      <p className="text-[10px] font-bold text-fuchsia-300 uppercase tracking-wider mb-1">Topic</p>
+                      <p className="text-[10px] text-slate-300 leading-snug">
+                        Sets the scene. Roughly: <em>"As for X…"</em><br />
+                        Can be a person, a thing, a time, or a place.
+                      </p>
+                    </div>
+                    <div className="bg-blue-900/20 border border-blue-600/30 rounded-xl p-2.5">
+                      <p className="text-[10px] font-bold text-blue-300 uppercase tracking-wider mb-1">Comment</p>
+                      <p className="text-[10px] text-slate-300 leading-snug">
+                        The actual statement about the topic. Contains the main verb and everything around it.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                <section>
+                  <h3 className="text-[10px] font-bold uppercase tracking-widest text-rose-400 mb-1.5">Why subjects disappear</h3>
+                  <p className="text-[11px] text-slate-300 leading-relaxed">
+                    Once the Topic is set, the listener knows who is being talked about.
+                    So Mandarin often skips the subject inside the Comment entirely —
+                    this is called <span className="text-rose-400 font-bold">pro-drop</span>.
+                    The tree shows missing words as faded{' '}
+                    <span className="text-rose-300 font-mono text-[10px]">[ghost]</span> nodes.
+                    Toggle <em>"Show implied subjects"</em> to reveal them.
+                  </p>
+                </section>
+                <section>
+                  <h3 className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1.5">The red arcs</h3>
+                  <p className="text-[11px] text-slate-300 leading-relaxed">
+                    When a dropped pronoun refers back to the Topic,
+                    a <span className="text-rose-400 font-bold">red dashed arc</span> draws
+                    the invisible link — connecting the ghost node to the word it stands for.
+                  </p>
+                </section>
+                <p className="text-[10px] text-slate-500 italic">💡 Hover any node label in the tree for a quick explanation.</p>
+              </div>
+            )}
+
+            {/* This Sentence tab */}
+            {explainerTab === 'sentence' && (
+              <div>
+                {selectedSentence?.explanation ? (
+                  <>
+                    <div className="mb-2.5">
+                      <p className="text-base font-semibold text-slate-100">{selectedSentence.chinese}</p>
+                      <p className="text-[10px] text-slate-400 italic mt-0.5">"{selectedSentence.translation}"</p>
+                    </div>
+                    <p className="text-[11px] text-slate-300 leading-relaxed">{renderExplanation(selectedSentence.explanation)}</p>
+                  </>
+                ) : (
+                  <p className="text-[11px] text-slate-400 leading-relaxed italic">
+                    Select a sentence from the list, then explore the tree by clicking{' '}
+                    <span className="text-fuchsia-400 not-italic font-bold">TOPIC</span> and{' '}
+                    <span className="text-blue-400 not-italic font-bold">COMMENT</span>.
+                    Hover any label for a plain-English explanation.
+                  </p>
+                )}
+              </div>
+            )}
+          </div>
+        )}
 
       </main>
     </div>
