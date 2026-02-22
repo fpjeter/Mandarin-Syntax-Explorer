@@ -57,7 +57,7 @@ function App() {
 
 
   return (
-    <div className="h-screen bg-slate-950 text-slate-100 flex flex-col font-sans relative overflow-hidden">
+    <div className="h-[100dvh] bg-slate-950 text-slate-100 flex flex-col font-sans relative overflow-hidden">
       {/* Background gradients */}
       <div className="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-purple-900/10 blur-[150px] pointer-events-none" />
       <div className="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-blue-900/10 blur-[150px] pointer-events-none" />
@@ -122,7 +122,7 @@ function App() {
       </div>
 
       {/* Main Layout */}
-      <main className="flex-1 min-h-0 flex flex-col lg:flex-row p-4 sm:p-6 gap-6 z-10 overflow-hidden">
+      <main className="flex-1 min-h-0 flex flex-col lg:flex-row p-4 sm:p-6 pb-safe gap-6 z-10 overflow-hidden">
 
         {/* Sidebar — hidden on mobile when tree or guide is active */}
         <div className={`lg:w-96 flex flex-col gap-4 flex-shrink-0 h-full ${mobileView !== 'list' ? 'hidden lg:flex' : 'flex'}`}>
