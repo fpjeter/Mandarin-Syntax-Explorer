@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BookA, Info, PlayCircle, ChevronDown, Network, List, Search, X } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import { sampleSentences } from './data/sentences';
 import type { SentenceCategory } from './types/grammar';
 import { SyntaxTree } from './components/SyntaxTree';
@@ -455,6 +456,7 @@ function App() {
         )}
 
       </main>
+      <Analytics />
     </div>
   );
 }
