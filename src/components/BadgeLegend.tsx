@@ -1,56 +1,6 @@
 import { useState } from 'react';
 import { Tag, ChevronDown, ChevronUp } from 'lucide-react';
-
-const BADGES = [
-    {
-        label: '离合词',
-        color: 'text-amber-300 bg-amber-900/40 border-amber-500/50',
-        headline: 'Separable verb',
-        detail: 'A V-O compound that can be split by particles or other words (e.g. 见面 → 见过面)',
-    },
-    {
-        label: '结果补语',
-        color: 'text-violet-300 bg-violet-900/40 border-violet-500/50',
-        headline: 'Resultative complement',
-        detail: 'Expresses the result achieved by the verb (e.g. 碎 in 打碎 = hit→shatter)',
-    },
-    {
-        label: '可能补语',
-        color: 'text-sky-300 bg-sky-900/40 border-sky-500/50',
-        headline: 'Potential complement',
-        detail: 'V+得/不+RC — expresses ability or possibility (e.g. 看不了 = unable to finish reading)',
-    },
-    {
-        label: '把字句',
-        color: 'text-orange-300 bg-orange-900/40 border-orange-500/50',
-        headline: 'BĂ construction',
-        detail: 'Fronts the object before the verb to emphasise the action\'s effect on it',
-    },
-    {
-        label: '被字句',
-        color: 'text-rose-300 bg-rose-900/40 border-rose-500/50',
-        headline: 'BÈI passive',
-        detail: 'Marks a passive construction; the subject receives rather than performs the action',
-    },
-    {
-        label: '是…的',
-        color: 'text-cyan-300 bg-cyan-900/40 border-cyan-500/50',
-        headline: 'Shì-de construction',
-        detail: '是 and 的 bracket the verb phrase to focus on how, when, or where a past event happened',
-    },
-    {
-        label: '双重否定',
-        color: 'text-indigo-300 bg-indigo-900/40 border-indigo-500/50',
-        headline: 'Double negation',
-        detail: '非…不可 = "absolutely must"; two negatives combine to express strong necessity',
-    },
-    {
-        label: '连…都',
-        color: 'text-lime-300 bg-lime-900/40 border-lime-500/50',
-        headline: 'Emphatic bracket',
-        detail: '连 (even) and 都 (all/even) surround the focused element to stress that it holds without exception',
-    },
-];
+import { BADGES } from '../data/badges';
 
 export const BadgeLegend = () => {
     const [open, setOpen] = useState(false);
@@ -87,7 +37,7 @@ export const BadgeLegend = () => {
             >
                 <Tag className="w-3 h-3" />
                 Legend
-                {open ? <ChevronDown className="w-3 h-3" /> : <ChevronUp className="w-3 h-3" />}
+                {open ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
             </button>
         </div>
     );

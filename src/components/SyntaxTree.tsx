@@ -47,7 +47,7 @@ const estimateNodeWidth = (data: AppGrammarNodeData): number => {
 
     const hanziChars = Array.from(text.hanzi).length;
     const pinyinChars = text.pinyin.length;
-    const contentWidth = Math.max(hanziChars * 24, pinyinChars * 8) + 80;
+    const contentWidth = Math.max(hanziChars * 28, pinyinChars * 8) + 80;
     return Math.max(MIN_WIDTH, Math.min(Math.max(headerWidth, contentWidth), 520));
 };
 
@@ -311,13 +311,10 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
 
     const treeHasProDrop = useMemo(() => tree ? hasProDrop(tree) : false, [tree]);
 
+    // Reset both expandedIds and showGhost together whenever the sentence changes.
     useEffect(() => {
-        if (tree) {
-            // Only root is expanded initially
-            setExpandedIds(new Set([tree.id]));
-        } else {
-            setExpandedIds(new Set());
-        }
+        setExpandedIds(tree ? new Set([tree.id]) : new Set());
+        setShowGhost(true);
     }, [tree]);
 
     const { nodes, edges } = useMemo(() => parseTreeToFlow(tree, expandedIds, showGhost), [tree, expandedIds, showGhost]);
@@ -335,9 +332,6 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
             });
         }
     }, []);
-
-    // Reset ghost toggle when sentence changes
-    useEffect(() => { setShowGhost(true); }, [tree]);
 
     if (!tree) {
         return (

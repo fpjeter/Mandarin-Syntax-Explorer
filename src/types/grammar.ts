@@ -1,3 +1,6 @@
+import { type SentenceCategory } from './data/categories';
+export type { SentenceCategory };
+
 export type GrammarRole =
     | 'Sentence'
     | 'Topic'
@@ -41,16 +44,6 @@ export interface GrammarNodeData {
     children?: GrammarNodeData[];
 }
 
-export type SentenceCategory =
-    | 'Basic Topic–Comment'
-    | 'BA Construction'
-    | 'BEI (Passive)'
-    | 'Pro-drop & Co-reference'
-    | 'Shì–de Construction'
-    | 'Comparatives (Bǐ)'
-    | 'Rhetorical Questions'
-    | 'Separable Verbs (离合词)';
-
 export interface SentenceData {
     id: string;
     category: SentenceCategory;
@@ -67,4 +60,3 @@ export interface SentenceData {
     };
     tree: GrammarNodeData;
 }
-
