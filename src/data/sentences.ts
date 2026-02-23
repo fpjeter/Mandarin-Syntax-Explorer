@@ -2310,7 +2310,743 @@ export const sampleSentences: SentenceData[] = [
             ]
         }
     },
+
+    // ── BA Construction – additional examples ────────────────────────────────
+    {
+        id: 's28',
+        category: 'BA Construction',
+        chinese: '请把窗户关上。',
+        pinyin: 'Qǐng bǎ chuāng hu guān shàng.',
+        translation: 'Please close the window.',
+        explanation: 'A minimal, everyday BA sentence. **请** (please) is a politeness adverb. Then **把** spotlights **窗户** (the window) before the verb — this is the classic BA move: take the object and bring it in front of the verb to show it will be *affected*. The verb **关** (close) is followed by the directional complement **上** (up/onto — here meaning "shut"). The pattern **把 [thing] [verb]+[result]** is the standard template for giving instructions or describing a deliberate act with a clear outcome on an object.',
+        tree: {
+            id: 'n28',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n28-t',
+                    role: 'Topic',
+                    isDropped: true,
+                    impliedText: '你',
+                },
+                {
+                    id: 'n28-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n28-adv',
+                            role: 'Adverb',
+                            subRole: 'politeness',
+                            text: { hanzi: '请', pinyin: 'qǐng', translation: 'please' },
+                        },
+                        {
+                            id: 'n28-ba',
+                            role: 'Preposition',
+                            subRole: 'ba-construction',
+                            children: [
+                                {
+                                    id: 'n28-ba-prep',
+                                    role: 'Preposition',
+                                    text: { hanzi: '把', pinyin: 'bǎ', translation: '(object fronting)' },
+                                },
+                                {
+                                    id: 'n28-ba-obj',
+                                    role: 'Object',
+                                    text: { hanzi: '窗户', pinyin: 'chuāng hu', translation: 'window' },
+                                },
+                            ],
+                        },
+                        {
+                            id: 'n28-vp',
+                            role: 'Verb Phrase',
+                            children: [
+                                {
+                                    id: 'n28-vp-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '关', pinyin: 'guān', translation: 'close' },
+                                },
+                                {
+                                    id: 'n28-vp-comp',
+                                    role: 'Complement',
+                                    subRole: 'directional (sealed/shut)',
+                                    text: { hanzi: '上', pinyin: 'shàng', translation: 'up / shut' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        id: 's29',
+        category: 'BA Construction',
+        chinese: '她把那封信藏在枕头下面了。',
+        pinyin: 'Tā bǎ nà fēng xìn cáng zài zhěn tou xià miàn le.',
+        translation: 'She hid that letter under the pillow.',
+        explanation: '**她** (she) is the Topic. The Comment uses **把** to spotlight **那封信** (that letter) — 封 is the measure word for letters and envelopes. The verb **藏** (hide) is then followed by a location phrase: **在枕头下面** (under the pillow). This location tells you *where the object ended up* — the final resting state after the action. This shows BA\'s core job: once you\'ve fronted the object, the verb naturally attaches a result or destination. Compare with English: "She hid the letter under the pillow" — Mandarin and English are parallel here, but Mandarin uses 把 to mark the intent and outcome much more explicitly.',
+        tree: {
+            id: 'n29',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n29-t',
+                    role: 'Topic',
+                    text: { hanzi: '她', pinyin: 'tā', translation: 'she' },
+                },
+                {
+                    id: 'n29-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n29-ba',
+                            role: 'Preposition',
+                            subRole: 'ba-construction',
+                            children: [
+                                {
+                                    id: 'n29-ba-prep',
+                                    role: 'Preposition',
+                                    text: { hanzi: '把', pinyin: 'bǎ', translation: '(object fronting)' },
+                                },
+                                {
+                                    id: 'n29-ba-obj',
+                                    role: 'Object',
+                                    children: [
+                                        {
+                                            id: 'n29-ba-obj-attr',
+                                            role: 'Attributive',
+                                            text: { hanzi: '那封', pinyin: 'nà fēng', translation: 'that (letter-measure)' },
+                                        },
+                                        {
+                                            id: 'n29-ba-obj-hn',
+                                            role: 'Head Noun',
+                                            text: { hanzi: '信', pinyin: 'xìn', translation: 'letter' },
+                                        },
+                                    ],
+                                },
+                            ],
+                        },
+                        {
+                            id: 'n29-vp',
+                            role: 'Verb Phrase',
+                            children: [
+                                {
+                                    id: 'n29-vp-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '藏', pinyin: 'cáng', translation: 'hide' },
+                                },
+                                {
+                                    id: 'n29-vp-lp',
+                                    role: 'Location Phrase',
+                                    subRole: 'result / final location',
+                                    children: [
+                                        {
+                                            id: 'n29-vp-lp-prep',
+                                            role: 'Preposition',
+                                            text: { hanzi: '在', pinyin: 'zài', translation: 'at/in' },
+                                        },
+                                        {
+                                            id: 'n29-vp-lp-n',
+                                            role: 'Noun',
+                                            text: { hanzi: '枕头', pinyin: 'zhěn tou', translation: 'pillow' },
+                                        },
+                                        {
+                                            id: 'n29-vp-lp-loc',
+                                            role: 'Particle',
+                                            subRole: 'localizer',
+                                            text: { hanzi: '下面', pinyin: 'xià miàn', translation: 'underneath' },
+                                        },
+                                    ],
+                                },
+                                {
+                                    id: 'n29-vp-le',
+                                    role: 'Particle',
+                                    subRole: 'completion',
+                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+
+    // ── Resultative Complements ───────────────────────────────────────────────
+    {
+        id: 's30',
+        category: 'Resultative Complements',
+        chinese: '我听懂了他说的话。',
+        pinyin: 'Wǒ tīng dǒng le tā shuō de huà.',
+        translation: 'I understood what he said.',
+        explanation: '**我** (I) is the Topic. The key is **听懂**: the verb **听** (listen) is stacked directly with the result morpheme **懂** (understand). Together they form a single unit meaning "listened-to-the-point-of-understanding." The **了** after them confirms the result was achieved. This is the core pattern of **resultative complements**: verb + result, no linking word, no pause. If you just said 我听了 (I listened), there\'s no guarantee of understanding. 听懂 asserts the outcome. The object **他说的话** (what he said) is a relative clause: 他说 (he said) + 的 + 话 (words).',
+        tree: {
+            id: 'n30',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n30-t',
+                    role: 'Topic',
+                    text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' },
+                },
+                {
+                    id: 'n30-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n30-vp',
+                            role: 'Verb Phrase',
+                            children: [
+                                {
+                                    id: 'n30-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '听', pinyin: 'tīng', translation: 'listen' },
+                                },
+                                {
+                                    id: 'n30-comp',
+                                    role: 'Complement',
+                                    subRole: 'resultative',
+                                    text: { hanzi: '懂', pinyin: 'dǒng', translation: 'understand / grasp' },
+                                },
+                                {
+                                    id: 'n30-le',
+                                    role: 'Particle',
+                                    subRole: 'completion',
+                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
+                                },
+                                {
+                                    id: 'n30-obj',
+                                    role: 'Object',
+                                    children: [
+                                        {
+                                            id: 'n30-obj-attr',
+                                            role: 'Attributive',
+                                            subRole: 'relative clause',
+                                            children: [
+                                                {
+                                                    id: 'n30-obj-attr-pro',
+                                                    role: 'Pronoun',
+                                                    text: { hanzi: '他', pinyin: 'tā', translation: 'he' },
+                                                },
+                                                {
+                                                    id: 'n30-obj-attr-v',
+                                                    role: 'Head Verb',
+                                                    text: { hanzi: '说', pinyin: 'shuō', translation: 'say' },
+                                                },
+                                                {
+                                                    id: 'n30-obj-attr-de',
+                                                    role: 'Particle',
+                                                    subRole: 'relativizer',
+                                                    text: { hanzi: '的', pinyin: 'de', translation: '(relative clause marker)' },
+                                                },
+                                            ],
+                                        },
+                                        {
+                                            id: 'n30-obj-hn',
+                                            role: 'Head Noun',
+                                            text: { hanzi: '话', pinyin: 'huà', translation: 'words / speech' },
+                                        },
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        id: 's31',
+        category: 'Resultative Complements',
+        chinese: '她哭红了眼睛。',
+        pinyin: 'Tā kū hóng le yǎn jing.',
+        translation: 'She cried her eyes red.',
+        explanation: '**她** (she) is the Topic. This sentence uses a **causative resultative**: the verb **哭** (cry) stacks with the adjective **红** (red). The action of crying *caused* a state change — the eyes turned red. Crucially, the object **眼睛** (eyes) is what underwent the change, not (directly) what was cried. Compare with English: "She cried her eyes red" — both languages use the same elegantly compact pattern here. This kind of stacking is wonderfully productive: any action that causes a change of state can use this frame: 笑哭了 (laugh-cry), 吃撑了 (eat-stuffed), 写累了 (write-tired).',
+        tree: {
+            id: 'n31',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n31-t',
+                    role: 'Topic',
+                    text: { hanzi: '她', pinyin: 'tā', translation: 'she' },
+                },
+                {
+                    id: 'n31-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n31-vp',
+                            role: 'Verb Phrase',
+                            subRole: 'causative resultative',
+                            children: [
+                                {
+                                    id: 'n31-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '哭', pinyin: 'kū', translation: 'cry' },
+                                },
+                                {
+                                    id: 'n31-comp',
+                                    role: 'Complement',
+                                    subRole: 'resultative (state change)',
+                                    text: { hanzi: '红', pinyin: 'hóng', translation: 'red (result state)' },
+                                },
+                                {
+                                    id: 'n31-le',
+                                    role: 'Particle',
+                                    subRole: 'completion',
+                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
+                                },
+                                {
+                                    id: 'n31-obj',
+                                    role: 'Object',
+                                    subRole: 'patient (thing that changed state)',
+                                    text: { hanzi: '眼睛', pinyin: 'yǎn jing', translation: 'eyes' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+
+    // ── Pivotal Constructions (兼语句) ────────────────────────────────────────
+    {
+        id: 's32',
+        category: 'Pivotal Constructions',
+        chinese: '老师让学生回答问题。',
+        pinyin: 'Lǎo shī ràng xué sheng huí dá wèn tí.',
+        translation: 'The teacher had the students answer questions.',
+        explanation: '**老师** (teacher) is the Topic. This is a **pivotal construction** (兼语句). The verb **让** (let/have) takes **学生** (students) as its object. But then — and this is the key — 学生 immediately becomes the *subject* of the next verb **回答** (answer). It plays both roles at once: object of 让, subject of 回答. The tree shows this double-function node as a **Pivot**. Verbs that create pivotal structures include 让 (let/have), 叫 (tell), 请 (invite), 使 (cause), 帮 (help). In English: "The teacher *had* the students *answer*" — the structure is the same, just without a special grammatical label.',
+        tree: {
+            id: 'n32',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n32-t',
+                    role: 'Topic',
+                    text: { hanzi: '老师', pinyin: 'lǎo shī', translation: 'teacher' },
+                },
+                {
+                    id: 'n32-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n32-vp',
+                            role: 'Verb Phrase',
+                            subRole: 'pivotal construction (兼语句)',
+                            children: [
+                                {
+                                    id: 'n32-hv',
+                                    role: 'Head Verb',
+                                    subRole: 'causative verb (lets/has)',
+                                    text: { hanzi: '让', pinyin: 'ràng', translation: 'let / have' },
+                                },
+                                {
+                                    id: 'n32-pivot',
+                                    role: 'Pivot',
+                                    subRole: 'object of 让, subject of 回答',
+                                    text: { hanzi: '学生', pinyin: 'xué sheng', translation: 'students' },
+                                },
+                                {
+                                    id: 'n32-embedded',
+                                    role: 'Verb Phrase',
+                                    subRole: 'embedded predicate of pivot',
+                                    children: [
+                                        {
+                                            id: 'n32-embedded-hv',
+                                            role: 'Head Verb',
+                                            text: { hanzi: '回答', pinyin: 'huí dá', translation: 'answer' },
+                                        },
+                                        {
+                                            id: 'n32-embedded-obj',
+                                            role: 'Object',
+                                            text: { hanzi: '问题', pinyin: 'wèn tí', translation: 'questions' },
+                                        },
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        id: 's33',
+        category: 'Pivotal Constructions',
+        chinese: '妈妈叫我去买牛奶。',
+        pinyin: 'Māma jiào wǒ qù mǎi niú nǎi.',
+        translation: 'Mom told me to go buy milk.',
+        explanation: '**妈妈** (Mom) is the Topic. The verb **叫** (call/tell) creates a pivotal structure: **我** (me) serves as both the object of 叫 *and* the subject of what follows. After the pivot, there is a **serial verb construction**: **去买** — go in order to buy. Two advanced patterns stack together here, which is completely natural in everyday speech. This sentence shows why pivotal constructions matter: English hides the double-function behind \"told me to\"; Mandarin makes it visible by placing 我 at the hinge point between two verb phrases.',
+        tree: {
+            id: 'n33',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n33-t',
+                    role: 'Topic',
+                    text: { hanzi: '妈妈', pinyin: 'māma', translation: 'Mom' },
+                },
+                {
+                    id: 'n33-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n33-vp',
+                            role: 'Verb Phrase',
+                            subRole: 'pivotal construction (兼语句)',
+                            children: [
+                                {
+                                    id: 'n33-hv',
+                                    role: 'Head Verb',
+                                    subRole: 'causative verb (tells)',
+                                    text: { hanzi: '叫', pinyin: 'jiào', translation: 'call / tell' },
+                                },
+                                {
+                                    id: 'n33-pivot',
+                                    role: 'Pivot',
+                                    subRole: 'object of 叫, subject of 去买',
+                                    text: { hanzi: '我', pinyin: 'wǒ', translation: 'me' },
+                                },
+                                {
+                                    id: 'n33-serial',
+                                    role: 'Verb Phrase',
+                                    subRole: 'serial verb construction (purpose chain)',
+                                    children: [
+                                        {
+                                            id: 'n33-serial-v1',
+                                            role: 'Head Verb',
+                                            subRole: 'motion verb',
+                                            text: { hanzi: '去', pinyin: 'qù', translation: 'go' },
+                                        },
+                                        {
+                                            id: 'n33-serial-v2',
+                                            role: 'Verb Phrase',
+                                            subRole: 'purpose clause',
+                                            children: [
+                                                {
+                                                    id: 'n33-serial-v2-hv',
+                                                    role: 'Head Verb',
+                                                    text: { hanzi: '买', pinyin: 'mǎi', translation: 'buy' },
+                                                },
+                                                {
+                                                    id: 'n33-serial-v2-obj',
+                                                    role: 'Object',
+                                                    text: { hanzi: '牛奶', pinyin: 'niú nǎi', translation: 'milk' },
+                                                },
+                                            ],
+                                        },
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    // ── Potential Complements ─────────────────────────────────────────────────
+    {
+        id: 's34',
+        category: 'Potential Complements',
+        chinese: '这道题太难，我做不出来。',
+        pinyin: 'Zhè dào tí tài nán, wǒ zuò bù chū lái.',
+        translation: 'This question is too hard; I can\'t work it out.',
+        explanation: 'The outer Topic is **这道题** (this question — 道 is the measure word for questions and paths). The Comment plays out in two clauses: the first says *it\'s too hard*; the second says *I can\'t manage it*. The key is **做不出来**: the verb **做** (do/work) + the potential negator **不** + the directional complement **出来** (come out). Inserting **不** between the verb and its result says: *unable to achieve that result*. Swap 不 for **得** and you get 做**得**出来 — *can* work it out. This V + 得/不 + complement slot is how Mandarin expresses possibility and impossibility for almost any action.',
+        tree: {
+            id: 'n34',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n34-t',
+                    role: 'Topic',
+                    subRole: 'outer frame',
+                    children: [
+                        {
+                            id: 'n34-t-attr',
+                            role: 'Attributive',
+                            text: { hanzi: '这道', pinyin: 'zhè dào', translation: 'this (question-measure)' },
+                        },
+                        {
+                            id: 'n34-t-hn',
+                            role: 'Head Noun',
+                            text: { hanzi: '题', pinyin: 'tí', translation: 'question/problem' },
+                        },
+                    ],
+                },
+                {
+                    id: 'n34-c',
+                    role: 'Comment',
+                    subRole: 'two sequential clauses',
+                    children: [
+                        {
+                            id: 'n34-cl1',
+                            role: 'Verb Phrase',
+                            subRole: 'clause 1 — adjectival predicate',
+                            children: [
+                                {
+                                    id: 'n34-cl1-adv',
+                                    role: 'Adverb',
+                                    text: { hanzi: '太', pinyin: 'tài', translation: 'too' },
+                                },
+                                {
+                                    id: 'n34-cl1-adj',
+                                    role: 'Adjective',
+                                    text: { hanzi: '难', pinyin: 'nán', translation: 'hard/difficult' },
+                                },
+                            ],
+                        },
+                        {
+                            id: 'n34-cl2',
+                            role: 'Verb Phrase',
+                            subRole: 'clause 2 — potential complement (negative)',
+                            children: [
+                                {
+                                    id: 'n34-cl2-t',
+                                    role: 'Subject',
+                                    text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' },
+                                },
+                                {
+                                    id: 'n34-cl2-vp',
+                                    role: 'Verb Phrase',
+                                    children: [
+                                        {
+                                            id: 'n34-cl2-hv',
+                                            role: 'Head Verb',
+                                            text: { hanzi: '做', pinyin: 'zuò', translation: 'do / work' },
+                                        },
+                                        {
+                                            id: 'n34-cl2-neg',
+                                            role: 'Particle',
+                                            subRole: 'potential negator (V + 不 + result)',
+                                            text: { hanzi: '不', pinyin: 'bù', translation: 'cannot (potential)' },
+                                        },
+                                        {
+                                            id: 'n34-cl2-comp',
+                                            role: 'Complement',
+                                            subRole: 'directional (potential)',
+                                            text: { hanzi: '出来', pinyin: 'chū lái', translation: 'come out / work out' },
+                                        },
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        id: 's35',
+        category: 'Potential Complements',
+        chinese: '你放心，一个小时就写得完。',
+        pinyin: 'Nǐ fàng xīn, yī gè xiǎo shí jiù xiě de wán.',
+        translation: 'Don\'t worry — (you) can finish writing it in an hour.',
+        explanation: '**你放心** (don\'t worry, literally "you release heart") is a fixed opening phrase. The main clause shows the **affirmative potential complement**: **写得完** — write + **得** (can) + 完 (finish). Inserting **得** between the verb and its result says: *able to achieve that outcome*. The time phrase **一个小时** (one hour) and adverb **就** (just/only) add "in just one hour." Compare with the negative: 写**不**完 would mean *can\'t finish writing*. The only difference is that tiny 得/不 slot — one syllable switches the meaning between possible and impossible.',
+        tree: {
+            id: 'n35',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n35-addr',
+                    role: 'Topic',
+                    subRole: 'addressee',
+                    text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' },
+                },
+                {
+                    id: 'n35-c',
+                    role: 'Comment',
+                    subRole: 'two sequential clauses',
+                    children: [
+                        {
+                            id: 'n35-cl1',
+                            role: 'Verb Phrase',
+                            subRole: 'clause 1 — fixed expression',
+                            children: [
+                                {
+                                    id: 'n35-cl1-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '放心', pinyin: 'fàng xīn', translation: 'relax / don\'t worry' },
+                                },
+                            ],
+                        },
+                        {
+                            id: 'n35-cl2',
+                            role: 'Verb Phrase',
+                            subRole: 'clause 2 — potential complement (affirmative)',
+                            children: [
+                                {
+                                    id: 'n35-cl2-tp',
+                                    role: 'Time Phrase',
+                                    text: { hanzi: '一个小时', pinyin: 'yī gè xiǎo shí', translation: 'one hour' },
+                                },
+                                {
+                                    id: 'n35-cl2-adv',
+                                    role: 'Adverb',
+                                    text: { hanzi: '就', pinyin: 'jiù', translation: 'just / then' },
+                                },
+                                {
+                                    id: 'n35-cl2-vp',
+                                    role: 'Verb Phrase',
+                                    children: [
+                                        {
+                                            id: 'n35-cl2-hv',
+                                            role: 'Head Verb',
+                                            text: { hanzi: '写', pinyin: 'xiě', translation: 'write' },
+                                        },
+                                        {
+                                            id: 'n35-cl2-de',
+                                            role: 'Particle',
+                                            subRole: 'potential affirmative marker (V + 得 + result)',
+                                            text: { hanzi: '得', pinyin: 'de', translation: 'can (potential)' },
+                                        },
+                                        {
+                                            id: 'n35-cl2-comp',
+                                            role: 'Complement',
+                                            subRole: 'resultative (potential)',
+                                            text: { hanzi: '完', pinyin: 'wán', translation: 'finish / complete' },
+                                        },
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+
+    // ── Degree Complements ────────────────────────────────────────────────────
+    {
+        id: 's36',
+        category: 'Degree Complements',
+        chinese: '她高兴得跳了起来。',
+        pinyin: 'Tā gāo xìng de tiào le qǐ lái.',
+        translation: 'She was so happy she jumped up.',
+        explanation: '**她** (she) is the Topic. The Comment uses a **degree complement**: **高兴** (happy, acting as predicate) + **得** (the degree linker) + **跳了起来** (jumped up). The 得 here is not the potential marker — it is a *linker* that connects the predicate to a clause describing *the degree or consequence* of that state. The consequence of her happiness was that she jumped. This structure — [predicate] + 得 + [what happened as a result] — is one of Mandarin\'s most expressive frames: 忙得忘了吃饭 (busy-to-the-point-of-forgetting-to-eat), 累得说不出话 (tired-to-the-point-of-being-speechless).',
+        tree: {
+            id: 'n36',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n36-t',
+                    role: 'Topic',
+                    text: { hanzi: '她', pinyin: 'tā', translation: 'she' },
+                },
+                {
+                    id: 'n36-c',
+                    role: 'Comment',
+                    subRole: 'degree complement (consequence)',
+                    children: [
+                        {
+                            id: 'n36-pred',
+                            role: 'Adjective',
+                            subRole: 'predicate',
+                            text: { hanzi: '高兴', pinyin: 'gāo xìng', translation: 'happy' },
+                        },
+                        {
+                            id: 'n36-de',
+                            role: 'Particle',
+                            subRole: 'degree complement linker',
+                            text: { hanzi: '得', pinyin: 'de', translation: '(links to degree/consequence)' },
+                        },
+                        {
+                            id: 'n36-comp',
+                            role: 'Complement',
+                            subRole: 'degree complement (consequence clause)',
+                            children: [
+                                {
+                                    id: 'n36-comp-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '跳', pinyin: 'tiào', translation: 'jump' },
+                                },
+                                {
+                                    id: 'n36-comp-le',
+                                    role: 'Particle',
+                                    subRole: 'completion',
+                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
+                                },
+                                {
+                                    id: 'n36-comp-dir',
+                                    role: 'Complement',
+                                    subRole: 'directional',
+                                    text: { hanzi: '起来', pinyin: 'qǐ lái', translation: 'up' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        id: 's37',
+        category: 'Degree Complements',
+        chinese: '她跑得非常快。',
+        pinyin: 'Tā pǎo de fēi cháng kuài.',
+        translation: 'She runs very fast.',
+        explanation: '**她** (she) is the Topic. The Comment uses the most common form of degree complement: **verb + 得 + description**. The verb **跑** (run) is linked by **得** to the description **非常快** (very fast) — this tells you *how well or how fast* the running was done. This is fundamentally different from a resultative complement (which says what *outcome* was achieved). The degree complement says *how the action was performed*. Compare: 跑**完**了 (finished the run — resultative) vs 跑**得**很快 (ran very fast — degree). One describes the outcome; the other rates the quality of the action.',
+        tree: {
+            id: 'n37',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n37-t',
+                    role: 'Topic',
+                    text: { hanzi: '她', pinyin: 'tā', translation: 'she' },
+                },
+                {
+                    id: 'n37-c',
+                    role: 'Comment',
+                    subRole: 'degree complement (manner)',
+                    children: [
+                        {
+                            id: 'n37-vp',
+                            role: 'Verb Phrase',
+                            children: [
+                                {
+                                    id: 'n37-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '跑', pinyin: 'pǎo', translation: 'run' },
+                                },
+                                {
+                                    id: 'n37-de',
+                                    role: 'Particle',
+                                    subRole: 'degree complement linker',
+                                    text: { hanzi: '得', pinyin: 'de', translation: '(links to degree)' },
+                                },
+                                {
+                                    id: 'n37-comp',
+                                    role: 'Complement',
+                                    subRole: 'degree complement (manner)',
+                                    children: [
+                                        {
+                                            id: 'n37-comp-adv',
+                                            role: 'Adverb',
+                                            text: { hanzi: '非常', pinyin: 'fēi cháng', translation: 'very / extremely' },
+                                        },
+                                        {
+                                            id: 'n37-comp-adj',
+                                            role: 'Adjective',
+                                            text: { hanzi: '快', pinyin: 'kuài', translation: 'fast' },
+                                        },
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
 ];
+
+
+
+
+
 
 
 

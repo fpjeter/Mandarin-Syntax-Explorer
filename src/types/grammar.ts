@@ -25,7 +25,8 @@ export type GrammarRole =
     | 'Head Verb'
     | 'Measure Word'
     | 'Verb Morpheme'
-    | 'Object Morpheme';
+    | 'Object Morpheme'
+    | 'Pivot';
 
 export interface MandarinWord {
     hanzi: string;
