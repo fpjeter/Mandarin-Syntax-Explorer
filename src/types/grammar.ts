@@ -1,4 +1,4 @@
-import { type SentenceCategory } from './data/categories';
+import { type SentenceCategory } from '../data/categories';
 export type { SentenceCategory };
 
 export type GrammarRole =
