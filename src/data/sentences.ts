@@ -931,10 +931,10 @@ export const sampleSentences: SentenceData[] = [
     {
         id: 's11',
         category: 'Rhetorical Questions',
-        chinese: '这件事非你自己处理不可。',
+        chinese: '这件事非你亲自去办不可。',
         pinyin: 'Zhè jiàn shì fēi nǐ qīn zì qù bàn bù kě.',
         translation: 'This matter absolutely must be handled by you yourself — there is no way around it.',
-        explanation: '**这件事** (this matter) is the Topic. The Comment uses another paired framing structure: **非** at the start and **不可** at the end lock together to express absolute necessity — literally *"it is not the case that it can be avoided"*. Between them: who must act (you), how (personally), and what the action is (go handle it). This double negative is a fixed expression: 非...不可 roughly means *"must, without exception"*. You\'ll encounter the same pattern in Chinese proverbs and formal writing.',
+        explanation: 'The outer Topic **这件事** (this matter) sets the frame. The Comment uses a paired framing structure: **非** at the start and **不可** at the end lock together to express absolute necessity — literally *"it is not the case that it can be avoided"*. Between them: who must act (you), how (personally, **亲自**), and what the action is (go handle it). This double negative is a fixed expression: 非...不可 roughly means *"must, without exception"*. You\'ll encounter the same pattern in Chinese proverbs and formal writing.',
         tree: {
             id: 'n11',
             role: 'Sentence',
@@ -1101,7 +1101,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '吃饱了，想睡觉。',
         pinyin: 'Chī bǎo le , xiǎng shuì jiào .',
         translation: '(I\'m) full, (I) want to sleep.',
-        explanation: 'This sentence has **no stated subject at all**. In Mandarin, if it\'s obvious from context who is speaking — usually the speaker themselves — the subject can simply vanish. The tree shows a ghosted **[我]** node (toggle "Show implied subjects" to see it) to indicate that grammatically there *is* a subject, it\'s just unsaid. The Comment then chains two events: ate-until-full → want-to-sleep. The word **饱** stacked after **吃** is a **result complement**: eating *resulted in* fullness. This silent-subject feature is called **pro-drop** and happens constantly in natural Mandarin speech.',
+        explanation: 'This sentence has **no stated subject at all**. In Mandarin, if it\'s obvious from context who is speaking — usually the speaker themselves — the subject can simply vanish. The tree shows a ghosted **[我]** node (use the **"Show/hide pro-drop"** toggle button to reveal or hide it) to indicate that grammatically there *is* a subject, it\'s just unsaid. The Comment then chains two events: ate-until-full → want-to-sleep. The word **饱** stacked after **吃** is a **result complement**: eating *resulted in* fullness. This silent-subject feature is called **pro-drop** and happens constantly in natural Mandarin speech.',
         tree: {
             id: 'n13',
             role: 'Sentence',
@@ -2054,7 +2054,262 @@ export const sampleSentences: SentenceData[] = [
                 }
             ]
         }
-    }
+    },
+
+    // ── Double Topic / Embedded Comment ──────────────────────────────────────
+    {
+        id: 's25',
+        category: 'Double Topic / Embedded Comment',
+        chinese: '那家饭馆，菜很好吃，价钱也不贵。',
+        pinyin: 'Nà jiā fàn guǎn, cài hěn hǎo chī, jià qián yě bù guì.',
+        translation: 'That restaurant — the food is delicious and the price is not expensive either.',
+        explanation: 'This sentence has **two layers of topic**. The outer Topic — **那家饭馆** (that restaurant) — sets the scene for the whole sentence. Then, inside the Comment, Mandarin doesn\'t switch to English-style subject+verb sentences. Instead it uses *two mini-topics* in sequence: **菜** (food) and **价钱** (price). Each one is followed by its own comment. This "whole–part" structure, where you name a container and then make statements about its parts, is extremely common and natural in Mandarin. The tree shows the nesting: Sentence → [outer Topic | Comment → [inner Topic–Comment 1 | inner Topic–Comment 2]].',
+        tree: {
+            id: 'n25',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n25-t',
+                    role: 'Topic',
+                    subRole: 'outer topic (whole)',
+                    children: [
+                        {
+                            id: 'n25-t-attr',
+                            role: 'Attributive',
+                            text: { hanzi: '那家', pinyin: 'nà jiā', translation: 'that (measure)' }
+                        },
+                        {
+                            id: 'n25-t-hn',
+                            role: 'Head Noun',
+                            text: { hanzi: '饭馆', pinyin: 'fàn guǎn', translation: 'restaurant' }
+                        }
+                    ]
+                },
+                {
+                    id: 'n25-c',
+                    role: 'Comment',
+                    subRole: 'two embedded topic–comment clauses',
+                    children: [
+                        {
+                            id: 'n25-c-s1',
+                            role: 'Topic',
+                            subRole: 'inner topic 1 (part)',
+                            text: { hanzi: '菜', pinyin: 'cài', translation: 'food/dishes' }
+                        },
+                        {
+                            id: 'n25-c-p1',
+                            role: 'Comment',
+                            subRole: 'inner comment 1',
+                            children: [
+                                {
+                                    id: 'n25-c-p1-adv',
+                                    role: 'Adverb',
+                                    text: { hanzi: '很', pinyin: 'hěn', translation: 'very' }
+                                },
+                                {
+                                    id: 'n25-c-p1-adj',
+                                    role: 'Adjective',
+                                    text: { hanzi: '好吃', pinyin: 'hǎo chī', translation: 'delicious' }
+                                }
+                            ]
+                        },
+                        {
+                            id: 'n25-c-s2',
+                            role: 'Topic',
+                            subRole: 'inner topic 2 (part)',
+                            text: { hanzi: '价钱', pinyin: 'jià qián', translation: 'price' }
+                        },
+                        {
+                            id: 'n25-c-p2',
+                            role: 'Comment',
+                            subRole: 'inner comment 2',
+                            children: [
+                                {
+                                    id: 'n25-c-p2-adv1',
+                                    role: 'Adverb',
+                                    text: { hanzi: '也', pinyin: 'yě', translation: 'also' }
+                                },
+                                {
+                                    id: 'n25-c-p2-adv2',
+                                    role: 'Adverb',
+                                    text: { hanzi: '不', pinyin: 'bù', translation: 'not' }
+                                },
+                                {
+                                    id: 'n25-c-p2-adj',
+                                    role: 'Adjective',
+                                    text: { hanzi: '贵', pinyin: 'guì', translation: 'expensive' }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        id: 's26',
+        category: 'Double Topic / Embedded Comment',
+        chinese: '大象，鼻子长，耳朵大。',
+        pinyin: 'Dà xiàng, bí zi cháng, ěr duo dà.',
+        translation: 'Elephants — their trunk is long and their ears are big.',
+        explanation: 'The classic **whole–part double topic** pattern. **大象** (elephant) is the outer Topic — it frames everything. Inside the Comment, the sentence doesn\'t give the elephant a verb straightaway. Instead it picks two parts of the elephant — **鼻子** (trunk) and **耳朵** (ears) — and uses each as an inner Topic, followed by a simple adjective Comment. This is the fundamental "A, B adj, C adj" pattern that learners encounter early but linguists call "double topic" or "nested topic-comment". No copula verb (是) is needed — Mandarin adjectives can directly serve as predicates.',
+        tree: {
+            id: 'n26',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n26-t',
+                    role: 'Topic',
+                    subRole: 'outer topic (whole)',
+                    text: { hanzi: '大象', pinyin: 'dà xiàng', translation: 'elephant' }
+                },
+                {
+                    id: 'n26-c',
+                    role: 'Comment',
+                    subRole: 'two embedded topic–comment clauses',
+                    children: [
+                        {
+                            id: 'n26-c-t1',
+                            role: 'Topic',
+                            subRole: 'inner topic 1 (body part)',
+                            text: { hanzi: '鼻子', pinyin: 'bí zi', translation: 'trunk/nose' }
+                        },
+                        {
+                            id: 'n26-c-p1',
+                            role: 'Comment',
+                            subRole: 'inner comment 1 — adjectival predicate',
+                            children: [
+                                {
+                                    id: 'n26-c-p1-adj',
+                                    role: 'Adjective',
+                                    text: { hanzi: '长', pinyin: 'cháng', translation: 'long' }
+                                }
+                            ]
+                        },
+                        {
+                            id: 'n26-c-t2',
+                            role: 'Topic',
+                            subRole: 'inner topic 2 (body part)',
+                            text: { hanzi: '耳朵', pinyin: 'ěr duo', translation: 'ears' }
+                        },
+                        {
+                            id: 'n26-c-p2',
+                            role: 'Comment',
+                            subRole: 'inner comment 2 — adjectival predicate',
+                            children: [
+                                {
+                                    id: 'n26-c-p2-adj',
+                                    role: 'Adjective',
+                                    text: { hanzi: '大', pinyin: 'dà', translation: 'big' }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        id: 's27',
+        category: 'Double Topic / Embedded Comment',
+        chinese: '这件事，我觉得你的想法很有道理。',
+        pinyin: 'Zhè jiàn shì, wǒ jué de nǐ de xiǎng fǎ hěn yǒu dào lǐ.',
+        translation: 'As for this matter, I think your idea makes a lot of sense.',
+        explanation: 'This sentence has **three layers of embedding**. The outermost Topic — **这件事** (this matter) — establishes the discourse frame. Then the Comment is itself a full clause: **我觉得** (I think), where **我** (I) is the subject and **觉得** is the verb. But the object of 觉得 is *yet another* clause: **你的想法很有道理** (your idea is very reasonable) — and even inside that clause, **你的想法** (your idea) acts as an inner topic before the comment **很有道理**. This chain of embedded clauses is perfectly natural in spoken Mandarin and is far more transparent in a tree than in a linear translation.',
+        tree: {
+            id: 'n27',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n27-t',
+                    role: 'Topic',
+                    subRole: 'outer discourse frame',
+                    children: [
+                        {
+                            id: 'n27-t-attr',
+                            role: 'Attributive',
+                            text: { hanzi: '这件', pinyin: 'zhè jiàn', translation: 'this (measure)' }
+                        },
+                        {
+                            id: 'n27-t-hn',
+                            role: 'Head Noun',
+                            text: { hanzi: '事', pinyin: 'shì', translation: 'matter/thing' }
+                        }
+                    ]
+                },
+                {
+                    id: 'n27-c',
+                    role: 'Comment',
+                    subRole: 'opinion clause',
+                    children: [
+                        {
+                            id: 'n27-c-s',
+                            role: 'Subject',
+                            text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' }
+                        },
+                        {
+                            id: 'n27-c-p',
+                            role: 'Predicate',
+                            children: [
+                                {
+                                    id: 'n27-c-p-vp',
+                                    role: 'Verb Phrase',
+                                    children: [
+                                        {
+                                            id: 'n27-c-p-vp-hv',
+                                            role: 'Head Verb',
+                                            text: { hanzi: '觉得', pinyin: 'jué de', translation: 'think/feel' }
+                                        },
+                                        {
+                                            id: 'n27-c-p-vp-obj',
+                                            role: 'Object',
+                                            subRole: 'embedded topic–comment clause',
+                                            children: [
+                                                {
+                                                    id: 'n27-c-p-vp-obj-t',
+                                                    role: 'Topic',
+                                                    subRole: 'inner topic',
+                                                    children: [
+                                                        {
+                                                            id: 'n27-c-p-vp-obj-t-attr',
+                                                            role: 'Attributive',
+                                                            text: { hanzi: '你的', pinyin: 'nǐ de', translation: 'your' }
+                                                        },
+                                                        {
+                                                            id: 'n27-c-p-vp-obj-t-hn',
+                                                            role: 'Head Noun',
+                                                            text: { hanzi: '想法', pinyin: 'xiǎng fǎ', translation: 'idea' }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    id: 'n27-c-p-vp-obj-c',
+                                                    role: 'Comment',
+                                                    subRole: 'inner comment',
+                                                    children: [
+                                                        {
+                                                            id: 'n27-c-p-vp-obj-c-adv',
+                                                            role: 'Adverb',
+                                                            text: { hanzi: '很', pinyin: 'hěn', translation: 'very' }
+                                                        },
+                                                        {
+                                                            id: 'n27-c-p-vp-obj-c-adj',
+                                                            role: 'Adjective',
+                                                            text: { hanzi: '有道理', pinyin: 'yǒu dào lǐ', translation: 'make sense / reasonable' }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
 ];
 
 

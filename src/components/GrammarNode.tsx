@@ -30,9 +30,12 @@ export const GrammarNode = ({ data, isConnectable }: NodeProps<GrammarNodeType>)
             case 'Predicate': return 'bg-cyan-900/40 text-cyan-200 border-cyan-500/50';
             case 'Verb Phrase': return 'bg-teal-900/40 text-teal-200 border-teal-500/50';
             case 'Noun Phrase': return 'bg-orange-900/40 text-orange-200 border-orange-600/50';
+            case 'Location Phrase': return 'bg-sky-900/40 text-sky-200 border-sky-500/50 shadow-[0_0_12px_rgba(14,165,233,0.1)]';
+            case 'Time Phrase': return 'bg-yellow-900/40 text-yellow-200 border-yellow-600/50 shadow-[0_0_12px_rgba(234,179,8,0.1)]';
             case 'Verb': return 'bg-green-900/40 text-green-300 border-green-600/50';
             case 'Object': return 'bg-amber-900/40 text-amber-200 border-amber-600/50';
             case 'Adverb': return 'bg-rose-900/40 text-rose-300 border-rose-600/50';
+            case 'Adjective': return 'bg-pink-900/40 text-pink-200 border-pink-600/50 shadow-[0_0_12px_rgba(236,72,153,0.15)]';
             case 'Attributive': return 'bg-lime-900/40 text-lime-300 border-lime-600/50 shadow-[0_0_15px_rgba(132,204,22,0.15)]';
             case 'Complement': return 'bg-violet-900/40 text-violet-300 border-violet-600/50 shadow-[0_0_15px_rgba(139,92,246,0.15)]';
             case 'Head Noun': return 'bg-orange-800/60 text-orange-100 border-orange-500/70 border-b-2';

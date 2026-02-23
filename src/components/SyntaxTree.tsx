@@ -1,12 +1,13 @@
 import React, { useMemo, useState, useEffect, useCallback } from 'react';
 import { ReactFlow, Controls, Background, Position, MarkerType, useReactFlow, type Edge, type Node, type NodeMouseHandler } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
-import { Eye, EyeOff } from 'lucide-react';
+import { Eye, EyeOff, Maximize2, Minimize2, BookOpen } from 'lucide-react';
 
 import type { GrammarNodeData as AppGrammarNodeData } from '../types/grammar';
 import { GrammarNode } from './GrammarNode';
 import { CoRefEdge } from './CoRefEdge';
 import { BadgeLegend } from './BadgeLegend';
+import { GlossaryPanel } from './GlossaryPanel';
 
 const nodeTypes = {
     grammarNode: GrammarNode,
@@ -308,6 +309,7 @@ interface SyntaxTreeProps {
 export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
     const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set());
     const [showGhost, setShowGhost] = useState(true);
+    const [isGlossaryOpen, setIsGlossaryOpen] = useState(false);
 
     const treeHasProDrop = useMemo(() => tree ? hasProDrop(tree) : false, [tree]);
 
@@ -333,6 +335,28 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
         }
     }, []);
 
+    const handleExpandAll = useCallback(() => {
+        if (!tree) return;
+        setExpandedIds(prev => {
+            const next = new Set(prev);
+            const walk = (node: AppGrammarNodeData) => {
+                if (node.children && node.children.length > 0) {
+                    next.add(node.id);
+                    node.children.forEach(walk);
+                }
+            };
+            walk(tree);
+            return next;
+        });
+    }, [tree]);
+
+    const handleCollapseAll = useCallback(() => {
+        if (!tree) return;
+        // Keep only root expanded
+        setExpandedIds(new Set([tree.id]));
+    }, [tree]);
+
+
     if (!tree) {
         return (
             <div className="w-full h-full border border-slate-700/50 rounded-2xl flex items-center justify-center glass-panel">
@@ -344,24 +368,55 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
     return (
         <div className="w-full h-full border border-slate-700/50 rounded-2xl overflow-hidden glass-panel shadow-2xl relative">
 
-            {/* Pro-drop toggle — only shown for sentences with dropped nodes */}
-            {treeHasProDrop && (
+            <div className="absolute top-4 right-4 z-20 flex flex-col items-end gap-2 pointer-events-none">
+                <div className="flex items-center gap-2 pointer-events-auto">
+                    <button
+                        onClick={handleExpandAll}
+                        className="flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] font-semibold tracking-wide border transition-all duration-200 bg-slate-800/60 border-slate-600/50 text-slate-400 hover:bg-slate-700/80 hover:text-slate-200"
+                        title="Expand all nodes"
+                    >
+                        <Maximize2 className="w-3.5 h-3.5" />
+                        Expand All
+                    </button>
+                    <button
+                        onClick={handleCollapseAll}
+                        className="flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] font-semibold tracking-wide border transition-all duration-200 bg-slate-800/60 border-slate-600/50 text-slate-400 hover:bg-slate-700/80 hover:text-slate-200"
+                        title="Collapse to root"
+                    >
+                        <Minimize2 className="w-3.5 h-3.5" />
+                        Collapse All
+                    </button>
+
+                    {/* Pro-drop toggle — only shown for sentences with dropped nodes */}
+                    {treeHasProDrop && (
+                        <button
+                            onClick={() => setShowGhost(g => !g)}
+                            className={`
+                                flex items-center gap-2 px-3 py-1.5 rounded-full
+                                text-[11px] font-semibold tracking-wide border transition-all duration-200
+                                ${showGhost
+                                    ? 'bg-slate-700/80 border-purple-500/50 text-purple-300 hover:bg-slate-600/80'
+                                    : 'bg-slate-800/60 border-slate-600/50 text-slate-400 hover:bg-slate-800/80'
+                                }
+                            `}
+                            title={showGhost ? 'Hide implied (pro-dropped) subjects' : 'Show implied (pro-dropped) subjects'}
+                        >
+                            {showGhost ? <Eye className="w-3.5 h-3.5" /> : <EyeOff className="w-3.5 h-3.5" />}
+                            {showGhost ? 'Showing implied subjects' : 'Subjects hidden (pro-drop)'}
+                        </button>
+                    )}
+                </div>
+
+                {/* Glossary Toggle Button */}
                 <button
-                    onClick={() => setShowGhost(g => !g)}
-                    className={`
-                        absolute top-4 right-4 z-20 flex items-center gap-2 px-3 py-1.5 rounded-full
-                        text-[11px] font-semibold tracking-wide border transition-all duration-200
-                        ${showGhost
-                            ? 'bg-slate-700/80 border-purple-500/50 text-purple-300 hover:bg-slate-600/80'
-                            : 'bg-slate-800/60 border-slate-600/50 text-slate-400 hover:bg-slate-800/80'
-                        }
-                    `}
-                    title={showGhost ? 'Hide implied (pro-dropped) subjects' : 'Show implied (pro-dropped) subjects'}
+                    onClick={() => setIsGlossaryOpen(true)}
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] font-semibold tracking-wide border transition-all duration-200 bg-fuchsia-900/20 border-fuchsia-500/30 text-fuchsia-300 hover:bg-fuchsia-900/40 hover:border-fuchsia-400/50 pointer-events-auto"
+                    title="Open Grammar Glossary"
                 >
-                    {showGhost ? <Eye className="w-3.5 h-3.5" /> : <EyeOff className="w-3.5 h-3.5" />}
-                    {showGhost ? 'Showing implied subjects' : 'Subjects hidden (pro-drop)'}
+                    <BookOpen className="w-3.5 h-3.5" />
+                    Glossary
                 </button>
-            )}
+            </div>
 
             <ReactFlow
                 nodes={nodes}
@@ -376,10 +431,11 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
                 nodesConnectable={false}
             >
                 <Background color="#1e293b" gap={24} size={1} />
-                <Controls position="top-right" className="!bg-slate-800 !border-slate-700 !text-slate-300 !fill-slate-300" />
+                <Controls position="bottom-right" className="!bg-slate-800 !border-slate-700 !text-slate-300 !fill-slate-300 !mb-8" />
                 <FitViewOnChange nodes={nodes} isVisible={isVisible} />
             </ReactFlow>
 
+            <GlossaryPanel isOpen={isGlossaryOpen} onClose={() => setIsGlossaryOpen(false)} />
             <BadgeLegend />
         </div>
     );

@@ -1,8 +1,9 @@
 import { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BookA, Info, PlayCircle, ChevronDown, Network, List, Search, X } from 'lucide-react';
+import { BookA, Info, PlayCircle, ChevronDown, ChevronRight, Lightbulb, Network, List, Search, X } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 import { sampleSentences } from './data/sentences';
+// import { CATEGORY_DESCRIPTIONS } from './data/categories'; // re-enable with category description span
 import type { SentenceCategory } from './types/grammar';
 import { SyntaxTree } from './components/SyntaxTree';
 import { RubyText } from './components/RubyText';
@@ -11,7 +12,7 @@ import { GrammarGuide } from './components/GrammarGuide';
 function App() {
   const [selectedId, setSelectedId] = useState<string>(sampleSentences[0].id);
   const [explainerOpen, setExplainerOpen] = useState(false);
-  const [explainerTab, setExplainerTab] = useState<'framework' | 'sentence'>('framework');
+  const [notesOpen, setNotesOpen] = useState(false);
   const [mobileView, setMobileView] = useState<'list' | 'tree' | 'guide'>('guide');
 
   // Group sentences by category, preserving declaration order
@@ -69,7 +70,6 @@ function App() {
   const handleSelectSentence = useCallback((id: string) => {
     setSelectedId(id);
     const s = sampleSentences.find(x => x.id === id);
-    setExplainerTab(s?.explanation ? 'sentence' : 'framework');
     // Ensure the group containing this sentence is open
     if (s) setOpenGroups(prev => new Set([...prev, s.category]));
     // On mobile, auto-switch to the tree view
@@ -95,7 +95,9 @@ function App() {
     }
   }, [flatFiltered, highlightedId, handleSelectSentence]);
 
-  // Renders **bold** and *italic* markdown markers into styled JSX spans.
+  const selectedSentence = sampleSentences.find(s => s.id === selectedId);
+
+  // Helper for rendering bold/italic in notes
   const renderExplanation = (text: string) => {
     const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g);
     return parts.map((part, i) => {
@@ -106,9 +108,6 @@ function App() {
       return <span key={i}>{part}</span>;
     });
   };
-
-  const selectedSentence = sampleSentences.find(s => s.id === selectedId);
-
 
   return (
     <div className="h-[100dvh] bg-slate-950 text-slate-100 flex flex-col font-sans relative overflow-hidden">
@@ -130,7 +129,7 @@ function App() {
           </div>
         </div>
         <div
-          onClick={() => { setExplainerOpen(true); setExplainerTab('framework'); }}
+          onClick={() => { setExplainerOpen(true); }}
           className="hidden sm:flex items-center text-xs font-semibold tracking-wide text-slate-300 bg-slate-800/80 px-4 py-2 rounded-full border border-slate-600/50 shadow-inner cursor-pointer hover:bg-slate-700/80 hover:border-slate-500/70 transition-colors"
         >
           <BookA className="w-4 h-4 mr-2 text-purple-400" />
@@ -159,7 +158,7 @@ function App() {
         >
           <Network className="w-3.5 h-3.5" />
           Tree
-          {selectedSentence && mobileView === 'list' && (
+          {selectedId && mobileView === 'list' && (
             <span className="ml-1 w-1.5 h-1.5 rounded-full bg-purple-400 inline-block" />
           )}
         </button>
@@ -230,7 +229,11 @@ function App() {
                       className="w-full flex items-center justify-between px-4 py-2.5 bg-slate-800/70 hover:bg-slate-700/60 transition-colors text-left relative overflow-hidden"
                     >
                       <span className="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-purple-500/70 to-blue-500/70 rounded-r-full" />
-                      <span className="text-[11px] font-bold uppercase tracking-widest text-slate-200 pl-1">{category}</span>
+                      <span className="flex flex-col gap-0.5 pl-1 min-w-0">
+                        <span className="text-[11px] font-bold uppercase tracking-widest text-slate-200 leading-none">{category}</span>
+                        {/* Description hidden for now — re-enable by uncommenting: */}
+                        {/* <span className="text-[10px] text-slate-500 font-normal normal-case tracking-normal leading-tight pr-2">{CATEGORY_DESCRIPTIONS[category]}</span> */}
+                      </span>
                       <div className="flex items-center gap-2">
                         <span className="text-[10px] text-slate-500 font-medium">{sentences.length}</span>
                         <ChevronDown className={`w-3.5 h-3.5 text-slate-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
@@ -284,20 +287,18 @@ function App() {
               })}
             </div>
 
-            {/* ── Explainer Card (two-tab) ─────────────────────────────── */}
+            {/* ── Explainer Card (Framework Only) ─────────────────────────────── */}
             <div className="hidden sm:block mt-5 rounded-2xl bg-slate-900/60 border border-slate-700/50 overflow-hidden flex-shrink-0">
-
-              {/* Toggle header */}
               <button
                 onClick={() => setExplainerOpen(o => !o)}
                 className="w-full flex items-center gap-3 px-4 py-3 hover:bg-slate-800/40 transition-colors"
               >
-                <div className="p-1.5 bg-blue-500/20 rounded-lg flex-shrink-0">
-                  <Info className="w-4 h-4 text-blue-400" />
+                <div className="p-1.5 bg-fuchsia-500/20 rounded-lg flex-shrink-0">
+                  <BookA className="w-4 h-4 text-fuchsia-400" />
                 </div>
                 <p className="text-xs text-slate-300 leading-relaxed font-medium text-left flex-1">
-                  <strong className="text-slate-100">How does this work?</strong>
-                  {' '}— Grammar guide & sentence notes
+                  <strong className="text-slate-100">The Framework</strong>
+                  {' '}— Why Topic-Prominent?
                 </p>
                 <ChevronDown
                   className={`w-4 h-4 text-slate-400 flex-shrink-0 transition-transform duration-300 ${explainerOpen ? 'rotate-180' : ''}`}
@@ -313,37 +314,9 @@ function App() {
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                     className="overflow-hidden"
                   >
-                    {/* Tab bar */}
-                    <div className="flex border-t border-slate-700/50">
-                      <button
-                        onClick={() => setExplainerTab('framework')}
-                        className={`flex-1 py-2 text-[10px] font-bold uppercase tracking-widest transition-colors ${explainerTab === 'framework'
-                          ? 'text-fuchsia-300 bg-fuchsia-900/20 border-b-2 border-fuchsia-400'
-                          : 'text-slate-400 hover:text-slate-200 border-b-2 border-transparent'
-                          }`}
-                      >
-                        The Framework
-                      </button>
-                      <button
-                        onClick={() => setExplainerTab('sentence')}
-                        className={`flex-1 py-2 text-[10px] font-bold uppercase tracking-widest transition-colors ${explainerTab === 'sentence'
-                          ? 'text-emerald-300 bg-emerald-900/20 border-b-2 border-emerald-400'
-                          : 'text-slate-400 hover:text-slate-200 border-b-2 border-transparent'
-                          }`}
-                      >
-                        This Sentence
-                      </button>
+                    <div className="px-5 pb-5 pt-2">
+                      <GrammarGuide tab="framework" />
                     </div>
-
-                    {/* ── Framework / This Sentence tabs ──────────────── */}
-                    <div className="px-4 pb-4 pt-3">
-                      <GrammarGuide
-                        tab={explainerTab}
-                        selectedSentence={selectedSentence}
-                        renderExplanation={renderExplanation}
-                      />
-                    </div>
-
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -356,9 +329,9 @@ function App() {
         {/* Visualization Pane — hidden on mobile when list or guide is active */}
         <div className={`flex-1 flex flex-col min-h-0 gap-2 ${mobileView !== 'tree' ? 'hidden lg:flex' : 'flex'}`}>
 
-          {/* ── Sentence header card (in-flow, not absolute) ── */}
+          {/* ── Sentence header card + Persistent Notes  ── */}
           {selectedSentence && (
-            <div className="flex flex-col items-center gap-0 pointer-events-none flex-shrink-0 px-2 pt-2">
+            <div className="flex flex-col items-center gap-0 flex-shrink-0 px-2 pt-2 pb-0 z-10 w-full relative">
 
               {/* Discourse context sentence (faded, smaller) */}
               {selectedSentence.discourseContext && (
@@ -367,7 +340,7 @@ function App() {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     key={`ctx-${selectedSentence.id}`}
-                    className="glass-panel px-6 py-3 rounded-2xl flex flex-col items-center shadow-lg border border-slate-600/25 bg-slate-900/50 backdrop-blur-md w-full max-w-xl"
+                    className="glass-panel px-6 py-3 rounded-2xl flex flex-col items-center shadow-lg border border-slate-600/25 bg-slate-900/50 backdrop-blur-md w-full max-w-xl pointer-events-none"
                   >
                     <span className="text-[9px] uppercase tracking-[0.18em] font-bold text-slate-500 mb-1.5">
                       preceding context
@@ -383,7 +356,7 @@ function App() {
                   </motion.div>
 
                   {/* Connector: arrow indicating discourse flow */}
-                  <div className="flex flex-col items-center gap-0.5 my-1 opacity-40">
+                  <div className="flex flex-col items-center gap-0.5 my-1 opacity-40 pointer-events-none">
                     <div className="w-px h-3 bg-rose-400" />
                     <svg width="10" height="6" viewBox="0 0 10 6" className="text-rose-400 fill-current">
                       <path d="M5 6 L0 0 L10 0 Z" />
@@ -399,16 +372,53 @@ function App() {
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                key={selectedSentence.id}
-                className="glass-panel px-6 sm:px-10 py-4 sm:py-5 rounded-3xl flex flex-col items-center shadow-2xl border border-slate-500/30 bg-slate-900/80 backdrop-blur-xl w-full max-w-xl"
+                key={`card-${selectedSentence.id}`}
+                className={`glass-panel px-6 sm:px-10 py-5 flex flex-col items-center shadow-2xl border border-slate-500/30 bg-slate-900/80 backdrop-blur-xl w-full max-w-2xl pointer-events-none transition-all duration-300 ${selectedSentence.explanation ? 'rounded-t-3xl rounded-b-none' : 'rounded-3xl'}`}
               >
                 <RubyText hanzi={selectedSentence.chinese} pinyin={selectedSentence.pinyin} large displayFont className="!text-2xl sm:!text-4xl shadow-sm" />
-                <div className="mt-3 text-xs sm:text-sm text-slate-300 italic font-medium tracking-wide">"{selectedSentence.translation}"</div>
+                <div className="mt-3 text-sm sm:text-base text-slate-300 italic font-medium tracking-wide">"{selectedSentence.translation}"</div>
               </motion.div>
 
+              {/* Persistent Sentence Notes Drawer */}
+              {selectedSentence.explanation && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  key={`notes-${selectedSentence.id}`}
+                  className="w-full max-w-2xl"
+                >
+                  <button
+                    onClick={() => setNotesOpen(!notesOpen)}
+                    className={`w-full flex items-center justify-between px-6 py-2.5 bg-emerald-900/30 hover:bg-emerald-800/40 border-x border-t border-emerald-500/25 transition-all duration-300 ${notesOpen ? 'border-b-0 rounded-b-none' : 'border-b border-emerald-500/20 rounded-b-2xl'}`}
+                  >
+                    <div className="flex items-center gap-2">
+                      <Lightbulb className={`w-3.5 h-3.5 ${notesOpen ? 'text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.5)]' : 'text-emerald-500'}`} />
+                      <span className={`text-[11px] font-bold uppercase tracking-widest ${notesOpen ? 'text-emerald-200' : 'text-emerald-400/80'}`}>Grammar Note</span>
+                    </div>
+                    <ChevronRight className={`w-4 h-4 text-emerald-500 transition-transform duration-300 ${notesOpen ? 'rotate-90' : ''}`} />
+                  </button>
+
+                  <AnimatePresence initial={false}>
+                    {notesOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: 'easeInOut' }}
+                        className="overflow-hidden border-x border-b border-emerald-500/20 rounded-b-2xl shadow-xl backdrop-blur-md bg-slate-900/60"
+                      >
+                        <div className="p-6 text-sm text-slate-300 leading-relaxed font-serif bg-gradient-to-b from-slate-900/40 to-transparent">
+                          {renderExplanation(selectedSentence.explanation)}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+              )}
+
               {/* Connector arrow pointing down toward tree root */}
-              <div className="flex flex-col items-center gap-0 mt-1 opacity-30">
-                <div className="w-px h-5 bg-gradient-to-b from-purple-400 to-transparent" />
+              <div className="flex flex-col items-center gap-0 mt-3 opacity-30 pointer-events-none">
+                <div className="w-px h-6 bg-gradient-to-b from-purple-400 to-transparent" />
                 <svg width="10" height="6" viewBox="0 0 10 6" className="fill-purple-400">
                   <path d="M5 6 L0 0 L10 0 Z" />
                 </svg>
@@ -422,36 +432,14 @@ function App() {
           </div>
         </div>
 
-        {/* ── Mobile Guide Pane ── only on < lg, only when guide tab is active */}
+        {/* ── Mobile Guide Pane (Framework Only) ── */}
         {mobileView === 'guide' && (
           <div className="lg:hidden flex-1 min-h-0 overflow-y-auto custom-scrollbar glass-panel rounded-3xl border border-slate-700/50 shadow-2xl p-5">
-            {/* Sub-tab bar */}
-            <div className="flex rounded-xl overflow-hidden border border-slate-700/50 mb-5">
-              <button
-                onClick={() => setExplainerTab('framework')}
-                className={`flex-1 py-2 text-[10px] font-bold uppercase tracking-widest transition-colors ${explainerTab === 'framework'
-                  ? 'text-fuchsia-300 bg-fuchsia-900/20 border-b-2 border-fuchsia-400'
-                  : 'text-slate-400 hover:text-slate-200'
-                  }`}
-              >
-                The Framework
-              </button>
-              <button
-                onClick={() => setExplainerTab('sentence')}
-                className={`flex-1 py-2 text-[10px] font-bold uppercase tracking-widest transition-colors ${explainerTab === 'sentence'
-                  ? 'text-emerald-300 bg-emerald-900/20 border-b-2 border-emerald-400'
-                  : 'text-slate-400 hover:text-slate-200'
-                  }`}
-              >
-                This Sentence
-              </button>
+            <div className="mb-4 flex items-center gap-2">
+              <BookA className="w-5 h-5 text-fuchsia-400" />
+              <h3 className="text-sm font-bold text-slate-100 uppercase tracking-widest">The Framework</h3>
             </div>
-
-            <GrammarGuide
-              tab={explainerTab}
-              selectedSentence={selectedSentence}
-              renderExplanation={renderExplanation}
-            />
+            <GrammarGuide tab="framework" />
           </div>
         )}
 

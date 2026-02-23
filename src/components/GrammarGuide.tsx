@@ -3,14 +3,26 @@ import type { SentenceData } from '../types/grammar';
 interface GrammarGuideProps {
     tab: 'framework' | 'sentence';
     selectedSentence?: SentenceData;
-    renderExplanation: (text: string) => React.ReactNode;
 }
 
 /**
  * Shared content for the "Framework" and "This Sentence" tabs.
  * Rendered in both the desktop sidebar Explainer and the mobile Guide pane.
  */
-export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentence, renderExplanation }) => {
+export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentence }) => {
+
+    // Renders **bold** and *italic* markdown markers into styled JSX spans.
+    const renderExplanation = (text: string) => {
+        const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g);
+        return parts.map((part, i) => {
+            if (part.startsWith('**') && part.endsWith('**'))
+                return <strong key={i} className="text-slate-100 font-semibold">{part.slice(2, -2)}</strong>;
+            if (part.startsWith('*') && part.endsWith('*'))
+                return <em key={i} className="italic text-slate-300">{part.slice(1, -1)}</em>;
+            return <span key={i}>{part}</span>;
+        });
+    };
+
     if (tab === 'framework') {
         return (
             <div className="space-y-4">
