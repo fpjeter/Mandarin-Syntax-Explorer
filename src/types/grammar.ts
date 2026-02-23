@@ -59,5 +59,7 @@ export interface SentenceData {
         pinyin: string;
         translation: string;
     };
+    /** IDs of related sentences that share or contrast constructions with this one. */
+    relatedIds?: string[];
     tree: GrammarNodeData;
 }

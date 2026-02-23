@@ -413,6 +413,29 @@ function App() {
                       >
                         <div className="p-6 text-sm text-slate-300 leading-relaxed font-serif bg-gradient-to-b from-slate-900/40 to-transparent">
                           {renderExplanation(selectedSentence.explanation)}
+
+                          {/* Related sentences cross-reference chips */}
+                          {selectedSentence.relatedIds && selectedSentence.relatedIds.length > 0 && (
+                            <div className="mt-5 pt-4 border-t border-emerald-500/15">
+                              <div className="text-[10px] font-bold uppercase tracking-widest text-emerald-400/70 mb-2.5">Related</div>
+                              <div className="flex flex-wrap gap-2">
+                                {selectedSentence.relatedIds.map(rid => {
+                                  const related = sampleSentences.find(s => s.id === rid);
+                                  if (!related) return null;
+                                  return (
+                                    <button
+                                      key={rid}
+                                      onClick={() => handleSelectSentence(rid)}
+                                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-800/60 border border-slate-600/40 hover:bg-slate-700/80 hover:border-purple-500/40 transition-all duration-200 group cursor-pointer"
+                                    >
+                                      <span className="text-xs text-slate-200 font-chinese-ui group-hover:text-purple-300 transition-colors">{related.chinese.slice(0, 8)}{related.chinese.length > 8 ? '…' : ''}</span>
+                                      <span className="text-[9px] text-slate-500 group-hover:text-slate-400 transition-colors">{related.category}</span>
+                                    </button>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          )}
                         </div>
                       </motion.div>
                     )}

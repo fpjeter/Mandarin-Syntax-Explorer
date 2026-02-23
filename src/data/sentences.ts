@@ -4980,7 +4980,58 @@ export const sampleSentences: SentenceData[] = [
     },
 ];
 
+// ── Cross-reference patching ─────────────────────────────────────────────────
+// Populates relatedIds on sentences that share or contrast constructions.
+// Done after the array definition so we don't clutter the per-sentence objects.
+const byId = new Map(sampleSentences.map(s => [s.id, s]));
+function addRelated(id: string, relatedIds: string[]) {
+    const s = byId.get(id);
+    if (s) s.relatedIds = relatedIds;
+}
 
+// BA ↔ BEI pairs (same-action active vs passive)
+addRelated('s3', ['s6', 's29']);     // BA ↔ BEI, BA + resultative
+addRelated('s6', ['s3', 's48']);     // BEI ↔ BA, BEI + result
+addRelated('s29', ['s3', 's39']);     // BA + resultative ↔ BA + directional
+addRelated('s39', ['s29', 's43']);    // BA + directional ↔ directional compound
+
+// Complement cluster (resultative ↔ potential ↔ degree)
+addRelated('s27', ['s34', 's40']);    // result (听懂) ↔ potential (做不出来), result (找到)
+addRelated('s34', ['s27', 's44']);    // potential ↔ result, potential (看得懂)
+addRelated('s36', ['s37', 's46']);    // degree (高兴得跳) ↔ degree (跑得快), degree+potential
+addRelated('s46', ['s36', 's34']);    // degree+potential ↔ degree, potential
+addRelated('s47', ['s29', 's36']);    // BA+degree ↔ BA, degree
+addRelated('s49', ['s48', 's6']);     // BEI (抓住) ↔ BEI (撕掉), BEI (被打碎)
+
+// Directional complements
+addRelated('s42', ['s31', 's43']);    // directional (跑上楼去) ↔ (走进来), (摘下来)
+addRelated('s43', ['s42', 's39']);    // directional (摘下来) ↔ (跑上楼去), BA+directional
+
+// Pivotal ↔ Serial verb
+addRelated('s32', ['s52', 's58']);    // pivot (让) ↔ pivot (派), serial verb (骑去)
+addRelated('s52', ['s32', 's58']);    // pivot (派) ↔ pivot (让), serial verb
+addRelated('s58', ['s52', 's59']);    // serial (骑去) ↔ pivot, serial (拿着出门)
+
+// Correlative ↔ Conditional
+addRelated('s60', ['s61', 's64']);    // 越…越… ↔ 一…就…, 如果…就…
+addRelated('s61', ['s60', 's64']);    // 一…就… ↔ 越…越…, 如果…就…
+addRelated('s64', ['s65', 's61']);    // 如果…就… ↔ 只要…就…, 一…就…
+
+// Aspect marker connections
+addRelated('s62', ['s59', 's63']);    // 着 (state) ↔ 着 (serial verb concurrent), 过
+addRelated('s59', ['s62', 's58']);    // serial+着 ↔ 着 (state), serial (骑去)
+
+// Shì-de ↔ focus constructions
+addRelated('s50', ['s51', 's8']);     // 是…的 (time focus) ↔ (place focus), (original shi-de)
+addRelated('s51', ['s50', 's23']);    // 是…的 (place focus) ↔ (time focus), (original shi-de 2)
+
+// Separable verbs
+addRelated('s54', ['s55', 's12']);    // 分手 ↔ 毕业, 见面
+addRelated('s55', ['s54', 's24']);    // 毕业 ↔ 分手, 散步
+
+// 连…都/也 ↔ Rhetorical
+addRelated('s66', ['s67', 's56']);    // 连…都 ↔ 连…也, 难道
+addRelated('s67', ['s66', 's10']);    // 连…也 ↔ 连…都, 难道…非…不可
 
 
 
