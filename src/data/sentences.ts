@@ -3041,7 +3041,148 @@ export const sampleSentences: SentenceData[] = [
             ],
         },
     },
+    // ── Directional Complements ───────────────────────────────────────────────
+    {
+        id: 's38',
+        category: 'Directional Complements',
+        chinese: '他走进来了。',
+        pinyin: 'Tā zǒu jìn lái le.',
+        translation: 'He walked in.',
+        explanation: '**他** (he) is the Topic. The Comment\'s verb **走** (walk) is followed by a **compound directional complement**: **进** (enter) + **来** (come). Together, 进来 means entering toward the speaker\'s location. The three-part structure — main verb + direction morpheme + **来/去** — is the full directional complement frame. **来** signals movement toward the speaker; **去** signals movement away. So 走**出去** would mean "walk out (away)." These complements answer the question: *which direction did the action take?* The **了** confirms the action is complete.',
+        tree: {
+            id: 'n38',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n38-t',
+                    role: 'Topic',
+                    text: { hanzi: '他', pinyin: 'tā', translation: 'he' },
+                },
+                {
+                    id: 'n38-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n38-vp',
+                            role: 'Verb Phrase',
+                            children: [
+                                {
+                                    id: 'n38-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '走', pinyin: 'zǒu', translation: 'walk' },
+                                },
+                                {
+                                    id: 'n38-comp',
+                                    role: 'Complement',
+                                    subRole: 'directional compound (V + dir + 来)',
+                                    children: [
+                                        {
+                                            id: 'n38-comp-dir',
+                                            role: 'Complement',
+                                            subRole: 'direction morpheme (enter)',
+                                            text: { hanzi: '进', pinyin: 'jìn', translation: 'enter / in' },
+                                        },
+                                        {
+                                            id: 'n38-comp-lai',
+                                            role: 'Complement',
+                                            subRole: 'orientation — toward speaker',
+                                            text: { hanzi: '来', pinyin: 'lái', translation: 'come (toward speaker)' },
+                                        },
+                                    ],
+                                },
+                                {
+                                    id: 'n38-le',
+                                    role: 'Particle',
+                                    subRole: 'completion',
+                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        id: 's39',
+        category: 'Directional Complements',
+        chinese: '她把书拿出去了。',
+        pinyin: 'Tā bǎ shū ná chū qù le.',
+        translation: 'She took the book out (and away).',
+        explanation: '**她** (she) is the Topic. This sentence stacks two constructions: the BA front-object pattern and a directional complement. **把书** spotlights the book as the affected object. Then **拿** (take/carry) is followed by the directional complement **出去**: **出** (exit/out) + **去** (go). The **去** marks movement *away from the speaker* — contrast with 拿进**来** (carry in, toward speaker). When BA is combined with a directional complement, the structure is: 把 + [object] + [verb] + [direction] + 来/去. The object slots before the verb; the direction slots after.',
+        tree: {
+            id: 'n39',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n39-t',
+                    role: 'Topic',
+                    text: { hanzi: '她', pinyin: 'tā', translation: 'she' },
+                },
+                {
+                    id: 'n39-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n39-ba',
+                            role: 'Preposition',
+                            subRole: 'ba-construction',
+                            children: [
+                                {
+                                    id: 'n39-ba-prep',
+                                    role: 'Preposition',
+                                    text: { hanzi: '把', pinyin: 'bǎ', translation: '(object fronting)' },
+                                },
+                                {
+                                    id: 'n39-ba-obj',
+                                    role: 'Object',
+                                    text: { hanzi: '书', pinyin: 'shū', translation: 'book' },
+                                },
+                            ],
+                        },
+                        {
+                            id: 'n39-vp',
+                            role: 'Verb Phrase',
+                            children: [
+                                {
+                                    id: 'n39-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '拿', pinyin: 'ná', translation: 'take / carry' },
+                                },
+                                {
+                                    id: 'n39-comp',
+                                    role: 'Complement',
+                                    subRole: 'directional compound (V + dir + 去)',
+                                    children: [
+                                        {
+                                            id: 'n39-comp-dir',
+                                            role: 'Complement',
+                                            subRole: 'direction morpheme (exit)',
+                                            text: { hanzi: '出', pinyin: 'chū', translation: 'exit / out' },
+                                        },
+                                        {
+                                            id: 'n39-comp-qu',
+                                            role: 'Complement',
+                                            subRole: 'orientation — away from speaker',
+                                            text: { hanzi: '去', pinyin: 'qù', translation: 'go (away from speaker)' },
+                                        },
+                                    ],
+                                },
+                                {
+                                    id: 'n39-le',
+                                    role: 'Particle',
+                                    subRole: 'completion',
+                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
 ];
+
 
 
 
