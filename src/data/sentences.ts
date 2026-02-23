@@ -3181,7 +3181,563 @@ export const sampleSentences: SentenceData[] = [
             ],
         },
     },
+    // ── Resultative Complements — additional examples ─────────────────────────
+    {
+        id: 's40',
+        category: 'Resultative Complements',
+        chinese: '我找到钥匙了。',
+        pinyin: 'Wǒ zhǎo dào yào shi le.',
+        translation: 'I found the key.',
+        explanation: '**我** (I) is the Topic. The resultative compound **找到** is one of the most useful in the language: **找** (look for) + **到** (arrive at / reach). The result morpheme 到 means "reached the destination of searching" — which is exactly what finding something is. This **V+到** pattern is extremely productive: 买到 (buy and obtain), 拿到 (get hold of), 看到 (look and perceive = see), 听到 (listen and perceive = hear). The 到 always signals that the action reached its target. **了** confirms the action is complete.',
+        tree: {
+            id: 'n40',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n40-t',
+                    role: 'Topic',
+                    text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' },
+                },
+                {
+                    id: 'n40-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n40-vp',
+                            role: 'Verb Phrase',
+                            children: [
+                                {
+                                    id: 'n40-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '找', pinyin: 'zhǎo', translation: 'look for / search' },
+                                },
+                                {
+                                    id: 'n40-comp',
+                                    role: 'Complement',
+                                    subRole: 'resultative (reach target)',
+                                    text: { hanzi: '到', pinyin: 'dào', translation: 'arrive at / reach' },
+                                },
+                                {
+                                    id: 'n40-obj',
+                                    role: 'Object',
+                                    text: { hanzi: '钥匙', pinyin: 'yào shi', translation: 'key' },
+                                },
+                                {
+                                    id: 'n40-le',
+                                    role: 'Particle',
+                                    subRole: 'completion',
+                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        id: 's41',
+        category: 'Resultative Complements',
+        chinese: '他写错字了。',
+        pinyin: 'Tā xiě cuò zì le.',
+        translation: 'He wrote a character incorrectly.',
+        explanation: '**他** (he) is the Topic. The resultative compound **写错** — **写** (write) + **错** (wrong/mistaken) — means "wrote and the result was wrong." This is a very natural everyday pattern: you don\'t need separate words for "make a mistake writing"; one compact verb covers it. Other V+错 compounds: 说错 (say wrongly), 听错 (mishear), 拿错 (pick up the wrong thing), 走错 (go the wrong way). The object **字** (character/word) comes *after* the resultative compound — this is standard for resultatives with a regular (non-BA) object.',
+        tree: {
+            id: 'n41',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n41-t',
+                    role: 'Topic',
+                    text: { hanzi: '他', pinyin: 'tā', translation: 'he' },
+                },
+                {
+                    id: 'n41-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n41-vp',
+                            role: 'Verb Phrase',
+                            children: [
+                                {
+                                    id: 'n41-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '写', pinyin: 'xiě', translation: 'write' },
+                                },
+                                {
+                                    id: 'n41-comp',
+                                    role: 'Complement',
+                                    subRole: 'resultative (error)',
+                                    text: { hanzi: '错', pinyin: 'cuò', translation: 'wrong / mistaken' },
+                                },
+                                {
+                                    id: 'n41-obj',
+                                    role: 'Object',
+                                    text: { hanzi: '字', pinyin: 'zì', translation: 'character / word' },
+                                },
+                                {
+                                    id: 'n41-le',
+                                    role: 'Particle',
+                                    subRole: 'completion',
+                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+
+    // ── Directional Complements — additional examples ─────────────────────────
+    {
+        id: 's42',
+        category: 'Directional Complements',
+        chinese: '她跑上楼去了。',
+        pinyin: 'Tā pǎo shàng lóu qù le.',
+        translation: 'She ran upstairs (away from the speaker).',
+        explanation: '**她** (she) is the Topic. The directional complement here is **上去**: 上 (up) + 去 (away). But notice something: the object **楼** (stairs/floor) slots *between* 上 and 去. This is a key rule — when a directional complement has an object and uses a compound form (direction + 来/去), the object inserts between them: V + direction + *object* + 来/去. Compare s38 where there was no object: 走进来 (no insertion). The **上** signals upward movement; the **去** confirms it was *away* from the speaker\'s vantage.',
+        tree: {
+            id: 'n42',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n42-t',
+                    role: 'Topic',
+                    text: { hanzi: '她', pinyin: 'tā', translation: 'she' },
+                },
+                {
+                    id: 'n42-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n42-vp',
+                            role: 'Verb Phrase',
+                            children: [
+                                {
+                                    id: 'n42-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '跑', pinyin: 'pǎo', translation: 'run' },
+                                },
+                                {
+                                    id: 'n42-comp-dir',
+                                    role: 'Complement',
+                                    subRole: 'direction morpheme (upward)',
+                                    text: { hanzi: '上', pinyin: 'shàng', translation: 'up' },
+                                },
+                                {
+                                    id: 'n42-obj',
+                                    role: 'Object',
+                                    subRole: 'inserted between direction and 去',
+                                    text: { hanzi: '楼', pinyin: 'lóu', translation: 'stairs / floor' },
+                                },
+                                {
+                                    id: 'n42-comp-qu',
+                                    role: 'Complement',
+                                    subRole: 'orientation — away from speaker',
+                                    text: { hanzi: '去', pinyin: 'qù', translation: 'go (away)' },
+                                },
+                                {
+                                    id: 'n42-le',
+                                    role: 'Particle',
+                                    subRole: 'completion',
+                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        id: 's43',
+        category: 'Directional Complements',
+        chinese: '他从树上摘下来一个苹果。',
+        pinyin: 'Tā cóng shù shàng zhāi xià lái yī gè píng guǒ.',
+        translation: 'He plucked an apple down from the tree.',
+        explanation: '**他** (he) is the Topic. The location phrase **从树上** (from the tree) sets the scene. The verb **摘** (pluck/pick) is followed by the directional compound **下来**: 下 (down) + 来 (toward speaker). After 下来 comes the indefinite object **一个苹果** (one apple). When the object is indefinite (not "the apple" but "an apple"), it typically slots *after* the full directional compound, not inside it. Compare with s42 where a definite place word (楼) slots inside. This difference — definite/place words inside vs indefinite nouns after — is one of the trickier positional rules for directional complements.',
+        tree: {
+            id: 'n43',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n43-t',
+                    role: 'Topic',
+                    text: { hanzi: '他', pinyin: 'tā', translation: 'he' },
+                },
+                {
+                    id: 'n43-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n43-lp',
+                            role: 'Location Phrase',
+                            subRole: 'source location',
+                            children: [
+                                {
+                                    id: 'n43-lp-prep',
+                                    role: 'Preposition',
+                                    text: { hanzi: '从', pinyin: 'cóng', translation: 'from' },
+                                },
+                                {
+                                    id: 'n43-lp-n',
+                                    role: 'Noun',
+                                    text: { hanzi: '树', pinyin: 'shù', translation: 'tree' },
+                                },
+                                {
+                                    id: 'n43-lp-loc',
+                                    role: 'Particle',
+                                    subRole: 'localizer',
+                                    text: { hanzi: '上', pinyin: 'shàng', translation: 'on top / above' },
+                                },
+                            ],
+                        },
+                        {
+                            id: 'n43-vp',
+                            role: 'Verb Phrase',
+                            children: [
+                                {
+                                    id: 'n43-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '摘', pinyin: 'zhāi', translation: 'pluck / pick' },
+                                },
+                                {
+                                    id: 'n43-comp',
+                                    role: 'Complement',
+                                    subRole: 'directional compound (downward, toward speaker)',
+                                    children: [
+                                        {
+                                            id: 'n43-comp-dir',
+                                            role: 'Complement',
+                                            subRole: 'direction morpheme (downward)',
+                                            text: { hanzi: '下', pinyin: 'xià', translation: 'down' },
+                                        },
+                                        {
+                                            id: 'n43-comp-lai',
+                                            role: 'Complement',
+                                            subRole: 'orientation — toward speaker',
+                                            text: { hanzi: '来', pinyin: 'lái', translation: 'come (toward speaker)' },
+                                        },
+                                    ],
+                                },
+                                {
+                                    id: 'n43-obj',
+                                    role: 'Object',
+                                    subRole: 'indefinite object — follows full complement',
+                                    children: [
+                                        {
+                                            id: 'n43-obj-attr',
+                                            role: 'Attributive',
+                                            text: { hanzi: '一个', pinyin: 'yī gè', translation: 'one (measure)' },
+                                        },
+                                        {
+                                            id: 'n43-obj-hn',
+                                            role: 'Head Noun',
+                                            text: { hanzi: '苹果', pinyin: 'píng guǒ', translation: 'apple' },
+                                        },
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+
+    // ── Potential Complements — additional examples ───────────────────────────
+    {
+        id: 's44',
+        category: 'Potential Complements',
+        chinese: '这本书你看得懂吗？',
+        pinyin: 'Zhè běn shū nǐ kàn de dǒng ma？',
+        translation: 'Can you understand this book?',
+        explanation: 'A **double-topic** structure with a potential complement question. **这本书** (this book — 本 is the measure word for books) is the outer Topic. **你** (you) is the inner Topic. The potential complement **看得懂** uses **看** (read/look) + **得** + **懂** (understand): *can read-to-the-point-of-understanding*. The **吗** at the end turns it into a yes/no question. To answer yes: 看**得**懂 (can understand). To answer no: 看**不**懂 (can\'t understand). This is a natural question form when politely checking comprehension.',
+        tree: {
+            id: 'n44',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n44-outer-t',
+                    role: 'Topic',
+                    subRole: 'outer topic (frame)',
+                    children: [
+                        {
+                            id: 'n44-outer-t-attr',
+                            role: 'Attributive',
+                            text: { hanzi: '这本', pinyin: 'zhè běn', translation: 'this (book-measure)' },
+                        },
+                        {
+                            id: 'n44-outer-t-hn',
+                            role: 'Head Noun',
+                            text: { hanzi: '书', pinyin: 'shū', translation: 'book' },
+                        },
+                    ],
+                },
+                {
+                    id: 'n44-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n44-inner-t',
+                            role: 'Topic',
+                            subRole: 'inner topic (subject)',
+                            text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' },
+                        },
+                        {
+                            id: 'n44-vp',
+                            role: 'Verb Phrase',
+                            children: [
+                                {
+                                    id: 'n44-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '看', pinyin: 'kàn', translation: 'read / look' },
+                                },
+                                {
+                                    id: 'n44-de',
+                                    role: 'Particle',
+                                    subRole: 'potential affirmative marker',
+                                    text: { hanzi: '得', pinyin: 'de', translation: 'can (potential)' },
+                                },
+                                {
+                                    id: 'n44-comp',
+                                    role: 'Complement',
+                                    subRole: 'resultative (potential)',
+                                    text: { hanzi: '懂', pinyin: 'dǒng', translation: 'understand / grasp' },
+                                },
+                                {
+                                    id: 'n44-ma',
+                                    role: 'Particle',
+                                    subRole: 'question marker',
+                                    text: { hanzi: '吗', pinyin: 'ma', translation: '(question)' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        id: 's45',
+        category: 'Potential Complements',
+        chinese: '昨晚我睡不着，一直到天亮。',
+        pinyin: 'Zuó wǎn wǒ shuì bu zháo, yī zhí dào tiān liàng.',
+        translation: 'Last night I couldn\'t fall asleep — right up until dawn.',
+        explanation: 'The time phrase **昨晚** (last night) sets the scene. **我** (I) is the Topic. The potential complement **睡不着** — **睡** (sleep) + **不** + **着** (着 here means "catch / latch onto": the state of being asleep was unreachable) — conveys the inability to *reach* the state of sleep. This is a uniquely vivid potential complement: 着 as a result morpheme expresses "catching" or "settling into" a state. Compare: 找得着 (can find / manage to locate), 猜不着 (can\'t guess). The second clause **一直到天亮** (straight until dawn) extends the picture.',
+        tree: {
+            id: 'n45',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n45-tp',
+                    role: 'Time Phrase',
+                    text: { hanzi: '昨晚', pinyin: 'zuó wǎn', translation: 'last night' },
+                },
+                {
+                    id: 'n45-t',
+                    role: 'Topic',
+                    text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' },
+                },
+                {
+                    id: 'n45-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n45-cl1',
+                            role: 'Verb Phrase',
+                            subRole: 'clause 1 — potential complement (negative)',
+                            children: [
+                                {
+                                    id: 'n45-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '睡', pinyin: 'shuì', translation: 'sleep' },
+                                },
+                                {
+                                    id: 'n45-neg',
+                                    role: 'Particle',
+                                    subRole: 'potential negator',
+                                    text: { hanzi: '不', pinyin: 'bù', translation: 'cannot (potential)' },
+                                },
+                                {
+                                    id: 'n45-comp',
+                                    role: 'Complement',
+                                    subRole: 'resultative — catch/settle into state',
+                                    text: { hanzi: '着', pinyin: 'zháo', translation: 'catch / latch onto (state of sleep)' },
+                                },
+                            ],
+                        },
+                        {
+                            id: 'n45-cl2',
+                            role: 'Verb Phrase',
+                            subRole: 'clause 2 — extent',
+                            children: [
+                                {
+                                    id: 'n45-adv',
+                                    role: 'Adverb',
+                                    text: { hanzi: '一直', pinyin: 'yī zhí', translation: 'straight through / all the way' },
+                                },
+                                {
+                                    id: 'n45-prep',
+                                    role: 'Preposition',
+                                    text: { hanzi: '到', pinyin: 'dào', translation: 'until / up to' },
+                                },
+                                {
+                                    id: 'n45-endpoint',
+                                    role: 'Noun',
+                                    text: { hanzi: '天亮', pinyin: 'tiān liàng', translation: 'dawn / daybreak' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+
+    // ── Degree Complements — additional examples ──────────────────────────────
+    {
+        id: 's46',
+        category: 'Degree Complements',
+        chinese: '他气得说不出话来。',
+        pinyin: 'Tā qì de shuō bu chū huà lái.',
+        translation: 'He was so angry he couldn\'t get a word out.',
+        explanation: '**他** (he) is the Topic. This sentence elegantly stacks two complement types within one structure. The degree complement frame: **气** (be angry) + **得** (degree linker) + [consequence clause]. The consequence clause is itself a *negative potential complement*: **说不出话来** — speak + 不 + exit + words + come = "couldn\'t speak words out." So we have: degree complement whose consequence is expressed via a potential complement. This kind of nesting is entirely natural in Mandarin and shows how these complement types interact. The sentence tells you both *how intense* the anger was and *what its consequence* was.',
+        tree: {
+            id: 'n46',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n46-t',
+                    role: 'Topic',
+                    text: { hanzi: '他', pinyin: 'tā', translation: 'he' },
+                },
+                {
+                    id: 'n46-c',
+                    role: 'Comment',
+                    subRole: 'degree complement (consequence)',
+                    children: [
+                        {
+                            id: 'n46-pred',
+                            role: 'Adjective',
+                            subRole: 'predicate',
+                            text: { hanzi: '气', pinyin: 'qì', translation: 'angry / furious' },
+                        },
+                        {
+                            id: 'n46-de',
+                            role: 'Particle',
+                            subRole: 'degree complement linker',
+                            text: { hanzi: '得', pinyin: 'de', translation: '(links to consequence)' },
+                        },
+                        {
+                            id: 'n46-comp',
+                            role: 'Complement',
+                            subRole: 'degree — consequence (itself a negative potential complement)',
+                            children: [
+                                {
+                                    id: 'n46-comp-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '说', pinyin: 'shuō', translation: 'speak / say' },
+                                },
+                                {
+                                    id: 'n46-comp-neg',
+                                    role: 'Particle',
+                                    subRole: 'potential negator',
+                                    text: { hanzi: '不', pinyin: 'bù', translation: 'cannot (potential)' },
+                                },
+                                {
+                                    id: 'n46-comp-out',
+                                    role: 'Complement',
+                                    subRole: 'direction morpheme (exit/out)',
+                                    text: { hanzi: '出', pinyin: 'chū', translation: 'out / exit' },
+                                },
+                                {
+                                    id: 'n46-comp-obj',
+                                    role: 'Object',
+                                    text: { hanzi: '话', pinyin: 'huà', translation: 'words / speech' },
+                                },
+                                {
+                                    id: 'n46-comp-lai',
+                                    role: 'Complement',
+                                    subRole: 'orientation — toward speaker (coming out)',
+                                    text: { hanzi: '来', pinyin: 'lái', translation: 'come (complete the exit)' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        id: 's47',
+        category: 'Degree Complements',
+        chinese: '她把房间打扫得干干净净。',
+        pinyin: 'Tā bǎ fáng jiān dǎ sǎo de gān gān jìng jìng.',
+        translation: 'She cleaned the room spotlessly.',
+        explanation: '**她** (she) is the Topic. This sentence combines two constructions: the BA object-fronting pattern and a degree complement. **把房间** spotlights the room as the thing that gets cleaned. The verb **打扫** (clean/sweep) is followed by **得** and then **干干净净** (spotlessly clean — a reduplicated form of 干净 for emphasis). The degree complement here rates the *quality of the action*: how cleanly she cleaned. Note that with BA + a transitive verb, the degree complement attaches after 得 at the end — the word order is: 把 + [object] + [verb] + 得 + [degree description].',
+        tree: {
+            id: 'n47',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n47-t',
+                    role: 'Topic',
+                    text: { hanzi: '她', pinyin: 'tā', translation: 'she' },
+                },
+                {
+                    id: 'n47-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n47-ba',
+                            role: 'Preposition',
+                            subRole: 'ba-construction',
+                            children: [
+                                {
+                                    id: 'n47-ba-prep',
+                                    role: 'Preposition',
+                                    text: { hanzi: '把', pinyin: 'bǎ', translation: '(object fronting)' },
+                                },
+                                {
+                                    id: 'n47-ba-obj',
+                                    role: 'Object',
+                                    text: { hanzi: '房间', pinyin: 'fáng jiān', translation: 'room' },
+                                },
+                            ],
+                        },
+                        {
+                            id: 'n47-vp',
+                            role: 'Verb Phrase',
+                            subRole: 'degree complement (manner)',
+                            children: [
+                                {
+                                    id: 'n47-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '打扫', pinyin: 'dǎ sǎo', translation: 'clean / sweep' },
+                                },
+                                {
+                                    id: 'n47-de',
+                                    role: 'Particle',
+                                    subRole: 'degree complement linker',
+                                    text: { hanzi: '得', pinyin: 'de', translation: '(links to degree)' },
+                                },
+                                {
+                                    id: 'n47-comp',
+                                    role: 'Complement',
+                                    subRole: 'degree complement (reduplicated adjective)',
+                                    text: { hanzi: '干干净净', pinyin: 'gān gān jìng jìng', translation: 'spotlessly clean (reduplicated)' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
 ];
+
 
 
 
