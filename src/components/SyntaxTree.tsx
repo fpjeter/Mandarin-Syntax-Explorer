@@ -390,6 +390,9 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
     }, [rawEdges, hoveredNodeId, ancestorSet]);
 
     const onNodeClick: NodeMouseHandler = useCallback((_event, node) => {
+        // Always clear hover state on click/tap — on touch devices mouseLeave
+        // never fires after a tap, which would leave the highlight stuck.
+        setHoveredNodeId(null);
         if (node.data.hasChildren) {
             setExpandedIds(prev => {
                 const newSet = new Set(prev);
