@@ -124,4 +124,9 @@ export const glossary: Record<GrammarRole, { headline: string; detail: string }>
         detail:
             'Separable verbs (离合词) are VO compounds that can be split apart. This is the noun/object morpheme — the "thing" the verb acts on internally. E.g. 面 in 见面, 觉 in 睡觉, 步 in 散步. When the verb is split, this morpheme moves to the end.',
     },
+    Pivot: {
+        headline: 'A noun that plays two grammatical roles at once',
+        detail:
+            'In a pivotal construction (兼语句), one noun is simultaneously the object of the first verb and the subject of the second. E.g. in 老师让学生回答 (the teacher had the students answer), 学生 is the object of 让 and the subject of 回答.',
+    },
 };
