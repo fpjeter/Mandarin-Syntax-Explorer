@@ -3736,7 +3736,1251 @@ export const sampleSentences: SentenceData[] = [
             ],
         },
     },
+    // ── BEI (Passive) — additional examples ────────────────────────────────────
+    {
+        id: 's48',
+        category: 'BEI (Passive)',
+        chinese: '那封信被他撕掉了。',
+        pinyin: 'Nà fēng xìn bèi tā sī diào le.',
+        translation: 'That letter was torn up by him.',
+        explanation: '**那封信** (that letter) is the Topic — the thing affected. **被** introduces the agent: **他** (he/him). The verb **撕** (tear) is followed by the resultative complement **掉** (off / away — signals destruction or removal). BEI sentences almost always require a complement or 了 after the verb; bare *被+agent+verb* sounds incomplete. The **掉** tells you the letter didn\'t just get torn — it was torn *to pieces* or *away*. Compare: 撕破 (torn broken), 撕碎 (torn to shreds) — each complement shades the result differently.',
+        tree: {
+            id: 'n48',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n48-t',
+                    role: 'Topic',
+                    children: [
+                        {
+                            id: 'n48-t-attr',
+                            role: 'Attributive',
+                            text: { hanzi: '那封', pinyin: 'nà fēng', translation: 'that (letter-measure)' },
+                        },
+                        {
+                            id: 'n48-t-hn',
+                            role: 'Head Noun',
+                            text: { hanzi: '信', pinyin: 'xìn', translation: 'letter' },
+                        },
+                    ],
+                },
+                {
+                    id: 'n48-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n48-bei',
+                            role: 'Preposition',
+                            subRole: 'passive marker',
+                            text: { hanzi: '被', pinyin: 'bèi', translation: '(passive)' },
+                        },
+                        {
+                            id: 'n48-agent',
+                            role: 'Noun',
+                            subRole: 'agent (doer)',
+                            text: { hanzi: '他', pinyin: 'tā', translation: 'he / him' },
+                        },
+                        {
+                            id: 'n48-vp',
+                            role: 'Verb Phrase',
+                            children: [
+                                {
+                                    id: 'n48-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '撕', pinyin: 'sī', translation: 'tear' },
+                                },
+                                {
+                                    id: 'n48-comp',
+                                    role: 'Complement',
+                                    subRole: 'resultative (removal/destruction)',
+                                    text: { hanzi: '掉', pinyin: 'diào', translation: 'off / away (destroyed)' },
+                                },
+                                {
+                                    id: 'n48-le',
+                                    role: 'Particle',
+                                    subRole: 'completion',
+                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        id: 's49',
+        category: 'BEI (Passive)',
+        chinese: '小偷被警察抓住了。',
+        pinyin: 'Xiǎo tōu bèi jǐng chá zhuā zhù le.',
+        translation: 'The thief was caught by the police.',
+        explanation: '**小偷** (thief) is the Topic — the person affected. **被** marks the passive; **警察** (police) is the agent. The verb **抓** (grab/catch) is followed by the resultative complement **住** (firmly / hold in place). The **住** is key — it signals that the catching *stuck*: the thief didn\'t just get grabbed momentarily, he was held fast. The pattern V+住 is very common for actions that result in a fixed state: 记住 (remember firmly), 站住 (stand still / halt), 拿住 (hold onto). BEI + resultative is the most natural BEI pattern in speech.',
+        tree: {
+            id: 'n49',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n49-t',
+                    role: 'Topic',
+                    text: { hanzi: '小偷', pinyin: 'xiǎo tōu', translation: 'thief' },
+                },
+                {
+                    id: 'n49-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n49-bei',
+                            role: 'Preposition',
+                            subRole: 'passive marker',
+                            text: { hanzi: '被', pinyin: 'bèi', translation: '(passive)' },
+                        },
+                        {
+                            id: 'n49-agent',
+                            role: 'Noun',
+                            subRole: 'agent (doer)',
+                            text: { hanzi: '警察', pinyin: 'jǐng chá', translation: 'police' },
+                        },
+                        {
+                            id: 'n49-vp',
+                            role: 'Verb Phrase',
+                            children: [
+                                {
+                                    id: 'n49-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '抓', pinyin: 'zhuā', translation: 'grab / catch' },
+                                },
+                                {
+                                    id: 'n49-comp',
+                                    role: 'Complement',
+                                    subRole: 'resultative (firmly held)',
+                                    text: { hanzi: '住', pinyin: 'zhù', translation: 'firmly / hold in place' },
+                                },
+                                {
+                                    id: 'n49-le',
+                                    role: 'Particle',
+                                    subRole: 'completion',
+                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+
+    // ── Shì–de Construction — additional examples ─────────────────────────────
+    {
+        id: 's50',
+        category: 'Shì–de Construction',
+        chinese: '我是昨天到的。',
+        pinyin: 'Wǒ shì zuó tiān dào de.',
+        translation: 'It was yesterday that I arrived.',
+        explanation: '**我** (I) is the Topic. The **是…的** frame wraps around the focused element: **昨天** (yesterday). The structure says: *I arrived, and the part I want to highlight is WHEN — yesterday*. Without 是…的, you\'d say 我昨天到了 (neutral statement). With 是…的, the time is emphasized — this is the answer to "When did you arrive?" Notice that **的** comes after the verb **到** (arrive), at the very end. This is the simplest 是…的 template: 是 + [focused info] + verb + 的.',
+        tree: {
+            id: 'n50',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n50-t',
+                    role: 'Topic',
+                    text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' },
+                },
+                {
+                    id: 'n50-c',
+                    role: 'Comment',
+                    subRole: 'shì–de focus frame',
+                    children: [
+                        {
+                            id: 'n50-shi',
+                            role: 'Particle',
+                            subRole: 'focus opener (是)',
+                            text: { hanzi: '是', pinyin: 'shì', translation: '(emphasis: it was…)' },
+                        },
+                        {
+                            id: 'n50-focus',
+                            role: 'Time Phrase',
+                            subRole: 'focused element',
+                            text: { hanzi: '昨天', pinyin: 'zuó tiān', translation: 'yesterday' },
+                        },
+                        {
+                            id: 'n50-hv',
+                            role: 'Head Verb',
+                            text: { hanzi: '到', pinyin: 'dào', translation: 'arrive' },
+                        },
+                        {
+                            id: 'n50-de',
+                            role: 'Particle',
+                            subRole: 'focus closer (的)',
+                            text: { hanzi: '的', pinyin: 'de', translation: '(focus closure)' },
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        id: 's51',
+        category: 'Shì–de Construction',
+        chinese: '这件衣服是在北京买的。',
+        pinyin: 'Zhè jiàn yī fu shì zài Běi jīng mǎi de.',
+        translation: 'This item of clothing was bought in Beijing.',
+        explanation: '**这件衣服** (this item of clothing — 件 is the measure word for garments) is the Topic. The 是…的 frame now focuses on **在北京** (in Beijing) — the *location* of the past action. The pattern is: 是 + [place] + verb + 的. This answers "Where was it bought?" The verb **买** (buy) sits right before **的**. Combining 是…的 with a place phrase is extremely common when emphasizing origin or provenance: 这个菜是在哪儿做的？(Where was this dish made?). The focused element can be a time (s50), place (here), manner, or person.',
+        tree: {
+            id: 'n51',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n51-t',
+                    role: 'Topic',
+                    children: [
+                        {
+                            id: 'n51-t-attr',
+                            role: 'Attributive',
+                            text: { hanzi: '这件', pinyin: 'zhè jiàn', translation: 'this (garment-measure)' },
+                        },
+                        {
+                            id: 'n51-t-hn',
+                            role: 'Head Noun',
+                            text: { hanzi: '衣服', pinyin: 'yī fu', translation: 'clothing' },
+                        },
+                    ],
+                },
+                {
+                    id: 'n51-c',
+                    role: 'Comment',
+                    subRole: 'shì–de focus frame',
+                    children: [
+                        {
+                            id: 'n51-shi',
+                            role: 'Particle',
+                            subRole: 'focus opener (是)',
+                            text: { hanzi: '是', pinyin: 'shì', translation: '(emphasis: it was…)' },
+                        },
+                        {
+                            id: 'n51-focus',
+                            role: 'Location Phrase',
+                            subRole: 'focused element',
+                            children: [
+                                {
+                                    id: 'n51-focus-prep',
+                                    role: 'Preposition',
+                                    text: { hanzi: '在', pinyin: 'zài', translation: 'at / in' },
+                                },
+                                {
+                                    id: 'n51-focus-n',
+                                    role: 'Noun',
+                                    text: { hanzi: '北京', pinyin: 'Běi jīng', translation: 'Beijing' },
+                                },
+                            ],
+                        },
+                        {
+                            id: 'n51-hv',
+                            role: 'Head Verb',
+                            text: { hanzi: '买', pinyin: 'mǎi', translation: 'buy' },
+                        },
+                        {
+                            id: 'n51-de',
+                            role: 'Particle',
+                            subRole: 'focus closer (的)',
+                            text: { hanzi: '的', pinyin: 'de', translation: '(focus closure)' },
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+
+    // ── Pivotal Constructions — additional examples ───────────────────────────
+    {
+        id: 's52',
+        category: 'Pivotal Constructions',
+        chinese: '公司派他去谈判。',
+        pinyin: 'Gōng sī pài tā qù tán pàn.',
+        translation: 'The company sent him to negotiate.',
+        explanation: '**公司** (company) is the Topic. The verb **派** (dispatch/send) takes **他** (him) as its object — but 他 simultaneously becomes the subject of what follows: **去谈判** (go negotiate). This is the pivot. Unlike s32 and s33 where the pivot verbs were 让/叫 (permission/command), here **派** implies authority and assignment — the company dispatched him. The embedded predicate uses a serial verb: 去 (go) + 谈判 (negotiate), showing purpose chaining inside a pivotal frame. Mandarin layers these patterns with ease.',
+        tree: {
+            id: 'n52',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n52-t',
+                    role: 'Topic',
+                    text: { hanzi: '公司', pinyin: 'gōng sī', translation: 'company' },
+                },
+                {
+                    id: 'n52-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n52-vp',
+                            role: 'Verb Phrase',
+                            subRole: 'pivotal construction (兼语句)',
+                            children: [
+                                {
+                                    id: 'n52-hv',
+                                    role: 'Head Verb',
+                                    subRole: 'causative verb (dispatches)',
+                                    text: { hanzi: '派', pinyin: 'pài', translation: 'send / dispatch' },
+                                },
+                                {
+                                    id: 'n52-pivot',
+                                    role: 'Pivot',
+                                    subRole: 'object of 派, subject of 去谈判',
+                                    text: { hanzi: '他', pinyin: 'tā', translation: 'him' },
+                                },
+                                {
+                                    id: 'n52-embedded',
+                                    role: 'Verb Phrase',
+                                    subRole: 'serial verb (go + negotiate)',
+                                    children: [
+                                        {
+                                            id: 'n52-embedded-v1',
+                                            role: 'Head Verb',
+                                            subRole: 'motion verb',
+                                            text: { hanzi: '去', pinyin: 'qù', translation: 'go' },
+                                        },
+                                        {
+                                            id: 'n52-embedded-v2',
+                                            role: 'Head Verb',
+                                            subRole: 'purpose verb',
+                                            text: { hanzi: '谈判', pinyin: 'tán pàn', translation: 'negotiate' },
+                                        },
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        id: 's53',
+        category: 'Pivotal Constructions',
+        chinese: '她请我吃饭。',
+        pinyin: 'Tā qǐng wǒ chī fàn.',
+        translation: 'She invited me to eat (out / to dinner).',
+        explanation: '**她** (she) is the Topic. **请** (invite/treat) creates the pivotal structure: **我** (me) is both the object of 请 and the subject of **吃饭** (eat a meal). The verb 请 has a special cultural weight in Mandarin — 请你吃饭 often implies treating someone to a meal (paying for them). The embedded predicate 吃饭 is itself a simple VO compound. This sentence is a good contrast with s32 (让) and s33 (叫): 请 implies hospitality and courtesy, while 让/叫 imply permission or command — same syntactic frame, very different social register.',
+        tree: {
+            id: 'n53',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n53-t',
+                    role: 'Topic',
+                    text: { hanzi: '她', pinyin: 'tā', translation: 'she' },
+                },
+                {
+                    id: 'n53-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n53-vp',
+                            role: 'Verb Phrase',
+                            subRole: 'pivotal construction (兼语句)',
+                            children: [
+                                {
+                                    id: 'n53-hv',
+                                    role: 'Head Verb',
+                                    subRole: 'social verb (invites/treats)',
+                                    text: { hanzi: '请', pinyin: 'qǐng', translation: 'invite / treat' },
+                                },
+                                {
+                                    id: 'n53-pivot',
+                                    role: 'Pivot',
+                                    subRole: 'object of 请, subject of 吃饭',
+                                    text: { hanzi: '我', pinyin: 'wǒ', translation: 'me' },
+                                },
+                                {
+                                    id: 'n53-embedded',
+                                    role: 'Verb Phrase',
+                                    subRole: 'embedded predicate of pivot',
+                                    children: [
+                                        {
+                                            id: 'n53-embedded-hv',
+                                            role: 'Head Verb',
+                                            text: { hanzi: '吃', pinyin: 'chī', translation: 'eat' },
+                                        },
+                                        {
+                                            id: 'n53-embedded-obj',
+                                            role: 'Object',
+                                            text: { hanzi: '饭', pinyin: 'fàn', translation: 'meal / rice' },
+                                        },
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+
+    // ── Separable Verbs — additional examples ─────────────────────────────────
+    {
+        id: 's54',
+        category: 'Separable Verbs (离合词)',
+        chinese: '他们分了手。',
+        pinyin: 'Tā men fēn le shǒu.',
+        translation: 'They broke up.',
+        explanation: '**他们** (they) is the Topic. **分手** (break up) is a separable verb: **分** (split) is the verb morpheme and **手** (hand) is the object morpheme. When you insert the completion particle **了** between them, the compound splits: 分**了**手. This is the simplest split: just 了 slotting in. The separable verb frame works exactly the same way as in 见面, 散步, and 睡觉 — any particle, duration phrase, or frequency word goes between the verb half and the object half. You cannot say *分手了 for this meaning in standard usage; the 了 must go inside.',
+        tree: {
+            id: 'n54',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n54-t',
+                    role: 'Topic',
+                    text: { hanzi: '他们', pinyin: 'tā men', translation: 'they' },
+                },
+                {
+                    id: 'n54-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n54-vp',
+                            role: 'Verb Phrase',
+                            subRole: 'separable verb — split by 了',
+                            children: [
+                                {
+                                    id: 'n54-vm',
+                                    role: 'Verb Morpheme',
+                                    text: { hanzi: '分', pinyin: 'fēn', translation: 'split / separate' },
+                                },
+                                {
+                                    id: 'n54-le',
+                                    role: 'Particle',
+                                    subRole: 'completion (inserted)',
+                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
+                                },
+                                {
+                                    id: 'n54-om',
+                                    role: 'Object Morpheme',
+                                    text: { hanzi: '手', pinyin: 'shǒu', translation: 'hand (object half)' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        id: 's55',
+        category: 'Separable Verbs (离合词)',
+        chinese: '他毕了业就出国了。',
+        pinyin: 'Tā bì le yè jiù chū guó le.',
+        translation: 'As soon as he graduated, he went abroad.',
+        explanation: '**他** (he) is the Topic. The separable verb **毕业** (graduate) — **毕** (finish) + **业** (studies/profession) — is split by **了** to mark completion: 毕**了**业. What follows is a serial clause: **就** (then, immediately) + **出国** (go abroad) + **了**. The sentence has a "once X, then Y" flow. Notice 毕业 and 出国 are *both* Verb-Object compounds, but only 毕业 is truly "separable" here — 出国 stays intact because nothing needs to insert. This illustrates that not every VO compound is a 离合词; separability depends on whether the grammar *forces* something between V and O.',
+        tree: {
+            id: 'n55',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n55-t',
+                    role: 'Topic',
+                    text: { hanzi: '他', pinyin: 'tā', translation: 'he' },
+                },
+                {
+                    id: 'n55-c',
+                    role: 'Comment',
+                    subRole: 'sequential clauses',
+                    children: [
+                        {
+                            id: 'n55-cl1',
+                            role: 'Verb Phrase',
+                            subRole: 'clause 1 — separable verb split',
+                            children: [
+                                {
+                                    id: 'n55-vm',
+                                    role: 'Verb Morpheme',
+                                    text: { hanzi: '毕', pinyin: 'bì', translation: 'finish / complete' },
+                                },
+                                {
+                                    id: 'n55-le1',
+                                    role: 'Particle',
+                                    subRole: 'completion (inserted)',
+                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
+                                },
+                                {
+                                    id: 'n55-om',
+                                    role: 'Object Morpheme',
+                                    text: { hanzi: '业', pinyin: 'yè', translation: 'studies / profession' },
+                                },
+                            ],
+                        },
+                        {
+                            id: 'n55-cl2',
+                            role: 'Verb Phrase',
+                            subRole: 'clause 2 — sequential result',
+                            children: [
+                                {
+                                    id: 'n55-adv',
+                                    role: 'Adverb',
+                                    text: { hanzi: '就', pinyin: 'jiù', translation: 'then / immediately' },
+                                },
+                                {
+                                    id: 'n55-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '出国', pinyin: 'chū guó', translation: 'go abroad' },
+                                },
+                                {
+                                    id: 'n55-le2',
+                                    role: 'Particle',
+                                    subRole: 'completion',
+                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+
+    // ── Rhetorical Questions — additional examples ────────────────────────────
+    {
+        id: 's56',
+        category: 'Rhetorical Questions',
+        chinese: '你难道不知道吗？',
+        pinyin: 'Nǐ nán dào bù zhī dào ma?',
+        translation: 'Don\'t you know? (Surely you must know!)',
+        explanation: '**你** (you) is the Topic. **难道** (don\'t tell me / could it be that) is the rhetorical marker — it signals that the speaker expects the opposite of what the sentence literally says. The negation **不知道** (don\'t know) combined with 难道 produces: "You couldn\'t possibly not know" → "Of course you know!" The sentence-final **吗** reinforces the questioning tone but the expected answer is already baked in. 难道 always implies surprise, disbelief, or reproach. It\'s one of the most emotionally loaded adverbs in Mandarin.',
+        tree: {
+            id: 'n56',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n56-t',
+                    role: 'Topic',
+                    text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' },
+                },
+                {
+                    id: 'n56-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n56-rhet',
+                            role: 'Adverb',
+                            subRole: 'rhetorical marker (难道)',
+                            text: { hanzi: '难道', pinyin: 'nán dào', translation: 'don\'t tell me / could it be' },
+                        },
+                        {
+                            id: 'n56-vp',
+                            role: 'Verb Phrase',
+                            children: [
+                                {
+                                    id: 'n56-neg',
+                                    role: 'Adverb',
+                                    subRole: 'negation',
+                                    text: { hanzi: '不', pinyin: 'bù', translation: 'not' },
+                                },
+                                {
+                                    id: 'n56-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '知道', pinyin: 'zhī dào', translation: 'know' },
+                                },
+                                {
+                                    id: 'n56-ma',
+                                    role: 'Particle',
+                                    subRole: 'question marker',
+                                    text: { hanzi: '吗', pinyin: 'ma', translation: '(question)' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        id: 's57',
+        category: 'Rhetorical Questions',
+        chinese: '这件事非解决不可。',
+        pinyin: 'Zhè jiàn shì fēi jiě jué bù kě.',
+        translation: 'This matter absolutely must be resolved.',
+        explanation: '**这件事** (this matter — 件 is the measure word for affairs/items) is the Topic. The Comment uses the double-negation frame **非…不可**: 非 (must / unless) + verb + 不可 (not acceptable). The two negatives produce a strong affirmative: "it is not acceptable to NOT resolve it" → "it must be resolved." This is one of Mandarin\'s most emphatic constructions for expressing necessity. Unlike 难道 which questions, 非…不可 *demands*. The pattern is formulaic: 非 + [verb phrase] + 不可. You can slot any VP inside: 非去不可 (must go), 非说清楚不可 (must explain clearly).',
+        tree: {
+            id: 'n57',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n57-t',
+                    role: 'Topic',
+                    children: [
+                        {
+                            id: 'n57-t-attr',
+                            role: 'Attributive',
+                            text: { hanzi: '这件', pinyin: 'zhè jiàn', translation: 'this (matter-measure)' },
+                        },
+                        {
+                            id: 'n57-t-hn',
+                            role: 'Head Noun',
+                            text: { hanzi: '事', pinyin: 'shì', translation: 'matter / affair' },
+                        },
+                    ],
+                },
+                {
+                    id: 'n57-c',
+                    role: 'Comment',
+                    subRole: 'double-negation necessity (非…不可)',
+                    children: [
+                        {
+                            id: 'n57-fei',
+                            role: 'Adverb',
+                            subRole: 'necessity marker (非)',
+                            text: { hanzi: '非', pinyin: 'fēi', translation: 'must / unless' },
+                        },
+                        {
+                            id: 'n57-hv',
+                            role: 'Head Verb',
+                            text: { hanzi: '解决', pinyin: 'jiě jué', translation: 'resolve / settle' },
+                        },
+                        {
+                            id: 'n57-buke',
+                            role: 'Complement',
+                            subRole: 'double-negation closure (不可)',
+                            text: { hanzi: '不可', pinyin: 'bù kě', translation: 'not acceptable (closing negation)' },
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    // ── Serial Verb Constructions (连动句) ──────────────────────────────────────
+    {
+        id: 's58',
+        category: 'Serial Verb Constructions (连动句)',
+        chinese: '他骑自行车去上班。',
+        pinyin: 'Tā qí zì xíng chē qù shàng bān.',
+        translation: 'He rides a bicycle to go to work.',
+        explanation: '**他** (he) is the Topic. The Comment chains three VPs sharing the same subject: **骑自行车** (ride a bicycle) → **去** (go) → **上班** (go to work). No conjunctions link them — in Mandarin, serial verb constructions simply stack VPs in chronological or purpose order. VP1 describes the manner/means (riding), VP2 the motion (going), VP3 the purpose (working). This pattern is pervasive: Chinese rarely uses "and then" or "in order to" — the sequence says it all. Compare with pivotal constructions where the subject changes at the pivot; here, the subject stays the same throughout.',
+        tree: {
+            id: 'n58',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n58-t',
+                    role: 'Topic',
+                    text: { hanzi: '他', pinyin: 'tā', translation: 'he' },
+                },
+                {
+                    id: 'n58-c',
+                    role: 'Comment',
+                    subRole: 'serial verb construction (same subject)',
+                    children: [
+                        {
+                            id: 'n58-vp1',
+                            role: 'Verb Phrase',
+                            subRole: 'VP1 — manner/means',
+                            children: [
+                                {
+                                    id: 'n58-hv1',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '骑', pinyin: 'qí', translation: 'ride' },
+                                },
+                                {
+                                    id: 'n58-obj1',
+                                    role: 'Object',
+                                    text: { hanzi: '自行车', pinyin: 'zì xíng chē', translation: 'bicycle' },
+                                },
+                            ],
+                        },
+                        {
+                            id: 'n58-vp2',
+                            role: 'Verb Phrase',
+                            subRole: 'VP2 — motion',
+                            text: { hanzi: '去', pinyin: 'qù', translation: 'go' },
+                        },
+                        {
+                            id: 'n58-vp3',
+                            role: 'Verb Phrase',
+                            subRole: 'VP3 — purpose',
+                            text: { hanzi: '上班', pinyin: 'shàng bān', translation: 'go to work' },
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        id: 's59',
+        category: 'Serial Verb Constructions (连动句)',
+        chinese: '我拿着伞出门了。',
+        pinyin: 'Wǒ ná zhe sǎn chū mén le.',
+        translation: 'I took (was holding) an umbrella and went out.',
+        explanation: '**我** (I) is the Topic. Two VPs are chained: **拿着伞** (holding an umbrella) → **出门** (go out the door). The **着** on the first verb is the durative aspect marker — it means the umbrella-holding is *ongoing* while the second action happens. This is a very common serial verb pattern: V1着 + object + V2 = "while doing V1, do V2." Examples: 听着音乐跑步 (run while listening to music), 笑着说 (say while laughing). The 着 on V1 turns it into a concurrent background action rather than a sequential step.',
+        tree: {
+            id: 'n59',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n59-t',
+                    role: 'Topic',
+                    text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' },
+                },
+                {
+                    id: 'n59-c',
+                    role: 'Comment',
+                    subRole: 'serial verb (V1着 concurrent with V2)',
+                    children: [
+                        {
+                            id: 'n59-vp1',
+                            role: 'Verb Phrase',
+                            subRole: 'VP1 — concurrent background action',
+                            children: [
+                                {
+                                    id: 'n59-hv1',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '拿', pinyin: 'ná', translation: 'take / hold' },
+                                },
+                                {
+                                    id: 'n59-zhe',
+                                    role: 'Particle',
+                                    subRole: 'durative aspect (ongoing)',
+                                    text: { hanzi: '着', pinyin: 'zhe', translation: '(ongoing)' },
+                                },
+                                {
+                                    id: 'n59-obj1',
+                                    role: 'Object',
+                                    text: { hanzi: '伞', pinyin: 'sǎn', translation: 'umbrella' },
+                                },
+                            ],
+                        },
+                        {
+                            id: 'n59-vp2',
+                            role: 'Verb Phrase',
+                            subRole: 'VP2 — main action',
+                            children: [
+                                {
+                                    id: 'n59-hv2',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '出门', pinyin: 'chū mén', translation: 'go out / leave' },
+                                },
+                                {
+                                    id: 'n59-le',
+                                    role: 'Particle',
+                                    subRole: 'completion',
+                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+
+    // ── Correlative Patterns (越…越…) ─────────────────────────────────────────
+    {
+        id: 's60',
+        category: 'Correlative Patterns (越…越…)',
+        chinese: '中文越学越有意思。',
+        pinyin: 'Zhōng wén yuè xué yuè yǒu yì si.',
+        translation: 'The more you study Chinese, the more interesting it gets.',
+        explanation: '**中文** (Chinese) is the Topic. The **越…越…** (yuè…yuè…) frame pairs two clauses: **越学** (the more you study) and **越有意思** (the more interesting). The pattern is: 越 A 越 B — as A increases, B increases. The subject of 学 is dropped (pro-drop — the general "you"). This correlative frame is one of the most elegant in Mandarin: no conjunction, no relative clause — just the repeated 越 linking cause and effect. Other examples: 越吃越胖 (the more you eat, the fatter you get), 越想越难过 (the more you think about it, the sadder you feel).',
+        tree: {
+            id: 'n60',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n60-t',
+                    role: 'Topic',
+                    text: { hanzi: '中文', pinyin: 'zhōng wén', translation: 'Chinese (language)' },
+                },
+                {
+                    id: 'n60-c',
+                    role: 'Comment',
+                    subRole: 'correlative 越…越…',
+                    children: [
+                        {
+                            id: 'n60-cl1',
+                            role: 'Verb Phrase',
+                            subRole: 'clause A — condition',
+                            children: [
+                                {
+                                    id: 'n60-yue1',
+                                    role: 'Adverb',
+                                    subRole: 'correlative marker (越)',
+                                    text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' },
+                                },
+                                {
+                                    id: 'n60-hv1',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '学', pinyin: 'xué', translation: 'study' },
+                                },
+                            ],
+                        },
+                        {
+                            id: 'n60-cl2',
+                            role: 'Verb Phrase',
+                            subRole: 'clause B — consequence',
+                            children: [
+                                {
+                                    id: 'n60-yue2',
+                                    role: 'Adverb',
+                                    subRole: 'correlative marker (越)',
+                                    text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' },
+                                },
+                                {
+                                    id: 'n60-pred',
+                                    role: 'Adjective',
+                                    text: { hanzi: '有意思', pinyin: 'yǒu yì si', translation: 'interesting' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        id: 's61',
+        category: 'Correlative Patterns (越…越…)',
+        chinese: '他一说话就脸红。',
+        pinyin: 'Tā yī shuō huà jiù liǎn hóng.',
+        translation: 'The moment he speaks, he blushes.',
+        explanation: '**他** (he) is the Topic. The **一…就…** (yī…jiù…) frame expresses "as soon as A, immediately B." **一说话** (as soon as he speaks) triggers **就脸红** (immediately blushes). The 一 + verb signals the trigger event; the 就 signals instantaneous consequence. 脸红 is a subject-predicate compound: 脸 (face) + 红 (turns red). This pattern is extremely common in everyday speech: 一下雨就堵车 (as soon as it rains, traffic jams), 一看见她就笑 (the moment he sees her, he smiles). The two clauses share the same subject here, but they don\'t have to.',
+        tree: {
+            id: 'n61',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n61-t',
+                    role: 'Topic',
+                    text: { hanzi: '他', pinyin: 'tā', translation: 'he' },
+                },
+                {
+                    id: 'n61-c',
+                    role: 'Comment',
+                    subRole: 'correlative 一…就…',
+                    children: [
+                        {
+                            id: 'n61-cl1',
+                            role: 'Verb Phrase',
+                            subRole: 'trigger clause (一 + V)',
+                            children: [
+                                {
+                                    id: 'n61-yi',
+                                    role: 'Adverb',
+                                    subRole: 'trigger marker (一)',
+                                    text: { hanzi: '一', pinyin: 'yī', translation: 'as soon as' },
+                                },
+                                {
+                                    id: 'n61-hv1',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '说话', pinyin: 'shuō huà', translation: 'speak / talk' },
+                                },
+                            ],
+                        },
+                        {
+                            id: 'n61-cl2',
+                            role: 'Verb Phrase',
+                            subRole: 'consequence clause (就 + V)',
+                            children: [
+                                {
+                                    id: 'n61-jiu',
+                                    role: 'Adverb',
+                                    subRole: 'immediate consequence marker (就)',
+                                    text: { hanzi: '就', pinyin: 'jiù', translation: 'immediately / then' },
+                                },
+                                {
+                                    id: 'n61-pred',
+                                    role: 'Adjective',
+                                    subRole: 'subject-predicate compound',
+                                    text: { hanzi: '脸红', pinyin: 'liǎn hóng', translation: 'blush (face turns red)' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+
+    // ── Aspect Markers (着/过/了) ─────────────────────────────────────────────
+    {
+        id: 's62',
+        category: 'Aspect Markers (着/过/了)',
+        chinese: '门开着呢。',
+        pinyin: 'Mén kāi zhe ne.',
+        translation: 'The door is open (right now).',
+        explanation: '**门** (door) is the Topic. The verb **开** (open) carries the durative aspect marker **着** (zhe) — this doesn\'t mean "opening" (action in progress); it means the *state that resulted from opening* is still in effect. The door opened at some point and remains open now. The sentence-final **呢** (ne) reinforces the ongoing-state reading. This is **着** in its stative sense — one of its two primary functions. The other is the concurrent-action sense (V着 while doing something else, as in s59). Distinguishing these two is key: 坐着 can mean "is seated (state)" or "while sitting (concurrent)."',
+        tree: {
+            id: 'n62',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n62-t',
+                    role: 'Topic',
+                    text: { hanzi: '门', pinyin: 'mén', translation: 'door' },
+                },
+                {
+                    id: 'n62-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n62-vp',
+                            role: 'Verb Phrase',
+                            children: [
+                                {
+                                    id: 'n62-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '开', pinyin: 'kāi', translation: 'open' },
+                                },
+                                {
+                                    id: 'n62-zhe',
+                                    role: 'Particle',
+                                    subRole: 'durative aspect — resulting state (着)',
+                                    text: { hanzi: '着', pinyin: 'zhe', translation: '(ongoing state)' },
+                                },
+                                {
+                                    id: 'n62-ne',
+                                    role: 'Particle',
+                                    subRole: 'ongoing-state emphasis',
+                                    text: { hanzi: '呢', pinyin: 'ne', translation: '(still the case)' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        id: 's63',
+        category: 'Aspect Markers (着/过/了)',
+        chinese: '你去过长城吗？',
+        pinyin: 'Nǐ qù guo Cháng Chéng ma?',
+        translation: 'Have you been to the Great Wall?',
+        explanation: '**你** (you) is the Topic. The verb **去** (go) is followed by the experiential aspect marker **过** (guo) — this doesn\'t ask "Did you go?" (specific past event) but "Have you ever gone?" (life experience). The difference between 了 and 过 is crucial: 我去了长城 means "I went to the Great Wall (at a specific time)"; 我去过长城 means "I\'ve been to the Great Wall (at some point in my life)." The **吗** makes it a question. To answer: 去过 (yes, I have) or 没去过 (no, never). Notice the negation uses 没, not 不 — experiential 过 always pairs with 没.',
+        tree: {
+            id: 'n63',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n63-t',
+                    role: 'Topic',
+                    text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' },
+                },
+                {
+                    id: 'n63-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 'n63-vp',
+                            role: 'Verb Phrase',
+                            children: [
+                                {
+                                    id: 'n63-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '去', pinyin: 'qù', translation: 'go' },
+                                },
+                                {
+                                    id: 'n63-guo',
+                                    role: 'Particle',
+                                    subRole: 'experiential aspect (过)',
+                                    text: { hanzi: '过', pinyin: 'guo', translation: '(have ever)' },
+                                },
+                                {
+                                    id: 'n63-obj',
+                                    role: 'Object',
+                                    text: { hanzi: '长城', pinyin: 'Cháng Chéng', translation: 'Great Wall' },
+                                },
+                                {
+                                    id: 'n63-ma',
+                                    role: 'Particle',
+                                    subRole: 'question marker',
+                                    text: { hanzi: '吗', pinyin: 'ma', translation: '(question)' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+
+    // ── Conditional Sentences (如果…就…) ──────────────────────────────────────
+    {
+        id: 's64',
+        category: 'Conditional Sentences (如果…就…)',
+        chinese: '如果明天下雨，我们就不去了。',
+        pinyin: 'Rú guǒ míng tiān xià yǔ, wǒ men jiù bù qù le.',
+        translation: 'If it rains tomorrow, we won\'t go.',
+        explanation: 'The **如果…就…** frame is Mandarin\'s if–then construction. **如果** (if) heads the condition clause: **明天下雨** (tomorrow rains). **就** (then) heads the consequence: **不去了** (won\'t go). The two clauses share no explicit conjunction beyond 如果 and 就. In casual speech, 如果 is often dropped entirely — 就 alone can carry the conditional sense: 明天下雨就不去了. The **了** at the end signals a change of plan (we were going to go, now we won\'t). Notice the condition clause has no subject — the weather "rains" without an explicit "it."',
+        tree: {
+            id: 'n64',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n64-cl1',
+                    role: 'Verb Phrase',
+                    subRole: 'condition clause (如果…)',
+                    children: [
+                        {
+                            id: 'n64-ruguo',
+                            role: 'Adverb',
+                            subRole: 'conditional marker',
+                            text: { hanzi: '如果', pinyin: 'rú guǒ', translation: 'if' },
+                        },
+                        {
+                            id: 'n64-tp',
+                            role: 'Time Phrase',
+                            text: { hanzi: '明天', pinyin: 'míng tiān', translation: 'tomorrow' },
+                        },
+                        {
+                            id: 'n64-hv1',
+                            role: 'Head Verb',
+                            text: { hanzi: '下雨', pinyin: 'xià yǔ', translation: 'rain' },
+                        },
+                    ],
+                },
+                {
+                    id: 'n64-cl2',
+                    role: 'Verb Phrase',
+                    subRole: 'consequence clause (…就…)',
+                    children: [
+                        {
+                            id: 'n64-subj',
+                            role: 'Topic',
+                            text: { hanzi: '我们', pinyin: 'wǒ men', translation: 'we' },
+                        },
+                        {
+                            id: 'n64-jiu',
+                            role: 'Adverb',
+                            subRole: 'consequence marker (就)',
+                            text: { hanzi: '就', pinyin: 'jiù', translation: 'then' },
+                        },
+                        {
+                            id: 'n64-neg',
+                            role: 'Adverb',
+                            subRole: 'negation',
+                            text: { hanzi: '不', pinyin: 'bù', translation: 'not' },
+                        },
+                        {
+                            id: 'n64-hv2',
+                            role: 'Head Verb',
+                            text: { hanzi: '去', pinyin: 'qù', translation: 'go' },
+                        },
+                        {
+                            id: 'n64-le',
+                            role: 'Particle',
+                            subRole: 'change of state',
+                            text: { hanzi: '了', pinyin: 'le', translation: '(change of plan)' },
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        id: 's65',
+        category: 'Conditional Sentences (如果…就…)',
+        chinese: '只要你努力，就能成功。',
+        pinyin: 'Zhǐ yào nǐ nǔ lì, jiù néng chéng gōng.',
+        translation: 'As long as you work hard, you can succeed.',
+        explanation: 'The **只要…就…** frame is a close cousin of 如果…就…, but with a different nuance: "as long as / provided that" (lighter condition, stronger confidence in the result). **只要** (as long as) heads the condition: **你努力** (you work hard). **就** (then) introduces the guaranteed consequence: **能成功** (can succeed). The modal verb **能** (can / able to) signals capability/possibility. Unlike 如果, which is neutral ("if X, then Y"), 只要 implies the speaker is confident that the condition is sufficient: *all you need is to try hard*. Other 只要 examples: 只要有钱就行 (as long as there\'s money, it\'s fine).',
+        tree: {
+            id: 'n65',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n65-cl1',
+                    role: 'Verb Phrase',
+                    subRole: 'condition clause (只要…)',
+                    children: [
+                        {
+                            id: 'n65-zhiyao',
+                            role: 'Adverb',
+                            subRole: 'conditional marker (as long as)',
+                            text: { hanzi: '只要', pinyin: 'zhǐ yào', translation: 'as long as / provided that' },
+                        },
+                        {
+                            id: 'n65-subj1',
+                            role: 'Topic',
+                            text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' },
+                        },
+                        {
+                            id: 'n65-hv1',
+                            role: 'Head Verb',
+                            text: { hanzi: '努力', pinyin: 'nǔ lì', translation: 'work hard / make an effort' },
+                        },
+                    ],
+                },
+                {
+                    id: 'n65-cl2',
+                    role: 'Verb Phrase',
+                    subRole: 'consequence clause (…就…)',
+                    children: [
+                        {
+                            id: 'n65-jiu',
+                            role: 'Adverb',
+                            subRole: 'consequence marker (就)',
+                            text: { hanzi: '就', pinyin: 'jiù', translation: 'then' },
+                        },
+                        {
+                            id: 'n65-modal',
+                            role: 'Adverb',
+                            subRole: 'modal verb (ability)',
+                            text: { hanzi: '能', pinyin: 'néng', translation: 'can / able to' },
+                        },
+                        {
+                            id: 'n65-hv2',
+                            role: 'Head Verb',
+                            text: { hanzi: '成功', pinyin: 'chéng gōng', translation: 'succeed' },
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+
+    // ── 连…都/也 ("even X") ──────────────────────────────────────────────────
+    {
+        id: 's66',
+        category: '连…都/也 ("even X")',
+        chinese: '他连自己的名字都不会写。',
+        pinyin: 'Tā lián zì jǐ de míng zi dōu bù huì xiě.',
+        translation: 'He can\'t even write his own name.',
+        explanation: '**他** (he) is the Topic. The **连…都…** frame emphasizes an extreme case: 连 (even) + **自己的名字** (his own name) + **都** (all / even) + **不会写** (can\'t write). The structure says: "Even something as basic as his own name — he can\'t write it." 连 picks out the extreme item; 都 reinforces the "even" emphasis. The implied logic: if he can\'t do this simple thing, he certainly can\'t do harder things. This pattern always implies surprise, disappointment, or emphasis. Other examples: 连饭都没吃 (didn\'t even eat), 连一块钱都没有 (doesn\'t even have one yuan).',
+        tree: {
+            id: 'n66',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n66-t',
+                    role: 'Topic',
+                    text: { hanzi: '他', pinyin: 'tā', translation: 'he' },
+                },
+                {
+                    id: 'n66-c',
+                    role: 'Comment',
+                    subRole: '连…都… (even X)',
+                    children: [
+                        {
+                            id: 'n66-lian',
+                            role: 'Adverb',
+                            subRole: 'even-marker opener (连)',
+                            text: { hanzi: '连', pinyin: 'lián', translation: 'even' },
+                        },
+                        {
+                            id: 'n66-focus',
+                            role: 'Object',
+                            subRole: 'emphasized extreme case',
+                            children: [
+                                {
+                                    id: 'n66-focus-attr',
+                                    role: 'Attributive',
+                                    text: { hanzi: '自己的', pinyin: 'zì jǐ de', translation: 'his own' },
+                                },
+                                {
+                                    id: 'n66-focus-hn',
+                                    role: 'Head Noun',
+                                    text: { hanzi: '名字', pinyin: 'míng zi', translation: 'name' },
+                                },
+                            ],
+                        },
+                        {
+                            id: 'n66-dou',
+                            role: 'Adverb',
+                            subRole: 'even-marker reinforcer (都)',
+                            text: { hanzi: '都', pinyin: 'dōu', translation: 'even / all' },
+                        },
+                        {
+                            id: 'n66-vp',
+                            role: 'Verb Phrase',
+                            children: [
+                                {
+                                    id: 'n66-neg',
+                                    role: 'Adverb',
+                                    subRole: 'negation',
+                                    text: { hanzi: '不', pinyin: 'bù', translation: 'not' },
+                                },
+                                {
+                                    id: 'n66-modal',
+                                    role: 'Adverb',
+                                    subRole: 'modal verb (learned ability)',
+                                    text: { hanzi: '会', pinyin: 'huì', translation: 'know how to' },
+                                },
+                                {
+                                    id: 'n66-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '写', pinyin: 'xiě', translation: 'write' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        id: 's67',
+        category: '连…都/也 ("even X")',
+        chinese: '连小孩子也能做到。',
+        pinyin: 'Lián xiǎo hái zi yě néng zuò dào.',
+        translation: 'Even children can do it.',
+        explanation: 'This sentence uses **连…也…** (the 也 variant of the "even" construction). **连** picks out the extreme example: **小孩子** (children — the least expected group to succeed). **也** (also/even) + **能做到** (can accomplish it). The implied logic: if even children can do it, then anyone can. The difference between 都 and 也 in this pattern is subtle — 都 emphasizes exhaustive inclusion ("every single one"), while 也 emphasizes unexpected inclusion ("even this group too"). In practice, they\'re largely interchangeable. Notice this sentence has no separate Topic — 连 fronts the entire construction.',
+        tree: {
+            id: 'n67',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'n67-c',
+                    role: 'Comment',
+                    subRole: '连…也… (even X)',
+                    children: [
+                        {
+                            id: 'n67-lian',
+                            role: 'Adverb',
+                            subRole: 'even-marker opener (连)',
+                            text: { hanzi: '连', pinyin: 'lián', translation: 'even' },
+                        },
+                        {
+                            id: 'n67-focus',
+                            role: 'Subject',
+                            subRole: 'emphasized extreme case',
+                            text: { hanzi: '小孩子', pinyin: 'xiǎo hái zi', translation: 'children / little kids' },
+                        },
+                        {
+                            id: 'n67-ye',
+                            role: 'Adverb',
+                            subRole: 'even-marker reinforcer (也)',
+                            text: { hanzi: '也', pinyin: 'yě', translation: 'also / even' },
+                        },
+                        {
+                            id: 'n67-vp',
+                            role: 'Verb Phrase',
+                            children: [
+                                {
+                                    id: 'n67-modal',
+                                    role: 'Adverb',
+                                    subRole: 'modal verb (ability)',
+                                    text: { hanzi: '能', pinyin: 'néng', translation: 'can' },
+                                },
+                                {
+                                    id: 'n67-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '做', pinyin: 'zuò', translation: 'do' },
+                                },
+                                {
+                                    id: 'n67-comp',
+                                    role: 'Complement',
+                                    subRole: 'resultative (reach target)',
+                                    text: { hanzi: '到', pinyin: 'dào', translation: 'reach / accomplish' },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    },
 ];
+
+
 
 
 
