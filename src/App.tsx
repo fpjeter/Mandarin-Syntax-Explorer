@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { BookA, Info, PlayCircle, ChevronDown, ChevronRight, Lightbulb, Network, List, Search, X } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 import { sampleSentences } from './data/sentences';
+import { SENTENCE_CATEGORIES } from './data/categories';
 // import { CATEGORY_DESCRIPTIONS } from './data/categories'; // re-enable with category description span
 import type { SentenceCategory } from './types/grammar';
 import { SyntaxTree } from './components/SyntaxTree';
@@ -22,7 +23,10 @@ function App() {
       if (!map.has(s.category)) map.set(s.category, []);
       map.get(s.category)!.push(s);
     });
-    return [...map.entries()]; // [category, sentences][]
+    // Sort entries by the canonical SENTENCE_CATEGORIES order
+    return [...map.entries()].sort(
+      ([a], [b]) => SENTENCE_CATEGORIES.indexOf(a) - SENTENCE_CATEGORIES.indexOf(b)
+    );
   }, []);
 
   const [openGroups, setOpenGroups] = useState<Set<SentenceCategory>>(new Set());
