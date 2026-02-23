@@ -119,7 +119,7 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
                     onKeyDown={handleSearchKeyDown}
                     placeholder="Search sentences…"
                     aria-label="Search sentences"
-                    className="w-full bg-slate-800/60 border border-slate-700/60 rounded-xl pl-8 pr-7 py-2 text-[11px] text-slate-200 placeholder:text-slate-500 focus:outline-none focus:border-purple-500/60 focus:ring-1 focus:ring-purple-500/30 transition-colors"
+                    className="w-full bg-slate-800/60 border border-slate-700/60 rounded-xl pl-8 pr-7 py-2 text-[11px] text-slate-200 placeholder:text-slate-500 focus:outline-none focus:border-purple-500/70 focus:ring-2 focus:ring-purple-500/40 transition-all duration-200"
                 />
                 {searchQuery && (
                     <button
@@ -153,7 +153,7 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
                                     <span className="text-[11px] font-bold uppercase tracking-widest text-slate-200 leading-none">{category}</span>
                                 </span>
                                 <div className="flex items-center gap-2">
-                                    <span className="text-[10px] text-slate-500 font-medium">{sentences.length}</span>
+                                    <span className="text-[10px] text-slate-400 font-bold bg-slate-700/60 border border-slate-600/40 px-2 py-0.5 rounded-full min-w-[22px] text-center">{sentences.length}</span>
                                     <ChevronDown className={`w-3.5 h-3.5 text-slate-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
                                 </div>
                             </button>

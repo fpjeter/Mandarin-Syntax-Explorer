@@ -1,7 +1,9 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronRight, Lightbulb } from 'lucide-react';
+import { ChevronRight, Lightbulb, ArrowRight } from 'lucide-react';
 import { RubyText } from './RubyText';
 import type { SentenceData } from '../types/grammar';
+
+const springTransition = { type: 'spring' as const, stiffness: 300, damping: 28 };
 
 // Module-level helper — no React state dependency (item #4)
 const renderExplanation = (text: string) => {
@@ -40,6 +42,7 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
                     <motion.div
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
+                        transition={springTransition}
                         key={`ctx-${sentence.id}`}
                         className="glass-panel px-6 py-3 rounded-2xl flex flex-col items-center shadow-lg border border-slate-600/25 bg-slate-900/50 backdrop-blur-md w-full max-w-xl pointer-events-none"
                     >
@@ -73,11 +76,33 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
+                transition={springTransition}
                 key={`card-${sentence.id}`}
-                className={`glass-panel px-6 sm:px-10 py-5 flex flex-col items-center shadow-2xl border border-slate-500/30 bg-slate-900/80 backdrop-blur-xl w-full max-w-2xl pointer-events-none transition-all duration-300 ${sentence.explanation ? 'rounded-t-3xl rounded-b-none' : 'rounded-3xl'}`}
+                className={`glass-panel px-6 sm:px-10 py-5 flex flex-col items-center shadow-2xl border border-slate-500/30 bg-slate-900/80 backdrop-blur-xl w-full max-w-2xl transition-all duration-300 ${sentence.explanation ? 'rounded-t-3xl rounded-b-none' : 'rounded-3xl'}`}
             >
                 <RubyText hanzi={sentence.chinese} pinyin={sentence.pinyin} large displayFont className="!text-2xl sm:!text-4xl shadow-sm" />
                 <div className="mt-3 text-sm sm:text-base text-slate-300 italic font-medium tracking-wide">"{sentence.translation}"</div>
+
+                {/* Related sentence chips — always visible */}
+                {sentence.relatedIds && sentence.relatedIds.length > 0 && (
+                    <div className="mt-3 flex flex-wrap items-center gap-1.5 pointer-events-auto">
+                        <span className="text-[9px] text-slate-500 uppercase tracking-widest font-semibold mr-0.5">See also</span>
+                        {sentence.relatedIds.map(rid => {
+                            const related = sentenceById.get(rid);
+                            if (!related) return null;
+                            return (
+                                <button
+                                    key={rid}
+                                    onClick={() => onSelectRelated(rid)}
+                                    className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-800/60 border border-slate-600/40 hover:bg-purple-900/40 hover:border-purple-500/50 transition-all duration-200 group cursor-pointer"
+                                >
+                                    <span className="text-[10px] text-slate-300 font-chinese-ui group-hover:text-purple-300 transition-colors">{related.chinese.slice(0, 6)}{related.chinese.length > 6 ? '…' : ''}</span>
+                                    <ArrowRight className="w-2.5 h-2.5 text-slate-500 group-hover:text-purple-400 transition-colors" />
+                                </button>
+                            );
+                        })}
+                    </div>
+                )}
             </motion.div>
 
             {/* Persistent Sentence Notes Drawer */}

@@ -3,7 +3,7 @@ import { ReactFlow, Controls, Background, Position, MarkerType, useReactFlow, ty
 import '@xyflow/react/dist/style.css';
 import { Eye, EyeOff, Maximize2, Minimize2, BookOpen } from 'lucide-react';
 
-import type { GrammarNodeData as AppGrammarNodeData } from '../types/grammar';
+import type { GrammarNodeData as AppGrammarNodeData, GrammarRole } from '../types/grammar';
 import { GrammarNode } from './GrammarNode';
 import { CoRefEdge } from './CoRefEdge';
 import { BadgeLegend } from './BadgeLegend';
@@ -36,6 +36,17 @@ const LEAF_GAP = 60;  // horizontal gap between leaf nodes
 // ── Theme constants ──────────────────────────────────────────────────────────
 const TREE_EDGE_COLOR = '#94a3b8';
 const COREF_ARC_COLOR = '#f43f5e';
+
+// ── Edge color by source role (tweak #8) ─────────────────────────────────────
+const TOP_LEVEL_ROLES = new Set<GrammarRole>(['Sentence']);
+const MID_LEVEL_ROLES = new Set<GrammarRole>(['Topic', 'Comment', 'Subject', 'Predicate']);
+
+const getEdgeColor = (sourceRole?: GrammarRole): string => {
+    if (sourceRole && TOP_LEVEL_ROLES.has(sourceRole)) return '#a78bfa'; // purple
+    if (sourceRole && MID_LEVEL_ROLES.has(sourceRole)) return '#60a5fa'; // blue
+    return TREE_EDGE_COLOR; // slate
+};
+const HIGHLIGHT_EDGE_COLOR = '#e9d5ff'; // bright purple for ancestor highlighting
 
 // Estimate a node's rendered pixel width from its text content.
 const estimateNodeWidth = (data: AppGrammarNodeData): number => {
@@ -215,13 +226,16 @@ const parseTreeToFlow = (root: AppGrammarNodeData | undefined, expandedIds: Set<
         nodeDataMap.set(node.id, displayData);
 
         if (parentId !== null) {
+            const parentData = nodeDataMap.get(parentId);
+            const edgeColor = getEdgeColor(parentData?.role);
             treeEdges.push({
                 id: `e-${parentId}-${node.id}`,
                 source: parentId,
                 target: node.id,
                 type: 'smoothstep',
                 animated: true,
-                style: { stroke: TREE_EDGE_COLOR, strokeWidth: 2 }
+                style: { stroke: edgeColor, strokeWidth: 2 },
+                data: { sourceRole: parentData?.role },
             });
         }
 
@@ -289,16 +303,14 @@ const FitViewOnChange: React.FC<{ nodes: Node[]; isVisible?: boolean }> = ({ nod
 
     // Re-fit whenever the node layout changes (e.g. sentence switch)
     useEffect(() => {
-        const id = setTimeout(() => fitView({ padding: 0.15, duration: 200 }), 50);
+        const id = setTimeout(() => fitView({ padding: 0.15, duration: 350 }), 50);
         return () => clearTimeout(id);
     }, [nodes, fitView]);
 
     // Re-fit when the pane transitions from hidden → visible on mobile.
-    // The initial fit above fires against a 0×0 hidden container; this one
-    // fires after the container has real dimensions.
     useEffect(() => {
         if (!isVisible) return;
-        const id = setTimeout(() => fitView({ padding: 0.15, duration: 200 }), 100);
+        const id = setTimeout(() => fitView({ padding: 0.15, duration: 350 }), 100);
         return () => clearTimeout(id);
     }, [isVisible, fitView]);
 
@@ -314,6 +326,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
     const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set());
     const [showGhost, setShowGhost] = useState(true);
     const [isGlossaryOpen, setIsGlossaryOpen] = useState(false);
+    const [hoveredNodeId, setHoveredNodeId] = useState<string | null>(null);
 
     const treeHasProDrop = useMemo(() => tree ? hasProDrop(tree) : false, [tree]);
 
@@ -321,9 +334,60 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
     useEffect(() => {
         setExpandedIds(tree ? new Set([tree.id]) : new Set());
         setShowGhost(true);
+        setHoveredNodeId(null);
     }, [tree]);
 
-    const { nodes, edges } = useMemo(() => parseTreeToFlow(tree, expandedIds, showGhost), [tree, expandedIds, showGhost]);
+    const { nodes: rawNodes, edges: rawEdges } = useMemo(() => parseTreeToFlow(tree, expandedIds, showGhost), [tree, expandedIds, showGhost]);
+
+    // Build parent map for ancestor highlighting
+    const parentMap = useMemo(() => {
+        const map = new Map<string, string>();
+        rawEdges.forEach(e => {
+            if (e.type !== 'coref') map.set(e.target, e.source);
+        });
+        return map;
+    }, [rawEdges]);
+
+    // Compute ancestor set for the hovered node
+    const ancestorSet = useMemo(() => {
+        const set = new Set<string>();
+        if (!hoveredNodeId) return set;
+        set.add(hoveredNodeId);
+        let current = hoveredNodeId;
+        while (parentMap.has(current)) {
+            current = parentMap.get(current)!;
+            set.add(current);
+        }
+        return set;
+    }, [hoveredNodeId, parentMap]);
+
+    // Apply ancestor highlighting to nodes and edges
+    const nodes = useMemo(() => {
+        if (!hoveredNodeId) return rawNodes;
+        return rawNodes.map(n => ({
+            ...n,
+            className: ancestorSet.has(n.id)
+                ? 'ring-2 ring-purple-400/60 rounded-xl'
+                : 'opacity-40 transition-opacity duration-150',
+        }));
+    }, [rawNodes, hoveredNodeId, ancestorSet]);
+
+    const edges = useMemo(() => {
+        if (!hoveredNodeId) return rawEdges;
+        return rawEdges.map(e => {
+            if (e.type === 'coref') return e;
+            const isAncestorEdge = ancestorSet.has(e.source) && ancestorSet.has(e.target);
+            return {
+                ...e,
+                style: {
+                    ...e.style,
+                    stroke: isAncestorEdge ? HIGHLIGHT_EDGE_COLOR : (e.style?.stroke ?? TREE_EDGE_COLOR),
+                    strokeWidth: isAncestorEdge ? 3 : 2,
+                    opacity: isAncestorEdge ? 1 : 0.25,
+                },
+            };
+        });
+    }, [rawEdges, hoveredNodeId, ancestorSet]);
 
     const onNodeClick: NodeMouseHandler = useCallback((_event, node) => {
         if (node.data.hasChildren) {
@@ -337,6 +401,14 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
                 return newSet;
             });
         }
+    }, []);
+
+    const onNodeMouseEnter: NodeMouseHandler = useCallback((_event, node) => {
+        setHoveredNodeId(node.id);
+    }, []);
+
+    const onNodeMouseLeave: NodeMouseHandler = useCallback(() => {
+        setHoveredNodeId(null);
     }, []);
 
     const handleExpandAll = useCallback(() => {
@@ -372,11 +444,12 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
     return (
         <div className="w-full h-full border border-slate-700/50 rounded-2xl overflow-hidden glass-panel shadow-2xl relative">
 
-            <div className="absolute top-4 right-4 z-20 flex flex-col items-end gap-2 pointer-events-none">
-                <div className="flex items-center gap-2 pointer-events-auto">
+            {/* ── Toolbar ── */}
+            <div className="absolute top-4 right-4 z-20 pointer-events-auto">
+                <div className="glass-panel rounded-2xl border border-slate-700/60 p-2 flex flex-wrap items-center gap-1.5 shadow-2xl">
                     <button
                         onClick={handleExpandAll}
-                        className="flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] font-semibold tracking-wide border transition-all duration-200 bg-slate-800/60 border-slate-600/50 text-slate-400 hover:bg-slate-700/80 hover:text-slate-200"
+                        className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-[11px] font-semibold tracking-wide transition-all duration-200 bg-slate-800/60 text-slate-400 hover:bg-slate-700/80 hover:text-slate-200"
                         title="Expand all nodes"
                     >
                         <Maximize2 className="w-3.5 h-3.5" />
@@ -384,42 +457,45 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
                     </button>
                     <button
                         onClick={handleCollapseAll}
-                        className="flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] font-semibold tracking-wide border transition-all duration-200 bg-slate-800/60 border-slate-600/50 text-slate-400 hover:bg-slate-700/80 hover:text-slate-200"
+                        className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-[11px] font-semibold tracking-wide transition-all duration-200 bg-slate-800/60 text-slate-400 hover:bg-slate-700/80 hover:text-slate-200"
                         title="Collapse to root"
                     >
                         <Minimize2 className="w-3.5 h-3.5" />
                         Collapse All
                     </button>
 
-                    {/* Pro-drop toggle — only shown for sentences with dropped nodes */}
+                    {/* Pro-drop toggle */}
                     {treeHasProDrop && (
                         <button
                             onClick={() => setShowGhost(g => !g)}
                             className={`
-                                flex items-center gap-2 px-3 py-1.5 rounded-full
-                                text-[11px] font-semibold tracking-wide border transition-all duration-200
+                                flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl
+                                text-[11px] font-semibold tracking-wide transition-all duration-200
                                 ${showGhost
-                                    ? 'bg-slate-700/80 border-purple-500/50 text-purple-300 hover:bg-slate-600/80'
-                                    : 'bg-slate-800/60 border-slate-600/50 text-slate-400 hover:bg-slate-800/80'
+                                    ? 'bg-slate-700/80 text-purple-300'
+                                    : 'bg-slate-800/60 text-slate-400 hover:bg-slate-800/80'
                                 }
                             `}
                             title={showGhost ? 'Hide implied (pro-dropped) subjects' : 'Show implied (pro-dropped) subjects'}
                         >
                             {showGhost ? <Eye className="w-3.5 h-3.5" /> : <EyeOff className="w-3.5 h-3.5" />}
-                            {showGhost ? 'Showing implied subjects' : 'Subjects hidden (pro-drop)'}
+                            {showGhost ? 'Implied On' : 'Implied Off'}
                         </button>
                     )}
-                </div>
 
-                {/* Glossary Toggle Button */}
-                <button
-                    onClick={() => setIsGlossaryOpen(true)}
-                    className="flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] font-semibold tracking-wide border transition-all duration-200 bg-fuchsia-900/20 border-fuchsia-500/30 text-fuchsia-300 hover:bg-fuchsia-900/40 hover:border-fuchsia-400/50 pointer-events-auto"
-                    title="Open Grammar Glossary"
-                >
-                    <BookOpen className="w-3.5 h-3.5" />
-                    Glossary
-                </button>
+                    {/* Divider */}
+                    <div className="w-px h-5 bg-slate-700/60 mx-0.5" />
+
+                    {/* Glossary */}
+                    <button
+                        onClick={() => setIsGlossaryOpen(true)}
+                        className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-[11px] font-semibold tracking-wide transition-all duration-200 bg-fuchsia-900/30 text-fuchsia-300 hover:bg-fuchsia-900/50"
+                        title="Open Grammar Glossary"
+                    >
+                        <BookOpen className="w-3.5 h-3.5" />
+                        Glossary
+                    </button>
+                </div>
             </div>
 
             <ReactFlow
@@ -428,6 +504,8 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
                 nodeTypes={nodeTypes}
                 edgeTypes={edgeTypes}
                 onNodeClick={onNodeClick}
+                onNodeMouseEnter={onNodeMouseEnter}
+                onNodeMouseLeave={onNodeMouseLeave}
                 minZoom={0.3}
                 maxZoom={1.5}
                 proOptions={{ hideAttribution: true }}
