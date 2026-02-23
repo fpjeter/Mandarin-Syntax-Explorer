@@ -33,6 +33,10 @@ const edgeTypes = {
 const RANK_SEP = 160; // vertical gap between rank rows
 const LEAF_GAP = 60;  // horizontal gap between leaf nodes
 
+// ── Theme constants ──────────────────────────────────────────────────────────
+const TREE_EDGE_COLOR = '#94a3b8';
+const COREF_ARC_COLOR = '#f43f5e';
+
 // Estimate a node's rendered pixel width from its text content.
 const estimateNodeWidth = (data: AppGrammarNodeData): number => {
     const MIN_WIDTH = 160;
@@ -217,7 +221,7 @@ const parseTreeToFlow = (root: AppGrammarNodeData | undefined, expandedIds: Set<
                 target: node.id,
                 type: 'smoothstep',
                 animated: true,
-                style: { stroke: '#94a3b8', strokeWidth: 2 }
+                style: { stroke: TREE_EDGE_COLOR, strokeWidth: 2 }
             });
         }
 
@@ -233,18 +237,18 @@ const parseTreeToFlow = (root: AppGrammarNodeData | undefined, expandedIds: Set<
                 type: 'coref',
                 animated: false,
                 style: {
-                    stroke: '#f43f5e',
+                    stroke: COREF_ARC_COLOR,
                     strokeWidth: 1.5,
                     strokeDasharray: '6 3',
                 },
                 markerEnd: {
                     type: MarkerType.ArrowClosed,
-                    color: '#f43f5e',
+                    color: COREF_ARC_COLOR,
                     width: 14,
                     height: 14,
                 },
                 label: 'co-ref',
-                labelStyle: { fill: '#f43f5e', fontSize: 8, fontWeight: 600 },
+                labelStyle: { fill: COREF_ARC_COLOR, fontSize: 8, fontWeight: 600 },
                 labelBgStyle: { fill: 'rgba(15, 23, 42, 0.9)', fillOpacity: 1 },
             } as Edge);
         }

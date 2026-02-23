@@ -5,17 +5,15 @@ import { glossary } from '../data/glossary';
 import { RoleTooltip } from './RoleTooltip';
 import type { GrammarRole } from '../types/grammar';
 
+// Sort once at module level — glossary is static
+const SORTED_TERMS = (Object.keys(glossary) as GrammarRole[]).sort((a, b) => a.localeCompare(b));
+
 interface GlossaryPanelProps {
     isOpen: boolean;
     onClose: () => void;
 }
 
 export const GlossaryPanel: React.FC<GlossaryPanelProps> = ({ isOpen, onClose }) => {
-    // Sort terms alphabetically for easy browsing
-    const terms = (Object.keys(glossary) as GrammarRole[]).sort((a, b) => a.localeCompare(b));
-
-    // Group terms conceptually (e.g., Phrases vs core roles vs modifiers) could be another option, 
-    // but alphabetical is often easiest for a quick reference glossary.
 
     return (
         <AnimatePresence>
@@ -59,7 +57,7 @@ export const GlossaryPanel: React.FC<GlossaryPanelProps> = ({ isOpen, onClose })
 
                         {/* Content */}
                         <div className="flex-1 overflow-y-auto custom-scrollbar p-6 space-y-6">
-                            {terms.map((term) => {
+                            {SORTED_TERMS.map((term) => {
                                 const entry = glossary[term];
                                 return (
                                     <div key={term} className="group">

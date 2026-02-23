@@ -63,9 +63,7 @@ export const BADGES: BadgeSpec[] = [
         headline: 'Shì-de construction',
         detail: '是 and 的 bracket the verb phrase to focus on how, when, or where a past event happened',
         match: (_role, subRole) =>
-            subRole === 'emphatic copula' ||
-            subRole === 'emphatic copula (是…的)' ||
-            subRole === 'emphatic closure',
+            !!subRole?.match(/emphatic (copula|closure)|focus (opener|closer)/),
     },
     {
         label: '双重否定',
@@ -79,6 +77,6 @@ export const BADGES: BadgeSpec[] = [
         color: 'text-lime-300 bg-lime-900/40 border-lime-500/50',
         headline: 'Emphatic bracket',
         detail: '连 (even) and 都 (all/even) surround the focused element to stress that it holds without exception',
-        match: (_role, subRole) => !!subRole?.includes('lián'),
+        match: (_role, subRole) => !!subRole?.includes('even-marker'),
     },
 ];

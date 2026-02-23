@@ -1,7 +1,53 @@
-import React, { useState, useCallback, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import type { GrammarRole } from '../types/grammar';
 import { glossary } from '../data/glossary';
+
+// ── Shared mousemove listener (item #2) ──────────────────────────────────────
+// Instead of each RoleTooltip instance registering its own document mousemove
+// listener (which could mean 15-30+ listeners firing on every pixel of cursor
+// movement), we maintain a single shared listener that checks all registered
+// trigger elements.
+const activeTooltips = new Set<{
+    el: HTMLElement;
+    onInside: (rect: DOMRect) => void;
+    onOutside: () => void;
+}>();
+
+let listenerRegistered = false;
+
+function handleSharedMouseMove(e: MouseEvent) {
+    activeTooltips.forEach(entry => {
+        const rect = entry.el.getBoundingClientRect();
+        const inside =
+            e.clientX >= rect.left &&
+            e.clientX <= rect.right &&
+            e.clientY >= rect.top &&
+            e.clientY <= rect.bottom;
+        if (inside) {
+            entry.onInside(rect);
+        } else {
+            entry.onOutside();
+        }
+    });
+}
+
+function registerTooltip(entry: (typeof activeTooltips extends Set<infer T> ? T : never)) {
+    activeTooltips.add(entry);
+    if (!listenerRegistered) {
+        document.addEventListener('mousemove', handleSharedMouseMove, { passive: true });
+        listenerRegistered = true;
+    }
+    return () => {
+        activeTooltips.delete(entry);
+        if (activeTooltips.size === 0 && listenerRegistered) {
+            document.removeEventListener('mousemove', handleSharedMouseMove);
+            listenerRegistered = false;
+        }
+    };
+}
+
+// ── Component ────────────────────────────────────────────────────────────────
 
 interface RoleTooltipProps {
     role: GrammarRole;
@@ -11,10 +57,10 @@ interface RoleTooltipProps {
 /**
  * Hover tooltip for grammar role labels.
  *
- * Uses a document-level mousemove listener to detect when the cursor is
- * over the trigger element. This bypasses React Flow's synthetic event
- * system, which suppresses onMouseEnter/onPointerEnter inside node
- * components. The tooltip itself is rendered via a React portal directly
+ * Uses a single document-level mousemove listener (shared across all instances)
+ * to detect when the cursor is over the trigger element. This bypasses React
+ * Flow's synthetic event system, which suppresses onMouseEnter/onPointerEnter
+ * inside node components. The tooltip is rendered via a React portal directly
  * on document.body so it is never clipped by any parent overflow.
  */
 export const RoleTooltip: React.FC<RoleTooltipProps> = ({ role, children }) => {
@@ -23,27 +69,22 @@ export const RoleTooltip: React.FC<RoleTooltipProps> = ({ role, children }) => {
 
     const entry = glossary[role];
 
-    // Track cursor via document-level mousemove, check if it's inside trigger
-    const handleMouseMove = useCallback((e: MouseEvent) => {
-        const el = triggerRef.current;
-        if (!el) return;
-        const rect = el.getBoundingClientRect();
-        const inside =
-            e.clientX >= rect.left &&
-            e.clientX <= rect.right &&
-            e.clientY >= rect.top &&
-            e.clientY <= rect.bottom;
-        if (inside) {
-            setPos({ x: rect.left + rect.width / 2, y: rect.top });
-        } else {
-            setPos(null);
-        }
-    }, []);
-
     useEffect(() => {
-        document.addEventListener('mousemove', handleMouseMove, { passive: true });
-        return () => document.removeEventListener('mousemove', handleMouseMove);
-    }, [handleMouseMove]);
+        const el = triggerRef.current;
+        if (!el || !entry) return;
+
+        const registration = {
+            el,
+            onInside: (rect: DOMRect) => {
+                setPos({ x: rect.left + rect.width / 2, y: rect.top });
+            },
+            onOutside: () => {
+                setPos(null);
+            },
+        };
+
+        return registerTooltip(registration);
+    }, [entry]);
 
     if (!entry) return <>{children}</>;
 

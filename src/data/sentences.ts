@@ -4124,7 +4124,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '他们分了手。',
         pinyin: 'Tā men fēn le shǒu.',
         translation: 'They broke up.',
-        explanation: '**他们** (they) is the Topic. **分手** (break up) is a separable verb: **分** (split) is the verb morpheme and **手** (hand) is the object morpheme. When you insert the completion particle **了** between them, the compound splits: 分**了**手. This is the simplest split: just 了 slotting in. The separable verb frame works exactly the same way as in 见面, 散步, and 睡觉 — any particle, duration phrase, or frequency word goes between the verb half and the object half. You cannot say *分手了 for this meaning in standard usage; the 了 must go inside.',
+        explanation: '**他们** (they) is the Topic. **分手** (break up) is a separable verb: **分** (split) is the verb morpheme and **手** (hand) is the object morpheme. When you insert the completion particle **了** between them, the compound splits: 分**了**手. This is the simplest split: just 了 slotting in. The separable verb frame works exactly the same way as in 见面, 散步, and 睡觉 — any particle, duration phrase, or frequency word goes between the verb half and the object half. Both 分了手 (split) and 分手了 (unsplit) are natural. The split form emphasizes the completion of the breakup; the unsplit form is more neutral.',
         tree: {
             id: 'n54',
             role: 'Sentence',
@@ -4996,15 +4996,15 @@ addRelated('s29', ['s3', 's39']);     // BA + resultative ↔ BA + directional
 addRelated('s39', ['s29', 's43']);    // BA + directional ↔ directional compound
 
 // Complement cluster (resultative ↔ potential ↔ degree)
-addRelated('s27', ['s34', 's40']);    // result (听懂) ↔ potential (做不出来), result (找到)
-addRelated('s34', ['s27', 's44']);    // potential ↔ result, potential (看得懂)
+addRelated('s30', ['s34', 's40']);    // result (听懂) ↔ potential (做不出来), result (找到)
+addRelated('s34', ['s30', 's44']);    // potential ↔ result, potential (看得懂)
 addRelated('s36', ['s37', 's46']);    // degree (高兴得跳) ↔ degree (跑得快), degree+potential
 addRelated('s46', ['s36', 's34']);    // degree+potential ↔ degree, potential
 addRelated('s47', ['s29', 's36']);    // BA+degree ↔ BA, degree
 addRelated('s49', ['s48', 's6']);     // BEI (抓住) ↔ BEI (撕掉), BEI (被打碎)
 
 // Directional complements
-addRelated('s42', ['s31', 's43']);    // directional (跑上楼去) ↔ (走进来), (摘下来)
+addRelated('s42', ['s38', 's43']);    // directional (跑上楼去) ↔ (走进来), (摘下来)
 addRelated('s43', ['s42', 's39']);    // directional (摘下来) ↔ (跑上楼去), BA+directional
 
 // Pivotal ↔ Serial verb

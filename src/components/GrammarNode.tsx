@@ -1,3 +1,4 @@
+import React from 'react';
 import { Handle, Position, type NodeProps, type Node } from '@xyflow/react';
 import { PlusCircle, MinusCircle } from 'lucide-react';
 import type { GrammarRole, MandarinWord } from '../types/grammar';
@@ -6,7 +7,7 @@ import { RoleTooltip } from './RoleTooltip';
 import { glossary } from '../data/glossary';
 import { BADGES } from '../data/badges';
 
-export type GrammarNodeData = {
+export type GrammarNodeViewData = {
     role: GrammarRole;
     subRole?: string;
     isDropped?: boolean;
@@ -18,9 +19,9 @@ export type GrammarNodeData = {
     isExpanded?: boolean;
 };
 
-export type GrammarNodeType = Node<GrammarNodeData, 'grammarNode'>;
+export type GrammarNodeType = Node<GrammarNodeViewData, 'grammarNode'>;
 
-export const GrammarNode = ({ data, isConnectable }: NodeProps<GrammarNodeType>) => {
+const GrammarNodeInner = ({ data, isConnectable }: NodeProps<GrammarNodeType>) => {
     const getRoleColorClass = (role: GrammarRole) => {
         switch (role) {
             case 'Sentence': return 'bg-slate-800/80 text-slate-100 border-purple-400/60 shadow-[0_0_28px_rgba(139,92,246,0.45),inset_0_1px_0_rgba(255,255,255,0.08)]';
@@ -154,3 +155,5 @@ export const GrammarNode = ({ data, isConnectable }: NodeProps<GrammarNodeType>)
         </div>
     );
 };
+
+export const GrammarNode = React.memo(GrammarNodeInner);

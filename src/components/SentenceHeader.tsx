@@ -1,0 +1,152 @@
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronRight, Lightbulb } from 'lucide-react';
+import { RubyText } from './RubyText';
+import type { SentenceData } from '../types/grammar';
+
+// Module-level helper — no React state dependency (item #4)
+const renderExplanation = (text: string) => {
+    const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g);
+    return parts.map((part, i) => {
+        if (part.startsWith('**') && part.endsWith('**'))
+            return <strong key={i} className="text-slate-100 font-semibold">{part.slice(2, -2)}</strong>;
+        if (part.startsWith('*') && part.endsWith('*'))
+            return <em key={i} className="italic text-slate-300">{part.slice(1, -1)}</em>;
+        return <span key={i}>{part}</span>;
+    });
+};
+
+interface SentenceHeaderProps {
+    sentence: SentenceData;
+    notesOpen: boolean;
+    onToggleNotes: () => void;
+    onSelectRelated: (id: string) => void;
+    /** Pre-built lookup for resolving related sentence IDs to full data */
+    sentenceById: Map<string, SentenceData>;
+}
+
+export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
+    sentence,
+    notesOpen,
+    onToggleNotes,
+    onSelectRelated,
+    sentenceById,
+}) => {
+    return (
+        <div className="flex flex-col items-center gap-0 flex-shrink-0 px-2 pt-2 pb-0 z-10 w-full relative">
+
+            {/* Discourse context sentence (faded, smaller) */}
+            {sentence.discourseContext && (
+                <>
+                    <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        key={`ctx-${sentence.id}`}
+                        className="glass-panel px-6 py-3 rounded-2xl flex flex-col items-center shadow-lg border border-slate-600/25 bg-slate-900/50 backdrop-blur-md w-full max-w-xl pointer-events-none"
+                    >
+                        <span className="text-[9px] uppercase tracking-[0.18em] font-bold text-slate-500 mb-1.5">
+                            preceding context
+                        </span>
+                        <RubyText
+                            hanzi={sentence.discourseContext.chinese}
+                            pinyin={sentence.discourseContext.pinyin}
+                            className="opacity-60 !text-xl"
+                        />
+                        <div className="mt-1.5 text-[11px] text-slate-500 italic">
+                            "{sentence.discourseContext.translation}"
+                        </div>
+                    </motion.div>
+
+                    {/* Connector: arrow indicating discourse flow */}
+                    <div className="flex flex-col items-center gap-0.5 my-1 opacity-40 pointer-events-none">
+                        <div className="w-px h-3 bg-rose-400" />
+                        <svg width="10" height="6" viewBox="0 0 10 6" className="text-rose-400 fill-current">
+                            <path d="M5 6 L0 0 L10 0 Z" />
+                        </svg>
+                        <span className="text-[8px] text-rose-400 font-semibold tracking-widest uppercase -mt-0.5">
+                            pro-drop
+                        </span>
+                    </div>
+                </>
+            )}
+
+            {/* Main sentence card */}
+            <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                key={`card-${sentence.id}`}
+                className={`glass-panel px-6 sm:px-10 py-5 flex flex-col items-center shadow-2xl border border-slate-500/30 bg-slate-900/80 backdrop-blur-xl w-full max-w-2xl pointer-events-none transition-all duration-300 ${sentence.explanation ? 'rounded-t-3xl rounded-b-none' : 'rounded-3xl'}`}
+            >
+                <RubyText hanzi={sentence.chinese} pinyin={sentence.pinyin} large displayFont className="!text-2xl sm:!text-4xl shadow-sm" />
+                <div className="mt-3 text-sm sm:text-base text-slate-300 italic font-medium tracking-wide">"{sentence.translation}"</div>
+            </motion.div>
+
+            {/* Persistent Sentence Notes Drawer */}
+            {sentence.explanation && (
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    key={`notes-${sentence.id}`}
+                    className="w-full max-w-2xl"
+                >
+                    <button
+                        onClick={onToggleNotes}
+                        className={`w-full flex items-center justify-between px-6 py-2.5 bg-emerald-900/30 hover:bg-emerald-800/40 border-x border-t border-emerald-500/25 transition-all duration-300 ${notesOpen ? 'border-b-0 rounded-b-none' : 'border-b border-emerald-500/20 rounded-b-2xl'}`}
+                    >
+                        <div className="flex items-center gap-2">
+                            <Lightbulb className={`w-3.5 h-3.5 ${notesOpen ? 'text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.5)]' : 'text-emerald-500'}`} />
+                            <span className={`text-[11px] font-bold uppercase tracking-widest ${notesOpen ? 'text-emerald-200' : 'text-emerald-400/80'}`}>Grammar Note</span>
+                        </div>
+                        <ChevronRight className={`w-4 h-4 text-emerald-500 transition-transform duration-300 ${notesOpen ? 'rotate-90' : ''}`} />
+                    </button>
+
+                    <AnimatePresence initial={false}>
+                        {notesOpen && (
+                            <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: 'auto', opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                                className="overflow-hidden border-x border-b border-emerald-500/20 rounded-b-2xl shadow-xl backdrop-blur-md bg-slate-900/60"
+                            >
+                                <div className="p-6 text-sm text-slate-300 leading-relaxed font-serif bg-gradient-to-b from-slate-900/40 to-transparent">
+                                    {renderExplanation(sentence.explanation)}
+
+                                    {/* Related sentences cross-reference chips */}
+                                    {sentence.relatedIds && sentence.relatedIds.length > 0 && (
+                                        <div className="mt-5 pt-4 border-t border-emerald-500/15">
+                                            <div className="text-[10px] font-bold uppercase tracking-widest text-emerald-400/70 mb-2.5">Related</div>
+                                            <div className="flex flex-wrap gap-2">
+                                                {sentence.relatedIds.map(rid => {
+                                                    const related = sentenceById.get(rid);
+                                                    if (!related) return null;
+                                                    return (
+                                                        <button
+                                                            key={rid}
+                                                            onClick={() => onSelectRelated(rid)}
+                                                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-800/60 border border-slate-600/40 hover:bg-slate-700/80 hover:border-purple-500/40 transition-all duration-200 group cursor-pointer"
+                                                        >
+                                                            <span className="text-xs text-slate-200 font-chinese-ui group-hover:text-purple-300 transition-colors">{related.chinese.slice(0, 8)}{related.chinese.length > 8 ? '…' : ''}</span>
+                                                            <span className="text-[9px] text-slate-500 group-hover:text-slate-400 transition-colors">{related.category}</span>
+                                                        </button>
+                                                    );
+                                                })}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+                </motion.div>
+            )}
+
+            {/* Connector arrow pointing down toward tree root */}
+            <div className="flex flex-col items-center gap-0 mt-3 opacity-30 pointer-events-none">
+                <div className="w-px h-6 bg-gradient-to-b from-purple-400 to-transparent" />
+                <svg width="10" height="6" viewBox="0 0 10 6" className="fill-purple-400">
+                    <path d="M5 6 L0 0 L10 0 Z" />
+                </svg>
+            </div>
+        </div>
+    );
+};
