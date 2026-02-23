@@ -46,7 +46,6 @@ const getEdgeColor = (sourceRole?: GrammarRole): string => {
     if (sourceRole && MID_LEVEL_ROLES.has(sourceRole)) return '#60a5fa'; // blue
     return TREE_EDGE_COLOR; // slate
 };
-const HIGHLIGHT_EDGE_COLOR = '#e9d5ff'; // bright purple for ancestor highlighting
 
 // Estimate a node's rendered pixel width from its text content.
 const estimateNodeWidth = (data: AppGrammarNodeData): number => {
@@ -326,7 +325,6 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
     const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set());
     const [showGhost, setShowGhost] = useState(true);
     const [isGlossaryOpen, setIsGlossaryOpen] = useState(false);
-    const [hoveredNodeId, setHoveredNodeId] = useState<string | null>(null);
 
     const treeHasProDrop = useMemo(() => tree ? hasProDrop(tree) : false, [tree]);
 
@@ -334,65 +332,11 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
     useEffect(() => {
         setExpandedIds(tree ? new Set([tree.id]) : new Set());
         setShowGhost(true);
-        setHoveredNodeId(null);
     }, [tree]);
 
-    const { nodes: rawNodes, edges: rawEdges } = useMemo(() => parseTreeToFlow(tree, expandedIds, showGhost), [tree, expandedIds, showGhost]);
-
-    // Build parent map for ancestor highlighting
-    const parentMap = useMemo(() => {
-        const map = new Map<string, string>();
-        rawEdges.forEach(e => {
-            if (e.type !== 'coref') map.set(e.target, e.source);
-        });
-        return map;
-    }, [rawEdges]);
-
-    // Compute ancestor set for the hovered node
-    const ancestorSet = useMemo(() => {
-        const set = new Set<string>();
-        if (!hoveredNodeId) return set;
-        set.add(hoveredNodeId);
-        let current = hoveredNodeId;
-        while (parentMap.has(current)) {
-            current = parentMap.get(current)!;
-            set.add(current);
-        }
-        return set;
-    }, [hoveredNodeId, parentMap]);
-
-    // Apply ancestor highlighting to nodes and edges
-    const nodes = useMemo(() => {
-        if (!hoveredNodeId) return rawNodes;
-        return rawNodes.map(n => ({
-            ...n,
-            className: ancestorSet.has(n.id)
-                ? 'ring-2 ring-purple-400/60 rounded-xl'
-                : 'opacity-40 transition-opacity duration-150',
-        }));
-    }, [rawNodes, hoveredNodeId, ancestorSet]);
-
-    const edges = useMemo(() => {
-        if (!hoveredNodeId) return rawEdges;
-        return rawEdges.map(e => {
-            if (e.type === 'coref') return e;
-            const isAncestorEdge = ancestorSet.has(e.source) && ancestorSet.has(e.target);
-            return {
-                ...e,
-                style: {
-                    ...e.style,
-                    stroke: isAncestorEdge ? HIGHLIGHT_EDGE_COLOR : (e.style?.stroke ?? TREE_EDGE_COLOR),
-                    strokeWidth: isAncestorEdge ? 3 : 2,
-                    opacity: isAncestorEdge ? 1 : 0.25,
-                },
-            };
-        });
-    }, [rawEdges, hoveredNodeId, ancestorSet]);
+    const { nodes, edges } = useMemo(() => parseTreeToFlow(tree, expandedIds, showGhost), [tree, expandedIds, showGhost]);
 
     const onNodeClick: NodeMouseHandler = useCallback((_event, node) => {
-        // Always clear hover state on click/tap — on touch devices mouseLeave
-        // never fires after a tap, which would leave the highlight stuck.
-        setHoveredNodeId(null);
         if (node.data.hasChildren) {
             setExpandedIds(prev => {
                 const newSet = new Set(prev);
@@ -406,13 +350,6 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
         }
     }, []);
 
-    const onNodeMouseEnter: NodeMouseHandler = useCallback((_event, node) => {
-        setHoveredNodeId(node.id);
-    }, []);
-
-    const onNodeMouseLeave: NodeMouseHandler = useCallback(() => {
-        setHoveredNodeId(null);
-    }, []);
 
     const handleExpandAll = useCallback(() => {
         if (!tree) return;
@@ -507,8 +444,6 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
                 nodeTypes={nodeTypes}
                 edgeTypes={edgeTypes}
                 onNodeClick={onNodeClick}
-                onNodeMouseEnter={onNodeMouseEnter}
-                onNodeMouseLeave={onNodeMouseLeave}
                 minZoom={0.3}
                 maxZoom={1.5}
                 proOptions={{ hideAttribution: true }}
