@@ -7,6 +7,10 @@ import { glossary } from '../data/glossary';
 // A single document-level listener checks all registered tooltips. When
 // multiple overlapping triggers are hovered (e.g. a badge inside a node),
 // only the *innermost* (smallest-area) one fires — "innermost wins."
+//
+// On touch-primary devices (phones, tablets) this listener is completely
+// skipped — tooltips only appear via long-press. The CSS (hover: hover)
+// media query reliably detects whether the device supports real hover.
 
 type TooltipRegistration = {
     el: HTMLElement;
@@ -17,28 +21,12 @@ type TooltipRegistration = {
 const activeTooltips = new Set<TooltipRegistration>();
 let listenerRegistered = false;
 
-// Suppress mousemove-triggered tooltips during / right after touch input.
-// Mobile browsers fire synthetic mousemove after touchend, which would
-// otherwise show tooltips instantly instead of waiting for long-press.
-let touchActive = false;
-let touchTimer: ReturnType<typeof setTimeout> | null = null;
-
-function markTouchActive() {
-    touchActive = true;
-    if (touchTimer) clearTimeout(touchTimer);
-    // Keep suppressed for 500ms after last touch event
-    touchTimer = setTimeout(() => { touchActive = false; }, 500);
-}
-
-// Register once — these stay for the lifetime of the app
-if (typeof window !== 'undefined') {
-    document.addEventListener('touchstart', markTouchActive, { passive: true });
-    document.addEventListener('touchend', markTouchActive, { passive: true });
-}
+/** true only on devices with a real hover capability (mouse / trackpad) */
+const canHover = typeof window !== 'undefined' && window.matchMedia('(hover: hover)').matches;
 
 function handleSharedMouseMove(e: MouseEvent) {
-    // Skip entirely if this is a synthetic mouse event following a touch
-    if (touchActive) return;
+    // Touch-primary devices: never show tooltips via mousemove
+    if (!canHover) return;
 
     // Collect all tooltips the cursor is inside of
     const hits: { entry: TooltipRegistration; rect: DOMRect; area: number }[] = [];
@@ -146,8 +134,8 @@ function TooltipPopup({ pos, headline, detail }: { pos: { x: number; y: number }
             {/* Caret arrow */}
             <div
                 className={`absolute w-2.5 h-2.5 bg-slate-800 border-slate-600/60 ${adjusted?.flipped
-                        ? '-top-[5px] border-l border-t'
-                        : '-bottom-[5px] border-r border-b'
+                    ? '-top-[5px] border-l border-t'
+                    : '-bottom-[5px] border-r border-b'
                     }`}
                 style={{
                     left: adjusted ? `${adjusted.caretLeft}px` : '50%',
@@ -222,7 +210,7 @@ export const HoverTooltip: React.FC<HoverTooltipProps> = ({ headline, detail, as
             };
             // Use setTimeout to avoid catching the current touch event
             setTimeout(() => document.addEventListener('touchstart', dismiss, { once: true }), 0);
-        }, 500);
+        }, 700);
     };
 
     const handleTouchEnd = useCallback((e: React.TouchEvent) => {
