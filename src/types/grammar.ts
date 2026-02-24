@@ -41,7 +41,7 @@ export interface GrammarNodeData {
     subRole?: string;
     isDropped?: boolean;
     impliedText?: string;    // e.g. '我' — the pronoun that was omitted
-    refersToId?: string;     // id of the node this dropped pronoun co-refers with (for arc)
+    refersToId?: string;     // id of the node this dropped pronoun co-refers with (for hover glow)
     text?: MandarinWord;
     children?: GrammarNodeData[];
 }

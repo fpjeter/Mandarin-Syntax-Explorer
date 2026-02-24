@@ -1,20 +1,15 @@
 import React, { useMemo, useState, useEffect, useCallback } from 'react';
-import { ReactFlow, Background, Position, MarkerType, useReactFlow, type Edge, type Node, type NodeMouseHandler } from '@xyflow/react';
+import { ReactFlow, Background, Position, useReactFlow, type Edge, type Node, type NodeMouseHandler } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { Eye, EyeOff, Maximize2, Minimize2, BookOpen, ZoomIn, ZoomOut, Scan } from 'lucide-react';
 
 import type { GrammarNodeData as AppGrammarNodeData, GrammarRole } from '../types/grammar';
 import { GrammarNode } from './GrammarNode';
-import { CoRefEdge } from './CoRefEdge';
 import { BadgeLegend } from './BadgeLegend';
 import { GlossaryPanel } from './GlossaryPanel';
 
 const nodeTypes = {
     grammarNode: GrammarNode,
-};
-
-const edgeTypes = {
-    coref: CoRefEdge,
 };
 
 /**
@@ -35,7 +30,6 @@ const LEAF_GAP = 60;  // horizontal gap between leaf nodes
 
 // ── Theme constants ──────────────────────────────────────────────────────────
 const TREE_EDGE_COLOR = '#94a3b8';
-const COREF_ARC_COLOR = '#f43f5e';
 
 // ── Edge color by source role (tweak #8) ─────────────────────────────────────
 const TOP_LEVEL_ROLES = new Set<GrammarRole>(['Sentence']);
@@ -181,12 +175,13 @@ const hasProDrop = (node: AppGrammarNodeData): boolean => {
 };
 
 const parseTreeToFlow = (root: AppGrammarNodeData | undefined, expandedIds: Set<string>, showGhost: boolean) => {
-    if (!root) return { nodes: [], edges: [], nodeDataMap: new Map<string, AppGrammarNodeData>() };
+    if (!root) return { nodes: [], edges: [], corefPairs: new Map<string, string>() };
 
     const nodes: Node[] = [];
-    const treeEdges: Edge[] = [];       // structural edges – used for layout
-    const corefEdges: Edge[] = [];      // co-reference arcs – added AFTER layout
+    const treeEdges: Edge[] = [];
     const nodeDataMap = new Map<string, AppGrammarNodeData>();
+    /** Maps ghost node ID → referent ID and vice versa, for hover highlighting */
+    const corefPairs = new Map<string, string>();
 
     const traverse = (node: AppGrammarNodeData, parentId: string | null = null, depth = 0) => {
         // Skip ghost nodes when the toggle is off
@@ -224,6 +219,12 @@ const parseTreeToFlow = (root: AppGrammarNodeData | undefined, expandedIds: Set<
 
         nodeDataMap.set(node.id, displayData);
 
+        // Build co-ref pair map for hover highlighting
+        if (node.isDropped && node.refersToId && showGhost) {
+            corefPairs.set(node.id, node.refersToId);
+            corefPairs.set(node.refersToId, node.id);
+        }
+
         if (parentId !== null) {
             const parentData = nodeDataMap.get(parentId);
             const edgeColor = getEdgeColor(parentData?.role);
@@ -238,35 +239,6 @@ const parseTreeToFlow = (root: AppGrammarNodeData | undefined, expandedIds: Set<
             });
         }
 
-        // Co-reference arc: custom 'coref' edge. We draw it FROM the antecedent
-        // (topic) TO the ghost so the arrowhead points at the ghost from above,
-        // and the arc bows upward without intersecting the ghost node.
-        if (node.isDropped && node.refersToId && showGhost) {
-            corefEdges.push({
-                id: `coref-${node.id}`,
-                source: node.refersToId,   // antecedent (Topic)
-                target: node.id,           // ghost [他]
-                sourceHandleId: 'coref-source', // exit from the top of Topic
-                type: 'coref',
-                animated: false,
-                style: {
-                    stroke: COREF_ARC_COLOR,
-                    strokeWidth: 1.5,
-                    strokeDasharray: '6 3',
-                },
-                markerEnd: {
-                    type: MarkerType.ArrowClosed,
-                    color: COREF_ARC_COLOR,
-                    width: 14,
-                    height: 14,
-                },
-                label: 'co-ref',
-                labelStyle: { fill: COREF_ARC_COLOR, fontSize: 8, fontWeight: 600 },
-                labelBgStyle: { fill: 'rgba(15, 23, 42, 0.9)', fillOpacity: 1 },
-            } as Edge);
-        }
-
-
         if (hasChildren && isExpanded) {
             node.children!.forEach(child => traverse(child, node.id, depth + 1));
         }
@@ -274,23 +246,11 @@ const parseTreeToFlow = (root: AppGrammarNodeData | undefined, expandedIds: Set<
 
     traverse(root);
 
-    // Layout uses only tree edges; co-ref arcs are appended afterward.
-    // Patch each coref edge with the source node's top-y so CoRefEdge can
-    // start the arc precisely at the top of the antecedent node.
     const layouted = getLayoutedElements(nodes, treeEdges, nodeDataMap);
-    const nodePositionMap = new Map(layouted.nodes.map(n => [n.id, n.position]));
-    const patchedCorefEdges = corefEdges.map(edge => ({
-        ...edge,
-        data: {
-            ...((edge.data as Record<string, unknown>) ?? {}),
-            sourceNodeTopY: nodePositionMap.get(edge.source)?.y ?? 0,
-            sourceNodeX: nodePositionMap.get(edge.source)?.x ?? 0,
-        },
-    }));
     return {
         nodes: layouted.nodes,
-        edges: [...layouted.edges, ...patchedCorefEdges],
-        nodeDataMap,
+        edges: layouted.edges,
+        corefPairs,
     };
 };
 
@@ -356,7 +316,21 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
         setShowGhost(true);
     }, [tree]);
 
-    const { nodes, edges } = useMemo(() => parseTreeToFlow(tree, expandedIds, showGhost), [tree, expandedIds, showGhost]);
+    const { nodes: rawNodes, edges, corefPairs } = useMemo(() => parseTreeToFlow(tree, expandedIds, showGhost), [tree, expandedIds, showGhost]);
+
+    // Co-ref hover highlight: when a ghost or its referent is hovered, both glow
+    const [corefHoveredId, setCorefHoveredId] = useState<string | null>(null);
+
+    // Patch nodes: set corefGlow=true on both the hovered node and its co-ref partner
+    const nodes = useMemo(() => {
+        if (!corefHoveredId) return rawNodes;
+        const partnerId = corefPairs.get(corefHoveredId);
+        const glowIds = new Set([corefHoveredId, partnerId].filter(Boolean) as string[]);
+        return rawNodes.map(n => glowIds.has(n.id)
+            ? { ...n, data: { ...n.data, corefGlow: true } }
+            : n
+        );
+    }, [rawNodes, corefHoveredId, corefPairs]);
 
     const onNodeClick: NodeMouseHandler = useCallback((_event, node) => {
         if (node.data.hasChildren) {
@@ -370,6 +344,15 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
                 return newSet;
             });
         }
+    }, []);
+
+    const onNodeMouseEnter: NodeMouseHandler = useCallback((_event, node) => {
+        const partnerId = corefPairs.get(node.id);
+        if (partnerId) setCorefHoveredId(node.id);
+    }, [corefPairs]);
+
+    const onNodeMouseLeave: NodeMouseHandler = useCallback(() => {
+        setCorefHoveredId(null);
     }, []);
 
 
@@ -464,8 +447,9 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
                 nodes={nodes}
                 edges={edges}
                 nodeTypes={nodeTypes}
-                edgeTypes={edgeTypes}
                 onNodeClick={onNodeClick}
+                onNodeMouseEnter={onNodeMouseEnter}
+                onNodeMouseLeave={onNodeMouseLeave}
                 minZoom={0.3}
                 maxZoom={1.5}
                 proOptions={{ hideAttribution: true }}

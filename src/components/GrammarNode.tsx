@@ -11,11 +11,13 @@ export type GrammarNodeViewData = {
     subRole?: string;
     isDropped?: boolean;
     impliedText?: string;
-    refersToId?: string;   // when set, this ghost node has a co-ref arc to that node
+    refersToId?: string;
     text?: MandarinWord;
     isRoot?: boolean;
     hasChildren?: boolean;
     isExpanded?: boolean;
+    /** Set to true when this node's co-ref partner is being hovered */
+    corefGlow?: boolean;
 };
 
 export type GrammarNodeType = Node<GrammarNodeViewData, 'grammarNode'>;
@@ -64,6 +66,7 @@ const GrammarNodeInner = ({ data, isConnectable }: NodeProps<GrammarNodeType>) =
                         ? 'border-dashed border-rose-500/50 bg-slate-900/30 opacity-60'
                         : getRoleColorClass(data.role)
                     }
+                ${data.corefGlow ? '!border-rose-400 !shadow-[0_0_24px_rgba(244,63,94,0.5)] !opacity-100 ring-2 ring-rose-400/60' : ''}
             `}
             >
                 {!data.isRoot && (
@@ -104,16 +107,6 @@ const GrammarNodeInner = ({ data, isConnectable }: NodeProps<GrammarNodeType>) =
                             [{data.impliedText}]
                         </span>
                         <span className="text-[9px] text-rose-400/50 italic mt-0.5">implied</span>
-                        {data.refersToId && (
-                            <span className="text-[9px] text-rose-500/70 font-semibold mt-1 tracking-wide">
-                                ↑ co-ref
-                            </span>
-                        )}
-                        {!data.refersToId && (
-                            <span className="text-[9px] text-rose-400/50 italic mt-1 tracking-wide">
-                                no overt pronoun
-                            </span>
-                        )}
                     </div>
                 )}
 
@@ -146,8 +139,6 @@ const GrammarNodeInner = ({ data, isConnectable }: NodeProps<GrammarNodeType>) =
                 )}
 
                 <Handle type="source" position={Position.Bottom} isConnectable={isConnectable} className="!w-2 !h-2 !bg-transparent !border-transparent" />
-                {/* Named top-source handle used by the co-reference arc so it exits from the top of the node */}
-                <Handle id="coref-source" type="source" position={Position.Top} isConnectable={false} className="!w-1 !h-1 !bg-transparent !border-transparent !opacity-0" />
 
             </div>
         </RoleTooltip>

@@ -70,11 +70,12 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                 </section>
 
                 <section>
-                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1.5">The red arcs</h3>
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1.5">Hover to link</h3>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
                         When a dropped pronoun refers back to the Topic,
-                        a <span className="text-rose-400 font-bold">red dashed arc</span> draws
-                        the invisible link — connecting the ghost node to the word it stands for.
+                        hover either node and both light up with a matching{' '}
+                        <span className="text-rose-400 font-bold">rose glow</span>{' '}
+                        — showing which word the ghost stands for.
                     </p>
                 </section>
 
