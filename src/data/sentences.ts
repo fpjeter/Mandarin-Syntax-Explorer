@@ -445,7 +445,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's6',
-        category: 'BEI (Passive)',
+        category: 'BEI Passive',
         chinese: '那只大象，鼻子被小孩儿拉了一下。',
         pinyin: 'Nà zhī dà xiàng, bí zi bèi xiǎo hái er lā le yī xià.',
         translation: 'As for that elephant, its trunk was pulled by a child.',
@@ -743,7 +743,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's9',
-        category: 'Comparatives (Bǐ)',
+        category: 'Comparatives',
         chinese: '那座山比这座山高得多。',
         pinyin: 'Nà zuò shān bǐ zhè zuò shān gāo de duō.',
         translation: 'That mountain is much taller than this mountain.',
@@ -1025,7 +1025,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's12',
-        category: 'Separable Verbs (离合词)',
+        category: 'Separable Verbs',
         chinese: '我们见过好几次面了。',
         pinyin: 'Wǒ men jiàn guo hǎo jǐ cì miàn le.',
         translation: 'We have met quite a few times already.',
@@ -1187,7 +1187,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's14',
-        category: 'Serial Verb Constructions (连动句)',
+        category: 'Serial Verb Constructions',
         chinese: '到了，找到了，吃完再走。',
         pinyin: 'Dào le , zhǎo dào le , chī wán zài zǒu .',
         translation: '(We\'ve) arrived, (we) found it, (we\'ll) leave after eating.',
@@ -1427,7 +1427,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Discourse Context: pro-drop where referent is in the preceding sentence ──
     {
         id: 's17',
-        category: 'Discourse Context (跨句语境)',
+        category: 'Discourse Context',
         chinese: '说想学中文。',
         pinyin: 'Shuō xiǎng xué Zhōng wén .',
         translation: '(He) said (he) wants to learn Chinese.',
@@ -1512,7 +1512,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's18',
-        category: 'Discourse Context (跨句语境)',
+        category: 'Discourse Context',
         chinese: '非常有意思。',
         pinyin: 'Fēi cháng yǒu yì si .',
         translation: '(It\'s) really interesting.',
@@ -1657,7 +1657,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Equality & Similarity comparatives ────────────────────────────────
     {
         id: 's20',
-        category: 'Comparatives (Bǐ)',
+        category: 'Comparatives',
         chinese: '她写的汉字跟老师写的一样漂亮。',
         pinyin: 'Tā xiě de hàn zì gēn lǎo shī xiě de yī yàng piāo liang.',
         translation: 'The hanzi she writes is just as beautiful as the teacher\'s.',
@@ -1765,7 +1765,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's21',
-        category: 'Comparatives (Bǐ)',
+        category: 'Comparatives',
         chinese: '他跑得像风一样快。',
         pinyin: 'Tā pǎo de xiàng fēng yī yàng kuài.',
         translation: 'He runs as fast as the wind.',
@@ -1844,7 +1844,7 @@ export const sampleSentences: SentenceData[] = [
     // ── BEI (Passive) – second example ────────────────────────────────────
     {
         id: 's22',
-        category: 'BEI (Passive)',
+        category: 'BEI Passive',
         chinese: '我的钱包被人偷了。',
         pinyin: 'Wǒ de qián bāo bèi rén tōu le.',
         translation: 'My wallet was stolen.',
@@ -1977,7 +1977,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Separable Verbs – second example ──────────────────────────────────
     {
         id: 's24',
-        category: 'Separable Verbs (离合词)',
+        category: 'Separable Verbs',
         chinese: '她早上散了一个小时的步。',
         pinyin: 'Tā zǎo shàng sàn le yī gè xiǎo shí de bù.',
         translation: 'She took a one-hour walk this morning.',
@@ -3742,7 +3742,7 @@ export const sampleSentences: SentenceData[] = [
     // ── BEI (Passive) — additional examples ────────────────────────────────────
     {
         id: 's48',
-        category: 'BEI (Passive)',
+        category: 'BEI Passive',
         chinese: '那封信被他撕掉了。',
         pinyin: 'Nà fēng xìn bèi tā sī diào le.',
         translation: 'That letter was torn up by him.',
@@ -3813,7 +3813,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's49',
-        category: 'BEI (Passive)',
+        category: 'BEI Passive',
         chinese: '小偷被警察抓住了。',
         pinyin: 'Xiǎo tōu bèi jǐng chá zhuā zhù le.',
         translation: 'The thief was caught by the police.',
@@ -4127,7 +4127,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Separable Verbs — additional examples ─────────────────────────────────
     {
         id: 's54',
-        category: 'Separable Verbs (离合词)',
+        category: 'Separable Verbs',
         chinese: '他们分了手。',
         pinyin: 'Tā men fēn le shǒu.',
         translation: 'They broke up.',
@@ -4175,7 +4175,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's55',
-        category: 'Separable Verbs (离合词)',
+        category: 'Separable Verbs',
         chinese: '他毕了业就出国了。',
         pinyin: 'Tā bì le yè jiù chū guó le.',
         translation: 'As soon as he graduated, he went abroad.',
@@ -4358,7 +4358,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Serial Verb Constructions (连动句) ──────────────────────────────────────
     {
         id: 's58',
-        category: 'Serial Verb Constructions (连动句)',
+        category: 'Serial Verb Constructions',
         chinese: '他骑自行车去上班。',
         pinyin: 'Tā qí zì xíng chē qù shàng bān.',
         translation: 'He rides a bicycle to go to work.',
@@ -4413,7 +4413,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's59',
-        category: 'Serial Verb Constructions (连动句)',
+        category: 'Serial Verb Constructions',
         chinese: '我拿着伞出门了。',
         pinyin: 'Wǒ ná zhe sǎn chū mén le.',
         translation: 'I took (was holding) an umbrella and went out.',
@@ -4847,7 +4847,7 @@ export const sampleSentences: SentenceData[] = [
     // ── 连…都/也 ("even X") ──────────────────────────────────────────────────
     {
         id: 's66',
-        category: '连…都/也 ("even X")',
+        category: 'Even (连…都/也)',
         chinese: '他连自己的名字都不会写。',
         pinyin: 'Tā lián zì jǐ de míng zi dōu bù huì xiě.',
         translation: 'He can\'t even write his own name.',
@@ -4925,7 +4925,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's67',
-        category: '连…都/也 ("even X")',
+        category: 'Even (连…都/也)',
         chinese: '连小孩子也能做到。',
         pinyin: 'Lián xiǎo hái zi yě néng zuò dào.',
         translation: 'Even children can do it.',
