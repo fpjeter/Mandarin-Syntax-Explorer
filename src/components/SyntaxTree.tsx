@@ -1,7 +1,7 @@
 import React, { useMemo, useState, useEffect, useCallback } from 'react';
-import { ReactFlow, Controls, Background, Position, MarkerType, useReactFlow, type Edge, type Node, type NodeMouseHandler } from '@xyflow/react';
+import { ReactFlow, Background, Position, MarkerType, useReactFlow, type Edge, type Node, type NodeMouseHandler } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
-import { Eye, EyeOff, Maximize2, Minimize2, BookOpen } from 'lucide-react';
+import { Eye, EyeOff, Maximize2, Minimize2, BookOpen, ZoomIn, ZoomOut, Scan } from 'lucide-react';
 
 import type { GrammarNodeData as AppGrammarNodeData, GrammarRole } from '../types/grammar';
 import { GrammarNode } from './GrammarNode';
@@ -316,6 +316,28 @@ const FitViewOnChange: React.FC<{ nodes: Node[]; isVisible?: boolean }> = ({ nod
     return null;
 };
 
+/** Custom zoom controls that match the app's glassmorphism aesthetic. */
+const ZoomControls: React.FC = () => {
+    const { zoomIn, zoomOut, fitView } = useReactFlow();
+    const btn = 'w-10 h-10 flex items-center justify-center rounded-xl transition-all duration-200 bg-slate-800/60 text-slate-400 hover:bg-slate-700/80 hover:text-slate-100';
+    return (
+        <div className="absolute bottom-6 right-4 z-20 pointer-events-auto">
+            <div className="glass-panel rounded-2xl border border-slate-700/60 p-1.5 flex flex-col gap-1 shadow-2xl">
+                <button onClick={() => zoomIn({ duration: 250 })} className={btn} title="Zoom in">
+                    <ZoomIn className="w-5 h-5" />
+                </button>
+                <button onClick={() => zoomOut({ duration: 250 })} className={btn} title="Zoom out">
+                    <ZoomOut className="w-5 h-5" />
+                </button>
+                <div className="w-full h-px bg-slate-700/60" />
+                <button onClick={() => fitView({ padding: 0.15, duration: 350 })} className={btn} title="Fit to view">
+                    <Scan className="w-5 h-5" />
+                </button>
+            </div>
+        </div>
+    );
+};
+
 interface SyntaxTreeProps {
     tree?: AppGrammarNodeData;
     isVisible?: boolean;
@@ -451,7 +473,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
                 nodesConnectable={false}
             >
                 <Background color="#1e293b" gap={24} size={1} />
-                <Controls position="bottom-right" className="!bg-slate-800 !border-slate-700 !text-slate-300 !fill-slate-300 !mb-8" />
+                <ZoomControls />
                 <FitViewOnChange nodes={nodes} isVisible={isVisible} />
             </ReactFlow>
 
