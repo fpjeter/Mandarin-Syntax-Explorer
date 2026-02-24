@@ -3,7 +3,7 @@ import { Handle, Position, type NodeProps, type Node } from '@xyflow/react';
 import { PlusCircle, MinusCircle } from 'lucide-react';
 import type { GrammarRole, MandarinWord } from '../types/grammar';
 import { RubyText } from './RubyText';
-import { RoleTooltip } from './RoleTooltip';
+import { RoleTooltip, HoverTooltip } from './RoleTooltip';
 import { BADGES } from '../data/badges';
 
 export type GrammarNodeViewData = {
@@ -87,12 +87,13 @@ const GrammarNodeInner = ({ data, isConnectable }: NodeProps<GrammarNodeType>) =
                         </span>
                     )}
                     {BADGES.filter(b => b.match(data.role, data.subRole)).map(b => (
-                        <span
-                            key={b.label}
-                            className={`ml-1 text-[9px] font-bold border px-1 py-0.5 rounded tracking-normal normal-case ${b.color}`}
-                        >
-                            {b.label}
-                        </span>
+                        <HoverTooltip key={b.label} headline={`${b.label} — ${b.headline}`} detail={b.detail} as="span">
+                            <span
+                                className={`ml-1 text-[9px] font-bold border px-1 py-0.5 rounded tracking-normal normal-case ${b.color}`}
+                            >
+                                {b.label}
+                            </span>
+                        </HoverTooltip>
                     ))}
                 </div>
 
