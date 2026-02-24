@@ -17,7 +17,29 @@ type TooltipRegistration = {
 const activeTooltips = new Set<TooltipRegistration>();
 let listenerRegistered = false;
 
+// Suppress mousemove-triggered tooltips during / right after touch input.
+// Mobile browsers fire synthetic mousemove after touchend, which would
+// otherwise show tooltips instantly instead of waiting for long-press.
+let touchActive = false;
+let touchTimer: ReturnType<typeof setTimeout> | null = null;
+
+function markTouchActive() {
+    touchActive = true;
+    if (touchTimer) clearTimeout(touchTimer);
+    // Keep suppressed for 500ms after last touch event
+    touchTimer = setTimeout(() => { touchActive = false; }, 500);
+}
+
+// Register once — these stay for the lifetime of the app
+if (typeof window !== 'undefined') {
+    document.addEventListener('touchstart', markTouchActive, { passive: true });
+    document.addEventListener('touchend', markTouchActive, { passive: true });
+}
+
 function handleSharedMouseMove(e: MouseEvent) {
+    // Skip entirely if this is a synthetic mouse event following a touch
+    if (touchActive) return;
+
     // Collect all tooltips the cursor is inside of
     const hits: { entry: TooltipRegistration; rect: DOMRect; area: number }[] = [];
 
@@ -69,7 +91,7 @@ const TOOLTIP_MARGIN = 8; // px from viewport edge
 function TooltipPopup({ pos, headline, detail }: { pos: { x: number; y: number }; headline: string; detail: string }) {
     const ref = useRef<HTMLDivElement>(null);
     const [adjusted, setAdjusted] = useState<{
-        left: number; top: number; flipped: boolean; caretLeft: string;
+        left: number; top: number; flipped: boolean; caretLeft: number;
     } | null>(null);
 
     useEffect(() => {
@@ -89,8 +111,7 @@ function TooltipPopup({ pos, headline, detail }: { pos: { x: number; y: number }
         left = Math.max(TOOLTIP_MARGIN, Math.min(left, vw - rect.width - TOOLTIP_MARGIN));
 
         // Caret follows: calculate where the trigger center is relative to tooltip left
-        const caretOffset = Math.max(12, Math.min(pos.x - left, rect.width - 12));
-        const caretLeft = `${caretOffset}px`;
+        const caretLeft = Math.max(12, Math.min(pos.x - left, rect.width - 12));
 
         setAdjusted({ left, top, flipped, caretLeft });
     }, [pos.x, pos.y]);
@@ -122,13 +143,18 @@ function TooltipPopup({ pos, headline, detail }: { pos: { x: number; y: number }
             <p className="text-[10px] text-slate-400 leading-snug">
                 {detail}
             </p>
-            {/* Caret — flips to top when tooltip is below */}
+            {/* Caret arrow */}
             <div
-                className={`absolute w-2.5 h-2.5 rotate-45 bg-slate-800 border-slate-600/60 ${adjusted?.flipped
-                    ? '-top-[5px] border-l border-t'
-                    : '-bottom-[5px] border-r border-b'
+                className={`absolute w-2.5 h-2.5 bg-slate-800 border-slate-600/60 ${adjusted?.flipped
+                        ? '-top-[5px] border-l border-t'
+                        : '-bottom-[5px] border-r border-b'
                     }`}
-                style={{ left: adjusted?.caretLeft ?? '50%', transform: adjusted ? 'rotate(45deg)' : 'translateX(-50%) rotate(45deg)' }}
+                style={{
+                    left: adjusted ? `${adjusted.caretLeft}px` : '50%',
+                    transform: adjusted
+                        ? 'translateX(-50%) rotate(45deg)'
+                        : 'translateX(-50%) rotate(45deg)',
+                }}
             />
         </div>,
         document.body
