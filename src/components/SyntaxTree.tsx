@@ -342,7 +342,7 @@ const canHover = typeof window !== 'undefined' && window.matchMedia('(hover: hov
 
 /** Info bar shown on mobile when a node is tapped */
 const NodeInfoBar: React.FC<{
-    info: { role: string; headline: string; detail: string } | null;
+    info: { role: string; hanzi: string; headline: string; detail: string } | null;
     onClose: () => void;
 }> = ({ info, onClose }) => {
     if (!info) return null;
@@ -350,7 +350,9 @@ const NodeInfoBar: React.FC<{
         <div className="absolute bottom-14 left-1/2 -translate-x-1/2 w-[calc(100%-1rem)] max-w-[360px] z-30 pointer-events-auto animate-in fade-in slide-in-from-bottom-2 duration-200">
             <div className="glass-panel rounded-xl border border-slate-600/60 px-3 py-2.5 shadow-2xl flex items-start gap-2">
                 <div className="flex-1 min-w-0">
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-purple-300 mb-0.5">{info.role}</p>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-purple-300 mb-0.5">
+                        {info.role}{info.hanzi && <span className="normal-case tracking-normal text-slate-300 ml-1.5 font-chinese-ui">· {info.hanzi}</span>}
+                    </p>
                     <p className="text-[11px] font-semibold text-slate-100 leading-tight">{info.headline}</p>
                     <p className="text-[10px] text-slate-400 leading-snug mt-0.5">{info.detail}</p>
                 </div>
@@ -378,7 +380,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
     const treeHasProDrop = useMemo(() => tree ? hasProDrop(tree) : false, [tree]);
 
     // Mobile tap-to-show info bar state
-    const [tappedNodeInfo, setTappedNodeInfo] = useState<{ role: string; headline: string; detail: string } | null>(null);
+    const [tappedNodeInfo, setTappedNodeInfo] = useState<{ role: string; hanzi: string; headline: string; detail: string } | null>(null);
     const infoDismissTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     // Reset both expandedIds and showGhost together whenever the sentence changes.
@@ -428,7 +430,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
         if (!canHover) {
             const entry = glossary[node.data.role as GrammarRole];
             if (entry) {
-                setTappedNodeInfo({ role: String(node.data.role), headline: entry.headline, detail: entry.detail });
+                setTappedNodeInfo({ role: String(node.data.role), hanzi: String((node.data as any).text?.hanzi ?? ''), headline: entry.headline, detail: entry.detail });
                 if (infoDismissTimer.current) clearTimeout(infoDismissTimer.current);
                 infoDismissTimer.current = setTimeout(() => setTappedNodeInfo(null), 4000);
             }
@@ -555,6 +557,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
                 edges={edges}
                 nodeTypes={nodeTypes}
                 onNodeClick={onNodeClick}
+                onPaneClick={() => setTappedNodeInfo(null)}
                 onNodeMouseEnter={onNodeMouseEnter}
                 onNodeMouseLeave={onNodeMouseLeave}
                 minZoom={0.3}
