@@ -64,25 +64,57 @@ function registerTooltip(entry: TooltipRegistration) {
 
 // ── Tooltip popup (shared rendering) ─────────────────────────────────────────
 
+const TOOLTIP_MARGIN = 8; // px from viewport edge
+
 function TooltipPopup({ pos, headline, detail }: { pos: { x: number; y: number }; headline: string; detail: string }) {
+    const ref = useRef<HTMLDivElement>(null);
+    const [adjusted, setAdjusted] = useState<{
+        left: number; top: number; flipped: boolean; caretLeft: string;
+    } | null>(null);
+
+    useEffect(() => {
+        const el = ref.current;
+        if (!el) return;
+        const rect = el.getBoundingClientRect();
+        const vw = window.innerWidth;
+
+        // Vertical: flip below if clipping top
+        const flipped = pos.y - 8 - rect.height < TOOLTIP_MARGIN;
+        const top = flipped
+            ? pos.y + 12           // below trigger
+            : pos.y - 8 - rect.height; // above trigger
+
+        // Horizontal: clamp so tooltip doesn't overflow left/right
+        let left = pos.x - rect.width / 2;
+        left = Math.max(TOOLTIP_MARGIN, Math.min(left, vw - rect.width - TOOLTIP_MARGIN));
+
+        // Caret follows: calculate where the trigger center is relative to tooltip left
+        const caretOffset = Math.max(12, Math.min(pos.x - left, rect.width - 12));
+        const caretLeft = `${caretOffset}px`;
+
+        setAdjusted({ left, top, flipped, caretLeft });
+    }, [pos.x, pos.y]);
+
     return createPortal(
         <div
+            ref={ref}
             role="tooltip"
             style={{
                 position: 'fixed',
-                left: pos.x,
-                top: pos.y - 8,
-                transform: 'translate(-50%, -100%)',
+                left: adjusted?.left ?? pos.x,
+                top: adjusted?.top ?? (pos.y - 8),
+                transform: adjusted ? 'none' : 'translate(-50%, -100%)',
                 zIndex: 99999,
                 pointerEvents: 'none',
+                opacity: adjusted ? 1 : 0,
             }}
-            className="
+            className={`
                 w-52 rounded-xl px-3 py-2.5
                 bg-slate-800/95 border border-slate-600/60
                 backdrop-blur-md
                 shadow-[0_8px_32px_rgba(0,0,0,0.65)]
-                animate-in fade-in zoom-in-95 duration-100 origin-bottom
-            "
+                transition-opacity duration-75
+            `}
         >
             <p className="text-[11px] font-bold text-slate-100 mb-0.5 leading-tight">
                 {headline}
@@ -90,8 +122,14 @@ function TooltipPopup({ pos, headline, detail }: { pos: { x: number; y: number }
             <p className="text-[10px] text-slate-400 leading-snug">
                 {detail}
             </p>
-            {/* Caret */}
-            <div className="absolute left-1/2 -translate-x-1/2 -bottom-[5px] w-2.5 h-2.5 rotate-45 bg-slate-800 border-r border-b border-slate-600/60" />
+            {/* Caret — flips to top when tooltip is below */}
+            <div
+                className={`absolute w-2.5 h-2.5 rotate-45 bg-slate-800 border-slate-600/60 ${adjusted?.flipped
+                    ? '-top-[5px] border-l border-t'
+                    : '-bottom-[5px] border-r border-b'
+                    }`}
+                style={{ left: adjusted?.caretLeft ?? '50%', transform: adjusted ? 'rotate(45deg)' : 'translateX(-50%) rotate(45deg)' }}
+            />
         </div>,
         document.body
     );
