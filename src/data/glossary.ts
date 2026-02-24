@@ -129,4 +129,9 @@ export const glossary: Record<GrammarRole, { headline: string; detail: string }>
         detail:
             'In a pivotal construction (兼语句), one noun is simultaneously the object of the first verb and the subject of the second. E.g. in 老师让学生回答 (the teacher had the students answer), 学生 is the object of 让 and the subject of 回答.',
     },
+    Copula: {
+        headline: 'The linking verb "to be"',
+        detail:
+            'The verb 是 (shì) when it functions as a true copula — linking subject to predicate. In the 是…的 pseudo-cleft construction, 是 is the main verb of the cleft: "it WAS [yesterday] that…" It opens the focus bracket while 的 closes it.',
+    },
 };

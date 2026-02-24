@@ -673,7 +673,7 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n8-p-shi',
-                            role: 'Particle',
+                            role: 'Copula',
                             subRole: 'cleft opener — it was…',
                             text: { hanzi: '是', pinyin: 'shì', translation: '(it was…)' }
                         },
@@ -3898,7 +3898,7 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n50-shi',
-                            role: 'Particle',
+                            role: 'Copula',
                             subRole: 'cleft opener — it was…',
                             text: { hanzi: '是', pinyin: 'shì', translation: '(it was…)' },
                         },
@@ -3960,7 +3960,7 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n51-shi',
-                            role: 'Particle',
+                            role: 'Copula',
                             subRole: 'cleft opener — it was…',
                             text: { hanzi: '是', pinyin: 'shì', translation: '(it was…)' },
                         },

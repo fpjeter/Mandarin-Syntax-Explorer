@@ -45,6 +45,7 @@ const GrammarNodeInner = ({ data, isConnectable }: NodeProps<GrammarNodeType>) =
             case 'Verb Morpheme': return 'bg-green-900/50 text-green-200 border-green-500/60 shadow-[0_0_12px_rgba(34,197,94,0.2)]';
             case 'Object Morpheme': return 'bg-amber-900/50 text-amber-200 border-amber-500/60 shadow-[0_0_12px_rgba(245,158,11,0.2)]';
             case 'Pivot': return 'bg-orange-800/50 text-orange-100 border-orange-400/70 shadow-[0_0_16px_rgba(251,146,60,0.35)] border-b-2';
+            case 'Copula': return 'bg-indigo-800/50 text-indigo-100 border-indigo-400/60 shadow-[0_0_14px_rgba(99,102,241,0.3)] border-b-2';
             default: return 'bg-slate-900/60 text-slate-300 border-slate-700/50';
         }
     };
