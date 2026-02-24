@@ -107,8 +107,6 @@ function App() {
               sentence={selectedSentence}
               notesOpen={notesOpen}
               onToggleNotes={() => setNotesOpen(o => !o)}
-              onSelectRelated={handleSelectSentence}
-              sentenceById={sentenceById}
             />
           )}
 
