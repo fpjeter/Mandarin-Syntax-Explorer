@@ -120,7 +120,6 @@ function TooltipPopup({ pos, headline, detail }: { pos: { x: number; y: number }
             className={`
                 w-52 rounded-xl px-3 py-2.5
                 bg-slate-800/95 border border-slate-600/60
-                backdrop-blur-md
                 shadow-[0_8px_32px_rgba(0,0,0,0.65)]
                 transition-opacity duration-75
             `}

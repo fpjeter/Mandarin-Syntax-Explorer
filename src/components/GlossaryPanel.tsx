@@ -25,7 +25,7 @@ export const GlossaryPanel: React.FC<GlossaryPanelProps> = ({ isOpen, onClose })
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={onClose}
-                        className="absolute inset-0 bg-slate-950/60 backdrop-blur-sm z-40"
+                        className="absolute inset-0 bg-slate-950/60 z-40"
                     />
 
                     {/* Sliding Panel */}

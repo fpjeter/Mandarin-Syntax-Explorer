@@ -62,7 +62,7 @@ function App() {
       </header>
 
       {/* Mobile tab bar — only visible on < lg screens */}
-      <div className="lg:hidden flex border-b border-slate-700/50 bg-slate-900/60 backdrop-blur-sm z-10">
+      <div className="lg:hidden flex border-b border-slate-700/50 bg-slate-900/60 z-10">
         <button
           onClick={() => setMobileView('guide')}
           className={`flex-1 flex items-center justify-center gap-2 py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors border-b-2 ${mobileView === 'guide'

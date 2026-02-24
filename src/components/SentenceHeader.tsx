@@ -65,7 +65,7 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
                         animate={{ opacity: 1, y: 0 }}
                         transition={springTransition}
                         key={`ctx-${sentence.id}`}
-                        className="glass-panel px-4 py-2 rounded-2xl flex flex-col items-center shadow-lg border border-slate-600/25 bg-slate-900/50 backdrop-blur-md w-full max-w-xl pointer-events-none"
+                        className="glass-panel px-4 py-2 rounded-2xl flex flex-col items-center shadow-lg border border-slate-600/25 bg-slate-900/50 w-full max-w-xl pointer-events-none"
                     >
                         <span className="text-[9px] uppercase tracking-[0.18em] font-bold text-slate-500 mb-1.5">
                             preceding context
@@ -99,7 +99,7 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
                 animate={{ opacity: 1, y: 0 }}
                 transition={springTransition}
                 key={`card-${sentence.id}`}
-                className={`glass-panel px-4 sm:px-6 xl:px-10 py-3 xl:py-5 flex flex-col items-center shadow-2xl border border-slate-500/30 bg-slate-900/80 backdrop-blur-xl w-full max-w-2xl transition-all duration-300 ${sentence.explanation ? 'rounded-t-3xl rounded-b-none' : 'rounded-3xl'}`}
+                className={`glass-panel px-4 sm:px-6 xl:px-10 py-3 xl:py-5 flex flex-col items-center shadow-2xl border border-slate-500/30 bg-slate-900/80 w-full max-w-2xl transition-all duration-300 ${sentence.explanation ? 'rounded-t-3xl rounded-b-none' : 'rounded-3xl'}`}
             >
                 <RubyText hanzi={sentence.chinese} pinyin={sentence.pinyin} large displayFont className="!text-xl sm:!text-2xl xl:!text-4xl shadow-sm" />
                 <div className="mt-2 xl:mt-3 text-xs sm:text-sm xl:text-base text-slate-300 italic font-medium tracking-wide">"{sentence.translation}"</div>
@@ -133,7 +133,7 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
                                 animate={{ height: 'auto', opacity: 1 }}
                                 exit={{ height: 0, opacity: 0 }}
                                 transition={{ duration: 0.3, ease: 'easeInOut' }}
-                                className="overflow-hidden border-x border-b border-emerald-500/20 rounded-b-2xl shadow-xl backdrop-blur-md bg-slate-900/60"
+                                className="overflow-hidden border-x border-b border-emerald-500/20 rounded-b-2xl shadow-xl bg-slate-900/60"
                             >
                                 <div className="p-6 text-sm text-slate-300 leading-relaxed font-serif bg-gradient-to-b from-slate-900/40 to-transparent">
                                     {renderExplanation(sentence.explanation)}

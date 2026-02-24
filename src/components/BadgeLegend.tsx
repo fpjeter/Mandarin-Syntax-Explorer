@@ -9,7 +9,7 @@ export const BadgeLegend = () => {
         <div className="absolute bottom-4 left-4 z-20 flex flex-col items-start gap-0">
             {open && (
                 <div className="mb-2 glass-panel border border-slate-700/60 rounded-xl shadow-2xl p-3 w-60 lg:w-72 max-h-[50vh] overflow-y-auto custom-scrollbar flex flex-col gap-2 animate-in fade-in slide-in-from-bottom-2 duration-150">
-                    <p className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold mb-1 sticky top-0 bg-slate-900/90 backdrop-blur-sm -mt-1 pt-1 pb-1 -mx-1 px-1 z-10">Badge glossary</p>
+                    <p className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold mb-1 sticky top-0 bg-slate-900/90 -mt-1 pt-1 pb-1 -mx-1 px-1 z-10">Badge glossary</p>
                     {BADGES.map((b) => (
                         <div key={b.label} className="flex items-start gap-2">
                             <span className={`shrink-0 text-[9px] font-bold border px-1.5 py-0.5 rounded ${b.color}`}>

@@ -15,7 +15,7 @@
 /* Custom Utilities for Glassmorphism */
 @layer utilities {
   .glass-panel {
-    @apply bg-slate-900/40 backdrop-blur-md border border-slate-700/50 shadow-xl;
+    @apply bg-slate-900/60 border border-slate-700/50 shadow-xl;
   }
 
   .text-glow {
@@ -55,5 +55,15 @@
   /* iOS safe-area bottom padding (home indicator) */
   .pb-safe {
     padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+
+/* Enable glassmorphism blur only on devices with a pointer (desktop/laptop).
+   iOS Safari crashes when too many backdrop-blur layers stack. */
+@media (hover: hover) {
+  .glass-panel {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background-color: rgb(15 23 42 / 0.4);
   }
 }
