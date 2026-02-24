@@ -97,7 +97,7 @@ export const glossary: Record<GrammarRole, { headline: string; detail: string }>
     Complement: {
         headline: 'Extra info completing a verb',
         detail:
-            'Comes after the verb to say what happened as a result (结果补语 resultative), or follows V+得/不 to say whether a result is possible (可能补语 potential). E.g. 碎 in 打碎 (hit→broken), 饱 in 吃饱 (eat→full), 到 in 找到 (look→found). In 看不了, the same complement morpheme appears in the potential form: could not finish reading.',
+            'Comes after the verb to add information about the outcome, direction, possibility, or degree of the action. Resultative (结果补语): 碎 in 打碎 (hit→shatter). Directional (趋向补语): 进来 in 跑进来 (run-enter-toward-speaker). Potential (可能补语): V+得/不+Result, e.g. 看不了 (can\'t finish reading). Degree (程度补语): V+得+description, e.g. 跑得很快 (runs very fast).',
     },
     'Head Noun': {
         headline: 'The main noun in a noun phrase',

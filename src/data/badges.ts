@@ -90,6 +90,14 @@ export const BADGES: BadgeSpec[] = [
             (role === 'Complement' || role === 'Particle') &&
             !!subRole?.includes('potential'),
     },
+    {
+        label: '程度补语',
+        color: 'text-purple-300 bg-purple-900/40 border-purple-500/50',
+        headline: 'Degree complement',
+        detail: 'V+得+description — describes the manner, extent, or consequence of an action (e.g. 跑得很快 = runs very fast)',
+        match: (role, subRole) =>
+            role === 'Complement' && !!subRole?.includes('degree'),
+    },
     // ── Morphology ──────────────────────────────────────────────────────────────
     {
         label: '离合词',
