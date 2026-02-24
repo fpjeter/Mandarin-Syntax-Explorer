@@ -78,7 +78,7 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
         <RoleTooltip role={data.role}>
             <div
                 className={`
-                glass-panel rounded-xl px-4 py-3 min-w-[140px] flex flex-col items-center justify-center
+                glass-panel rounded-xl px-2.5 py-2 xl:px-4 xl:py-3 min-w-[100px] xl:min-w-[140px] flex flex-col items-center justify-center
                 border transition-all duration-300 overflow-visible relative
                 ${data.hasChildren && !isGhost ? 'cursor-pointer hover:border-slate-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:-translate-y-0.5' : ''}
                 ${isGhost
@@ -100,9 +100,8 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
                     />
                 )}
 
-                {/* Role label row */}
                 <div
-                    className={`text-[11px] font-bold uppercase tracking-wide mb-2 whitespace-nowrap flex items-center gap-1 ${isGhost ? 'text-rose-400/80' : 'opacity-90'}`}
+                    className={`text-[10px] xl:text-[11px] font-bold uppercase tracking-wide mb-1.5 xl:mb-2 whitespace-nowrap flex items-center gap-1 ${isGhost ? 'text-rose-400/80' : 'opacity-90'}`}
                 >
                     {data.role}
                     {data.subRole && <span className="text-[9px] opacity-75 lowercase tracking-normal">({data.subRole})</span>}
@@ -141,7 +140,7 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
                             large={!(data.role.includes('Phrase') || data.role === 'Topic' || data.role === 'Comment' || data.role === 'Predicate')}
                         />
                         {data.text.translation && (
-                            <div className="text-[10px] text-slate-400 mt-2 italic text-center leading-tight max-w-[160px] line-clamp-2 overflow-hidden">
+                            <div className="text-[9px] xl:text-[10px] text-slate-400 mt-1.5 xl:mt-2 italic text-center leading-tight max-w-[120px] xl:max-w-[160px] line-clamp-2 overflow-hidden">
                                 "{data.text.translation}"
                             </div>
                         )}

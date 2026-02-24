@@ -39,7 +39,7 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
                         animate={{ opacity: 1, y: 0 }}
                         transition={springTransition}
                         key={`ctx-${sentence.id}`}
-                        className="glass-panel px-6 py-3 rounded-2xl flex flex-col items-center shadow-lg border border-slate-600/25 bg-slate-900/50 backdrop-blur-md w-full max-w-xl pointer-events-none"
+                        className="glass-panel px-4 py-2 rounded-2xl flex flex-col items-center shadow-lg border border-slate-600/25 bg-slate-900/50 backdrop-blur-md w-full max-w-xl pointer-events-none"
                     >
                         <span className="text-[9px] uppercase tracking-[0.18em] font-bold text-slate-500 mb-1.5">
                             preceding context
@@ -47,7 +47,7 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
                         <RubyText
                             hanzi={sentence.discourseContext.chinese}
                             pinyin={sentence.discourseContext.pinyin}
-                            className="opacity-60 !text-xl"
+                            className="opacity-60 !text-lg xl:!text-xl"
                         />
                         <div className="mt-1.5 text-[11px] text-slate-500 italic">
                             "{sentence.discourseContext.translation}"
@@ -73,10 +73,10 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
                 animate={{ opacity: 1, y: 0 }}
                 transition={springTransition}
                 key={`card-${sentence.id}`}
-                className={`glass-panel px-6 sm:px-10 py-5 flex flex-col items-center shadow-2xl border border-slate-500/30 bg-slate-900/80 backdrop-blur-xl w-full max-w-2xl transition-all duration-300 ${sentence.explanation ? 'rounded-t-3xl rounded-b-none' : 'rounded-3xl'}`}
+                className={`glass-panel px-4 sm:px-6 xl:px-10 py-3 xl:py-5 flex flex-col items-center shadow-2xl border border-slate-500/30 bg-slate-900/80 backdrop-blur-xl w-full max-w-2xl transition-all duration-300 ${sentence.explanation ? 'rounded-t-3xl rounded-b-none' : 'rounded-3xl'}`}
             >
-                <RubyText hanzi={sentence.chinese} pinyin={sentence.pinyin} large displayFont className="!text-2xl sm:!text-4xl shadow-sm" />
-                <div className="mt-3 text-sm sm:text-base text-slate-300 italic font-medium tracking-wide">"{sentence.translation}"</div>
+                <RubyText hanzi={sentence.chinese} pinyin={sentence.pinyin} large displayFont className="!text-xl sm:!text-2xl xl:!text-4xl shadow-sm" />
+                <div className="mt-2 xl:mt-3 text-xs sm:text-sm xl:text-base text-slate-300 italic font-medium tracking-wide">"{sentence.translation}"</div>
 
 
             </motion.div>
@@ -121,8 +121,8 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
             )}
 
             {/* Connector arrow pointing down toward tree root */}
-            <div className="flex flex-col items-center gap-0 mt-3 opacity-30 pointer-events-none">
-                <div className="w-px h-6 bg-gradient-to-b from-purple-400 to-transparent" />
+            <div className="flex flex-col items-center gap-0 mt-2 xl:mt-3 opacity-30 pointer-events-none">
+                <div className="w-px h-4 xl:h-6 bg-gradient-to-b from-purple-400 to-transparent" />
                 <svg width="10" height="6" viewBox="0 0 10 6" className="fill-purple-400">
                     <path d="M5 6 L0 0 L10 0 Z" />
                 </svg>
