@@ -138,7 +138,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's3',
-        category: 'BA Construction (u{628A}u{5B57}u{53E5})',
+        category: 'BA Construction (把字句)',
         chinese: '她昨天把我的钱包忘在出租车上了。',
         pinyin: 'Tā zuó tiān bǎ wǒ de qián bāo wàng zài chū zū chē shàng le.',
         translation: 'She forgot my wallet in the taxi yesterday.',
@@ -238,7 +238,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's4',
-        category: 'BA Construction (u{628A}u{5B57}u{53E5})',
+        category: 'BA Construction (把字句)',
         chinese: '那只猫在厨房里生气地用爪子把我的杯子弄倒地上了。',
         pinyin: 'Nà zhī māo zài chú fáng lǐ shēng qì de yòng zhuǎ zi bǎ wǒ de bēi zi nòng dào dì shàng le.',
         translation: 'That cat angrily knocked my cup to the floor with its claws.',
@@ -445,7 +445,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's6',
-        category: 'BEI Passive (u{88AB}u{5B57}u{53E5})',
+        category: 'BEI Passive (被字句)',
         chinese: '那只大象，鼻子被小孩儿拉了一下。',
         pinyin: 'Nà zhī dà xiàng, bí zi bèi xiǎo hái er lā le yī xià.',
         translation: 'As for that elephant, its trunk was pulled by a child.',
@@ -651,7 +651,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's8',
-        category: 'Shì–de Construction',
+        category: 'Shì–de Construction (是…的)',
         chinese: '我是昨天晚上在图书馆看到她的。',
         pinyin: 'Wǒ shì zuó tiān wǎn shang zài tú shū guǎn kàn dào tā de.',
         translation: 'It was last night in the library that I saw her.',
@@ -743,7 +743,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's9',
-        category: 'Comparatives (u{6BD4}u{8F83}u{53E5})',
+        category: 'Comparatives (比较句)',
         chinese: '那座山比这座山高得多。',
         pinyin: 'Nà zuò shān bǐ zhè zuò shān gāo de duō.',
         translation: 'That mountain is much taller than this mountain.',
@@ -826,7 +826,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's10',
-        category: 'Rhetorical Questions (u{53CD}u{95EE}u{53E5})',
+        category: 'Rhetorical Questions (反问句)',
         chinese: '难道你连这么简单的问题都不会吗？',
         pinyin: 'Nán dào nǐ lián zhè me jiǎn dān de wèn tí dōu bù huì ma?',
         translation: 'Don\'t tell me you can\'t even (do) such a simple question?',
@@ -934,7 +934,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's11',
-        category: 'Rhetorical Questions (u{53CD}u{95EE}u{53E5})',
+        category: 'Rhetorical Questions (反问句)',
         chinese: '这件事非你亲自去办不可。',
         pinyin: 'Zhè jiàn shì fēi nǐ qīn zì qù bàn bù kě.',
         translation: 'This matter absolutely must be handled by you yourself — there is no way around it.',
@@ -1025,7 +1025,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's12',
-        category: 'Separable Verbs (u{79BB}u{5408}u{8BCD})',
+        category: 'Separable Verbs (离合词)',
         chinese: '我们见过好几次面了。',
         pinyin: 'Wǒ men jiàn guo hǎo jǐ cì miàn le.',
         translation: 'We have met quite a few times already.',
@@ -1101,7 +1101,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Resultative / Serial verb examples with pro-drop ────────────────────────────────
     {
         id: 's13',
-        category: 'Resultative Complements (u{7ED3}u{679C}u{8865}u{8BED})',
+        category: 'Resultative Complements (结果补语)',
         chinese: '吃饱了，想睡觉。',
         pinyin: 'Chī bǎo le , xiǎng shuì jiào .',
         translation: '(I\'m) full, (I) want to sleep.',
@@ -1187,7 +1187,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's14',
-        category: 'Serial Verb Constructions (u{8FDE}u{52A8}u{53E5})',
+        category: 'Serial Verb Constructions (连动句)',
         chinese: '到了，找到了，吃完再走。',
         pinyin: 'Dào le , zhǎo dào le , chī wán zài zǒu .',
         translation: '(We\'ve) arrived, (we) found it, (we\'ll) leave after eating.',
@@ -1427,7 +1427,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Discourse Context: pro-drop where referent is in the preceding sentence ──
     {
         id: 's17',
-        category: 'Discourse Context (u{8DE8}u{53E5}u{8BED}u{5883})',
+        category: 'Discourse Context (跨句语境)',
         chinese: '说想学中文。',
         pinyin: 'Shuō xiǎng xué Zhōng wén .',
         translation: '(He) said (he) wants to learn Chinese.',
@@ -1512,7 +1512,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's18',
-        category: 'Discourse Context (u{8DE8}u{53E5}u{8BED}u{5883})',
+        category: 'Discourse Context (跨句语境)',
         chinese: '非常有意思。',
         pinyin: 'Fēi cháng yǒu yì si .',
         translation: '(It\'s) really interesting.',
@@ -1657,7 +1657,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Equality & Similarity comparatives ────────────────────────────────
     {
         id: 's20',
-        category: 'Comparatives (u{6BD4}u{8F83}u{53E5})',
+        category: 'Comparatives (比较句)',
         chinese: '她写的汉字跟老师写的一样漂亮。',
         pinyin: 'Tā xiě de hàn zì gēn lǎo shī xiě de yī yàng piāo liang.',
         translation: 'The hanzi she writes is just as beautiful as the teacher\'s.',
@@ -1765,7 +1765,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's21',
-        category: 'Comparatives (u{6BD4}u{8F83}u{53E5})',
+        category: 'Comparatives (比较句)',
         chinese: '他跑得像风一样快。',
         pinyin: 'Tā pǎo de xiàng fēng yī yàng kuài.',
         translation: 'He runs as fast as the wind.',
@@ -1844,7 +1844,7 @@ export const sampleSentences: SentenceData[] = [
     // ── BEI (Passive) – second example ────────────────────────────────────
     {
         id: 's22',
-        category: 'BEI Passive (u{88AB}u{5B57}u{53E5})',
+        category: 'BEI Passive (被字句)',
         chinese: '我的钱包被人偷了。',
         pinyin: 'Wǒ de qián bāo bèi rén tōu le.',
         translation: 'My wallet was stolen.',
@@ -1910,7 +1910,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Shì–de Construction – second example ──────────────────────────────
     {
         id: 's23',
-        category: 'Shì–de Construction',
+        category: 'Shì–de Construction (是…的)',
         chinese: '我是在上海长大的。',
         pinyin: 'Wǒ shì zài Shàng hǎi zhǎng dà de.',
         translation: 'It was in Shanghai that I grew up.',
@@ -1977,7 +1977,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Separable Verbs – second example ──────────────────────────────────
     {
         id: 's24',
-        category: 'Separable Verbs (u{79BB}u{5408}u{8BCD})',
+        category: 'Separable Verbs (离合词)',
         chinese: '她早上散了一个小时的步。',
         pinyin: 'Tā zǎo shàng sàn le yī gè xiǎo shí de bù.',
         translation: 'She took a one-hour walk this morning.',
@@ -2062,7 +2062,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Double Topic / Embedded Comment ──────────────────────────────────────
     {
         id: 's25',
-        category: 'Double Topic (u{53CC}u{4E3B}u{9898})',
+        category: 'Double Topic (双主题)',
         chinese: '那家饭馆，菜很好吃，价钱也不贵。',
         pinyin: 'Nà jiā fàn guǎn, cài hěn hǎo chī, jià qián yě bù guì.',
         translation: 'That restaurant — the food is delicious and the price is not expensive either.',
@@ -2151,7 +2151,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's26',
-        category: 'Double Topic (u{53CC}u{4E3B}u{9898})',
+        category: 'Double Topic (双主题)',
         chinese: '大象，鼻子长，耳朵大。',
         pinyin: 'Dà xiàng, bí zi cháng, ěr duo dà.',
         translation: 'Elephants — their trunk is long and their ears are big.',
@@ -2214,7 +2214,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's27',
-        category: 'Double Topic (u{53CC}u{4E3B}u{9898})',
+        category: 'Double Topic (双主题)',
         chinese: '这件事，我觉得你的想法很有道理。',
         pinyin: 'Zhè jiàn shì, wǒ jué de nǐ de xiǎng fǎ hěn yǒu dào lǐ.',
         translation: 'As for this matter, I think your idea makes a lot of sense.',
@@ -2317,7 +2317,7 @@ export const sampleSentences: SentenceData[] = [
     // ── BA Construction – additional examples ────────────────────────────────
     {
         id: 's28',
-        category: 'BA Construction (u{628A}u{5B57}u{53E5})',
+        category: 'BA Construction (把字句)',
         chinese: '请把窗户关上。',
         pinyin: 'Qǐng bǎ chuāng hu guān shàng.',
         translation: 'Please close the window.',
@@ -2383,7 +2383,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's29',
-        category: 'BA Construction (u{628A}u{5B57}u{53E5})',
+        category: 'BA Construction (把字句)',
         chinese: '她把那封信藏在枕头下面了。',
         pinyin: 'Tā bǎ nà fēng xìn cáng zài zhěn tou xià miàn le.',
         translation: 'She hid that letter under the pillow.',
@@ -2478,7 +2478,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Resultative Complements ───────────────────────────────────────────────
     {
         id: 's30',
-        category: 'Resultative Complements (u{7ED3}u{679C}u{8865}u{8BED})',
+        category: 'Resultative Complements (结果补语)',
         chinese: '我听懂了他说的话。',
         pinyin: 'Wǒ tīng dǒng le tā shuō de huà.',
         translation: 'I understood what he said.',
@@ -2560,7 +2560,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's31',
-        category: 'Resultative Complements (u{7ED3}u{679C}u{8865}u{8BED})',
+        category: 'Resultative Complements (结果补语)',
         chinese: '她哭红了眼睛。',
         pinyin: 'Tā kū hóng le yǎn jing.',
         translation: 'She cried her eyes red.',
@@ -2617,7 +2617,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Pivotal Constructions (兼语句) ────────────────────────────────────────
     {
         id: 's32',
-        category: 'Pivotal Constructions (u{517C}u{8BED}u{53E5})',
+        category: 'Pivotal Constructions (兼语句)',
         chinese: '老师让学生回答问题。',
         pinyin: 'Lǎo shī ràng xué sheng huí dá wèn tí.',
         translation: 'The teacher had the students answer questions.',
@@ -2678,7 +2678,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's33',
-        category: 'Pivotal Constructions (u{517C}u{8BED}u{53E5})',
+        category: 'Pivotal Constructions (兼语句)',
         chinese: '妈妈叫我去买牛奶。',
         pinyin: 'Māma jiào wǒ qù mǎi niú nǎi.',
         translation: 'Mom told me to go buy milk.',
@@ -2753,7 +2753,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Potential Complements ─────────────────────────────────────────────────
     {
         id: 's34',
-        category: 'Potential Complements (u{53EF}u{80FD}u{8865}u{8BED})',
+        category: 'Potential Complements (可能补语)',
         chinese: '这道题太难，我做不出来。',
         pinyin: 'Zhè dào tí tài nán, wǒ zuò bù chū lái.',
         translation: 'This question is too hard; I can\'t work it out.',
@@ -2843,7 +2843,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's35',
-        category: 'Potential Complements (u{53EF}u{80FD}u{8865}u{8BED})',
+        category: 'Potential Complements (可能补语)',
         chinese: '你放心，一个小时就写得完。',
         pinyin: 'Nǐ fàng xīn, yī gè xiǎo shí jiù xiě de wán.',
         translation: 'Don\'t worry — (you) can finish writing it in an hour.',
@@ -2924,7 +2924,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Degree Complements ────────────────────────────────────────────────────
     {
         id: 's36',
-        category: 'Degree Complements (u{7A0B}u{5EA6}u{8865}u{8BED})',
+        category: 'Degree Complements (程度补语)',
         chinese: '她高兴得跳了起来。',
         pinyin: 'Tā gāo xìng de tiào le qǐ lái.',
         translation: 'She was so happy she jumped up.',
@@ -2986,7 +2986,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's37',
-        category: 'Degree Complements (u{7A0B}u{5EA6}u{8865}u{8BED})',
+        category: 'Degree Complements (程度补语)',
         chinese: '她跑得非常快。',
         pinyin: 'Tā pǎo de fēi cháng kuài.',
         translation: 'She runs very fast.',
@@ -3047,7 +3047,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Directional Complements ───────────────────────────────────────────────
     {
         id: 's38',
-        category: 'Directional Complements (u{8D8B}u{5411}u{8865}u{8BED})',
+        category: 'Directional Complements (趋向补语)',
         chinese: '他走进来了。',
         pinyin: 'Tā zǒu jìn lái le.',
         translation: 'He walked in.',
@@ -3108,7 +3108,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's39',
-        category: 'Directional Complements (u{8D8B}u{5411}u{8865}u{8BED})',
+        category: 'Directional Complements (趋向补语)',
         chinese: '她把书拿出去了。',
         pinyin: 'Tā bǎ shū ná chū qù le.',
         translation: 'She took the book out (and away).',
@@ -3187,7 +3187,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Resultative Complements — additional examples ─────────────────────────
     {
         id: 's40',
-        category: 'Resultative Complements (u{7ED3}u{679C}u{8865}u{8BED})',
+        category: 'Resultative Complements (结果补语)',
         chinese: '我找到钥匙了。',
         pinyin: 'Wǒ zhǎo dào yào shi le.',
         translation: 'I found the key.',
@@ -3240,7 +3240,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's41',
-        category: 'Resultative Complements (u{7ED3}u{679C}u{8865}u{8BED})',
+        category: 'Resultative Complements (结果补语)',
         chinese: '他写错字了。',
         pinyin: 'Tā xiě cuò zì le.',
         translation: 'He wrote a character incorrectly.',
@@ -3295,7 +3295,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Directional Complements — additional examples ─────────────────────────
     {
         id: 's42',
-        category: 'Directional Complements (u{8D8B}u{5411}u{8865}u{8BED})',
+        category: 'Directional Complements (趋向补语)',
         chinese: '她跑上楼去了。',
         pinyin: 'Tā pǎo shàng lóu qù le.',
         translation: 'She ran upstairs (away from the speaker).',
@@ -3355,7 +3355,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's43',
-        category: 'Directional Complements (u{8D8B}u{5411}u{8865}u{8BED})',
+        category: 'Directional Complements (趋向补语)',
         chinese: '他从树上摘下来一个苹果。',
         pinyin: 'Tā cóng shù shàng zhāi xià lái yī gè píng guǒ.',
         translation: 'He plucked an apple down from the tree.',
@@ -3452,7 +3452,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Potential Complements — additional examples ───────────────────────────
     {
         id: 's44',
-        category: 'Potential Complements (u{53EF}u{80FD}u{8865}u{8BED})',
+        category: 'Potential Complements (可能补语)',
         chinese: '这本书你看得懂吗？',
         pinyin: 'Zhè běn shū nǐ kàn de dǒng ma？',
         translation: 'Can you understand this book?',
@@ -3524,7 +3524,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's45',
-        category: 'Potential Complements (u{53EF}u{80FD}u{8865}u{8BED})',
+        category: 'Potential Complements (可能补语)',
         chinese: '昨晚我睡不着，一直到天亮。',
         pinyin: 'Zuó wǎn wǒ shuì bu zháo, yī zhí dào tiān liàng.',
         translation: 'Last night I couldn\'t fall asleep — right up until dawn.',
@@ -3602,7 +3602,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Degree Complements — additional examples ──────────────────────────────
     {
         id: 's46',
-        category: 'Degree Complements (u{7A0B}u{5EA6}u{8865}u{8BED})',
+        category: 'Degree Complements (程度补语)',
         chinese: '他气得说不出话来。',
         pinyin: 'Tā qì de shuō bu chū huà lái.',
         translation: 'He was so angry he couldn\'t get a word out.',
@@ -3675,7 +3675,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's47',
-        category: 'Degree Complements (u{7A0B}u{5EA6}u{8865}u{8BED})',
+        category: 'Degree Complements (程度补语)',
         chinese: '她把房间打扫得干干净净。',
         pinyin: 'Tā bǎ fáng jiān dǎ sǎo de gān gān jìng jìng.',
         translation: 'She cleaned the room spotlessly.',
@@ -3742,7 +3742,7 @@ export const sampleSentences: SentenceData[] = [
     // ── BEI (Passive) — additional examples ────────────────────────────────────
     {
         id: 's48',
-        category: 'BEI Passive (u{88AB}u{5B57}u{53E5})',
+        category: 'BEI Passive (被字句)',
         chinese: '那封信被他撕掉了。',
         pinyin: 'Nà fēng xìn bèi tā sī diào le.',
         translation: 'That letter was torn up by him.',
@@ -3813,7 +3813,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's49',
-        category: 'BEI Passive (u{88AB}u{5B57}u{53E5})',
+        category: 'BEI Passive (被字句)',
         chinese: '小偷被警察抓住了。',
         pinyin: 'Xiǎo tōu bèi jǐng chá zhuā zhù le.',
         translation: 'The thief was caught by the police.',
@@ -3875,7 +3875,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Shì–de Construction — additional examples ─────────────────────────────
     {
         id: 's50',
-        category: 'Shì–de Construction',
+        category: 'Shì–de Construction (是…的)',
         chinese: '我是昨天到的。',
         pinyin: 'Wǒ shì zuó tiān dào de.',
         translation: 'It was yesterday that I arrived.',
@@ -3926,7 +3926,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's51',
-        category: 'Shì–de Construction',
+        category: 'Shì–de Construction (是…的)',
         chinese: '这件衣服是在北京买的。',
         pinyin: 'Zhè jiàn yī fu shì zài Běi jīng mǎi de.',
         translation: 'This item of clothing was bought in Beijing.',
@@ -4001,7 +4001,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Pivotal Constructions — additional examples ───────────────────────────
     {
         id: 's52',
-        category: 'Pivotal Constructions (u{517C}u{8BED}u{53E5})',
+        category: 'Pivotal Constructions (兼语句)',
         chinese: '公司派他去谈判。',
         pinyin: 'Gōng sī pài tā qù tán pàn.',
         translation: 'The company sent him to negotiate.',
@@ -4064,7 +4064,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's53',
-        category: 'Pivotal Constructions (u{517C}u{8BED}u{53E5})',
+        category: 'Pivotal Constructions (兼语句)',
         chinese: '她请我吃饭。',
         pinyin: 'Tā qǐng wǒ chī fàn.',
         translation: 'She invited me to eat (out / to dinner).',
@@ -4127,7 +4127,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Separable Verbs — additional examples ─────────────────────────────────
     {
         id: 's54',
-        category: 'Separable Verbs (u{79BB}u{5408}u{8BCD})',
+        category: 'Separable Verbs (离合词)',
         chinese: '他们分了手。',
         pinyin: 'Tā men fēn le shǒu.',
         translation: 'They broke up.',
@@ -4175,7 +4175,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's55',
-        category: 'Separable Verbs (u{79BB}u{5408}u{8BCD})',
+        category: 'Separable Verbs (离合词)',
         chinese: '他毕了业就出国了。',
         pinyin: 'Tā bì le yè jiù chū guó le.',
         translation: 'As soon as he graduated, he went abroad.',
@@ -4249,7 +4249,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Rhetorical Questions — additional examples ────────────────────────────
     {
         id: 's56',
-        category: 'Rhetorical Questions (u{53CD}u{95EE}u{53E5})',
+        category: 'Rhetorical Questions (反问句)',
         chinese: '你难道不知道吗？',
         pinyin: 'Nǐ nán dào bù zhī dào ma?',
         translation: 'Don\'t you know? (Surely you must know!)',
@@ -4303,7 +4303,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's57',
-        category: 'Rhetorical Questions (u{53CD}u{95EE}u{53E5})',
+        category: 'Rhetorical Questions (反问句)',
         chinese: '这件事非解决不可。',
         pinyin: 'Zhè jiàn shì fēi jiě jué bù kě.',
         translation: 'This matter absolutely must be resolved.',
@@ -4358,7 +4358,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Serial Verb Constructions (连动句) ──────────────────────────────────────
     {
         id: 's58',
-        category: 'Serial Verb Constructions (u{8FDE}u{52A8}u{53E5})',
+        category: 'Serial Verb Constructions (连动句)',
         chinese: '他骑自行车去上班。',
         pinyin: 'Tā qí zì xíng chē qù shàng bān.',
         translation: 'He rides a bicycle to go to work.',
@@ -4413,7 +4413,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's59',
-        category: 'Serial Verb Constructions (u{8FDE}u{52A8}u{53E5})',
+        category: 'Serial Verb Constructions (连动句)',
         chinese: '我拿着伞出门了。',
         pinyin: 'Wǒ ná zhe sǎn chū mén le.',
         translation: 'I took (was holding) an umbrella and went out.',
