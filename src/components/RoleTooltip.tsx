@@ -210,7 +210,7 @@ export const HoverTooltip: React.FC<HoverTooltipProps> = ({ headline, detail, as
             };
             // Use setTimeout to avoid catching the current touch event
             setTimeout(() => document.addEventListener('touchstart', dismiss, { once: true }), 0);
-        }, 700);
+        }, 500);
     };
 
     const handleTouchEnd = useCallback((e: React.TouchEvent) => {
@@ -226,22 +226,22 @@ export const HoverTooltip: React.FC<HoverTooltipProps> = ({ headline, detail, as
         cancelLongPress();
     }, []);
 
-    const handleContextMenu = (e: React.MouseEvent) => {
-        // Prevent native context menu on long-press
-        if (longPressFired.current) {
-            e.preventDefault();
-        }
-    };
+    // Always prevent native context menu on tooltip triggers — the browser's
+    // default long-press context menu (~500ms) would otherwise steal the gesture.
+    const handleContextMenu = useCallback((e: React.MouseEvent) => {
+        e.preventDefault();
+    }, []);
 
     return (
         <>
             <Tag
                 ref={triggerRef as React.RefObject<HTMLDivElement & HTMLSpanElement>}
                 className={className ?? 'cursor-help'}
-                style={{ pointerEvents: 'all' }}
+                style={{ pointerEvents: 'all', WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none' } as React.CSSProperties}
                 onTouchStart={handleTouchStart}
                 onTouchEnd={handleTouchEnd}
                 onTouchMove={handleTouchMove}
+                onTouchCancel={handleTouchMove}
                 onContextMenu={handleContextMenu}
             >
                 {children}
