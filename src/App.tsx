@@ -24,6 +24,16 @@ function App() {
     setMobileView('tree');
   }, []);
 
+  const handleSwipePrev = useCallback(() => {
+    const idx = sampleSentences.findIndex(s => s.id === selectedId);
+    if (idx > 0) setSelectedId(sampleSentences[idx - 1].id);
+  }, [selectedId]);
+
+  const handleSwipeNext = useCallback(() => {
+    const idx = sampleSentences.findIndex(s => s.id === selectedId);
+    if (idx < sampleSentences.length - 1) setSelectedId(sampleSentences[idx + 1].id);
+  }, [selectedId]);
+
   return (
     <div className="h-[100dvh] bg-slate-950 text-slate-100 flex flex-col font-sans relative overflow-hidden">
       {/* Background gradients */}
@@ -119,6 +129,8 @@ function App() {
               sentence={selectedSentence}
               notesOpen={notesOpen}
               onToggleNotes={() => setNotesOpen(o => !o)}
+              onSwipePrev={handleSwipePrev}
+              onSwipeNext={handleSwipeNext}
             />
           )}
 

@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, Lightbulb } from 'lucide-react';
+import { useRef } from 'react';
 import { RubyText } from './RubyText';
 import type { SentenceData } from '../types/grammar';
 
@@ -21,15 +22,40 @@ interface SentenceHeaderProps {
     sentence: SentenceData;
     notesOpen: boolean;
     onToggleNotes: () => void;
+    onSwipePrev?: () => void;
+    onSwipeNext?: () => void;
 }
 
 export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
     sentence,
     notesOpen,
     onToggleNotes,
+    onSwipePrev,
+    onSwipeNext,
 }) => {
+    // Swipe detection
+    const touchStart = useRef<{ x: number; y: number } | null>(null);
+
+    const handleTouchStart = (e: React.TouchEvent) => {
+        touchStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    };
+    const handleTouchEnd = (e: React.TouchEvent) => {
+        if (!touchStart.current) return;
+        const dx = e.changedTouches[0].clientX - touchStart.current.x;
+        const dy = e.changedTouches[0].clientY - touchStart.current.y;
+        touchStart.current = null;
+        // Only fire if horizontal swipe is dominant and distance ≥ 60px
+        if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy)) return;
+        if (dx > 0) onSwipePrev?.();
+        else onSwipeNext?.();
+    };
+
     return (
-        <div className="flex flex-col items-center gap-0 flex-shrink-0 px-2 pt-2 pb-0 z-10 w-full relative">
+        <div
+            className="flex flex-col items-center gap-0 flex-shrink-0 px-2 pt-2 pb-0 z-10 w-full relative"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+        >
 
             {/* Discourse context sentence (faded, smaller) */}
             {sentence.discourseContext && (

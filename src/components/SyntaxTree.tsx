@@ -254,6 +254,14 @@ const parseTreeToFlow = (root: AppGrammarNodeData | undefined, expandedIds: Set<
     };
 };
 
+/** Viewport-aware padding for fitView — tighter on small screens */
+const getFitViewPadding = () => {
+    const w = window.innerWidth;
+    if (w < 768) return 0.03;
+    if (w < 1280) return 0.08;
+    return 0.15;
+};
+
 /** Inner component: imperatively calls fitView() after nodes settle, fixing
  *  the mobile over-zoom-out where the declarative fitView prop fires too early.
  */
@@ -262,14 +270,14 @@ const FitViewOnChange: React.FC<{ nodes: Node[]; isVisible?: boolean }> = ({ nod
 
     // Re-fit whenever the node layout changes (e.g. sentence switch)
     useEffect(() => {
-        const id = setTimeout(() => fitView({ padding: 0.15, duration: 350 }), 50);
+        const id = setTimeout(() => fitView({ padding: getFitViewPadding(), duration: 350 }), 50);
         return () => clearTimeout(id);
     }, [nodes, fitView]);
 
     // Re-fit when the pane transitions from hidden → visible on mobile.
     useEffect(() => {
         if (!isVisible) return;
-        const id = setTimeout(() => fitView({ padding: 0.15, duration: 350 }), 100);
+        const id = setTimeout(() => fitView({ padding: getFitViewPadding(), duration: 350 }), 100);
         return () => clearTimeout(id);
     }, [isVisible, fitView]);
 
@@ -290,9 +298,37 @@ const ZoomControls: React.FC = () => {
                     <ZoomOut className="w-5 h-5" />
                 </button>
                 <div className="w-full h-px bg-slate-700/60" />
-                <button onClick={() => fitView({ padding: 0.15, duration: 350 })} className={btn} title="Fit to view">
+                <button onClick={() => fitView({ padding: getFitViewPadding(), duration: 350 })} className={btn} title="Fit to view">
                     <Scan className="w-5 h-5" />
                 </button>
+            </div>
+        </div>
+    );
+};
+
+/** One-time pinch-to-zoom hint for touch devices */
+const PinchHint: React.FC = () => {
+    const [show, setShow] = useState(false);
+
+    useEffect(() => {
+        // Only show on touch devices, and only once per session
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        const alreadyShown = sessionStorage.getItem('pinchHintShown');
+        if (isTouchDevice && !alreadyShown) {
+            setShow(true);
+            sessionStorage.setItem('pinchHintShown', '1');
+            const timer = setTimeout(() => setShow(false), 3500);
+            return () => clearTimeout(timer);
+        }
+    }, []);
+
+    if (!show) return null;
+
+    return (
+        <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-30 pointer-events-none animate-in fade-in slide-in-from-bottom-4 duration-300">
+            <div className="glass-panel rounded-2xl border border-slate-600/50 px-4 py-2.5 shadow-2xl flex items-center gap-2 text-[11px] text-slate-300 font-medium whitespace-nowrap">
+                <span className="text-lg">👌</span>
+                Pinch to zoom · Drag to pan
             </div>
         </div>
     );
@@ -484,6 +520,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
             >
                 <Background color="#1e293b" gap={24} size={1} />
                 <ZoomControls />
+                <PinchHint />
                 <FitViewOnChange nodes={nodes} isVisible={isVisible} />
             </ReactFlow>
 

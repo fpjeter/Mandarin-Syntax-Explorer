@@ -140,7 +140,7 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
                             large={!(data.role.includes('Phrase') || data.role === 'Topic' || data.role === 'Comment' || data.role === 'Predicate')}
                         />
                         {data.text.translation && (
-                            <div className="text-[9px] xl:text-[10px] text-slate-400 mt-1.5 xl:mt-2 italic text-center leading-tight max-w-[120px] xl:max-w-[160px] line-clamp-2 overflow-hidden">
+                            <div className="hidden lg:block text-[9px] xl:text-[10px] text-slate-400 mt-1.5 xl:mt-2 italic text-center leading-tight max-w-[120px] xl:max-w-[160px] line-clamp-2 overflow-hidden">
                                 "{data.text.translation}"
                             </div>
                         )}
