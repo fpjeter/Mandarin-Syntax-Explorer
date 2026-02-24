@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BookA, PlayCircle, ChevronDown, Search, X } from 'lucide-react';
 import { sampleSentences } from '../data/sentences';
-import { SENTENCE_CATEGORIES } from '../data/categories';
+import { SENTENCE_CATEGORIES, CATEGORY_DESCRIPTIONS } from '../data/categories';
 import type { SentenceCategory } from '../types/grammar';
 import { GrammarGuide } from './GrammarGuide';
 
@@ -71,7 +71,10 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
         });
 
     // Ensure selected sentence's group is open when selected externally
+    // (skip on initial mount so all categories start minimized)
+    const hasMounted = useRef(false);
     useEffect(() => {
+        if (!hasMounted.current) { hasMounted.current = true; return; }
         const s = sampleSentences.find(x => x.id === selectedId);
         if (s) setOpenGroups(prev => new Set([...prev, s.category]));
     }, [selectedId]);
@@ -158,7 +161,7 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
                                 </div>
                             </button>
 
-                            {/* Sentence cards */}
+                            {/* Sentence cards + description */}
                             <AnimatePresence initial={false}>
                                 {isOpen && (
                                     <motion.div
@@ -168,6 +171,9 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
                                         transition={{ duration: 0.2, ease: 'easeInOut' }}
                                         className="overflow-hidden"
                                     >
+                                        <p className="px-4 pt-2 pb-1 text-[10px] text-slate-400 italic leading-relaxed">
+                                            {CATEGORY_DESCRIPTIONS[category]}
+                                        </p>
                                         <div className="p-2 space-y-2">
                                             {sentences.map(sentence => {
                                                 const isSelected = selectedId === sentence.id;

@@ -64,6 +64,16 @@ function App() {
       {/* Mobile tab bar — only visible on < lg screens */}
       <div className="lg:hidden flex border-b border-slate-700/50 bg-slate-900/60 backdrop-blur-sm z-10">
         <button
+          onClick={() => setMobileView('guide')}
+          className={`flex-1 flex items-center justify-center gap-2 py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors border-b-2 ${mobileView === 'guide'
+            ? 'text-blue-300 border-blue-500 bg-blue-500/10'
+            : 'text-slate-400 border-transparent hover:text-slate-200'
+            }`}
+        >
+          <Info className="w-3.5 h-3.5" />
+          Guide
+        </button>
+        <button
           onClick={() => setMobileView('list')}
           className={`flex-1 flex items-center justify-center gap-2 py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors border-b-2 ${mobileView === 'list'
             ? 'text-purple-300 border-purple-500 bg-purple-500/10'
@@ -85,16 +95,6 @@ function App() {
           {selectedId && mobileView === 'list' && (
             <span className="ml-1 w-1.5 h-1.5 rounded-full bg-purple-400 inline-block" />
           )}
-        </button>
-        <button
-          onClick={() => setMobileView('guide')}
-          className={`flex-1 flex items-center justify-center gap-2 py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors border-b-2 ${mobileView === 'guide'
-            ? 'text-blue-300 border-blue-500 bg-blue-500/10'
-            : 'text-slate-400 border-transparent hover:text-slate-200'
-            }`}
-        >
-          <Info className="w-3.5 h-3.5" />
-          Guide
         </button>
       </div>
 
