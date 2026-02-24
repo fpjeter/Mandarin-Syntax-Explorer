@@ -159,7 +159,7 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n3-p-tp',
-                            role: 'Adverb',
+                            role: 'Adjunct',
                             subRole: 'time',
                             text: { hanzi: '昨天', pinyin: 'zuó tiān', translation: 'yesterday' }
                         },
@@ -270,7 +270,7 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n4-p-loc',
-                            role: 'Adverb',
+                            role: 'Adjunct',
                             subRole: 'location',
                             children: [
                                 {
@@ -287,13 +287,13 @@ export const sampleSentences: SentenceData[] = [
                         },
                         {
                             id: 'n4-p-adv1',
-                            role: 'Adverb',
+                            role: 'Adjunct',
                             subRole: 'manner',
                             text: { hanzi: '生气地', pinyin: 'shēng qì de', translation: 'angrily' }
                         },
                         {
                             id: 'n4-p-adv2',
-                            role: 'Adverb',
+                            role: 'Adjunct',
                             subRole: 'instrument',
                             children: [
                                 {
@@ -592,7 +592,7 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n7-p-vp2-adv',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     text: { hanzi: '还是', pinyin: 'hái shì', translation: 'still' }
                                 },
                                 {
@@ -621,13 +621,13 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n7-p-vp3-adv1',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     subRole: 'consequence',
                                     text: { hanzi: '就', pinyin: 'jiù', translation: 'then/so' }
                                 },
                                 {
                                     id: 'n7-p-vp3-adv2',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     subRole: 'negation',
                                     text: { hanzi: '不', pinyin: 'bù', translation: 'not' }
                                 },
@@ -837,7 +837,7 @@ export const sampleSentences: SentenceData[] = [
             children: [
                 {
                     id: 'n10-adv',
-                    role: 'Adverb',
+                    role: 'Adjunct',
                     subRole: 'rhetorical question marker',
                     text: { hanzi: '难道', pinyin: 'nán dào', translation: 'don\'t tell me (...)?' }
                 },
@@ -899,7 +899,7 @@ export const sampleSentences: SentenceData[] = [
                         },
                         {
                             id: 'n10-p-dou',
-                            role: 'Adverb',
+                            role: 'Adjunct',
                             subRole: 'emphatic closure (paired with lián)',
                             text: { hanzi: '都', pinyin: 'dōu', translation: 'all/even' }
                         },
@@ -909,7 +909,7 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n10-p-vp-adv',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     subRole: 'negation',
                                     text: { hanzi: '不', pinyin: 'bù', translation: 'not' }
                                 },
@@ -966,7 +966,7 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n11-c-fei',
-                            role: 'Adverb',
+                            role: 'Adjunct',
                             subRole: 'double-negation opener (fēi...bùkě)',
                             text: { hanzi: '非', pinyin: 'fēi', translation: 'must / it must be that' }
                         },
@@ -981,7 +981,7 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n11-c-p-adv',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     subRole: 'manner',
                                     text: { hanzi: '亲自', pinyin: 'qīn zì', translation: 'personally/yourself' }
                                 },
@@ -1012,7 +1012,7 @@ export const sampleSentences: SentenceData[] = [
                                 },
                                 {
                                     id: 'n11-c-p-buke',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     subRole: 'double-negation closure (fēi...bùkě)',
                                     text: { hanzi: '不可', pinyin: 'bù kě', translation: 'cannot avoid / must' }
                                 }
@@ -1068,7 +1068,7 @@ export const sampleSentences: SentenceData[] = [
                                     children: [
                                         {
                                             id: 'n12-p-verb-freq-adv',
-                                            role: 'Adverb',
+                                            role: 'Adjunct',
                                             subRole: 'approximate quantity',
                                             text: { hanzi: '好几', pinyin: 'hǎo jǐ', translation: 'quite a few' }
                                         },
@@ -1256,12 +1256,12 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n14-vp3-adv',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     text: { hanzi: '吃完', pinyin: 'chī wán', translation: 'after eating' }
                                 },
                                 {
                                     id: 'n14-vp3-then',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     text: { hanzi: '再', pinyin: 'zài', translation: 'then/before' }
                                 },
                                 {
@@ -1480,7 +1480,7 @@ export const sampleSentences: SentenceData[] = [
                                             children: [
                                                 {
                                                     id: 'n17-comp-modal',
-                                                    role: 'Adverb',
+                                                    role: 'Adjunct',
                                                     text: { hanzi: '想', pinyin: 'xiǎng', translation: 'want to' }
                                                 },
                                                 {
@@ -1538,7 +1538,7 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n18-adv',
-                            role: 'Adverb',
+                            role: 'Adjunct',
                             text: { hanzi: '非常', pinyin: 'fēi cháng', translation: 'extremely / really' }
                         },
                         {
@@ -1749,7 +1749,7 @@ export const sampleSentences: SentenceData[] = [
                         },
                         {
                             id: 'n20-c-eq',
-                            role: 'Adverb',
+                            role: 'Adjunct',
                             subRole: 'equality marker',
                             text: { hanzi: '一样', pinyin: 'yī yàng', translation: 'equally / the same' }
                         },
@@ -1823,7 +1823,7 @@ export const sampleSentences: SentenceData[] = [
                                         },
                                         {
                                             id: 'n21-comp-eq',
-                                            role: 'Adverb',
+                                            role: 'Adjunct',
                                             subRole: 'equality marker',
                                             text: { hanzi: '一样', pinyin: 'yī yàng', translation: 'equally / the same' }
                                         },
@@ -2106,7 +2106,7 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n25-c-p1-adv',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     text: { hanzi: '很', pinyin: 'hěn', translation: 'very' }
                                 },
                                 {
@@ -2129,12 +2129,12 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n25-c-p2-adv1',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     text: { hanzi: '也', pinyin: 'yě', translation: 'also' }
                                 },
                                 {
                                     id: 'n25-c-p2-adv2',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     text: { hanzi: '不', pinyin: 'bù', translation: 'not' }
                                 },
                                 {
@@ -2292,7 +2292,7 @@ export const sampleSentences: SentenceData[] = [
                                                     children: [
                                                         {
                                                             id: 'n27-c-p-vp-obj-c-adv',
-                                                            role: 'Adverb',
+                                                            role: 'Adjunct',
                                                             text: { hanzi: '很', pinyin: 'hěn', translation: 'very' }
                                                         },
                                                         {
@@ -2338,7 +2338,7 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n28-adv',
-                            role: 'Adverb',
+                            role: 'Adjunct',
                             subRole: 'politeness',
                             text: { hanzi: '请', pinyin: 'qǐng', translation: 'please' },
                         },
@@ -2791,7 +2791,7 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n34-cl1-adv',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     text: { hanzi: '太', pinyin: 'tài', translation: 'too' },
                                 },
                                 {
@@ -2887,7 +2887,7 @@ export const sampleSentences: SentenceData[] = [
                                 },
                                 {
                                     id: 'n35-cl2-adv',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     text: { hanzi: '就', pinyin: 'jiù', translation: 'just / then' },
                                 },
                                 {
@@ -3027,7 +3027,7 @@ export const sampleSentences: SentenceData[] = [
                                     children: [
                                         {
                                             id: 'n37-comp-adv',
-                                            role: 'Adverb',
+                                            role: 'Adjunct',
                                             text: { hanzi: '非常', pinyin: 'fēi cháng', translation: 'very / extremely' },
                                         },
                                         {
@@ -3578,7 +3578,7 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n45-adv',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     text: { hanzi: '一直', pinyin: 'yī zhí', translation: 'straight through / all the way' },
                                 },
                                 {
@@ -4224,7 +4224,7 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n55-adv',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     text: { hanzi: '就', pinyin: 'jiù', translation: 'then / immediately' },
                                 },
                                 {
@@ -4269,7 +4269,7 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n56-rhet',
-                            role: 'Adverb',
+                            role: 'Adjunct',
                             subRole: 'rhetorical marker (难道)',
                             text: { hanzi: '难道', pinyin: 'nán dào', translation: 'don\'t tell me / could it be' },
                         },
@@ -4279,7 +4279,7 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n56-neg',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     subRole: 'negation',
                                     text: { hanzi: '不', pinyin: 'bù', translation: 'not' },
                                 },
@@ -4335,7 +4335,7 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n57-fei',
-                            role: 'Adverb',
+                            role: 'Adjunct',
                             subRole: 'necessity marker (非)',
                             text: { hanzi: '非', pinyin: 'fēi', translation: 'must / unless' },
                         },
@@ -4508,7 +4508,7 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n60-yue1',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     subRole: 'correlative marker (越)',
                                     text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' },
                                 },
@@ -4526,7 +4526,7 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n60-yue2',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     subRole: 'correlative marker (越)',
                                     text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' },
                                 },
@@ -4570,7 +4570,7 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n61-yi',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     subRole: 'trigger marker (一)',
                                     text: { hanzi: '一', pinyin: 'yī', translation: 'as soon as' },
                                 },
@@ -4588,7 +4588,7 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n61-jiu',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     subRole: 'immediate consequence marker (就)',
                                     text: { hanzi: '就', pinyin: 'jiù', translation: 'immediately / then' },
                                 },
@@ -4728,7 +4728,7 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n64-ruguo',
-                            role: 'Adverb',
+                            role: 'Adjunct',
                             subRole: 'conditional marker',
                             text: { hanzi: '如果', pinyin: 'rú guǒ', translation: 'if' },
                         },
@@ -4756,13 +4756,13 @@ export const sampleSentences: SentenceData[] = [
                         },
                         {
                             id: 'n64-jiu',
-                            role: 'Adverb',
+                            role: 'Adjunct',
                             subRole: 'consequence marker (就)',
                             text: { hanzi: '就', pinyin: 'jiù', translation: 'then' },
                         },
                         {
                             id: 'n64-neg',
-                            role: 'Adverb',
+                            role: 'Adjunct',
                             subRole: 'negation',
                             text: { hanzi: '不', pinyin: 'bù', translation: 'not' },
                         },
@@ -4800,7 +4800,7 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n65-zhiyao',
-                            role: 'Adverb',
+                            role: 'Adjunct',
                             subRole: 'conditional marker (as long as)',
                             text: { hanzi: '只要', pinyin: 'zhǐ yào', translation: 'as long as / provided that' },
                         },
@@ -4823,13 +4823,13 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n65-jiu',
-                            role: 'Adverb',
+                            role: 'Adjunct',
                             subRole: 'consequence marker (就)',
                             text: { hanzi: '就', pinyin: 'jiù', translation: 'then' },
                         },
                         {
                             id: 'n65-modal',
-                            role: 'Adverb',
+                            role: 'Adjunct',
                             subRole: 'modal verb (ability)',
                             text: { hanzi: '能', pinyin: 'néng', translation: 'can / able to' },
                         },
@@ -4868,7 +4868,7 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n66-lian',
-                            role: 'Adverb',
+                            role: 'Adjunct',
                             subRole: 'even-marker opener (连)',
                             text: { hanzi: '连', pinyin: 'lián', translation: 'even' },
                         },
@@ -4891,7 +4891,7 @@ export const sampleSentences: SentenceData[] = [
                         },
                         {
                             id: 'n66-dou',
-                            role: 'Adverb',
+                            role: 'Adjunct',
                             subRole: 'even-marker reinforcer (都)',
                             text: { hanzi: '都', pinyin: 'dōu', translation: 'even / all' },
                         },
@@ -4901,13 +4901,13 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n66-neg',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     subRole: 'negation',
                                     text: { hanzi: '不', pinyin: 'bù', translation: 'not' },
                                 },
                                 {
                                     id: 'n66-modal',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     subRole: 'modal verb (learned ability)',
                                     text: { hanzi: '会', pinyin: 'huì', translation: 'know how to' },
                                 },
@@ -4941,7 +4941,7 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n67-lian',
-                            role: 'Adverb',
+                            role: 'Adjunct',
                             subRole: 'even-marker opener (连)',
                             text: { hanzi: '连', pinyin: 'lián', translation: 'even' },
                         },
@@ -4953,7 +4953,7 @@ export const sampleSentences: SentenceData[] = [
                         },
                         {
                             id: 'n67-ye',
-                            role: 'Adverb',
+                            role: 'Adjunct',
                             subRole: 'even-marker reinforcer (也)',
                             text: { hanzi: '也', pinyin: 'yě', translation: 'also / even' },
                         },
@@ -4963,7 +4963,7 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n67-modal',
-                                    role: 'Adverb',
+                                    role: 'Adjunct',
                                     subRole: 'modal verb (ability)',
                                     text: { hanzi: '能', pinyin: 'néng', translation: 'can' },
                                 },

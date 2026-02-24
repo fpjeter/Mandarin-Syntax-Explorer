@@ -59,15 +59,15 @@ export const glossary: Record<GrammarRole, { headline: string; detail: string }>
         detail:
             'The thing the verb acts on. In "她看书", 书 (book) is the object.',
     },
-    Adverb: {
-        headline: 'A word or phrase that modifies the verb',
+    Adjunct: {
+        headline: 'Pre-verbal modifier (状语 zhuàngyǔ)',
         detail:
-            'Usually appears right before the verb to tell us how, when, how often, or to what degree it happens. E.g. 都 (all), 还是 (still), 难道 (really?). In Mandarin, this pre-verbal position (called 状语 zhuàngyǔ) also includes location phrases (e.g. 在厨房里 "in the kitchen") and manner phrases (e.g. 生气地 "angrily") — things English would call adverbial phrases rather than adverbs.',
+            'Anything that appears before the verb to set the scene — how, when, where, how often, or to what degree. Chinese grammar calls this position 状语 (zhuàngyǔ). It covers not just classic adverbs like 都 (all) or 很 (very), but also location phrases like 在厨房里 ("in the kitchen") and manner phrases like 生气地 ("angrily").',
     },
     Preposition: {
         headline: 'A linking word showing relationship',
         detail:
-            'Comes before a noun to show direction, location, or who is affected. Mandarin prepositions are often called "coverbs". E.g. 把 (marks what\'s being done to), 被 (marks the doer in a passive).',
+            'Comes before a noun to show direction, location, or who is affected. E.g. 把 (marks what\'s being done to), 被 (marks the doer in a passive).',
     },
     Particle: {
         headline: 'A small grammatical word',
@@ -97,7 +97,7 @@ export const glossary: Record<GrammarRole, { headline: string; detail: string }>
     Complement: {
         headline: 'Extra info completing a verb',
         detail:
-            'Comes after the verb to add information about the outcome, direction, possibility, or degree of the action. Resultative (结果补语): 碎 in 打碎 (hit→shatter). Directional (趋向补语): 进来 in 跑进来 (run-enter-toward-speaker). Potential (可能补语): V+得/不+Result, e.g. 看不了 (can\'t finish reading). Degree (程度补语): V+得+description, e.g. 跑得很快 (runs very fast).',
+            'Comes after the verb to add info about the result, direction, possibility, or degree of the action. Look for specific complement badges (结果补语, 方向补语, etc.) for details on each type.',
     },
     'Head Noun': {
         headline: 'The main noun in a noun phrase',
@@ -117,12 +117,12 @@ export const glossary: Record<GrammarRole, { headline: string; detail: string }>
     'Verb Morpheme': {
         headline: 'The verb half of a separable verb (离合词)',
         detail:
-            'Separable verbs (离合词) are VO compounds that can be split apart. This is the verb morpheme — the action half. E.g. 见 in 见面, 睡 in 睡觉, 散 in 散步. Particles, frequency words, and duration complements insert between this morpheme and its object half.',
+            'The action half of a separable verb (离合词). E.g. 见 in 见面, 睡 in 睡觉, 散 in 散步. When the verb splits, particles and other words insert between this half and the object half.',
     },
     'Object Morpheme': {
         headline: 'The object half of a separable verb (离合词)',
         detail:
-            'Separable verbs (离合词) are VO compounds that can be split apart. This is the noun/object morpheme — the "thing" the verb acts on internally. E.g. 面 in 见面, 觉 in 睡觉, 步 in 散步. When the verb is split, this morpheme moves to the end.',
+            'The noun half of a separable verb (离合词) — the "thing" the verb acts on internally. E.g. 面 in 见面, 觉 in 睡觉, 步 in 散步. When the verb splits, this half moves to the end.',
     },
     Pivot: {
         headline: 'A noun that plays two grammatical roles at once',
@@ -132,6 +132,6 @@ export const glossary: Record<GrammarRole, { headline: string; detail: string }>
     Copula: {
         headline: 'The linking verb "to be"',
         detail:
-            'The verb 是 (shì) when it functions as a true copula — linking subject to predicate. In the 是…的 pseudo-cleft construction, 是 is the main verb of the cleft: "it WAS [yesterday] that…" It opens the focus bracket while 的 closes it.',
+            'The linking verb 是 ("to be"). In the 是…的 pattern, 是 opens the focus and 的 closes it, like saying "it WAS [yesterday] that…"',
     },
 };

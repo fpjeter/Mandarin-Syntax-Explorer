@@ -38,3 +38,10 @@ It could open/scroll to the framework section on click.
 ### 7. Add glossary cross-links
 Terms like "pro-drop", "Topic", and "Comment" could link to their
 glossary entries for users who want more detail.
+
+### 8. Add a "Tree Labels Explained" section to the Guide tab
+Since the Guide tab is the first thing mobile users see, add a small section
+listing the less-obvious tree labels (Adjunct, Attributive, Complement, Pivot)
+with one-line plain-English definitions. This gives users a quick reference
+before they even open a tree, reducing the initial learning curve for
+unfamiliar terminology like "Adjunct."

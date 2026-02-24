@@ -13,7 +13,7 @@ export type GrammarRole =
     | 'Time Phrase'
     | 'Verb'
     | 'Object'
-    | 'Adverb'
+    | 'Adjunct'
     | 'Preposition'
     | 'Particle'
     | 'Adjective'

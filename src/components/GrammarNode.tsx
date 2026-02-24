@@ -55,8 +55,8 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
             case 'Time Phrase': return 'bg-yellow-900/40 text-yellow-200 border-yellow-600/50 shadow-[0_0_12px_rgba(234,179,8,0.1)]';
             case 'Verb': return 'bg-green-900/40 text-green-300 border-green-600/50';
             case 'Object': return 'bg-amber-900/40 text-amber-200 border-amber-600/50';
-            case 'Adverb': return 'bg-rose-900/40 text-rose-300 border-rose-600/50';
-            case 'Adjective': return 'bg-pink-900/40 text-pink-200 border-pink-600/50 shadow-[0_0_12px_rgba(236,72,153,0.15)]';
+            case 'Adjunct': return 'bg-rose-900/40 text-rose-300 border-rose-600/50';
+            case 'Adjective': return 'bg-fuchsia-900/40 text-fuchsia-200 border-fuchsia-600/50 shadow-[0_0_12px_rgba(192,38,211,0.15)]';
             case 'Attributive': return 'bg-lime-900/40 text-lime-300 border-lime-600/50 shadow-[0_0_15px_rgba(132,204,22,0.15)]';
             case 'Complement': return 'bg-violet-900/40 text-violet-300 border-violet-600/50 shadow-[0_0_15px_rgba(139,92,246,0.15)]';
             case 'Head Noun': return 'bg-orange-800/60 text-orange-100 border-orange-500/70 border-b-2';
@@ -104,7 +104,11 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
                     className={`text-[10px] xl:text-[11px] font-bold uppercase tracking-wide mb-1.5 xl:mb-2 whitespace-nowrap flex items-center gap-1 ${isGhost ? 'text-rose-400/80' : 'opacity-90'}`}
                 >
                     {data.role}
-                    {data.subRole && <span className="text-[9px] opacity-75 lowercase tracking-normal">({data.subRole})</span>}
+                    {data.subRole && (
+                        data.role === 'Adjunct'
+                            ? <span className="ml-1 text-[9px] font-semibold text-rose-200 bg-rose-800/50 border border-rose-500/40 px-1.5 py-0.5 rounded tracking-normal normal-case">{data.subRole}</span>
+                            : <span className="text-[9px] opacity-75 lowercase tracking-normal">({data.subRole})</span>
+                    )}
                     {isGhost && (
                         <span className="ml-1 text-[9px] text-rose-400 font-bold bg-rose-900/30 border border-rose-500/40 px-1 py-0.5 rounded tracking-normal normal-case">
                             pro-drop

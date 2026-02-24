@@ -19,7 +19,7 @@ export const BADGES: BadgeSpec[] = [
         label: '把字句',
         color: 'text-orange-300 bg-orange-900/40 border-orange-500/50',
         headline: 'BĂ construction',
-        detail: "Fronts the object before the verb to emphasise the action's effect on it",
+        detail: "Moves the object before the verb to highlight what's being affected.",
         match: (role, subRole) =>
             role === 'Preposition' &&
             (!!subRole?.includes('bǎ') || !!subRole?.includes('ba-')),
@@ -36,7 +36,7 @@ export const BADGES: BadgeSpec[] = [
         label: '是…的',
         color: 'text-cyan-300 bg-cyan-900/40 border-cyan-500/50',
         headline: 'Shì-de construction',
-        detail: '是 and 的 bracket the verb phrase to focus on how, when, or where a past event happened',
+        detail: '是 and 的 wrap around the verb to highlight how, when, or where something happened.',
         match: (_role, subRole) =>
             !!subRole?.match(/emphatic (copula|closure)|focus (opener|closer)/),
     },
@@ -44,7 +44,7 @@ export const BADGES: BadgeSpec[] = [
         label: '比字句',
         color: 'text-yellow-300 bg-yellow-900/40 border-yellow-500/50',
         headline: 'Bǐ comparative',
-        detail: 'Topic 比 [standard] [quality] — places the reference point before the adjective to express "more … than"',
+        detail: 'Uses 比 to compare: "A 比 B + adjective" means A is more [adjective] than B.',
         match: (_role, subRole) =>
             !!subRole?.includes('comparative bǐ') || !!subRole?.includes('adjectival / comparative'),
     },
@@ -53,7 +53,7 @@ export const BADGES: BadgeSpec[] = [
         label: '连动句',
         color: 'text-teal-300 bg-teal-900/40 border-teal-500/50',
         headline: 'Serial verb construction',
-        detail: 'Two or more VPs share the same subject with no conjunction — the second VP expresses purpose, manner, or result of the first',
+        detail: 'Two or more actions share the same subject with no "and" — the second action shows purpose, manner, or result.',
         match: (_role, subRole) =>
             !!subRole?.includes('serial verb'),
     },
@@ -77,7 +77,7 @@ export const BADGES: BadgeSpec[] = [
         label: '方向补语',
         color: 'text-sky-200 bg-sky-900/40 border-sky-400/50',
         headline: 'Directional complement',
-        detail: 'V + direction morpheme (上/下/进/出…) + 来/去 — specifies the direction and orientation of movement relative to the speaker',
+        detail: 'Verb + direction word (上/下/进/出…) + 来/去 — shows which way something moves and whether it\'s toward or away from the speaker.',
         match: (role, subRole) =>
             role === 'Complement' && !!subRole?.includes('directional'),
     },
@@ -85,7 +85,7 @@ export const BADGES: BadgeSpec[] = [
         label: '可能补语',
         color: 'text-sky-300 bg-sky-900/40 border-sky-500/50',
         headline: 'Potential complement',
-        detail: 'V+得/不+RC — expresses ability or possibility (e.g. 看不了 = unable to finish reading)',
+        detail: 'V + 得/不 + result — says whether the outcome can or can\'t happen (e.g. 看不了 = can\'t finish reading).',
         match: (role, subRole) =>
             (role === 'Complement' || role === 'Particle') &&
             !!subRole?.includes('potential'),
@@ -120,7 +120,7 @@ export const BADGES: BadgeSpec[] = [
         label: '连…都',
         color: 'text-lime-300 bg-lime-900/40 border-lime-500/50',
         headline: 'Emphatic bracket',
-        detail: '连 (even) and 都 (all/even) surround the focused element to stress that it holds without exception',
+        detail: '连 (even) and 都 (all) surround a word to stress "even this is true."',
         match: (_role, subRole) => !!subRole?.includes('even-marker'),
     },
 ];
