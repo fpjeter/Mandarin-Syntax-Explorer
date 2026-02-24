@@ -733,8 +733,8 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n8-p-de',
                             role: 'Particle',
-                            subRole: 'cleft closer — …that [verb]',
-                            text: { hanzi: '的', pinyin: 'de', translation: '(cleft closure)' }
+                            subRole: 'nominalizer (creates "the one that [verb]ed")',
+                            text: { hanzi: '的', pinyin: 'de', translation: '(nominalizer)' }
                         }
                     ]
                 }
@@ -3917,8 +3917,8 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n50-de',
                             role: 'Particle',
-                            subRole: 'cleft closer — …that [verb]',
-                            text: { hanzi: '的', pinyin: 'de', translation: '(cleft closure)' },
+                            subRole: 'nominalizer (creates "the one that [verb]ed")',
+                            text: { hanzi: '的', pinyin: 'de', translation: '(nominalizer)' },
                         },
                     ],
                 },
@@ -3990,8 +3990,8 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n51-de',
                             role: 'Particle',
-                            subRole: 'cleft closer — …that [verb]',
-                            text: { hanzi: '的', pinyin: 'de', translation: '(cleft closure)' },
+                            subRole: 'nominalizer (creates "the one that [verb]ed")',
+                            text: { hanzi: '的', pinyin: 'de', translation: '(nominalizer)' },
                         },
                     ],
                 },
