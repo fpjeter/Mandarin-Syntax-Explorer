@@ -64,7 +64,7 @@ interface RoleTooltipProps {
  * on document.body so it is never clipped by any parent overflow.
  */
 export const RoleTooltip: React.FC<RoleTooltipProps> = ({ role, children }) => {
-    const triggerRef = useRef<HTMLSpanElement>(null);
+    const triggerRef = useRef<HTMLDivElement>(null);
     const [pos, setPos] = useState<{ x: number; y: number } | null>(null);
 
     const entry = glossary[role];
@@ -90,13 +90,13 @@ export const RoleTooltip: React.FC<RoleTooltipProps> = ({ role, children }) => {
 
     return (
         <>
-            <span
+            <div
                 ref={triggerRef}
                 className="cursor-help"
-                style={{ pointerEvents: 'all', display: 'inline' }}
+                style={{ pointerEvents: 'all' }}
             >
                 {children}
-            </span>
+            </div>
 
             {pos &&
                 createPortal(
