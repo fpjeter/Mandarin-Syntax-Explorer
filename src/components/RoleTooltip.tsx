@@ -193,9 +193,12 @@ export const HoverTooltip: React.FC<HoverTooltipProps> = ({ headline, detail, as
         }
     };
 
-    const handleTouchStart = (_e: React.TouchEvent) => {
+    const touchOrigin = useRef<{ x: number; y: number } | null>(null);
+
+    const handleTouchStart = (e: React.TouchEvent) => {
         longPressFired.current = false;
         cancelLongPress();
+        touchOrigin.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
         longPressTimer.current = setTimeout(() => {
             const el = triggerRef.current;
             if (!el) return;
@@ -222,8 +225,14 @@ export const HoverTooltip: React.FC<HoverTooltipProps> = ({ headline, detail, as
         }
     }, []);
 
-    const handleTouchMove = useCallback(() => {
-        cancelLongPress();
+    // Only cancel long-press if finger moves more than 10px (allows natural tremor)
+    const handleTouchMove = useCallback((e: React.TouchEvent) => {
+        if (!touchOrigin.current) return;
+        const dx = e.touches[0].clientX - touchOrigin.current.x;
+        const dy = e.touches[0].clientY - touchOrigin.current.y;
+        if (dx * dx + dy * dy > 100) { // 10px radius
+            cancelLongPress();
+        }
     }, []);
 
     // Always prevent native context menu on tooltip triggers — the browser's
