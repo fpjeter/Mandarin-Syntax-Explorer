@@ -1283,7 +1283,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '那本书，放在桌子上了。',
         pinyin: 'Nà běn shū , fàng zài zhuō zi shàng le .',
         translation: 'That book — (it\'s been) put on the table.',
-        explanation: '**那本书** (that book) is the Topic. Inside the Comment, the actual subject — whoever placed the book — is never stated. But there\'s something more: the dropped **[它]** (it) clearly refers *back* to the book in the Topic. This is called **anaphoric pro-drop**: the Topic is not just setting a scene, it is literally acting as the hidden subject of the action that follows. The **red arc** in the tree draws a connecting line from the ghost node back to the Topic, making this invisible link visible. This is one of the most common patterns in Mandarin: name a topic, then silently use it as the subject.',
+        explanation: '**那本书** (that book) is the Topic. Inside the Comment, the actual subject — whoever placed the book — is never stated. But there\'s something more: the dropped **[它]** (it) clearly refers *back* to the book in the Topic. The Topic is not just setting the scene — it is literally acting as the hidden subject of the action that follows. The **red arc** in the tree draws a connecting line from the ghost node back to the Topic, making this invisible link visible. This is one of the most common patterns in Mandarin: name a topic, then silently use it as the subject.',
         tree: {
             id: 'n15',
             role: 'Sentence',
@@ -1432,7 +1432,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '说想学中文。',
         pinyin: 'Shuō xiǎng xué Zhōng wén .',
         translation: '(He) said (he) wants to learn Chinese.',
-        explanation: 'This sentence drops **two subjects**: the outer one (who said it) and the inner one (who wants to learn) — both are **[他]** (he), shown as ghost nodes in the tree. But here is the twist: these pronouns refer to someone in the **preceding sentence** (the grey card above), not anyone named in this sentence\'s own tree. This is called **discourse-level pro-drop**: the referent was established one sentence earlier, so Mandarin simply omits it here. It sounds incomplete in English, but it is completely natural in Mandarin when the context is clear.',
+        explanation: 'This sentence drops **two subjects**: the outer one (who said it) and the inner one (who wants to learn) — both are **[他]** (he), shown as ghost nodes in the tree. But here is the twist: these pronouns refer to someone in the **preceding sentence** (the grey card above), not anyone named in this sentence\'s own tree. The person was mentioned one sentence earlier, so Mandarin simply leaves them out here. It sounds incomplete in English, but it is completely natural in Mandarin when the context is clear.',
         discourseContext: {
             chinese: '张三昨天来找我了。',
             pinyin: 'Zhāng Sān zuó tiān lái zhǎo wǒ le .',
@@ -1915,7 +1915,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '我是在上海长大的。',
         pinyin: 'Wǒ shì zài Shàng hǎi zhǎng dà de.',
         translation: 'It was in Shanghai that I grew up.',
-        explanation: 'Compare this with s8: both use **是…的** to put a spotlight on one piece of information. In s8 the focus was *when and where* an event happened. Here the focus is *where* the speaker grew up. The verb **长大** (grow up) is not in doubt — the speaker definitely grew up somewhere — so 是 and 的 bracket the location **在上海** as the emphasized new information. Strip away 是 and 的 and you get a plain sentence; add them back and the sentence says "Shanghai is the answer you\'re looking for." This is one of the most useful frames for answering "where/when/how did you…?" questions in Mandarin.',
+        explanation: 'Compare this with s8: both use **是…的** to highlight one specific detail. In s8 the spotlight was on *when and where* something happened. Here it\'s on *where* the speaker grew up. The verb **长大** (grow up) is not in doubt — the speaker definitely grew up somewhere. **是** acts like "was" and **的** wraps the clause into "the one that [grew up in Shanghai]." Together they bracket the location **在上海** as the key piece of info. Strip away 是 and 的 and you get a plain sentence (我在上海长大); add them back and the sentence says "Shanghai is the answer you\'re looking for." This is one of the most useful frames for answering "where/when/how did you…?" questions in Mandarin.',
         tree: {
             id: 'n23',
             role: 'Sentence',
@@ -1932,9 +1932,9 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n23-shi',
-                            role: 'Particle',
-                            subRole: 'emphatic copula (是…的)',
-                            text: { hanzi: '是', pinyin: 'shì', translation: 'is (it was …)' }
+                            role: 'Copula',
+                            subRole: 'cleft opener — it was…',
+                            text: { hanzi: '是', pinyin: 'shì', translation: '(it was…)' }
                         },
                         {
                             id: 'n23-lp',
@@ -1967,8 +1967,8 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n23-de',
                             role: 'Particle',
-                            subRole: 'assertion marker (closes 是…的)',
-                            text: { hanzi: '的', pinyin: 'de', translation: '(assertion marker)' }
+                            subRole: 'nominalizer (creates "the one that [verb]ed")',
+                            text: { hanzi: '的', pinyin: 'de', translation: '(nominalizer)' }
                         }
                     ]
                 }
@@ -2156,7 +2156,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '大象，鼻子长，耳朵大。',
         pinyin: 'Dà xiàng, bí zi cháng, ěr duo dà.',
         translation: 'Elephants — their trunk is long and their ears are big.',
-        explanation: 'The classic **whole–part double topic** pattern. **大象** (elephant) is the outer Topic — it frames everything. Inside the Comment, the sentence doesn\'t give the elephant a verb straightaway. Instead it picks two parts of the elephant — **鼻子** (trunk) and **耳朵** (ears) — and uses each as an inner Topic, followed by a simple adjective Comment. This is the fundamental "A, B adj, C adj" pattern that learners encounter early but linguists call "double topic" or "nested topic-comment". No copula verb (是) is needed — Mandarin adjectives can directly serve as predicates.',
+        explanation: 'The classic **whole–part double topic** pattern. **大象** (elephant) is the outer Topic — it frames everything. Inside the Comment, the sentence doesn\'t give the elephant a verb straightaway. Instead it picks two parts of the elephant — **鼻子** (trunk) and **耳朵** (ears) — and uses each as an inner Topic, followed by a simple adjective Comment. This is a very common approach in Mandarin: name the big thing first, then describe its parts one by one. No verb like 是 (is) is needed — Mandarin adjectives can directly act as descriptions on their own.',
         tree: {
             id: 'n26',
             role: 'Sentence',
@@ -2565,7 +2565,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '她哭红了眼睛。',
         pinyin: 'Tā kū hóng le yǎn jing.',
         translation: 'She cried her eyes red.',
-        explanation: '**她** (she) is the Topic. This sentence uses a **causative resultative**: the verb **哭** (cry) stacks with the adjective **红** (red). The action of crying *caused* a state change — the eyes turned red. Crucially, the object **眼睛** (eyes) is what underwent the change, not (directly) what was cried. Compare with English: "She cried her eyes red" — both languages use the same elegantly compact pattern here. This kind of stacking is wonderfully productive: any action that causes a change of state can use this frame: 笑哭了 (laugh-cry), 吃撑了 (eat-stuffed), 写累了 (write-tired).',
+        explanation: '**她** (she) is the Topic. The verb **哭** (cry) stacks with the adjective **红** (red), meaning the crying *caused* a result: the eyes turned red. The object **眼睛** (eyes) is the thing that changed, not what was cried. Compare with the English phrasing: "She cried her eyes red" — both languages use the same compact pattern. This kind of verb + result stacking is found everywhere in Mandarin: 笑哭了 (laugh until you cry), 吃撑了 (eat until stuffed), 写累了 (write until tired) — any action that causes a change of state can use this frame.',
         tree: {
             id: 'n31',
             role: 'Sentence',
