@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback } from 'react';
-import { BookA, Info, Network, List } from 'lucide-react';
+import { BookA, Info, Network, List, PanelLeftClose, PanelLeftOpen } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 import { sampleSentences } from './data/sentences';
 import { SyntaxTree } from './components/SyntaxTree';
@@ -14,6 +14,7 @@ function App() {
   const [selectedId, setSelectedId] = useState<string>(sampleSentences[0].id);
   const [notesOpen, setNotesOpen] = useState(false);
   const [mobileView, setMobileView] = useState<'list' | 'tree' | 'guide'>('guide');
+  const [sidebarOpen, setSidebarOpen] = useState(true);
 
   const selectedSentence = useMemo(() => sentenceById.get(selectedId), [selectedId]);
 
@@ -91,12 +92,23 @@ function App() {
       <main className="flex-1 min-h-0 flex flex-col lg:flex-row p-4 sm:p-6 pb-8 gap-6 z-10 overflow-hidden">
 
         {/* Sidebar — hidden on mobile when tree or guide is active */}
-        <div className={`lg:w-96 flex flex-col gap-4 flex-shrink-0 h-full ${mobileView !== 'list' ? 'hidden lg:flex' : 'flex'}`}>
+        <div
+          className={`flex flex-col gap-4 flex-shrink-0 h-full transition-all duration-300 ease-in-out ${mobileView !== 'list' ? 'hidden lg:flex' : 'flex'} ${sidebarOpen ? 'lg:w-96' : 'lg:w-0 lg:overflow-hidden lg:opacity-0'}`}
+        >
           <SentenceSidebar
             selectedId={selectedId}
             onSelectSentence={handleSelectSentence}
           />
         </div>
+
+        {/* Sidebar toggle — desktop only */}
+        <button
+          onClick={() => setSidebarOpen(o => !o)}
+          className="hidden lg:flex items-center justify-center w-6 h-12 self-center -ml-4 rounded-r-xl bg-slate-800/80 border border-l-0 border-slate-700/60 text-slate-400 hover:text-slate-200 hover:bg-slate-700/80 transition-all duration-200 z-10 flex-shrink-0"
+          title={sidebarOpen ? 'Collapse sidebar' : 'Expand sidebar'}
+        >
+          {sidebarOpen ? <PanelLeftClose className="w-3.5 h-3.5" /> : <PanelLeftOpen className="w-3.5 h-3.5" />}
+        </button>
 
         {/* Visualization Pane — hidden on mobile when list or guide is active */}
         <div className={`flex-1 flex flex-col min-h-0 gap-2 ${mobileView !== 'tree' ? 'hidden lg:flex' : 'flex'}`}>

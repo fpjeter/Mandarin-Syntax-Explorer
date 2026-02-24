@@ -424,7 +424,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
                         title="Expand all nodes"
                     >
                         <Maximize2 className="w-3.5 h-3.5" />
-                        Expand All
+                        <span className="hidden xl:inline">Expand All</span>
                     </button>
                     <button
                         onClick={handleCollapseAll}
@@ -432,7 +432,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
                         title="Collapse to root"
                     >
                         <Minimize2 className="w-3.5 h-3.5" />
-                        Collapse All
+                        <span className="hidden xl:inline">Collapse All</span>
                     </button>
 
                     {/* Pro-drop toggle */}
@@ -450,7 +450,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
                             title={showGhost ? 'Hide implied (pro-dropped) subjects' : 'Show implied (pro-dropped) subjects'}
                         >
                             {showGhost ? <Eye className="w-3.5 h-3.5" /> : <EyeOff className="w-3.5 h-3.5" />}
-                            {showGhost ? 'Implied On' : 'Implied Off'}
+                            <span className="hidden xl:inline">{showGhost ? 'Implied On' : 'Implied Off'}</span>
                         </button>
                     )}
 
@@ -464,7 +464,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
                         title="Open Grammar Glossary"
                     >
                         <BookOpen className="w-3.5 h-3.5" />
-                        Glossary
+                        <span className="hidden xl:inline">Glossary</span>
                     </button>
                 </div>
             </div>
