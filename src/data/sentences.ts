@@ -1098,14 +1098,14 @@ export const sampleSentences: SentenceData[] = [
             ]
         }
     },
-    // ── Pro-drop examples ─────────────────────────────────────────────────
+    // ── Resultative / Serial verb examples with pro-drop ────────────────────────────────
     {
         id: 's13',
-        category: 'Pro-drop & Co-reference',
+        category: 'Resultative Complements',
         chinese: '吃饱了，想睡觉。',
         pinyin: 'Chī bǎo le , xiǎng shuì jiào .',
         translation: '(I\'m) full, (I) want to sleep.',
-        explanation: 'This sentence has **no stated subject at all**. In Mandarin, if it\'s obvious from context who is speaking — usually the speaker themselves — the subject can simply vanish. The tree shows a ghosted **[我]** node (use the **"Show/hide pro-drop"** toggle button to reveal or hide it) to indicate that grammatically there *is* a subject, it\'s just unsaid. The Comment then chains two events: ate-until-full → want-to-sleep. The word **饱** stacked after **吃** is a **result complement**: eating *resulted in* fullness. This silent-subject feature is called **pro-drop** and happens constantly in natural Mandarin speech.',
+        explanation: 'The key pattern here is the **resultative complement** **吃饱** — **吃** (eat) stacked with **饱** (full). Eating *resulted in* fullness: that\'s the result morpheme at work, just like 听懂 (listen-understand) or 找到 (look-find). The sentence then chains a second event: 想睡觉 (want to sleep). Notice there is **no stated subject** — the speaker is obvious from context, so Mandarin leaves it out. The tree shows a ghost **[我]** node that you can reveal or hide with the toggle. This silent-subject pattern happens constantly in natural speech.',
         tree: {
             id: 'n13',
             role: 'Sentence',
@@ -1187,11 +1187,11 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's14',
-        category: 'Pro-drop & Co-reference',
+        category: 'Serial Verb Constructions (连动句)',
         chinese: '到了，找到了，吃完再走。',
         pinyin: 'Dào le , zhǎo dào le , chī wán zài zǒu .',
         translation: '(We\'ve) arrived, (we) found it, (we\'ll) leave after eating.',
-        explanation: 'Three complete events — and **no subject stated in any of them**. The shared subject **[我们]** (we) is dropped silently across all three clauses; the listener infers it from the surrounding conversation. This shows why pro-drop is so natural in Mandarin narrative: once everyone knows who is acting, there\'s no need to even say the pronoun. Each clause is a step in sequence: arrived → found it → will leave after eating. The phrase **吃完再走** (eat-finish-then-leave) is a classic Mandarin sequence: finish one action before doing the next.',
+        explanation: 'Three complete events chained in sequence — the hallmark of a **serial verb construction**. VP1: 到了 (arrived). VP2: 找到了 (found it — with the resultative 到 meaning "reached the target"). VP3: 吃完再走 (eat-finish-then-leave — a classic "finish X before Y" sequence). All three VPs share the same unnamed subject **[我们]** (we); the listener infers it from the surrounding conversation. This is why serial verbs feel so natural in Mandarin: once the actor is clear, you just stack events one after another, no conjunctions needed.',
         tree: {
             id: 'n14',
             role: 'Sentence',
@@ -1276,10 +1276,9 @@ export const sampleSentences: SentenceData[] = [
             ]
         }
     },
-    // ── Anaphoric pro-drop: Subject inside Comment co-refers with Topic ──────
     {
         id: 's15',
-        category: 'Pro-drop & Co-reference',
+        category: 'Basic Topic–Comment',
         chinese: '那本书，放在桌子上了。',
         pinyin: 'Nà běn shū , fàng zài zhuō zi shàng le .',
         translation: 'That book — (it\'s been) put on the table.',
@@ -1361,7 +1360,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's16',
-        category: 'Pro-drop & Co-reference',
+        category: 'Basic Topic–Comment',
         chinese: '张三，爱唱歌。',
         pinyin: 'Zhāng Sān , ài chàng gē .',
         translation: 'Zhang San — (he) loves singing.',
@@ -1425,10 +1424,10 @@ export const sampleSentences: SentenceData[] = [
             ]
         }
     },
-    // ── Discourse pairs: pro-drop where referent is established by preceding sentence ──
+    // ── Discourse Context: pro-drop where referent is in the preceding sentence ──
     {
         id: 's17',
-        category: 'Pro-drop & Co-reference',
+        category: 'Discourse Context (跨句语境)',
         chinese: '说想学中文。',
         pinyin: 'Shuō xiǎng xué Zhōng wén .',
         translation: '(He) said (he) wants to learn Chinese.',
@@ -1513,7 +1512,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's18',
-        category: 'Pro-drop & Co-reference',
+        category: 'Discourse Context (跨句语境)',
         chinese: '非常有意思。',
         pinyin: 'Fēi cháng yǒu yì si .',
         translation: '(It\'s) really interesting.',

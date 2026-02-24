@@ -22,7 +22,7 @@ export const SENTENCE_CATEGORIES = [
     'Conditional Sentences (如果…就…)',
     'Rhetorical Questions',
     '连…都/也 ("even X")',
-    'Pro-drop & Co-reference',
+    'Discourse Context (跨句语境)',
 ] as const;
 
 export type SentenceCategory = (typeof SENTENCE_CATEGORIES)[number];
@@ -49,5 +49,5 @@ export const CATEGORY_DESCRIPTIONS: Record<SentenceCategory, string> = {
     'Conditional Sentences (如果…就…)': 'Use if…then patterns (如果…就…, 只要…就…) for conditional reasoning.',
     'Rhetorical Questions': 'Use 难道 or 非…不可 to express disbelief or strong necessity.',
     '连…都/也 ("even X")': 'Use 连…都 or 连…也 to express "even X…" for emphasis or surprise.',
-    'Pro-drop & Co-reference': 'Omit obvious subjects — Mandarin lets context do the work.',
+    'Discourse Context (跨句语境)': 'When context from a previous sentence lets Mandarin drop subjects entirely.',
 };
