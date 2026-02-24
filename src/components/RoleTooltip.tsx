@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import type { GrammarRole } from '../types/grammar';
 import { glossary } from '../data/glossary';
@@ -113,6 +113,8 @@ interface HoverTooltipProps {
 export const HoverTooltip: React.FC<HoverTooltipProps> = ({ headline, detail, as: Tag = 'div', className, children }) => {
     const triggerRef = useRef<HTMLElement>(null);
     const [pos, setPos] = useState<{ x: number; y: number } | null>(null);
+    const longPressTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+    const longPressFired = useRef(false);
 
     useEffect(() => {
         const el = triggerRef.current;
@@ -131,12 +133,64 @@ export const HoverTooltip: React.FC<HoverTooltipProps> = ({ headline, detail, as
         return registerTooltip(registration);
     }, [headline, detail]);
 
+    // ── Long-press for mobile ────────────────────────────────────────────────
+    const cancelLongPress = () => {
+        if (longPressTimer.current) {
+            clearTimeout(longPressTimer.current);
+            longPressTimer.current = null;
+        }
+    };
+
+    const handleTouchStart = (_e: React.TouchEvent) => {
+        longPressFired.current = false;
+        cancelLongPress();
+        longPressTimer.current = setTimeout(() => {
+            const el = triggerRef.current;
+            if (!el) return;
+            const rect = el.getBoundingClientRect();
+            setPos({ x: rect.left + rect.width / 2, y: rect.top });
+            longPressFired.current = true;
+
+            // Dismiss on next touch anywhere
+            const dismiss = () => {
+                setPos(null);
+                document.removeEventListener('touchstart', dismiss);
+            };
+            // Use setTimeout to avoid catching the current touch event
+            setTimeout(() => document.addEventListener('touchstart', dismiss, { once: true }), 0);
+        }, 500);
+    };
+
+    const handleTouchEnd = useCallback((e: React.TouchEvent) => {
+        cancelLongPress();
+        // If long-press fired, prevent the tap from also triggering expand/collapse
+        if (longPressFired.current) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+    }, []);
+
+    const handleTouchMove = useCallback(() => {
+        cancelLongPress();
+    }, []);
+
+    const handleContextMenu = (e: React.MouseEvent) => {
+        // Prevent native context menu on long-press
+        if (longPressFired.current) {
+            e.preventDefault();
+        }
+    };
+
     return (
         <>
             <Tag
                 ref={triggerRef as React.RefObject<HTMLDivElement & HTMLSpanElement>}
                 className={className ?? 'cursor-help'}
                 style={{ pointerEvents: 'all' }}
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
+                onTouchMove={handleTouchMove}
+                onContextMenu={handleContextMenu}
             >
                 {children}
             </Tag>

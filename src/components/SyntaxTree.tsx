@@ -322,14 +322,22 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
     const [corefHoveredId, setCorefHoveredId] = useState<string | null>(null);
 
     // Patch nodes: set corefGlow=true on both the hovered node and its co-ref partner
+    // Also mark nodes that are part of a co-ref pair so GrammarNode can enable long-press
     const nodes = useMemo(() => {
-        if (!corefHoveredId) return rawNodes;
-        const partnerId = corefPairs.get(corefHoveredId);
-        const glowIds = new Set([corefHoveredId, partnerId].filter(Boolean) as string[]);
-        return rawNodes.map(n => glowIds.has(n.id)
-            ? { ...n, data: { ...n.data, corefGlow: true } }
-            : n
-        );
+        return rawNodes.map(n => {
+            const inPair = corefPairs.has(n.id);
+            const partnerId = corefPairs.get(n.id);
+            const isGlowing = !!corefHoveredId && (corefHoveredId === n.id || corefHoveredId === partnerId);
+            if (!inPair && !isGlowing) return n;
+            return {
+                ...n,
+                data: {
+                    ...n.data,
+                    ...(inPair && { isCorefNode: true }),
+                    ...(isGlowing && { corefGlow: true }),
+                },
+            };
+        });
     }, [rawNodes, corefHoveredId, corefPairs]);
 
     const onNodeClick: NodeMouseHandler = useCallback((_event, node) => {
@@ -354,6 +362,24 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
     const onNodeMouseLeave: NodeMouseHandler = useCallback(() => {
         setCorefHoveredId(null);
     }, []);
+
+    // Listen for long-press co-ref events from GrammarNode (mobile)
+    useEffect(() => {
+        const handler = (e: Event) => {
+            const nodeId = (e as CustomEvent).detail?.nodeId;
+            if (nodeId && corefPairs.has(nodeId)) {
+                setCorefHoveredId(nodeId);
+                // Auto-dismiss on next touch
+                const dismiss = () => {
+                    setCorefHoveredId(null);
+                    document.removeEventListener('touchstart', dismiss);
+                };
+                setTimeout(() => document.addEventListener('touchstart', dismiss, { once: true }), 0);
+            }
+        };
+        document.addEventListener('coref-longpress', handler);
+        return () => document.removeEventListener('coref-longpress', handler);
+    }, [corefPairs]);
 
 
     const handleExpandAll = useCallback(() => {

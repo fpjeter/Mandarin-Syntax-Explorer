@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useCallback } from 'react';
 import { Handle, Position, type NodeProps, type Node } from '@xyflow/react';
 import { PlusCircle, MinusCircle } from 'lucide-react';
 import type { GrammarRole, MandarinWord } from '../types/grammar';
@@ -18,11 +18,30 @@ export type GrammarNodeViewData = {
     isExpanded?: boolean;
     /** Set to true when this node's co-ref partner is being hovered */
     corefGlow?: boolean;
+    /** Whether this node is part of a co-ref pair (for long-press on mobile) */
+    isCorefNode?: boolean;
 };
 
 export type GrammarNodeType = Node<GrammarNodeViewData, 'grammarNode'>;
 
-const GrammarNodeInner = ({ data, isConnectable }: NodeProps<GrammarNodeType>) => {
+const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType>) => {
+    const longPressTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+    const handleCorefTouchStart = useCallback(() => {
+        if (!data.isCorefNode) return;
+        longPressTimer.current = setTimeout(() => {
+            // Dispatch custom event for SyntaxTree to catch
+            document.dispatchEvent(new CustomEvent('coref-longpress', { detail: { nodeId: id } }));
+        }, 500);
+    }, [id, data.isCorefNode]);
+
+    const handleCorefTouchEnd = useCallback(() => {
+        if (longPressTimer.current) {
+            clearTimeout(longPressTimer.current);
+            longPressTimer.current = null;
+        }
+    }, []);
+
     const getRoleColorClass = (role: GrammarRole) => {
         switch (role) {
             case 'Sentence': return 'bg-slate-800/80 text-slate-100 border-purple-400/60 shadow-[0_0_28px_rgba(139,92,246,0.45),inset_0_1px_0_rgba(255,255,255,0.08)]';
@@ -68,6 +87,9 @@ const GrammarNodeInner = ({ data, isConnectable }: NodeProps<GrammarNodeType>) =
                     }
                 ${data.corefGlow ? '!border-rose-400 !shadow-[0_0_24px_rgba(244,63,94,0.5)] !opacity-100 ring-2 ring-rose-400/60' : ''}
             `}
+                onTouchStart={handleCorefTouchStart}
+                onTouchEnd={handleCorefTouchEnd}
+                onTouchMove={handleCorefTouchEnd}
             >
                 {!data.isRoot && (
                     <Handle
