@@ -105,7 +105,8 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n2-p-vp2-lp',
-                                    role: 'Location Phrase',
+                                    role: 'Adjunct',
+                                    subRole: 'location',
                                     children: [
                                         {
                                             id: 'n2-p-vp2-lp-prep',
@@ -203,7 +204,7 @@ export const sampleSentences: SentenceData[] = [
                                 {
                                     id: 'n3-p-vp-comp',
                                     role: 'Complement',
-                                    subRole: 'location',
+                                    subRole: 'result location',
                                     children: [
                                         {
                                             id: 'n3-p-vp-comp-prep',
@@ -348,7 +349,7 @@ export const sampleSentences: SentenceData[] = [
                                 {
                                     id: 'n4-p-vp-comp',
                                     role: 'Complement',
-                                    subRole: 'directional / location',
+                                    subRole: 'directional · result location',
                                     text: { hanzi: '到地上', pinyin: 'dào dì shàng', translation: 'to the floor' }
                                 },
                                 {
@@ -684,14 +685,14 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n8-p-vp-tp',
-                                    role: 'Time Phrase',
-                                    subRole: 'focused element (when)',
+                                    role: 'Adjunct',
+                                    subRole: 'time · focused element (when)',
                                     text: { hanzi: '昨天晚上', pinyin: 'zuó tiān wǎn shang', translation: 'last night' }
                                 },
                                 {
                                     id: 'n8-p-vp-lp',
-                                    role: 'Location Phrase',
-                                    subRole: 'focused element (where)',
+                                    role: 'Adjunct',
+                                    subRole: 'location · focused element (where)',
                                     children: [
                                         {
                                             id: 'n8-p-vp-lp-prep',
@@ -816,7 +817,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n9-p-comp',
                             role: 'Complement',
-                            subRole: 'degree extent',
+                            subRole: 'degree',
                             text: { hanzi: '多', pinyin: 'duō', translation: 'much/many' }
                         }
                     ]
@@ -1064,7 +1065,7 @@ export const sampleSentences: SentenceData[] = [
                                 {
                                     id: 'n12-p-verb-freq',
                                     role: 'Complement',
-                                    subRole: 'frequency complement (inserted into split verb)',
+                                    subRole: 'frequency (inserted into split verb)',
                                     children: [
                                         {
                                             id: 'n12-p-verb-freq-adv',
@@ -1325,7 +1326,8 @@ export const sampleSentences: SentenceData[] = [
                                 },
                                 {
                                     id: 'n15-vp-lp',
-                                    role: 'Location Phrase',
+                                    role: 'Complement',
+                                    subRole: 'result location',
                                     children: [
                                         {
                                             id: 'n15-vp-lp-prep',
@@ -1937,8 +1939,8 @@ export const sampleSentences: SentenceData[] = [
                         },
                         {
                             id: 'n23-lp',
-                            role: 'Location Phrase',
-                            subRole: 'focused element (where)',
+                            role: 'Adjunct',
+                            subRole: 'location · focused element (where)',
                             children: [
                                 {
                                     id: 'n23-lp-prep',
@@ -1997,7 +1999,8 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n24-tp',
-                            role: 'Time Phrase',
+                            role: 'Adjunct',
+                            subRole: 'time',
                             text: { hanzi: '早上', pinyin: 'zǎo shàng', translation: 'in the morning' }
                         },
                         {
@@ -2020,7 +2023,7 @@ export const sampleSentences: SentenceData[] = [
                                 {
                                     id: 'n24-vp-dur',
                                     role: 'Complement',
-                                    subRole: 'duration complement (inserted into split verb)',
+                                    subRole: 'duration (inserted into split verb)',
                                     children: [
                                         {
                                             id: 'n24-vp-dur-num',
@@ -2440,8 +2443,8 @@ export const sampleSentences: SentenceData[] = [
                                 },
                                 {
                                     id: 'n29-vp-lp',
-                                    role: 'Location Phrase',
-                                    subRole: 'result / final location',
+                                    role: 'Complement',
+                                    subRole: 'result location',
                                     children: [
                                         {
                                             id: 'n29-vp-lp-prep',
@@ -2882,7 +2885,8 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n35-cl2-tp',
-                                    role: 'Time Phrase',
+                                    role: 'Adjunct',
+                                    subRole: 'time',
                                     text: { hanzi: '一个小时', pinyin: 'yī gè xiǎo shí', translation: 'one hour' },
                                 },
                                 {
@@ -3375,7 +3379,7 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n43-lp',
-                            role: 'Location Phrase',
+                            role: 'Adjunct',
                             subRole: 'source location',
                             children: [
                                 {
@@ -3535,7 +3539,8 @@ export const sampleSentences: SentenceData[] = [
             children: [
                 {
                     id: 'n45-tp',
-                    role: 'Time Phrase',
+                    role: 'Adjunct',
+                    subRole: 'time',
                     text: { hanzi: '昨晚', pinyin: 'zuó wǎn', translation: 'last night' },
                 },
                 {
@@ -3566,7 +3571,7 @@ export const sampleSentences: SentenceData[] = [
                                 {
                                     id: 'n45-comp',
                                     role: 'Complement',
-                                    subRole: 'resultative — catch/settle into state',
+                                    subRole: 'resultative · potential (catch/settle into state)',
                                     text: { hanzi: '着', pinyin: 'zháo', translation: 'catch / latch onto (state of sleep)' },
                                 },
                             ],
@@ -3903,8 +3908,8 @@ export const sampleSentences: SentenceData[] = [
                         },
                         {
                             id: 'n50-focus',
-                            role: 'Time Phrase',
-                            subRole: 'focused element (when)',
+                            role: 'Adjunct',
+                            subRole: 'time · focused element (when)',
                             text: { hanzi: '昨天', pinyin: 'zuó tiān', translation: 'yesterday' },
                         },
                         {
@@ -3965,8 +3970,8 @@ export const sampleSentences: SentenceData[] = [
                         },
                         {
                             id: 'n51-focus',
-                            role: 'Location Phrase',
-                            subRole: 'focused element (where)',
+                            role: 'Adjunct',
+                            subRole: 'location · focused element (where)',
                             children: [
                                 {
                                     id: 'n51-focus-prep',
@@ -4734,7 +4739,8 @@ export const sampleSentences: SentenceData[] = [
                         },
                         {
                             id: 'n64-tp',
-                            role: 'Time Phrase',
+                            role: 'Adjunct',
+                            subRole: 'time',
                             text: { hanzi: '明天', pinyin: 'míng tiān', translation: 'tomorrow' },
                         },
                         {

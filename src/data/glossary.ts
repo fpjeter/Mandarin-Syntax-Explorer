@@ -39,16 +39,6 @@ export const glossary: Record<GrammarRole, { headline: string; detail: string }>
         detail:
             'A group of words built around a noun. For example, 那只大象 ("that elephant") is a noun phrase: 那只 describes 大象.',
     },
-    'Location Phrase': {
-        headline: 'A place expression',
-        detail:
-            'Words that say where something is or happens, like 在图书馆 ("at the library").',
-    },
-    'Time Phrase': {
-        headline: 'A time expression',
-        detail:
-            'Words that say when something happens, like 昨天晚上 ("last night").',
-    },
     Verb: {
         headline: 'The action or state word',
         detail:

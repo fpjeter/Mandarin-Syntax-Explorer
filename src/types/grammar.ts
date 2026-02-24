@@ -9,8 +9,6 @@ export type GrammarRole =
     | 'Predicate'
     | 'Verb Phrase'
     | 'Noun Phrase'
-    | 'Location Phrase'
-    | 'Time Phrase'
     | 'Verb'
     | 'Object'
     | 'Adjunct'
