@@ -655,7 +655,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '我是昨天晚上在图书馆看到她的。',
         pinyin: 'Wǒ shì zuó tiān wǎn shang zài tú shū guǎn kàn dào tā de.',
         translation: 'It was last night in the library that I saw her.',
-        explanation: '**我** (I) is the Topic. The Comment uses a framing device: **是...的** acts like a pair of emphasis bookends. The **是** near the start and the **的** at the very end together say: *"it was [this specific circumstance] that..."* Everything between them is the detail being emphasized. Here the speaker wants to stress *when* and *where* — last night, in the library. Without 是...的, the sentence would just state a fact. With it, the sentence corrects or emphasizes the circumstances of an event already known.',
+        explanation: '**我** (I) is the **Topic** — a left-dislocated element that sets the frame: *as for me…* Mandarin is a topic-prominent language, so 我 here is not the subject of a copula clause the way English "I" would be. The **Comment** is the 是…的 cleft frame. This is a **pseudo-cleft** (分裂句 fēn liè jù): **是** opens the focus bracket and **的** closes it, together meaning *"it was [these circumstances] that…"* The focused constituents are **昨天晚上** (last night) and **在图书馆** (in the library) — both the *when* and the *where* are highlighted at once. Inside the cleft, the subject of **看到** (see) is pro-dropped — recoverable from the topic 我. Full logical reading: *As for me, it was last night in the library that (I) saw her.* Without 是…的, 我昨天晚上在图书馆看到她 would be a neutral statement; the cleft frame signals that the speaker is correcting or stressing the circumstances of an already-known event.',
         tree: {
             id: 'n8',
             role: 'Sentence',
@@ -663,37 +663,40 @@ export const sampleSentences: SentenceData[] = [
                 {
                     id: 'n8-t',
                     role: 'Topic',
-                    text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' }
+                    subRole: 'left-dislocation (as for me)',
+                    text: { hanzi: '我', pinyin: 'wǒ', translation: 'I / as for me' }
                 },
                 {
                     id: 'n8-c',
                     role: 'Comment',
-                    subRole: 'emphatic shì...de',
+                    subRole: 'pseudo-cleft frame (是…的)',
                     children: [
                         {
                             id: 'n8-p-shi',
                             role: 'Particle',
-                            subRole: 'emphatic copula',
-                            text: { hanzi: '是', pinyin: 'shì', translation: 'is (it was)' }
+                            subRole: 'cleft opener — it was…',
+                            text: { hanzi: '是', pinyin: 'shì', translation: '(it was…)' }
                         },
                         {
                             id: 'n8-p-vp',
                             role: 'Verb Phrase',
-                            subRole: 'emphasized content',
+                            subRole: 'focused constituents + embedded predicate',
                             children: [
                                 {
                                     id: 'n8-p-vp-tp',
                                     role: 'Time Phrase',
+                                    subRole: 'focused element (when)',
                                     text: { hanzi: '昨天晚上', pinyin: 'zuó tiān wǎn shang', translation: 'last night' }
                                 },
                                 {
                                     id: 'n8-p-vp-lp',
                                     role: 'Location Phrase',
+                                    subRole: 'focused element (where)',
                                     children: [
                                         {
                                             id: 'n8-p-vp-lp-prep',
                                             role: 'Preposition',
-                                            text: { hanzi: '在', pinyin: 'zài', translation: 'in/at' }
+                                            text: { hanzi: '在', pinyin: 'zài', translation: 'in / at' }
                                         },
                                         {
                                             id: 'n8-p-vp-lp-n',
@@ -705,17 +708,18 @@ export const sampleSentences: SentenceData[] = [
                                 {
                                     id: 'n8-p-vp-verb',
                                     role: 'Verb Phrase',
+                                    subRole: 'embedded predicate (null subject = 我)',
                                     children: [
                                         {
                                             id: 'n8-p-vp-verb-hv',
                                             role: 'Head Verb',
-                                            text: { hanzi: '看', pinyin: 'kàn', translation: 'look' }
+                                            text: { hanzi: '看', pinyin: 'kàn', translation: 'look / see' }
                                         },
                                         {
                                             id: 'n8-p-vp-verb-comp',
                                             role: 'Complement',
-                                            subRole: 'resultative',
-                                            text: { hanzi: '到', pinyin: 'dào', translation: '(arrive at) saw' }
+                                            subRole: 'resultative (arrive at → succeed in seeing)',
+                                            text: { hanzi: '到', pinyin: 'dào', translation: '(resultative: managed to see)' }
                                         }
                                     ]
                                 },
@@ -729,8 +733,8 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n8-p-de',
                             role: 'Particle',
-                            subRole: 'emphatic closure',
-                            text: { hanzi: '的', pinyin: 'de', translation: '(assertion marker)' }
+                            subRole: 'cleft closer — …that [verb]',
+                            text: { hanzi: '的', pinyin: 'de', translation: '(cleft closure)' }
                         }
                     ]
                 }
@@ -3876,7 +3880,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '我是昨天到的。',
         pinyin: 'Wǒ shì zuó tiān dào de.',
         translation: 'It was yesterday that I arrived.',
-        explanation: '**我** (I) is the Topic. The **是…的** frame wraps around the focused element: **昨天** (yesterday). The structure says: *I arrived, and the part I want to highlight is WHEN — yesterday*. Without 是…的, you\'d say 我昨天到了 (neutral statement). With 是…的, the time is emphasized — this is the answer to "When did you arrive?" Notice that **的** comes after the verb **到** (arrive), at the very end. This is the simplest 是…的 template: 是 + [focused info] + verb + 的.',
+        explanation: '**我** (I) is the **Topic** — a left-dislocated element setting the frame: *as for me…* Mandarin is topic-prominent; 我 is not the subject of a copula but the aboutness anchor of the whole sentence. The **Comment** is a **pseudo-cleft** (是…的 cleft frame): **是** opens the bracket and **的** closes it, together meaning *"it was [X] that…"* The focused constituent is **昨天** (yesterday) — the *when* is being highlighted as new or corrective information, answering a question like "When did you arrive?" Inside the cleft, the subject of **到** (arrive) is pro-dropped, recoverable from the topic. Full logical reading: *As for me, it was yesterday that (I) arrived.* Without 是…的, 我昨天到了 would be a neutral past-tense statement. The cleft is the minimal, elegant form: 是 + [focused element] + verb + 的.',
         tree: {
             id: 'n50',
             role: 'Sentence',
@@ -3884,35 +3888,37 @@ export const sampleSentences: SentenceData[] = [
                 {
                     id: 'n50-t',
                     role: 'Topic',
-                    text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' },
+                    subRole: 'left-dislocation (as for me)',
+                    text: { hanzi: '我', pinyin: 'wǒ', translation: 'I / as for me' },
                 },
                 {
                     id: 'n50-c',
                     role: 'Comment',
-                    subRole: 'shì–de focus frame',
+                    subRole: 'pseudo-cleft frame (是…的)',
                     children: [
                         {
                             id: 'n50-shi',
                             role: 'Particle',
-                            subRole: 'focus opener (是)',
-                            text: { hanzi: '是', pinyin: 'shì', translation: '(emphasis: it was…)' },
+                            subRole: 'cleft opener — it was…',
+                            text: { hanzi: '是', pinyin: 'shì', translation: '(it was…)' },
                         },
                         {
                             id: 'n50-focus',
                             role: 'Time Phrase',
-                            subRole: 'focused element',
+                            subRole: 'focused element (when)',
                             text: { hanzi: '昨天', pinyin: 'zuó tiān', translation: 'yesterday' },
                         },
                         {
                             id: 'n50-hv',
                             role: 'Head Verb',
+                            subRole: 'embedded predicate (null subject = 我)',
                             text: { hanzi: '到', pinyin: 'dào', translation: 'arrive' },
                         },
                         {
                             id: 'n50-de',
                             role: 'Particle',
-                            subRole: 'focus closer (的)',
-                            text: { hanzi: '的', pinyin: 'de', translation: '(focus closure)' },
+                            subRole: 'cleft closer — …that [verb]',
+                            text: { hanzi: '的', pinyin: 'de', translation: '(cleft closure)' },
                         },
                     ],
                 },
@@ -3925,7 +3931,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '这件衣服是在北京买的。',
         pinyin: 'Zhè jiàn yī fu shì zài Běi jīng mǎi de.',
         translation: 'This item of clothing was bought in Beijing.',
-        explanation: '**这件衣服** (this item of clothing — 件 is the measure word for garments) is the Topic. The 是…的 frame now focuses on **在北京** (in Beijing) — the *location* of the past action. The pattern is: 是 + [place] + verb + 的. This answers "Where was it bought?" The verb **买** (buy) sits right before **的**. Combining 是…的 with a place phrase is extremely common when emphasizing origin or provenance: 这个菜是在哪儿做的？(Where was this dish made?). The focused element can be a time (s50), place (here), manner, or person.',
+        explanation: '**这件衣服** (this item of clothing — 件 is the measure word for garments) is the **Topic** — the aboutness anchor of the sentence. Unlike the first-person topics in s8 and s50, here the topic is a *thing*, not a person. The **Comment** is again a **pseudo-cleft**: **是** opens the focus bracket and **的** closes it. The focused constituent is **在北京** (in Beijing) — the *where* is the new information, answering "Where was it bought?" Inside the cleft, the subject of **买** (buy) is fully pro-dropped — the buyer is contextually understood, not stated. Full logical reading: *As for this item of clothing, it was in Beijing that (someone) bought it.* This shows how 是…的 works equally well with non-person topics and with location focus — the construction is productive across time (s50), place (here), manner, and agent. Compare: 这件衣服是谁买的？(It was *who* that bought this?) — just swapping the focused slot.',
         tree: {
             id: 'n51',
             role: 'Sentence',
@@ -3933,6 +3939,7 @@ export const sampleSentences: SentenceData[] = [
                 {
                     id: 'n51-t',
                     role: 'Topic',
+                    subRole: 'left-dislocation (as for this clothing)',
                     children: [
                         {
                             id: 'n51-t-attr',
@@ -3949,18 +3956,18 @@ export const sampleSentences: SentenceData[] = [
                 {
                     id: 'n51-c',
                     role: 'Comment',
-                    subRole: 'shì–de focus frame',
+                    subRole: 'pseudo-cleft frame (是…的)',
                     children: [
                         {
                             id: 'n51-shi',
                             role: 'Particle',
-                            subRole: 'focus opener (是)',
-                            text: { hanzi: '是', pinyin: 'shì', translation: '(emphasis: it was…)' },
+                            subRole: 'cleft opener — it was…',
+                            text: { hanzi: '是', pinyin: 'shì', translation: '(it was…)' },
                         },
                         {
                             id: 'n51-focus',
                             role: 'Location Phrase',
-                            subRole: 'focused element',
+                            subRole: 'focused element (where)',
                             children: [
                                 {
                                     id: 'n51-focus-prep',
@@ -3977,13 +3984,14 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n51-hv',
                             role: 'Head Verb',
+                            subRole: 'embedded predicate (null subject = contextual)',
                             text: { hanzi: '买', pinyin: 'mǎi', translation: 'buy' },
                         },
                         {
                             id: 'n51-de',
                             role: 'Particle',
-                            subRole: 'focus closer (的)',
-                            text: { hanzi: '的', pinyin: 'de', translation: '(focus closure)' },
+                            subRole: 'cleft closer — …that [verb]',
+                            text: { hanzi: '的', pinyin: 'de', translation: '(cleft closure)' },
                         },
                     ],
                 },
