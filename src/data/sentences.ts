@@ -3,7 +3,7 @@ import type { SentenceData } from '../types/grammar';
 export const sampleSentences: SentenceData[] = [
     {
         id: 's1',
-        category: 'Basic Topic–Comment',
+        category: 'Basic Topic–Comment (主题评论)',
         chinese: '他打碎了那个花瓶。',
         pinyin: 'Tā dǎ suì le nà ge huā píng.',
         translation: 'He broke that vase.',
@@ -67,7 +67,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's2',
-        category: 'Basic Topic–Comment',
+        category: 'Basic Topic–Comment (主题评论)',
         chinese: '我喜欢在图书馆看书。',
         pinyin: 'Wǒ xǐ huān zài tú shū guǎn kàn shū.',
         translation: 'I like reading books in the library.',
@@ -366,7 +366,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's5',
-        category: 'Basic Topic–Comment',
+        category: 'Basic Topic–Comment (主题评论)',
         chinese: '他决定开始学开车。',
         pinyin: 'Tā jué dìng kāi shǐ xué kāi chē.',
         translation: 'He decided to start learning to drive a car.',
@@ -542,7 +542,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's7',
-        category: 'Basic Topic–Comment',
+        category: 'Basic Topic–Comment (主题评论)',
         chinese: '我看了半天，还是看不了，就不看了。',
         pinyin: 'Wǒ kàn le bàn tiān, hái shì kàn bù liǎo, jiù bù kàn le.',
         translation: 'I looked at it for a long time, still couldn\'t finish, so I gave up looking.',
@@ -1278,7 +1278,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's15',
-        category: 'Basic Topic–Comment',
+        category: 'Basic Topic–Comment (主题评论)',
         chinese: '那本书，放在桌子上了。',
         pinyin: 'Nà běn shū , fàng zài zhuō zi shàng le .',
         translation: 'That book — (it\'s been) put on the table.',
@@ -1360,7 +1360,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's16',
-        category: 'Basic Topic–Comment',
+        category: 'Basic Topic–Comment (主题评论)',
         chinese: '张三，爱唱歌。',
         pinyin: 'Zhāng Sān , ài chàng gē .',
         translation: 'Zhang San — (he) loves singing.',
@@ -1571,7 +1571,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Duration complement ────────────────────────────────────────────────
     {
         id: 's19',
-        category: 'Basic Topic–Comment',
+        category: 'Basic Topic–Comment (主题评论)',
         chinese: '他学中文学了五年了。',
         pinyin: 'Tā xué Zhōng wén xué le wǔ nián le.',
         translation: 'He has been studying Chinese for five years now.',
