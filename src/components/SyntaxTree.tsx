@@ -347,7 +347,7 @@ const NodeInfoBar: React.FC<{
 }> = ({ info, onClose }) => {
     if (!info) return null;
     return (
-        <div className="absolute bottom-12 left-2 right-14 z-30 pointer-events-auto animate-in fade-in slide-in-from-bottom-2 duration-200">
+        <div className="absolute bottom-14 left-1/2 -translate-x-1/2 w-[calc(100%-1rem)] max-w-[360px] z-30 pointer-events-auto animate-in fade-in slide-in-from-bottom-2 duration-200">
             <div className="glass-panel rounded-xl border border-slate-600/60 px-3 py-2.5 shadow-2xl flex items-start gap-2">
                 <div className="flex-1 min-w-0">
                     <p className="text-[10px] font-bold uppercase tracking-widest text-purple-300 mb-0.5">{info.role}</p>
