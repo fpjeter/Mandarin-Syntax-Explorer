@@ -88,7 +88,7 @@ function App() {
       </div>
 
       {/* Main Layout */}
-      <main className="flex-1 min-h-0 flex flex-col lg:flex-row p-4 sm:p-6 pb-safe gap-6 z-10 overflow-hidden">
+      <main className="flex-1 min-h-0 flex flex-col lg:flex-row p-4 sm:p-6 pb-8 gap-6 z-10 overflow-hidden">
 
         {/* Sidebar — hidden on mobile when tree or guide is active */}
         <div className={`lg:w-96 flex flex-col gap-4 flex-shrink-0 h-full ${mobileView !== 'list' ? 'hidden lg:flex' : 'flex'}`}>
