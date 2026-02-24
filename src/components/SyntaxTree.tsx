@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect, useCallback } from 'react';
+import React, { useMemo, useState, useEffect, useCallback, useRef } from 'react';
 import { ReactFlow, Background, Position, useReactFlow, type Edge, type Node, type NodeMouseHandler } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { Eye, EyeOff, Maximize2, Minimize2, BookOpen, ZoomIn, ZoomOut, Scan } from 'lucide-react';
@@ -7,6 +7,8 @@ import type { GrammarNodeData as AppGrammarNodeData, GrammarRole } from '../type
 import { GrammarNode } from './GrammarNode';
 import { BadgeLegend } from './BadgeLegend';
 import { GlossaryPanel } from './GlossaryPanel';
+import { glossary } from '../data/glossary';
+import { X } from 'lucide-react';
 
 const nodeTypes = {
     grammarNode: GrammarNode,
@@ -335,6 +337,34 @@ const PinchHint: React.FC = () => {
     );
 };
 
+/** true only on devices with a real hover capability (mouse / trackpad) */
+const canHover = typeof window !== 'undefined' && window.matchMedia('(hover: hover)').matches;
+
+/** Info bar shown on mobile when a node is tapped */
+const NodeInfoBar: React.FC<{
+    info: { role: string; headline: string; detail: string } | null;
+    onClose: () => void;
+}> = ({ info, onClose }) => {
+    if (!info) return null;
+    return (
+        <div className="absolute bottom-12 left-2 right-14 z-30 pointer-events-auto animate-in fade-in slide-in-from-bottom-2 duration-200">
+            <div className="glass-panel rounded-xl border border-slate-600/60 px-3 py-2.5 shadow-2xl flex items-start gap-2">
+                <div className="flex-1 min-w-0">
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-purple-300 mb-0.5">{info.role}</p>
+                    <p className="text-[11px] font-semibold text-slate-100 leading-tight">{info.headline}</p>
+                    <p className="text-[10px] text-slate-400 leading-snug mt-0.5">{info.detail}</p>
+                </div>
+                <button
+                    onClick={(e) => { e.stopPropagation(); onClose(); }}
+                    className="shrink-0 p-1 text-slate-500 hover:text-slate-300 transition-colors"
+                >
+                    <X className="w-3.5 h-3.5" />
+                </button>
+            </div>
+        </div>
+    );
+};
+
 interface SyntaxTreeProps {
     tree?: AppGrammarNodeData;
     isVisible?: boolean;
@@ -346,6 +376,10 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
     const [isGlossaryOpen, setIsGlossaryOpen] = useState(false);
 
     const treeHasProDrop = useMemo(() => tree ? hasProDrop(tree) : false, [tree]);
+
+    // Mobile tap-to-show info bar state
+    const [tappedNodeInfo, setTappedNodeInfo] = useState<{ role: string; headline: string; detail: string } | null>(null);
+    const infoDismissTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     // Reset both expandedIds and showGhost together whenever the sentence changes.
     useEffect(() => {
@@ -388,6 +422,16 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
                 }
                 return newSet;
             });
+        }
+
+        // Mobile: show role info bar on tap
+        if (!canHover) {
+            const entry = glossary[node.data.role as GrammarRole];
+            if (entry) {
+                setTappedNodeInfo({ role: String(node.data.role), headline: entry.headline, detail: entry.detail });
+                if (infoDismissTimer.current) clearTimeout(infoDismissTimer.current);
+                infoDismissTimer.current = setTimeout(() => setTappedNodeInfo(null), 4000);
+            }
         }
     }, []);
 
@@ -527,6 +571,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
 
             <GlossaryPanel isOpen={isGlossaryOpen} onClose={() => setIsGlossaryOpen(false)} />
             <BadgeLegend />
+            <NodeInfoBar info={tappedNodeInfo} onClose={() => setTappedNodeInfo(null)} />
         </div>
     );
 };
