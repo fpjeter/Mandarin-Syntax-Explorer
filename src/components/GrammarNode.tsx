@@ -112,7 +112,27 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
                             {data.role}
                             {showSubRole && (
                                 data.role === 'Adjunct'
-                                    ? <span className="ml-1 text-[9px] font-semibold text-rose-200 bg-rose-800/50 border border-rose-500/40 px-1.5 py-0.5 rounded tracking-normal normal-case">{data.subRole}</span>
+                                    ? (() => {
+                                        const sr = data.subRole ?? '';
+                                        const tips: Record<string, { h: string; d: string }> = {
+                                            'time': { h: 'Time Adjunct (时间状语)', d: 'When the action happens — placed before the verb.' },
+                                            'location': { h: 'Location Adjunct (地点状语)', d: 'Where the action happens — placed before the verb.' },
+                                            'manner': { h: 'Manner Adjunct (方式状语)', d: 'How the action is performed — placed before the verb.' },
+                                            'bǎ-construction': { h: 'Bǎ Construction (把字句)', d: '把 + object + verb — moves the object before the verb to emphasize what happens to it.' },
+                                            'bèi-construction (passive)': { h: 'Bèi Construction (被字句)', d: '被 + agent + verb — passive voice, emphasizes the receiver of the action.' },
+                                            'degree': { h: 'Degree Adjunct (程度状语)', d: 'How much or to what extent — e.g. 很, 非常, 特别.' },
+                                            'negation': { h: 'Negation Adjunct (否定状语)', d: 'Negates the verb — 不 (general) or 没 (past/completed).' },
+                                            'scope / emphasis': { h: 'Scope / Emphasis (范围状语)', d: 'Limits or emphasizes scope — e.g. 都, 也, 只, 连…都.' },
+                                            'frequency': { h: 'Frequency Adjunct (频率状语)', d: 'How often — e.g. 常常, 经常, 总是.' },
+                                        };
+                                        const key = Object.keys(tips).find(k => sr.toLowerCase().includes(k));
+                                        const tip = key ? tips[key] : { h: `Adjunct — ${sr}`, d: 'A modifier that adds context to the verb (placed before it).' };
+                                        return (
+                                            <HoverTooltip headline={tip.h} detail={tip.d} as="span">
+                                                <span className="ml-1 text-[9px] font-semibold text-rose-200 bg-rose-800/50 border border-rose-500/40 px-1.5 py-0.5 rounded tracking-normal normal-case cursor-help">{data.subRole}</span>
+                                            </HoverTooltip>
+                                        );
+                                    })()
                                     : <span className="text-[9px] opacity-75 lowercase tracking-normal">({data.subRole})</span>
                             )}
                             {isGhost && (
