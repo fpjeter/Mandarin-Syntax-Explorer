@@ -45,3 +45,18 @@ listing the less-obvious tree labels (Adjunct, Attributive, Complement, Pivot)
 with one-line plain-English definitions. This gives users a quick reference
 before they even open a tree, reducing the initial learning curve for
 unfamiliar terminology like "Adjunct."
+
+## Design Notes
+
+### 9. 把/被 labeled as Adjuncts (traditional grammar choice)
+In **generative grammar**, 把 and 被 are typically analyzed as **functional
+heads** projecting their own phrases (BǎP / BèiP), since they restructure
+argument mapping and are not strictly optional. However, in **traditional
+Chinese grammar** (传统语法) they occupy the canonical pre-verbal 状语
+(adverbial) slot alongside time, location, and manner phrases.
+
+This app labels 把+NP and 被+agent as **Adjunct** nodes (with subRole
+`bǎ-construction` / `bèi-construction`) for pedagogical accessibility —
+learners coming from a Chinese language classroom will recognize the 状语
+framing. The child 把/被 tokens retain `role: 'Preposition'` to reflect
+their word-class origin as coverbs (介词).

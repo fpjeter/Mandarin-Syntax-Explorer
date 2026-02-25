@@ -14,56 +14,6 @@ export interface BadgeSpec {
 }
 
 export const BADGES: BadgeSpec[] = [
-    // ── Core constructions ──────────────────────────────────────────────────────
-    {
-        label: '把字句',
-        color: 'text-orange-300 bg-orange-900/40 border-orange-500/50',
-        headline: 'BĂ construction',
-        detail: "Moves the object before the verb to highlight what's being affected.",
-        match: (role, subRole) =>
-            role === 'Preposition' &&
-            (!!subRole?.includes('bǎ') || !!subRole?.includes('ba-')),
-    },
-    {
-        label: '被字句',
-        color: 'text-rose-300 bg-rose-900/40 border-rose-500/50',
-        headline: 'BÈI passive',
-        detail: 'Marks a passive construction; the subject receives rather than performs the action',
-        match: (role, subRole) =>
-            role === 'Preposition' && !!subRole?.includes('bei'),
-    },
-    {
-        label: '是…的',
-        color: 'text-cyan-300 bg-cyan-900/40 border-cyan-500/50',
-        headline: 'Shì-de construction',
-        detail: '是 and 的 wrap around the verb to highlight how, when, or where something happened.',
-        match: (_role, subRole) =>
-            !!subRole?.match(/emphatic (copula|closure)|focus (opener|closer)/),
-    },
-    {
-        label: '比字句',
-        color: 'text-yellow-300 bg-yellow-900/40 border-yellow-500/50',
-        headline: 'Bǐ comparative',
-        detail: 'Uses 比 to compare: "A 比 B + adjective" means A is more [adjective] than B.',
-        match: (_role, subRole) =>
-            !!subRole?.includes('comparative bǐ') || !!subRole?.includes('adjectival / comparative'),
-    },
-    // ── Chained / shared-subject VP patterns ───────────────────────────────────
-    {
-        label: '连动句',
-        color: 'text-teal-300 bg-teal-900/40 border-teal-500/50',
-        headline: 'Serial verb construction',
-        detail: 'Two or more actions share the same subject with no "and" — the second action shows purpose, manner, or result.',
-        match: (_role, subRole) =>
-            !!subRole?.includes('serial verb'),
-    },
-    {
-        label: '兼语句',
-        color: 'text-orange-200 bg-orange-900/40 border-orange-400/50',
-        headline: 'Pivotal construction',
-        detail: 'One noun serves double duty: object of the first verb and subject of the second (e.g. 请他吃饭 — invite him [to] eat)',
-        match: (role) => role === 'Pivot',
-    },
     // ── Complement family ───────────────────────────────────────────────────────
     {
         label: '结果补语',
@@ -107,20 +57,5 @@ export const BADGES: BadgeSpec[] = [
         match: (role, subRole) =>
             (role === 'Head Verb' || role === 'Verb Phrase') &&
             !!subRole?.includes('separable verb'),
-    },
-    // ── Advanced emphasis ───────────────────────────────────────────────────────
-    {
-        label: '双重否定',
-        color: 'text-indigo-300 bg-indigo-900/40 border-indigo-500/50',
-        headline: 'Double negation',
-        detail: '非…不可 = "absolutely must"; two negatives combine to express strong necessity',
-        match: (_role, subRole) => !!subRole?.includes('double-negation'),
-    },
-    {
-        label: '连…都',
-        color: 'text-lime-300 bg-lime-900/40 border-lime-500/50',
-        headline: 'Emphatic bracket',
-        detail: '连 (even) and 都 (all) surround a word to stress "even this is true."',
-        match: (_role, subRole) => !!subRole?.includes('even-marker'),
     },
 ];

@@ -98,30 +98,40 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
                     />
                 )}
 
-                <div
-                    className={`text-[10px] xl:text-[11px] font-bold uppercase tracking-wide mb-1.5 xl:mb-2 whitespace-nowrap flex items-center gap-1 ${isGhost ? 'text-rose-400/80' : 'opacity-90'}`}
-                >
-                    {data.role}
-                    {data.subRole && (
-                        data.role === 'Adjunct'
-                            ? <span className="ml-1 text-[9px] font-semibold text-rose-200 bg-rose-800/50 border border-rose-500/40 px-1.5 py-0.5 rounded tracking-normal normal-case">{data.subRole}</span>
-                            : <span className="text-[9px] opacity-75 lowercase tracking-normal">({data.subRole})</span>
-                    )}
-                    {isGhost && (
-                        <span className="ml-1 text-[9px] text-rose-400 font-bold bg-rose-900/30 border border-rose-500/40 px-1 py-0.5 rounded tracking-normal normal-case">
-                            pro-drop
-                        </span>
-                    )}
-                    {BADGES.filter(b => b.match(data.role, data.subRole)).map(b => (
-                        <HoverTooltip key={b.label} headline={`${b.label} — ${b.headline}`} detail={b.detail} as="span">
-                            <span
-                                className={`ml-1 text-[9px] font-bold border px-1 py-0.5 rounded tracking-normal normal-case ${b.color}`}
-                            >
-                                {b.label}
-                            </span>
-                        </HoverTooltip>
-                    ))}
-                </div>
+                {(() => {
+                    const matchedBadges = BADGES.filter(b => b.match(data.role, data.subRole));
+                    const hasBadge = matchedBadges.length > 0;
+                    // Adjuncts: always show subRole pill for consistency (time, location, bǎ-construction…)
+                    // Other roles: show badge and suppress redundant subRole
+                    const showSubRole = data.subRole && (!hasBadge || data.role === 'Adjunct');
+                    const showBadges = hasBadge && !(data.role === 'Adjunct' && data.subRole);
+                    return (
+                        <div
+                            className={`text-[10px] xl:text-[11px] font-bold uppercase tracking-wide mb-1.5 xl:mb-2 whitespace-nowrap flex items-center gap-1 ${isGhost ? 'text-rose-400/80' : 'opacity-90'}`}
+                        >
+                            {data.role}
+                            {showSubRole && (
+                                data.role === 'Adjunct'
+                                    ? <span className="ml-1 text-[9px] font-semibold text-rose-200 bg-rose-800/50 border border-rose-500/40 px-1.5 py-0.5 rounded tracking-normal normal-case">{data.subRole}</span>
+                                    : <span className="text-[9px] opacity-75 lowercase tracking-normal">({data.subRole})</span>
+                            )}
+                            {isGhost && (
+                                <span className="ml-1 text-[9px] text-rose-400 font-bold bg-rose-900/30 border border-rose-500/40 px-1 py-0.5 rounded tracking-normal normal-case">
+                                    pro-drop
+                                </span>
+                            )}
+                            {showBadges && matchedBadges.map(b => (
+                                <HoverTooltip key={b.label} headline={`${b.label} — ${b.headline}`} detail={b.detail} as="span">
+                                    <span
+                                        className={`ml-1 text-[9px] font-bold border px-1 py-0.5 rounded tracking-normal normal-case ${b.color}`}
+                                    >
+                                        {b.label}
+                                    </span>
+                                </HoverTooltip>
+                            ))}
+                        </div>
+                    );
+                })()}
 
                 {/* Ghost placeholder: bracketed implied pronoun */}
                 {isGhost && data.impliedText && (

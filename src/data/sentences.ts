@@ -166,7 +166,7 @@ export const sampleSentences: SentenceData[] = [
                         },
                         {
                             id: 'n3-p-ba',
-                            role: 'Preposition',
+                            role: 'Adjunct',
                             subRole: 'bǎ-construction',
                             children: [
                                 {
@@ -311,8 +311,8 @@ export const sampleSentences: SentenceData[] = [
                         },
                         {
                             id: 'n4-p-ba',
-                            role: 'Preposition',
-                            subRole: 'ba-construction',
+                            role: 'Adjunct',
+                            subRole: 'bǎ-construction',
                             children: [
                                 {
                                     id: 'n4-p-ba-prep',
@@ -495,8 +495,8 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n6-c-p-bei',
-                                    role: 'Preposition',
-                                    subRole: 'bei-construction (passive)',
+                                    role: 'Adjunct',
+                                    subRole: 'bèi-construction (passive)',
                                     children: [
                                         {
                                             id: 'n6-c-p-bei-prep',
@@ -1877,8 +1877,8 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n22-c-bei',
-                            role: 'Preposition',
-                            subRole: 'bei-construction (passive)',
+                            role: 'Adjunct',
+                            subRole: 'bèi-construction (passive)',
                             children: [
                                 {
                                     id: 'n22-c-bei-prep',
@@ -2347,8 +2347,8 @@ export const sampleSentences: SentenceData[] = [
                         },
                         {
                             id: 'n28-ba',
-                            role: 'Preposition',
-                            subRole: 'ba-construction',
+                            role: 'Adjunct',
+                            subRole: 'bǎ-construction',
                             children: [
                                 {
                                     id: 'n28-ba-prep',
@@ -2406,8 +2406,8 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n29-ba',
-                            role: 'Preposition',
-                            subRole: 'ba-construction',
+                            role: 'Adjunct',
+                            subRole: 'bǎ-construction',
                             children: [
                                 {
                                     id: 'n29-ba-prep',
@@ -3778,15 +3778,21 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n48-bei',
-                            role: 'Preposition',
-                            subRole: 'passive marker',
-                            text: { hanzi: '被', pinyin: 'bèi', translation: '(passive)' },
-                        },
-                        {
-                            id: 'n48-agent',
-                            role: 'Noun',
-                            subRole: 'agent (doer)',
-                            text: { hanzi: '他', pinyin: 'tā', translation: 'he / him' },
+                            role: 'Adjunct',
+                            subRole: 'bèi-construction (passive)',
+                            children: [
+                                {
+                                    id: 'n48-bei-prep',
+                                    role: 'Preposition',
+                                    text: { hanzi: '被', pinyin: 'bèi', translation: '(passive)' },
+                                },
+                                {
+                                    id: 'n48-agent',
+                                    role: 'Noun',
+                                    subRole: 'agent (doer)',
+                                    text: { hanzi: '他', pinyin: 'tā', translation: 'he / him' },
+                                },
+                            ],
                         },
                         {
                             id: 'n48-vp',
@@ -3838,15 +3844,21 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n49-bei',
-                            role: 'Preposition',
-                            subRole: 'passive marker',
-                            text: { hanzi: '被', pinyin: 'bèi', translation: '(passive)' },
-                        },
-                        {
-                            id: 'n49-agent',
-                            role: 'Noun',
-                            subRole: 'agent (doer)',
-                            text: { hanzi: '警察', pinyin: 'jǐng chá', translation: 'police' },
+                            role: 'Adjunct',
+                            subRole: 'bèi-construction (passive)',
+                            children: [
+                                {
+                                    id: 'n49-bei-prep',
+                                    role: 'Preposition',
+                                    text: { hanzi: '被', pinyin: 'bèi', translation: '(passive)' },
+                                },
+                                {
+                                    id: 'n49-agent',
+                                    role: 'Noun',
+                                    subRole: 'agent (doer)',
+                                    text: { hanzi: '警察', pinyin: 'jǐng chá', translation: 'police' },
+                                },
+                            ],
                         },
                         {
                             id: 'n49-vp',
