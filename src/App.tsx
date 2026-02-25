@@ -15,6 +15,7 @@ function App() {
   const [notesOpen, setNotesOpen] = useState(false);
   const [mobileView, setMobileView] = useState<'list' | 'tree' | 'guide'>('guide');
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarTab, setSidebarTab] = useState<'sentences' | 'guide'>('sentences');
 
   const selectedSentence = useMemo(() => sentenceById.get(selectedId), [selectedId]);
 
@@ -22,6 +23,8 @@ function App() {
     setSelectedId(id);
     // On mobile, auto-switch to the tree view
     setMobileView('tree');
+    // On desktop, ensure we're on the sentences tab
+    setSidebarTab('sentences');
   }, []);
 
   const handleSwipePrev = useCallback(() => {
@@ -55,6 +58,12 @@ function App() {
         </div>
         <div
           className="hidden sm:flex items-center text-xs font-semibold tracking-wide text-slate-300 bg-slate-800/80 px-4 py-2 rounded-full border border-slate-600/50 shadow-inner cursor-pointer hover:bg-slate-700/80 hover:border-slate-500/70 transition-colors"
+          onClick={() => {
+            setMobileView('guide');
+            setSidebarTab('guide');
+            setSidebarOpen(true);
+          }}
+          title="View the Topic-Prominent Framework guide"
         >
           <BookA className="w-4 h-4 mr-2 text-purple-400" />
           Topic-Prominent Framework
@@ -105,10 +114,48 @@ function App() {
         <div
           className={`flex flex-col gap-4 flex-shrink-0 h-full transition-all duration-300 ease-in-out ${mobileView !== 'list' ? 'hidden lg:flex' : 'flex'} ${sidebarOpen ? 'lg:w-96' : 'lg:w-0 lg:overflow-hidden lg:opacity-0'}`}
         >
-          <SentenceSidebar
-            selectedId={selectedId}
-            onSelectSentence={handleSelectSentence}
-          />
+          {/* Desktop sidebar tabs */}
+          <div className="hidden lg:flex border-b border-slate-700/50 mb-3 gap-1">
+            <button
+              onClick={() => setSidebarTab('sentences')}
+              className={`flex-1 flex items-center justify-center gap-1.5 py-2 text-[10px] font-bold uppercase tracking-widest transition-colors border-b-2 rounded-t-lg ${sidebarTab === 'sentences'
+                ? 'text-purple-300 border-purple-500 bg-purple-500/10'
+                : 'text-slate-400 border-transparent hover:text-slate-200'
+                }`}
+            >
+              <List className="w-3.5 h-3.5" />
+              Sentences
+            </button>
+            <button
+              onClick={() => setSidebarTab('guide')}
+              className={`flex-1 flex items-center justify-center gap-1.5 py-2 text-[10px] font-bold uppercase tracking-widest transition-colors border-b-2 rounded-t-lg ${sidebarTab === 'guide'
+                ? 'text-blue-300 border-blue-500 bg-blue-500/10'
+                : 'text-slate-400 border-transparent hover:text-slate-200'
+                }`}
+            >
+              <Info className="w-3.5 h-3.5" />
+              Guide
+            </button>
+          </div>
+
+          {/* Tab content */}
+          {sidebarTab === 'sentences' ? (
+            <SentenceSidebar
+              selectedId={selectedId}
+              onSelectSentence={handleSelectSentence}
+            />
+          ) : (
+            <div className="glass-panel rounded-3xl p-5 flex flex-col h-full overflow-hidden border border-slate-700/50 shadow-2xl relative">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 blur-3xl rounded-full" />
+              <h2 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-5 flex items-center">
+                <BookA className="w-4 h-4 mr-2" />
+                Framework Guide
+              </h2>
+              <div className="flex-1 min-h-0 overflow-y-auto pr-2 custom-scrollbar">
+                <GrammarGuide tab="framework" />
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Sidebar toggle — desktop only */}

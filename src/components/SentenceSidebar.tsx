@@ -1,10 +1,9 @@
 import { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BookA, PlayCircle, ChevronDown, Search, X } from 'lucide-react';
+import { PlayCircle, ChevronDown, Search, X } from 'lucide-react';
 import { sampleSentences } from '../data/sentences';
 import { SENTENCE_CATEGORIES, CATEGORY_DESCRIPTIONS } from '../data/categories';
 import type { SentenceCategory } from '../types/grammar';
-import { GrammarGuide } from './GrammarGuide';
 
 interface SentenceSidebarProps {
     selectedId: string;
@@ -15,7 +14,6 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
     selectedId,
     onSelectSentence,
 }) => {
-    const [explainerOpen, setExplainerOpen] = useState(false);
     const [openGroups, setOpenGroups] = useState<Set<SentenceCategory>>(new Set());
     const [searchQuery, setSearchQuery] = useState('');
     const [highlightedId, setHighlightedId] = useState<string | null>(null);
@@ -209,41 +207,6 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
                         </div>
                     );
                 })}
-            </div>
-
-            {/* ── Explainer Card (Framework Only) ─────────────────────────────── */}
-            <div className="hidden sm:block mt-5 rounded-2xl bg-slate-900/60 border border-slate-700/50 overflow-hidden flex-shrink-0">
-                <button
-                    onClick={() => setExplainerOpen(o => !o)}
-                    className="w-full flex items-center gap-3 px-4 py-3 hover:bg-slate-800/40 transition-colors"
-                >
-                    <div className="p-1.5 bg-fuchsia-500/20 rounded-lg flex-shrink-0">
-                        <BookA className="w-4 h-4 text-fuchsia-400" />
-                    </div>
-                    <p className="text-xs text-slate-300 leading-relaxed font-medium text-left flex-1">
-                        <strong className="text-slate-100">The Framework</strong>
-                        {' '}— Why Topic-Prominent?
-                    </p>
-                    <ChevronDown
-                        className={`w-4 h-4 text-slate-400 flex-shrink-0 transition-transform duration-300 ${explainerOpen ? 'rotate-180' : ''}`}
-                    />
-                </button>
-
-                <AnimatePresence initial={false}>
-                    {explainerOpen && (
-                        <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: 'auto', opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.3, ease: 'easeInOut' }}
-                            className="overflow-hidden"
-                        >
-                            <div className="px-5 pb-5 pt-2">
-                                <GrammarGuide tab="framework" />
-                            </div>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
             </div>
         </div>
     );
