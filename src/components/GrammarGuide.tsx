@@ -259,7 +259,7 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                             <span className="text-rose-400 font-bold">rose glow</span>.
                         </li>
                         <li>
-                            <strong>👻 Ghost toggle</strong> — tap the ghost icon in the tree controls
+                            <strong>Ghost toggle</strong> — tap the ghost icon in the tree controls
                             to show or hide implied (pro-dropped) subjects.
                         </li>
                         <li>
