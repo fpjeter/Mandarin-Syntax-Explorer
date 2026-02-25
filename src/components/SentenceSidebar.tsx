@@ -14,10 +14,11 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
     selectedId,
     onSelectSentence,
 }) => {
-    const [openGroups, setOpenGroups] = useState<Set<SentenceCategory>>(new Set());
+    const [openGroup, setOpenGroup] = useState<SentenceCategory | null>(null);
     const [searchQuery, setSearchQuery] = useState('');
     const [highlightedId, setHighlightedId] = useState<string | null>(null);
     const highlightedRef = useRef<HTMLButtonElement | null>(null);
+    const groupRefs = useRef<Map<SentenceCategory, HTMLDivElement>>(new Map());
 
     // Group sentences by category, preserving declaration order
     const groupedSentences = useMemo(() => {
@@ -61,12 +62,18 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
         highlightedRef.current?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
     }, [highlightedId]);
 
-    const toggleGroup = (cat: SentenceCategory) =>
-        setOpenGroups(prev => {
-            const next = new Set(prev);
-            next.has(cat) ? next.delete(cat) : next.add(cat);
+    const toggleGroup = (cat: SentenceCategory) => {
+        setOpenGroup(prev => {
+            const next = prev === cat ? null : cat;
+            if (next) {
+                // Scroll the opened category into view after animation starts
+                setTimeout(() => {
+                    groupRefs.current.get(next)?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+                }, 50);
+            }
             return next;
         });
+    };
 
     // Ensure selected sentence's group is open when selected externally
     // (skip on initial mount so all categories start minimized)
@@ -74,7 +81,7 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
     useEffect(() => {
         if (!hasMounted.current) { hasMounted.current = true; return; }
         const s = sampleSentences.find(x => x.id === selectedId);
-        if (s) setOpenGroups(prev => new Set([...prev, s.category]));
+        if (s) setOpenGroup(s.category);
     }, [selectedId]);
 
     const handleSelect = useCallback((id: string) => {
@@ -141,9 +148,9 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
                 )}
 
                 {filteredGroupedSentences.map(([category, sentences]) => {
-                    const isOpen = searchQuery.trim() ? true : openGroups.has(category);
+                    const isOpen = searchQuery.trim() ? true : openGroup === category;
                     return (
-                        <div key={category} className="rounded-2xl border border-slate-700/40 overflow-hidden">
+                        <div key={category} ref={el => { if (el) groupRefs.current.set(category, el); }} className="rounded-2xl border border-slate-700/40 overflow-hidden">
                             {/* Category header */}
                             <button
                                 onClick={() => toggleGroup(category)}
