@@ -499,11 +499,11 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
         <div className="w-full h-full border border-slate-700/50 rounded-2xl overflow-hidden glass-panel shadow-2xl relative">
 
             {/* ── Toolbar ── */}
-            <div className="absolute top-4 right-4 z-20 pointer-events-auto">
-                <div className="glass-panel rounded-2xl border border-slate-700/60 p-2 flex flex-wrap items-center gap-1.5 shadow-2xl">
+            <div className="absolute top-3 right-3 z-20 pointer-events-auto">
+                <div className="glass-panel rounded-2xl border border-slate-700/60 p-1.5 flex items-center gap-1 shadow-2xl">
                     <button
                         onClick={handleExpandAll}
-                        className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-[11px] font-semibold tracking-wide transition-all duration-200 bg-slate-800/60 text-slate-400 hover:bg-slate-700/80 hover:text-slate-200"
+                        className="flex items-center gap-1.5 px-2 py-1.5 rounded-xl text-[11px] font-semibold tracking-wide transition-all duration-200 bg-slate-800/60 text-slate-400 hover:bg-slate-700/80 hover:text-slate-200"
                         title="Expand all nodes"
                     >
                         <Maximize2 className="w-3.5 h-3.5" />
@@ -511,7 +511,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
                     </button>
                     <button
                         onClick={handleCollapseAll}
-                        className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-[11px] font-semibold tracking-wide transition-all duration-200 bg-slate-800/60 text-slate-400 hover:bg-slate-700/80 hover:text-slate-200"
+                        className="flex items-center gap-1.5 px-2 py-1.5 rounded-xl text-[11px] font-semibold tracking-wide transition-all duration-200 bg-slate-800/60 text-slate-400 hover:bg-slate-700/80 hover:text-slate-200"
                         title="Collapse to root"
                     >
                         <Minimize2 className="w-3.5 h-3.5" />
@@ -523,7 +523,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
                         <button
                             onClick={() => setShowGhost(g => !g)}
                             className={`
-                                flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl
+                                flex items-center gap-1.5 px-2 py-1.5 rounded-xl
                                 text-[11px] font-semibold tracking-wide transition-all duration-200
                                 ${showGhost
                                     ? 'bg-slate-700/80 text-purple-300'
@@ -543,7 +543,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
                     {/* Glossary */}
                     <button
                         onClick={() => setIsGlossaryOpen(true)}
-                        className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-[11px] font-semibold tracking-wide transition-all duration-200 bg-fuchsia-900/30 text-fuchsia-300 hover:bg-fuchsia-900/50"
+                        className="flex items-center gap-1.5 px-2 py-1.5 rounded-xl text-[11px] font-semibold tracking-wide transition-all duration-200 bg-fuchsia-900/30 text-fuchsia-300 hover:bg-fuchsia-900/50"
                         title="Open Grammar Glossary"
                     >
                         <BookOpen className="w-3.5 h-3.5" />

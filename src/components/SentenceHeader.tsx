@@ -65,28 +65,28 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
                         animate={{ opacity: 1, y: 0 }}
                         transition={springTransition}
                         key={`ctx-${sentence.id}`}
-                        className="glass-panel px-4 py-2 rounded-2xl flex flex-col items-center shadow-lg border border-slate-600/25 bg-slate-900/50 w-full max-w-xl pointer-events-none"
+                        className="glass-panel px-3 py-1.5 xl:px-4 xl:py-2 rounded-2xl flex flex-col items-center shadow-lg border border-slate-600/25 bg-slate-900/50 w-full max-w-xl pointer-events-none"
                     >
-                        <span className="text-[9px] uppercase tracking-[0.18em] font-bold text-slate-500 mb-1.5">
+                        <span className="text-[8px] xl:text-[9px] uppercase tracking-[0.18em] font-bold text-slate-500 mb-1">
                             preceding context
                         </span>
                         <RubyText
                             hanzi={sentence.discourseContext.chinese}
                             pinyin={sentence.discourseContext.pinyin}
-                            className="opacity-60 !text-lg xl:!text-xl"
+                            className="opacity-60 !text-base xl:!text-xl"
                         />
-                        <div className="mt-1.5 text-[11px] text-slate-500 italic">
+                        <div className="mt-1 text-[10px] xl:text-[11px] text-slate-500 italic">
                             "{sentence.discourseContext.translation}"
                         </div>
                     </motion.div>
 
                     {/* Connector: arrow indicating discourse flow */}
-                    <div className="flex flex-col items-center gap-0.5 my-1 opacity-40 pointer-events-none">
-                        <div className="w-px h-3 bg-rose-400" />
+                    <div className="flex flex-col items-center gap-0.5 my-0.5 xl:my-1 opacity-40 pointer-events-none">
+                        <div className="w-px h-2 xl:h-3 bg-rose-400" />
                         <svg width="10" height="6" viewBox="0 0 10 6" className="text-rose-400 fill-current">
                             <path d="M5 6 L0 0 L10 0 Z" />
                         </svg>
-                        <span className="text-[8px] text-rose-400 font-semibold tracking-widest uppercase -mt-0.5">
+                        <span className="text-[7px] xl:text-[8px] text-rose-400 font-semibold tracking-widest uppercase -mt-0.5">
                             pro-drop
                         </span>
                     </div>
