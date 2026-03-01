@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { PlayCircle, ChevronDown, Search, X } from 'lucide-react';
+import { LibraryBig, ChevronDown, Search, X } from 'lucide-react';
 import { sampleSentences } from '../data/sentences';
 import { SENTENCE_CATEGORIES, CATEGORY_DESCRIPTIONS } from '../data/categories';
 import type { SentenceCategory } from '../types/grammar';
@@ -59,7 +59,13 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
 
     // Scroll highlighted sentence card into view
     useEffect(() => {
-        highlightedRef.current?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        const el = highlightedRef.current;
+        if (!el) return;
+        try {
+            el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        } catch {
+            el.scrollIntoView({ block: 'nearest' });
+        }
     }, [highlightedId]);
 
     const toggleGroup = (cat: SentenceCategory) => {
@@ -68,7 +74,13 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
             if (next) {
                 // Scroll the opened category into view after animation starts
                 setTimeout(() => {
-                    groupRefs.current.get(next)?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+                    const el = groupRefs.current.get(next);
+                    if (!el) return;
+                    try {
+                        el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+                    } catch {
+                        el.scrollIntoView({ block: 'nearest' });
+                    }
                 }, 50);
             }
             return next;
@@ -114,8 +126,8 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
             <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 blur-3xl rounded-full" />
 
             <h2 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-5 flex items-center">
-                <PlayCircle className="w-4 h-4 mr-2" />
-                Example Databank
+                <LibraryBig className="w-4 h-4 mr-2" />
+                Sentence Library
             </h2>
 
             {/* Search input */}
@@ -154,6 +166,7 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
                             {/* Category header */}
                             <button
                                 onClick={() => toggleGroup(category)}
+                                aria-expanded={isOpen}
                                 className="w-full flex items-center justify-between px-4 py-2.5 bg-slate-800/70 hover:bg-slate-700/60 transition-colors text-left relative overflow-hidden"
                             >
                                 <span className="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-purple-500/70 to-blue-500/70 rounded-r-full" />

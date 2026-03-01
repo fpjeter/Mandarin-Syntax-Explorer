@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+/** True only on devices that support real hover (mouse / trackpad) — not iOS touch */
+const canHover = typeof window !== 'undefined' && window.matchMedia('(hover: hover)').matches;
+
 interface RubyTextProps {
     hanzi: string;
     pinyin: string;
@@ -38,7 +41,7 @@ export const RubyText: React.FC<RubyTextProps> = ({ hanzi, pinyin, className = '
     return (
         <motion.span
             className={`inline-flex flex-wrap justify-center items-end leading-none text-center ${large ? 'text-3xl' : 'text-xl'} ${className}`}
-            whileHover={{ scale: 1.05 }}
+            whileHover={canHover ? { scale: 1.05 } : undefined}
             transition={{ type: 'spring', stiffness: 300 }}
         >
             {pairs.map(({ char, syllable }, i) => (

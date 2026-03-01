@@ -1,6 +1,30 @@
+import React from 'react';
 import type { SentenceData } from '../types/grammar';
 import type { GrammarRole } from '../types/grammar';
 import { glossary } from '../data/glossary';
+import { renderExplanation } from '../utils/renderExplanation';
+
+interface GlossaryLinkProps {
+    role: GrammarRole;
+    onOpenGlossary?: (role: GrammarRole) => void;
+    children: React.ReactNode;
+}
+
+/** Clickable glossary term — opens glossary panel if handler is provided */
+const GlossaryLink: React.FC<GlossaryLinkProps> = ({ role, onOpenGlossary, children }) => {
+    if (!onOpenGlossary) return <>{children}</>;
+    const entry = glossary[role];
+    if (!entry) return <>{children}</>;
+    return (
+        <button
+            onClick={() => onOpenGlossary(role)}
+            className="underline decoration-dotted underline-offset-2 hover:text-white transition-colors"
+            title={`${entry.headline} — tap to open glossary`}
+        >
+            {children}
+        </button>
+    );
+};
 
 interface GrammarGuideProps {
     tab: 'framework' | 'sentence';
@@ -14,34 +38,6 @@ interface GrammarGuideProps {
  */
 export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentence, onOpenGlossary }) => {
 
-    // Renders **bold** and *italic* markdown markers into styled JSX spans.
-    const renderExplanation = (text: string) => {
-        const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g);
-        return parts.map((part, i) => {
-            if (part.startsWith('**') && part.endsWith('**'))
-                return <strong key={i} className="text-slate-100 font-semibold">{part.slice(2, -2)}</strong>;
-            if (part.startsWith('*') && part.endsWith('*'))
-                return <em key={i} className="italic text-slate-300">{part.slice(1, -1)}</em>;
-            return <span key={i}>{part}</span>;
-        });
-    };
-
-    /** Clickable glossary term — opens glossary panel if handler is provided */
-    const GlossaryLink = ({ role, children }: { role: GrammarRole; children: React.ReactNode }) => {
-        if (!onOpenGlossary) return <>{children}</>;
-        const entry = glossary[role];
-        if (!entry) return <>{children}</>;
-        return (
-            <button
-                onClick={() => onOpenGlossary(role)}
-                className="underline decoration-dotted underline-offset-2 hover:text-white transition-colors"
-                title={`${entry.headline} — tap to open glossary`}
-            >
-                {children}
-            </button>
-        );
-    };
-
     if (tab === 'framework') {
         return (
             <div className="space-y-5">
@@ -52,9 +48,9 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                         In English, you build a sentence around a <em>subject</em> — the person or thing doing the action.
                         Mandarin works differently: you first say <em>what you want to talk about</em>,
                         then say something about it. That opening word or phrase is the{' '}
-                        <GlossaryLink role="Topic"><span className="text-fuchsia-400 font-bold">Topic</span></GlossaryLink>, and everything
+                        <GlossaryLink role="Topic" onOpenGlossary={onOpenGlossary}><span className="text-fuchsia-400 font-bold">Topic</span></GlossaryLink>, and everything
                         said about it is the{' '}
-                        <GlossaryLink role="Comment"><span className="text-blue-400 font-bold">Comment</span></GlossaryLink>.
+                        <GlossaryLink role="Comment" onOpenGlossary={onOpenGlossary}><span className="text-blue-400 font-bold">Comment</span></GlossaryLink>.
                     </p>
                     {/* Mini example */}
                     <div className="mt-3 bg-slate-800/50 border border-slate-700/40 rounded-xl px-3 py-2.5">
@@ -114,7 +110,7 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                     <div className="grid grid-cols-2 gap-2">
                         <div className="bg-fuchsia-900/20 border border-fuchsia-600/30 rounded-xl p-2.5">
                             <p className="text-[10px] font-bold text-fuchsia-300 uppercase tracking-wider mb-1">
-                                <GlossaryLink role="Topic">Topic</GlossaryLink>
+                                <GlossaryLink role="Topic" onOpenGlossary={onOpenGlossary}>Topic</GlossaryLink>
                             </p>
                             <p className="text-[10px] text-slate-300 leading-snug">
                                 Sets the scene. Roughly: <em>"As for X…"</em><br />
@@ -123,7 +119,7 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                         </div>
                         <div className="bg-blue-900/20 border border-blue-600/30 rounded-xl p-2.5">
                             <p className="text-[10px] font-bold text-blue-300 uppercase tracking-wider mb-1">
-                                <GlossaryLink role="Comment">Comment</GlossaryLink>
+                                <GlossaryLink role="Comment" onOpenGlossary={onOpenGlossary}>Comment</GlossaryLink>
                             </p>
                             <p className="text-[10px] text-slate-300 leading-snug">
                                 The actual statement about the topic. Contains the main verb and everything around it.
@@ -189,7 +185,7 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                             ['Head Noun', 'The core noun in a noun phrase, also thick-bordered'],
                         ] as const).map(([label, desc]) => (
                             <div key={label} className="flex items-baseline gap-2">
-                                <GlossaryLink role={label as GrammarRole}>
+                                <GlossaryLink role={label as GrammarRole} onOpenGlossary={onOpenGlossary}>
                                     <span className="text-[10px] font-bold text-slate-200 whitespace-nowrap">{label}</span>
                                 </GlossaryLink>
                                 <span className="text-[10px] text-slate-400 leading-snug">{desc}</span>

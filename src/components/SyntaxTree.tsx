@@ -236,7 +236,11 @@ const parseTreeToFlow = (root: AppGrammarNodeData | undefined, expandedIds: Set<
                 target: node.id,
                 type: 'smoothstep',
                 animated: true,
-                style: { stroke: edgeColor, strokeWidth: 2 },
+                style: {
+                    stroke: edgeColor,
+                    strokeWidth: 2,
+                    filter: `drop-shadow(0 0 5px ${edgeColor}99)`,
+                },
                 data: { sourceRole: parentData?.role },
             });
         }

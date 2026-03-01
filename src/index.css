@@ -33,6 +33,8 @@
   .custom-scrollbar {
     scrollbar-width: thin;
     scrollbar-color: rgba(139, 92, 246, 0.35) transparent;
+    /* Native momentum scroll on iOS Safari */
+    -webkit-overflow-scrolling: touch;
   }
 
   .custom-scrollbar::-webkit-scrollbar {
@@ -52,8 +54,14 @@
     background-color: rgba(139, 92, 246, 0.6);
   }
 
-  /* iOS safe-area bottom padding (home indicator) */
+  /* iOS safe-area insets (notch, Dynamic Island, home indicator) */
+  .pt-safe-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
   .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .pb-safe-bottom {
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
 }

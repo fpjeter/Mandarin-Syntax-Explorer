@@ -7,8 +7,10 @@ import { GrammarGuide } from './components/GrammarGuide';
 import { SentenceSidebar } from './components/SentenceSidebar';
 import { SentenceHeader } from './components/SentenceHeader';
 
-// O(1) sentence lookup — replaces scattered .find() calls (item #1)
+// O(1) sentence lookup — replaces scattered .find() calls
 const sentenceById = new Map(sampleSentences.map(s => [s.id, s]));
+// O(1) index lookup — used by swipe handlers to avoid repeated findIndex
+const sentenceIndexById = new Map(sampleSentences.map((s, i) => [s.id, i]));
 
 function App() {
   const [selectedId, setSelectedId] = useState<string>(sampleSentences[0].id);
@@ -19,6 +21,19 @@ function App() {
 
   const selectedSentence = useMemo(() => sentenceById.get(selectedId), [selectedId]);
 
+  // Category-local position for the n / N counter in the header
+  const { sentenceIndex, categoryTotal } = useMemo(() => {
+    if (!selectedSentence) return { sentenceIndex: 1, categoryTotal: 1 };
+    const catSentences = sampleSentences.filter(s => s.category === selectedSentence.category);
+    const idx = catSentences.findIndex(s => s.id === selectedSentence.id);
+    return { sentenceIndex: idx + 1, categoryTotal: catSentences.length };
+  }, [selectedSentence]);
+
+  // Global boundary checks for prev/next button enabled state
+  const globalIdx = sentenceIndexById.get(selectedId) ?? 0;
+  const hasPrev = globalIdx > 0;
+  const hasNext = globalIdx < sampleSentences.length - 1;
+
   const handleSelectSentence = useCallback((id: string) => {
     setSelectedId(id);
     // On mobile, auto-switch to the tree view
@@ -28,13 +43,13 @@ function App() {
   }, []);
 
   const handleSwipePrev = useCallback(() => {
-    const idx = sampleSentences.findIndex(s => s.id === selectedId);
+    const idx = sentenceIndexById.get(selectedId) ?? -1;
     if (idx > 0) setSelectedId(sampleSentences[idx - 1].id);
   }, [selectedId]);
 
   const handleSwipeNext = useCallback(() => {
-    const idx = sampleSentences.findIndex(s => s.id === selectedId);
-    if (idx < sampleSentences.length - 1) setSelectedId(sampleSentences[idx + 1].id);
+    const idx = sentenceIndexById.get(selectedId) ?? -1;
+    if (idx !== -1 && idx < sampleSentences.length - 1) setSelectedId(sampleSentences[idx + 1].id);
   }, [selectedId]);
 
   return (
@@ -178,6 +193,10 @@ function App() {
               onToggleNotes={() => setNotesOpen(o => !o)}
               onSwipePrev={handleSwipePrev}
               onSwipeNext={handleSwipeNext}
+              sentenceIndex={sentenceIndex}
+              categoryTotal={categoryTotal}
+              hasPrev={hasPrev}
+              hasNext={hasNext}
             />
           )}
 
