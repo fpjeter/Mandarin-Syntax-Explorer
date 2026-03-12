@@ -3,34 +3,47 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { LibraryBig, ChevronDown, Search, X } from 'lucide-react';
 import { sampleSentences } from '../data/sentences';
 import { SENTENCE_CATEGORIES, CATEGORY_DESCRIPTIONS } from '../data/categories';
-import type { SentenceCategory } from '../types/grammar';
+import type { SentenceData } from '../types/grammar';
 
 interface SentenceSidebarProps {
     selectedId: string;
     onSelectSentence: (id: string) => void;
+    /** Override the sentence list (for classical mode). Falls back to sampleSentences. */
+    sentences?: SentenceData[];
+    /** Override the category order (for classical mode). Falls back to SENTENCE_CATEGORIES. */
+    categories?: readonly string[];
+    /** Override the category descriptions (for classical mode). Falls back to CATEGORY_DESCRIPTIONS. */
+    categoryDescriptions?: Record<string, string>;
 }
 
 export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
     selectedId,
     onSelectSentence,
+    sentences: sentencesProp,
+    categories: categoriesProp,
+    categoryDescriptions: descriptionsProp,
 }) => {
-    const [openGroup, setOpenGroup] = useState<SentenceCategory | null>(null);
+    const sentences = sentencesProp ?? sampleSentences;
+    const categories = categoriesProp ?? SENTENCE_CATEGORIES;
+    const descriptions = descriptionsProp ?? CATEGORY_DESCRIPTIONS;
+
+    const [openGroup, setOpenGroup] = useState<string | null>(null);
     const [searchQuery, setSearchQuery] = useState('');
     const [highlightedId, setHighlightedId] = useState<string | null>(null);
     const highlightedRef = useRef<HTMLButtonElement | null>(null);
-    const groupRefs = useRef<Map<SentenceCategory, HTMLDivElement>>(new Map());
+    const groupRefs = useRef<Map<string, HTMLDivElement>>(new Map());
 
     // Group sentences by category, preserving declaration order
     const groupedSentences = useMemo(() => {
-        const map = new Map<SentenceCategory, typeof sampleSentences>();
-        sampleSentences.forEach(s => {
+        const map = new Map<string, typeof sentences>();
+        sentences.forEach(s => {
             if (!map.has(s.category)) map.set(s.category, []);
             map.get(s.category)!.push(s);
         });
         return [...map.entries()].sort(
-            ([a], [b]) => SENTENCE_CATEGORIES.indexOf(a) - SENTENCE_CATEGORIES.indexOf(b)
+            ([a], [b]) => (categories as readonly string[]).indexOf(a) - (categories as readonly string[]).indexOf(b)
         );
-    }, []);
+    }, [sentences, categories]);
 
     // Filtered sentence groups — when a query is active, only show matching sentences
     const filteredGroupedSentences = useMemo(() => {
@@ -68,7 +81,7 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
         }
     }, [highlightedId]);
 
-    const toggleGroup = (cat: SentenceCategory) => {
+    const toggleGroup = (cat: string) => {
         setOpenGroup(prev => {
             const next = prev === cat ? null : cat;
             if (next) {
@@ -92,7 +105,7 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
     const hasMounted = useRef(false);
     useEffect(() => {
         if (!hasMounted.current) { hasMounted.current = true; return; }
-        const s = sampleSentences.find(x => x.id === selectedId);
+        const s = sentences.find(x => x.id === selectedId);
         if (s) setOpenGroup(s.category);
     }, [selectedId]);
 
@@ -165,7 +178,7 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
                         <div key={category} ref={el => { if (el) groupRefs.current.set(category, el); }} className="rounded-2xl border border-slate-700/40 overflow-hidden">
                             {/* Category header */}
                             <button
-                                onClick={() => toggleGroup(category)}
+                                onClick={() => toggleGroup(category as string)}
                                 aria-expanded={isOpen}
                                 className="w-full flex items-center justify-between px-4 py-2.5 bg-slate-800/70 hover:bg-slate-700/60 transition-colors text-left relative overflow-hidden"
                             >
@@ -190,7 +203,7 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
                                         className="overflow-hidden"
                                     >
                                         <p className="px-4 pt-2 pb-1 text-[10px] text-slate-400 italic leading-relaxed">
-                                            {CATEGORY_DESCRIPTIONS[category]}
+                                            {(descriptions as Record<string, string>)[category]}
                                         </p>
                                         <div className="p-2 space-y-2">
                                             {sentences.map(sentence => {

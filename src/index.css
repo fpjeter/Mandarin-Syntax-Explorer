@@ -58,9 +58,11 @@
   .pt-safe-top {
     padding-top: env(safe-area-inset-top, 0px);
   }
+
   .pb-safe {
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
+
   .pb-safe-bottom {
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
@@ -73,5 +75,32 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     background-color: rgb(15 23 42 / 0.4);
+  }
+}
+
+/* ─── Classical Chinese Theme ─── */
+.classical-theme {
+  --color-mandarin-gold: #D4A574;
+}
+
+.classical-theme .glass-panel {
+  @apply bg-stone-900/60 border-stone-700/50;
+}
+
+.classical-theme .custom-scrollbar {
+  scrollbar-color: rgba(217, 169, 109, 0.35) transparent;
+}
+
+.classical-theme .custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(217, 169, 109, 0.35);
+}
+
+.classical-theme .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(217, 169, 109, 0.6);
+}
+
+@media (hover: hover) {
+  .classical-theme .glass-panel {
+    background-color: rgb(28 25 23 / 0.4);
   }
 }

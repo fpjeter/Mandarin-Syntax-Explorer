@@ -1,5 +1,6 @@
 import { type SentenceCategory } from '../data/categories';
-export type { SentenceCategory };
+import { type ClassicalCategory } from '../data/classicalCategories';
+export type { SentenceCategory, ClassicalCategory };
 
 export type GrammarRole =
     | 'Sentence'
@@ -46,10 +47,14 @@ export interface GrammarNodeData {
 
 export interface SentenceData {
     id: string;
-    category: SentenceCategory;
+    category: SentenceCategory | ClassicalCategory;
     chinese: string;
     pinyin: string;
     translation: string;
+    /** Attribution source — used by Classical Chinese quotes (e.g. "《论语》· 学而篇") */
+    source?: string;
+    /** Attribution author — used by Classical Chinese quotes (e.g. "Confucius") */
+    author?: string;
     /** Plain-English structural analysis of the sentence for non-specialist readers. */
     explanation?: string;
     /** Optional preceding sentence that establishes the discourse context (topic), enabling pro-drop in this sentence. */
