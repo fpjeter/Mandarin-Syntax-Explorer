@@ -35,7 +35,7 @@ Click the scroll icon (📜) next to the app title to toggle into **Classical Ch
 
 ### Classical Features
 
-- **8 annotated quotes** from the Analects (论语), Tao Te Ching (道德经), and other classical texts
+- **20 annotated quotes** from the Analects (论语), Tao Te Ching (道德经), Mencius, Xunzi, Han Yu, and Sun Tzu
 - **Full syntax trees** — same interactive tree visualization applied to classical grammar
 - **Dedicated grammar guide** — covers function words (虛詞), the 之 system, rhetorical patterns (反問), negation (否定), coverbs (介詞), and the 而 connective
 - **Amber/sepia theme** — distinct visual identity with warm stone tones
@@ -45,12 +45,12 @@ Click the scroll icon (📜) next to the app title to toggle into **Classical Ch
 
 | Category | Count | Description |
 |---|---|---|
-| Rhetorical Patterns (反問) | 2 | Sentence-final particles 乎/哉 for rhetorical questions |
-| Nominalizers (者/所) | 1 | 者 and 所 as nominalizing particles |
-| Classical Negation (非/勿/莫) | 2 | Negation with different scopes and strengths |
-| Coverbs & Prepositions (於/以/焉) | 1 | Pre-verbal prepositional phrases |
-| Sequential Actions (而) | 1 | 而 linking sequential, contrastive, or conditional clauses |
-| Genitive & Modification (之) | 1 | 之 as genitive marker, object pronoun, or structural filler |
+| Rhetorical Patterns (反問) | 4 | Sentence-final particles 乎/哉 for rhetorical questions |
+| Nominalizers (者/所) | 3 | 者 and 所 as nominalizing particles |
+| Classical Negation (非/勿/莫) | 4 | Negation with different scopes and strengths |
+| Coverbs & Prepositions (於/以/焉) | 3 | Pre-verbal prepositional phrases |
+| Sequential Actions (而) | 3 | 而 linking sequential, contrastive, or conditional clauses |
+| Genitive & Modification (之) | 3 | 之 as genitive marker, object pronoun, or structural filler |
 
 ### Adding Classical Quotes
 
