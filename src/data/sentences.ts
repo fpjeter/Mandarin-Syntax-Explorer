@@ -7,7 +7,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '他打碎了那个花瓶。',
         pinyin: 'Tā dǎ suì le nà ge huā píng.',
         translation: 'He broke that vase.',
-        explanation: 'This is the most basic Mandarin sentence pattern: first say **who or what you are talking about**, then say **what happened**. Here, **他** (he) is what the sentence is about — this is called the **Topic**. Everything that follows — the breaking, the vase — is the **Comment**: the actual event. The tree splits directly at that boundary. Notice that **打碎** is a compound action: 打 means "hit" and 碎 means "shatter" — stacked together they mean "smash to pieces". The **了** after it marks that the action is done and complete.',
+        explanation: 'This is the most basic Mandarin sentence pattern: first say **who or what you are talking about**, then say **what happened**. Here, **他** (he) is what the sentence is about; this is called the **Topic**. Everything that follows (the breaking, the vase) is the **Comment**: the actual event. The tree splits directly at that boundary. Notice that **打碎** is a compound action: 打 means "hit" and 碎 means "shatter," stacked together they mean "smash to pieces". The **了** after it marks that the action is done and complete.',
         tree: {
             id: 'n1',
             role: 'Sentence',
@@ -71,7 +71,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '我喜欢在图书馆看书。',
         pinyin: 'Wǒ xǐ huān zài tú shū guǎn kàn shū.',
         translation: 'I like reading books in the library.',
-        explanation: '**我** (I) is the Topic. The Comment strings two verb phrases together without repeating the subject — Mandarin can chain actions like this naturally. First **喜欢** (like), then the thing being liked: **going to the library and reading**. Notice how the location (在图书馆) comes *before* the verb (看), not after it the way English does. In Mandarin, where something happens is set up as background context before the action is named.',
+        explanation: '**我** (I) is the Topic. The Comment strings two verb phrases together without repeating the subject. Mandarin can chain actions like this naturally. First **喜欢** (like), then the thing being liked: **going to the library and reading**. Notice how the location (在图书馆) comes *before* the verb (看), not after it the way English does. In Mandarin, where something happens is set up as background context before the action is named.',
         tree: {
             id: 'n2',
             role: 'Sentence',
@@ -143,7 +143,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '她昨天把我的钱包忘在出租车上了。',
         pinyin: 'Tā zuó tiān bǎ wǒ de qián bāo wàng zài chū zū chē shàng le.',
         translation: 'She forgot my wallet in the taxi yesterday.',
-        explanation: '**她** (she) is the Topic. The Comment opens with a time stamp — **昨天** (yesterday) — because in Mandarin, time and place come before the verb, not after it. Then comes a special pattern: **把** moves the object (my wallet) in front of the verb. This is called the **把 construction** — it is used when something specific is being acted upon and something notable happens to it. Think of 把 as a spotlight on the wallet: *"as for the wallet — she forgot it in the taxi."* The tree shows 把 and the wallet grouped together before the verb.',
+        explanation: '**她** (she) is the Topic. The Comment opens with a time stamp, **昨天** (yesterday), because in Mandarin, time and place come before the verb, not after it. Then comes a special pattern: **把** moves the object (my wallet) in front of the verb. This is called the **把 construction**: it is used when something specific is being acted upon and something notable happens to it. Think of 把 as a spotlight on the wallet: *"as for the wallet, she forgot it in the taxi."* The tree shows 把 and the wallet grouped together before the verb.',
         tree: {
             id: 'n3',
             role: 'Sentence',
@@ -220,7 +220,7 @@ export const sampleSentences: SentenceData[] = [
                                             id: 'n3-p-vp-comp-loc',
                                             role: 'Particle',
                                             subRole: 'localizer',
-                                            text: { hanzi: '上', pinyin: 'shàng', translation: '(on/in — localizer)' }
+                                            text: { hanzi: '上', pinyin: 'shàng', translation: '(on/in, localizer)' }
                                         }
                                     ]
                                 },
@@ -243,7 +243,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '那只猫在厨房里生气地用爪子把我的杯子弄倒地上了。',
         pinyin: 'Nà zhī māo zài chú fáng lǐ shēng qì de yòng zhuǎ zi bǎ wǒ de bēi zi nòng dào dì shàng le.',
         translation: 'That cat angrily knocked my cup to the floor with its claws.',
-        explanation: '**那只猫** (that cat) is the Topic — 只 is a **measure word**, a counting word specific to cats and certain animals. Before the main action even appears, Mandarin layers up the scene inside the Comment: **how** the cat acted (angrily), then **with what** (its claws), then **把** spotlights the cup as the thing being affected. Only after all that setup does the verb **弄** (knock/move) appear. In English, you would lead with the verb much earlier. This sentence shows how Mandarin packs rich detail around the verb systematically.',
+        explanation: '**那只猫** (that cat) is the Topic. 只 is a **measure word**, a counting word specific to cats and certain animals. Before the main action even appears, Mandarin layers up the scene inside the Comment: **how** the cat acted (angrily), then **with what** (its claws), then **把** spotlights the cup as the thing being affected. Only after all that setup does the verb **弄** (knock/move) appear. In English, you would lead with the verb much earlier. This sentence shows how Mandarin packs rich detail around the verb systematically.',
         tree: {
             id: 'n4',
             role: 'Sentence',
@@ -371,7 +371,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '他决定开始学开车。',
         pinyin: 'Tā jué dìng kāi shǐ xué kāi chē.',
         translation: 'He decided to start learning to drive a car.',
-        explanation: '**他** (he) is the Topic. The Comment stacks **four verb phrases** one inside the other like Russian dolls, with no connecting word between them — no equivalent of English "to". Each verb is the object of the one before it: decided → [to start → [to learn → [to drive a car]]]. This pattern, where verbs chain together without joining words, is completely natural in Mandarin and very common in everyday speech. The tree expands outward to show all four nested layers.',
+        explanation: '**他** (he) is the Topic. The Comment stacks **four verb phrases** one inside the other like Russian dolls, with no connecting word between them, with no equivalent of English "to". Each verb is the object of the one before it: decided → [to start → [to learn → [to drive a car]]]. This pattern, where verbs chain together without joining words, is completely natural in Mandarin and very common in everyday speech. The tree expands outward to show all four nested layers.',
         tree: {
             id: 'n5',
             role: 'Sentence',
@@ -450,7 +450,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '那只大象，鼻子被小孩儿拉了一下。',
         pinyin: 'Nà zhī dà xiàng, bí zi bèi xiǎo hái er lā le yī xià.',
         translation: 'As for that elephant, its trunk was pulled by a child.',
-        explanation: 'This sentence has a **two-level structure**. The outer Topic sets the stage with a big frame: *as for that elephant...* Then inside the Comment, a narrower subject appears — **鼻子** (trunk). The trunk is then described using **被** (by), which marks a passive construction: something was done *to* the trunk. So the elephant frames the scene, and the trunk is what actually acts as the subject of the passive event. English would say it more directly: "A child pulled the elephant\'s trunk." Mandarin works from the outside in.',
+        explanation: 'This sentence has a **two-level structure**. The outer Topic sets the stage with a big frame: *as for that elephant...* Then inside the Comment, a narrower subject appears: **鼻子** (trunk). The trunk is then described using **被** (by), which marks a passive construction: something was done *to* the trunk. So the elephant frames the scene, and the trunk is what actually acts as the subject of the passive event. English would say it more directly: "A child pulled the elephant\'s trunk." Mandarin works from the outside in.',
         tree: {
             id: 'n6',
             role: 'Sentence',
@@ -547,7 +547,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '我看了半天，还是看不了，就不看了。',
         pinyin: 'Wǒ kàn le bàn tiān, hái shì kàn bù liǎo, jiù bù kàn le.',
         translation: 'I looked at it for a long time, still couldn\'t finish, so I gave up looking.',
-        explanation: '**我** (I) is the Topic once — and then acts as the unstated subject of **three separate clauses** in a row. Mandarin does not repeat the subject between clauses. The Comment chains three events: tried for a long time → still couldn\'t finish → so gave up. The middle clause **看不了** is especially interesting: sandwiching **不** (not) between the verb and its result means *"unable to achieve"* — here, unable to finish reading. This is called a **potential complement** and is a very common pattern in Mandarin.',
+        explanation: '**我** (I) is the Topic once, and then acts as the unstated subject of **three separate clauses** in a row. Mandarin does not repeat the subject between clauses. The Comment chains three events: tried for a long time → still couldn\'t finish → so gave up. The middle clause **看不了** is especially interesting: sandwiching **不** (not) between the verb and its result means *"unable to achieve"*; here, unable to finish reading. This is called a **potential complement** and is a very common pattern in Mandarin.',
         tree: {
             id: 'n7',
             role: 'Sentence',
@@ -656,7 +656,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '我是昨天晚上在图书馆看到她的。',
         pinyin: 'Wǒ shì zuó tiān wǎn shang zài tú shū guǎn kàn dào tā de.',
         translation: 'It was last night in the library that I saw her.',
-        explanation: '**我** (I) sets the scene — think of it as "as for me…" The rest of the sentence uses the **是…的** pattern to zoom in on *when* and *where* something happened. **是** works like "was" in the English phrasing *"it was last night in the library that I saw her."* The focused details — **昨天晚上** (last night) and **在图书馆** (in the library) — sit between 是 and the verb. **的** at the end turns the whole action into a description: "the [saw-her-last-night-in-the-library] one." So the sentence literally reads something like: *As for me, (I) am the one who saw her last night in the library.* Without 是…的 you\'d just say 我昨天晚上在图书馆看到她 — a plain statement. With 是…的, you\'re emphasizing the circumstances — typically in response to a question like "When and where did you see her?"',
+        explanation: '**我** (I) sets the scene, think of it as "as for me…" The rest of the sentence uses the **是…的** pattern to zoom in on *when* and *where* something happened. **是** works like "was" in the English phrasing *"it was last night in the library that I saw her."* The focused details, **昨天晚上** (last night) and **在图书馆** (in the library), sit between 是 and the verb. **的** at the end turns the whole action into a description: "the [saw-her-last-night-in-the-library] one." So the sentence literally reads something like: *As for me, (I) am the one who saw her last night in the library.* Without 是…的 you\'d just say 我昨天晚上在图书馆看到她, a plain statement. With 是…的, you\'re emphasizing the circumstances, typically in response to a question like "When and where did you see her?"',
         tree: {
             id: 'n8',
             role: 'Sentence',
@@ -675,7 +675,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n8-p-shi',
                             role: 'Copula',
-                            subRole: 'cleft opener — it was…',
+                            subRole: 'cleft opener: it was…',
                             text: { hanzi: '是', pinyin: 'shì', translation: '(it was…)' }
                         },
                         {
@@ -748,7 +748,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '那座山比这座山高得多。',
         pinyin: 'Nà zuò shān bǐ zhè zuò shān gāo de duō.',
         translation: 'That mountain is much taller than this mountain.',
-        explanation: '**那座山** (that mountain) is the Topic — 座 is the measure word for mountains and large structures. The Comment makes a comparison using **比** (compared to), which always comes before the thing being compared against. The pattern is: Topic → 比 → [reference] → [quality] → [how much]. Here: that mountain → compared to this mountain → tall → by a lot. The **得多** at the end means "by a great amount" and is always placed after the quality, never before it. English has flexibility in word order here; Mandarin does not.',
+        explanation: '**那座山** (that mountain) is the Topic. 座 is the measure word for mountains and large structures. The Comment makes a comparison using **比** (compared to), which always comes before the thing being compared against. The pattern is: Topic → 比 → [reference] → [quality] → [how much]. Here: that mountain → compared to this mountain → tall → by a lot. The **得多** at the end means "by a great amount" and is always placed after the quality, never before it. English has flexibility in word order here; Mandarin does not.',
         tree: {
             id: 'n9',
             role: 'Sentence',
@@ -831,7 +831,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '难道你连这么简单的问题都不会吗？',
         pinyin: 'Nán dào nǐ lián zhè me jiǎn dān de wèn tí dōu bù huì ma?',
         translation: 'Don\'t tell me you can\'t even (do) such a simple question?',
-        explanation: 'This sentence opens with **难道** — a word that signals a rhetorical question is coming, roughly translatable as *"don\'t tell me..."* or *"surely... not?"*. After that, **你** (you) is the Topic. The Comment uses a paired structure: **连...** and **都** work as a team, bracketing whatever is being emphasized. Here they wrap around *"even such a simple question"*, adding disbelief and emphasis. The **吗** at the end is a yes/no question marker. Together, the whole sentence expresses incredulous disbelief: you really can\'t do *even* this?',
+        explanation: 'This sentence opens with **难道**, a word that signals a rhetorical question is coming, roughly translatable as *"don\'t tell me..."* or *"surely... not?"*. After that, **你** (you) is the Topic. The Comment uses a paired structure: **连...** and **都** work as a team, bracketing whatever is being emphasized. Here they wrap around *"even such a simple question"*, adding disbelief and emphasis. The **吗** at the end is a yes/no question marker. Together, the whole sentence expresses incredulous disbelief: you really can\'t do *even* this?',
         tree: {
             id: 'n10',
             role: 'Sentence',
@@ -938,8 +938,8 @@ export const sampleSentences: SentenceData[] = [
         category: 'Rhetorical Questions (反问句)',
         chinese: '这件事非你亲自去办不可。',
         pinyin: 'Zhè jiàn shì fēi nǐ qīn zì qù bàn bù kě.',
-        translation: 'This matter absolutely must be handled by you yourself — there is no way around it.',
-        explanation: 'The outer Topic **这件事** (this matter) sets the frame. The Comment uses a paired framing structure: **非** at the start and **不可** at the end lock together to express absolute necessity — literally *"it is not the case that it can be avoided"*. Between them: who must act (you), how (personally, **亲自**), and what the action is (go handle it). This double negative is a fixed expression: 非...不可 roughly means *"must, without exception"*. You\'ll encounter the same pattern in Chinese proverbs and formal writing.',
+        translation: 'This matter absolutely must be handled by you yourself; there is no way around it.',
+        explanation: 'The outer Topic **这件事** (this matter) sets the frame. The Comment uses a paired framing structure: **非** at the start and **不可** at the end lock together to express absolute necessity, literally *"it is not the case that it can be avoided"*. Between them: who must act (you), how (personally, **亲自**), and what the action is (go handle it). This double negative is a fixed expression: 非...不可 roughly means *"must, without exception"*. You\'ll encounter the same pattern in Chinese proverbs and formal writing.',
         tree: {
             id: 'n11',
             role: 'Sentence',
@@ -1053,7 +1053,7 @@ export const sampleSentences: SentenceData[] = [
                                 {
                                     id: 'n12-p-verb-v',
                                     role: 'Head Verb',
-                                    subRole: 'separable verb (离合词) — verb morpheme of 见面',
+                                    subRole: 'separable verb (离合词): verb morpheme of 见面',
                                     text: { hanzi: '见', pinyin: 'jiàn', translation: 'see / meet' },
                                 },
                                 {
@@ -1106,7 +1106,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '吃饱了，想睡觉。',
         pinyin: 'Chī bǎo le , xiǎng shuì jiào .',
         translation: '(I\'m) full, (I) want to sleep.',
-        explanation: 'The key pattern here is the **resultative complement** **吃饱** — **吃** (eat) stacked with **饱** (full). Eating *resulted in* fullness: that\'s the result morpheme at work, just like 听懂 (listen-understand) or 找到 (look-find). The sentence then chains a second event: 想睡觉 (want to sleep). Notice there is **no stated subject** — the speaker is obvious from context, so Mandarin leaves it out. The tree shows a ghost **[我]** node that you can reveal or hide with the toggle. This silent-subject pattern happens constantly in natural speech.',
+        explanation: 'The key pattern here is the **resultative complement** **吃饱**: **吃** (eat) stacked with **饱** (full). Eating *resulted in* fullness: that\'s the result morpheme at work, just like 听懂 (listen-understand) or 找到 (look-find). The sentence then chains a second event: 想睡觉 (want to sleep). Notice there is **no stated subject**; the speaker is obvious from context, so Mandarin leaves it out. The tree shows a ghost **[我]** node that you can reveal or hide with the toggle. This silent-subject pattern happens constantly in natural speech.',
         tree: {
             id: 'n13',
             role: 'Sentence',
@@ -1163,7 +1163,7 @@ export const sampleSentences: SentenceData[] = [
                                         {
                                             id: 'n13-vp2-obj-hv',
                                             role: 'Verb Phrase',
-                                            subRole: 'separable verb (离合词) — 睡觉',
+                                            subRole: 'separable verb (离合词): 睡觉',
                                             children: [
                                                 {
                                                     id: 'n13-vp2-obj-hv-vm',
@@ -1192,7 +1192,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '到了，找到了，吃完再走。',
         pinyin: 'Dào le , zhǎo dào le , chī wán zài zǒu .',
         translation: '(We\'ve) arrived, (we) found it, (we\'ll) leave after eating.',
-        explanation: 'Three complete events chained in sequence — the hallmark of a **serial verb construction**. VP1: 到了 (arrived). VP2: 找到了 (found it — with the resultative 到 meaning "reached the target"). VP3: 吃完再走 (eat-finish-then-leave — a classic "finish X before Y" sequence). All three VPs share the same unnamed subject **[我们]** (we); the listener infers it from the surrounding conversation. This is why serial verbs feel so natural in Mandarin: once the actor is clear, you just stack events one after another, no conjunctions needed.',
+        explanation: 'Three complete events chained in sequence, the hallmark of a **serial verb construction**. VP1: 到了 (arrived). VP2: 找到了 (found it, with the resultative 到 meaning "reached the target"). VP3: 吃完再走 (eat-finish-then-leave, a classic "finish X before Y" sequence). All three VPs share the same unnamed subject **[我们]** (we); the listener infers it from the surrounding conversation. This is why serial verbs feel so natural in Mandarin: once the actor is clear, you just stack events one after another, no conjunctions needed.',
         tree: {
             id: 'n14',
             role: 'Sentence',
@@ -1282,8 +1282,8 @@ export const sampleSentences: SentenceData[] = [
         category: 'Basic Topic–Comment (主题评论)',
         chinese: '那本书，放在桌子上了。',
         pinyin: 'Nà běn shū , fàng zài zhuō zi shàng le .',
-        translation: 'That book — (it\'s been) put on the table.',
-        explanation: '**那本书** (that book) is the Topic. Inside the Comment, the actual subject — whoever placed the book — is never stated. But there\'s something more: the dropped **[它]** (it) clearly refers *back* to the book in the Topic. The Topic is not just setting the scene — it is literally acting as the hidden subject of the action that follows. The **red arc** in the tree draws a connecting line from the ghost node back to the Topic, making this invisible link visible. This is one of the most common patterns in Mandarin: name a topic, then silently use it as the subject.',
+        translation: 'That book, (it\'s been) put on the table.',
+        explanation: '**那本书** (that book) is the Topic. Inside the Comment, the actual subject (whoever placed the book) is never stated. But there\'s something more: the dropped **[它]** (it) clearly refers *back* to the book in the Topic. The Topic is not just setting the scene; it is literally acting as the hidden subject of the action that follows. The **red arc** in the tree draws a connecting line from the ghost node back to the Topic, making this invisible link visible. This is one of the most common patterns in Mandarin: name a topic, then silently use it as the subject.',
         tree: {
             id: 'n15',
             role: 'Sentence',
@@ -1365,8 +1365,8 @@ export const sampleSentences: SentenceData[] = [
         category: 'Basic Topic–Comment (主题评论)',
         chinese: '张三，爱唱歌。',
         pinyin: 'Zhāng Sān , ài chàng gē .',
-        translation: 'Zhang San — (he) loves singing.',
-        explanation: '**张三** (Zhang San, a personal name) is the Topic. The Comment describes what he does — loves singing. But the grammatical subject of "loves" (爱唱歌) is never stated; the listener understands it is the same Zhang San who was just named. The **red arc** in the tree runs from the invisible **[他]** node back to 张三, making that link visible. Naming someone as the Topic and then talking about them without repeating the name is one of the most natural patterns in everyday Mandarin conversation.',
+        translation: 'Zhang San, (he) loves singing.',
+        explanation: '**张三** (Zhang San, a personal name) is the Topic. The Comment describes what he does: loves singing. But the grammatical subject of "loves" (爱唱歌) is never stated; the listener understands it is the same Zhang San who was just named. The **red arc** in the tree runs from the invisible **[他]** node back to 张三, making that link visible. Naming someone as the Topic and then talking about them without repeating the name is one of the most natural patterns in everyday Mandarin conversation.',
         tree: {
             id: 'n16',
             role: 'Sentence',
@@ -1403,7 +1403,7 @@ export const sampleSentences: SentenceData[] = [
                                         {
                                             id: 'n16-vp-obj-hv',
                                             role: 'Verb Phrase',
-                                            subRole: 'separable verb (离合词) — 唱歌',
+                                            subRole: 'separable verb (离合词): 唱歌',
                                             children: [
                                                 {
                                                     id: 'n16-vp-obj-hv-vm',
@@ -1433,7 +1433,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '说想学中文。',
         pinyin: 'Shuō xiǎng xué Zhōng wén .',
         translation: '(He) said (he) wants to learn Chinese.',
-        explanation: 'This sentence drops **two subjects**: the outer one (who said it) and the inner one (who wants to learn) — both are **[他]** (he), shown as ghost nodes in the tree. But here is the twist: these pronouns refer to someone in the **preceding sentence** (the grey card above), not anyone named in this sentence\'s own tree. The person was mentioned one sentence earlier, so Mandarin simply leaves them out here. It sounds incomplete in English, but it is completely natural in Mandarin when the context is clear.',
+        explanation: 'This sentence drops **two subjects**: the outer one (who said it) and the inner one (who wants to learn), both are **[他]** (he), shown as ghost nodes in the tree. But here is the twist: these pronouns refer to someone in the **preceding sentence** (the grey card above), not anyone named in this sentence\'s own tree. The person was mentioned one sentence earlier, so Mandarin simply leaves them out here. It sounds incomplete in English, but it is completely natural in Mandarin when the context is clear.',
         discourseContext: {
             chinese: '张三昨天来找我了。',
             pinyin: 'Zhāng Sān zuó tiān lái zhǎo wǒ le .',
@@ -1448,7 +1448,7 @@ export const sampleSentences: SentenceData[] = [
                     role: 'Topic',
                     isDropped: true,
                     impliedText: '他',
-                    // no refersToId — the referent is established in the preceding sentence,
+                    // no refersToId: the referent is established in the preceding sentence,
                     // not within this tree (discourse-level, not sentence-level)
                 },
                 {
@@ -1518,7 +1518,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '非常有意思。',
         pinyin: 'Fēi cháng yǒu yì si .',
         translation: '(It\'s) really interesting.',
-        explanation: 'Just four words — and the subject is completely silent. The tree shows a ghost **[它]** (it) as the dropped topic, but the thing it refers to is the **book from the previous sentence**, shown in the grey card above. Once a topic is introduced in conversation, Mandarin can go several sentences without repeating it. What sounds like an incomplete fragment in English ("really interesting") is a perfectly formed, natural sentence in Mandarin. It is a vivid example of how much work context does in the language.',
+        explanation: 'Just four words, and the subject is completely silent. The tree shows a ghost **[它]** (it) as the dropped topic, but the thing it refers to is the **book from the previous sentence**, shown in the grey card above. Once a topic is introduced in conversation, Mandarin can go several sentences without repeating it. What sounds like an incomplete fragment in English ("really interesting") is a perfectly formed, natural sentence in Mandarin. It is a vivid example of how much work context does in the language.',
         discourseContext: {
             chinese: '我买了一本新书。',
             pinyin: 'Wǒ mǎi le yī běn xīn shū .',
@@ -1577,7 +1577,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '他学中文学了五年了。',
         pinyin: 'Tā xué Zhōng wén xué le wǔ nián le.',
         translation: 'He has been studying Chinese for five years now.',
-        explanation: 'When a Mandarin verb has both an **object** (the thing acted on) and a **duration** (how long), you cannot place them side by side — the verb must be **repeated**. First: **学中文** (study Chinese — verb + object). Then: **学了五年** (studied for five years — same verb again, now followed by the time). In English we just say "studied Chinese for five years" — one verb, no repetition. Mandarin separates the two ideas into two verb phrases, glued by repeating the verb. The final **了** signals that the studying is still ongoing up to this moment.',
+        explanation: 'When a Mandarin verb has both an **object** (the thing acted on) and a **duration** (how long), you cannot place them side by side; the verb must be **repeated**. First: **学中文** (study Chinese, verb + object). Then: **学了五年** (studied for five years, same verb again, now followed by the time). In English we just say "studied Chinese for five years": one verb, no repetition. Mandarin separates the two ideas into two verb phrases, glued by repeating the verb. The final **了** signals that the studying is still ongoing up to this moment.',
         tree: {
             id: 'n19',
             role: 'Sentence',
@@ -1663,7 +1663,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '她写的汉字跟老师写的一样漂亮。',
         pinyin: 'Tā xiě de hàn zì gēn lǎo shī xiě de yī yàng piāo liang.',
         translation: 'The hanzi she writes is just as beautiful as the teacher\'s.',
-        explanation: 'Mandarin\'s equality comparison places **跟** (gēn — "compared with") before the standard being compared, and **一样** (yīyàng — "the same") before the adjective. The frame is: **A 跟 B 一样 [adj]** — "A is equally [adj] as B". Notice that both sides describe a whole noun phrase: 她写的汉字 (the hanzi she writes) vs 老师写的 (what the teacher writes). This construction never uses **比** (bǐ — the word for "more than"); 比 means one side beats the other, while 跟…一样 means they are *equal*.',
+        explanation: 'Mandarin\'s equality comparison places **跟** (gēn, "compared with") before the standard being compared, and **一样** (yīyàng, "the same") before the adjective. The frame is: **A 跟 B 一样 [adj]**: "A is equally [adj] as B". Notice that both sides describe a whole noun phrase: 她写的汉字 (the hanzi she writes) vs 老师写的 (what the teacher writes). This construction never uses **比** (bǐ, the word for "more than"); 比 means one side beats the other, while 跟…一样 means they are *equal*.',
         tree: {
             id: 'n20',
             role: 'Sentence',
@@ -1771,7 +1771,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '他跑得像风一样快。',
         pinyin: 'Tā pǎo de xiàng fēng yī yàng kuài.',
         translation: 'He runs as fast as the wind.',
-        explanation: 'This sentence uses **像…一样** (xiàng…yīyàng) to draw a vivid simile — literally "like [something], the same [quality]". The structure **verb + 得** links the verb to how well or how much the action was done; everything after 得 is the **degree complement**. Inside that complement: **像风** (like the wind) sets up the image, **一样** says "equally," and **快** (fast) is the adjective being compared. In English we use "as … as": "as fast as the wind." Unlike 跟…一样 (which compares two real things), 像…一样 often introduces a poetic or figurative standard — the wind, a tiger, a machine.',
+        explanation: 'This sentence uses **像…一样** (xiàng…yīyàng) to draw a vivid simile, literally "like [something], the same [quality]". The structure **verb + 得** links the verb to how well or how much the action was done; everything after 得 is the **degree complement**. Inside that complement: **像风** (like the wind) sets up the image, **一样** says "equally," and **快** (fast) is the adjective being compared. In English we use "as … as": "as fast as the wind." Unlike 跟…一样 (which compares two real things), 像…一样 often introduces a poetic or figurative standard: the wind, a tiger, a machine.',
         tree: {
             id: 'n21',
             role: 'Sentence',
@@ -1850,7 +1850,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '我的钱包被人偷了。',
         pinyin: 'Wǒ de qián bāo bèi rén tōu le.',
         translation: 'My wallet was stolen.',
-        explanation: 'The Topic is **我的钱包** (my wallet) — the thing that was acted upon. Inside the Comment, **被** (bèi) introduces the agent: **人** (someone, literally "a person"). Then comes the verb **偷** (steal) and completion marker **了**. Compared to s6, this is a simpler and more everyday form of the BEI passive. Notice that 被 does not always name a specific agent; here it just says "by someone." The BEI frame always flips normal word order: instead of "person stole wallet," the wallet is foregrounded as Topic, and 被 marks that it is the *receiver* of the action.',
+        explanation: 'The Topic is **我的钱包** (my wallet), the thing that was acted upon. Inside the Comment, **被** (bèi) introduces the agent: **人** (someone, literally "a person"). Then comes the verb **偷** (steal) and completion marker **了**. Compared to s6, this is a simpler and more everyday form of the BEI passive. Notice that 被 does not always name a specific agent; here it just says "by someone." The BEI frame always flips normal word order: instead of "person stole wallet," the wallet is foregrounded as Topic, and 被 marks that it is the *receiver* of the action.',
         tree: {
             id: 'n22',
             role: 'Sentence',
@@ -1916,7 +1916,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '我是在上海长大的。',
         pinyin: 'Wǒ shì zài Shàng hǎi zhǎng dà de.',
         translation: 'It was in Shanghai that I grew up.',
-        explanation: 'Compare this with s8: both use **是…的** to highlight one specific detail. In s8 the spotlight was on *when and where* something happened. Here it\'s on *where* the speaker grew up. The verb **长大** (grow up) is not in doubt — the speaker definitely grew up somewhere. **是** acts like "was" and **的** wraps the clause into "the one that [grew up in Shanghai]." Together they bracket the location **在上海** as the key piece of info. Strip away 是 and 的 and you get a plain sentence (我在上海长大); add them back and the sentence says "Shanghai is the answer you\'re looking for." This is one of the most useful frames for answering "where/when/how did you…?" questions in Mandarin.',
+        explanation: 'Compare this with s8: both use **是…的** to highlight one specific detail. In s8 the spotlight was on *when and where* something happened. Here it\'s on *where* the speaker grew up. The verb **长大** (grow up) is not in doubt; the speaker definitely grew up somewhere. **是** acts like "was" and **的** wraps the clause into "the one that [grew up in Shanghai]." Together they bracket the location **在上海** as the key piece of info. Strip away 是 and 的 and you get a plain sentence (我在上海长大); add them back and the sentence says "Shanghai is the answer you\'re looking for." This is one of the most useful frames for answering "where/when/how did you…?" questions in Mandarin.',
         tree: {
             id: 'n23',
             role: 'Sentence',
@@ -1934,7 +1934,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n23-shi',
                             role: 'Copula',
-                            subRole: 'cleft opener — it was…',
+                            subRole: 'cleft opener: it was…',
                             text: { hanzi: '是', pinyin: 'shì', translation: '(it was…)' }
                         },
                         {
@@ -1983,7 +1983,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '她早上散了一个小时的步。',
         pinyin: 'Tā zǎo shàng sàn le yī gè xiǎo shí de bù.',
         translation: 'She took a one-hour walk this morning.',
-        explanation: '**散步** (walk/stroll) is another separable verb: 散 (scatter, disperse → take a stroll) and 步 (step/pace). Here, **了一个小时的** (one hour of) is inserted directly between the two halves. In English you would just say "walked for an hour" — one verb, duration at the end. Mandarin must insert the duration *inside* the verb because 步 acts as an internal object. The 的 before 步 is a special linker that glues the duration phrase to the noun morpheme. This insertion pattern — verb + aspect/duration + 的 + object morpheme — is the standard template for separable verbs with time complements.',
+        explanation: '**散步** (walk/stroll) is another separable verb: 散 (scatter, disperse → take a stroll) and 步 (step/pace). Here, **了一个小时的** (one hour of) is inserted directly between the two halves. In English you would just say "walked for an hour": one verb, duration at the end. Mandarin must insert the duration *inside* the verb because 步 acts as an internal object. The 的 before 步 is a special linker that glues the duration phrase to the noun morpheme. This insertion pattern (verb + aspect/duration + 的 + object morpheme) is the standard template for separable verbs with time complements.',
         tree: {
             id: 'n24',
             role: 'Sentence',
@@ -2011,7 +2011,7 @@ export const sampleSentences: SentenceData[] = [
                                 {
                                     id: 'n24-vp-v',
                                     role: 'Head Verb',
-                                    subRole: 'separable verb (离合词) — verb morpheme of 散步',
+                                    subRole: 'separable verb (离合词): verb morpheme of 散步',
                                     text: { hanzi: '散', pinyin: 'sàn', translation: 'stroll / disperse' },
                                 },
                                 {
@@ -2068,8 +2068,8 @@ export const sampleSentences: SentenceData[] = [
         category: 'Double Topic (双主题)',
         chinese: '那家饭馆，菜很好吃，价钱也不贵。',
         pinyin: 'Nà jiā fàn guǎn, cài hěn hǎo chī, jià qián yě bù guì.',
-        translation: 'That restaurant — the food is delicious and the price is not expensive either.',
-        explanation: 'This sentence has **two layers of topic**. The outer Topic — **那家饭馆** (that restaurant) — sets the scene for the whole sentence. Then, inside the Comment, Mandarin doesn\'t switch to English-style subject+verb sentences. Instead it uses *two mini-topics* in sequence: **菜** (food) and **价钱** (price). Each one is followed by its own comment. This "whole–part" structure, where you name a container and then make statements about its parts, is extremely common and natural in Mandarin. The tree shows the nesting: Sentence → [outer Topic | Comment → [inner Topic–Comment 1 | inner Topic–Comment 2]].',
+        translation: 'That restaurant, the food is delicious and the price is not expensive either.',
+        explanation: 'This sentence has **two layers of topic**. The outer Topic, **那家饭馆** (that restaurant), sets the scene for the whole sentence. Then, inside the Comment, Mandarin doesn\'t switch to English-style subject+verb sentences. Instead it uses *two mini-topics* in sequence: **菜** (food) and **价钱** (price). Each one is followed by its own comment. This "whole–part" structure, where you name a container and then make statements about its parts, is extremely common and natural in Mandarin. The tree shows the nesting: Sentence → [outer Topic | Comment → [inner Topic–Comment 1 | inner Topic–Comment 2]].',
         tree: {
             id: 'n25',
             role: 'Sentence',
@@ -2157,8 +2157,8 @@ export const sampleSentences: SentenceData[] = [
         category: 'Double Topic (双主题)',
         chinese: '大象，鼻子长，耳朵大。',
         pinyin: 'Dà xiàng, bí zi cháng, ěr duo dà.',
-        translation: 'Elephants — their trunk is long and their ears are big.',
-        explanation: 'The classic **whole–part double topic** pattern. **大象** (elephant) is the outer Topic — it frames everything. Inside the Comment, the sentence doesn\'t give the elephant a verb straightaway. Instead it picks two parts of the elephant — **鼻子** (trunk) and **耳朵** (ears) — and uses each as an inner Topic, followed by a simple adjective Comment. This is a very common approach in Mandarin: name the big thing first, then describe its parts one by one. No verb like 是 (is) is needed — Mandarin adjectives can directly act as descriptions on their own.',
+        translation: 'Elephants, their trunk is long and their ears are big.',
+        explanation: 'The classic **whole–part double topic** pattern. **大象** (elephant) is the outer Topic; it frames everything. Inside the Comment, the sentence doesn\'t give the elephant a verb straightaway. Instead it picks two parts of the elephant, **鼻子** (trunk) and **耳朵** (ears), and uses each as an inner Topic, followed by a simple adjective Comment. This is a very common approach in Mandarin: name the big thing first, then describe its parts one by one. No verb like 是 (is) is needed; Mandarin adjectives can directly act as descriptions on their own.',
         tree: {
             id: 'n26',
             role: 'Sentence',
@@ -2183,7 +2183,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n26-c-p1',
                             role: 'Comment',
-                            subRole: 'inner comment 1 — adjectival predicate',
+                            subRole: 'inner comment 1: adjectival predicate',
                             children: [
                                 {
                                     id: 'n26-c-p1-adj',
@@ -2201,7 +2201,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n26-c-p2',
                             role: 'Comment',
-                            subRole: 'inner comment 2 — adjectival predicate',
+                            subRole: 'inner comment 2: adjectival predicate',
                             children: [
                                 {
                                     id: 'n26-c-p2-adj',
@@ -2221,7 +2221,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '这件事，我觉得你的想法很有道理。',
         pinyin: 'Zhè jiàn shì, wǒ jué de nǐ de xiǎng fǎ hěn yǒu dào lǐ.',
         translation: 'As for this matter, I think your idea makes a lot of sense.',
-        explanation: 'This sentence has **three layers of embedding**. The outermost Topic — **这件事** (this matter) — establishes the discourse frame. Then the Comment is itself a full clause: **我觉得** (I think), where **我** (I) is the subject and **觉得** is the verb. But the object of 觉得 is *yet another* clause: **你的想法很有道理** (your idea is very reasonable) — and even inside that clause, **你的想法** (your idea) acts as an inner topic before the comment **很有道理**. This chain of embedded clauses is perfectly natural in spoken Mandarin and is far more transparent in a tree than in a linear translation.',
+        explanation: 'This sentence has **three layers of embedding**. The outermost Topic, **这件事** (this matter), establishes the discourse frame. Then the Comment is itself a full clause: **我觉得** (I think), where **我** (I) is the subject and **觉得** is the verb. But the object of 觉得 is *yet another* clause: **你的想法很有道理** (your idea is very reasonable), and even inside that clause, **你的想法** (your idea) acts as an inner topic before the comment **很有道理**. This chain of embedded clauses is perfectly natural in spoken Mandarin and is far more transparent in a tree than in a linear translation.',
         tree: {
             id: 'n27',
             role: 'Sentence',
@@ -2324,7 +2324,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '请把窗户关上。',
         pinyin: 'Qǐng bǎ chuāng hu guān shàng.',
         translation: 'Please close the window.',
-        explanation: 'A minimal, everyday BA sentence. **请** (please) is a politeness adverb. Then **把** spotlights **窗户** (the window) before the verb — this is the classic BA move: take the object and bring it in front of the verb to show it will be *affected*. The verb **关** (close) is followed by the directional complement **上** (up/onto — here meaning "shut"). The pattern **把 [thing] [verb]+[result]** is the standard template for giving instructions or describing a deliberate act with a clear outcome on an object.',
+        explanation: 'A minimal, everyday BA sentence. **请** (please) is a politeness adverb. Then **把** spotlights **窗户** (the window) before the verb; this is the classic BA move: take the object and bring it in front of the verb to show it will be *affected*. The verb **关** (close) is followed by the directional complement **上** (up/onto, here meaning "shut"). The pattern **把 [thing] [verb]+[result]** is the standard template for giving instructions or describing a deliberate act with a clear outcome on an object.',
         tree: {
             id: 'n28',
             role: 'Sentence',
@@ -2390,7 +2390,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '她把那封信藏在枕头下面了。',
         pinyin: 'Tā bǎ nà fēng xìn cáng zài zhěn tou xià miàn le.',
         translation: 'She hid that letter under the pillow.',
-        explanation: '**她** (she) is the Topic. The Comment uses **把** to spotlight **那封信** (that letter) — 封 is the measure word for letters and envelopes. The verb **藏** (hide) is then followed by a location phrase: **在枕头下面** (under the pillow). This location tells you *where the object ended up* — the final resting state after the action. This shows BA\'s core job: once you\'ve fronted the object, the verb naturally attaches a result or destination. Compare with English: "She hid the letter under the pillow" — Mandarin and English are parallel here, but Mandarin uses 把 to mark the intent and outcome much more explicitly.',
+        explanation: '**她** (she) is the Topic. The Comment uses **把** to spotlight **那封信** (that letter, where 封 is the measure word for letters and envelopes. The verb **藏** (hide) is then followed by a location phrase: **在枕头下面** (under the pillow). This location tells you *where the object ended up*: the final resting state after the action. This shows BA\'s core job: once you\'ve fronted the object, the verb naturally attaches a result or destination. Compare with English: "She hid the letter under the pillow"; Mandarin and English are parallel here, but Mandarin uses 把 to mark the intent and outcome much more explicitly.',
         tree: {
             id: 'n29',
             role: 'Sentence',
@@ -2567,7 +2567,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '她哭红了眼睛。',
         pinyin: 'Tā kū hóng le yǎn jing.',
         translation: 'She cried her eyes red.',
-        explanation: '**她** (she) is the Topic. The verb **哭** (cry) stacks with the adjective **红** (red), meaning the crying *caused* a result: the eyes turned red. The object **眼睛** (eyes) is the thing that changed, not what was cried. Compare with the English phrasing: "She cried her eyes red" — both languages use the same compact pattern. This kind of verb + result stacking is found everywhere in Mandarin: 笑哭了 (laugh until you cry), 吃撑了 (eat until stuffed), 写累了 (write until tired) — any action that causes a change of state can use this frame.',
+        explanation: '**她** (she) is the Topic. The verb **哭** (cry) stacks with the adjective **红** (red), meaning the crying *caused* a result: the eyes turned red. The object **眼睛** (eyes) is the thing that changed, not what was cried. Compare with the English phrasing: "She cried her eyes red"; both languages use the same compact pattern. This kind of verb + result stacking is found everywhere in Mandarin: 笑哭了 (laugh until you cry), 吃撑了 (eat until stuffed), 写累了 (write until tired); any action that causes a change of state can use this frame.',
         tree: {
             id: 'n31',
             role: 'Sentence',
@@ -2624,7 +2624,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '老师让学生回答问题。',
         pinyin: 'Lǎo shī ràng xué sheng huí dá wèn tí.',
         translation: 'The teacher had the students answer questions.',
-        explanation: '**老师** (teacher) is the Topic. This is a **pivotal construction** (兼语句). The verb **让** (let/have) takes **学生** (students) as its object. But then — and this is the key — 学生 immediately becomes the *subject* of the next verb **回答** (answer). It plays both roles at once: object of 让, subject of 回答. The tree shows this double-function node as a **Pivot**. Verbs that create pivotal structures include 让 (let/have), 叫 (tell), 请 (invite), 使 (cause), 帮 (help). In English: "The teacher *had* the students *answer*" — the structure is the same, just without a special grammatical label.',
+        explanation: '**老师** (teacher) is the Topic. This is a **pivotal construction** (兼语句). The verb **让** (let/have) takes **学生** (students) as its object. But then, crucially, 学生 immediately becomes the *subject* of the next verb **回答** (answer). It plays both roles at once: object of 让, subject of 回答. The tree shows this double-function node as a **Pivot**. Verbs that create pivotal structures include 让 (let/have), 叫 (tell), 请 (invite), 使 (cause), 帮 (help). In English: "The teacher *had* the students *answer*"; the structure is the same, just without a special grammatical label.',
         tree: {
             id: 'n32',
             role: 'Sentence',
@@ -2685,7 +2685,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '妈妈叫我去买牛奶。',
         pinyin: 'Māma jiào wǒ qù mǎi niú nǎi.',
         translation: 'Mom told me to go buy milk.',
-        explanation: '**妈妈** (Mom) is the Topic. The verb **叫** (call/tell) creates a pivotal structure: **我** (me) serves as both the object of 叫 *and* the subject of what follows. After the pivot, there is a **serial verb construction**: **去买** — go in order to buy. Two advanced patterns stack together here, which is completely natural in everyday speech. This sentence shows why pivotal constructions matter: English hides the double-function behind \"told me to\"; Mandarin makes it visible by placing 我 at the hinge point between two verb phrases.',
+        explanation: '**妈妈** (Mom) is the Topic. The verb **叫** (call/tell) creates a pivotal structure: **我** (me) serves as both the object of 叫 *and* the subject of what follows. After the pivot, there is a **serial verb construction**: **去买**: go in order to buy. Two advanced patterns stack together here, which is completely natural in everyday speech. This sentence shows why pivotal constructions matter: English hides the double-function behind \"told me to\"; Mandarin makes it visible by placing 我 at the hinge point between two verb phrases.',
         tree: {
             id: 'n33',
             role: 'Sentence',
@@ -2760,7 +2760,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '这道题太难，我做不出来。',
         pinyin: 'Zhè dào tí tài nán, wǒ zuò bù chū lái.',
         translation: 'This question is too hard; I can\'t work it out.',
-        explanation: 'The outer Topic is **这道题** (this question — 道 is the measure word for questions and paths). The Comment plays out in two clauses: the first says *it\'s too hard*; the second says *I can\'t manage it*. The key is **做不出来**: the verb **做** (do/work) + the potential negator **不** + the directional complement **出来** (come out). Inserting **不** between the verb and its result says: *unable to achieve that result*. Swap 不 for **得** and you get 做**得**出来 — *can* work it out. This V + 得/不 + complement slot is how Mandarin expresses possibility and impossibility for almost any action.',
+        explanation: 'The outer Topic is **这道题** (this question; 道 is the measure word for questions and paths). The Comment plays out in two clauses: the first says *it\'s too hard*; the second says *I can\'t manage it*. The key is **做不出来**: the verb **做** (do/work) + the potential negator **不** + the directional complement **出来** (come out). Inserting **不** between the verb and its result says: *unable to achieve that result*. Swap 不 for **得** and you get 做**得**出来, meaning *can* work it out. This V + 得/不 + complement slot is how Mandarin expresses possibility and impossibility for almost any action.',
         tree: {
             id: 'n34',
             role: 'Sentence',
@@ -2790,7 +2790,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n34-cl1',
                             role: 'Verb Phrase',
-                            subRole: 'clause 1 — adjectival predicate',
+                            subRole: 'clause 1: adjectival predicate',
                             children: [
                                 {
                                     id: 'n34-cl1-adv',
@@ -2807,7 +2807,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n34-cl2',
                             role: 'Verb Phrase',
-                            subRole: 'clause 2 — potential complement (negative)',
+                            subRole: 'clause 2: potential complement (negative)',
                             children: [
                                 {
                                     id: 'n34-cl2-t',
@@ -2849,8 +2849,8 @@ export const sampleSentences: SentenceData[] = [
         category: 'Potential Complements (可能补语)',
         chinese: '你放心，一个小时就写得完。',
         pinyin: 'Nǐ fàng xīn, yī gè xiǎo shí jiù xiě de wán.',
-        translation: 'Don\'t worry — (you) can finish writing it in an hour.',
-        explanation: '**你放心** (don\'t worry, literally "you release heart") is a fixed opening phrase. The main clause shows the **affirmative potential complement**: **写得完** — write + **得** (can) + 完 (finish). Inserting **得** between the verb and its result says: *able to achieve that outcome*. The time phrase **一个小时** (one hour) and adverb **就** (just/only) add "in just one hour." Compare with the negative: 写**不**完 would mean *can\'t finish writing*. The only difference is that tiny 得/不 slot — one syllable switches the meaning between possible and impossible.',
+        translation: 'Don\'t worry, (you) can finish writing it in an hour.',
+        explanation: '**你放心** (don\'t worry, literally "you release heart") is a fixed opening phrase. The main clause shows the **affirmative potential complement**: **写得完**: write + **得** (can) + 完 (finish). Inserting **得** between the verb and its result says: *able to achieve that outcome*. The time phrase **一个小时** (one hour) and adverb **就** (just/only) add "in just one hour." Compare with the negative: 写**不**完 would mean *can\'t finish writing*. The only difference is that tiny 得/不 slot; one syllable switches the meaning between possible and impossible.',
         tree: {
             id: 'n35',
             role: 'Sentence',
@@ -2869,7 +2869,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n35-cl1',
                             role: 'Verb Phrase',
-                            subRole: 'clause 1 — fixed expression',
+                            subRole: 'clause 1: fixed expression',
                             children: [
                                 {
                                     id: 'n35-cl1-hv',
@@ -2881,7 +2881,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n35-cl2',
                             role: 'Verb Phrase',
-                            subRole: 'clause 2 — potential complement (affirmative)',
+                            subRole: 'clause 2: potential complement (affirmative)',
                             children: [
                                 {
                                     id: 'n35-cl2-tp',
@@ -2932,7 +2932,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '她高兴得跳了起来。',
         pinyin: 'Tā gāo xìng de tiào le qǐ lái.',
         translation: 'She was so happy she jumped up.',
-        explanation: '**她** (she) is the Topic. The Comment uses a **degree complement**: **高兴** (happy, acting as predicate) + **得** (the degree linker) + **跳了起来** (jumped up). The 得 here is not the potential marker — it is a *linker* that connects the predicate to a clause describing *the degree or consequence* of that state. The consequence of her happiness was that she jumped. This structure — [predicate] + 得 + [what happened as a result] — is one of Mandarin\'s most expressive frames: 忙得忘了吃饭 (busy-to-the-point-of-forgetting-to-eat), 累得说不出话 (tired-to-the-point-of-being-speechless).',
+        explanation: '**她** (she) is the Topic. The Comment uses a **degree complement**: **高兴** (happy, acting as predicate) + **得** (the degree linker) + **跳了起来** (jumped up). The 得 here is not the potential marker; it is a *linker* that connects the predicate to a clause describing *the degree or consequence* of that state. The consequence of her happiness was that she jumped. This structure, [predicate] + 得 + [what happened as a result], is one of Mandarin\'s most expressive frames: 忙得忘了吃饭 (busy-to-the-point-of-forgetting-to-eat), 累得说不出话 (tired-to-the-point-of-being-speechless).',
         tree: {
             id: 'n36',
             role: 'Sentence',
@@ -2994,7 +2994,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '她跑得非常快。',
         pinyin: 'Tā pǎo de fēi cháng kuài.',
         translation: 'She runs very fast.',
-        explanation: '**她** (she) is the Topic. The Comment uses the most common form of degree complement: **verb + 得 + description**. The verb **跑** (run) is linked by **得** to the description **非常快** (very fast) — this tells you *how well or how fast* the running was done. This is fundamentally different from a resultative complement (which says what *outcome* was achieved). The degree complement says *how the action was performed*. Compare: 跑**完**了 (finished the run — resultative) vs 跑**得**很快 (ran very fast — degree). One describes the outcome; the other rates the quality of the action.',
+        explanation: '**她** (she) is the Topic. The Comment uses the most common form of degree complement: **verb + 得 + description**. The verb **跑** (run) is linked by **得** to the description **非常快** (very fast); this tells you *how well or how fast* the running was done. This is fundamentally different from a resultative complement (which says what *outcome* was achieved). The degree complement says *how the action was performed*. Compare: 跑**完**了 (finished the run, resultative) vs 跑**得**很快 (ran very fast, degree). One describes the outcome; the other rates the quality of the action.',
         tree: {
             id: 'n37',
             role: 'Sentence',
@@ -3055,7 +3055,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '他走进来了。',
         pinyin: 'Tā zǒu jìn lái le.',
         translation: 'He walked in.',
-        explanation: '**他** (he) is the Topic. The Comment\'s verb **走** (walk) is followed by a **compound directional complement**: **进** (enter) + **来** (come). Together, 进来 means entering toward the speaker\'s location. The three-part structure — main verb + direction morpheme + **来/去** — is the full directional complement frame. **来** signals movement toward the speaker; **去** signals movement away. So 走**出去** would mean "walk out (away)." These complements answer the question: *which direction did the action take?* The **了** confirms the action is complete.',
+        explanation: '**他** (he) is the Topic. The Comment\'s verb **走** (walk) is followed by a **compound directional complement**: **进** (enter) + **来** (come). Together, 进来 means entering toward the speaker\'s location. The three-part structure (main verb + direction morpheme + **来/去**) is the full directional complement frame. **来** signals movement toward the speaker; **去** signals movement away. So 走**出去** would mean "walk out (away)." These complements answer the question: *which direction did the action take?* The **了** confirms the action is complete.',
         tree: {
             id: 'n38',
             role: 'Sentence',
@@ -3092,7 +3092,7 @@ export const sampleSentences: SentenceData[] = [
                                         {
                                             id: 'n38-comp-lai',
                                             role: 'Complement',
-                                            subRole: 'orientation — toward speaker',
+                                            subRole: 'orientation: toward speaker',
                                             text: { hanzi: '来', pinyin: 'lái', translation: 'come (toward speaker)' },
                                         },
                                     ],
@@ -3116,7 +3116,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '她把书拿出去了。',
         pinyin: 'Tā bǎ shū ná chū qù le.',
         translation: 'She took the book out (and away).',
-        explanation: '**她** (she) is the Topic. This sentence stacks two constructions: the BA front-object pattern and a directional complement. **把书** spotlights the book as the affected object. Then **拿** (take/carry) is followed by the directional complement **出去**: **出** (exit/out) + **去** (go). The **去** marks movement *away from the speaker* — contrast with 拿进**来** (carry in, toward speaker). When BA is combined with a directional complement, the structure is: 把 + [object] + [verb] + [direction] + 来/去. The object slots before the verb; the direction slots after.',
+        explanation: '**她** (she) is the Topic. This sentence stacks two constructions: the BA front-object pattern and a directional complement. **把书** spotlights the book as the affected object. Then **拿** (take/carry) is followed by the directional complement **出去**: **出** (exit/out) + **去** (go). The **去** marks movement *away from the speaker*. Contrast with 拿进**来** (carry in, toward speaker). When BA is combined with a directional complement, the structure is: 把 + [object] + [verb] + [direction] + 来/去. The object slots before the verb; the direction slots after.',
         tree: {
             id: 'n39',
             role: 'Sentence',
@@ -3170,7 +3170,7 @@ export const sampleSentences: SentenceData[] = [
                                         {
                                             id: 'n39-comp-qu',
                                             role: 'Complement',
-                                            subRole: 'orientation — away from speaker',
+                                            subRole: 'orientation: away from speaker',
                                             text: { hanzi: '去', pinyin: 'qù', translation: 'go (away from speaker)' },
                                         },
                                     ],
@@ -3195,7 +3195,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '我找到钥匙了。',
         pinyin: 'Wǒ zhǎo dào yào shi le.',
         translation: 'I found the key.',
-        explanation: '**我** (I) is the Topic. The resultative compound **找到** is one of the most useful in the language: **找** (look for) + **到** (arrive at / reach). The result morpheme 到 means "reached the destination of searching" — which is exactly what finding something is. This **V+到** pattern is extremely productive: 买到 (buy and obtain), 拿到 (get hold of), 看到 (look and perceive = see), 听到 (listen and perceive = hear). The 到 always signals that the action reached its target. **了** confirms the action is complete.',
+        explanation: '**我** (I) is the Topic. The resultative compound **找到** is one of the most useful in the language: **找** (look for) + **到** (arrive at / reach). The result morpheme 到 means "reached the destination of searching," which is exactly what finding something is. This **V+到** pattern is extremely productive: 买到 (buy and obtain), 拿到 (get hold of), 看到 (look and perceive = see), 听到 (listen and perceive = hear). The 到 always signals that the action reached its target. **了** confirms the action is complete.',
         tree: {
             id: 'n40',
             role: 'Sentence',
@@ -3248,7 +3248,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '他写错字了。',
         pinyin: 'Tā xiě cuò zì le.',
         translation: 'He wrote a character incorrectly.',
-        explanation: '**他** (he) is the Topic. The resultative compound **写错** — **写** (write) + **错** (wrong/mistaken) — means "wrote and the result was wrong." This is a very natural everyday pattern: you don\'t need separate words for "make a mistake writing"; one compact verb covers it. Other V+错 compounds: 说错 (say wrongly), 听错 (mishear), 拿错 (pick up the wrong thing), 走错 (go the wrong way). The object **字** (character/word) comes *after* the resultative compound — this is standard for resultatives with a regular (non-BA) object.',
+        explanation: '**他** (he) is the Topic. The resultative compound **写错**: **写** (write) + **错** (wrong/mistaken), means "wrote and the result was wrong." This is a very natural everyday pattern: you don\'t need separate words for "make a mistake writing"; one compact verb covers it. Other V+错 compounds: 说错 (say wrongly), 听错 (mishear), 拿错 (pick up the wrong thing), 走错 (go the wrong way). The object **字** (character/word) comes *after* the resultative compound; this is standard for resultatives with a regular (non-BA) object.',
         tree: {
             id: 'n41',
             role: 'Sentence',
@@ -3303,7 +3303,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '她跑上楼去了。',
         pinyin: 'Tā pǎo shàng lóu qù le.',
         translation: 'She ran upstairs (away from the speaker).',
-        explanation: '**她** (she) is the Topic. The directional complement here is **上去**: 上 (up) + 去 (away). But notice something: the object **楼** (stairs/floor) slots *between* 上 and 去. This is a key rule — when a directional complement has an object and uses a compound form (direction + 来/去), the object inserts between them: V + direction + *object* + 来/去. Compare s38 where there was no object: 走进来 (no insertion). The **上** signals upward movement; the **去** confirms it was *away* from the speaker\'s vantage.',
+        explanation: '**她** (she) is the Topic. The directional complement here is **上去**: 上 (up) + 去 (away). But notice something: the object **楼** (stairs/floor) slots *between* 上 and 去. This is a key rule: when a directional complement has an object and uses a compound form (direction + 来/去), the object inserts between them: V + direction + *object* + 来/去. Compare s38 where there was no object: 走进来 (no insertion). The **上** signals upward movement; the **去** confirms it was *away* from the speaker\'s vantage.',
         tree: {
             id: 'n42',
             role: 'Sentence',
@@ -3341,7 +3341,7 @@ export const sampleSentences: SentenceData[] = [
                                 {
                                     id: 'n42-comp-qu',
                                     role: 'Complement',
-                                    subRole: 'orientation — away from speaker',
+                                    subRole: 'orientation: away from speaker',
                                     text: { hanzi: '去', pinyin: 'qù', translation: 'go (away)' },
                                 },
                                 {
@@ -3363,7 +3363,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '他从树上摘下来一个苹果。',
         pinyin: 'Tā cóng shù shàng zhāi xià lái yī gè píng guǒ.',
         translation: 'He plucked an apple down from the tree.',
-        explanation: '**他** (he) is the Topic. The location phrase **从树上** (from the tree) sets the scene. The verb **摘** (pluck/pick) is followed by the directional compound **下来**: 下 (down) + 来 (toward speaker). After 下来 comes the indefinite object **一个苹果** (one apple). When the object is indefinite (not "the apple" but "an apple"), it typically slots *after* the full directional compound, not inside it. Compare with s42 where a definite place word (楼) slots inside. This difference — definite/place words inside vs indefinite nouns after — is one of the trickier positional rules for directional complements.',
+        explanation: '**他** (he) is the Topic. The location phrase **从树上** (from the tree) sets the scene. The verb **摘** (pluck/pick) is followed by the directional compound **下来**: 下 (down) + 来 (toward speaker). After 下来 comes the indefinite object **一个苹果** (one apple). When the object is indefinite (not "the apple" but "an apple"), it typically slots *after* the full directional compound, not inside it. Compare with s42 where a definite place word (楼) slots inside. This difference (definite/place words inside vs indefinite nouns after) is one of the trickier positional rules for directional complements.',
         tree: {
             id: 'n43',
             role: 'Sentence',
@@ -3423,7 +3423,7 @@ export const sampleSentences: SentenceData[] = [
                                         {
                                             id: 'n43-comp-lai',
                                             role: 'Complement',
-                                            subRole: 'orientation — toward speaker',
+                                            subRole: 'orientation: toward speaker',
                                             text: { hanzi: '来', pinyin: 'lái', translation: 'come (toward speaker)' },
                                         },
                                     ],
@@ -3431,7 +3431,7 @@ export const sampleSentences: SentenceData[] = [
                                 {
                                     id: 'n43-obj',
                                     role: 'Object',
-                                    subRole: 'indefinite object — follows full complement',
+                                    subRole: 'indefinite object: follows full complement',
                                     children: [
                                         {
                                             id: 'n43-obj-attr',
@@ -3460,7 +3460,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '这本书你看得懂吗？',
         pinyin: 'Zhè běn shū nǐ kàn de dǒng ma？',
         translation: 'Can you understand this book?',
-        explanation: 'A **double-topic** structure with a potential complement question. **这本书** (this book — 本 is the measure word for books) is the outer Topic. **你** (you) is the inner Topic. The potential complement **看得懂** uses **看** (read/look) + **得** + **懂** (understand): *can read-to-the-point-of-understanding*. The **吗** at the end turns it into a yes/no question. To answer yes: 看**得**懂 (can understand). To answer no: 看**不**懂 (can\'t understand). This is a natural question form when politely checking comprehension.',
+        explanation: 'A **double-topic** structure with a potential complement question. **这本书** (this book; 本 is the measure word for books) is the outer Topic. **你** (you) is the inner Topic. The potential complement **看得懂** uses **看** (read/look) + **得** + **懂** (understand): *can read-to-the-point-of-understanding*. The **吗** at the end turns it into a yes/no question. To answer yes: 看**得**懂 (can understand). To answer no: 看**不**懂 (can\'t understand). This is a natural question form when politely checking comprehension.',
         tree: {
             id: 'n44',
             role: 'Sentence',
@@ -3531,8 +3531,8 @@ export const sampleSentences: SentenceData[] = [
         category: 'Potential Complements (可能补语)',
         chinese: '昨晚我睡不着，一直到天亮。',
         pinyin: 'Zuó wǎn wǒ shuì bu zháo, yī zhí dào tiān liàng.',
-        translation: 'Last night I couldn\'t fall asleep — right up until dawn.',
-        explanation: 'The time phrase **昨晚** (last night) sets the scene. **我** (I) is the Topic. The potential complement **睡不着** — **睡** (sleep) + **不** + **着** (着 here means "catch / latch onto": the state of being asleep was unreachable) — conveys the inability to *reach* the state of sleep. This is a uniquely vivid potential complement: 着 as a result morpheme expresses "catching" or "settling into" a state. Compare: 找得着 (can find / manage to locate), 猜不着 (can\'t guess). The second clause **一直到天亮** (straight until dawn) extends the picture.',
+        translation: 'Last night I couldn\'t fall asleep, right up until dawn.',
+        explanation: 'The time phrase **昨晚** (last night) sets the scene. **我** (I) is the Topic. The potential complement **睡不着**: **睡** (sleep) + **不** + **着** (着 here means "catch / latch onto": the state of being asleep was unreachable), conveys the inability to *reach* the state of sleep. This is a uniquely vivid potential complement: 着 as a result morpheme expresses "catching" or "settling into" a state. Compare: 找得着 (can find / manage to locate), 猜不着 (can\'t guess). The second clause **一直到天亮** (straight until dawn) extends the picture.',
         tree: {
             id: 'n45',
             role: 'Sentence',
@@ -3555,7 +3555,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n45-cl1',
                             role: 'Verb Phrase',
-                            subRole: 'clause 1 — potential complement (negative)',
+                            subRole: 'clause 1: potential complement (negative)',
                             children: [
                                 {
                                     id: 'n45-hv',
@@ -3579,7 +3579,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n45-cl2',
                             role: 'Verb Phrase',
-                            subRole: 'clause 2 — extent',
+                            subRole: 'clause 2: extent',
                             children: [
                                 {
                                     id: 'n45-adv',
@@ -3611,7 +3611,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '他气得说不出话来。',
         pinyin: 'Tā qì de shuō bu chū huà lái.',
         translation: 'He was so angry he couldn\'t get a word out.',
-        explanation: '**他** (he) is the Topic. This sentence elegantly stacks two complement types within one structure. The degree complement frame: **气** (be angry) + **得** (degree linker) + [consequence clause]. The consequence clause is itself a *negative potential complement*: **说不出话来** — speak + 不 + exit + words + come = "couldn\'t speak words out." So we have: degree complement whose consequence is expressed via a potential complement. This kind of nesting is entirely natural in Mandarin and shows how these complement types interact. The sentence tells you both *how intense* the anger was and *what its consequence* was.',
+        explanation: '**他** (he) is the Topic. This sentence elegantly stacks two complement types within one structure. The degree complement frame: **气** (be angry) + **得** (degree linker) + [consequence clause]. The consequence clause is itself a *negative potential complement*: **说不出话来** (speak + 不 + exit + words + come = "couldn\'t speak words out." So we have: degree complement whose consequence is expressed via a potential complement. This kind of nesting is entirely natural in Mandarin and shows how these complement types interact. The sentence tells you both *how intense* the anger was and *what its consequence* was.',
         tree: {
             id: 'n46',
             role: 'Sentence',
@@ -3641,7 +3641,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n46-comp',
                             role: 'Complement',
-                            subRole: 'degree — consequence (itself a negative potential complement)',
+                            subRole: 'degree: consequence (itself a negative potential complement)',
                             children: [
                                 {
                                     id: 'n46-comp-hv',
@@ -3668,7 +3668,7 @@ export const sampleSentences: SentenceData[] = [
                                 {
                                     id: 'n46-comp-lai',
                                     role: 'Complement',
-                                    subRole: 'orientation — toward speaker (coming out)',
+                                    subRole: 'orientation: toward speaker (coming out)',
                                     text: { hanzi: '来', pinyin: 'lái', translation: 'come (complete the exit)' },
                                 },
                             ],
@@ -3684,7 +3684,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '她把房间打扫得干干净净。',
         pinyin: 'Tā bǎ fáng jiān dǎ sǎo de gān gān jìng jìng.',
         translation: 'She cleaned the room spotlessly.',
-        explanation: '**她** (she) is the Topic. This sentence combines two constructions: the BA object-fronting pattern and a degree complement. **把房间** spotlights the room as the thing that gets cleaned. The verb **打扫** (clean/sweep) is followed by **得** and then **干干净净** (spotlessly clean — a reduplicated form of 干净 for emphasis). The degree complement here rates the *quality of the action*: how cleanly she cleaned. Note that with BA + a transitive verb, the degree complement attaches after 得 at the end — the word order is: 把 + [object] + [verb] + 得 + [degree description].',
+        explanation: '**她** (she) is the Topic. This sentence combines two constructions: the BA object-fronting pattern and a degree complement. **把房间** spotlights the room as the thing that gets cleaned. The verb **打扫** (clean/sweep) is followed by **得** and then **干干净净** (spotlessly clean, a reduplicated form of 干净 for emphasis). The degree complement here rates the *quality of the action*: how cleanly she cleaned. Note that with BA + a transitive verb, the degree complement attaches after 得 at the end; the word order is: 把 + [object] + [verb] + 得 + [degree description].',
         tree: {
             id: 'n47',
             role: 'Sentence',
@@ -3751,7 +3751,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '那封信被他撕掉了。',
         pinyin: 'Nà fēng xìn bèi tā sī diào le.',
         translation: 'That letter was torn up by him.',
-        explanation: '**那封信** (that letter) is the Topic — the thing affected. **被** introduces the agent: **他** (he/him). The verb **撕** (tear) is followed by the resultative complement **掉** (off / away — signals destruction or removal). BEI sentences almost always require a complement or 了 after the verb; bare *被+agent+verb* sounds incomplete. The **掉** tells you the letter didn\'t just get torn — it was torn *to pieces* or *away*. Compare: 撕破 (torn broken), 撕碎 (torn to shreds) — each complement shades the result differently.',
+        explanation: '**那封信** (that letter) is the Topic, the thing affected. **被** introduces the agent: **他** (he/him). The verb **撕** (tear) is followed by the resultative complement **掉** (off / away, signals destruction or removal). BEI sentences almost always require a complement or 了 after the verb; bare *被+agent+verb* sounds incomplete. The **掉** tells you the letter didn\'t just get torn; it was torn *to pieces* or *away*. Compare: 撕破 (torn broken), 撕碎 (torn to shreds); each complement shades the result differently.',
         tree: {
             id: 'n48',
             role: 'Sentence',
@@ -3828,7 +3828,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '小偷被警察抓住了。',
         pinyin: 'Xiǎo tōu bèi jǐng chá zhuā zhù le.',
         translation: 'The thief was caught by the police.',
-        explanation: '**小偷** (thief) is the Topic — the person affected. **被** marks the passive; **警察** (police) is the agent. The verb **抓** (grab/catch) is followed by the resultative complement **住** (firmly / hold in place). The **住** is key — it signals that the catching *stuck*: the thief didn\'t just get grabbed momentarily, he was held fast. The pattern V+住 is very common for actions that result in a fixed state: 记住 (remember firmly), 站住 (stand still / halt), 拿住 (hold onto). BEI + resultative is the most natural BEI pattern in speech.',
+        explanation: '**小偷** (thief) is the Topic, the person affected. **被** marks the passive; **警察** (police) is the agent. The verb **抓** (grab/catch) is followed by the resultative complement **住** (firmly / hold in place). The **住** is key: it signals that the catching *stuck*: the thief didn\'t just get grabbed momentarily, he was held fast. The pattern V+住 is very common for actions that result in a fixed state: 记住 (remember firmly), 站住 (stand still / halt), 拿住 (hold onto). BEI + resultative is the most natural BEI pattern in speech.',
         tree: {
             id: 'n49',
             role: 'Sentence',
@@ -3896,7 +3896,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '我是昨天到的。',
         pinyin: 'Wǒ shì zuó tiān dào de.',
         translation: 'It was yesterday that I arrived.',
-        explanation: '**我** (I) sets the scene — "as for me…" Then the **是…的** pattern highlights a specific detail about a past event. Here, **是** acts like "was" — *it was yesterday* — and **的** at the end wraps the action into a bundle: "the [arrived-yesterday] one." The focused detail is **昨天** (yesterday), answering a question like "When did you arrive?" Think of it as: *As for me, (I) am the one who arrived yesterday.* This is the simplest 是…的 shape: 是 + [the detail you want to stress] + verb + 的. Without 是…的 you\'d just say 我昨天到了 — a straightforward statement with no special emphasis.',
+        explanation: '**我** (I) sets the scene: "as for me…" Then the **是…的** pattern highlights a specific detail about a past event. Here, **是** acts like "was" (*it was yesterday*) and **的** at the end wraps the action into a bundle: "the [arrived-yesterday] one." The focused detail is **昨天** (yesterday), answering a question like "When did you arrive?" Think of it as: *As for me, (I) am the one who arrived yesterday.* This is the simplest 是…的 shape: 是 + [the detail you want to stress] + verb + 的. Without 是…的 you\'d just say 我昨天到了, a straightforward statement with no special emphasis.',
         tree: {
             id: 'n50',
             role: 'Sentence',
@@ -3915,7 +3915,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n50-shi',
                             role: 'Copula',
-                            subRole: 'cleft opener — it was…',
+                            subRole: 'cleft opener: it was…',
                             text: { hanzi: '是', pinyin: 'shì', translation: '(it was…)' },
                         },
                         {
@@ -3947,7 +3947,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '这件衣服是在北京买的。',
         pinyin: 'Zhè jiàn yī fu shì zài Běi jīng mǎi de.',
         translation: 'This item of clothing was bought in Beijing.',
-        explanation: '**这件衣服** (this item of clothing — 件 is the measure word for garments) sets the scene — "as for this clothing…" Notice the topic here is a *thing*, not a person. The **是…的** pattern then highlights *where* the buying happened. **是** acts like "was," and the focused detail is **在北京** (in Beijing). **的** at the end packages the action: "the [bought-in-Beijing] one." So the sentence reads: *As for this clothing, (it) is the one that was bought in Beijing.* This answers a question like "Where was it bought?" The buyer isn\'t stated — Mandarin often leaves it out when it\'s obvious from context. Compare: 这件衣服是谁买的？ — *Who* was it that bought this? Same pattern, just swapping the focused detail.',
+        explanation: '**这件衣服** (this item of clothing; 件 is the measure word for garments) sets the scene: "as for this clothing…" Notice the topic here is a *thing*, not a person. The **是…的** pattern then highlights *where* the buying happened. **是** acts like "was," and the focused detail is **在北京** (in Beijing). **的** at the end packages the action: "the [bought-in-Beijing] one." So the sentence reads: *As for this clothing, (it) is the one that was bought in Beijing.* This answers a question like "Where was it bought?" The buyer isn\'t stated; Mandarin often leaves it out when it\'s obvious from context. Compare: 这件衣服是谁买的？ (*Who* was it that bought this?) Same pattern, just swapping the focused detail.',
         tree: {
             id: 'n51',
             role: 'Sentence',
@@ -3977,7 +3977,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n51-shi',
                             role: 'Copula',
-                            subRole: 'cleft opener — it was…',
+                            subRole: 'cleft opener: it was…',
                             text: { hanzi: '是', pinyin: 'shì', translation: '(it was…)' },
                         },
                         {
@@ -4022,7 +4022,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '公司派他去谈判。',
         pinyin: 'Gōng sī pài tā qù tán pàn.',
         translation: 'The company sent him to negotiate.',
-        explanation: '**公司** (company) is the Topic. The verb **派** (dispatch/send) takes **他** (him) as its object — but 他 simultaneously becomes the subject of what follows: **去谈判** (go negotiate). This is the pivot. Unlike s32 and s33 where the pivot verbs were 让/叫 (permission/command), here **派** implies authority and assignment — the company dispatched him. The embedded predicate uses a serial verb: 去 (go) + 谈判 (negotiate), showing purpose chaining inside a pivotal frame. Mandarin layers these patterns with ease.',
+        explanation: '**公司** (company) is the Topic. The verb **派** (dispatch/send) takes **他** (him) as its object, but 他 simultaneously becomes the subject of what follows: **去谈判** (go negotiate). This is the pivot. Unlike s32 and s33 where the pivot verbs were 让/叫 (permission/command), here **派** implies authority and assignment: the company dispatched him. The embedded predicate uses a serial verb: 去 (go) + 谈判 (negotiate), showing purpose chaining inside a pivotal frame. Mandarin layers these patterns with ease.',
         tree: {
             id: 'n52',
             role: 'Sentence',
@@ -4085,7 +4085,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '她请我吃饭。',
         pinyin: 'Tā qǐng wǒ chī fàn.',
         translation: 'She invited me to eat (out / to dinner).',
-        explanation: '**她** (she) is the Topic. **请** (invite/treat) creates the pivotal structure: **我** (me) is both the object of 请 and the subject of **吃饭** (eat a meal). The verb 请 has a special cultural weight in Mandarin — 请你吃饭 often implies treating someone to a meal (paying for them). The embedded predicate 吃饭 is itself a simple VO compound. This sentence is a good contrast with s32 (让) and s33 (叫): 请 implies hospitality and courtesy, while 让/叫 imply permission or command — same syntactic frame, very different social register.',
+        explanation: '**她** (she) is the Topic. **请** (invite/treat) creates the pivotal structure: **我** (me) is both the object of 请 and the subject of **吃饭** (eat a meal). The verb 请 has a special cultural weight in Mandarin. 请你吃饭 often implies treating someone to a meal (paying for them). The embedded predicate 吃饭 is itself a simple VO compound. This sentence is a good contrast with s32 (让) and s33 (叫): 请 implies hospitality and courtesy, while 让/叫 imply permission or command, same syntactic frame, very different social register.',
         tree: {
             id: 'n53',
             role: 'Sentence',
@@ -4148,7 +4148,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '他们分了手。',
         pinyin: 'Tā men fēn le shǒu.',
         translation: 'They broke up.',
-        explanation: '**他们** (they) is the Topic. **分手** (break up) is a separable verb: **分** (split) is the verb morpheme and **手** (hand) is the object morpheme. When you insert the completion particle **了** between them, the compound splits: 分**了**手. This is the simplest split: just 了 slotting in. The separable verb frame works exactly the same way as in 见面, 散步, and 睡觉 — any particle, duration phrase, or frequency word goes between the verb half and the object half. Both 分了手 (split) and 分手了 (unsplit) are natural. The split form emphasizes the completion of the breakup; the unsplit form is more neutral.',
+        explanation: '**他们** (they) is the Topic. **分手** (break up) is a separable verb: **分** (split) is the verb morpheme and **手** (hand) is the object morpheme. When you insert the completion particle **了** between them, the compound splits: 分**了**手. This is the simplest split: just 了 slotting in. The separable verb frame works exactly the same way as in 见面, 散步, and 睡觉; any particle, duration phrase, or frequency word goes between the verb half and the object half. Both 分了手 (split) and 分手了 (unsplit) are natural. The split form emphasizes the completion of the breakup; the unsplit form is more neutral.',
         tree: {
             id: 'n54',
             role: 'Sentence',
@@ -4165,7 +4165,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n54-vp',
                             role: 'Verb Phrase',
-                            subRole: 'separable verb — split by 了',
+                            subRole: 'separable verb: split by 了',
                             children: [
                                 {
                                     id: 'n54-vm',
@@ -4196,7 +4196,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '他毕了业就出国了。',
         pinyin: 'Tā bì le yè jiù chū guó le.',
         translation: 'As soon as he graduated, he went abroad.',
-        explanation: '**他** (he) is the Topic. The separable verb **毕业** (graduate) — **毕** (finish) + **业** (studies/profession) — is split by **了** to mark completion: 毕**了**业. What follows is a serial clause: **就** (then, immediately) + **出国** (go abroad) + **了**. The sentence has a "once X, then Y" flow. Notice 毕业 and 出国 are *both* Verb-Object compounds, but only 毕业 is truly "separable" here — 出国 stays intact because nothing needs to insert. This illustrates that not every VO compound is a 离合词; separability depends on whether the grammar *forces* something between V and O.',
+        explanation: '**他** (he) is the Topic. The separable verb **毕业** (graduate): **毕** (finish) + **业** (studies/profession), is split by **了** to mark completion: 毕**了**业. What follows is a serial clause: **就** (then, immediately) + **出国** (go abroad) + **了**. The sentence has a "once X, then Y" flow. Notice 毕业 and 出国 are *both* Verb-Object compounds, but only 毕业 is truly "separable" here; 出国 stays intact because nothing needs to insert. This illustrates that not every VO compound is a 离合词; separability depends on whether the grammar *forces* something between V and O.',
         tree: {
             id: 'n55',
             role: 'Sentence',
@@ -4214,7 +4214,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n55-cl1',
                             role: 'Verb Phrase',
-                            subRole: 'clause 1 — separable verb split',
+                            subRole: 'clause 1: separable verb split',
                             children: [
                                 {
                                     id: 'n55-vm',
@@ -4237,7 +4237,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n55-cl2',
                             role: 'Verb Phrase',
-                            subRole: 'clause 2 — sequential result',
+                            subRole: 'clause 2: sequential result',
                             children: [
                                 {
                                     id: 'n55-adv',
@@ -4270,7 +4270,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '你难道不知道吗？',
         pinyin: 'Nǐ nán dào bù zhī dào ma?',
         translation: 'Don\'t you know? (Surely you must know!)',
-        explanation: '**你** (you) is the Topic. **难道** (don\'t tell me / could it be that) is the rhetorical marker — it signals that the speaker expects the opposite of what the sentence literally says. The negation **不知道** (don\'t know) combined with 难道 produces: "You couldn\'t possibly not know" → "Of course you know!" The sentence-final **吗** reinforces the questioning tone but the expected answer is already baked in. 难道 always implies surprise, disbelief, or reproach. It\'s one of the most emotionally loaded adverbs in Mandarin.',
+        explanation: '**你** (you) is the Topic. **难道** (don\'t tell me / could it be that) is the rhetorical marker: it signals that the speaker expects the opposite of what the sentence literally says. The negation **不知道** (don\'t know) combined with 难道 produces: "You couldn\'t possibly not know" → "Of course you know!" The sentence-final **吗** reinforces the questioning tone but the expected answer is already baked in. 难道 always implies surprise, disbelief, or reproach. It\'s one of the most emotionally loaded adverbs in Mandarin.',
         tree: {
             id: 'n56',
             role: 'Sentence',
@@ -4324,7 +4324,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '这件事非解决不可。',
         pinyin: 'Zhè jiàn shì fēi jiě jué bù kě.',
         translation: 'This matter absolutely must be resolved.',
-        explanation: '**这件事** (this matter — 件 is the measure word for affairs/items) is the Topic. The Comment uses the double-negation frame **非…不可**: 非 (must / unless) + verb + 不可 (not acceptable). The two negatives produce a strong affirmative: "it is not acceptable to NOT resolve it" → "it must be resolved." This is one of Mandarin\'s most emphatic constructions for expressing necessity. Unlike 难道 which questions, 非…不可 *demands*. The pattern is formulaic: 非 + [verb phrase] + 不可. You can slot any VP inside: 非去不可 (must go), 非说清楚不可 (must explain clearly).',
+        explanation: '**这件事** (this matter; 件 is the measure word for affairs/items) is the Topic. The Comment uses the double-negation frame **非…不可**: 非 (must / unless) + verb + 不可 (not acceptable). The two negatives produce a strong affirmative: "it is not acceptable to NOT resolve it" → "it must be resolved." This is one of Mandarin\'s most emphatic constructions for expressing necessity. Unlike 难道 which questions, 非…不可 *demands*. The pattern is formulaic: 非 + [verb phrase] + 不可. You can slot any VP inside: 非去不可 (must go), 非说清楚不可 (must explain clearly).',
         tree: {
             id: 'n57',
             role: 'Sentence',
@@ -4379,7 +4379,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '他骑自行车去上班。',
         pinyin: 'Tā qí zì xíng chē qù shàng bān.',
         translation: 'He rides a bicycle to go to work.',
-        explanation: '**他** (he) is the Topic. The Comment chains three VPs sharing the same subject: **骑自行车** (ride a bicycle) → **去** (go) → **上班** (go to work). No conjunctions link them — in Mandarin, serial verb constructions simply stack VPs in chronological or purpose order. VP1 describes the manner/means (riding), VP2 the motion (going), VP3 the purpose (working). This pattern is pervasive: Chinese rarely uses "and then" or "in order to" — the sequence says it all. Compare with pivotal constructions where the subject changes at the pivot; here, the subject stays the same throughout.',
+        explanation: '**他** (he) is the Topic. The Comment chains three VPs sharing the same subject: **骑自行车** (ride a bicycle) → **去** (go) → **上班** (go to work). No conjunctions link them. In Mandarin, serial verb constructions simply stack VPs in chronological or purpose order. VP1 describes the manner/means (riding), VP2 the motion (going), VP3 the purpose (working). This pattern is pervasive: Chinese rarely uses "and then" or "in order to"; the sequence says it all. Compare with pivotal constructions where the subject changes at the pivot; here, the subject stays the same throughout.',
         tree: {
             id: 'n58',
             role: 'Sentence',
@@ -4397,7 +4397,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n58-vp1',
                             role: 'Verb Phrase',
-                            subRole: 'VP1 — manner/means',
+                            subRole: 'VP1: manner/means',
                             children: [
                                 {
                                     id: 'n58-hv1',
@@ -4414,13 +4414,13 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n58-vp2',
                             role: 'Verb Phrase',
-                            subRole: 'VP2 — motion',
+                            subRole: 'VP2: motion',
                             text: { hanzi: '去', pinyin: 'qù', translation: 'go' },
                         },
                         {
                             id: 'n58-vp3',
                             role: 'Verb Phrase',
-                            subRole: 'VP3 — purpose',
+                            subRole: 'VP3: purpose',
                             text: { hanzi: '上班', pinyin: 'shàng bān', translation: 'go to work' },
                         },
                     ],
@@ -4434,7 +4434,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '我拿着伞出门了。',
         pinyin: 'Wǒ ná zhe sǎn chū mén le.',
         translation: 'I took (was holding) an umbrella and went out.',
-        explanation: '**我** (I) is the Topic. Two VPs are chained: **拿着伞** (holding an umbrella) → **出门** (go out the door). The **着** on the first verb is the durative aspect marker — it means the umbrella-holding is *ongoing* while the second action happens. This is a very common serial verb pattern: V1着 + object + V2 = "while doing V1, do V2." Examples: 听着音乐跑步 (run while listening to music), 笑着说 (say while laughing). The 着 on V1 turns it into a concurrent background action rather than a sequential step.',
+        explanation: '**我** (I) is the Topic. Two VPs are chained: **拿着伞** (holding an umbrella) → **出门** (go out the door). The **着** on the first verb is the durative aspect marker, meaning the umbrella-holding is *ongoing* while the second action happens. This is a very common serial verb pattern: V1着 + object + V2 = "while doing V1, do V2." Examples: 听着音乐跑步 (run while listening to music), 笑着说 (say while laughing). The 着 on V1 turns it into a concurrent background action rather than a sequential step.',
         tree: {
             id: 'n59',
             role: 'Sentence',
@@ -4452,7 +4452,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n59-vp1',
                             role: 'Verb Phrase',
-                            subRole: 'VP1 — concurrent background action',
+                            subRole: 'VP1: concurrent background action',
                             children: [
                                 {
                                     id: 'n59-hv1',
@@ -4475,7 +4475,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n59-vp2',
                             role: 'Verb Phrase',
-                            subRole: 'VP2 — main action',
+                            subRole: 'VP2: main action',
                             children: [
                                 {
                                     id: 'n59-hv2',
@@ -4503,7 +4503,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '中文越学越有意思。',
         pinyin: 'Zhōng wén yuè xué yuè yǒu yì si.',
         translation: 'The more you study Chinese, the more interesting it gets.',
-        explanation: '**中文** (Chinese) is the Topic. The **越…越…** (yuè…yuè…) frame pairs two clauses: **越学** (the more you study) and **越有意思** (the more interesting). The pattern is: 越 A 越 B — as A increases, B increases. The subject of 学 is dropped (pro-drop — the general "you"). This correlative frame is one of the most elegant in Mandarin: no conjunction, no relative clause — just the repeated 越 linking cause and effect. Other examples: 越吃越胖 (the more you eat, the fatter you get), 越想越难过 (the more you think about it, the sadder you feel).',
+        explanation: '**中文** (Chinese) is the Topic. The **越…越…** (yuè…yuè…) frame pairs two clauses: **越学** (the more you study) and **越有意思** (the more interesting). The pattern is: 越 A 越 B: as A increases, B increases. The subject of 学 is dropped (pro-drop, the general "you"). This correlative frame is one of the most elegant in Mandarin: no conjunction, no relative clause, just the repeated 越 linking cause and effect. Other examples: 越吃越胖 (the more you eat, the fatter you get), 越想越难过 (the more you think about it, the sadder you feel).',
         tree: {
             id: 'n60',
             role: 'Sentence',
@@ -4521,7 +4521,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n60-cl1',
                             role: 'Verb Phrase',
-                            subRole: 'clause A — condition',
+                            subRole: 'clause A: condition',
                             children: [
                                 {
                                     id: 'n60-yue1',
@@ -4539,7 +4539,7 @@ export const sampleSentences: SentenceData[] = [
                         {
                             id: 'n60-cl2',
                             role: 'Verb Phrase',
-                            subRole: 'clause B — consequence',
+                            subRole: 'clause B: consequence',
                             children: [
                                 {
                                     id: 'n60-yue2',
@@ -4630,7 +4630,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '门开着呢。',
         pinyin: 'Mén kāi zhe ne.',
         translation: 'The door is open (right now).',
-        explanation: '**门** (door) is the Topic. The verb **开** (open) carries the durative aspect marker **着** (zhe) — this doesn\'t mean "opening" (action in progress); it means the *state that resulted from opening* is still in effect. The door opened at some point and remains open now. The sentence-final **呢** (ne) reinforces the ongoing-state reading. This is **着** in its stative sense — one of its two primary functions. The other is the concurrent-action sense (V着 while doing something else, as in s59). Distinguishing these two is key: 坐着 can mean "is seated (state)" or "while sitting (concurrent)."',
+        explanation: '**门** (door) is the Topic. The verb **开** (open) carries the durative aspect marker **着** (zhe). This doesn\'t mean "opening" (action in progress); it means the *state that resulted from opening* is still in effect. The door opened at some point and remains open now. The sentence-final **呢** (ne) reinforces the ongoing-state reading. This is **着** in its stative sense, one of its two primary functions. The other is the concurrent-action sense (V着 while doing something else, as in s59). Distinguishing these two is key: 坐着 can mean "is seated (state)" or "while sitting (concurrent)."',
         tree: {
             id: 'n62',
             role: 'Sentence',
@@ -4656,7 +4656,7 @@ export const sampleSentences: SentenceData[] = [
                                 {
                                     id: 'n62-zhe',
                                     role: 'Particle',
-                                    subRole: 'durative aspect — resulting state (着)',
+                                    subRole: 'durative aspect: resulting state (着)',
                                     text: { hanzi: '着', pinyin: 'zhe', translation: '(ongoing state)' },
                                 },
                                 {
@@ -4678,7 +4678,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '你去过长城吗？',
         pinyin: 'Nǐ qù guo Cháng Chéng ma?',
         translation: 'Have you been to the Great Wall?',
-        explanation: '**你** (you) is the Topic. The verb **去** (go) is followed by the experiential aspect marker **过** (guo) — this doesn\'t ask "Did you go?" (specific past event) but "Have you ever gone?" (life experience). The difference between 了 and 过 is crucial: 我去了长城 means "I went to the Great Wall (at a specific time)"; 我去过长城 means "I\'ve been to the Great Wall (at some point in my life)." The **吗** makes it a question. To answer: 去过 (yes, I have) or 没去过 (no, never). Notice the negation uses 没, not 不 — experiential 过 always pairs with 没.',
+        explanation: '**你** (you) is the Topic. The verb **去** (go) is followed by the experiential aspect marker **过** (guo). This doesn\'t ask "Did you go?" (specific past event) but "Have you ever gone?" (life experience). The difference between 了 and 过 is crucial: 我去了长城 means "I went to the Great Wall (at a specific time)"; 我去过长城 means "I\'ve been to the Great Wall (at some point in my life)." The **吗** makes it a question. To answer: 去过 (yes, I have) or 没去过 (no, never). Notice the negation uses 没, not 不. Experiential 过 always pairs with 没.',
         tree: {
             id: 'n63',
             role: 'Sentence',
@@ -4733,7 +4733,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '如果明天下雨，我们就不去了。',
         pinyin: 'Rú guǒ míng tiān xià yǔ, wǒ men jiù bù qù le.',
         translation: 'If it rains tomorrow, we won\'t go.',
-        explanation: 'The **如果…就…** frame is Mandarin\'s if–then construction. **如果** (if) heads the condition clause: **明天下雨** (tomorrow rains). **就** (then) heads the consequence: **不去了** (won\'t go). The two clauses share no explicit conjunction beyond 如果 and 就. In casual speech, 如果 is often dropped entirely — 就 alone can carry the conditional sense: 明天下雨就不去了. The **了** at the end signals a change of plan (we were going to go, now we won\'t). Notice the condition clause has no subject — the weather "rains" without an explicit "it."',
+        explanation: 'The **如果…就…** frame is Mandarin\'s if–then construction. **如果** (if) heads the condition clause: **明天下雨** (tomorrow rains). **就** (then) heads the consequence: **不去了** (won\'t go). The two clauses share no explicit conjunction beyond 如果 and 就. In casual speech, 如果 is often dropped entirely; 就 alone can carry the conditional sense: 明天下雨就不去了. The **了** at the end signals a change of plan (we were going to go, now we won\'t). Notice the condition clause has no subject; the weather "rains" without an explicit "it."',
         tree: {
             id: 'n64',
             role: 'Sentence',
@@ -4869,7 +4869,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '他连自己的名字都不会写。',
         pinyin: 'Tā lián zì jǐ de míng zi dōu bù huì xiě.',
         translation: 'He can\'t even write his own name.',
-        explanation: '**他** (he) is the Topic. The **连…都…** frame emphasizes an extreme case: 连 (even) + **自己的名字** (his own name) + **都** (all / even) + **不会写** (can\'t write). The structure says: "Even something as basic as his own name — he can\'t write it." 连 picks out the extreme item; 都 reinforces the "even" emphasis. The implied logic: if he can\'t do this simple thing, he certainly can\'t do harder things. This pattern always implies surprise, disappointment, or emphasis. Other examples: 连饭都没吃 (didn\'t even eat), 连一块钱都没有 (doesn\'t even have one yuan).',
+        explanation: '**他** (he) is the Topic. The **连…都…** frame emphasizes an extreme case: 连 (even) + **自己的名字** (his own name) + **都** (all / even) + **不会写** (can\'t write). The structure says: "Even something as basic as his own name: he can\'t write it." 连 picks out the extreme item; 都 reinforces the "even" emphasis. The implied logic: if he can\'t do this simple thing, he certainly can\'t do harder things. This pattern always implies surprise, disappointment, or emphasis. Other examples: 连饭都没吃 (didn\'t even eat), 连一块钱都没有 (doesn\'t even have one yuan).',
         tree: {
             id: 'n66',
             role: 'Sentence',
@@ -4947,7 +4947,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '连小孩子也能做到。',
         pinyin: 'Lián xiǎo hái zi yě néng zuò dào.',
         translation: 'Even children can do it.',
-        explanation: 'This sentence uses **连…也…** (the 也 variant of the "even" construction). **连** picks out the extreme example: **小孩子** (children — the least expected group to succeed). **也** (also/even) + **能做到** (can accomplish it). The implied logic: if even children can do it, then anyone can. The difference between 都 and 也 in this pattern is subtle — 都 emphasizes exhaustive inclusion ("every single one"), while 也 emphasizes unexpected inclusion ("even this group too"). In practice, they\'re largely interchangeable. Notice this sentence has no separate Topic — 连 fronts the entire construction.',
+        explanation: 'This sentence uses **连…也…** (the 也 variant of the "even" construction). **连** picks out the extreme example: **小孩子** (children, the least expected group to succeed). **也** (also/even) + **能做到** (can accomplish it). The implied logic: if even children can do it, then anyone can. The difference between 都 and 也 in this pattern is subtle. 都 emphasizes exhaustive inclusion ("every single one"), while 也 emphasizes unexpected inclusion ("even this group too"). In practice, they\'re largely interchangeable. Notice this sentence has no separate Topic; 连 fronts the entire construction.',
         tree: {
             id: 'n67',
             role: 'Sentence',

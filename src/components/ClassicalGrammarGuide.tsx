@@ -96,7 +96,7 @@ export const ClassicalGrammarGuide: React.FC = () => {
                     <div className="bg-stone-800/40 border border-stone-700/30 rounded-lg px-3 py-2">
                         <p className="text-[10px] text-amber-300 font-bold">Genitive (possessive)</p>
                         <p className="text-[10px] text-slate-300 mt-0.5">
-                            <span className="text-amber-200 font-chinese-ui">師者，所以傳道受業解惑<strong className="text-amber-400">之</strong>者也。</span>
+                            <span className="text-amber-200 font-chinese-ui">師者，所以傳道授業解惑<strong className="text-amber-400">之</strong>者也。</span>
                         </p>
                         <p className="text-[9px] text-slate-500 italic mt-0.5">之 = "of" — links "transmitting the Way" to 者 "one who"</p>
                     </div>

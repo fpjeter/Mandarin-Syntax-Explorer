@@ -12,12 +12,12 @@ export const glossary: Record<GrammarRole, { headline: string; detail: string }>
     Topic: {
         headline: 'What the sentence is about',
         detail:
-            'Mandarin almost always starts by naming what you\'re talking about — the topic. It\'s like saying "As for the elephant…" before you say anything else.',
+            'Mandarin almost always starts by naming what you\'re talking about: the topic. It\'s like saying "As for the elephant…" before you say anything else.',
     },
     Comment: {
         headline: 'What is said about the topic',
         detail:
-            'After the topic is set, the comment says something about it. The comment is the "punchline" — the real information the speaker wants to give.',
+            'After the topic is set, the comment says something about it. The comment is the "punchline," the real information the speaker wants to give.',
     },
     Subject: {
         headline: 'Who does the action',
@@ -32,7 +32,7 @@ export const glossary: Record<GrammarRole, { headline: string; detail: string }>
     'Verb Phrase': {
         headline: 'A verb and its extras',
         detail:
-            'A group of words built around a verb — including any object, direction, result, or length it comes with.',
+            'A group of words built around a verb, including any object, direction, result, or length it comes with.',
     },
     'Noun Phrase': {
         headline: 'A noun and its description',
@@ -52,7 +52,7 @@ export const glossary: Record<GrammarRole, { headline: string; detail: string }>
     Adjunct: {
         headline: 'Pre-verbal modifier (状语 zhuàngyǔ)',
         detail:
-            'Anything that appears before the verb to set the scene — how, when, where, how often, or to what degree. Chinese grammar calls this position 状语 (zhuàngyǔ). It covers not just classic adverbs like 都 (all) or 很 (very), but also location phrases like 在厨房里 ("in the kitchen") and manner phrases like 生气地 ("angrily").',
+            'Anything that appears before the verb to set the scene: how, when, where, how often, or to what degree. Chinese grammar calls this position 状语 (zhuàngyǔ). It covers not just classic adverbs like 都 (all) or 很 (very), but also location phrases like 在厨房里 ("in the kitchen") and manner phrases like 生气地 ("angrily").',
     },
     Preposition: {
         headline: 'A linking word showing relationship',
@@ -112,7 +112,7 @@ export const glossary: Record<GrammarRole, { headline: string; detail: string }>
     'Object Morpheme': {
         headline: 'The object half of a separable verb (离合词)',
         detail:
-            'The noun half of a separable verb (离合词) — the "thing" the verb acts on internally. E.g. 面 in 见面, 觉 in 睡觉, 步 in 散步. When the verb splits, this half moves to the end.',
+            'The noun half of a separable verb (离合词), the "thing" the verb acts on internally. E.g. 面 in 见面, 觉 in 睡觉, 步 in 散步. When the verb splits, this half moves to the end.',
     },
     Pivot: {
         headline: 'A noun that plays two grammatical roles at once',
