@@ -16,7 +16,7 @@ export const classicalSentences: SentenceData[] = [
         chinese: '學而時習之，不亦說乎？',
         pinyin: 'Xué ér shí xí zhī, bù yì yuè hū?',
         translation: 'To study and regularly practice it, is that not a joy?',
-        relatedIds: ['s14'],
+
         explanation: 'The very first line of the **Analects** proclaims that the deepest satisfaction comes from putting learning into practice. Knowledge is not passive but something to be lived and revisited. Confucius frames this as a rhetorical question, gently insisting that the listener already knows the answer: of course it is a joy. *Grammatically,* **而** (ér) links two actions sequentially: study, *then* practice. It works exactly like a serial-verb connector. The **不亦…乎** frame is a rhetorical question pattern meaning "is it not…?" that *asserts* rather than asks. In modern Mandarin, you would need explicit connectors and question particles; here, 而 and 乎 handle everything elegantly in just ten characters. The **之** (zhī) pronoun ("it") refers back to what was studied, a very common classical anaphoric device.',
         tree: {
             id: 'cc1-root',
@@ -101,7 +101,7 @@ export const classicalSentences: SentenceData[] = [
         chinese: '知之者不如好之者，好之者不如樂之者。',
         pinyin: 'Zhī zhī zhě bù rú hào zhī zhě, hào zhī zhě bù rú lè zhī zhě.',
         translation: 'One who knows it is not as good as one who loves it; one who loves it is not as good as one who delights in it.',
-        relatedIds: ['s15'],
+
         explanation: 'Confucius argues that **genuine engagement** surpasses mere knowledge: loving what you study is better than simply knowing it, and finding joy in it is the highest form of mastery. The progression from knowing → loving → delighting maps out a hierarchy of learning that remains influential in Chinese pedagogy today. *Grammatically,* the sentence showcases the classical **者** (zhě) nominalizer, which turns a verb phrase into "the one who [verb]s." The **不如** comparative pattern ("is not as good as") builds a rising chain, and each clause follows the same template: **[verb] 之 者 不如 [verb] 之 者**. The **之** (zhī) in each phrase is an object pronoun ("it"), placed between the verb and 者. This repetitive parallel structure is a hallmark of classical rhetoric: it builds rhythm and emphasis while making the grammar crystal clear.',
         tree: {
             id: 'cc2-root',
@@ -338,7 +338,7 @@ export const classicalSentences: SentenceData[] = [
         chinese: '道可道，非常道。',
         pinyin: 'Dào kě dào, fēi cháng dào.',
         translation: 'The Way that can be spoken of is not the constant Way.',
-        relatedIds: ['s10', 's11'],
+
         explanation: 'The famous opening of the **Tao Te Ching** announces that ultimate reality, the Dao, **transcends language**. Any "Way" that can be captured in words is, by definition, not the eternal, unchanging Way. Laozi is warning the reader at the outset that his entire text is a paradox: words pointing toward something beyond words. *Grammatically,* the same character **道** (dào) appears three times with three different roles: first as a noun ("the Way"), then as a verb ("to speak/articulate"), and finally as a noun again ("the [true] Way"). **可** (kě) before the verb means "can be," similar to the modern potential complement pattern. **非** (fēi) is the classical copula negator, meaning "is not," negating the entire identity of the subject. **常** (cháng) means "constant/eternal."',
         tree: {
             id: 'cc4-root',
@@ -1178,7 +1178,7 @@ export const classicalSentences: SentenceData[] = [
         chinese: '未之有也。',
         pinyin: 'Wèi zhī yǒu yě.',
         translation: 'There has never been such a thing.',
-        relatedIds: ['s10', 's56'],
+
         explanation: 'This extremely terse expression conveys emphatic denial: **such a thing has never happened, and it simply does not exist**. It is typically used as the conclusion of an argument, asserting that the scenario just described is without precedent. *Grammatically,* **未** (wèi) is the "not yet / never" negator, different from 不 (general negation) and 非 (identity negation). 未 negates *temporal* completion: something has *not yet* happened or has *never* occurred. The word order is **inverted**: the object **之** (zhī, "it/such a thing") is placed *before* the verb **有** (yǒu, "exist"). This **object fronting** triggered by negation is a hallmark of classical Chinese: in negated clauses with pronominal objects, the pronoun moves ahead of the verb. Modern Mandarin has completely lost this inversion.',
         tree: {
             id: 'cc14-root',
@@ -1291,7 +1291,7 @@ export const classicalSentences: SentenceData[] = [
         chinese: '知彼知己，百戰不殆。',
         pinyin: 'Zhī bǐ zhī jǐ, bǎi zhàn bù dài.',
         translation: 'Know the enemy, know yourself, a hundred battles, no peril.',
-        relatedIds: ['s14', 's58'],
+
         explanation: 'Sun Tzu\'s most famous maxim distills an entire military philosophy into eight characters: **victory comes from understanding both your opponent and yourself**. The parallel structure emphasizes that self-knowledge is equally as important as intelligence-gathering. This principle has been applied far beyond warfare, extending into business, diplomacy, and personal growth. *Grammatically,* the sentence demonstrates classical **parallel structure** and **pro-drop**. The first clause pairs two verb-object phrases: **知彼** ("know the other/enemy") and **知己** ("know oneself"), with the same verb **知** repeated for rhetorical balance and no conjunction; classical Chinese relies on juxtaposition. The second clause **百戰不殆** is equally compressed: **百戰** ("a hundred battles") acts as a topic-like conditional, and **不殆** ("not perilous") is the predicate.',
         tree: {
             id: 'cc16-root',
@@ -1704,7 +1704,7 @@ export const classicalSentences: SentenceData[] = [
         chinese: '天時不如地利，地利不如人和。',
         pinyin: 'Tiān shí bù rú dì lì, dì lì bù rú rén hé.',
         translation: 'Favorable weather is not as good as advantageous terrain; advantageous terrain is not as good as harmony among people.',
-        relatedIds: ['s9', 's20'],
+
         explanation: 'Mencius builds a hierarchy of strategic advantage: **favorable weather matters less than good terrain, and good terrain matters less than unity among people**. The ultimate message is that human cooperation and social harmony are the most decisive factors in any endeavor. This is a deeply Confucian prioritization of human bonds over material circumstances. *Grammatically,* the sentence uses the classical comparative pattern **A 不如 B** ("A is not as good as B") in a rising chain. Each element is a compound noun: **天時** (heaven + time = favorable timing), **地利** (earth + advantage = geographical advantage), and **人和** (people + harmony = human unity). **不如** (bù rú) is the standard classical comparative, literally "not equal to." The repetition creates the same rhythmic, escalating effect as the 知之者 sentence (cc2), a signature classical rhetorical device.',
         tree: {
             id: 'cc20-root',
@@ -1827,7 +1827,7 @@ export const classicalSentences: SentenceData[] = [
         chinese: '以德報怨。',
         pinyin: 'Yǐ dé bào yuàn.',
         translation: 'Repay resentment with virtue.',
-        relatedIds: ['s3', 's4'],
+
         explanation: 'This phrase captures a Confucian ideal of **moral generosity**: rather than retaliating against those who wrong you, respond with kindness. It is often contrasted with the follow-up question in the same passage, where Confucius actually recommends repaying resentment with *justice* (直) and reserving virtue (德) for virtue. The phrase has become proverbial in Chinese culture for turning the other cheek. *Grammatically,* **以** (yǐ) is the instrumental coverb meaning \"using\" or \"with.\" It takes **德** (dé, \"virtue\") as its object, forming a prepositional phrase that precedes the main verb. The main verb **報** (bào, \"repay/reciprocate\") takes **怨** (yuàn, \"resentment/grudge\") as its direct object. The word order is: [以 + instrument] + [verb] + [object]. The subject is dropped (pro-drop); the instruction is general, addressed to anyone.',
         tree: {
             id: 'cc21-root',
@@ -1879,7 +1879,7 @@ export const classicalSentences: SentenceData[] = [
         chinese: '生於憂患，死於安樂。',
         pinyin: 'Shēng yú yōu huàn, sǐ yú ān lè.',
         translation: 'Life springs from adversity; death comes from complacency.',
-        relatedIds: ['s6', 's22'],
+
         explanation: 'Mencius argues that **hardship and struggle are the crucibles of greatness**, while comfort and ease lead to decline. This aphorism concludes a famous passage listing historical figures who rose to power from humble or difficult origins. It has become one of the most quoted lines in Chinese literature on the value of resilience. *Grammatically,* the sentence uses **於** (yú) twice as a source/cause coverb meaning \"from\" or \"out of.\" In the first clause, **生** (shēng, \"to live/be born\") is the verb and **於憂患** (\"from worry and hardship\") is the prepositional phrase indicating the source. The second clause mirrors this structure exactly: **死** (sǐ, \"to die\") + **於安樂** (\"from comfort and ease\"). The parallel construction creates a tight antithesis: 生 vs 死, 憂患 vs 安樂. Both subjects are dropped, making these general truths rather than statements about specific people.',
         tree: {
             id: 'cc22-root',
@@ -1958,7 +1958,7 @@ export const classicalSentences: SentenceData[] = [
         chinese: '得道者多助，失道者寡助。',
         pinyin: 'Dé dào zhě duō zhù, shī dào zhě guǎ zhù.',
         translation: 'One who follows the Way gains much support; one who abandons it finds little.',
-        relatedIds: ['s15'],
+
         explanation: 'Mencius makes a political argument: **a ruler who governs justly will attract allies, while a tyrant will be abandoned**. The \"Way\" (道) here refers to moral governance, not abstract philosophy. This line follows directly from the 天時不如地利 passage (cc20), building toward the conclusion that human unity is the decisive factor in statecraft. *Grammatically,* **者** (zhě) nominalizes each clause: **得道者** means \"one who attains the Way\" (得 = attain, 道 = the Way, 者 = one who). The predicate for each nominalized subject is an adjective-noun compound: **多助** (much help) and **寡助** (little help). The parallel structure **X 者 Y, Z 者 W** creates a balanced couplet. Notice that 助 (\"help/support\") functions as a noun here, not a verb, a flexibility that classical Chinese exploits frequently.',
         tree: {
             id: 'cc23-root',
@@ -2073,7 +2073,7 @@ export const classicalSentences: SentenceData[] = [
         chinese: '勿以善小而不為。',
         pinyin: 'Wù yǐ shàn xiǎo ér bù wéi.',
         translation: 'Do not fail to do good just because it is small.',
-        relatedIds: ['s3'],
+
         explanation: 'Attributed to Liu Bei as a deathbed instruction to his son, this maxim teaches that **no act of kindness is too small to matter**. It is one of the most beloved moral aphorisms in Chinese culture, often paired with its complement: \"Do not commit an evil just because it is small\" (勿以惡小而為之). Together they define a life of moral attention to every moment. *Grammatically,* **勿** (wù) is the classical prohibitive negator meaning \"do not!\" (stronger and more direct than 不). **以** (yǐ) here means \"because of\" or \"on account of,\" forming a causal phrase: 以善小 = \"because the good deed is small.\" **而** (ér) acts as a concessive connector (\"and yet/and thereby\"), linking the reason clause to the main prohibition. **不為** (bù wéi, \"not act/not do\") completes the sentence. The double negation (勿 + 不) creates the positive force: \"you must still do it.\"',
         tree: {
             id: 'cc24-root',
@@ -2220,6 +2220,361 @@ export const classicalSentences: SentenceData[] = [
                                             id: 'cc25-dang',
                                             role: 'Head Noun',
                                             text: { hanzi: '黨', pinyin: 'dǎng', translation: 'type / group' }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+
+    /* ───────── Additional quotes for grammar-role coverage ───────── */
+
+    // ── Adjective role ──────────────────────────────────────────────
+    {
+        id: 'cc26',
+        category: 'Genitive & Modification (之)',
+        source: '《論語》· 子罕篇',
+        author: 'Confucius',
+        chinese: '歲寒，然後知松柏之後凋也。',
+        pinyin: 'Suì hán, rán hòu zhī sōng bǎi zhī hòu diāo yě.',
+        translation: 'Only in the cold of winter do we see that pine and cypress are the last to wither.',
+        explanation: 'Confucius uses a seasonal metaphor to teach that **true character is revealed in adversity**. When fair-weather trees shed their leaves, the evergreens stand firm. So too are virtuous people recognized only when times are hard. This proverb has become one of the most famous metaphors in Chinese culture for steadfastness and integrity. *Grammatically,* **寒** (hán, "cold") is a standalone **adjective predicate**: in classical Chinese, adjectives can directly predicate without a copula — 歲寒 means "the year [is] cold." The **之** (zhī) between 松柏 and 後凋 is a structural particle that nominalizes the subordinate clause: "pine and cypress\'s being-last-to-wither." **然後** (rán hòu, "only then") introduces the consequent realization. The **也** (yě) at the end is an assertive sentence-final particle that affirms the truth of the whole statement.',
+        tree: {
+            id: 'cc26-root',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'cc26-topic',
+                    role: 'Topic',
+                    subRole: 'conditional clause',
+                    children: [
+                        {
+                            id: 'cc26-sui',
+                            role: 'Subject',
+                            text: { hanzi: '歲', pinyin: 'suì', translation: 'the year / season' }
+                        },
+                        {
+                            id: 'cc26-han',
+                            role: 'Adjective',
+                            subRole: 'predicate adjective',
+                            text: { hanzi: '寒', pinyin: 'hán', translation: 'cold' }
+                        }
+                    ]
+                },
+                {
+                    id: 'cc26-comment',
+                    role: 'Comment',
+                    subRole: 'consequent realization',
+                    children: [
+                        {
+                            id: 'cc26-ranhou',
+                            role: 'Adjunct',
+                            subRole: 'sequential adverb',
+                            text: { hanzi: '然後', pinyin: 'rán hòu', translation: 'only then' }
+                        },
+                        {
+                            id: 'cc26-zhi-v',
+                            role: 'Head Verb',
+                            text: { hanzi: '知', pinyin: 'zhī', translation: 'know / realize' }
+                        },
+                        {
+                            id: 'cc26-obj',
+                            role: 'Object',
+                            subRole: '之-nominalization',
+                            children: [
+                                {
+                                    id: 'cc26-sb',
+                                    role: 'Subject',
+                                    text: { hanzi: '松柏', pinyin: 'sōng bǎi', translation: 'pine and cypress' }
+                                },
+                                {
+                                    id: 'cc26-zhi-p',
+                                    role: 'Particle',
+                                    subRole: 'genitive marker',
+                                    text: { hanzi: '之', pinyin: 'zhī', translation: '(structural)' }
+                                },
+                                {
+                                    id: 'cc26-hou',
+                                    role: 'Adjunct',
+                                    text: { hanzi: '後', pinyin: 'hòu', translation: 'last / after' }
+                                },
+                                {
+                                    id: 'cc26-diao',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '凋', pinyin: 'diāo', translation: 'wither' }
+                                },
+                                {
+                                    id: 'cc26-ye',
+                                    role: 'Particle',
+                                    subRole: 'assertive',
+                                    text: { hanzi: '也', pinyin: 'yě', translation: '(assertion)' }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+
+    // ── Pronoun role ────────────────────────────────────────────────
+    {
+        id: 'cc27',
+        category: 'Rhetorical Patterns (反問)',
+        source: '《論語》· 子罕篇',
+        author: 'Confucius',
+        chinese: '吾誰欺？欺天乎？',
+        pinyin: 'Wú shuí qī? Qī tiān hū?',
+        translation: 'Whom am I deceiving? Am I deceiving Heaven?',
+        explanation: 'Confucius is ill and his disciples have been pretending to be his ministers to dignify his household — a deception. He rebukes them with two sharp rhetorical questions: first asking *whom* he would be fooling, then escalating to the ultimate audience — Heaven itself. The implication is clear: **you cannot deceive the moral order**. *Grammatically,* this sentence showcases classical **interrogative pronoun fronting**. In classical Chinese, when the object of a verb is a question word, it moves *before* the verb. So instead of 欺誰 (deceive whom?), we get **誰欺** — the **pronoun** 誰 (shuí, "whom") is placed before the verb 欺 (qī, "deceive"). This is a strict rule in classical grammar that modern Mandarin has entirely lost. **吾** (wú) is the first-person pronoun "I." The second question 欺天乎 uses **乎** (hū) as a rhetorical question particle, with **天** (tiān, "Heaven") as the object in normal post-verbal position (no fronting, because 天 is not an interrogative).',
+        tree: {
+            id: 'cc27-root',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'cc27-q1',
+                    role: 'Topic',
+                    subRole: 'first rhetorical question',
+                    children: [
+                        {
+                            id: 'cc27-wu',
+                            role: 'Subject',
+                            text: { hanzi: '吾', pinyin: 'wú', translation: 'I' }
+                        },
+                        {
+                            id: 'cc27-shui',
+                            role: 'Pronoun',
+                            subRole: 'fronted interrogative object',
+                            text: { hanzi: '誰', pinyin: 'shuí', translation: 'whom' }
+                        },
+                        {
+                            id: 'cc27-qi1',
+                            role: 'Head Verb',
+                            text: { hanzi: '欺', pinyin: 'qī', translation: 'deceive' }
+                        }
+                    ]
+                },
+                {
+                    id: 'cc27-q2',
+                    role: 'Comment',
+                    subRole: 'escalating rhetorical question',
+                    children: [
+                        {
+                            id: 'cc27-qi2',
+                            role: 'Head Verb',
+                            text: { hanzi: '欺', pinyin: 'qī', translation: 'deceive' }
+                        },
+                        {
+                            id: 'cc27-tian',
+                            role: 'Object',
+                            text: { hanzi: '天', pinyin: 'tiān', translation: 'Heaven' }
+                        },
+                        {
+                            id: 'cc27-hu',
+                            role: 'Particle',
+                            subRole: 'interrogative (rhetorical)',
+                            text: { hanzi: '乎', pinyin: 'hū', translation: '(?)' }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+
+    // ── Pivot role ──────────────────────────────────────────────────
+    {
+        id: 'cc28',
+        category: 'Coverbs & Prepositions (於/以/焉)',
+        source: '《論語》· 學而篇',
+        author: 'Confucius',
+        chinese: '使民以時。',
+        pinyin: 'Shǐ mín yǐ shí.',
+        translation: 'Employ the people only at the proper time.',
+        explanation: 'Confucius advises rulers to be mindful of **agricultural seasons** when conscripting laborers for public works. Demanding corvée labor during planting or harvest would devastate farming families. This seemingly simple maxim encodes a deep Confucian principle: **governance must respect the natural rhythms of ordinary life**. *Grammatically,* **使** (shǐ) is the classical causative verb meaning "cause / employ / make." It creates a **pivotal construction** (兼語句): **民** (mín, "the people") is simultaneously the *object* of 使 and the *implied subject* of the action being constrained. This double role is the defining feature of pivotal constructions, identical in structure to the modern 让/叫/派 pattern. **以** (yǐ) is the instrumental coverb meaning "according to / with," and **時** (shí) means "the [proper] time / season." The subject (the ruler) is dropped — classical Chinese freely omits known agents.',
+        tree: {
+            id: 'cc28-root',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'cc28-vp',
+                    role: 'Predicate',
+                    subRole: 'pivotal construction',
+                    children: [
+                        {
+                            id: 'cc28-shi',
+                            role: 'Head Verb',
+                            subRole: 'causative',
+                            text: { hanzi: '使', pinyin: 'shǐ', translation: 'employ / cause' }
+                        },
+                        {
+                            id: 'cc28-min',
+                            role: 'Pivot',
+                            subRole: 'object of 使, subject of action',
+                            text: { hanzi: '民', pinyin: 'mín', translation: 'the people' }
+                        },
+                        {
+                            id: 'cc28-yi-phrase',
+                            role: 'Adjunct',
+                            subRole: 'instrumental (以)',
+                            children: [
+                                {
+                                    id: 'cc28-yi',
+                                    role: 'Preposition',
+                                    subRole: 'instrumental coverb',
+                                    text: { hanzi: '以', pinyin: 'yǐ', translation: 'according to' }
+                                },
+                                {
+                                    id: 'cc28-shi-n',
+                                    role: 'Object',
+                                    text: { hanzi: '時', pinyin: 'shí', translation: 'the [proper] time' }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+
+    /* ───────── Classical Negation (非/勿/莫) — 非 additional ─────── */
+    {
+        id: 'cc29',
+        category: 'Classical Negation (非/勿/莫)',
+        source: '《荀子》· 勸學篇',
+        author: 'Xunzi',
+        chinese: '非學無以廣才。',
+        pinyin: 'Fēi xué wú yǐ guǎng cái.',
+        translation: 'Without learning, there is no way to broaden one\'s talent.',
+        explanation: 'Xunzi argues that **talent is made, not born** — only through deliberate study can one\'s abilities grow. This double-negation structure (非 + 無以) creates a powerful affirmative: "it is not the case that without study one has a means to broaden talent" → "study is the *only* way to broaden talent." *Grammatically,* **非** (fēi) is the negative copula negating the entire proposition. **學** (xué, "study") is nominalized as the condition being negated. **無以** (wú yǐ) is a classical idiom meaning "have no means to / no way to." **廣** (guǎng) functions as a verb meaning "broaden / expand," and **才** (cái) means "talent / ability."',
+        tree: {
+            id: 'cc29-root',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'cc29-topic',
+                    role: 'Topic',
+                    subRole: 'negated condition (非…)',
+                    children: [
+                        {
+                            id: 'cc29-fei',
+                            role: 'Copula',
+                            subRole: 'negative copula',
+                            text: { hanzi: '非', pinyin: 'fēi', translation: 'without / it is not' }
+                        },
+                        {
+                            id: 'cc29-xue',
+                            role: 'Object',
+                            text: { hanzi: '學', pinyin: 'xué', translation: 'learning / study' }
+                        }
+                    ]
+                },
+                {
+                    id: 'cc29-comment',
+                    role: 'Comment',
+                    subRole: 'negative consequence',
+                    children: [
+                        {
+                            id: 'cc29-wuyi',
+                            role: 'Adjunct',
+                            subRole: 'negation of means',
+                            text: { hanzi: '無以', pinyin: 'wú yǐ', translation: 'have no way to' }
+                        },
+                        {
+                            id: 'cc29-vp',
+                            role: 'Verb Phrase',
+                            children: [
+                                {
+                                    id: 'cc29-guang',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '廣', pinyin: 'guǎng', translation: 'broaden / expand' }
+                                },
+                                {
+                                    id: 'cc29-cai',
+                                    role: 'Object',
+                                    text: { hanzi: '才', pinyin: 'cái', translation: 'talent / ability' }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+
+    /* ───────── Coverbs & Prepositions (於/以/焉) — 焉 additional ─────── */
+    {
+        id: 'cc30',
+        category: 'Coverbs & Prepositions (於/以/焉)',
+        source: '《左傳》· 僖公三十年',
+        author: 'Zuoqiu Ming',
+        chinese: '焉用亡鄭以陪鄰？',
+        pinyin: 'Yān yòng wáng Zhèng yǐ péi lín?',
+        translation: 'Why destroy Zheng only to strengthen a neighbor?',
+        explanation: 'The diplomat Zhu Zhiwu asks Duke Mu of Qin a devastating rhetorical question: **what purpose is served by destroying the state of Zheng, when the only beneficiary would be a rival?** This argument — that your ally\'s gain is your loss — is a masterpiece of wartime persuasion. *Grammatically,* **焉** (yān) here functions as an interrogative coverb meaning "why / how" (= 於何, "for what purpose"), distinct from its fusional coverb use. However, it demonstrates the same fusional principle: packing a preposition and pronoun into one character. **用** (yòng) means "use / is there a use for." **亡** (wáng) is "destroy," with **鄭** (Zhèng, the state) as its object. **以** (yǐ) links purpose: "in order to." **陪** (péi) means "increase / strengthen," and **鄰** (lín) is "a neighbor [state]."',
+        tree: {
+            id: 'cc30-root',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 'cc30-adj',
+                    role: 'Adjunct',
+                    subRole: 'fusional coverb (= 於何)',
+                    text: { hanzi: '焉', pinyin: 'yān', translation: 'why / for what purpose' }
+                },
+                {
+                    id: 'cc30-pred',
+                    role: 'Predicate',
+                    children: [
+                        {
+                            id: 'cc30-yong',
+                            role: 'Head Verb',
+                            text: { hanzi: '用', pinyin: 'yòng', translation: 'use / is there a use for' }
+                        },
+                        {
+                            id: 'cc30-vp1',
+                            role: 'Object',
+                            subRole: 'verb phrase as object',
+                            children: [
+                                {
+                                    id: 'cc30-wang',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '亡', pinyin: 'wáng', translation: 'destroy' }
+                                },
+                                {
+                                    id: 'cc30-zheng',
+                                    role: 'Object',
+                                    text: { hanzi: '鄭', pinyin: 'Zhèng', translation: 'Zheng (a state)' }
+                                }
+                            ]
+                        },
+                        {
+                            id: 'cc30-purpose',
+                            role: 'Adjunct',
+                            subRole: 'purpose (以)',
+                            children: [
+                                {
+                                    id: 'cc30-yi',
+                                    role: 'Particle',
+                                    subRole: 'sequential connective',
+                                    text: { hanzi: '以', pinyin: 'yǐ', translation: 'in order to' }
+                                },
+                                {
+                                    id: 'cc30-vp2',
+                                    role: 'Verb Phrase',
+                                    children: [
+                                        {
+                                            id: 'cc30-pei',
+                                            role: 'Head Verb',
+                                            text: { hanzi: '陪', pinyin: 'péi', translation: 'strengthen / increase' }
+                                        },
+                                        {
+                                            id: 'cc30-lin',
+                                            role: 'Object',
+                                            text: { hanzi: '鄰', pinyin: 'lín', translation: 'a neighbor [state]' }
                                         }
                                     ]
                                 }

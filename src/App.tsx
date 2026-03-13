@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback, useRef } from 'react';
+import { useState, useMemo, useCallback, useRef, lazy, Suspense } from 'react';
 import { BookA, Info, Network, List, PanelLeftClose, PanelLeftOpen, Scroll } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 import { sampleSentences } from './data/sentences';
@@ -6,12 +6,15 @@ import { SENTENCE_CATEGORIES, CATEGORY_DESCRIPTIONS } from './data/categories';
 import { classicalSentences } from './data/classicalSentences';
 import { CLASSICAL_CATEGORIES, CLASSICAL_CATEGORY_DESCRIPTIONS } from './data/classicalCategories';
 import { SyntaxTree } from './components/SyntaxTree';
-import { GrammarGuide } from './components/GrammarGuide';
 import { SentenceSidebar } from './components/SentenceSidebar';
 import { SentenceHeader } from './components/SentenceHeader';
 import { ClassicalThemeProvider } from './components/ClassicalThemeProvider';
-import { ClassicalGrammarGuide } from './components/ClassicalGrammarGuide';
-import InkWashTransition from './components/InkWashTransition';
+import { AppModeProvider } from './contexts/AppModeContext';
+
+// ── Lazy-loaded components (code-split into separate chunks) ──
+const GrammarGuide = lazy(() => import('./components/GrammarGuide').then(m => ({ default: m.GrammarGuide })));
+const ClassicalGrammarGuide = lazy(() => import('./components/ClassicalGrammarGuide').then(m => ({ default: m.ClassicalGrammarGuide })));
+const InkWashTransition = lazy(() => import('./components/InkWashTransition'));
 
 // ── Modern mode pre-computed lookups ──
 const modernById = new Map(sampleSentences.map(s => [s.id, s]));
@@ -111,7 +114,10 @@ function App() {
 
   return (
     <>
-      <InkWashTransition active={inkTransitionActive} targetMode={inkTargetMode} />
+      <Suspense fallback={null}>
+        <InkWashTransition active={inkTransitionActive} targetMode={inkTargetMode} />
+      </Suspense>
+      <AppModeProvider value={isClassical}>
       <ClassicalThemeProvider active={isClassical}>
         <div className={`h-[100dvh] text-slate-100 flex flex-col font-sans relative overflow-hidden ${isClassical ? 'bg-stone-950' : 'bg-slate-950'}`}>
         {/* Background gradients */}
@@ -179,7 +185,7 @@ function App() {
           <button
             onClick={() => setMobileView('guide')}
             className={`flex-1 flex items-center justify-center gap-2 py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors border-b-2 ${mobileView === 'guide'
-              ? 'text-blue-300 border-blue-500 bg-blue-500/10'
+              ? isClassical ? 'text-amber-300 border-amber-500 bg-amber-500/10' : 'text-blue-300 border-blue-500 bg-blue-500/10'
               : 'text-slate-400 border-transparent hover:text-slate-200'
               }`}
           >
@@ -189,7 +195,7 @@ function App() {
           <button
             onClick={() => setMobileView('list')}
             className={`flex-1 flex items-center justify-center gap-2 py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors border-b-2 ${mobileView === 'list'
-              ? 'text-purple-300 border-purple-500 bg-purple-500/10'
+              ? isClassical ? 'text-amber-300 border-amber-500 bg-amber-500/10' : 'text-purple-300 border-purple-500 bg-purple-500/10'
               : 'text-slate-400 border-transparent hover:text-slate-200'
               }`}
           >
@@ -199,14 +205,14 @@ function App() {
           <button
             onClick={() => setMobileView('tree')}
             className={`flex-1 flex items-center justify-center gap-2 py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors border-b-2 ${mobileView === 'tree'
-              ? 'text-purple-300 border-purple-500 bg-purple-500/10'
+              ? isClassical ? 'text-amber-300 border-amber-500 bg-amber-500/10' : 'text-purple-300 border-purple-500 bg-purple-500/10'
               : 'text-slate-400 border-transparent hover:text-slate-200'
               }`}
           >
             <Network className="w-3.5 h-3.5" />
             Tree
             {selectedId && mobileView === 'list' && (
-              <span className="ml-1 w-1.5 h-1.5 rounded-full bg-purple-400 inline-block" />
+              <span className={`ml-1 w-1.5 h-1.5 rounded-full inline-block ${isClassical ? 'bg-amber-400' : 'bg-purple-400'}`} />
             )}
           </button>
         </div>
@@ -223,7 +229,7 @@ function App() {
               <button
                 onClick={() => setSidebarTab('sentences')}
                 className={`flex-1 flex items-center justify-center gap-1.5 py-2 text-[10px] font-bold uppercase tracking-widest transition-colors border-b-2 rounded-t-lg ${sidebarTab === 'sentences'
-                  ? 'text-purple-300 border-purple-500 bg-purple-500/10'
+                  ? isClassical ? 'text-amber-300 border-amber-500 bg-amber-500/10' : 'text-purple-300 border-purple-500 bg-purple-500/10'
                   : 'text-slate-400 border-transparent hover:text-slate-200'
                   }`}
               >
@@ -233,7 +239,7 @@ function App() {
               <button
                 onClick={() => setSidebarTab('guide')}
                 className={`flex-1 flex items-center justify-center gap-1.5 py-2 text-[10px] font-bold uppercase tracking-widest transition-colors border-b-2 rounded-t-lg ${sidebarTab === 'guide'
-                  ? 'text-blue-300 border-blue-500 bg-blue-500/10'
+                  ? isClassical ? 'text-amber-300 border-amber-500 bg-amber-500/10' : 'text-blue-300 border-blue-500 bg-blue-500/10'
                   : 'text-slate-400 border-transparent hover:text-slate-200'
                   }`}
               >
@@ -259,7 +265,9 @@ function App() {
                   {isClassical ? 'Classical Grammar Guide' : 'Framework Guide'}
                 </h2>
                 <div className="flex-1 min-h-0 overflow-y-auto pr-2 custom-scrollbar">
-                  {isClassical ? <ClassicalGrammarGuide /> : <GrammarGuide tab="framework" />}
+                  <Suspense fallback={<div className="text-xs text-slate-500 animate-pulse">Loading guide…</div>}>
+                    {isClassical ? <ClassicalGrammarGuide /> : <GrammarGuide tab="framework" />}
+                  </Suspense>
                 </div>
               </div>
             )}
@@ -307,7 +315,9 @@ function App() {
                   {isClassical ? 'Classical Grammar' : 'The Framework'}
                 </h3>
               </div>
-              {isClassical ? <ClassicalGrammarGuide /> : <GrammarGuide tab="framework" />}
+              <Suspense fallback={<div className="text-xs text-slate-500 animate-pulse">Loading guide…</div>}>
+                {isClassical ? <ClassicalGrammarGuide /> : <GrammarGuide tab="framework" />}
+              </Suspense>
             </div>
           )}
 
@@ -315,6 +325,7 @@ function App() {
         <Analytics />
       </div>
       </ClassicalThemeProvider>
+      </AppModeProvider>
     </>
   );
 }

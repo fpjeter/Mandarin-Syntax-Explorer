@@ -5,6 +5,8 @@ import type { GrammarRole, MandarinWord } from '../types/grammar';
 import { RubyText } from './RubyText';
 import { RoleTooltip, HoverTooltip } from './RoleTooltip';
 import { BADGES } from '../data/badges';
+import { CLASSICAL_BADGES } from '../data/classicalBadges';
+import { useIsClassical } from '../contexts/AppModeContext';
 
 export type GrammarNodeViewData = {
     role: GrammarRole;
@@ -24,9 +26,11 @@ export type GrammarNodeViewData = {
     isFresh?: boolean;
 };
 
-export type GrammarNodeType = Node<GrammarNodeViewData, 'grammarNode'>;
+type GrammarNodeType = Node<GrammarNodeViewData, 'grammarNode'>;
 
 const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType>) => {
+    const isClassical = useIsClassical();
+    const activeBadges = isClassical ? CLASSICAL_BADGES : BADGES;
     const longPressTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     const handleCorefTouchStart = useCallback(() => {
@@ -70,6 +74,34 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
         }
     };
 
+    const getClassicalRoleColorClass = (role: GrammarRole) => {
+        switch (role) {
+            case 'Sentence': return 'bg-stone-800/80 text-stone-100 border-amber-400/60 shadow-[0_0_28px_rgba(217,169,109,0.4),inset_0_1px_0_rgba(255,255,255,0.08)]';
+            case 'Topic': return 'bg-amber-900/40 text-amber-200 border-amber-500/50 shadow-[0_0_15px_rgba(245,158,11,0.25)]';
+            case 'Comment': return 'bg-orange-900/40 text-orange-200 border-orange-500/50 shadow-[0_0_15px_rgba(234,88,12,0.2)]';
+            case 'Subject': return 'bg-yellow-900/40 text-yellow-300 border-yellow-600/50';
+            case 'Predicate': return 'bg-stone-800/50 text-stone-200 border-stone-500/50';
+            case 'Verb Phrase': return 'bg-stone-800/40 text-stone-300 border-stone-500/40';
+            case 'Noun Phrase': return 'bg-amber-900/40 text-amber-200 border-amber-600/50';
+            case 'Verb': return 'bg-emerald-900/40 text-emerald-300 border-emerald-600/50';
+            case 'Object': return 'bg-yellow-900/40 text-yellow-200 border-yellow-600/50';
+            case 'Adjunct': return 'bg-rose-900/40 text-rose-300 border-rose-600/50';
+            case 'Adjective': return 'bg-orange-900/40 text-orange-200 border-orange-600/50 shadow-[0_0_12px_rgba(234,88,12,0.15)]';
+            case 'Attributive': return 'bg-lime-900/40 text-lime-300 border-lime-600/50 shadow-[0_0_15px_rgba(132,204,22,0.15)]';
+            case 'Complement': return 'bg-amber-800/40 text-amber-300 border-amber-500/50 shadow-[0_0_15px_rgba(217,169,109,0.2)]';
+            case 'Head Noun': return 'bg-amber-800/60 text-amber-100 border-amber-500/70 border-b-2';
+            case 'Head Verb': return 'bg-emerald-800/60 text-emerald-100 border-emerald-500/70 border-b-2';
+            case 'Measure Word': return 'bg-stone-800/40 text-stone-200 border-stone-500/50';
+            case 'Verb Morpheme': return 'bg-emerald-900/50 text-emerald-200 border-emerald-500/60 shadow-[0_0_12px_rgba(52,211,153,0.2)]';
+            case 'Object Morpheme': return 'bg-yellow-900/50 text-yellow-200 border-yellow-500/60 shadow-[0_0_12px_rgba(234,179,8,0.2)]';
+            case 'Pivot': return 'bg-orange-800/50 text-orange-100 border-orange-400/70 shadow-[0_0_16px_rgba(251,146,60,0.35)] border-b-2';
+            case 'Copula': return 'bg-stone-700/50 text-stone-100 border-stone-400/60 shadow-[0_0_14px_rgba(168,162,158,0.2)] border-b-2';
+            default: return 'bg-stone-900/60 text-stone-300 border-stone-700/50';
+        }
+    };
+
+    const roleColorClass = isClassical ? getClassicalRoleColorClass : getRoleColorClass;
+
     const isGhost = !!data.isDropped;
 
     const isCollapsedWithChildren = data.hasChildren && !data.isExpanded && !isGhost;
@@ -83,7 +115,7 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
                 ${data.hasChildren && !isGhost ? 'cursor-pointer hover:border-slate-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:-translate-y-0.5' : ''}
                 ${isGhost
                         ? 'border-dashed border-rose-500/50 bg-slate-900/30 opacity-60'
-                        : getRoleColorClass(data.role)
+                        : roleColorClass(data.role)
                     }
                 ${data.corefGlow ? '!border-rose-400 !shadow-[0_0_24px_rgba(244,63,94,0.5)] !opacity-100 ring-2 ring-rose-400/60' : ''}
                 ${data.isFresh ? 'animate-node-enter' : ''}
@@ -102,7 +134,7 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
                 )}
 
                 {(() => {
-                    const matchedBadges = BADGES.filter(b => b.match(data.role, data.subRole));
+                    const matchedBadges = activeBadges.filter(b => b.match(data.role, data.subRole));
                     const hasBadge = matchedBadges.length > 0;
                     // Adjuncts: always show subRole pill for consistency (time, location, bǎ-construction…)
                     // Other roles: show badge and suppress redundant subRole
@@ -117,7 +149,7 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
                                 data.role === 'Adjunct'
                                     ? (() => {
                                         const sr = data.subRole ?? '';
-                                        const tips: Record<string, { h: string; d: string }> = {
+                                        const modernTips: Record<string, { h: string; d: string }> = {
                                             'time': { h: 'Time Adjunct (时间状语)', d: 'When the action happens — placed before the verb.' },
                                             'location': { h: 'Location Adjunct (地点状语)', d: 'Where the action happens — placed before the verb.' },
                                             'manner': { h: 'Manner Adjunct (方式状语)', d: 'How the action is performed — placed before the verb.' },
@@ -128,6 +160,17 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
                                             'scope / emphasis': { h: 'Scope / Emphasis (范围状语)', d: 'Limits or emphasizes scope — e.g. 都, 也, 只, 连…都.' },
                                             'frequency': { h: 'Frequency Adjunct (频率状语)', d: 'How often — e.g. 常常, 经常, 总是.' },
                                         };
+                                        const classicalTips: Record<string, { h: string; d: string }> = {
+                                            'negation': { h: 'Negation (否定)', d: 'Negates the verb — 不 (general), 非 (identity), 勿 (prohibitive), 莫 (nobody/nothing).' },
+                                            'certainty': { h: 'Certainty (必然)', d: 'Expresses certainty — 必 (certainly/must).' },
+                                            'rhetorical': { h: 'Rhetorical Modifier', d: 'Intensifies or challenges — 亦 (also/indeed), 寧 (could it be that…).' },
+                                            'time': { h: 'Time Adjunct', d: 'When the action happens — classical Chinese often repurposes nouns as time adverbs, e.g. 日 (daily).' },
+                                            'frequency': { h: 'Frequency', d: 'How often — e.g. 三 (three times), 日 (daily).' },
+                                            'potential': { h: 'Potential Marker', d: 'Indicates ability — 可 (can be), 可以 (can thereby).' },
+                                            'distributive': { h: 'Distributive', d: 'Applies to each member — 各 (each).' },
+                                            'conditional': { h: 'Conditional Marker', d: 'Marks a condition — 若 (if), 雖 (although).' },
+                                        };
+                                        const tips = isClassical ? classicalTips : modernTips;
                                         const key = Object.keys(tips).find(k => sr.toLowerCase().includes(k));
                                         const tip = key ? tips[key] : { h: `Adjunct — ${sr}`, d: 'A modifier that adds context to the verb (placed before it).' };
                                         return (

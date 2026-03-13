@@ -143,7 +143,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '她昨天把我的钱包忘在出租车上了。',
         pinyin: 'Tā zuó tiān bǎ wǒ de qián bāo wàng zài chū zū chē shàng le.',
         translation: 'She forgot my wallet in the taxi yesterday.',
-        relatedIds: ['cc21', 'cc24'],
+
         explanation: '**她** (she) is the Topic. The Comment opens with a time stamp, **昨天** (yesterday), because in Mandarin, time and place come before the verb, not after it. Then comes a special pattern: **把** moves the object (my wallet) in front of the verb. This is called the **把 construction**: it is used when something specific is being acted upon and something notable happens to it. Think of 把 as a spotlight on the wallet: *"as for the wallet, she forgot it in the taxi."* The tree shows 把 and the wallet grouped together before the verb.',
         tree: {
             id: 'n3',
@@ -244,7 +244,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '那只猫在厨房里生气地用爪子把我的杯子弄倒地上了。',
         pinyin: 'Nà zhī māo zài chú fáng lǐ shēng qì de yòng zhuǎ zi bǎ wǒ de bēi zi nòng dào dì shàng le.',
         translation: 'That cat angrily knocked my cup to the floor with its claws.',
-        relatedIds: ['cc21'],
+
         explanation: '**那只猫** (that cat) is the Topic. 只 is a **measure word**, a counting word specific to cats and certain animals. Before the main action even appears, Mandarin layers up the scene inside the Comment: **how** the cat acted (angrily), then **with what** (its claws), then **把** spotlights the cup as the thing being affected. Only after all that setup does the verb **弄** (knock/move) appear. In English, you would lead with the verb much earlier. This sentence shows how Mandarin packs rich detail around the verb systematically.',
         tree: {
             id: 'n4',
@@ -452,7 +452,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '那只大象，鼻子被小孩儿拉了一下。',
         pinyin: 'Nà zhī dà xiàng, bí zi bèi xiǎo hái er lā le yī xià.',
         translation: 'As for that elephant, its trunk was pulled by a child.',
-        relatedIds: ['cc22'],
+
         explanation: 'This sentence has a **two-level structure**. The outer Topic sets the stage with a big frame: *as for that elephant...* Then inside the Comment, a narrower subject appears: **鼻子** (trunk). The trunk is then described using **被** (by), which marks a passive construction: something was done *to* the trunk. So the elephant frames the scene, and the trunk is what actually acts as the subject of the passive event. English would say it more directly: "A child pulled the elephant\'s trunk." Mandarin works from the outside in.',
         tree: {
             id: 'n6',
@@ -751,7 +751,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '那座山比这座山高得多。',
         pinyin: 'Nà zuò shān bǐ zhè zuò shān gāo de duō.',
         translation: 'That mountain is much taller than this mountain.',
-        relatedIds: ['cc20'],
+
         explanation: '**那座山** (that mountain) is the Topic. 座 is the measure word for mountains and large structures. The Comment makes a comparison using **比** (compared to), which always comes before the thing being compared against. The pattern is: Topic → 比 → [reference] → [quality] → [how much]. Here: that mountain → compared to this mountain → tall → by a lot. The **得多** at the end means "by a great amount" and is always placed after the quality, never before it. English has flexibility in word order here; Mandarin does not.',
         tree: {
             id: 'n9',
@@ -835,7 +835,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '难道你连这么简单的问题都不会吗？',
         pinyin: 'Nán dào nǐ lián zhè me jiǎn dān de wèn tí dōu bù huì ma?',
         translation: 'Don\'t tell me you can\'t even (do) such a simple question?',
-        relatedIds: ['cc4', 'cc14'],
+
         explanation: 'This sentence opens with **难道**, a word that signals a rhetorical question is coming, roughly translatable as *"don\'t tell me..."* or *"surely... not?"*. After that, **你** (you) is the Topic. The Comment uses a paired structure: **连...** and **都** work as a team, bracketing whatever is being emphasized. Here they wrap around *"even such a simple question"*, adding disbelief and emphasis. The **吗** at the end is a yes/no question marker. Together, the whole sentence expresses incredulous disbelief: you really can\'t do *even* this?',
         tree: {
             id: 'n10',
@@ -944,7 +944,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '这件事非你亲自去办不可。',
         pinyin: 'Zhè jiàn shì fēi nǐ qīn zì qù bàn bù kě.',
         translation: 'This matter absolutely must be handled by you yourself; there is no way around it.',
-        relatedIds: ['cc4'],
+
         explanation: 'The outer Topic **这件事** (this matter) sets the frame. The Comment uses a paired framing structure: **非** at the start and **不可** at the end lock together to express absolute necessity, literally *"it is not the case that it can be avoided"*. Between them: who must act (you), how (personally, **亲自**), and what the action is (go handle it). This double negative is a fixed expression: 非...不可 roughly means *"must, without exception"*. You\'ll encounter the same pattern in Chinese proverbs and formal writing.',
         tree: {
             id: 'n11',
@@ -1198,7 +1198,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '到了，找到了，吃完再走。',
         pinyin: 'Dào le , zhǎo dào le , chī wán zài zǒu .',
         translation: '(We\'ve) arrived, (we) found it, (we\'ll) leave after eating.',
-        relatedIds: ['cc1', 'cc16'],
+
         explanation: 'Three complete events chained in sequence, the hallmark of a **serial verb construction**. VP1: 到了 (arrived). VP2: 找到了 (found it, with the resultative 到 meaning "reached the target"). VP3: 吃完再走 (eat-finish-then-leave, a classic "finish X before Y" sequence). All three VPs share the same unnamed subject **[我们]** (we); the listener infers it from the surrounding conversation. This is why serial verbs feel so natural in Mandarin: once the actor is clear, you just stack events one after another, no conjunctions needed.',
         tree: {
             id: 'n14',
@@ -1290,7 +1290,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '那本书，放在桌子上了。',
         pinyin: 'Nà běn shū , fàng zài zhuō zi shàng le .',
         translation: 'That book, (it\'s been) put on the table.',
-        relatedIds: ['cc2', 'cc23'],
+
         explanation: '**那本书** (that book) is the Topic. Inside the Comment, the actual subject (whoever placed the book) is never stated. But there\'s something more: the dropped **[它]** (it) clearly refers *back* to the book in the Topic. The Topic is not just setting the scene; it is literally acting as the hidden subject of the action that follows. The **red arc** in the tree draws a connecting line from the ghost node back to the Topic, making this invisible link visible. This is one of the most common patterns in Mandarin: name a topic, then silently use it as the subject.',
         tree: {
             id: 'n15',
@@ -1671,7 +1671,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '她写的汉字跟老师写的一样漂亮。',
         pinyin: 'Tā xiě de hàn zì gēn lǎo shī xiě de yī yàng piāo liang.',
         translation: 'The hanzi she writes is just as beautiful as the teacher\'s.',
-        relatedIds: ['cc20'],
+
         explanation: 'Mandarin\'s equality comparison places **跟** (gēn, "compared with") before the standard being compared, and **一样** (yīyàng, "the same") before the adjective. The frame is: **A 跟 B 一样 [adj]**: "A is equally [adj] as B". Notice that both sides describe a whole noun phrase: 她写的汉字 (the hanzi she writes) vs 老师写的 (what the teacher writes). This construction never uses **比** (bǐ, the word for "more than"); 比 means one side beats the other, while 跟…一样 means they are *equal*.',
         tree: {
             id: 'n20',
@@ -1859,7 +1859,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '我的钱包被人偷了。',
         pinyin: 'Wǒ de qián bāo bèi rén tōu le.',
         translation: 'My wallet was stolen.',
-        relatedIds: ['cc22'],
+
         explanation: 'The Topic is **我的钱包** (my wallet), the thing that was acted upon. Inside the Comment, **被** (bèi) introduces the agent: **人** (someone, literally "a person"). Then comes the verb **偷** (steal) and completion marker **了**. Compared to s6, this is a simpler and more everyday form of the BEI passive. Notice that 被 does not always name a specific agent; here it just says "by someone." The BEI frame always flips normal word order: instead of "person stole wallet," the wallet is foregrounded as Topic, and 被 marks that it is the *receiver* of the action.',
         tree: {
             id: 'n22',
@@ -4280,7 +4280,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '你难道不知道吗？',
         pinyin: 'Nǐ nán dào bù zhī dào ma?',
         translation: 'Don\'t you know? (Surely you must know!)',
-        relatedIds: ['cc14'],
+
         explanation: '**你** (you) is the Topic. **难道** (don\'t tell me / could it be that) is the rhetorical marker: it signals that the speaker expects the opposite of what the sentence literally says. The negation **不知道** (don\'t know) combined with 难道 produces: "You couldn\'t possibly not know" → "Of course you know!" The sentence-final **吗** reinforces the questioning tone but the expected answer is already baked in. 难道 always implies surprise, disbelief, or reproach. It\'s one of the most emotionally loaded adverbs in Mandarin.',
         tree: {
             id: 'n56',
@@ -4390,7 +4390,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '他骑自行车去上班。',
         pinyin: 'Tā qí zì xíng chē qù shàng bān.',
         translation: 'He rides a bicycle to go to work.',
-        relatedIds: ['cc16'],
+
         explanation: '**他** (he) is the Topic. The Comment chains three VPs sharing the same subject: **骑自行车** (ride a bicycle) → **去** (go) → **上班** (go to work). No conjunctions link them. In Mandarin, serial verb constructions simply stack VPs in chronological or purpose order. VP1 describes the manner/means (riding), VP2 the motion (going), VP3 the purpose (working). This pattern is pervasive: Chinese rarely uses "and then" or "in order to"; the sequence says it all. Compare with pivotal constructions where the subject changes at the pivot; here, the subject stays the same throughout.',
         tree: {
             id: 'n58',

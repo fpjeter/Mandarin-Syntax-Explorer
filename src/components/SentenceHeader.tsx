@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight, ChevronDown, Lightbulb } from 'lucide-react'
 import { useRef } from 'react';
 import { RubyText } from './RubyText';
 import type { SentenceData } from '../types/grammar';
+import { useIsClassical } from '../contexts/AppModeContext';
 
 import { renderExplanation } from '../utils/renderExplanation';
 
@@ -34,6 +35,7 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
     hasPrev,
     hasNext,
 }) => {
+    const isClassical = useIsClassical();
     // Swipe detection
     const touchStart = useRef<{ x: number; y: number } | null>(null);
 
@@ -149,16 +151,16 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
                         >
                             <button
                                 onClick={onToggleNotes}
-                                className={`w-full flex items-center justify-between px-6 py-2.5 border-r border-t transition-all duration-300 border-emerald-500/20 border-l-2 border-l-emerald-500/50 bg-gradient-to-r hover:opacity-90 ${notesOpen
-                                    ? 'from-emerald-800/50 via-emerald-800/20 to-transparent border-b-0 rounded-b-none'
-                                    : 'from-emerald-900/50 via-emerald-900/20 to-transparent border-b border-emerald-500/20 rounded-b-2xl'
+                                className={`w-full flex items-center justify-between px-6 py-2.5 border-r border-t transition-all duration-300 ${isClassical ? 'border-amber-500/20 border-l-2 border-l-amber-500/50' : 'border-emerald-500/20 border-l-2 border-l-emerald-500/50'} bg-gradient-to-r hover:opacity-90 ${notesOpen
+                                    ? isClassical ? 'from-amber-800/50 via-amber-800/20 to-transparent border-b-0 rounded-b-none' : 'from-emerald-800/50 via-emerald-800/20 to-transparent border-b-0 rounded-b-none'
+                                    : isClassical ? 'from-amber-900/50 via-amber-900/20 to-transparent border-b border-amber-500/20 rounded-b-2xl' : 'from-emerald-900/50 via-emerald-900/20 to-transparent border-b border-emerald-500/20 rounded-b-2xl'
                                     }`}
                             >
                                 <div className="flex items-center gap-2">
-                                    <Lightbulb className={`w-3.5 h-3.5 ${notesOpen ? 'text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.5)]' : 'text-emerald-500'}`} />
-                                    <span className={`text-[11px] font-bold uppercase tracking-widest ${notesOpen ? 'text-emerald-200' : 'text-emerald-400/80'}`}>Grammar Note</span>
+                                    <Lightbulb className={`w-3.5 h-3.5 ${notesOpen ? isClassical ? 'text-amber-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.5)]' : 'text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.5)]' : isClassical ? 'text-amber-500' : 'text-emerald-500'}`} />
+                                    <span className={`text-[11px] font-bold uppercase tracking-widest ${notesOpen ? isClassical ? 'text-amber-200' : 'text-emerald-200' : isClassical ? 'text-amber-400/80' : 'text-emerald-400/80'}`}>Grammar Note</span>
                                 </div>
-                                <ChevronDown className={`w-4 h-4 text-emerald-500 transition-transform duration-300 ${notesOpen ? 'rotate-180' : ''}`} />
+                                <ChevronDown className={`w-4 h-4 ${isClassical ? 'text-amber-500' : 'text-emerald-500'} transition-transform duration-300 ${notesOpen ? 'rotate-180' : ''}`} />
                             </button>
 
                             <AnimatePresence initial={false}>
@@ -168,7 +170,7 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
                                         animate={{ height: 'auto', opacity: 1 }}
                                         exit={{ height: 0, opacity: 0 }}
                                         transition={{ duration: 0.3, ease: 'easeInOut' }}
-                                        className="overflow-hidden border-x border-b border-emerald-500/20 rounded-b-2xl shadow-xl bg-slate-900/60"
+                                        className={`overflow-hidden border-x border-b ${isClassical ? 'border-amber-500/20' : 'border-emerald-500/20'} rounded-b-2xl shadow-xl bg-slate-900/60`}
                                     >
                                         <div className="p-6 text-sm text-slate-300 leading-relaxed font-serif bg-gradient-to-b from-slate-900/40 to-transparent">
                                             {renderExplanation(sentence.explanation)}
@@ -194,8 +196,8 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
 
             {/* Connector arrow pointing down toward tree root */}
             <div className="flex flex-col items-center gap-0 mt-2 xl:mt-3 opacity-30 pointer-events-none">
-                <div className="w-px h-4 xl:h-6 bg-gradient-to-b from-purple-400 to-transparent" />
-                <svg width="10" height="6" viewBox="0 0 10 6" className="fill-purple-400">
+                <div className={`w-px h-4 xl:h-6 bg-gradient-to-b ${isClassical ? 'from-amber-400' : 'from-purple-400'} to-transparent`} />
+                <svg width="10" height="6" viewBox="0 0 10 6" className={isClassical ? 'fill-amber-400' : 'fill-purple-400'}>
                     <path d="M5 6 L0 0 L10 0 Z" />
                 </svg>
             </div>

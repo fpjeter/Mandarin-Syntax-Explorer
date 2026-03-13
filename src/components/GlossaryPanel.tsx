@@ -2,11 +2,14 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, BookOpen } from 'lucide-react';
 import { glossary } from '../data/glossary';
+import { classicalGlossary } from '../data/classicalGlossary';
 import { RoleTooltip } from './RoleTooltip';
+import { useIsClassical } from '../contexts/AppModeContext';
 import type { GrammarRole } from '../types/grammar';
 
-// Sort once at module level — glossary is static
-const SORTED_TERMS = (Object.keys(glossary) as GrammarRole[]).sort((a, b) => a.localeCompare(b));
+// Sort once at module level — glossaries are static
+const MODERN_SORTED = (Object.keys(glossary) as GrammarRole[]).sort((a, b) => a.localeCompare(b));
+const CLASSICAL_SORTED = (Object.keys(classicalGlossary) as GrammarRole[]).sort((a, b) => a.localeCompare(b));
 
 interface GlossaryPanelProps {
     isOpen: boolean;
@@ -14,6 +17,9 @@ interface GlossaryPanelProps {
 }
 
 export const GlossaryPanel: React.FC<GlossaryPanelProps> = ({ isOpen, onClose }) => {
+    const isClassical = useIsClassical();
+    const activeGlossary = isClassical ? classicalGlossary : glossary;
+    const sortedTerms = isClassical ? CLASSICAL_SORTED : MODERN_SORTED;
 
     return (
         <AnimatePresence>
@@ -43,8 +49,8 @@ export const GlossaryPanel: React.FC<GlossaryPanelProps> = ({ isOpen, onClose })
                                     <BookOpen className="w-5 h-5" />
                                 </div>
                                 <div>
-                                    <h2 className="text-sm font-bold text-slate-100 uppercase tracking-widest">Grammar Glossary</h2>
-                                    <p className="text-[10px] text-slate-400">Plain-English definitions</p>
+                                    <h2 className="text-sm font-bold text-slate-100 uppercase tracking-widest">{isClassical ? 'Classical Glossary' : 'Grammar Glossary'}</h2>
+                                    <p className="text-[10px] text-slate-400">{isClassical ? 'Classical Chinese definitions' : 'Plain-English definitions'}</p>
                                 </div>
                             </div>
                             <button
@@ -57,8 +63,8 @@ export const GlossaryPanel: React.FC<GlossaryPanelProps> = ({ isOpen, onClose })
 
                         {/* Content */}
                         <div className="flex-1 overflow-y-auto custom-scrollbar p-6 space-y-6">
-                            {SORTED_TERMS.map((term) => {
-                                const entry = glossary[term];
+                            {sortedTerms.map((term) => {
+                                const entry = activeGlossary[term];
                                 return (
                                     <div key={term} className="group">
                                         <div className="flex items-baseline gap-2 mb-1.5">

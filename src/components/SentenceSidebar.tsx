@@ -4,6 +4,7 @@ import { LibraryBig, ChevronDown, Search, X } from 'lucide-react';
 import { sampleSentences } from '../data/sentences';
 import { SENTENCE_CATEGORIES, CATEGORY_DESCRIPTIONS } from '../data/categories';
 import type { SentenceData } from '../types/grammar';
+import { useIsClassical } from '../contexts/AppModeContext';
 
 interface SentenceSidebarProps {
     selectedId: string;
@@ -26,6 +27,7 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
     const sentences = sentencesProp ?? sampleSentences;
     const categories = categoriesProp ?? SENTENCE_CATEGORIES;
     const descriptions = descriptionsProp ?? CATEGORY_DESCRIPTIONS;
+    const isClassical = useIsClassical();
 
     const [openGroup, setOpenGroup] = useState<string | null>(null);
     const [searchQuery, setSearchQuery] = useState('');
@@ -136,7 +138,7 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
         <div className="glass-panel rounded-3xl p-5 flex flex-col h-full overflow-hidden border border-slate-700/50 shadow-2xl relative">
 
             {/* Ambient glow inside sidebar */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 blur-3xl rounded-full" />
+            <div className={`absolute top-0 right-0 w-32 h-32 blur-3xl rounded-full ${isClassical ? 'bg-amber-500/10' : 'bg-purple-500/10'}`} />
 
             <h2 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-5 flex items-center">
                 <LibraryBig className="w-4 h-4 mr-2" />
@@ -152,7 +154,7 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
                     onKeyDown={handleSearchKeyDown}
                     placeholder="Search sentences…"
                     aria-label="Search sentences"
-                    className="w-full bg-slate-800/60 border border-slate-700/60 rounded-xl pl-8 pr-7 py-2 text-[11px] text-slate-200 placeholder:text-slate-500 focus:outline-none focus:border-purple-500/70 focus:ring-2 focus:ring-purple-500/40 transition-all duration-200"
+                    className={`w-full bg-slate-800/60 border border-slate-700/60 rounded-xl pl-8 pr-7 py-2 text-[11px] text-slate-200 placeholder:text-slate-500 focus:outline-none transition-all duration-200 ${isClassical ? 'focus:border-amber-500/70 focus:ring-2 focus:ring-amber-500/40' : 'focus:border-purple-500/70 focus:ring-2 focus:ring-purple-500/40'}`}
                 />
                 {searchQuery && (
                     <button
@@ -182,7 +184,7 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
                                 aria-expanded={isOpen}
                                 className="w-full flex items-center justify-between px-4 py-2.5 bg-slate-800/70 hover:bg-slate-700/60 transition-colors text-left relative overflow-hidden"
                             >
-                                <span className="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-purple-500/70 to-blue-500/70 rounded-r-full" />
+                                <span className={`absolute left-0 top-0 h-full w-[3px] rounded-r-full ${isClassical ? 'bg-gradient-to-b from-amber-500/70 to-orange-500/70' : 'bg-gradient-to-b from-purple-500/70 to-blue-500/70'}`} />
                                 <span className="flex flex-col gap-0.5 pl-1 min-w-0">
                                     <span className="text-[11px] font-bold uppercase tracking-widest text-slate-200 leading-none">{category}</span>
                                 </span>
@@ -218,14 +220,18 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
                                                         whileTap={{ scale: 0.98 }}
                                                         className={`w-full text-left p-3 rounded-xl transition-all duration-300 border relative overflow-hidden
                                                             ${isSelected
-                                                                ? 'bg-gradient-to-br from-blue-900/40 to-purple-900/40 border-purple-500/50 shadow-[0_4px_20px_rgba(168,85,247,0.15)] ring-1 ring-purple-500/20'
+                                                                ? isClassical
+                                                                    ? 'bg-gradient-to-br from-amber-900/40 to-orange-900/40 border-amber-500/50 shadow-[0_4px_20px_rgba(245,158,11,0.15)] ring-1 ring-amber-500/20'
+                                                                    : 'bg-gradient-to-br from-blue-900/40 to-purple-900/40 border-purple-500/50 shadow-[0_4px_20px_rgba(168,85,247,0.15)] ring-1 ring-purple-500/20'
                                                                 : isHighlighted
-                                                                    ? 'bg-slate-800/60 border-purple-500/40 ring-1 ring-purple-500/20'
+                                                                    ? isClassical
+                                                                        ? 'bg-slate-800/60 border-amber-500/40 ring-1 ring-amber-500/20'
+                                                                        : 'bg-slate-800/60 border-purple-500/40 ring-1 ring-purple-500/20'
                                                                     : 'bg-slate-800/30 border-slate-700/30 hover:bg-slate-800/70 hover:border-slate-600/50 hover:shadow-lg'
                                                             }`}
                                                     >
                                                         {isSelected && (
-                                                            <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-purple-400 to-blue-400" />
+                                                            <div className={`absolute top-0 left-0 w-1 h-full ${isClassical ? 'bg-gradient-to-b from-amber-400 to-orange-400' : 'bg-gradient-to-b from-purple-400 to-blue-400'}`} />
                                                         )}
                                                         <div className="text-lg font-semibold text-slate-100 mb-1 tracking-wide font-chinese-ui">{sentence.chinese}</div>
                                                         <div className={`text-[10px] text-[var(--color-mandarin-gold)] mb-2 font-medium tracking-wide transition-all duration-200 ${isSelected ? '' : 'text-[9px] opacity-70'}`}>{sentence.pinyin}</div>

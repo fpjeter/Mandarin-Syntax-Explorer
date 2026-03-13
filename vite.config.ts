@@ -8,4 +8,22 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          // Vendor chunks — cached separately, change infrequently
+          if (id.includes('node_modules/@xyflow') || id.includes('node_modules\\\\@xyflow')) {
+            return 'vendor-xyflow';
+          }
+          if (id.includes('node_modules/framer-motion') || id.includes('node_modules\\\\framer-motion')) {
+            return 'vendor-motion';
+          }
+          if (id.includes('node_modules/react-dom') || id.includes('node_modules\\\\react-dom')) {
+            return 'vendor-react';
+          }
+        },
+      },
+    },
+  },
 })

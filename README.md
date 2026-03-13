@@ -5,8 +5,10 @@ An interactive visualizer for Mandarin Chinese grammar structures. Select an exa
 ## Features
 
 - **Interactive syntax trees** — Nodes expand and collapse; pan and zoom the canvas freely
-- **60+ curated example sentences** across 19 grammar categories
+- **92 curated modern sentences** across 19 grammar categories
+- **30 annotated classical quotes** from Confucius, Laozi, Mencius, Xunzi, and more
 - **Badge system** — Construction-specific badges (把字句, 被字句, 是…的, 结果补语, etc.) appear on relevant nodes
+- **Classical badges** — Function word badges (者, 所, 而, 非, 勿, 於, 焉, 之) for classical mode
 - **Grammar glossary** — Tap any node role to see a plain-English definition
 - **Hover tooltips** — Contextual explanations for every node and badge
 - **Pinyin & translations** on every node, with ZCOOL XiaoWei display font for Chinese text
@@ -14,6 +16,8 @@ An interactive visualizer for Mandarin Chinese grammar structures. Select an exa
 - **Responsive layout** with mobile tab navigation and touch-friendly zoom controls
 - **Grammar guide** — Built-in article explaining the topic-prominent framework
 - **Classical Chinese Explorer** — Toggle into 古文 mode to explore famous classical quotes (see below)
+- **Ink wash transition** — Animated mode switches with ink wash effect
+- **Code-split bundles** — Lazy-loaded components and vendor chunking for fast initial loads
 
 ### Grammar Categories
 
@@ -31,33 +35,36 @@ An interactive visualizer for Mandarin Chinese grammar structures. Select an exa
 
 ## 📜 Classical Chinese Explorer
 
-Click the scroll icon (📜) next to the app title to toggle into **Classical Chinese mode**. The entire app switches to an amber/sepia palette and loads a curated set of famous 古文 quotes with full syntactic analysis.
+Click the scroll icon (📜) next to the app title to toggle into **Classical Chinese mode**. The entire app switches to an amber/sepia palette with an ink wash transition and loads a curated set of famous 古文 quotes with full syntactic analysis.
 
 ### Classical Features
 
-- **20 annotated quotes** from the Analects (论语), Tao Te Ching (道德经), Mencius, Xunzi, Han Yu, and Sun Tzu
+- **30 annotated quotes** from the Analects (論語), Tao Te Ching (道德經), Mencius (孟子), Xunzi (荀子), Zuozhuan (左傳), Han Yu (韓愈), Su Shi (蘇軾), and Sun Tzu (孫子)
 - **Full syntax trees** — same interactive tree visualization applied to classical grammar
+- **Classical badge system** — 8 badges for function words (者, 所, 而, 非, 勿, 於, 焉, 之)
 - **Dedicated grammar guide** — covers function words (虛詞), the 之 system, rhetorical patterns (反問), negation (否定), coverbs (介詞), and the 而 connective
-- **Amber/sepia theme** — distinct visual identity with warm stone tones
+- **Dedicated glossary** — classical grammar roles with period-appropriate definitions
+- **Amber/sepia theme** — distinct visual identity with warm stone tones and calligraphic fonts (Noto Serif SC, Ma Shan Zheng)
+- **Ink wash transition** — animated mode switch with a traditional ink wash effect
 - **Independent state** — your modern and classical sentence selections are preserved separately when switching modes
 
 ### Classical Grammar Categories
 
 | Category | Count | Description |
 |---|---|---|
-| Rhetorical Patterns (反問) | 4 | Sentence-final particles 乎/哉 for rhetorical questions |
-| Nominalizers (者/所) | 3 | 者 and 所 as nominalizing particles |
-| Classical Negation (非/勿/莫) | 4 | Negation with different scopes and strengths |
-| Coverbs & Prepositions (於/以/焉) | 3 | Pre-verbal prepositional phrases |
-| Sequential Actions (而) | 3 | 而 linking sequential, contrastive, or conditional clauses |
-| Genitive & Modification (之) | 3 | 之 as genitive marker, object pronoun, or structural filler |
+| Rhetorical Patterns (反問) | 5 | Sentence-final particles 乎/哉 for rhetorical questions |
+| Nominalizers (者/所) | 4 | 者 and 所 as nominalizing particles |
+| Classical Negation (非/勿/莫) | 5 | Negation with different scopes and strengths |
+| Coverbs & Prepositions (於/以/焉) | 6 | Pre-verbal prepositional phrases |
+| Sequential Actions (而) | 5 | 而 linking sequential, contrastive, or conditional clauses |
+| Genitive & Modification (之) | 5 | 之 as genitive marker, object pronoun, or structural filler |
 
 ### Adding Classical Quotes
 
 Each quote lives in `src/data/classicalSentences.ts` as a `SentenceData` object. Classical entries include two additional fields:
 
 - `source` — the text the quote comes from (e.g. `"《論語·學而》"`)
-- `author` — attribution (e.g. `"孔子 (Confucius)"`)
+- `author` — attribution (e.g. `"Confucius"`)
 
 The `category` field must match a value in `src/data/classicalCategories.ts`. Everything else (`chinese`, `pinyin`, `translation`, `explanation`, `tree`) follows the same structure as modern sentences.
 
@@ -74,7 +81,7 @@ The `category` field must match a value in `src/data/classicalCategories.ts`. Ev
 | Animations | [framer-motion](https://www.framer.com/motion/) |
 | Styling | Tailwind CSS v4 |
 | Icons | [lucide-react](https://lucide.dev/) |
-| Fonts | ZCOOL XiaoWei (display) · Noto Sans SC (UI) via Google Fonts |
+| Fonts | ZCOOL XiaoWei · Noto Sans SC · Noto Serif SC · Noto Serif TC · Ma Shan Zheng (Google Fonts) |
 | Analytics | Vercel Analytics |
 
 ## Getting Started
@@ -91,7 +98,10 @@ Then open [http://localhost:5173](http://localhost:5173).
 ```
 src/
 ├── components/
-│   ├── SyntaxTree.tsx              # Tree canvas, layout algorithm, zoom controls
+│   ├── SyntaxTree.tsx              # Tree canvas, state, event handlers
+│   ├── treeLayout.ts               # Pure layout algorithm (node positioning, edge coloring)
+│   ├── treeTransforms.ts           # Tree → React Flow conversion (aggregation, pro-drop)
+│   ├── TreeToolbar.tsx             # Expand/collapse/glossary toolbar
 │   ├── GrammarNode.tsx             # Individual tree node with badges and tooltips
 │   ├── SentenceHeader.tsx          # Sentence display card with grammar notes
 │   ├── SentenceSidebar.tsx         # Category accordion and sentence list (data-agnostic)
@@ -100,16 +110,23 @@ src/
 │   ├── GrammarGuide.tsx            # Modern Mandarin framework article
 │   ├── ClassicalGrammarGuide.tsx   # Classical Chinese grammar guide
 │   ├── ClassicalThemeProvider.tsx  # Amber/sepia theme wrapper
+│   ├── InkWashTransition.tsx       # Animated ink wash mode transition
 │   ├── RoleTooltip.tsx             # Hover tooltip system
 │   ├── RubyText.tsx                # Hanzi + pinyin ruby text rendering
 │   └── CoRefEdge.tsx               # Co-reference arc edge
+├── contexts/
+│   └── AppModeContext.tsx          # Modern/classical mode context provider
 ├── data/
-│   ├── sentences.ts                # Modern Mandarin example sentences
+│   ├── sentences.ts                # Modern Mandarin example sentences (92)
 │   ├── categories.ts               # Modern category list and descriptions
-│   ├── classicalSentences.ts       # Classical Chinese quotes with tree data
+│   ├── badges.ts                   # Modern badge specs and matching rules
+│   ├── glossary.ts                 # Modern grammar role definitions
+│   ├── classicalSentences.ts       # Classical Chinese quotes with tree data (30)
 │   ├── classicalCategories.ts      # Classical category list and descriptions
-│   ├── glossary.ts                 # Grammar role definitions
-│   └── badges.ts                   # Badge specs and matching rules
+│   ├── classicalBadges.ts          # Classical badge specs (者/所/而/非/勿/於/焉/之)
+│   └── classicalGlossary.ts       # Classical grammar role definitions
+├── utils/
+│   └── renderExplanation.tsx       # Markdown-like explanation text renderer
 └── types/
     └── grammar.ts                  # TypeScript type definitions
 ```
@@ -129,7 +146,7 @@ Each sentence lives in `src/data/sentences.ts` as a `SentenceData` object with:
 
 Each quote lives in `src/data/classicalSentences.ts` with the same structure, plus:
 - `source` — text attribution (e.g. `"《論語·學而》"`)
-- `author` — author attribution (e.g. `"孔子 (Confucius)"`)
+- `author` — author attribution (e.g. `"Confucius"`)
 - `category` — must match a value in `classicalCategories.ts`
 
 See existing entries for reference on how to build the tree shape.

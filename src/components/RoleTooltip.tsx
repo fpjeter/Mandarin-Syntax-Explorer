@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import type { GrammarRole } from '../types/grammar';
 import { glossary } from '../data/glossary';
+import { classicalGlossary } from '../data/classicalGlossary';
+import { useIsClassical } from '../contexts/AppModeContext';
 
 // ── Shared mousemove listener ────────────────────────────────────────────────
 // A single document-level listener checks all registered tooltips. When
@@ -269,7 +271,8 @@ interface RoleTooltipProps {
 }
 
 export const RoleTooltip: React.FC<RoleTooltipProps> = ({ role, children }) => {
-    const entry = glossary[role];
+    const isClassical = useIsClassical();
+    const entry = (isClassical ? classicalGlossary : glossary)[role];
     if (!entry) return <>{children}</>;
 
     return (
