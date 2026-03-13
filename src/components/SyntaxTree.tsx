@@ -148,19 +148,13 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
     const prevNodeIdsRef = useRef<Set<string>>(new Set());
     const freshTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-    // Collect all non-leaf node IDs for auto-expand
-    const collectExpandableIds = useCallback((node: AppGrammarNodeData): string[] => {
-        if (!node.children || node.children.length === 0) return [];
-        return [node.id, ...node.children.flatMap(collectExpandableIds)];
-    }, []);
-
     // Reset both expandedIds and showGhost together whenever the sentence changes.
     useEffect(() => {
-        setExpandedIds(tree ? new Set(collectExpandableIds(tree)) : new Set());
+        setExpandedIds(tree ? new Set([tree.id]) : new Set());
         setShowGhost(true);
         setFreshNodeIds(new Set());
         prevNodeIdsRef.current = new Set();
-    }, [tree, collectExpandableIds]);
+    }, [tree]);
 
     const { nodes: rawNodes, edges, corefPairs } = useMemo(() => parseTreeToFlow(tree, expandedIds, showGhost, isClassical), [tree, expandedIds, showGhost, isClassical]);
 

@@ -51,7 +51,7 @@ export const OnboardingHint: React.FC = () => {
                 <div className="flex flex-col gap-1.5 text-[11px] text-slate-300 font-medium pr-4">
                     <div className="flex items-center gap-2">
                         <span className="text-base">👆</span>
-                        <span>Tap nodes to expand · Tap roles for definitions</span>
+                        <span>Tap nodes to dig deeper · Tap roles for definitions</span>
                     </div>
                     <div className="flex items-center gap-2">
                         <span className="text-base">👌</span>
