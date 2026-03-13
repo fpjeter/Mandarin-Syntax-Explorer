@@ -280,7 +280,7 @@ function App() {
           </button>
 
           {/* Visualization Pane — hidden on mobile when list or guide is active */}
-          <div className={`flex-1 flex flex-col min-h-0 gap-2 ${mobileView !== 'tree' ? 'hidden lg:flex' : 'flex'}`}>
+          <div className={`flex-1 flex flex-col min-h-0 gap-2 touch-pan-y ${mobileView !== 'tree' ? 'hidden lg:flex' : 'flex'}`}>
 
             {/* ── Sentence header card + Persistent Notes  ── */}
             {selectedSentence && (

@@ -9,6 +9,7 @@ import { GrammarNode, type GrammarNodeViewData } from './GrammarNode';
 import { BadgeLegend } from './BadgeLegend';
 import { GlossaryPanel } from './GlossaryPanel';
 import { TreeToolbar } from './TreeToolbar';
+import { OnboardingHint } from './OnboardingHint';
 import { glossary } from '../data/glossary';
 import { classicalGlossary } from '../data/classicalGlossary';
 import { useIsClassical } from '../contexts/AppModeContext';
@@ -320,6 +321,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
             <GlossaryPanel isOpen={isGlossaryOpen} onClose={() => setIsGlossaryOpen(false)} />
             <BadgeLegend />
             <NodeInfoBar info={tappedNodeInfo} onClose={() => setTappedNodeInfo(null)} />
+            <OnboardingHint />
         </div>
     );
 };

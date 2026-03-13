@@ -66,6 +66,11 @@
   .pb-safe-bottom {
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
+
+  /* Prevent gesture trapping — iOS users can scroll vertically outside the tree canvas */
+  .touch-pan-y {
+    touch-action: pan-y;
+  }
 }
 
 /* Enable glassmorphism blur only on devices with a pointer (desktop/laptop).
