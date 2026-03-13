@@ -412,7 +412,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
             if (newIds.size > 0) {
                 setFreshNodeIds(newIds);
                 if (freshTimerRef.current) clearTimeout(freshTimerRef.current);
-                freshTimerRef.current = setTimeout(() => setFreshNodeIds(new Set()), 400);
+                freshTimerRef.current = setTimeout(() => setFreshNodeIds(new Set()), 600);
             }
         }
         prevNodeIdsRef.current = currentIds;
