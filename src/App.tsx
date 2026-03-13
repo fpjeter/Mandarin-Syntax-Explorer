@@ -139,7 +139,7 @@ function App() {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h1 className={`text-xl font-extrabold bg-clip-text text-transparent tracking-tight ${isClassical ? 'bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400' : 'bg-gradient-to-r from-purple-400 via-blue-400 to-emerald-400'}`}>
+                <h1 className={`text-xl font-extrabold bg-clip-text text-transparent tracking-tight ${isClassical ? 'bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400 font-chinese-display' : 'bg-gradient-to-r from-purple-400 via-blue-400 to-emerald-400'}`}>
                   {isClassical ? '古文探秘 · Classical Texts' : 'Mandarin Syntax Explorer'}
                 </h1>
                 <button

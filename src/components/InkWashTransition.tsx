@@ -61,6 +61,7 @@ export default function InkWashTransition({ active, targetMode }: InkWashTransit
                                 textShadow: isToClassical
                                     ? '0 0 30px rgba(217, 119, 6, 0.3)'
                                     : '0 0 30px rgba(96, 165, 250, 0.3)',
+                                ...(isToClassical && { fontFamily: "'Ma Shan Zheng', serif" }),
                             }}
                         >
                             {isToClassical ? '古文探秘' : '现代中文'}
