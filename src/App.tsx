@@ -119,7 +119,7 @@ function App() {
       </Suspense>
       <AppModeProvider value={isClassical}>
       <ClassicalThemeProvider active={isClassical}>
-        <div className={`h-[100dvh] text-slate-100 flex flex-col font-sans relative overflow-hidden ${isClassical ? 'bg-stone-950' : 'bg-slate-950'}`}>
+        <div className={`h-dvh-safe text-slate-100 flex flex-col font-sans relative overflow-hidden ${isClassical ? 'bg-stone-950' : 'bg-slate-950'}`}>
         {/* Background gradients */}
         {isClassical ? (
           <>

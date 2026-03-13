@@ -71,6 +71,16 @@
   .touch-pan-y {
     touch-action: pan-y;
   }
+
+  /* Full viewport height with dvh fallback for older Safari */
+  .h-dvh-safe {
+    height: 100vh;
+  }
+  @supports (height: 100dvh) {
+    .h-dvh-safe {
+      height: 100dvh;
+    }
+  }
 }
 
 /* Enable glassmorphism blur only on devices with a pointer (desktop/laptop).
