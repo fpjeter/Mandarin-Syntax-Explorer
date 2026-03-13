@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, useRef } from 'react';
 import { BookA, Info, Network, List, PanelLeftClose, PanelLeftOpen, Scroll } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 import { sampleSentences } from './data/sentences';
@@ -11,6 +11,7 @@ import { SentenceSidebar } from './components/SentenceSidebar';
 import { SentenceHeader } from './components/SentenceHeader';
 import { ClassicalThemeProvider } from './components/ClassicalThemeProvider';
 import { ClassicalGrammarGuide } from './components/ClassicalGrammarGuide';
+import InkWashTransition from './components/InkWashTransition';
 
 // ── Modern mode pre-computed lookups ──
 const modernById = new Map(sampleSentences.map(s => [s.id, s]));
@@ -35,6 +36,11 @@ function App() {
   const [mobileView, setMobileView] = useState<'list' | 'tree' | 'guide'>('guide');
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [sidebarTab, setSidebarTab] = useState<'sentences' | 'guide'>('sentences');
+
+  // ── Ink wash transition state ──
+  const [inkTransitionActive, setInkTransitionActive] = useState(false);
+  const [inkTargetMode, setInkTargetMode] = useState<'modern' | 'classical'>('classical');
+  const transitionLock = useRef(false);
 
   const isClassical = appMode === 'classical';
 
@@ -80,13 +86,34 @@ function App() {
   }, [selectedId, sentenceIndexById, sortedSentences, setSelectedId]);
 
   const toggleMode = useCallback(() => {
-    setAppMode(m => m === 'modern' ? 'classical' : 'modern');
-    setNotesOpen(false);
-  }, []);
+    if (transitionLock.current) return;
+    transitionLock.current = true;
+    const nextMode = appMode === 'modern' ? 'classical' : 'modern';
+    setInkTargetMode(nextMode);
+    setInkTransitionActive(true);
+
+    // Switch mode while overlay is fully opaque (fade-in is 350ms)
+    setTimeout(() => {
+      setAppMode(nextMode);
+      setNotesOpen(false);
+    }, 400);
+
+    // Begin exit: deactivate overlay so AnimatePresence runs exit animation
+    setTimeout(() => {
+      setInkTransitionActive(false);
+    }, 900);
+
+    // Release lock after exit animation completes (exit duration: 450ms)
+    setTimeout(() => {
+      transitionLock.current = false;
+    }, 1400);
+  }, [appMode]);
 
   return (
-    <ClassicalThemeProvider active={isClassical}>
-      <div className={`h-[100dvh] text-slate-100 flex flex-col font-sans relative overflow-hidden ${isClassical ? 'bg-stone-950' : 'bg-slate-950'}`}>
+    <>
+      <InkWashTransition active={inkTransitionActive} targetMode={inkTargetMode} />
+      <ClassicalThemeProvider active={isClassical}>
+        <div className={`h-[100dvh] text-slate-100 flex flex-col font-sans relative overflow-hidden ${isClassical ? 'bg-stone-950' : 'bg-slate-950'}`}>
         {/* Background gradients */}
         {isClassical ? (
           <>
@@ -287,7 +314,8 @@ function App() {
         </main>
         <Analytics />
       </div>
-    </ClassicalThemeProvider>
+      </ClassicalThemeProvider>
+    </>
   );
 }
 
