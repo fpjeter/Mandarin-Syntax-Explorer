@@ -5015,6 +5015,697 @@ export const sampleSentences: SentenceData[] = [
             ],
         },
     },
+
+    /* ───── Modern equivalents of classical quotes (cc1–cc13) ───── */
+
+    {
+        id: 's68',
+        category: 'Serial Verb Constructions (连动句)',
+        chinese: '学了以后要经常练习，这样才会有收获。',
+        pinyin: 'Xué le yǐ hòu yào jīng cháng liàn xí, zhè yàng cái huì yǒu shōu huò.',
+        translation: 'After studying, you should practice regularly; only then will you gain something.',
+        explanation: 'This is the modern Mandarin way of expressing the classical 學而時習之. Instead of the terse classical connective 而, modern Chinese uses **以后** (after) to sequence the two actions "study" and "practice." The second clause uses the **才** pattern: only *then* will the result follow. *Grammatically,* the sentence chains two verb phrases under one implied subject (you): first 学了以后 (after studying), then 要经常练习 (should regularly practice). The second clause introduces a new frame with 这样 (\"this way\"), followed by 才会 (\"only then will\") and the result 有收获 (\"have gains\").',
+        tree: {
+            id: 's68-root', role: 'Sentence', children: [
+                { id: 's68-c1', role: 'Topic', subRole: 'clause 1', children: [
+                    { id: 's68-v1', role: 'Verb Phrase', children: [
+                        { id: 's68-xue', role: 'Head Verb', text: { hanzi: '学', pinyin: 'xué', translation: 'study' } },
+                        { id: 's68-le', role: 'Particle', subRole: 'aspect', text: { hanzi: '了', pinyin: 'le', translation: '(completion)' } },
+                        { id: 's68-yihou', role: 'Adjunct', subRole: 'time', text: { hanzi: '以后', pinyin: 'yǐ hòu', translation: 'after' } },
+                    ]},
+                    { id: 's68-v2', role: 'Verb Phrase', children: [
+                        { id: 's68-yao', role: 'Adjunct', text: { hanzi: '要', pinyin: 'yào', translation: 'should' } },
+                        { id: 's68-jc', role: 'Adjunct', text: { hanzi: '经常', pinyin: 'jīng cháng', translation: 'regularly' } },
+                        { id: 's68-lx', role: 'Head Verb', text: { hanzi: '练习', pinyin: 'liàn xí', translation: 'practice' } },
+                    ]},
+                ]},
+                { id: 's68-c2', role: 'Comment', subRole: 'result clause', children: [
+                    { id: 's68-zy', role: 'Adjunct', text: { hanzi: '这样', pinyin: 'zhè yàng', translation: 'this way' } },
+                    { id: 's68-cai', role: 'Adjunct', text: { hanzi: '才会', pinyin: 'cái huì', translation: 'only then will' } },
+                    { id: 's68-you', role: 'Head Verb', text: { hanzi: '有', pinyin: 'yǒu', translation: 'have' } },
+                    { id: 's68-sh', role: 'Object', text: { hanzi: '收获', pinyin: 'shōu huò', translation: 'gains' } },
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's69',
+        category: 'Comparatives (比较句)',
+        chinese: '知道的人比不上喜欢的人，喜欢的人比不上乐在其中的人。',
+        pinyin: 'Zhī dào de rén bǐ bù shàng xǐ huān de rén, xǐ huān de rén bǐ bù shàng lè zài qí zhōng de rén.',
+        translation: 'Those who merely know cannot compare to those who love it; those who love it cannot compare to those who delight in it.',
+        explanation: 'This modernizes the classical 知之者不如好之者. The classical 者 nominalizer becomes **的人** (\"the person who...\"), and the classical comparative 不如 becomes the modern equivalent **比不上** (\"cannot compare to\"). *Grammatically,* this sentence uses the **比** comparative construction twice in parallel. Each clause follows the pattern: [subject 的人] + 比不上 + [reference 的人]. The 的 particle nominalizes verb phrases into noun phrases, functioning exactly like the classical 者.',
+        tree: {
+            id: 's69-root', role: 'Sentence', children: [
+                { id: 's69-c1', role: 'Topic', subRole: 'first comparison', children: [
+                    { id: 's69-s1', role: 'Subject', children: [
+                        { id: 's69-zd', role: 'Attributive', text: { hanzi: '知道的', pinyin: 'zhī dào de', translation: 'who know' } },
+                        { id: 's69-r1', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                    ]},
+                    { id: 's69-bbs1', role: 'Head Verb', text: { hanzi: '比不上', pinyin: 'bǐ bù shàng', translation: 'cannot compare to' } },
+                    { id: 's69-o1', role: 'Object', children: [
+                        { id: 's69-xh', role: 'Attributive', text: { hanzi: '喜欢的', pinyin: 'xǐ huān de', translation: 'who love' } },
+                        { id: 's69-r2', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                    ]},
+                ]},
+                { id: 's69-c2', role: 'Comment', subRole: 'second comparison', children: [
+                    { id: 's69-s2', role: 'Subject', children: [
+                        { id: 's69-xh2', role: 'Attributive', text: { hanzi: '喜欢的', pinyin: 'xǐ huān de', translation: 'who love' } },
+                        { id: 's69-r3', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                    ]},
+                    { id: 's69-bbs2', role: 'Head Verb', text: { hanzi: '比不上', pinyin: 'bǐ bù shàng', translation: 'cannot compare to' } },
+                    { id: 's69-o2', role: 'Object', children: [
+                        { id: 's69-le', role: 'Attributive', text: { hanzi: '乐在其中的', pinyin: 'lè zài qí zhōng de', translation: 'who delight in it' } },
+                        { id: 's69-r4', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                    ]},
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's70',
+        category: 'Basic Topic\u2013Comment (\u4e3b\u9898\u8bc4\u8bba)',
+        chinese: '几个人一起走，里面肯定有值得我学习的人。',
+        pinyin: 'Jǐ gè rén yì qǐ zǒu, lǐ miàn kěn dìng yǒu zhí de wǒ xué xí de rén.',
+        translation: 'When a few people walk together, there is surely someone worth learning from among them.',
+        explanation: 'This modernizes the classical 三人行必有我師焉. The classical construction compresses the entire idea into eight characters; modern Mandarin spells it out with a Topic-Comment frame. *Grammatically,* the Topic (几个人一起走) sets up a situation: \"when a few people walk together.\" The Comment then asserts: 里面 (\"among them\") + 肯定有 (\"surely there is\") + a complex noun phrase. The noun phrase 值得我学习的人 (\"a person worth my studying\") uses a nested 的 nominalization.',
+        tree: {
+            id: 's70-root', role: 'Sentence', children: [
+                { id: 's70-topic', role: 'Topic', subRole: 'situational frame', children: [
+                    { id: 's70-jgr', role: 'Subject', text: { hanzi: '几个人', pinyin: 'jǐ gè rén', translation: 'a few people' } },
+                    { id: 's70-yq', role: 'Adjunct', text: { hanzi: '一起', pinyin: 'yì qǐ', translation: 'together' } },
+                    { id: 's70-zou', role: 'Head Verb', text: { hanzi: '走', pinyin: 'zǒu', translation: 'walk' } },
+                ]},
+                { id: 's70-comment', role: 'Comment', children: [
+                    { id: 's70-lm', role: 'Adjunct', subRole: 'location', text: { hanzi: '里面', pinyin: 'lǐ miàn', translation: 'among them' } },
+                    { id: 's70-kd', role: 'Adjunct', text: { hanzi: '肯定', pinyin: 'kěn dìng', translation: 'surely' } },
+                    { id: 's70-you', role: 'Head Verb', text: { hanzi: '有', pinyin: 'yǒu', translation: 'there is' } },
+                    { id: 's70-obj', role: 'Object', children: [
+                        { id: 's70-zd', role: 'Attributive', text: { hanzi: '值得我学习的', pinyin: 'zhí de wǒ xué xí de', translation: 'worth my learning from' } },
+                        { id: 's70-ren', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'person' } },
+                    ]},
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's71',
+        category: 'Conditional Sentences (\u5982\u679c\u2026\u5c31\u2026)',
+        chinese: '如果一个道理能用语言说清楚，那它就不是永恒的道理。',
+        pinyin: 'Rú guǒ yí gè dào lǐ néng yòng yǔ yán shuō qīng chǔ, nà tā jiù bú shì yǒng héng de dào lǐ.',
+        translation: 'If a truth can be expressed clearly in words, then it is not an eternal truth.',
+        explanation: 'This modernizes the classical 道可道，非常道. The terse classical parallelism becomes a full conditional sentence with 如果...那...就... *Grammatically,* the first clause uses **如果** to introduce the condition: \"if a truth can be spoken clearly.\" The 能 (\"can\") + 用语言 (\"using language\") + 说清楚 (\"speak clearly\") spells out what classical Chinese compressed into 可道 (\"can be spoken\"). The second clause uses **那它就不是** (\"then it is not\") as the consequence.',
+        tree: {
+            id: 's71-root', role: 'Sentence', children: [
+                { id: 's71-cond', role: 'Topic', subRole: 'conditional (如果)', children: [
+                    { id: 's71-rg', role: 'Adjunct', text: { hanzi: '如果', pinyin: 'rú guǒ', translation: 'if' } },
+                    { id: 's71-subj', role: 'Subject', text: { hanzi: '一个道理', pinyin: 'yí gè dào lǐ', translation: 'a truth' } },
+                    { id: 's71-neng', role: 'Adjunct', text: { hanzi: '能', pinyin: 'néng', translation: 'can' } },
+                    { id: 's71-yy', role: 'Adjunct', subRole: 'instrument', text: { hanzi: '用语言', pinyin: 'yòng yǔ yán', translation: 'using language' } },
+                    { id: 's71-sqc', role: 'Head Verb', text: { hanzi: '说清楚', pinyin: 'shuō qīng chǔ', translation: 'speak clearly' } },
+                ]},
+                { id: 's71-result', role: 'Comment', subRole: 'consequence (就)', children: [
+                    { id: 's71-na', role: 'Adjunct', text: { hanzi: '那', pinyin: 'nà', translation: 'then' } },
+                    { id: 's71-ta', role: 'Subject', text: { hanzi: '它', pinyin: 'tā', translation: 'it' } },
+                    { id: 's71-jiu', role: 'Adjunct', text: { hanzi: '就', pinyin: 'jiù', translation: '(consequence)' } },
+                    { id: 's71-bushi', role: 'Head Verb', text: { hanzi: '不是', pinyin: 'bú shì', translation: 'is not' } },
+                    { id: 's71-obj', role: 'Object', children: [
+                        { id: 's71-yh', role: 'Attributive', text: { hanzi: '永恒的', pinyin: 'yǒng héng de', translation: 'eternal' } },
+                        { id: 's71-dl', role: 'Head Noun', text: { hanzi: '道理', pinyin: 'dào lǐ', translation: 'truth' } },
+                    ]},
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's72',
+        category: 'Even (\u8fde\u2026\u90fd/\u4e5f)',
+        chinese: '连一千里的路，也要从第一步开始走。',
+        pinyin: 'Lián yī qiān lǐ de lù, yě yào cóng dì yī bù kāi shǐ zǒu.',
+        translation: 'Even a journey of a thousand miles must begin with the first step.',
+        explanation: 'This modernizes the classical 千里之行始於足下. Modern Mandarin uses the **连...也** pattern for \"even,\" turning the classical observation into an emphatic statement. *Grammatically,* **连** fronts the emphasized noun phrase (一千里的路, \"a thousand-mile road\"), and **也** in the Comment says \"even so, you still must...\" The classical 之 (genitive marker) becomes 的, 始 (\"begin\") becomes 开始, and 於足下 (\"from beneath one\'s feet\") becomes 从第一步 (\"from the first step\").',
+        tree: {
+            id: 's72-root', role: 'Sentence', children: [
+                { id: 's72-topic', role: 'Topic', subRole: '连-construction (even)', children: [
+                    { id: 's72-lian', role: 'Particle', subRole: 'emphatic fronting', text: { hanzi: '连', pinyin: 'lián', translation: 'even' } },
+                    { id: 's72-np', role: 'Object', children: [
+                        { id: 's72-yql', role: 'Attributive', text: { hanzi: '一千里的', pinyin: 'yī qiān lǐ de', translation: 'thousand-mile' } },
+                        { id: 's72-lu', role: 'Head Noun', text: { hanzi: '路', pinyin: 'lù', translation: 'road/journey' } },
+                    ]},
+                ]},
+                { id: 's72-comment', role: 'Comment', children: [
+                    { id: 's72-ye', role: 'Adjunct', text: { hanzi: '也', pinyin: 'yě', translation: 'also/still' } },
+                    { id: 's72-yao', role: 'Adjunct', text: { hanzi: '要', pinyin: 'yào', translation: 'must' } },
+                    { id: 's72-cong', role: 'Adjunct', subRole: 'source', text: { hanzi: '从第一步', pinyin: 'cóng dì yī bù', translation: 'from the first step' } },
+                    { id: 's72-ks', role: 'Head Verb', text: { hanzi: '开始', pinyin: 'kāi shǐ', translation: 'begin' } },
+                    { id: 's72-zou', role: 'Complement', text: { hanzi: '走', pinyin: 'zǒu', translation: 'walk' } },
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's73',
+        category: 'Conditional Sentences (\u5982\u679c\u2026\u5c31\u2026)',
+        chinese: '如果你经常复习学过的东西，就能发现新的道理。',
+        pinyin: 'Rú guǒ nǐ jīng cháng fù xí xué guò de dōng xi, jiù néng fā xiàn xīn de dào lǐ.',
+        translation: 'If you regularly review what you have learned, you can discover new insights.',
+        explanation: 'This modernizes the classical 溫故而知新. The classical sentence packs two sequential actions into four characters; modern Mandarin unpacks them into a conditional frame with 如果...就... *Grammatically,* the condition clause uses 经常 (\"regularly\") + 复习 (\"review\") + a 的 nominalization (学过的东西, \"things you have studied\"). The consequence clause uses 就能 (\"then can\") + 发现 (\"discover\") + 新的道理 (\"new insights\"). The aspect marker 过 marks past experience.',
+        tree: {
+            id: 's73-root', role: 'Sentence', children: [
+                { id: 's73-cond', role: 'Topic', subRole: 'conditional (如果)', children: [
+                    { id: 's73-rg', role: 'Adjunct', text: { hanzi: '如果', pinyin: 'rú guǒ', translation: 'if' } },
+                    { id: 's73-ni', role: 'Subject', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } },
+                    { id: 's73-jc', role: 'Adjunct', text: { hanzi: '经常', pinyin: 'jīng cháng', translation: 'regularly' } },
+                    { id: 's73-fx', role: 'Head Verb', text: { hanzi: '复习', pinyin: 'fù xí', translation: 'review' } },
+                    { id: 's73-obj', role: 'Object', children: [
+                        { id: 's73-xg', role: 'Attributive', text: { hanzi: '学过的', pinyin: 'xué guò de', translation: 'previously learned' } },
+                        { id: 's73-dx', role: 'Head Noun', text: { hanzi: '东西', pinyin: 'dōng xi', translation: 'things' } },
+                    ]},
+                ]},
+                { id: 's73-result', role: 'Comment', subRole: 'consequence (就)', children: [
+                    { id: 's73-jn', role: 'Adjunct', text: { hanzi: '就能', pinyin: 'jiù néng', translation: 'then can' } },
+                    { id: 's73-faxian', role: 'Head Verb', text: { hanzi: '发现', pinyin: 'fā xiàn', translation: 'discover' } },
+                    { id: 's73-obj2', role: 'Object', children: [
+                        { id: 's73-xin', role: 'Attributive', text: { hanzi: '新的', pinyin: 'xīn de', translation: 'new' } },
+                        { id: 's73-dl', role: 'Head Noun', text: { hanzi: '道理', pinyin: 'dào lǐ', translation: 'insights' } },
+                    ]},
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's74',
+        category: 'BA Construction (\u628a\u5b57\u53e5)',
+        chinese: '不要把自己不想要的东西强加给别人。',
+        pinyin: 'Bú yào bǎ zì jǐ bù xiǎng yào de dōng xi qiáng jiā gěi bié rén.',
+        translation: 'Do not force upon others what you yourself do not want.',
+        explanation: 'This modernizes the classical 己所不欲勿施於人. Modern Mandarin uses the **把** construction to front the object before the verb, just as classical Chinese used fronted objects but with different mechanisms. *Grammatically,* 不要 (\"do not\") opens the prohibition. 把 then fronts the complex object: 自己不想要的东西 (\"things you yourself don\'t want\"). The verb phrase 强加给别人 (\"force upon others\") completes the action. The classical 勿 becomes 不要, 所不欲 becomes 不想要的东西, and 施於人 becomes 强加给别人.',
+        tree: {
+            id: 's74-root', role: 'Sentence', children: [
+                { id: 's74-neg', role: 'Adjunct', subRole: 'prohibition', text: { hanzi: '不要', pinyin: 'bú yào', translation: 'do not' } },
+                { id: 's74-ba', role: 'Adjunct', subRole: 'ba-construction', children: [
+                    { id: 's74-ba-p', role: 'Preposition', text: { hanzi: '把', pinyin: 'bǎ', translation: '(object fronting)' } },
+                    { id: 's74-ba-obj', role: 'Object', children: [
+                        { id: 's74-attr', role: 'Attributive', text: { hanzi: '自己不想要的', pinyin: 'zì jǐ bù xiǎng yào de', translation: 'that you yourself don\'t want' } },
+                        { id: 's74-dx', role: 'Head Noun', text: { hanzi: '东西', pinyin: 'dōng xi', translation: 'things' } },
+                    ]},
+                ]},
+                { id: 's74-vp', role: 'Verb Phrase', children: [
+                    { id: 's74-qj', role: 'Head Verb', text: { hanzi: '强加', pinyin: 'qiáng jiā', translation: 'force upon' } },
+                    { id: 's74-gei', role: 'Complement', text: { hanzi: '给', pinyin: 'gěi', translation: 'to/for' } },
+                    { id: 's74-br', role: 'Object', text: { hanzi: '别人', pinyin: 'bié rén', translation: 'others' } },
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's75',
+        category: 'Aspect Markers (\u7740/\u8fc7/\u4e86)',
+        chinese: '我每天都会反省自己三次。',
+        pinyin: 'Wǒ měi tiān dōu huì fǎn xǐng zì jǐ sān cì.',
+        translation: 'Every day I reflect on myself three times.',
+        explanation: 'This modernizes the classical 吾日三省吾身. Modern Mandarin makes the frequency explicit with 每天 (\"every day\") and the habitual marker 都会 (\"always will\"), while classical Chinese compressed it into 日 (\"daily\"). *Grammatically,* 我 is the Topic. The Comment uses 每天 (time adverb) + 都会 (habitual marker, \"always will\") + 反省 (\"reflect on\") + 自己 (\"oneself\") + 三次 (\"three times,\" a verb complement showing frequency). The classical 吾身 (\"my person\") becomes reflexive 自己.',
+        tree: {
+            id: 's75-root', role: 'Sentence', children: [
+                { id: 's75-t', role: 'Topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
+                { id: 's75-c', role: 'Comment', children: [
+                    { id: 's75-mt', role: 'Adjunct', subRole: 'time', text: { hanzi: '每天', pinyin: 'měi tiān', translation: 'every day' } },
+                    { id: 's75-dh', role: 'Adjunct', subRole: 'habitual', text: { hanzi: '都会', pinyin: 'dōu huì', translation: 'always will' } },
+                    { id: 's75-fx', role: 'Head Verb', text: { hanzi: '反省', pinyin: 'fǎn xǐng', translation: 'reflect on' } },
+                    { id: 's75-zj', role: 'Object', text: { hanzi: '自己', pinyin: 'zì jǐ', translation: 'oneself' } },
+                    { id: 's75-sc', role: 'Complement', subRole: 'frequency', text: { hanzi: '三次', pinyin: 'sān cì', translation: 'three times' } },
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's76',
+        category: 'Rhetorical Questions (\u53cd\u95ee\u53e5)',
+        chinese: '王侯将相难道是天生的吗？',
+        pinyin: 'Wáng hóu jiàng xiàng nán dào shì tiān shēng de ma?',
+        translation: 'Are kings and generals really born into their roles?',
+        explanation: 'This modernizes the classical 王侯將相寧有種乎. The rhetorical question pattern shifts from the classical 寧...乎 frame to the modern **难道...吗** frame. *Grammatically,* the Topic 王侯将相 (\"kings, lords, generals, ministers\") remains identical to the classical version. The Comment uses 难道 (\"don\'t tell me\") to signal disbelief, then 是...的 to focus on the quality \"天生的\" (\"innate/born that way\"), closed by 吗 (yes/no question marker). The rhetorical force is the same: the expected answer is \"of course not!\"',
+        tree: {
+            id: 's76-root', role: 'Sentence', children: [
+                { id: 's76-t', role: 'Topic', text: { hanzi: '王侯将相', pinyin: 'wáng hóu jiàng xiàng', translation: 'kings, lords, generals' } },
+                { id: 's76-c', role: 'Comment', subRole: 'rhetorical question', children: [
+                    { id: 's76-nd', role: 'Adjunct', subRole: 'rhetorical marker', text: { hanzi: '难道', pinyin: 'nán dào', translation: 'don\'t tell me' } },
+                    { id: 's76-shi', role: 'Copula', text: { hanzi: '是', pinyin: 'shì', translation: 'is' } },
+                    { id: 's76-ts', role: 'Complement', text: { hanzi: '天生的', pinyin: 'tiān shēng de', translation: 'innate/born' } },
+                    { id: 's76-ma', role: 'Particle', subRole: 'question marker', text: { hanzi: '吗', pinyin: 'ma', translation: '(?)' } },
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's77',
+        category: 'Degree Complements (\u7a0b\u5ea6\u8865\u8bed)',
+        chinese: '时间过得就像流水一样快，日夜不停。',
+        pinyin: 'Shí jiān guò de jiù xiàng liú shuǐ yí yàng kuài, rì yè bù tíng.',
+        translation: 'Time passes as swiftly as flowing water, never ceasing day or night.',
+        explanation: 'This modernizes the classical 逝者如斯夫不舍晝夜. The classical metaphor is preserved but expressed with modern comparative grammar. *Grammatically,* 时间 (\"time\") is the Topic. The Comment uses a **degree complement**: 过得 (verb + 得) introduces a description of *how* time passes. The simile 就像流水一样快 (\"as fast as flowing water\") uses the 像...一样 (\"like...the same\") comparison pattern. The second clause 日夜不停 (\"day and night, not stopping\") mirrors the classical 不舍晝夜.',
+        tree: {
+            id: 's77-root', role: 'Sentence', children: [
+                { id: 's77-t', role: 'Topic', text: { hanzi: '时间', pinyin: 'shí jiān', translation: 'time' } },
+                { id: 's77-c', role: 'Comment', children: [
+                    { id: 's77-vp', role: 'Verb Phrase', children: [
+                        { id: 's77-guo', role: 'Head Verb', text: { hanzi: '过', pinyin: 'guò', translation: 'pass' } },
+                        { id: 's77-de', role: 'Particle', subRole: 'degree complement marker', text: { hanzi: '得', pinyin: 'de', translation: '(how)' } },
+                    ]},
+                    { id: 's77-comp', role: 'Complement', subRole: 'degree (simile)', children: [
+                        { id: 's77-jx', role: 'Adjunct', text: { hanzi: '就像流水一样', pinyin: 'jiù xiàng liú shuǐ yí yàng', translation: 'just like flowing water' } },
+                        { id: 's77-kuai', role: 'Head Verb', subRole: 'adjectival', text: { hanzi: '快', pinyin: 'kuài', translation: 'fast' } },
+                    ]},
+                    { id: 's77-c2', role: 'Adjunct', subRole: 'supplementary clause', text: { hanzi: '日夜不停', pinyin: 'rì yè bù tíng', translation: 'never ceasing day or night' } },
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's78',
+        category: 'Basic Topic\u2013Comment (\u4e3b\u9898\u8bc4\u8bba)',
+        chinese: '生命也是我想要的东西。',
+        pinyin: 'Shēng mìng yě shì wǒ xiǎng yào de dōng xi.',
+        translation: 'Life is also something I desire.',
+        explanation: 'This modernizes the classical 生亦我所欲也. The classical 所欲 (\"that which is desired\") becomes 想要的东西 (\"things I want to\"); the classical copula-like 也 at the end becomes the modern copula 是. *Grammatically,* 生命 (\"life\") is the Topic. The Comment uses 也 (\"also\") as an adverb before 是 (\"is\"), then a 的 nominalization: 我想要的东西 (\"the thing I want\"). This is a straightforward Topic-Comment identification sentence.',
+        tree: {
+            id: 's78-root', role: 'Sentence', children: [
+                { id: 's78-t', role: 'Topic', text: { hanzi: '生命', pinyin: 'shēng mìng', translation: 'life' } },
+                { id: 's78-c', role: 'Comment', children: [
+                    { id: 's78-ye', role: 'Adjunct', text: { hanzi: '也', pinyin: 'yě', translation: 'also' } },
+                    { id: 's78-shi', role: 'Copula', text: { hanzi: '是', pinyin: 'shì', translation: 'is' } },
+                    { id: 's78-obj', role: 'Object', children: [
+                        { id: 's78-attr', role: 'Attributive', text: { hanzi: '我想要的', pinyin: 'wǒ xiǎng yào de', translation: 'that I desire' } },
+                        { id: 's78-dx', role: 'Head Noun', text: { hanzi: '东西', pinyin: 'dōng xi', translation: 'thing' } },
+                    ]},
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's79',
+        category: 'Sh\u00ec\u2013de Construction (\u662f\u2026\u7684)',
+        chinese: '老师是用来传授知识和解答疑惑的。',
+        pinyin: 'Lǎo shī shì yòng lái chuán shòu zhī shi hé jiě dá yí huò de.',
+        translation: 'A teacher is someone used to transmit knowledge and resolve doubts.',
+        explanation: 'This modernizes the classical 師者所以傳道授業解惑也. Modern Mandarin uses the **是...的** construction to define the purpose of a teacher. *Grammatically,* 老师 (\"teacher\") is the Topic. The Comment uses 是 (\"is\") + a purpose phrase 用来 (\"used for\") + two verb-object pairs connected by 和 (\"and\"): 传授知识 (\"transmit knowledge\") and 解答疑惑 (\"resolve doubts\"). The 的 at the end nominalizes the whole phrase.',
+        tree: {
+            id: 's79-root', role: 'Sentence', children: [
+                { id: 's79-t', role: 'Topic', text: { hanzi: '老师', pinyin: 'lǎo shī', translation: 'teacher' } },
+                { id: 's79-c', role: 'Comment', subRole: 'shi-de definition', children: [
+                    { id: 's79-shi', role: 'Copula', text: { hanzi: '是', pinyin: 'shì', translation: 'is' } },
+                    { id: 's79-vp', role: 'Verb Phrase', children: [
+                        { id: 's79-yl', role: 'Adjunct', text: { hanzi: '用来', pinyin: 'yòng lái', translation: 'used for' } },
+                        { id: 's79-v1', role: 'Head Verb', text: { hanzi: '传授', pinyin: 'chuán shòu', translation: 'transmit' } },
+                        { id: 's79-o1', role: 'Object', text: { hanzi: '知识', pinyin: 'zhī shi', translation: 'knowledge' } },
+                        { id: 's79-he', role: 'Particle', text: { hanzi: '和', pinyin: 'hé', translation: 'and' } },
+                        { id: 's79-v2', role: 'Head Verb', text: { hanzi: '解答', pinyin: 'jiě dá', translation: 'resolve' } },
+                        { id: 's79-o2', role: 'Object', text: { hanzi: '疑惑', pinyin: 'yí huò', translation: 'doubts' } },
+                    ]},
+                    { id: 's79-de', role: 'Particle', subRole: 'nominalizer', text: { hanzi: '的', pinyin: 'de', translation: '(nominalizer)' } },
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's80',
+        category: 'BEI Passive (\u88ab\u5b57\u53e5)',
+        chinese: '青色是从蓝草里提取出来的，但是比蓝草还要蓝。',
+        pinyin: 'Qīng sè shì cóng lán cǎo lǐ tí qǔ chū lái de, dàn shì bǐ lán cǎo hái yào lán.',
+        translation: 'Blue dye is extracted from the indigo plant, yet it is even bluer than indigo.',
+        explanation: 'This modernizes the classical 青取之於藍而青於藍. Modern Mandarin uses 是...的 plus a directional complement to express the extraction, and 比...还要 for the comparison. *Grammatically,* 青色 (\"blue color\") is the Topic. The first Comment uses 是从...里提取出来的 (\"is extracted from...\"), where 提取出来 uses a directional complement (出来, \"out\"). The second clause uses the comparative 比...还要 (\"even more than\") + 蓝 (\"blue\").',
+        tree: {
+            id: 's80-root', role: 'Sentence', children: [
+                { id: 's80-t', role: 'Topic', text: { hanzi: '青色', pinyin: 'qīng sè', translation: 'blue dye' } },
+                { id: 's80-c1', role: 'Comment', subRole: 'extraction clause', children: [
+                    { id: 's80-shi', role: 'Copula', text: { hanzi: '是', pinyin: 'shì', translation: 'is' } },
+                    { id: 's80-pp', role: 'Adjunct', subRole: 'source', text: { hanzi: '从蓝草里', pinyin: 'cóng lán cǎo lǐ', translation: 'from the indigo plant' } },
+                    { id: 's80-tq', role: 'Head Verb', text: { hanzi: '提取', pinyin: 'tí qǔ', translation: 'extract' } },
+                    { id: 's80-cl', role: 'Complement', subRole: 'directional', text: { hanzi: '出来', pinyin: 'chū lái', translation: 'out' } },
+                    { id: 's80-de', role: 'Particle', text: { hanzi: '的', pinyin: 'de', translation: '(nominalizer)' } },
+                ]},
+                { id: 's80-c2', role: 'Comment', subRole: 'comparative clause', children: [
+                    { id: 's80-ds', role: 'Adjunct', text: { hanzi: '但是', pinyin: 'dàn shì', translation: 'but' } },
+                    { id: 's80-bi', role: 'Preposition', text: { hanzi: '比蓝草', pinyin: 'bǐ lán cǎo', translation: 'compared to indigo' } },
+                    { id: 's80-hy', role: 'Adjunct', text: { hanzi: '还要', pinyin: 'hái yào', translation: 'even more' } },
+                    { id: 's80-lan', role: 'Head Verb', subRole: 'adjectival', text: { hanzi: '蓝', pinyin: 'lán', translation: 'blue' } },
+                ]},
+            ]
+        }
+    },
+
+    /* ───── Modern equivalents of classical quotes (cc14–cc25) ───── */
+
+    {
+        id: 's81',
+        category: 'Aspect Markers (\u7740/\u8fc7/\u4e86)',
+        chinese: '从来没有过这样的事。',
+        pinyin: 'Cóng lái méi yǒu guò zhè yàng de shì.',
+        translation: 'There has never been such a thing.',
+        explanation: 'This modernizes the classical 未之有也. The classical object-fronting pattern (之 before the verb 有) becomes standard modern word order. *Grammatically,* 从来 (\"ever/always\") + 没有 (\"have not\") + 过 (experiential aspect marker) together express \"have never experienced.\" The 过 marks that this negation covers all past experience, not just a single event. The object 这样的事 (\"this kind of thing\") uses 的 to nominalize the description.',
+        tree: {
+            id: 's81-root', role: 'Sentence', children: [
+                { id: 's81-adv', role: 'Adjunct', subRole: 'time scope', text: { hanzi: '从来', pinyin: 'cóng lái', translation: 'ever/never' } },
+                { id: 's81-neg', role: 'Adjunct', subRole: 'negation', text: { hanzi: '没有', pinyin: 'méi yǒu', translation: 'have not' } },
+                { id: 's81-guo', role: 'Particle', subRole: 'experiential aspect', text: { hanzi: '过', pinyin: 'guò', translation: '(past experience)' } },
+                { id: 's81-obj', role: 'Object', children: [
+                    { id: 's81-attr', role: 'Attributive', text: { hanzi: '这样的', pinyin: 'zhè yàng de', translation: 'this kind of' } },
+                    { id: 's81-shi', role: 'Head Noun', text: { hanzi: '事', pinyin: 'shì', translation: 'thing/matter' } },
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's82',
+        category: 'Conditional Sentences (\u5982\u679c\u2026\u5c31\u2026)',
+        chinese: '如果早上能明白人生的道理，晚上死了也值得。',
+        pinyin: 'Rú guǒ zǎo shang néng míng bai rén shēng de dào lǐ, wǎn shang sǐ le yě zhí de.',
+        translation: 'If in the morning you grasp the truths of life, dying that evening would still be worthwhile.',
+        explanation: 'This modernizes the classical 朝聞道夕死可矣. The stark four-character classical rhythm is expanded into a 如果...也值得 conditional. *Grammatically,* the condition clause uses 如果 + time (早上) + 能明白 (\"can understand\") + 人生的道理 (\"the truths of life\"). The result clause uses 晚上 (time) + 死了 (die + completion marker) + 也值得 (\"would also be worthwhile\"). The concessive 也 (\"even so, still\") softens what would otherwise be a blunt assertion.',
+        tree: {
+            id: 's82-root', role: 'Sentence', children: [
+                { id: 's82-cond', role: 'Topic', subRole: 'conditional', children: [
+                    { id: 's82-rg', role: 'Adjunct', text: { hanzi: '如果', pinyin: 'rú guǒ', translation: 'if' } },
+                    { id: 's82-zs', role: 'Adjunct', subRole: 'time', text: { hanzi: '早上', pinyin: 'zǎo shang', translation: 'in the morning' } },
+                    { id: 's82-neng', role: 'Adjunct', text: { hanzi: '能', pinyin: 'néng', translation: 'can' } },
+                    { id: 's82-mb', role: 'Head Verb', text: { hanzi: '明白', pinyin: 'míng bai', translation: 'understand' } },
+                    { id: 's82-obj', role: 'Object', children: [
+                        { id: 's82-rs', role: 'Attributive', text: { hanzi: '人生的', pinyin: 'rén shēng de', translation: 'of life' } },
+                        { id: 's82-dl', role: 'Head Noun', text: { hanzi: '道理', pinyin: 'dào lǐ', translation: 'truths' } },
+                    ]},
+                ]},
+                { id: 's82-result', role: 'Comment', children: [
+                    { id: 's82-ws', role: 'Adjunct', subRole: 'time', text: { hanzi: '晚上', pinyin: 'wǎn shang', translation: 'in the evening' } },
+                    { id: 's82-si', role: 'Head Verb', text: { hanzi: '死了', pinyin: 'sǐ le', translation: 'die (completed)' } },
+                    { id: 's82-ye', role: 'Adjunct', text: { hanzi: '也', pinyin: 'yě', translation: 'still/also' } },
+                    { id: 's82-zd', role: 'Complement', text: { hanzi: '值得', pinyin: 'zhí de', translation: 'worthwhile' } },
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's83',
+        category: 'Conditional Sentences (\u5982\u679c\u2026\u5c31\u2026)',
+        chinese: '了解敌人又了解自己，打一百场仗也不会有危险。',
+        pinyin: 'Liǎo jiě dí rén yòu liǎo jiě zì jǐ, dǎ yì bǎi chǎng zhàng yě bú huì yǒu wéi xiǎn.',
+        translation: 'If you understand the enemy and understand yourself, a hundred battles will bring no peril.',
+        explanation: 'This modernizes the classical 知彼知己百戰不殆. The classical four-character parallel (知彼知己) becomes a pair of modern verb phrases linked by 又 (\"and also\"). *Grammatically,* the Topic frames the condition with two parallel verb phrases: 了解敌人 (\"understand the enemy\") + 又 + 了解自己 (\"understand yourself\"). The Comment gives the result: 打一百场仗 (\"fight a hundred battles\") + 也不会有 (\"also will not have\") + 危险 (\"danger\"). The pattern 也不会 (\"still won\'t\") expresses certainty about the outcome.',
+        tree: {
+            id: 's83-root', role: 'Sentence', children: [
+                { id: 's83-cond', role: 'Topic', subRole: 'conditional premise', children: [
+                    { id: 's83-v1', role: 'Verb Phrase', children: [
+                        { id: 's83-lj1', role: 'Head Verb', text: { hanzi: '了解', pinyin: 'liǎo jiě', translation: 'understand' } },
+                        { id: 's83-dr', role: 'Object', text: { hanzi: '敌人', pinyin: 'dí rén', translation: 'enemy' } },
+                    ]},
+                    { id: 's83-you', role: 'Adjunct', text: { hanzi: '又', pinyin: 'yòu', translation: 'and also' } },
+                    { id: 's83-v2', role: 'Verb Phrase', children: [
+                        { id: 's83-lj2', role: 'Head Verb', text: { hanzi: '了解', pinyin: 'liǎo jiě', translation: 'understand' } },
+                        { id: 's83-zj', role: 'Object', text: { hanzi: '自己', pinyin: 'zì jǐ', translation: 'yourself' } },
+                    ]},
+                ]},
+                { id: 's83-result', role: 'Comment', children: [
+                    { id: 's83-da', role: 'Verb Phrase', children: [
+                        { id: 's83-da-v', role: 'Head Verb', text: { hanzi: '打', pinyin: 'dǎ', translation: 'fight' } },
+                        { id: 's83-ybcz', role: 'Object', text: { hanzi: '一百场仗', pinyin: 'yì bǎi chǎng zhàng', translation: 'a hundred battles' } },
+                    ]},
+                    { id: 's83-ybh', role: 'Adjunct', text: { hanzi: '也不会', pinyin: 'yě bú huì', translation: 'still will not' } },
+                    { id: 's83-you2', role: 'Head Verb', text: { hanzi: '有', pinyin: 'yǒu', translation: 'have' } },
+                    { id: 's83-wx', role: 'Object', text: { hanzi: '危险', pinyin: 'wéi xiǎn', translation: 'danger' } },
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's84',
+        category: 'Correlative Patterns (\u8d8a\u2026\u8d8a\u2026)',
+        chinese: '只学习不思考，越学越糊涂；只思考不学习，越想越危险。',
+        pinyin: 'Zhǐ xué xí bù sī kǎo, yuè xué yuè hú tu; zhǐ sī kǎo bù xué xí, yuè xiǎng yuè wéi xiǎn.',
+        translation: 'If you only study without thinking, the more you study the more confused you get; if you only think without studying, the more you think the more perilous it becomes.',
+        explanation: 'This modernizes the classical 學而不思則罔思而不學則殆. The classical conditional pattern 則 (\"then\") becomes the modern correlative **越...越...** (\"the more X, the more Y\"). *Grammatically,* each half follows the same pattern: 只A不B (\"only A, not B\") sets up the flawed approach, then 越A越B gives the escalating consequence. The 越...越 pattern shows that two changes happen together: as one increases, so does the other.',
+        tree: {
+            id: 's84-root', role: 'Sentence', children: [
+                { id: 's84-c1', role: 'Topic', subRole: 'first correlative', children: [
+                    { id: 's84-premise1', role: 'Adjunct', subRole: 'condition', text: { hanzi: '只学习不思考', pinyin: 'zhǐ xué xí bù sī kǎo', translation: 'only study, not think' } },
+                    { id: 's84-yue1a', role: 'Adjunct', text: { hanzi: '越学', pinyin: 'yuè xué', translation: 'the more you study' } },
+                    { id: 's84-yue1b', role: 'Head Verb', text: { hanzi: '越糊涂', pinyin: 'yuè hú tu', translation: 'the more confused' } },
+                ]},
+                { id: 's84-c2', role: 'Comment', subRole: 'second correlative', children: [
+                    { id: 's84-premise2', role: 'Adjunct', subRole: 'condition', text: { hanzi: '只思考不学习', pinyin: 'zhǐ sī kǎo bù xué xí', translation: 'only think, not study' } },
+                    { id: 's84-yue2a', role: 'Adjunct', text: { hanzi: '越想', pinyin: 'yuè xiǎng', translation: 'the more you think' } },
+                    { id: 's84-yue2b', role: 'Head Verb', text: { hanzi: '越危险', pinyin: 'yuè wéi xiǎn', translation: 'the more perilous' } },
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's85',
+        category: 'Even (\u8fde\u2026\u90fd/\u4e5f)',
+        chinese: '连别人不了解你，你都不生气，这才是有修养的人。',
+        pinyin: 'Lián bié rén bù liǎo jiě nǐ, nǐ dōu bù shēng qì, zhè cái shì yǒu xiū yǎng de rén.',
+        translation: 'Even when others do not understand you, you are not resentful; this is truly the mark of a cultivated person.',
+        explanation: 'This modernizes the classical 人不知而不慍不亦君子乎. The classical rhetorical question becomes a declarative statement using the **连...都** emphatic pattern. *Grammatically,* 连 fronts the extreme scenario (others not understanding you), then 都不生气 (\"still not angry\") completes the emphasis. The final clause 这才是 (\"only this is\") adds the judgment: 有修养的人 (\"a person of cultivation\"). The classical 君子 (\"noble person\") becomes the more modern 有修养的人.',
+        tree: {
+            id: 's85-root', role: 'Sentence', children: [
+                { id: 's85-lian', role: 'Topic', subRole: 'lian-construction', children: [
+                    { id: 's85-l', role: 'Particle', text: { hanzi: '连', pinyin: 'lián', translation: 'even' } },
+                    { id: 's85-clause', role: 'Object', text: { hanzi: '别人不了解你', pinyin: 'bié rén bù liǎo jiě nǐ', translation: 'others don\'t understand you' } },
+                ]},
+                { id: 's85-result', role: 'Comment', children: [
+                    { id: 's85-ni', role: 'Subject', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } },
+                    { id: 's85-dou', role: 'Adjunct', text: { hanzi: '都', pinyin: 'dōu', translation: 'still/all' } },
+                    { id: 's85-bsq', role: 'Head Verb', text: { hanzi: '不生气', pinyin: 'bù shēng qì', translation: 'not angry' } },
+                ]},
+                { id: 's85-judge', role: 'Comment', subRole: 'judgment clause', children: [
+                    { id: 's85-zhe', role: 'Subject', text: { hanzi: '这', pinyin: 'zhè', translation: 'this' } },
+                    { id: 's85-cai', role: 'Adjunct', text: { hanzi: '才', pinyin: 'cái', translation: 'only then' } },
+                    { id: 's85-shi', role: 'Copula', text: { hanzi: '是', pinyin: 'shì', translation: 'is' } },
+                    { id: 's85-obj', role: 'Object', children: [
+                        { id: 's85-attr', role: 'Attributive', text: { hanzi: '有修养的', pinyin: 'yǒu xiū yǎng de', translation: 'cultivated' } },
+                        { id: 's85-ren', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'person' } },
+                    ]},
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's86',
+        category: 'Basic Topic\u2013Comment (\u4e3b\u9898\u8bc4\u8bba)',
+        chinese: '了解别人的人算聪明，了解自己的人才算高明。',
+        pinyin: 'Liǎo jiě bié rén de rén suàn cōng míng, liǎo jiě zì jǐ de rén cái suàn gāo míng.',
+        translation: 'Those who understand others are clever; those who understand themselves are truly wise.',
+        explanation: 'This modernizes the classical 知人者智自知者明. The classical 者 nominalizer becomes 的人, and the classical terse predication becomes 算 (\"counts as\") + quality. *Grammatically,* two parallel Topic-Comment clauses share the same structure. Each Topic is a 的 nominalization: 了解别人的人 (\"people who understand others\"). Each Comment uses 算 (\"counts as\") as the copula-like verb. The second clause adds 才 (\"only then\") for emphasis, distinguishing mere cleverness from true wisdom.',
+        tree: {
+            id: 's86-root', role: 'Sentence', children: [
+                { id: 's86-c1', role: 'Topic', subRole: 'first clause', children: [
+                    { id: 's86-s1', role: 'Subject', children: [
+                        { id: 's86-a1', role: 'Attributive', text: { hanzi: '了解别人的', pinyin: 'liǎo jiě bié rén de', translation: 'who understand others' } },
+                        { id: 's86-r1', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                    ]},
+                    { id: 's86-suan1', role: 'Head Verb', text: { hanzi: '算', pinyin: 'suàn', translation: 'count as' } },
+                    { id: 's86-cm', role: 'Complement', text: { hanzi: '聪明', pinyin: 'cōng míng', translation: 'clever' } },
+                ]},
+                { id: 's86-c2', role: 'Comment', subRole: 'second clause', children: [
+                    { id: 's86-s2', role: 'Subject', children: [
+                        { id: 's86-a2', role: 'Attributive', text: { hanzi: '了解自己的', pinyin: 'liǎo jiě zì jǐ de', translation: 'who understand themselves' } },
+                        { id: 's86-r2', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                    ]},
+                    { id: 's86-cai', role: 'Adjunct', text: { hanzi: '才', pinyin: 'cái', translation: 'only then' } },
+                    { id: 's86-suan2', role: 'Head Verb', text: { hanzi: '算', pinyin: 'suàn', translation: 'count as' } },
+                    { id: 's86-gm', role: 'Complement', text: { hanzi: '高明', pinyin: 'gāo míng', translation: 'truly wise' } },
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's87',
+        category: 'Comparatives (\u6bd4\u8f83\u53e5)',
+        chinese: '好的时机不如好的地形，好的地形不如人心齐。',
+        pinyin: 'Hǎo de shí jī bù rú hǎo de dì xíng, hǎo de dì xíng bù rú rén xīn qí.',
+        translation: 'Favorable timing is not as good as advantageous terrain; advantageous terrain is not as good as unity among people.',
+        explanation: 'This modernizes the classical 天時不如地利地利不如人和. The classical four-character parallelism is preserved in modern form using **不如** (\"not as good as\"), which is one of the few classical comparative structures that survives directly into modern Mandarin. *Grammatically,* each clause follows the pattern: Topic + 不如 + Object. The 的 particle is added to make attributive phrases (好的时机, \"good timing\") where classical Chinese needed no marker. The final comparison uses 人心齐 (\"people\'s hearts aligned\") to modernize 人和.',
+        tree: {
+            id: 's87-root', role: 'Sentence', children: [
+                { id: 's87-c1', role: 'Topic', subRole: 'first comparison', children: [
+                    { id: 's87-s1', role: 'Subject', children: [
+                        { id: 's87-a1', role: 'Attributive', text: { hanzi: '好的', pinyin: 'hǎo de', translation: 'good' } },
+                        { id: 's87-sj', role: 'Head Noun', text: { hanzi: '时机', pinyin: 'shí jī', translation: 'timing' } },
+                    ]},
+                    { id: 's87-br1', role: 'Head Verb', text: { hanzi: '不如', pinyin: 'bù rú', translation: 'not as good as' } },
+                    { id: 's87-o1', role: 'Object', children: [
+                        { id: 's87-a2', role: 'Attributive', text: { hanzi: '好的', pinyin: 'hǎo de', translation: 'good' } },
+                        { id: 's87-dx', role: 'Head Noun', text: { hanzi: '地形', pinyin: 'dì xíng', translation: 'terrain' } },
+                    ]},
+                ]},
+                { id: 's87-c2', role: 'Comment', subRole: 'second comparison', children: [
+                    { id: 's87-s2', role: 'Subject', children: [
+                        { id: 's87-a3', role: 'Attributive', text: { hanzi: '好的', pinyin: 'hǎo de', translation: 'good' } },
+                        { id: 's87-dx2', role: 'Head Noun', text: { hanzi: '地形', pinyin: 'dì xíng', translation: 'terrain' } },
+                    ]},
+                    { id: 's87-br2', role: 'Head Verb', text: { hanzi: '不如', pinyin: 'bù rú', translation: 'not as good as' } },
+                    { id: 's87-o2', role: 'Object', text: { hanzi: '人心齐', pinyin: 'rén xīn qí', translation: 'unity among people' } },
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's88',
+        category: 'BA Construction (\u628a\u5b57\u53e5)',
+        chinese: '要用善良把怨恨化解掉。',
+        pinyin: 'Yào yòng shàn liáng bǎ yuàn hèn huà jiě diào.',
+        translation: 'One should use kindness to resolve resentment.',
+        explanation: 'This modernizes the classical 以德報怨. The classical instrumental coverb 以 (\"with/using\") becomes 用 (\"use\"), while the disposal construction uses 把 to highlight the affected object. *Grammatically,* 要 (\"should\") sets the advisory tone. 用善良 (\"using kindness\") is an instrumental adjunct. 把怨恨 fronts the object (resentment) before the verb. 化解掉 uses a resultative complement: 化解 (\"dissolve/resolve\") + 掉 (\"away, gone\"), indicating complete removal.',
+        tree: {
+            id: 's88-root', role: 'Sentence', children: [
+                { id: 's88-yao', role: 'Adjunct', text: { hanzi: '要', pinyin: 'yào', translation: 'should' } },
+                { id: 's88-yong', role: 'Adjunct', subRole: 'instrument', text: { hanzi: '用善良', pinyin: 'yòng shàn liáng', translation: 'using kindness' } },
+                { id: 's88-ba', role: 'Adjunct', subRole: 'ba-construction', children: [
+                    { id: 's88-ba-p', role: 'Preposition', text: { hanzi: '把', pinyin: 'bǎ', translation: '(object fronting)' } },
+                    { id: 's88-yh', role: 'Object', text: { hanzi: '怨恨', pinyin: 'yuàn hèn', translation: 'resentment' } },
+                ]},
+                { id: 's88-vp', role: 'Verb Phrase', children: [
+                    { id: 's88-hj', role: 'Head Verb', text: { hanzi: '化解', pinyin: 'huà jiě', translation: 'resolve' } },
+                    { id: 's88-diao', role: 'Complement', subRole: 'resultative', text: { hanzi: '掉', pinyin: 'diào', translation: 'away (completed removal)' } },
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's89',
+        category: 'Pivotal Constructions (\u517c\u8bed\u53e5)',
+        chinese: '困难让人成长，安逸让人退步。',
+        pinyin: 'Kùn nan ràng rén chéng zhǎng, ān yì ràng rén tuì bù.',
+        translation: 'Hardship makes people grow; comfort makes people regress.',
+        explanation: 'This modernizes the classical 生於憂患死於安樂. The abstract classical 於 (\"from/in\") construction becomes a concrete **pivotal construction** with 让 (\"make/let\"). *Grammatically,* each clause follows the pivotal pattern: Topic (困难/安逸) + 让 (\"makes\") + pivot (人, \"people\") + result verb. The person 人 is simultaneously the object of 让 and the subject of the following verb (成长/退步). This double role is the defining feature of pivotal constructions.',
+        tree: {
+            id: 's89-root', role: 'Sentence', children: [
+                { id: 's89-c1', role: 'Topic', subRole: 'first pivotal', children: [
+                    { id: 's89-kn', role: 'Subject', text: { hanzi: '困难', pinyin: 'kùn nan', translation: 'hardship' } },
+                    { id: 's89-rang1', role: 'Head Verb', subRole: 'causative', text: { hanzi: '让', pinyin: 'ràng', translation: 'makes' } },
+                    { id: 's89-ren1', role: 'Object', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                    { id: 's89-cz', role: 'Complement', text: { hanzi: '成长', pinyin: 'chéng zhǎng', translation: 'grow' } },
+                ]},
+                { id: 's89-c2', role: 'Comment', subRole: 'second pivotal', children: [
+                    { id: 's89-ay', role: 'Subject', text: { hanzi: '安逸', pinyin: 'ān yì', translation: 'comfort' } },
+                    { id: 's89-rang2', role: 'Head Verb', subRole: 'causative', text: { hanzi: '让', pinyin: 'ràng', translation: 'makes' } },
+                    { id: 's89-ren2', role: 'Object', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                    { id: 's89-tb', role: 'Complement', text: { hanzi: '退步', pinyin: 'tuì bù', translation: 'regress' } },
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's90',
+        category: 'Basic Topic\u2013Comment (\u4e3b\u9898\u8bc4\u8bba)',
+        chinese: '做事正义的人，帮助他的人就多；做事不正义的人，帮助他的人就少。',
+        pinyin: 'Zuò shì zhèng yì de rén, bāng zhù tā de rén jiù duō; zuò shì bú zhèng yì de rén, bāng zhù tā de rén jiù shǎo.',
+        translation: 'Those who act justly gain much support; those who act unjustly find little.',
+        explanation: 'This modernizes the classical 得道者多助失道者寡助. The classical 者 nominalizer becomes 的人, and the terse two-character predicates expand into full modern clauses. *Grammatically,* two parallel Topic-Comment pairs share the same structure. Each Topic is a 的 nominalization: 做事正义的人 (\"people who do things justly\"). Each Comment is also a 的 nominalization used as subject: 帮助他的人 (\"people who help them\") + 就 + quality (多/少). This showcases how modern Mandarin builds complex subjects through nested 的 phrases.',
+        tree: {
+            id: 's90-root', role: 'Sentence', children: [
+                { id: 's90-c1', role: 'Topic', subRole: 'first clause', children: [
+                    { id: 's90-t1', role: 'Subject', children: [
+                        { id: 's90-a1', role: 'Attributive', text: { hanzi: '做事正义的', pinyin: 'zuò shì zhèng yì de', translation: 'who act justly' } },
+                        { id: 's90-r1', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                    ]},
+                    { id: 's90-s1', role: 'Subject', children: [
+                        { id: 's90-bz1', role: 'Attributive', text: { hanzi: '帮助他的', pinyin: 'bāng zhù tā de', translation: 'who help them' } },
+                        { id: 's90-r2', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                    ]},
+                    { id: 's90-jiu1', role: 'Adjunct', text: { hanzi: '就', pinyin: 'jiù', translation: 'then' } },
+                    { id: 's90-duo', role: 'Head Verb', text: { hanzi: '多', pinyin: 'duō', translation: 'many' } },
+                ]},
+                { id: 's90-c2', role: 'Comment', subRole: 'second clause', children: [
+                    { id: 's90-t2', role: 'Subject', children: [
+                        { id: 's90-a2', role: 'Attributive', text: { hanzi: '做事不正义的', pinyin: 'zuò shì bú zhèng yì de', translation: 'who act unjustly' } },
+                        { id: 's90-r3', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                    ]},
+                    { id: 's90-s2', role: 'Subject', children: [
+                        { id: 's90-bz2', role: 'Attributive', text: { hanzi: '帮助他的', pinyin: 'bāng zhù tā de', translation: 'who help them' } },
+                        { id: 's90-r4', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                    ]},
+                    { id: 's90-jiu2', role: 'Adjunct', text: { hanzi: '就', pinyin: 'jiù', translation: 'then' } },
+                    { id: 's90-shao', role: 'Head Verb', text: { hanzi: '少', pinyin: 'shǎo', translation: 'few' } },
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's91',
+        category: 'Resultative Complements (\u7ed3\u679c\u8865\u8bed)',
+        chinese: '不要因为好事太小就不去做。',
+        pinyin: 'Bú yào yīn wèi hǎo shì tài xiǎo jiù bú qù zuò.',
+        translation: 'Do not refrain from doing good just because it is small.',
+        explanation: 'This modernizes the classical 勿以善小而不為. The classical 以 (\"because of\") becomes 因为, the concessive 而 becomes 就, and the prohibitive 勿 becomes 不要. *Grammatically,* 不要 opens the prohibition. 因为好事太小 (\"because the good deed is too small\") gives the rejected reason, using the stative predicate 太小 (\"too small\"). 就 (\"then/so\") introduces the consequence being negated: 不去做 (\"not go and do it\"). The serial verb 去做 (\"go do\") adds purposive flavor to the action.',
+        tree: {
+            id: 's91-root', role: 'Sentence', children: [
+                { id: 's91-by', role: 'Adjunct', subRole: 'prohibition', text: { hanzi: '不要', pinyin: 'bú yào', translation: 'do not' } },
+                { id: 's91-yw', role: 'Adjunct', subRole: 'causal', children: [
+                    { id: 's91-yw-p', role: 'Preposition', text: { hanzi: '因为', pinyin: 'yīn wèi', translation: 'because' } },
+                    { id: 's91-yw-clause', role: 'Object', children: [
+                        { id: 's91-hs', role: 'Subject', text: { hanzi: '好事', pinyin: 'hǎo shì', translation: 'good deed' } },
+                        { id: 's91-tx', role: 'Head Verb', text: { hanzi: '太小', pinyin: 'tài xiǎo', translation: 'too small' } },
+                    ]},
+                ]},
+                { id: 's91-jiu', role: 'Adjunct', text: { hanzi: '就', pinyin: 'jiù', translation: 'then/so' } },
+                { id: 's91-vp', role: 'Verb Phrase', children: [
+                    { id: 's91-bq', role: 'Adjunct', subRole: 'negation', text: { hanzi: '不', pinyin: 'bú', translation: 'not' } },
+                    { id: 's91-qu', role: 'Head Verb', text: { hanzi: '去', pinyin: 'qù', translation: 'go' } },
+                    { id: 's91-zuo', role: 'Complement', text: { hanzi: '做', pinyin: 'zuò', translation: 'do' } },
+                ]},
+            ]
+        }
+    },
+
+    {
+        id: 's92',
+        category: 'Double Topic (\u53cc\u4e3b\u9898)',
+        chinese: '一个人犯的错，跟他的性格是分不开的。',
+        pinyin: 'Yí gè rén fàn de cuò, gēn tā de xìng gé shì fēn bù kāi de.',
+        translation: 'The mistakes a person makes are inseparable from their character.',
+        explanation: 'This modernizes the classical 人之過也各於其黨. Modern Mandarin uses a double Topic structure to convey that faults and character are linked. *Grammatically,* the outer Topic is a 的 nominalization: 一个人犯的错 (\"the mistakes a person makes\"). The inner Comment uses 跟...是分不开的 (\"with...are inseparable\"). The potential complement 分不开 (分 + 不 + 开, \"separate + cannot + apart\") is a negative potential form expressing inherent inability to separate the two.',
+        tree: {
+            id: 's92-root', role: 'Sentence', children: [
+                { id: 's92-t', role: 'Topic', children: [
+                    { id: 's92-attr', role: 'Attributive', text: { hanzi: '一个人犯的', pinyin: 'yí gè rén fàn de', translation: 'that a person commits' } },
+                    { id: 's92-cuo', role: 'Head Noun', text: { hanzi: '错', pinyin: 'cuò', translation: 'mistakes' } },
+                ]},
+                { id: 's92-c', role: 'Comment', children: [
+                    { id: 's92-gen', role: 'Adjunct', subRole: 'comitative', children: [
+                        { id: 's92-gen-p', role: 'Preposition', text: { hanzi: '跟', pinyin: 'gēn', translation: 'with' } },
+                        { id: 's92-xg', role: 'Object', children: [
+                            { id: 's92-ta', role: 'Attributive', text: { hanzi: '他的', pinyin: 'tā de', translation: 'their' } },
+                            { id: 's92-xg-n', role: 'Head Noun', text: { hanzi: '性格', pinyin: 'xìng gé', translation: 'character' } },
+                        ]},
+                    ]},
+                    { id: 's92-shi', role: 'Copula', text: { hanzi: '是', pinyin: 'shì', translation: 'is' } },
+                    { id: 's92-fbk', role: 'Head Verb', subRole: 'potential complement', text: { hanzi: '分不开', pinyin: 'fēn bù kāi', translation: 'inseparable' } },
+                    { id: 's92-de', role: 'Particle', text: { hanzi: '的', pinyin: 'de', translation: '(nominalizer)' } },
+                ]},
+            ]
+        }
+    },
 ];
 
 // ── Cross-reference patching ─────────────────────────────────────────────────
