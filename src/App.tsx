@@ -36,7 +36,7 @@ function App() {
   const [modernSelectedId, setModernSelectedId] = useState<string>(sampleSentences[0].id);
   const [classicalSelectedId, setClassicalSelectedId] = useState<string>(classicalSentences[0].id);
   const [notesOpen, setNotesOpen] = useState(false);
-  const [mobileView, setMobileView] = useState<'list' | 'tree' | 'guide'>('guide');
+  const [mobileView, setMobileView] = useState<'list' | 'tree' | 'guide'>('tree');
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [sidebarTab, setSidebarTab] = useState<'sentences' | 'guide'>('sentences');
 
@@ -183,14 +183,14 @@ function App() {
         {/* Mobile tab bar — only visible on < lg screens */}
         <div className="lg:hidden flex border-b border-slate-700/50 bg-slate-900/60 z-10">
           <button
-            onClick={() => setMobileView('guide')}
-            className={`flex-1 flex items-center justify-center gap-2 py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors border-b-2 ${mobileView === 'guide'
-              ? isClassical ? 'text-amber-300 border-amber-500 bg-amber-500/10' : 'text-blue-300 border-blue-500 bg-blue-500/10'
+            onClick={() => setMobileView('tree')}
+            className={`flex-1 flex items-center justify-center gap-2 py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors border-b-2 ${mobileView === 'tree'
+              ? isClassical ? 'text-amber-300 border-amber-500 bg-amber-500/10' : 'text-purple-300 border-purple-500 bg-purple-500/10'
               : 'text-slate-400 border-transparent hover:text-slate-200'
               }`}
           >
-            <Info className="w-3.5 h-3.5" />
-            Guide
+            <Network className="w-3.5 h-3.5" />
+            Tree
           </button>
           <button
             onClick={() => setMobileView('list')}
@@ -203,17 +203,14 @@ function App() {
             Sentences
           </button>
           <button
-            onClick={() => setMobileView('tree')}
-            className={`flex-1 flex items-center justify-center gap-2 py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors border-b-2 ${mobileView === 'tree'
-              ? isClassical ? 'text-amber-300 border-amber-500 bg-amber-500/10' : 'text-purple-300 border-purple-500 bg-purple-500/10'
+            onClick={() => setMobileView('guide')}
+            className={`flex-1 flex items-center justify-center gap-2 py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors border-b-2 ${mobileView === 'guide'
+              ? isClassical ? 'text-amber-300 border-amber-500 bg-amber-500/10' : 'text-blue-300 border-blue-500 bg-blue-500/10'
               : 'text-slate-400 border-transparent hover:text-slate-200'
               }`}
           >
-            <Network className="w-3.5 h-3.5" />
-            Tree
-            {selectedId && mobileView === 'list' && (
-              <span className={`ml-1 w-1.5 h-1.5 rounded-full inline-block ${isClassical ? 'bg-amber-400' : 'bg-purple-400'}`} />
-            )}
+            <Info className="w-3.5 h-3.5" />
+            Guide
           </button>
         </div>
 
