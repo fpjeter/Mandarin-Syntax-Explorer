@@ -82,6 +82,7 @@ The `category` field must match a value in `src/data/classicalCategories.ts`. Ev
 | Styling | Tailwind CSS v4 |
 | Icons | [lucide-react](https://lucide.dev/) |
 | Fonts | ZCOOL XiaoWei · Noto Sans SC · Noto Serif SC · Noto Serif TC · Ma Shan Zheng (Google Fonts) |
+| CSS fallbacks | PostCSS oklch/color-mix → rgb for iOS Safari ≤ 16.3 |
 | Analytics | Vercel Analytics |
 
 ## Getting Started
@@ -111,6 +112,8 @@ src/
 │   ├── ClassicalGrammarGuide.tsx   # Classical Chinese grammar guide
 │   ├── ClassicalThemeProvider.tsx  # Amber/sepia theme wrapper
 │   ├── InkWashTransition.tsx       # Animated ink wash mode transition
+│   ├── ErrorBoundary.tsx          # Crash recovery fallback (inline styles)
+│   ├── OnboardingHint.tsx         # First-visit tips for touch devices
 │   ├── RoleTooltip.tsx             # Hover tooltip system
 │   ├── RubyText.tsx                # Hanzi + pinyin ruby text rendering
 │   └── CoRefEdge.tsx               # Co-reference arc edge
