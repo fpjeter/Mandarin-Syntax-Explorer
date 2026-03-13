@@ -26,6 +26,10 @@ const classicalSorted = [...classicalSentences].sort(
 );
 const classicalIndexById = new Map(classicalSorted.map((s, i) => [s.id, i]));
 
+// ── Combined lookup for cross-reference resolution ──
+const allSentencesById = new Map([...modernById, ...classicalById]);
+const classicalIdSet = new Set(classicalSentences.map(s => s.id));
+
 function App() {
   const [appMode, setAppMode] = useState<'modern' | 'classical'>('modern');
   const [modernSelectedId, setModernSelectedId] = useState<string>(sampleSentences[0].id);
@@ -82,6 +86,32 @@ function App() {
     setAppMode(m => m === 'modern' ? 'classical' : 'modern');
     setNotesOpen(false);
   }, []);
+
+  // ── Cross-reference resolution ──
+  const relatedSentences = useMemo(() => {
+    if (!selectedSentence?.relatedIds?.length) return undefined;
+    return selectedSentence.relatedIds
+      .map(id => {
+        const s = allSentencesById.get(id);
+        if (!s) return null;
+        return { id: s.id, chinese: s.chinese, isClassical: classicalIdSet.has(s.id) };
+      })
+      .filter((x): x is NonNullable<typeof x> => x !== null);
+  }, [selectedSentence]);
+
+  const handleNavigateToRelated = useCallback((id: string) => {
+    const isTargetClassical = classicalIdSet.has(id);
+    if (isTargetClassical !== isClassical) {
+      setAppMode(isTargetClassical ? 'classical' : 'modern');
+    }
+    if (isTargetClassical) {
+      setClassicalSelectedId(id);
+    } else {
+      setModernSelectedId(id);
+    }
+    setNotesOpen(false);
+    setMobileView('tree');
+  }, [isClassical]);
 
   return (
     <ClassicalThemeProvider active={isClassical}>
@@ -261,6 +291,8 @@ function App() {
                 categoryTotal={categoryTotal}
                 hasPrev={hasPrev}
                 hasNext={hasNext}
+                relatedSentences={relatedSentences}
+                onNavigateToRelated={handleNavigateToRelated}
               />
             )}
 

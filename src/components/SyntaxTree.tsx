@@ -387,13 +387,36 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
     const [tappedNodeInfo, setTappedNodeInfo] = useState<{ role: string; hanzi: string; headline: string; detail: string } | null>(null);
     const infoDismissTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+    // ── Entrance animation: track freshly-appeared nodes ─────────────────
+    const [freshNodeIds, setFreshNodeIds] = useState<Set<string>>(new Set());
+    const prevNodeIdsRef = useRef<Set<string>>(new Set());
+    const freshTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
     // Reset both expandedIds and showGhost together whenever the sentence changes.
     useEffect(() => {
         setExpandedIds(tree ? new Set([tree.id]) : new Set());
         setShowGhost(true);
+        setFreshNodeIds(new Set());
+        prevNodeIdsRef.current = new Set();
     }, [tree]);
 
     const { nodes: rawNodes, edges, corefPairs } = useMemo(() => parseTreeToFlow(tree, expandedIds, showGhost), [tree, expandedIds, showGhost]);
+
+    // Detect newly-appeared nodes after each layout recalculation
+    useEffect(() => {
+        const currentIds = new Set(rawNodes.map(n => n.id));
+        const prevIds = prevNodeIdsRef.current;
+        if (prevIds.size > 0) {
+            const newIds = new Set<string>();
+            currentIds.forEach(id => { if (!prevIds.has(id)) newIds.add(id); });
+            if (newIds.size > 0) {
+                setFreshNodeIds(newIds);
+                if (freshTimerRef.current) clearTimeout(freshTimerRef.current);
+                freshTimerRef.current = setTimeout(() => setFreshNodeIds(new Set()), 400);
+            }
+        }
+        prevNodeIdsRef.current = currentIds;
+    }, [rawNodes]);
 
     // Co-ref hover highlight: when a ghost or its referent is hovered, both glow
     const [corefHoveredId, setCorefHoveredId] = useState<string | null>(null);
@@ -405,17 +428,19 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
             const inPair = corefPairs.has(n.id);
             const partnerId = corefPairs.get(n.id);
             const isGlowing = !!corefHoveredId && (corefHoveredId === n.id || corefHoveredId === partnerId);
-            if (!inPair && !isGlowing) return n;
+            const isFresh = freshNodeIds.has(n.id);
+            if (!inPair && !isGlowing && !isFresh) return n;
             return {
                 ...n,
                 data: {
                     ...n.data,
                     ...(inPair && { isCorefNode: true }),
                     ...(isGlowing && { corefGlow: true }),
+                    ...(isFresh && { isFresh: true }),
                 },
             };
         });
-    }, [rawNodes, corefHoveredId, corefPairs]);
+    }, [rawNodes, corefHoveredId, corefPairs, freshNodeIds]);
 
     const onNodeClick: NodeMouseHandler = useCallback((_event, node) => {
         if (node.data.hasChildren) {

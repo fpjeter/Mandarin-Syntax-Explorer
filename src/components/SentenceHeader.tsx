@@ -5,6 +5,7 @@ import { RubyText } from './RubyText';
 import type { SentenceData } from '../types/grammar';
 
 import { renderExplanation } from '../utils/renderExplanation';
+import { ArrowRightLeft } from 'lucide-react';
 
 const springTransition = { type: 'spring' as const, stiffness: 300, damping: 28 };
 
@@ -21,6 +22,10 @@ interface SentenceHeaderProps {
     categoryTotal?: number;
     hasPrev?: boolean;
     hasNext?: boolean;
+    /** Resolved related sentences for cross-reference display */
+    relatedSentences?: { id: string; chinese: string; isClassical: boolean }[];
+    /** Called when user clicks a cross-reference link */
+    onNavigateToRelated?: (id: string) => void;
 }
 
 export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
@@ -33,6 +38,8 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
     categoryTotal,
     hasPrev,
     hasNext,
+    relatedSentences,
+    onNavigateToRelated,
 }) => {
     // Swipe detection
     const touchStart = useRef<{ x: number; y: number } | null>(null);
@@ -172,6 +179,34 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
                                     >
                                         <div className="p-6 text-sm text-slate-300 leading-relaxed font-serif bg-gradient-to-b from-slate-900/40 to-transparent">
                                             {renderExplanation(sentence.explanation)}
+
+                                            {/* Cross-reference links */}
+                                            {relatedSentences && relatedSentences.length > 0 && (
+                                                <div className="mt-5 pt-4 border-t border-slate-700/40">
+                                                    <div className="flex items-center gap-1.5 mb-2.5">
+                                                        <ArrowRightLeft className="w-3.5 h-3.5 text-purple-400" />
+                                                        <span className="text-[10px] font-bold uppercase tracking-widest text-purple-300">Related Patterns</span>
+                                                    </div>
+                                                    <div className="space-y-1.5">
+                                                        {relatedSentences.map(rel => (
+                                                            <button
+                                                                key={rel.id}
+                                                                onClick={() => onNavigateToRelated?.(rel.id)}
+                                                                className="w-full text-left flex items-center gap-2.5 px-3 py-2 rounded-lg bg-slate-800/50 border border-slate-700/40 hover:bg-slate-700/50 hover:border-purple-500/30 transition-all duration-200 group"
+                                                            >
+                                                                <span className={`text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded ${
+                                                                    rel.isClassical
+                                                                        ? 'bg-amber-900/40 text-amber-300 border border-amber-500/30'
+                                                                        : 'bg-blue-900/40 text-blue-300 border border-blue-500/30'
+                                                                }`}>
+                                                                    {rel.isClassical ? '古文' : '现代'}
+                                                                </span>
+                                                                <span className="text-sm text-slate-200 font-chinese-ui group-hover:text-white transition-colors">{rel.chinese}</span>
+                                                            </button>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            )}
                                         </div>
                                     </motion.div>
                                 )}
