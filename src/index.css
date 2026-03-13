@@ -83,6 +83,14 @@
   --color-mandarin-gold: #D4A574;
 }
 
+.classical-theme .font-chinese-display {
+  font-family: 'Ma Shan Zheng', 'Noto Serif SC', serif;
+}
+
+.classical-theme .font-chinese-ui {
+  font-family: 'Noto Serif SC', 'Noto Sans SC', serif;
+}
+
 .classical-theme .glass-panel {
   @apply bg-stone-900/60 border-stone-700/50;
 }
