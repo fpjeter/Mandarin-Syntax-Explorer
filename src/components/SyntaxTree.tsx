@@ -128,9 +128,10 @@ const NodeInfoBar: React.FC<{
 interface SyntaxTreeProps {
     tree?: AppGrammarNodeData;
     isVisible?: boolean;
+    onRandom?: () => void;
 }
 
-export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
+export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible, onRandom }) => {
     const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set());
     const [showGhost, setShowGhost] = useState(true);
     const [isGlossaryOpen, setIsGlossaryOpen] = useState(false);
@@ -290,6 +291,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible }) => {
                 onToggleGhost={() => setShowGhost(g => !g)}
                 treeHasProDrop={treeHasProDrop}
                 onOpenGlossary={() => setIsGlossaryOpen(true)}
+                onRandom={onRandom ?? (() => {})}
             />
 
             <ReactFlow

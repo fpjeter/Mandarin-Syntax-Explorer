@@ -150,3 +150,69 @@
 .animate-node-enter {
   animation: node-enter 500ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
+
+/* ─── Print / Export Styles ─── */
+@media print {
+  /* Force light background, dark text */
+  body {
+    background: white !important;
+    color: #111 !important;
+  }
+
+  /* Hide all chrome we don't want in print */
+  header,
+  nav,
+  /* Mobile tab bar */
+  .lg\:hidden.flex.border-b,
+  /* Desktop sidebar */
+  .lg\:w-96,
+  /* Sidebar toggle button */
+  button.hidden.lg\:flex.items-center.justify-center.w-6,
+  /* Toolbar (the entire top-right control cluster) */
+  .absolute.top-3.right-3,
+  /* Zoom controls */
+  .absolute.bottom-2.right-2,
+  .absolute.bottom-6.right-4,
+  /* Nav arrows in sentence card */
+  button[aria-label="Previous sentence"],
+  button[aria-label="Next sentence"],
+  /* Print button itself */
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* Sentence card: full width, white bg */
+  .glass-panel {
+    background: white !important;
+    border-color: #ccc !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  /* Tree canvas: let all nodes render */
+  .react-flow,
+  .react-flow__renderer,
+  .react-flow__container {
+    overflow: visible !important;
+    height: auto !important;
+    min-height: 600px;
+  }
+
+  /* Make grammar node text readable on white */
+  .grammar-node,
+  [class*="text-slate"],
+  [class*="text-stone"] {
+    color: #111 !important;
+  }
+
+  /* Edges / SVG */
+  svg line,
+  svg path {
+    stroke: #555 !important;
+  }
+
+  /* Remove page margins eating into layout */
+  @page {
+    margin: 1.5cm;
+  }
+}

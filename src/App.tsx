@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback, useRef, lazy, Suspense } from 'react';
+import { useState, useMemo, useCallback, useRef, lazy, Suspense, useEffect } from 'react';
 import { BookA, Info, Network, List, PanelLeftClose, PanelLeftOpen, Scroll } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 import { sampleSentences } from './data/sentences';
@@ -67,6 +67,28 @@ function App() {
     return { sentenceIndex: idx + 1, categoryTotal: catSentences.length };
   }, [selectedSentence, sortedSentences]);
 
+  // ── URL hash sync ──
+  // On mount: restore selectedId from hash if valid
+  useEffect(() => {
+    const hash = window.location.hash.slice(1); // strip '#'
+    if (!hash) return;
+    // Check both modern and classical maps
+    if (modernById.has(hash)) {
+      setModernSelectedId(hash);
+      if (appMode !== 'modern') setAppMode('modern');
+    } else if (classicalById.has(hash)) {
+      setClassicalSelectedId(hash);
+      if (appMode !== 'classical') setAppMode('classical');
+    }
+    // Invalid hash: silently ignore, keep default
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // intentionally run once on mount
+
+  // On every selectedId change: update hash
+  useEffect(() => {
+    window.location.hash = selectedId;
+  }, [selectedId]);
+
   // Global boundary checks for prev/next button enabled state
   const globalIdx = sentenceIndexById.get(selectedId) ?? 0;
   const hasPrev = globalIdx > 0;
@@ -86,6 +108,14 @@ function App() {
   const handleSwipeNext = useCallback(() => {
     const idx = sentenceIndexById.get(selectedId) ?? -1;
     if (idx !== -1 && idx < sortedSentences.length - 1) setSelectedId(sortedSentences[idx + 1].id);
+  }, [selectedId, sentenceIndexById, sortedSentences, setSelectedId]);
+
+  const handleRandom = useCallback(() => {
+    if (sortedSentences.length <= 1) return;
+    const currentIdx = sentenceIndexById.get(selectedId) ?? 0;
+    let nextIdx: number;
+    do { nextIdx = Math.floor(Math.random() * sortedSentences.length); } while (nextIdx === currentIdx);
+    setSelectedId(sortedSentences[nextIdx].id);
   }, [selectedId, sentenceIndexById, sortedSentences, setSelectedId]);
 
   const toggleMode = useCallback(() => {
@@ -299,7 +329,7 @@ function App() {
 
             {/* Canvas */}
             <div className="flex-1 min-h-0 w-full relative z-0">
-              <SyntaxTree tree={selectedSentence?.tree} isVisible={mobileView === 'tree'} />
+              <SyntaxTree tree={selectedSentence?.tree} isVisible={mobileView === 'tree'} onRandom={handleRandom} />
             </div>
           </div>
 

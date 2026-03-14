@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, ChevronDown, Lightbulb } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ChevronDown, Lightbulb, BookMarked } from 'lucide-react';
 import { useRef } from 'react';
 import { RubyText } from './RubyText';
 import type { SentenceData } from '../types/grammar';
@@ -139,6 +139,16 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
 
                         <RubyText hanzi={sentence.chinese} pinyin={sentence.pinyin} large displayFont className="!text-xl sm:!text-2xl xl:!text-4xl shadow-sm" />
                         <div className="mt-2 xl:mt-3 text-xs sm:text-sm xl:text-base text-slate-300 italic font-medium tracking-wide">"{sentence.translation}"</div>
+
+                        {/* Source attribution badge — classical mode only */}
+                        {(sentence.source || sentence.author) && (
+                            <div className="mt-2 xl:mt-3 flex items-center justify-center gap-1.5 text-[10px] xl:text-[11px] text-amber-400/70 font-medium tracking-wide">
+                                <BookMarked className="w-3 h-3 shrink-0 opacity-70" />
+                                {sentence.source && <span className="font-chinese-ui">{sentence.source}</span>}
+                                {sentence.source && sentence.author && <span className="text-amber-600/50 mx-0.5">·</span>}
+                                {sentence.author && <span>{sentence.author}</span>}
+                            </div>
+                        )}
                     </motion.div>
 
                     {/* Persistent Sentence Notes Drawer */}

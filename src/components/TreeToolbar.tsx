@@ -1,5 +1,5 @@
 import React from 'react';
-import { Eye, EyeOff, Maximize2, Minimize2, BookOpen } from 'lucide-react';
+import { Eye, EyeOff, Maximize2, Minimize2, BookOpen, Shuffle, Printer } from 'lucide-react';
 import { useIsClassical } from '../contexts/AppModeContext';
 
 interface TreeToolbarProps {
@@ -9,9 +9,10 @@ interface TreeToolbarProps {
     onToggleGhost: () => void;
     treeHasProDrop: boolean;
     onOpenGlossary: () => void;
+    onRandom: () => void;
 }
 
-/** Toolbar with expand/collapse, ghost toggle, and glossary button. */
+/** Toolbar with expand/collapse, ghost toggle, glossary, random, and print buttons. */
 export const TreeToolbar: React.FC<TreeToolbarProps> = ({
     onExpandAll,
     onCollapseAll,
@@ -19,6 +20,7 @@ export const TreeToolbar: React.FC<TreeToolbarProps> = ({
     onToggleGhost,
     treeHasProDrop,
     onOpenGlossary,
+    onRandom,
 }) => {
     const isClassical = useIsClassical();
 
@@ -60,6 +62,26 @@ export const TreeToolbar: React.FC<TreeToolbarProps> = ({
                         <span className="hidden xl:inline">{showGhost ? 'Implied On' : 'Implied Off'}</span>
                     </button>
                 )}
+
+                {/* Random sentence */}
+                <button
+                    onClick={onRandom}
+                    className="flex items-center gap-1.5 px-2 py-1.5 rounded-xl text-[11px] font-semibold tracking-wide transition-all duration-200 bg-slate-800/60 text-slate-400 hover:bg-slate-700/80 hover:text-slate-200"
+                    title="Random sentence"
+                >
+                    <Shuffle className="w-3.5 h-3.5" />
+                    <span className="hidden xl:inline">Random</span>
+                </button>
+
+                {/* Print */}
+                <button
+                    onClick={() => window.print()}
+                    className="flex items-center gap-1.5 px-2 py-1.5 rounded-xl text-[11px] font-semibold tracking-wide transition-all duration-200 bg-slate-800/60 text-slate-400 hover:bg-slate-700/80 hover:text-slate-200 print:hidden"
+                    title="Print / Export"
+                >
+                    <Printer className="w-3.5 h-3.5" />
+                    <span className="hidden xl:inline">Print</span>
+                </button>
 
                 {/* Divider */}
                 <div className="w-px h-5 bg-slate-700/60 mx-0.5" />
