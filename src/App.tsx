@@ -10,6 +10,7 @@ import { SentenceSidebar } from './components/SentenceSidebar';
 import { SentenceHeader } from './components/SentenceHeader';
 import { ClassicalThemeProvider } from './components/ClassicalThemeProvider';
 import { AppModeProvider } from './contexts/AppModeContext';
+import { generateStudySheet } from './utils/generateStudySheet';
 
 // ── Lazy-loaded components (code-split into separate chunks) ──
 const GrammarGuide = lazy(() => import('./components/GrammarGuide').then(m => ({ default: m.GrammarGuide })));
@@ -117,6 +118,11 @@ function App() {
     do { nextIdx = Math.floor(Math.random() * sortedSentences.length); } while (nextIdx === currentIdx);
     setSelectedId(sortedSentences[nextIdx].id);
   }, [selectedId, sentenceIndexById, sortedSentences, setSelectedId]);
+
+  const handlePrintSheet = useCallback(() => {
+    if (!selectedSentence) return;
+    generateStudySheet(selectedSentence, isClassical);
+  }, [selectedSentence, isClassical]);
 
   const toggleMode = useCallback(() => {
     if (transitionLock.current) return;
@@ -329,7 +335,7 @@ function App() {
 
             {/* Canvas */}
             <div className="flex-1 min-h-0 w-full relative z-0">
-              <SyntaxTree tree={selectedSentence?.tree} isVisible={mobileView === 'tree'} onRandom={handleRandom} />
+              <SyntaxTree tree={selectedSentence?.tree} isVisible={mobileView === 'tree'} onRandom={handleRandom} onPrintSheet={handlePrintSheet} />
             </div>
           </div>
 
