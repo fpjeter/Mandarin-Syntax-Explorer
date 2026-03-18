@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import type { SentenceData } from '../types/grammar';
 import type { GrammarRole } from '../types/grammar';
 import { glossary } from '../data/glossary';
@@ -23,6 +23,53 @@ const GlossaryLink: React.FC<GlossaryLinkProps> = ({ role, onOpenGlossary, child
         >
             {children}
         </button>
+    );
+};
+
+/** Collapsible footnote on the grammar model's linguistic choices */
+const LinguisticFootnote: React.FC = () => {
+    const [open, setOpen] = useState(false);
+    const contentRef = useRef<HTMLDivElement>(null);
+    const handleToggle = () => {
+        const willOpen = !open;
+        setOpen(willOpen);
+        if (willOpen) {
+            setTimeout(() => {
+                contentRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 350);
+        }
+    };
+    return (
+        <section className="border-t border-slate-700/40 pt-4 mt-1">
+            <button
+                onClick={handleToggle}
+                className="flex items-center gap-1.5 group w-full text-left"
+            >
+                <span className={`text-[9px] text-slate-500 transition-transform duration-200 ${open ? 'rotate-90' : ''}`}>▶</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-300 transition-colors">
+                    A note on this grammar model
+                </span>
+            </button>
+            <div ref={contentRef} className={`overflow-hidden transition-all duration-300 ease-in-out ${open ? 'max-h-[500px] opacity-100 mt-2.5' : 'max-h-0 opacity-0'}`}>
+                <p className="text-[10px] text-slate-400 leading-relaxed">
+                    These trees use a <strong className="text-slate-300">teaching-oriented framework</strong>, not
+                    standard generative syntax (X-bar theory / Minimalism). This follows the Chinese
+                    pedagogical tradition (赵元任, 朱德熙) which treats Mandarin as a{' '}
+                    <em>topic-prominent</em> language.
+                </p>
+                <ul className="mt-2 space-y-1 text-[10px] text-slate-400 leading-relaxed list-disc list-inside marker:text-slate-600">
+                    <li><strong className="text-slate-300">Topic–Comment</strong> is the primary structural split, not Subject–Predicate</li>
+                    <li><strong className="text-slate-300">Adjunct</strong> maps directly to 状语, the pre-verbal modifier slot central to Chinese grammar</li>
+                    <li><strong className="text-slate-300">Complement subtypes</strong> (结果补语, 趋向补语, etc.) are shown as badges, not separate structural positions</li>
+                    <li><strong className="text-slate-300">Separable verbs</strong> (离合词) are explicitly decomposed into verb + object morphemes</li>
+                    <li><strong className="text-slate-300">Dropped pronouns</strong> appear as visible ghost nodes with coreference links, rather than abstract empty categories</li>
+                </ul>
+                <p className="mt-2 text-[10px] text-slate-500 leading-relaxed italic">
+                    Role names like 状语, 补语, and 兼语 map directly to the terms learners encounter
+                    in Chinese-language textbooks.
+                </p>
+            </div>
+        </section>
     );
 };
 
@@ -264,6 +311,9 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                         </li>
                     </ul>
                 </section>
+
+                {/* ── Linguistic footnote (collapsible) ── */}
+                <LinguisticFootnote />
             </div>
         );
     }

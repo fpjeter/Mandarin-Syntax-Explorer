@@ -1,5 +1,5 @@
 import React from 'react';
-import { Eye, EyeOff, Maximize2, Minimize2, BookOpen, Shuffle, FileText } from 'lucide-react';
+import { Eye, EyeOff, Maximize2, Minimize2, BookOpen, Shuffle, Printer, ImageDown } from 'lucide-react';
 import { useIsClassical } from '../contexts/AppModeContext';
 
 interface TreeToolbarProps {
@@ -10,10 +10,11 @@ interface TreeToolbarProps {
     treeHasProDrop: boolean;
     onOpenGlossary: () => void;
     onRandom: () => void;
-    onPrintSheet: () => void;
+    onPrint: () => void;
+    onDownloadPNG: () => void;
 }
 
-/** Toolbar with expand/collapse, ghost toggle, glossary, random, and study sheet buttons. */
+/** Toolbar with expand/collapse, ghost toggle, glossary, random, and print buttons. */
 export const TreeToolbar: React.FC<TreeToolbarProps> = ({
     onExpandAll,
     onCollapseAll,
@@ -22,7 +23,8 @@ export const TreeToolbar: React.FC<TreeToolbarProps> = ({
     treeHasProDrop,
     onOpenGlossary,
     onRandom,
-    onPrintSheet,
+    onPrint,
+    onDownloadPNG,
 }) => {
     const isClassical = useIsClassical();
 
@@ -75,14 +77,24 @@ export const TreeToolbar: React.FC<TreeToolbarProps> = ({
                     <span className="hidden xl:inline">Random</span>
                 </button>
 
-                {/* Study Sheet */}
+                {/* Print */}
                 <button
-                    onClick={onPrintSheet}
+                    onClick={onPrint}
                     className="flex items-center gap-1.5 px-2 py-1.5 rounded-xl text-[11px] font-semibold tracking-wide transition-all duration-200 bg-slate-800/60 text-slate-400 hover:bg-slate-700/80 hover:text-slate-200"
                     title="Open printable study sheet"
                 >
-                    <FileText className="w-3.5 h-3.5" />
-                    <span className="hidden xl:inline">Study Sheet</span>
+                    <Printer className="w-3.5 h-3.5" />
+                    <span className="hidden xl:inline">Print</span>
+                </button>
+
+                {/* Download PNG */}
+                <button
+                    onClick={onDownloadPNG}
+                    className="flex items-center gap-1.5 px-2 py-1.5 rounded-xl text-[11px] font-semibold tracking-wide transition-all duration-200 bg-slate-800/60 text-slate-400 hover:bg-slate-700/80 hover:text-slate-200"
+                    title="Download tree as PNG image"
+                >
+                    <ImageDown className="w-3.5 h-3.5" />
+                    <span className="hidden xl:inline">PNG</span>
                 </button>
                 {/* Divider */}
                 <div className="w-px h-5 bg-slate-700/60 mx-0.5" />

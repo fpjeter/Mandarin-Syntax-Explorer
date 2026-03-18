@@ -1,7 +1,6 @@
 import { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LibraryBig, ChevronDown, Search, X } from 'lucide-react';
-import { sampleSentences } from '../data/sentences';
 import { SENTENCE_CATEGORIES, CATEGORY_DESCRIPTIONS } from '../data/categories';
 import type { SentenceData } from '../types/grammar';
 import { useIsClassical } from '../contexts/AppModeContext';
@@ -9,8 +8,8 @@ import { useIsClassical } from '../contexts/AppModeContext';
 interface SentenceSidebarProps {
     selectedId: string;
     onSelectSentence: (id: string) => void;
-    /** Override the sentence list (for classical mode). Falls back to sampleSentences. */
-    sentences?: SentenceData[];
+    /** The sentence list to display. */
+    sentences: SentenceData[];
     /** Override the category order (for classical mode). Falls back to SENTENCE_CATEGORIES. */
     categories?: readonly string[];
     /** Override the category descriptions (for classical mode). Falls back to CATEGORY_DESCRIPTIONS. */
@@ -20,11 +19,10 @@ interface SentenceSidebarProps {
 export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
     selectedId,
     onSelectSentence,
-    sentences: sentencesProp,
+    sentences,
     categories: categoriesProp,
     categoryDescriptions: descriptionsProp,
 }) => {
-    const sentences = sentencesProp ?? sampleSentences;
     const categories = categoriesProp ?? SENTENCE_CATEGORIES;
     const descriptions = descriptionsProp ?? CATEGORY_DESCRIPTIONS;
     const isClassical = useIsClassical();
