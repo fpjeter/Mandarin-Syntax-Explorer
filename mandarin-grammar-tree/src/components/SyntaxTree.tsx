@@ -146,60 +146,34 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible, onRando
     const [tappedNodeInfo, setTappedNodeInfo] = useState<{ role: string; hanzi: string; headline: string; detail: string } | null>(null);
     const infoDismissTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-    // ── Entrance animation: track freshly-appeared nodes ─────────────────
-    const [freshNodeIds, setFreshNodeIds] = useState<Set<string>>(new Set());
-    const prevNodeIdsRef = useRef<Set<string>>(new Set());
-    const freshTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-    // Reset both expandedIds and showGhost together whenever the sentence changes.
+    // Reset state whenever the sentence changes.
     useEffect(() => {
         setExpandedIds(tree ? new Set([tree.id]) : new Set());
         setShowGhost(true);
-        setFreshNodeIds(new Set());
-        prevNodeIdsRef.current = new Set();
     }, [tree]);
 
     const { nodes: rawNodes, edges, corefPairs } = useMemo(() => parseTreeToFlow(tree, expandedIds, showGhost, isClassical), [tree, expandedIds, showGhost, isClassical]);
 
-    // Detect newly-appeared nodes after each layout recalculation
-    useEffect(() => {
-        const currentIds = new Set(rawNodes.map(n => n.id));
-        const prevIds = prevNodeIdsRef.current;
-        if (prevIds.size > 0) {
-            const newIds = new Set<string>();
-            currentIds.forEach(id => { if (!prevIds.has(id)) newIds.add(id); });
-            if (newIds.size > 0) {
-                setFreshNodeIds(newIds);
-                if (freshTimerRef.current) clearTimeout(freshTimerRef.current);
-                freshTimerRef.current = setTimeout(() => setFreshNodeIds(new Set()), 600);
-            }
-        }
-        prevNodeIdsRef.current = currentIds;
-    }, [rawNodes]);
-
     // Co-ref hover highlight: when a ghost or its referent is hovered, both glow
     const [corefHoveredId, setCorefHoveredId] = useState<string | null>(null);
 
-    // Patch nodes: set corefGlow=true on both the hovered node and its co-ref partner
-    // Also mark nodes that are part of a co-ref pair so GrammarNode can enable long-press
+    // Patch nodes: coref glow
     const nodes = useMemo(() => {
         return rawNodes.map(n => {
             const inPair = corefPairs.has(n.id);
             const partnerId = corefPairs.get(n.id);
             const isGlowing = !!corefHoveredId && (corefHoveredId === n.id || corefHoveredId === partnerId);
-            const isFresh = freshNodeIds.has(n.id);
-            if (!inPair && !isGlowing && !isFresh) return n;
+            if (!inPair && !isGlowing) return n;
             return {
                 ...n,
                 data: {
                     ...n.data,
                     ...(inPair && { isCorefNode: true }),
                     ...(isGlowing && { corefGlow: true }),
-                    ...(isFresh && { isFresh: true }),
                 },
             };
         });
-    }, [rawNodes, corefHoveredId, corefPairs, freshNodeIds]);
+    }, [rawNodes, corefHoveredId, corefPairs]);
 
     const onNodeClick: NodeMouseHandler = useCallback((_event, node) => {
         if (node.data.hasChildren) {
@@ -223,7 +197,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible, onRando
                 infoDismissTimer.current = setTimeout(() => setTappedNodeInfo(null), 4000);
             }
         }
-    }, [activeGlossary]);
+    }, [activeGlossary, expandedIds]);
 
     const onNodeMouseEnter: NodeMouseHandler = useCallback((_event, node) => {
         const partnerId = corefPairs.get(node.id);
@@ -270,7 +244,6 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible, onRando
 
     const handleCollapseAll = useCallback(() => {
         if (!tree) return;
-        // Keep only root expanded
         setExpandedIds(new Set([tree.id]));
     }, [tree]);
 

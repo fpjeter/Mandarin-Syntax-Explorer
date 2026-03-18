@@ -70,6 +70,25 @@ The `category` field must match a value in `src/data/classicalCategories.ts`. Ev
 
 ---
 
+## 📝 A Note on the Grammar Model
+
+This app does **not** use standard generative syntax (X-bar theory / Minimalism). Instead, the trees follow a **pedagogically-motivated hybrid** influenced by the Chinese grammatical tradition (赵元任, 朱德熙, 吕叔湘) and modern teaching grammar (教学语法).
+
+Key differences from formal linguistic models:
+
+| This app | Standard generative syntax |
+|---|---|
+| **Topic–Comment** is the primary structural split at the sentence root | Subject–Predicate (IP → NP + I') is the primary split; topic is a derived pragmatic movement |
+| **Adjunct** (状语) is a first-class tree role for pre-verbal modifiers | Adverbials are specifiers of functional projections or VP-adjuncts |
+| **Complement** is a single role with subtype badges (结果补语, 趋向补语, etc.) | Different complement types occupy distinct structural positions |
+| **Verb Morpheme / Object Morpheme** explicitly decompose separable verbs (离合词) | Separable verbs are either lexical units or undergo syntactic movement |
+| **Pivot** (兼语) is a labeled role for nouns serving two functions simultaneously | Handled through Exceptional Case Marking (ECM) or control structures |
+| Dropped pronouns are **visible ghost nodes** with coreference links (`isDropped`, `refersToId`) | Null pronouns are abstract empty categories (pro / PRO) |
+
+**Why?** The goal is helping Mandarin learners see sentence structure at a glance — not modeling formal competence grammar. Chinese is a [topic-prominent language](https://en.wikipedia.org/wiki/Topic-prominent_language), and the Topic–Comment split reflects how sentences are actually constructed and taught, particularly at institutions like BLCU (北京语言大学). Role names like 状语, 补语, and 兼语 map directly to the terms learners encounter in Chinese-language textbooks.
+
+---
+
 ## Tech Stack
 
 | Layer | Library |
@@ -127,7 +146,8 @@ src/
 │   ├── classicalSentences.ts       # Classical Chinese quotes with tree data (30)
 │   ├── classicalCategories.ts      # Classical category list and descriptions
 │   ├── classicalBadges.ts          # Classical badge specs (者/所/而/非/勿/於/焉/之)
-│   └── classicalGlossary.ts       # Classical grammar role definitions
+│   ├── classicalGlossary.ts       # Classical grammar role definitions
+│   └── sentenceLoader.ts          # Lazy-loading wrappers for sentence datasets
 ├── utils/
 │   └── renderExplanation.tsx       # Markdown-like explanation text renderer
 └── types/

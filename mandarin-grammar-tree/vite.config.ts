@@ -12,6 +12,13 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks(id) {
+          // Data chunks — lazy-loaded sentence datasets
+          if (id.includes('data/sentences') && !id.includes('classical') && !id.includes('sentenceLoader')) {
+            return 'data-modern';
+          }
+          if (id.includes('data/classicalSentences')) {
+            return 'data-classical';
+          }
           // Vendor chunks — cached separately, change infrequently
           if (id.includes('node_modules/@xyflow') || id.includes('node_modules\\\\@xyflow')) {
             return 'vendor-xyflow';

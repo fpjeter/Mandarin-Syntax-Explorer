@@ -24,6 +24,8 @@ export type GrammarNodeViewData = {
     isCorefNode?: boolean;
     /** True for ~350ms after a node first appears (entrance animation) */
     isFresh?: boolean;
+    /** True while a node is animating out (exit animation) */
+    isExiting?: boolean;
 };
 
 type GrammarNodeType = Node<GrammarNodeViewData, 'grammarNode'>;
@@ -118,7 +120,7 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
                         : roleColorClass(data.role)
                     }
                 ${data.corefGlow ? '!border-rose-400 !shadow-[0_0_24px_rgba(244,63,94,0.5)] !opacity-100 ring-2 ring-rose-400/60' : ''}
-                ${data.isFresh ? 'animate-node-enter' : ''}
+                ${data.isExiting ? 'animate-node-exit' : data.isFresh ? 'animate-node-enter' : ''}
             `}
                 onTouchStart={handleCorefTouchStart}
                 onTouchEnd={handleCorefTouchEnd}

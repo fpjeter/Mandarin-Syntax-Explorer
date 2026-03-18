@@ -1,10 +1,9 @@
 import { useState, useMemo, useCallback, useRef, lazy, Suspense, useEffect } from 'react';
-import { BookA, Info, Network, List, PanelLeftClose, PanelLeftOpen, Scroll } from 'lucide-react';
+import { BookA, Info, Network, List, PanelLeftClose, PanelLeftOpen, Scroll, Loader2 } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
-import { sampleSentences } from './data/sentences';
 import { SENTENCE_CATEGORIES, CATEGORY_DESCRIPTIONS } from './data/categories';
-import { classicalSentences } from './data/classicalSentences';
 import { CLASSICAL_CATEGORIES, CLASSICAL_CATEGORY_DESCRIPTIONS } from './data/classicalCategories';
+import { loadModernSentences, loadClassicalSentences, type SentenceDataset } from './data/sentenceLoader';
 import { SyntaxTree } from './components/SyntaxTree';
 import { SentenceSidebar } from './components/SentenceSidebar';
 import { SentenceHeader } from './components/SentenceHeader';
@@ -17,83 +16,126 @@ const GrammarGuide = lazy(() => import('./components/GrammarGuide').then(m => ({
 const ClassicalGrammarGuide = lazy(() => import('./components/ClassicalGrammarGuide').then(m => ({ default: m.ClassicalGrammarGuide })));
 const InkWashTransition = lazy(() => import('./components/InkWashTransition'));
 
-// ── Modern mode pre-computed lookups ──
-const modernById = new Map(sampleSentences.map(s => [s.id, s]));
-const modernSorted = [...sampleSentences].sort(
-  (a, b) => SENTENCE_CATEGORIES.indexOf(a.category as typeof SENTENCE_CATEGORIES[number]) - SENTENCE_CATEGORIES.indexOf(b.category as typeof SENTENCE_CATEGORIES[number])
-);
-const modernIndexById = new Map(modernSorted.map((s, i) => [s.id, i]));
-
-// ── Classical mode pre-computed lookups ──
-const classicalById = new Map(classicalSentences.map(s => [s.id, s]));
-const classicalSorted = [...classicalSentences].sort(
-  (a, b) => CLASSICAL_CATEGORIES.indexOf(a.category as typeof CLASSICAL_CATEGORIES[number]) - CLASSICAL_CATEGORIES.indexOf(b.category as typeof CLASSICAL_CATEGORIES[number])
-);
-const classicalIndexById = new Map(classicalSorted.map((s, i) => [s.id, i]));
-
+// ── Empty dataset placeholder (used while loading) ──
+const EMPTY_DATASET: SentenceDataset = {
+  sentences: [],
+  byId: new Map(),
+  sorted: [],
+  indexById: new Map(),
+};
 
 function App() {
   const [appMode, setAppMode] = useState<'modern' | 'classical'>('modern');
-  const [modernSelectedId, setModernSelectedId] = useState<string>(sampleSentences[0].id);
-  const [classicalSelectedId, setClassicalSelectedId] = useState<string>(classicalSentences[0].id);
+  const [modernSelectedId, setModernSelectedId] = useState<string>('');
+  const [classicalSelectedId, setClassicalSelectedId] = useState<string>('');
   const [notesOpen, setNotesOpen] = useState(false);
   const [mobileView, setMobileView] = useState<'list' | 'tree' | 'guide'>('tree');
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [sidebarTab, setSidebarTab] = useState<'sentences' | 'guide'>('sentences');
+
+  // ── Lazy-loaded sentence datasets ──
+  const [modernData, setModernData] = useState<SentenceDataset>(EMPTY_DATASET);
+  const [classicalData, setClassicalData] = useState<SentenceDataset>(EMPTY_DATASET);
+  const [modernLoaded, setModernLoaded] = useState(false);
+  const [classicalLoaded, setClassicalLoaded] = useState(false);
 
   // ── Ink wash transition state ──
   const [inkTransitionActive, setInkTransitionActive] = useState(false);
   const [inkTargetMode, setInkTargetMode] = useState<'modern' | 'classical'>('classical');
   const transitionLock = useRef(false);
 
+  // ── Track whether hash has been processed ──
+  const hashProcessed = useRef(false);
+
   const isClassical = appMode === 'classical';
 
+  // ── Load modern data on mount ──
+  useEffect(() => {
+    loadModernSentences().then(data => {
+      setModernData(data);
+      // Set default selected ID only if one hasn't been set (e.g. by hash restore)
+      setModernSelectedId(prev => prev || data.sentences[0]?.id || '');
+      setModernLoaded(true);
+    });
+  }, []);
+
+  // ── Load classical data on first switch to classical mode ──
+  useEffect(() => {
+    if (isClassical && !classicalLoaded) {
+      loadClassicalSentences().then(data => {
+        setClassicalData(data);
+        setClassicalSelectedId(prev => prev || data.sentences[0]?.id || '');
+        setClassicalLoaded(true);
+      });
+    }
+  }, [isClassical, classicalLoaded]);
+
+  // ── URL hash sync ──
+  // On mount + after data loads: restore selectedId from hash if valid
+  useEffect(() => {
+    if (hashProcessed.current) return;
+    const hash = window.location.hash.slice(1);
+    if (!hash) return;
+
+    // If modern data is loaded, check it
+    if (modernLoaded && modernData.byId.has(hash)) {
+      setModernSelectedId(hash);
+      if (appMode !== 'modern') setAppMode('modern');
+      hashProcessed.current = true;
+      return;
+    }
+
+    // If classical data isn't loaded yet, load it to check
+    if (!classicalLoaded) {
+      loadClassicalSentences().then(data => {
+        setClassicalData(data);
+        setClassicalSelectedId(prev => prev || data.sentences[0]?.id || '');
+        setClassicalLoaded(true);
+        if (data.byId.has(hash)) {
+          setClassicalSelectedId(hash);
+          setAppMode('classical');
+          hashProcessed.current = true;
+        }
+      });
+      return;
+    }
+
+    // Classical is already loaded
+    if (classicalData.byId.has(hash)) {
+      setClassicalSelectedId(hash);
+      if (appMode !== 'classical') setAppMode('classical');
+      hashProcessed.current = true;
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [modernLoaded, classicalLoaded]);
+
   // Active data based on mode
+  const activeData = isClassical ? classicalData : modernData;
+  const dataLoaded = isClassical ? classicalLoaded : modernLoaded;
   const selectedId = isClassical ? classicalSelectedId : modernSelectedId;
   const setSelectedId = isClassical ? setClassicalSelectedId : setModernSelectedId;
-  const sentenceById = isClassical ? classicalById : modernById;
-  const sortedSentences = isClassical ? classicalSorted : modernSorted;
-  const sentenceIndexById = isClassical ? classicalIndexById : modernIndexById;
-  const activeSentences = isClassical ? classicalSentences : sampleSentences;
   const activeCategories = isClassical ? CLASSICAL_CATEGORIES : SENTENCE_CATEGORIES;
   const activeCategoryDescriptions = isClassical ? CLASSICAL_CATEGORY_DESCRIPTIONS : CATEGORY_DESCRIPTIONS;
 
-  const selectedSentence = useMemo(() => sentenceById.get(selectedId), [sentenceById, selectedId]);
+  const selectedSentence = useMemo(() => activeData.byId.get(selectedId), [activeData, selectedId]);
+
+  // On every selectedId change: update hash
+  useEffect(() => {
+    if (selectedId) window.location.hash = selectedId;
+  }, [selectedId]);
 
   // Category-local position for the n / N counter in the header
   const { sentenceIndex, categoryTotal } = useMemo(() => {
     if (!selectedSentence) return { sentenceIndex: 1, categoryTotal: 1 };
-    const catSentences = sortedSentences.filter(s => s.category === selectedSentence.category);
+    const catSentences = activeData.sorted.filter(s => s.category === selectedSentence.category);
     const idx = catSentences.findIndex(s => s.id === selectedSentence.id);
     return { sentenceIndex: idx + 1, categoryTotal: catSentences.length };
-  }, [selectedSentence, sortedSentences]);
-
-  // ── URL hash sync ──
-  // On mount: restore selectedId from hash if valid
-  useEffect(() => {
-    const hash = window.location.hash.slice(1); // strip '#'
-    if (!hash) return;
-    // Check both modern and classical maps
-    if (modernById.has(hash)) {
-      setModernSelectedId(hash);
-      if (appMode !== 'modern') setAppMode('modern');
-    } else if (classicalById.has(hash)) {
-      setClassicalSelectedId(hash);
-      if (appMode !== 'classical') setAppMode('classical');
-    }
-    // Invalid hash: silently ignore, keep default
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // intentionally run once on mount
-
-  // On every selectedId change: update hash
-  useEffect(() => {
-    window.location.hash = selectedId;
-  }, [selectedId]);
+  }, [selectedSentence, activeData.sorted]);
 
   // Global boundary checks for prev/next button enabled state
-  const globalIdx = sentenceIndexById.get(selectedId) ?? 0;
+  const globalIdx = activeData.indexById.get(selectedId) ?? 0;
   const hasPrev = globalIdx > 0;
-  const hasNext = globalIdx < sortedSentences.length - 1;
+  const hasNext = globalIdx < activeData.sorted.length - 1;
 
   const handleSelectSentence = useCallback((id: string) => {
     setSelectedId(id);
@@ -102,22 +144,22 @@ function App() {
   }, [setSelectedId]);
 
   const handleSwipePrev = useCallback(() => {
-    const idx = sentenceIndexById.get(selectedId) ?? -1;
-    if (idx > 0) setSelectedId(sortedSentences[idx - 1].id);
-  }, [selectedId, sentenceIndexById, sortedSentences, setSelectedId]);
+    const idx = activeData.indexById.get(selectedId) ?? -1;
+    if (idx > 0) setSelectedId(activeData.sorted[idx - 1].id);
+  }, [selectedId, activeData, setSelectedId]);
 
   const handleSwipeNext = useCallback(() => {
-    const idx = sentenceIndexById.get(selectedId) ?? -1;
-    if (idx !== -1 && idx < sortedSentences.length - 1) setSelectedId(sortedSentences[idx + 1].id);
-  }, [selectedId, sentenceIndexById, sortedSentences, setSelectedId]);
+    const idx = activeData.indexById.get(selectedId) ?? -1;
+    if (idx !== -1 && idx < activeData.sorted.length - 1) setSelectedId(activeData.sorted[idx + 1].id);
+  }, [selectedId, activeData, setSelectedId]);
 
   const handleRandom = useCallback(() => {
-    if (sortedSentences.length <= 1) return;
-    const currentIdx = sentenceIndexById.get(selectedId) ?? 0;
+    if (activeData.sorted.length <= 1) return;
+    const currentIdx = activeData.indexById.get(selectedId) ?? 0;
     let nextIdx: number;
-    do { nextIdx = Math.floor(Math.random() * sortedSentences.length); } while (nextIdx === currentIdx);
-    setSelectedId(sortedSentences[nextIdx].id);
-  }, [selectedId, sentenceIndexById, sortedSentences, setSelectedId]);
+    do { nextIdx = Math.floor(Math.random() * activeData.sorted.length); } while (nextIdx === currentIdx);
+    setSelectedId(activeData.sorted[nextIdx].id);
+  }, [selectedId, activeData, setSelectedId]);
 
   const handlePrint = useCallback(() => {
     if (!selectedSentence) return;
@@ -136,22 +178,32 @@ function App() {
     setInkTargetMode(nextMode);
     setInkTransitionActive(true);
 
-    // Switch mode while overlay is fully opaque (fade-in is 350ms)
+    // Pre-load classical data during the transition animation
+    if (nextMode === 'classical' && !classicalLoaded) {
+      loadClassicalSentences().then(data => {
+        setClassicalData(data);
+        setClassicalSelectedId(prev => prev || data.sentences[0]?.id || '');
+        setClassicalLoaded(true);
+      });
+    }
+
+    // Switch mode while overlay is fully opaque (fade-in is 450ms).
+    // Extra buffer lets React Flow re-render + fitView settle before reveal.
     setTimeout(() => {
       setAppMode(nextMode);
       setNotesOpen(false);
-    }, 400);
+    }, 700);
 
     // Begin exit: deactivate overlay so AnimatePresence runs exit animation
     setTimeout(() => {
       setInkTransitionActive(false);
-    }, 900);
+    }, 1200);
 
-    // Release lock after exit animation completes (exit duration: 450ms)
+    // Release lock after exit animation completes (exit duration: 550ms)
     setTimeout(() => {
       transitionLock.current = false;
-    }, 1400);
-  }, [appMode]);
+    }, 1800);
+  }, [appMode, classicalLoaded]);
 
   return (
     <>
@@ -288,13 +340,20 @@ function App() {
 
             {/* Tab content */}
             {sidebarTab === 'sentences' ? (
-              <SentenceSidebar
-                selectedId={selectedId}
-                onSelectSentence={handleSelectSentence}
-                sentences={activeSentences}
-                categories={activeCategories}
-                categoryDescriptions={activeCategoryDescriptions}
-              />
+              dataLoaded ? (
+                <SentenceSidebar
+                  selectedId={selectedId}
+                  onSelectSentence={handleSelectSentence}
+                  sentences={activeData.sentences}
+                  categories={activeCategories}
+                  categoryDescriptions={activeCategoryDescriptions}
+                />
+              ) : (
+                <div className="glass-panel rounded-3xl p-5 flex flex-col items-center justify-center h-full border border-slate-700/50 shadow-2xl">
+                  <Loader2 className={`w-6 h-6 animate-spin ${isClassical ? 'text-amber-400' : 'text-purple-400'}`} />
+                  <p className="text-xs text-slate-400 mt-3">Loading sentences…</p>
+                </div>
+              )
             ) : (
               <div className="glass-panel rounded-3xl p-5 flex flex-col h-full overflow-hidden border border-slate-700/50 shadow-2xl relative">
                 <div className={`absolute top-0 right-0 w-32 h-32 blur-3xl rounded-full ${isClassical ? 'bg-amber-500/10' : 'bg-blue-500/10'}`} />
@@ -340,7 +399,13 @@ function App() {
 
             {/* Canvas */}
             <div className="flex-1 min-h-0 w-full relative z-0">
-              <SyntaxTree tree={selectedSentence?.tree} isVisible={mobileView === 'tree'} onRandom={handleRandom} onPrint={handlePrint} onDownloadPNG={handleDownloadPNG} />
+              {dataLoaded ? (
+                <SyntaxTree tree={selectedSentence?.tree} isVisible={mobileView === 'tree'} onRandom={handleRandom} onPrint={handlePrint} onDownloadPNG={handleDownloadPNG} />
+              ) : (
+                <div className="flex items-center justify-center h-full">
+                  <Loader2 className={`w-8 h-8 animate-spin ${isClassical ? 'text-amber-400/50' : 'text-purple-400/50'}`} />
+                </div>
+              )}
             </div>
           </div>
 
@@ -369,4 +434,3 @@ function App() {
 }
 
 export default App;
-
