@@ -47,27 +47,21 @@ const LinguisticFootnote: React.FC = () => {
             >
                 <span className={`text-[9px] text-slate-500 transition-transform duration-200 ${open ? 'rotate-90' : ''}`}>▶</span>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-300 transition-colors">
-                    A note on this grammar model
+                    A note on this model
                 </span>
             </button>
             <div ref={contentRef} className={`overflow-hidden transition-all duration-300 ease-in-out ${open ? 'max-h-[500px] opacity-100 mt-2.5' : 'max-h-0 opacity-0'}`}>
                 <p className="text-[10px] text-slate-400 leading-relaxed">
-                    These trees use a <strong className="text-slate-300">teaching-oriented framework</strong>, not
-                    standard generative syntax (X-bar theory / Minimalism). This follows the Chinese
-                    pedagogical tradition (赵元任, 朱德熙) which treats Mandarin as a{' '}
-                    <em>topic-prominent</em> language.
+                    This explorer uses a <strong className="text-slate-300">topic-first</strong> grammar model
+                    designed for Mandarin learners. It treats every sentence as a topic (what you're talking about)
+                    plus a comment (what you say about it), and shows how actions chain together.
                 </p>
                 <ul className="mt-2 space-y-1 text-[10px] text-slate-400 leading-relaxed list-disc list-inside marker:text-slate-600">
-                    <li><strong className="text-slate-300">Topic–Comment</strong> is the primary structural split, not Subject–Predicate</li>
-                    <li><strong className="text-slate-300">Adjunct</strong> maps directly to 状语, the pre-verbal modifier slot central to Chinese grammar</li>
-                    <li><strong className="text-slate-300">Complement subtypes</strong> (结果补语, 趋向补语, etc.) are shown as badges, not separate structural positions</li>
-                    <li><strong className="text-slate-300">Separable verbs</strong> (离合词) are explicitly decomposed into verb + object morphemes</li>
-                    <li><strong className="text-slate-300">Dropped pronouns</strong> appear as visible ghost nodes with coreference links, rather than abstract empty categories</li>
+                    <li><strong className="text-slate-300">Topic + Comment</strong> is the basic building block of every sentence</li>
+                    <li><strong className="text-slate-300">VP</strong> means verb phrase, covering both single actions and chains</li>
+                    <li>Linking words like <strong className="text-slate-300">把, 被, 在, 用</strong> are grouped as Coverbs</li>
+                    <li>Dropped subjects appear as <strong className="text-slate-300">ghost nodes</strong> so you can see the hidden structure</li>
                 </ul>
-                <p className="mt-2 text-[10px] text-slate-500 leading-relaxed italic">
-                    Role names like 状语, 补语, and 兼语 map directly to the terms learners encounter
-                    in Chinese-language textbooks.
-                </p>
             </div>
         </section>
     );
@@ -88,19 +82,46 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
     if (tab === 'framework') {
         return (
             <div className="space-y-5">
-                {/* ── 1. The Big Idea ── */}
+                {/* ── 1. The Logic Machine ── */}
                 <section>
-                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-fuchsia-400 mb-1.5">The big idea</h3>
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-fuchsia-400 mb-1.5">Topic + Comment</h3>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
-                        In English, you build a sentence around a <em>subject</em> — the person or thing doing the action.
-                        Mandarin works differently: you first say <em>what you want to talk about</em>,
-                        then say something about it. That opening word or phrase is the{' '}
-                        <GlossaryLink role="Topic" onOpenGlossary={onOpenGlossary}><span className="text-fuchsia-400 font-bold">Topic</span></GlossaryLink>, and everything
-                        said about it is the{' '}
-                        <GlossaryLink role="Comment" onOpenGlossary={onOpenGlossary}><span className="text-blue-400 font-bold">Comment</span></GlossaryLink>.
+                        Every Mandarin sentence starts by naming what you're talking about (the topic),
+                        then says something about it (the comment).
                     </p>
+                    <div className="mt-2 bg-slate-800/50 border border-slate-700/40 rounded-xl px-3 py-2">
+                        <p className="text-[10px] text-slate-400 font-mono">
+                            <span className="text-fuchsia-300">[Topic]</span>{' '}
+                            <span className="text-slate-500">+</span>{' '}
+                            <span className="text-blue-300">[Comment]</span>
+                        </p>
+                    </div>
+                </section>
+
+                {/* ── 2. Matryoshka Principle ── */}
+                <section>
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-blue-400 mb-2">Nesting: topics inside topics</h3>
+                    <p className="text-[11px] text-slate-300 leading-relaxed">
+                        Sentences can nest like Russian dolls. The{' '}
+                        <GlossaryLink role="Topic" onOpenGlossary={onOpenGlossary}><span className="text-fuchsia-400 font-bold">Topic</span></GlossaryLink>{' '}
+                        sets the anchor. Inside the{' '}
+                        <GlossaryLink role="Comment" onOpenGlossary={onOpenGlossary}><span className="text-blue-400 font-bold">Comment</span></GlossaryLink>,
+                        there can be a full sub-sentence with its own{' '}
+                        <GlossaryLink role="Topic" onOpenGlossary={onOpenGlossary}><span className="text-fuchsia-400 font-bold">inner topic</span></GlossaryLink>{' '}
+                        and actions.
+                    </p>
+                    {/* Formula */}
+                    <div className="mt-2 bg-slate-800/50 border border-slate-700/40 rounded-xl px-3 py-2">
+                        <p className="text-[10px] text-slate-400 font-mono">
+                            S = <span className="text-fuchsia-300">[Topic]</span>{' '}
+                            + <span className="text-blue-300">[</span>{' '}
+                            <span className="text-fuchsia-300">[inner topic]</span>{' '}
+                            + <span className="text-teal-300">[Actions]</span>{' '}
+                            <span className="text-blue-300">]</span>
+                        </p>
+                    </div>
                     {/* Mini example */}
-                    <div className="mt-3 bg-slate-800/50 border border-slate-700/40 rounded-xl px-3 py-2.5">
+                    <div className="mt-2 bg-slate-800/50 border border-slate-700/40 rounded-xl px-3 py-2.5">
                         <div className="flex items-baseline gap-2 flex-wrap">
                             <span className="text-fuchsia-300 font-bold text-sm font-chinese-ui">这只大象，</span>
                             <span className="text-blue-300 font-bold text-sm font-chinese-ui">鼻子很长。</span>
@@ -122,7 +143,7 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                             </div>
                             {/* Branches */}
                             <div className="flex items-start gap-0 mt-0">
-                                {/* Left branch */}
+                                {/* Left: Topic */}
                                 <div className="flex flex-col items-center">
                                     <div className="w-px h-4 bg-slate-600" />
                                     <div className="bg-fuchsia-900/40 text-fuchsia-200 border border-fuchsia-500/50 rounded-lg px-2.5 py-1 font-bold uppercase tracking-wide shadow-[0_0_10px_rgba(217,70,239,0.2)]">
@@ -133,17 +154,26 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                                         这只大象
                                     </div>
                                 </div>
-                                {/* Connector line */}
                                 <div className="w-8 h-px bg-slate-600 mt-4 self-start" />
-                                {/* Right branch */}
+                                {/* Right: Comment → Topic(Ø) + VP */}
                                 <div className="flex flex-col items-center">
                                     <div className="w-px h-4 bg-slate-600" />
                                     <div className="bg-blue-900/40 text-blue-200 border border-blue-500/50 rounded-lg px-2.5 py-1 font-bold uppercase tracking-wide shadow-[0_0_10px_rgba(59,130,246,0.2)]">
                                         Comment
                                     </div>
                                     <div className="w-px h-3 bg-slate-600" />
-                                    <div className="bg-slate-800/60 text-slate-300 border border-slate-600/50 rounded-lg px-2 py-1 text-[10px] font-chinese-ui">
-                                        鼻子很长
+                                    <div className="flex items-start gap-0">
+                                        <div className="flex flex-col items-center">
+                                            <div className="border-dashed border border-rose-500/50 bg-slate-900/30 opacity-70 rounded-lg px-2 py-1 text-[9px] text-rose-300">
+                                            Ø (dropped subject)
+                                            </div>
+                                        </div>
+                                        <div className="w-4 h-px bg-slate-600 mt-3 self-start" />
+                                        <div className="flex flex-col items-center">
+                                            <div className="bg-teal-900/40 text-teal-200 border border-teal-500/50 rounded-lg px-2 py-1 text-[9px] font-bold uppercase">
+                                                VP
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -151,119 +181,118 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                     </div>
                 </section>
 
-                {/* ── 2. Topic vs. Comment ── */}
+                {/* ── 3. VP (Fractal VP) ── */}
                 <section>
-                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-blue-400 mb-2">Topic vs. Comment</h3>
-                    <div className="grid grid-cols-2 gap-2">
-                        <div className="bg-fuchsia-900/20 border border-fuchsia-600/30 rounded-xl p-2.5">
-                            <p className="text-[10px] font-bold text-fuchsia-300 uppercase tracking-wider mb-1">
-                                <GlossaryLink role="Topic" onOpenGlossary={onOpenGlossary}>Topic</GlossaryLink>
-                            </p>
-                            <p className="text-[10px] text-slate-300 leading-snug">
-                                Sets the scene. Roughly: <em>"As for X…"</em><br />
-                                Can be a person, a thing, a time, or a place.
-                            </p>
-                        </div>
-                        <div className="bg-blue-900/20 border border-blue-600/30 rounded-xl p-2.5">
-                            <p className="text-[10px] font-bold text-blue-300 uppercase tracking-wider mb-1">
-                                <GlossaryLink role="Comment" onOpenGlossary={onOpenGlossary}>Comment</GlossaryLink>
-                            </p>
-                            <p className="text-[10px] text-slate-300 leading-snug">
-                                The actual statement about the topic. Contains the main verb and everything around it.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                {/* ── 3. Word Order ── */}
-                <section>
-                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-1.5">Word order</h3>
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-teal-400 mb-1.5">Verb phrases: single or chained</h3>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
-                        In English, <em>when</em>, <em>where</em>, and <em>how</em> can go after the verb.
-                        In Mandarin, they always go <strong className="text-emerald-300">before</strong> it.
-                        The order is typically:
+                        Inside the Comment sits a{' '}
+                        <GlossaryLink role="VP" onOpenGlossary={onOpenGlossary}><span className="text-teal-300 font-bold">VP</span></GlossaryLink>
+                        {' '}(verb phrase). A simple VP is one action; a compound VP
+                        chains several actions in time order (a serial verb construction).
+                        In the tree, chained actions sit side by side.
                     </p>
                     <div className="mt-2 flex flex-wrap gap-1.5 items-center">
-                        {['Time', 'Place', 'Manner', 'Verb'].map((label, i) => (
+                        {['VP₁', 'VP₂', 'VP₃'].map((label, i) => (
                             <span key={label} className="flex items-center gap-1.5">
-                                <span className={`text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border ${label === 'Verb'
-                                    ? 'bg-teal-900/40 text-teal-200 border-teal-500/50'
-                                    : 'bg-rose-900/30 text-rose-300 border-rose-500/40'
-                                    }`}>
+                                <span className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border bg-emerald-900/40 text-emerald-200 border-emerald-500/50">
                                     {label}
                                 </span>
-                                {i < 3 && <span className="text-slate-500 text-[9px]">→</span>}
+                                {i < 2 && <span className="text-slate-500 text-[9px]">→</span>}
                             </span>
                         ))}
                     </div>
-                    <p className="text-[10px] text-slate-400 mt-2 italic">
-                        Example: <span className="text-rose-300 not-italic">昨天</span>{' '}
-                        <span className="text-rose-300 not-italic">在图书馆</span>{' '}
-                        <span className="text-rose-300 not-italic">安静地</span>{' '}
-                        <span className="text-teal-300 not-italic">看书</span>{' '}
-                        — "Yesterday, in the library, quietly, read."
-                    </p>
                 </section>
 
-                {/* ── 4. Pro-drop ── */}
+                {/* ── 4. Adjunct Altitude ── */}
                 <section>
-                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-rose-400 mb-1.5">Why subjects disappear</h3>
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-rose-400 mb-1.5">Scene-setting: before the verb</h3>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
-                        Once the Topic is set, the listener knows who is being talked about.
-                        So Mandarin often skips the subject inside the Comment entirely —
-                        this is called{' '}
-                        <span className="text-rose-400 font-bold">pro-drop</span>.
-                        The tree shows missing words as faded{' '}
-                        <span className="text-rose-300 font-mono text-[10px]">[ghost]</span> nodes.
+                        <GlossaryLink role="Adjunct" onOpenGlossary={onOpenGlossary}><span className="text-rose-300 font-bold">Adjuncts</span></GlossaryLink>{' '}
+                        are words or phrases that set the scene before the verb. They can apply to the whole sentence or just one action:
                     </p>
-                </section>
-
-                {/* ── 8. Tree Labels Explained ── */}
-                <section>
-                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-amber-400 mb-2">Tree labels at a glance</h3>
-                    <div className="space-y-1.5">
+                    <div className="mt-2 space-y-1.5">
                         {([
-                            ['Adjunct', 'Pre-verbal modifier — time, place, manner, or construction (把/被)'],
-                            ['Attributive', 'A word modifying a noun, always placed before it'],
-                            ['Complement', 'Extra info after the verb — result, direction, degree, or possibility'],
-                            ['Pivot', 'A noun acting as object of one verb and subject of the next'],
-                            ['Copula', 'The linking verb 是 (is/was)'],
-                            ['Head Verb', 'The core verb, marked with a thick bottom border'],
-                            ['Head Noun', 'The core noun in a noun phrase, also thick-bordered'],
-                        ] as const).map(([label, desc]) => (
-                            <div key={label} className="flex items-baseline gap-2">
-                                <GlossaryLink role={label as GrammarRole} onOpenGlossary={onOpenGlossary}>
-                                    <span className="text-[10px] font-bold text-slate-200 whitespace-nowrap">{label}</span>
-                                </GlossaryLink>
-                                <span className="text-[10px] text-slate-400 leading-snug">{desc}</span>
+                            ['High', 'Whole sentence', 'Time (昨天), Probability (也许)'],
+                            ['Low', 'Single action', 'Tool (用手机), Manner (快速地), Location (在图书馆)'],
+                        ] as const).map(([alt, target, examples]) => (
+                            <div key={alt} className="flex items-baseline gap-2">
+                                <span className="text-[9px] font-bold text-rose-300 bg-rose-900/30 border border-rose-500/30 px-1.5 py-0.5 rounded whitespace-nowrap">{alt}</span>
+                                <span className="text-[10px] text-slate-400">
+                                    <span className="text-slate-300">{target}</span>: {examples}
+                                </span>
                             </div>
                         ))}
                     </div>
                 </section>
 
-                {/* ── 2. How to read the tree ── */}
+                {/* ── 5. Verb Package ── */}
+                <section>
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-green-400 mb-1.5">Inside an action: the verb package</h3>
+                    <p className="text-[11px] text-slate-300 leading-relaxed">
+                        Each{' '}
+                        <GlossaryLink role="VP" onOpenGlossary={onOpenGlossary}><span className="text-emerald-300 font-bold">VP (Primitive)</span></GlossaryLink>
+                        {' '}contains a{' '}
+                        <GlossaryLink role="Verb Package" onOpenGlossary={onOpenGlossary}><span className="text-green-300 font-bold">Verb Package</span></GlossaryLink>:
+                        the full verb unit, including the main verb, any result or direction suffix,
+                        and aspect markers.
+                    </p>
+                    <div className="mt-2 flex flex-wrap gap-1.5 items-center">
+                        {[
+                            { label: 'Verb Head', color: 'bg-teal-900/40 text-teal-200 border-teal-500/50' },
+                            { label: '+ RVC', color: 'bg-violet-900/40 text-violet-300 border-violet-500/50' },
+                            { label: '+ VD', color: 'bg-sky-900/40 text-sky-200 border-sky-400/50' },
+                            { label: '+ Aspect', color: 'bg-slate-800/50 text-slate-300 border-slate-500/50' },
+                        ].map(({ label, color }) => (
+                            <span key={label} className={`text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border ${color}`}>
+                                {label}
+                            </span>
+                        ))}
+                    </div>
+                    <p className="text-[10px] text-slate-400 mt-2 italic">
+                        Insert <strong className="text-sky-300 not-italic">得/不</strong> to toggle potential (can/can't).
+                        Use <strong className="text-purple-300 not-italic">得+description</strong> for degree complements.
+                    </p>
+                </section>
+
+                {/* ── 6. Null (Ø) Identity Flow ── */}
+                <section>
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-rose-400 mb-1.5">Dropped subjects: ghost nodes</h3>
+                    <p className="text-[11px] text-slate-300 leading-relaxed">
+                        Once the topic is set, Mandarin often drops the subject if it refers to the same person.
+                        The tree shows these dropped subjects as dashed{' '}
+                        <span className="text-rose-300 font-mono text-[10px]">[ghost]</span>{' '}
+                        nodes, so you can see the hidden structure.
+                    </p>
+                    <div className="mt-2 bg-slate-800/50 border border-slate-700/40 rounded-xl px-3 py-2">
+                        <p className="text-[10px] text-slate-400 font-mono">
+                            <span className="text-fuchsia-300">[我]</span>{' '}
+                            <span className="text-slate-500">→</span>{' '}
+                            <span className="text-rose-400 opacity-70">[Ø 我]</span>{' '}
+                            <span className="text-slate-500">→</span>{' '}
+                            <span className="text-teal-300">[吃饭]</span>
+                        </p>
+                    </div>
+                </section>
+
+                {/* ── Tree Reading (color legend) ── */}
                 <section>
                     <h3 className="text-[10px] font-bold uppercase tracking-widest text-violet-400 mb-2">Reading the tree</h3>
                     <div className="space-y-1.5 text-[10px] text-slate-300">
                         <div className="flex items-center gap-2">
                             <span className="w-3 h-3 rounded-sm bg-fuchsia-900/40 border border-fuchsia-500/50 flex-shrink-0" />
-                            <span><strong className="text-fuchsia-300">Fuchsia</strong> = Topic</span>
+                            <span><strong className="text-fuchsia-300">Fuchsia</strong> = Topic (Anchor)</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <span className="w-3 h-3 rounded-sm bg-blue-900/40 border border-blue-500/50 flex-shrink-0" />
-                            <span><strong className="text-blue-300">Blue</strong> = Comment</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <span className="w-3 h-3 rounded-sm bg-indigo-900/40 border border-indigo-600/50 flex-shrink-0" />
-                            <span><strong className="text-indigo-300">Indigo</strong> = Subject</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <span className="w-3 h-3 rounded-sm bg-cyan-900/40 border border-cyan-500/50 flex-shrink-0" />
-                            <span><strong className="text-cyan-200">Cyan</strong> = Predicate</span>
+                            <span><strong className="text-blue-300">Blue</strong> = Comment (Logic Zone)</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <span className="w-3 h-3 rounded-sm bg-teal-900/40 border border-teal-500/50 flex-shrink-0" />
-                            <span><strong className="text-teal-300">Teal</strong> = Verb Phrase</span>
+                            <span><strong className="text-teal-300">Teal</strong> = VP (Fractal VP)</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <span className="w-3 h-3 rounded-sm bg-emerald-900/40 border border-emerald-500/50 flex-shrink-0" />
+                            <span><strong className="text-emerald-300">Emerald</strong> = VP (Primitive)</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <span className="w-3 h-3 rounded-sm bg-amber-900/40 border border-amber-600/50 flex-shrink-0" />
@@ -287,7 +316,7 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                     </div>
                 </section>
 
-                {/* ── 4b. Using the tree (UI tips) ── */}
+                {/* ── Using the tree (UI tips) ── */}
                 <section>
                     <h3 className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1.5">Using the tree</h3>
                     <ul className="space-y-1.5 text-[11px] text-slate-300 leading-relaxed list-disc list-inside marker:text-slate-500">
@@ -296,14 +325,13 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                             for a plain-English explanation.
                         </li>
                         <li>
-                            <strong>Co-reference glow</strong> — when a ghost node refers back to the
-                            Topic, hover (desktop) or long-press (mobile) either one and both
-                            light up with a{' '}
+                            <strong>Co-reference glow</strong> — when a Null (Ø) node refers back to the
+                            Topic, hover either one and both light up with a{' '}
                             <span className="text-rose-400 font-bold">rose glow</span>.
                         </li>
                         <li>
                             <strong>Ghost toggle</strong> — tap the ghost icon in the tree controls
-                            to show or hide implied (pro-dropped) subjects.
+                            to show or hide Null (Ø) subjects.
                         </li>
                         <li>
                             <strong>Pinch</strong> to zoom, <strong>drag</strong> to pan.

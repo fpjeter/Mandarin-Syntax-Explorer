@@ -7,7 +7,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '他打碎了那个花瓶。',
         pinyin: 'Tā dǎ suì le nà ge huā píng.',
         translation: 'He broke that vase.',
-        explanation: 'This is the most basic Mandarin sentence pattern: first say **who or what you are talking about**, then say **what happened**. Here, **他** (he) is what the sentence is about; this is called the **Topic**. Everything that follows (the breaking, the vase) is the **Comment**: the actual event. The tree splits directly at that boundary. Notice that **打碎** is a compound action: 打 means "hit" and 碎 means "shatter," stacked together they mean "smash to pieces". The **了** after it marks that the action is done and complete.',
+        explanation: '**他** (he) is the topic, the person we are talking about. The verb is actually two verbs compressed into one unit: **打** (hit) + **碎** (shatter). Together 打碎 means "hit something so that it shattered." This is a **resultative complement**: the second verb tells you the *result* of the first. The **了** after them confirms the action is complete. The object **那个花瓶** (that vase) is what got broken. Notice the sentence never repeats 他 as the grammatical subject; once the topic is set, Mandarin just moves on to the action.',
         tree: {
             id: 'n1',
             role: 'Sentence',
@@ -22,39 +22,59 @@ export const sampleSentences: SentenceData[] = [
                     role: 'Comment',
                     children: [
                         {
-                            id: 'n1-p-vp',
-                            role: 'Verb Phrase',
+                            id: 'n1-subj',
+                            role: 'Topic',
+                            isNull: true,
+                            impliedText: '他',
+                            refersToId: 'n1-t'
+                        },
+                        {
+                            id: 'n1-vpc',
+                            role: 'VP',
                             children: [
                                 {
-                                    id: 'n1-p-vp-hv',
-                                    role: 'Head Verb',
-                                    text: { hanzi: '打', pinyin: 'dǎ', translation: 'hit/strike' }
-                                },
-                                {
-                                    id: 'n1-p-vp-comp',
-                                    role: 'Complement',
-                                    subRole: 'resultative',
-                                    text: { hanzi: '碎', pinyin: 'suì', translation: 'shatter' }
-                                },
-                                {
-                                    id: 'n1-p-vp-part',
-                                    role: 'Particle',
-                                    subRole: 'aspect',
-                                    text: { hanzi: '了', pinyin: 'le', translation: '(completion)' }
-                                },
-                                {
-                                    id: 'n1-p-vp-obj',
-                                    role: 'Object',
+                                    id: 'n1-an',
+                                    role: 'VP',
+                                    subRole: 'primitive',
                                     children: [
                                         {
-                                            id: 'n1-p-vp-obj-attr',
-                                            role: 'Attributive',
-                                            text: { hanzi: '那个', pinyin: 'nà ge', translation: 'that' }
+                                            id: 'n1-vp',
+                                            role: 'Verb Package',
+                                            children: [
+                                                {
+                                                    id: 'n1-vp-hv',
+                                                    role: 'Head Verb',
+                                                    text: { hanzi: '打', pinyin: 'dǎ', translation: 'hit/strike' }
+                                                },
+                                                {
+                                                    id: 'n1-vp-rvc',
+                                                    role: 'Complement',
+                                                    subRole: 'resultative',
+                                                    text: { hanzi: '碎', pinyin: 'suì', translation: 'shatter' }
+                                                },
+                                                {
+                                                    id: 'n1-vp-asp',
+                                                    role: 'Particle',
+                                                    subRole: 'aspect',
+                                                    text: { hanzi: '了', pinyin: 'le', translation: '(completion)' }
+                                                }
+                                            ]
                                         },
                                         {
-                                            id: 'n1-p-vp-obj-hn',
-                                            role: 'Head Noun',
-                                            text: { hanzi: '花瓶', pinyin: 'huā píng', translation: 'vase' }
+                                            id: 'n1-obj',
+                                            role: 'Object',
+                                            children: [
+                                                {
+                                                    id: 'n1-obj-attr',
+                                                    role: 'Attributive',
+                                                    text: { hanzi: '那个', pinyin: 'nà ge', translation: 'that' }
+                                                },
+                                                {
+                                                    id: 'n1-obj-hn',
+                                                    role: 'Head Noun',
+                                                    text: { hanzi: '花瓶', pinyin: 'huā píng', translation: 'vase' }
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
@@ -71,7 +91,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '我喜欢在图书馆看书。',
         pinyin: 'Wǒ xǐ huān zài tú shū guǎn kàn shū.',
         translation: 'I like reading books in the library.',
-        explanation: '**我** (I) is the Topic. The Comment strings two verb phrases together without repeating the subject. Mandarin can chain actions like this naturally. First **喜欢** (like), then the thing being liked: **going to the library and reading**. Notice how the location (在图书馆) comes *before* the verb (看), not after it the way English does. In Mandarin, where something happens is set up as background context before the action is named.',
+        explanation: '**我** (I) is the topic. The sentence chains two actions in sequence: **喜欢** (like) and **看书** (read books). This is a **serial verb construction**, where multiple actions line up one after another with no connecting word like "to" or "and." The location phrase **在图书馆** (in the library) is placed before 看书, not after it; in Mandarin, you always set the scene *before* stating the action. **在** works like a preposition here, telling you *where* the reading happens.',
         tree: {
             id: 'n2',
             role: 'Sentence',
@@ -84,51 +104,77 @@ export const sampleSentences: SentenceData[] = [
                 {
                     id: 'n2-c',
                     role: 'Comment',
-                    subRole: 'serial verb construction',
                     children: [
                         {
-                            id: 'n2-p-vp1',
-                            role: 'Verb Phrase',
-                            subRole: 'matrix verb',
-                            children: [
-                                {
-                                    id: 'n2-p-vp1-v',
-                                    role: 'Head Verb',
-                                    text: { hanzi: '喜欢', pinyin: 'xǐ huān', translation: 'like' }
-                                }
-                            ]
+                            id: 'n2-subj',
+                            role: 'Topic',
+                            isNull: true,
+                            impliedText: '我',
+                            refersToId: 'n2-t'
                         },
                         {
-                            id: 'n2-p-vp2',
-                            role: 'Verb Phrase',
-                            subRole: 'complement / purpose',
+                            id: 'n2-vpc',
+                            role: 'VP',
+                            subRole: 'serial',
                             children: [
                                 {
-                                    id: 'n2-p-vp2-lp',
-                                    role: 'Adjunct',
-                                    subRole: 'location',
+                                    id: 'n2-an1',
+                                    role: 'VP',
+                                    subRole: 'primitive',
                                     children: [
                                         {
-                                            id: 'n2-p-vp2-lp-prep',
-                                            role: 'Preposition',
-                                            text: { hanzi: '在', pinyin: 'zài', translation: 'in/at' }
-                                        },
-                                        {
-                                            id: 'n2-p-vp2-lp-n',
-                                            role: 'Noun',
-                                            text: { hanzi: '图书馆', pinyin: 'tú shū guǎn', translation: 'library' }
+                                            id: 'n2-vp1',
+                                            role: 'Verb Package',
+                                            children: [
+                                                {
+                                                    id: 'n2-vp1-hv',
+                                                    role: 'Head Verb',
+                                                    text: { hanzi: '喜欢', pinyin: 'xǐ huān', translation: 'like' }
+                                                }
+                                            ]
                                         }
                                     ]
                                 },
                                 {
-                                    id: 'n2-p-vp2-v',
-                                    role: 'Head Verb',
-                                    text: { hanzi: '看', pinyin: 'kàn', translation: 'read/look' }
-                                },
-                                {
-                                    id: 'n2-p-vp2-obj',
-                                    role: 'Object',
-                                    text: { hanzi: '书', pinyin: 'shū', translation: 'book' }
+                                    id: 'n2-an2',
+                                    role: 'VP',
+                                    subRole: 'primitive',
+                                    children: [
+                                        {
+                                            id: 'n2-adj-loc',
+                                            role: 'Adjunct',
+                                            subRole: 'location · low',
+                                            altitude: 'low',
+                                            children: [
+                                                {
+                                                    id: 'n2-adj-loc-cv',
+                                                    role: 'Coverb',
+                                                    text: { hanzi: '在', pinyin: 'zài', translation: 'in/at' }
+                                                },
+                                                {
+                                                    id: 'n2-adj-loc-n',
+                                                    role: 'Noun',
+                                                    text: { hanzi: '图书馆', pinyin: 'tú shū guǎn', translation: 'library' }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            id: 'n2-vp2',
+                                            role: 'Verb Package',
+                                            children: [
+                                                {
+                                                    id: 'n2-vp2-hv',
+                                                    role: 'Head Verb',
+                                                    text: { hanzi: '看', pinyin: 'kàn', translation: 'read/look' }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            id: 'n2-obj',
+                                            role: 'Object',
+                                            text: { hanzi: '书', pinyin: 'shū', translation: 'book' }
+                                        }
+                                    ]
                                 }
                             ]
                         }
@@ -144,7 +190,7 @@ export const sampleSentences: SentenceData[] = [
         pinyin: 'Tā zuó tiān bǎ wǒ de qián bāo wàng zài chū zū chē shàng le.',
         translation: 'She forgot my wallet in the taxi yesterday.',
 
-        explanation: '**她** (she) is the Topic. The Comment opens with a time stamp, **昨天** (yesterday), because in Mandarin, time and place come before the verb, not after it. Then comes a special pattern: **把** moves the object (my wallet) in front of the verb. This is called the **把 construction**: it is used when something specific is being acted upon and something notable happens to it. Think of 把 as a spotlight on the wallet: *"as for the wallet, she forgot it in the taxi."* The tree shows 把 and the wallet grouped together before the verb.',
+        explanation: '**她** (she) is the topic. Before the verb even appears, two pieces of scene-setting come first: **昨天** (yesterday) tells you when, and **把我的钱包** moves the object (my wallet) in front of the verb to spotlight it as the thing affected. This is the classic **把 pattern**: take the object, place it before the verb, and then describe what happened to it. The verb **忘** (forget) is followed by a location result: **在出租车上** (on the taxi), telling you where the wallet ended up. The **了** confirms the action is done.',
         tree: {
             id: 'n3',
             role: 'Sentence',
@@ -157,35 +203,43 @@ export const sampleSentences: SentenceData[] = [
                 {
                     id: 'n3-c',
                     role: 'Comment',
-                    subRole: 'bǎ-construction',
                     children: [
                         {
-                            id: 'n3-p-tp',
+                            id: 'n3-subj',
+                            role: 'Topic',
+                            isNull: true,
+                            impliedText: '她',
+                            refersToId: 'n3-t'
+                        },
+                        {
+                            id: 'n3-adj-time',
                             role: 'Adjunct',
-                            subRole: 'time',
+                            subRole: 'time · high',
+                            altitude: 'high',
                             text: { hanzi: '昨天', pinyin: 'zuó tiān', translation: 'yesterday' }
                         },
                         {
-                            id: 'n3-p-ba',
+                            id: 'n3-adj-ba',
                             role: 'Adjunct',
-                            subRole: 'bǎ-construction',
+                            subRole: 'bǎ-construction · low',
+                            altitude: 'low',
                             children: [
                                 {
-                                    id: 'n3-p-ba-prep',
-                                    role: 'Preposition',
-                                    text: { hanzi: '把', pinyin: 'bǎ', translation: '(object fronting)' }
+                                    id: 'n3-ba-cv',
+                                    role: 'Coverb',
+                                    text: { hanzi: '把', pinyin: 'bǎ', translation: '(fronts the object)' }
                                 },
                                 {
-                                    id: 'n3-p-ba-obj',
+                                    id: 'n3-ba-obj',
                                     role: 'Object',
                                     children: [
                                         {
-                                            id: 'n3-p-ba-obj-attr',
+                                            id: 'n3-ba-obj-attr',
                                             role: 'Attributive',
                                             text: { hanzi: '我的', pinyin: 'wǒ de', translation: 'my' }
                                         },
                                         {
-                                            id: 'n3-p-ba-obj-hn',
+                                            id: 'n3-ba-obj-hn',
                                             role: 'Head Noun',
                                             text: { hanzi: '钱包', pinyin: 'qián bāo', translation: 'wallet' }
                                         }
@@ -194,42 +248,55 @@ export const sampleSentences: SentenceData[] = [
                             ]
                         },
                         {
-                            id: 'n3-p-vp',
-                            role: 'Verb Phrase',
+                            id: 'n3-vpc',
+                            role: 'VP',
                             children: [
                                 {
-                                    id: 'n3-p-vp-hv',
-                                    role: 'Head Verb',
-                                    text: { hanzi: '忘', pinyin: 'wàng', translation: 'forget' }
-                                },
-                                {
-                                    id: 'n3-p-vp-comp',
-                                    role: 'Complement',
-                                    subRole: 'result location',
+                                    id: 'n3-an',
+                                    role: 'VP',
+                                    subRole: 'primitive',
                                     children: [
                                         {
-                                            id: 'n3-p-vp-comp-prep',
-                                            role: 'Preposition',
-                                            text: { hanzi: '在', pinyin: 'zài', translation: 'in/at' }
-                                        },
-                                        {
-                                            id: 'n3-p-vp-comp-n',
-                                            role: 'Noun',
-                                            text: { hanzi: '出租车', pinyin: 'chū zū chē', translation: 'taxi' }
-                                        },
-                                        {
-                                            id: 'n3-p-vp-comp-loc',
-                                            role: 'Particle',
-                                            subRole: 'localizer',
-                                            text: { hanzi: '上', pinyin: 'shàng', translation: '(on/in, localizer)' }
+                                            id: 'n3-vp',
+                                            role: 'Verb Package',
+                                            children: [
+                                                {
+                                                    id: 'n3-vp-hv',
+                                                    role: 'Head Verb',
+                                                    text: { hanzi: '忘', pinyin: 'wàng', translation: 'forget' }
+                                                },
+                                                {
+                                                    id: 'n3-vp-comp',
+                                                    role: 'Complement',
+                                                    subRole: 'resultative',
+                                                    children: [
+                                                        {
+                                                            id: 'n3-vp-comp-cv',
+                                                            role: 'Coverb',
+                                                            text: { hanzi: '在', pinyin: 'zài', translation: 'in/at' }
+                                                        },
+                                                        {
+                                                            id: 'n3-vp-comp-n',
+                                                            role: 'Noun',
+                                                            text: { hanzi: '出租车', pinyin: 'chū zū chē', translation: 'taxi' }
+                                                        },
+                                                        {
+                                                            id: 'n3-vp-comp-loc',
+                                                            role: 'Particle',
+                                                            subRole: 'localizer',
+                                                            text: { hanzi: '上', pinyin: 'shàng', translation: '(on, localizer)' }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    id: 'n3-vp-asp',
+                                                    role: 'Particle',
+                                                    subRole: 'aspect',
+                                                    text: { hanzi: '了', pinyin: 'le', translation: '(completion)' }
+                                                }
+                                            ]
                                         }
                                     ]
-                                },
-                                {
-                                    id: 'n3-p-vp-part',
-                                    role: 'Particle',
-                                    subRole: 'aspect',
-                                    text: { hanzi: '了', pinyin: 'le', translation: '(completion)' }
                                 }
                             ]
                         }
@@ -453,7 +520,7 @@ export const sampleSentences: SentenceData[] = [
         pinyin: 'Nà zhī dà xiàng, bí zi bèi xiǎo hái er lā le yī xià.',
         translation: 'As for that elephant, its trunk was pulled by a child.',
 
-        explanation: 'This sentence has a **two-level structure**. The outer Topic sets the stage with a big frame: *as for that elephant...* Then inside the Comment, a narrower subject appears: **鼻子** (trunk). The trunk is then described using **被** (by), which marks a passive construction: something was done *to* the trunk. So the elephant frames the scene, and the trunk is what actually acts as the subject of the passive event. English would say it more directly: "A child pulled the elephant\'s trunk." Mandarin works from the outside in.',
+        explanation: 'This sentence has **two layers of topic**. The outer topic **那只大象** (that elephant) sets the broad frame: "as for that elephant..." Inside, a narrower topic appears: **鼻子** (trunk), picking out one specific part. This "whole then part" structure is very natural in Mandarin. The trunk is the thing that was acted on, and **被** flips the sentence into a passive: 被 + the doer (小孩儿, the child) + the action. The verb **拉** (pull) is followed by **了** (completed) and **一下** (briefly, just a quick tug).',
         tree: {
             id: 'n6',
             role: 'Sentence',
@@ -487,53 +554,60 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n6-c-s',
-                            role: 'Subject',
+                            role: 'Topic',
                             subRole: 'patient',
                             text: { hanzi: '鼻子', pinyin: 'bí zi', translation: 'trunk/nose' }
                         },
                         {
-                            id: 'n6-c-p',
-                            role: 'Predicate',
-                            subRole: 'passive verbal',
+                            id: 'n6-adj-bei',
+                            role: 'Adjunct',
+                            subRole: 'bèi-construction · low',
+                            altitude: 'low',
                             children: [
                                 {
-                                    id: 'n6-c-p-bei',
-                                    role: 'Adjunct',
-                                    subRole: 'bèi-construction (passive)',
-                                    children: [
-                                        {
-                                            id: 'n6-c-p-bei-prep',
-                                            role: 'Preposition',
-                                            text: { hanzi: '被', pinyin: 'bèi', translation: 'by' }
-                                        },
-                                        {
-                                            id: 'n6-c-p-bei-agent',
-                                            role: 'Noun',
-                                            subRole: 'agent',
-                                            text: { hanzi: '小孩儿', pinyin: 'xiǎo hái er', translation: 'child' }
-                                        }
-                                    ]
+                                    id: 'n6-bei-cv',
+                                    role: 'Coverb',
+                                    text: { hanzi: '被', pinyin: 'bèi', translation: 'by (passive)' }
                                 },
                                 {
-                                    id: 'n6-c-p-vp',
-                                    role: 'Verb Phrase',
+                                    id: 'n6-bei-agent',
+                                    role: 'Noun',
+                                    subRole: 'agent',
+                                    text: { hanzi: '小孩儿', pinyin: 'xiǎo hái er', translation: 'child' }
+                                }
+                            ]
+                        },
+                        {
+                            id: 'n6-vpc',
+                            role: 'VP',
+                            children: [
+                                {
+                                    id: 'n6-an',
+                                    role: 'VP',
+                                    subRole: 'primitive',
                                     children: [
                                         {
-                                            id: 'n6-c-p-vp-hv',
-                                            role: 'Head Verb',
-                                            text: { hanzi: '拉', pinyin: 'lā', translation: 'pull' }
-                                        },
-                                        {
-                                            id: 'n6-c-p-vp-part',
-                                            role: 'Particle',
-                                            subRole: 'aspect',
-                                            text: { hanzi: '了', pinyin: 'le', translation: '(completion)' }
-                                        },
-                                        {
-                                            id: 'n6-c-p-vp-comp',
-                                            role: 'Complement',
-                                            subRole: 'quantity / brief action',
-                                            text: { hanzi: '一下', pinyin: 'yī xià', translation: 'a bit/once' }
+                                            id: 'n6-vp',
+                                            role: 'Verb Package',
+                                            children: [
+                                                {
+                                                    id: 'n6-vp-hv',
+                                                    role: 'Head Verb',
+                                                    text: { hanzi: '拉', pinyin: 'lā', translation: 'pull' }
+                                                },
+                                                {
+                                                    id: 'n6-vp-asp',
+                                                    role: 'Particle',
+                                                    subRole: 'aspect',
+                                                    text: { hanzi: '了', pinyin: 'le', translation: '(completion)' }
+                                                },
+                                                {
+                                                    id: 'n6-vp-comp',
+                                                    role: 'Complement',
+                                                    subRole: 'quantity / brief action',
+                                                    text: { hanzi: '一下', pinyin: 'yī xià', translation: 'a bit/once' }
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
@@ -831,7 +905,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's10',
-        category: 'Rhetorical Questions (反问句)',
+        category: 'Emphasis & Rhetoric (强调句)',
         chinese: '难道你连这么简单的问题都不会吗？',
         pinyin: 'Nán dào nǐ lián zhè me jiǎn dān de wèn tí dōu bù huì ma?',
         translation: 'Don\'t tell me you can\'t even (do) such a simple question?',
@@ -940,7 +1014,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's11',
-        category: 'Rhetorical Questions (反问句)',
+        category: 'Emphasis & Rhetoric (强调句)',
         chinese: '这件事非你亲自去办不可。',
         pinyin: 'Zhè jiàn shì fēi nǐ qīn zì qù bàn bù kě.',
         translation: 'This matter absolutely must be handled by you yourself; there is no way around it.',
@@ -979,7 +1053,7 @@ export const sampleSentences: SentenceData[] = [
                         },
                         {
                             id: 'n11-c-s',
-                            role: 'Subject',
+                            role: 'Topic',
                             text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' }
                         },
                         {
@@ -1194,10 +1268,10 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's14',
-        category: 'Serial Verb Constructions (连动句)',
+        category: 'Basic Topic–Comment (主题评论)',
         chinese: '到了，找到了，吃完再走。',
         pinyin: 'Dào le , zhǎo dào le , chī wán zài zǒu .',
-        translation: '(We\'ve) arrived, (we) found it, (we\'ll) leave after eating.',
+        translation: ' (We\'ve) arrived, (we) found it, (we\'ll) leave after eating.',
 
         explanation: 'Three complete events chained in sequence, the hallmark of a **serial verb construction**. VP1: 到了 (arrived). VP2: 找到了 (found it, with the resultative 到 meaning "reached the target"). VP3: 吃完再走 (eat-finish-then-leave, a classic "finish X before Y" sequence). All three VPs share the same unnamed subject **[我们]** (we); the listener infers it from the surrounding conversation. This is why serial verbs feel so natural in Mandarin: once the actor is clear, you just stack events one after another, no conjunctions needed.',
         tree: {
@@ -1318,7 +1392,7 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n15-subj',
-                            role: 'Subject',
+                            role: 'Topic',
                             isDropped: true,
                             impliedText: '它',
                             refersToId: 'n15-t',  // anaphoric link back to Topic
@@ -1390,7 +1464,7 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n16-subj',
-                            role: 'Subject',
+                            role: 'Topic',
                             isDropped: true,
                             impliedText: '他',
                             refersToId: 'n16-t',  // anaphoric link back to Topic
@@ -1437,7 +1511,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Discourse Context: pro-drop where referent is in the preceding sentence ──
     {
         id: 's17',
-        category: 'Discourse Context (跨句语境)',
+        category: 'Basic Topic–Comment (主题评论)',
         chinese: '说想学中文。',
         pinyin: 'Shuō xiǎng xué Zhōng wén .',
         translation: '(He) said (he) wants to learn Chinese.',
@@ -1480,7 +1554,7 @@ export const sampleSentences: SentenceData[] = [
                                     children: [
                                         {
                                             id: 'n17-comp-subj',
-                                            role: 'Subject',
+                                            role: 'Topic',
                                             isDropped: true,
                                             impliedText: '他',
                                         },
@@ -1522,7 +1596,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's18',
-        category: 'Discourse Context (跨句语境)',
+        category: 'Basic Topic–Comment (主题评论)',
         chinese: '非常有意思。',
         pinyin: 'Fēi cháng yǒu yì si .',
         translation: '(It\'s) really interesting.',
@@ -2075,7 +2149,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Double Topic / Embedded Comment ──────────────────────────────────────
     {
         id: 's25',
-        category: 'Double Topic (双主题)',
+        category: 'Basic Topic–Comment (主题评论)',
         chinese: '那家饭馆，菜很好吃，价钱也不贵。',
         pinyin: 'Nà jiā fàn guǎn, cài hěn hǎo chī, jià qián yě bù guì.',
         translation: 'That restaurant, the food is delicious and the price is not expensive either.',
@@ -2164,7 +2238,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's26',
-        category: 'Double Topic (双主题)',
+        category: 'Basic Topic–Comment (主题评论)',
         chinese: '大象，鼻子长，耳朵大。',
         pinyin: 'Dà xiàng, bí zi cháng, ěr duo dà.',
         translation: 'Elephants, their trunk is long and their ears are big.',
@@ -2227,7 +2301,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's27',
-        category: 'Double Topic (双主题)',
+        category: 'Basic Topic–Comment (主题评论)',
         chinese: '这件事，我觉得你的想法很有道理。',
         pinyin: 'Zhè jiàn shì, wǒ jué de nǐ de xiǎng fǎ hěn yǒu dào lǐ.',
         translation: 'As for this matter, I think your idea makes a lot of sense.',
@@ -2260,7 +2334,7 @@ export const sampleSentences: SentenceData[] = [
                     children: [
                         {
                             id: 'n27-c-s',
-                            role: 'Subject',
+                            role: 'Topic',
                             text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' }
                         },
                         {
@@ -2309,7 +2383,7 @@ export const sampleSentences: SentenceData[] = [
                                                             text: { hanzi: '很', pinyin: 'hěn', translation: 'very' }
                                                         },
                                                         {
-                                                            id: 'n27-c-p-vp-obj-c-adj',
+                            id: 'n27-c-p-vp-obj-c-adj',
                                                             role: 'Adjective',
                                                             text: { hanzi: '有道理', pinyin: 'yǒu dào lǐ', translation: 'make sense / reasonable' }
                                                         }
@@ -2634,7 +2708,7 @@ export const sampleSentences: SentenceData[] = [
         chinese: '老师让学生回答问题。',
         pinyin: 'Lǎo shī ràng xué sheng huí dá wèn tí.',
         translation: 'The teacher had the students answer questions.',
-        explanation: '**老师** (teacher) is the Topic. This is a **pivotal construction** (兼语句). The verb **让** (let/have) takes **学生** (students) as its object. But then, crucially, 学生 immediately becomes the *subject* of the next verb **回答** (answer). It plays both roles at once: object of 让, subject of 回答. The tree shows this double-function node as a **Pivot**. Verbs that create pivotal structures include 让 (let/have), 叫 (tell), 请 (invite), 使 (cause), 帮 (help). In English: "The teacher *had* the students *answer*"; the structure is the same, just without a special grammatical label.',
+        explanation: '**老师** (teacher) is the topic. The verb **让** (let/have someone do something) creates a **pivotal construction**: its object **学生** (students) plays two roles at once. It is the object of 让 (the teacher acts *on* the students) and at the same time the subject of what comes next (the students *do* the answering). **回答问题** (answer questions) is the action the students carry out. Verbs like 让, 叫, 请 (ask/invite), and 使 (cause) all work this way: the person you act on becomes the doer of the next action.',
         tree: {
             id: 'n32',
             role: 'Sentence',
@@ -2649,34 +2723,59 @@ export const sampleSentences: SentenceData[] = [
                     role: 'Comment',
                     children: [
                         {
-                            id: 'n32-vp',
-                            role: 'Verb Phrase',
-                            subRole: 'pivotal construction (兼语句)',
+                            id: 'n32-subj',
+                            role: 'Topic',
+                            isNull: true,
+                            impliedText: '老师',
+                            refersToId: 'n32-t',
+                        },
+                        {
+                            id: 'n32-vpc',
+                            role: 'VP',
                             children: [
                                 {
-                                    id: 'n32-hv',
-                                    role: 'Head Verb',
-                                    subRole: 'causative verb (lets/has)',
-                                    text: { hanzi: '让', pinyin: 'ràng', translation: 'let / have' },
-                                },
-                                {
-                                    id: 'n32-pivot',
-                                    role: 'Pivot',
-                                    subRole: 'object of 让, subject of 回答',
-                                    text: { hanzi: '学生', pinyin: 'xué sheng', translation: 'students' },
-                                },
-                                {
-                                    id: 'n32-embedded',
-                                    role: 'Verb Phrase',
-                                    subRole: 'embedded predicate of pivot',
+                                    id: 'n32-an1',
+                                    role: 'VP',
+                                    subRole: 'primitive',
                                     children: [
                                         {
-                                            id: 'n32-embedded-hv',
-                                            role: 'Head Verb',
-                                            text: { hanzi: '回答', pinyin: 'huí dá', translation: 'answer' },
+                                            id: 'n32-vp1',
+                                            role: 'Verb Package',
+                                            children: [
+                                                {
+                                                    id: 'n32-hv',
+                                                    role: 'Head Verb',
+                                                    subRole: 'causative verb (lets/has)',
+                                                    text: { hanzi: '让', pinyin: 'ràng', translation: 'let / have' },
+                                                },
+                                            ],
                                         },
                                         {
-                                            id: 'n32-embedded-obj',
+                                            id: 'n32-pivot',
+                                            role: 'Pivot',
+                                            subRole: 'object of 让, subject of 回答',
+                                            text: { hanzi: '学生', pinyin: 'xué sheng', translation: 'students' },
+                                        },
+                                    ],
+                                },
+                                {
+                                    id: 'n32-an2',
+                                    role: 'VP',
+                                    subRole: 'primitive · embedded sub-chain of pivot',
+                                    children: [
+                                        {
+                                            id: 'n32-vp2',
+                                            role: 'Verb Package',
+                                            children: [
+                                                {
+                                                    id: 'n32-vp2-hv',
+                                                    role: 'Head Verb',
+                                                    text: { hanzi: '回答', pinyin: 'huí dá', translation: 'answer' },
+                                                },
+                                            ],
+                                        },
+                                        {
+                                            id: 'n32-obj',
                                             role: 'Object',
                                             text: { hanzi: '问题', pinyin: 'wèn tí', translation: 'questions' },
                                         },
@@ -2821,7 +2920,7 @@ export const sampleSentences: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n34-cl2-t',
-                                    role: 'Subject',
+                                    role: 'Topic',
                                     text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' },
                                 },
                                 {
@@ -4276,7 +4375,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Rhetorical Questions — additional examples ────────────────────────────
     {
         id: 's56',
-        category: 'Rhetorical Questions (反问句)',
+        category: 'Emphasis & Rhetoric (强调句)',
         chinese: '你难道不知道吗？',
         pinyin: 'Nǐ nán dào bù zhī dào ma?',
         translation: 'Don\'t you know? (Surely you must know!)',
@@ -4331,7 +4430,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's57',
-        category: 'Rhetorical Questions (反问句)',
+        category: 'Emphasis & Rhetoric (强调句)',
         chinese: '这件事非解决不可。',
         pinyin: 'Zhè jiàn shì fēi jiě jué bù kě.',
         translation: 'This matter absolutely must be resolved.',
@@ -4386,7 +4485,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Serial Verb Constructions (连动句) ──────────────────────────────────────
     {
         id: 's58',
-        category: 'Serial Verb Constructions (连动句)',
+        category: 'Basic Topic–Comment (主题评论)',
         chinese: '他骑自行车去上班。',
         pinyin: 'Tā qí zì xíng chē qù shàng bān.',
         translation: 'He rides a bicycle to go to work.',
@@ -4442,7 +4541,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's59',
-        category: 'Serial Verb Constructions (连动句)',
+        category: 'Basic Topic–Comment (主题评论)',
         chinese: '我拿着伞出门了。',
         pinyin: 'Wǒ ná zhe sǎn chū mén le.',
         translation: 'I took (was holding) an umbrella and went out.',
@@ -4511,7 +4610,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Correlative Patterns (越…越…) ─────────────────────────────────────────
     {
         id: 's60',
-        category: 'Correlative Patterns (越…越…)',
+        category: 'Conditional & Correlative (条件句)',
         chinese: '中文越学越有意思。',
         pinyin: 'Zhōng wén yuè xué yuè yǒu yì si.',
         translation: 'The more you study Chinese, the more interesting it gets.',
@@ -4573,7 +4672,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's61',
-        category: 'Correlative Patterns (越…越…)',
+        category: 'Conditional & Correlative (条件句)',
         chinese: '他一说话就脸红。',
         pinyin: 'Tā yī shuō huà jiù liǎn hóng.',
         translation: 'The moment he speaks, he blushes.',
@@ -4638,7 +4737,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Aspect Markers (着/过/了) ─────────────────────────────────────────────
     {
         id: 's62',
-        category: 'Aspect Markers (着/过/了)',
+        category: 'Basic Topic–Comment (主题评论)',
         chinese: '门开着呢。',
         pinyin: 'Mén kāi zhe ne.',
         translation: 'The door is open (right now).',
@@ -4686,7 +4785,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's63',
-        category: 'Aspect Markers (着/过/了)',
+        category: 'Basic Topic–Comment (主题评论)',
         chinese: '你去过长城吗？',
         pinyin: 'Nǐ qù guo Cháng Chéng ma?',
         translation: 'Have you been to the Great Wall?',
@@ -4741,7 +4840,7 @@ export const sampleSentences: SentenceData[] = [
     // ── Conditional Sentences (如果…就…) ──────────────────────────────────────
     {
         id: 's64',
-        category: 'Conditional Sentences (如果…就…)',
+        category: 'Conditional & Correlative (条件句)',
         chinese: '如果明天下雨，我们就不去了。',
         pinyin: 'Rú guǒ míng tiān xià yǔ, wǒ men jiù bù qù le.',
         translation: 'If it rains tomorrow, we won\'t go.',
@@ -4814,7 +4913,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's65',
-        category: 'Conditional Sentences (如果…就…)',
+        category: 'Conditional & Correlative (条件句)',
         chinese: '只要你努力，就能成功。',
         pinyin: 'Zhǐ yào nǐ nǔ lì, jiù néng chéng gōng.',
         translation: 'As long as you work hard, you can succeed.',
@@ -4877,7 +4976,7 @@ export const sampleSentences: SentenceData[] = [
     // ── 连…都/也 ("even X") ──────────────────────────────────────────────────
     {
         id: 's66',
-        category: 'Even (连…都/也)',
+        category: 'Emphasis & Rhetoric (强调句)',
         chinese: '他连自己的名字都不会写。',
         pinyin: 'Tā lián zì jǐ de míng zi dōu bù huì xiě.',
         translation: 'He can\'t even write his own name.',
@@ -4955,7 +5054,7 @@ export const sampleSentences: SentenceData[] = [
     },
     {
         id: 's67',
-        category: 'Even (连…都/也)',
+        category: 'Emphasis & Rhetoric (强调句)',
         chinese: '连小孩子也能做到。',
         pinyin: 'Lián xiǎo hái zi yě néng zuò dào.',
         translation: 'Even children can do it.',
@@ -4977,7 +5076,7 @@ export const sampleSentences: SentenceData[] = [
                         },
                         {
                             id: 'n67-focus',
-                            role: 'Subject',
+                            role: 'Topic',
                             subRole: 'emphasized extreme case',
                             text: { hanzi: '小孩子', pinyin: 'xiǎo hái zi', translation: 'children / little kids' },
                         },
@@ -5020,7 +5119,7 @@ export const sampleSentences: SentenceData[] = [
 
     {
         id: 's68',
-        category: 'Serial Verb Constructions (连动句)',
+        category: 'Basic Topic–Comment (主题评论)',
         chinese: '学了以后要经常练习，这样才会有收获。',
         pinyin: 'Xué le yǐ hòu yào jīng cháng liàn xí, zhè yàng cái huì yǒu shōu huò.',
         translation: 'After studying, you should practice regularly; only then will you gain something.',
@@ -5059,7 +5158,7 @@ export const sampleSentences: SentenceData[] = [
         tree: {
             id: 's69-root', role: 'Sentence', children: [
                 { id: 's69-c1', role: 'Topic', subRole: 'first comparison', children: [
-                    { id: 's69-s1', role: 'Subject', children: [
+                    { id: 's69-s1', role: 'Topic', children: [
                         { id: 's69-zd', role: 'Attributive', text: { hanzi: '知道的', pinyin: 'zhī dào de', translation: 'who know' } },
                         { id: 's69-r1', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
                     ]},
@@ -5070,7 +5169,7 @@ export const sampleSentences: SentenceData[] = [
                     ]},
                 ]},
                 { id: 's69-c2', role: 'Comment', subRole: 'second comparison', children: [
-                    { id: 's69-s2', role: 'Subject', children: [
+                    { id: 's69-s2', role: 'Topic', children: [
                         { id: 's69-xh2', role: 'Attributive', text: { hanzi: '喜欢的', pinyin: 'xǐ huān de', translation: 'who love' } },
                         { id: 's69-r3', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
                     ]},
@@ -5094,7 +5193,7 @@ export const sampleSentences: SentenceData[] = [
         tree: {
             id: 's70-root', role: 'Sentence', children: [
                 { id: 's70-topic', role: 'Topic', subRole: 'situational frame', children: [
-                    { id: 's70-jgr', role: 'Subject', text: { hanzi: '几个人', pinyin: 'jǐ gè rén', translation: 'a few people' } },
+                    { id: 's70-jgr', role: 'Topic', text: { hanzi: '几个人', pinyin: 'jǐ gè rén', translation: 'a few people' } },
                     { id: 's70-yq', role: 'Adjunct', text: { hanzi: '一起', pinyin: 'yì qǐ', translation: 'together' } },
                     { id: 's70-zou', role: 'Head Verb', text: { hanzi: '走', pinyin: 'zǒu', translation: 'walk' } },
                 ]},
@@ -5113,7 +5212,7 @@ export const sampleSentences: SentenceData[] = [
 
     {
         id: 's71',
-        category: 'Conditional Sentences (\u5982\u679c\u2026\u5c31\u2026)',
+        category: 'Conditional & Correlative (条件句)',
         chinese: '如果一个道理能用语言说清楚，那它就不是永恒的道理。',
         pinyin: 'Rú guǒ yí gè dào lǐ néng yòng yǔ yán shuō qīng chǔ, nà tā jiù bú shì yǒng héng de dào lǐ.',
         translation: 'If a truth can be expressed clearly in words, then it is not an eternal truth.',
@@ -5122,14 +5221,14 @@ export const sampleSentences: SentenceData[] = [
             id: 's71-root', role: 'Sentence', children: [
                 { id: 's71-cond', role: 'Topic', subRole: 'conditional (如果)', children: [
                     { id: 's71-rg', role: 'Adjunct', text: { hanzi: '如果', pinyin: 'rú guǒ', translation: 'if' } },
-                    { id: 's71-subj', role: 'Subject', text: { hanzi: '一个道理', pinyin: 'yí gè dào lǐ', translation: 'a truth' } },
+                    { id: 's71-subj', role: 'Topic', text: { hanzi: '一个道理', pinyin: 'yí gè dào lǐ', translation: 'a truth' } },
                     { id: 's71-neng', role: 'Adjunct', text: { hanzi: '能', pinyin: 'néng', translation: 'can' } },
                     { id: 's71-yy', role: 'Adjunct', subRole: 'instrument', text: { hanzi: '用语言', pinyin: 'yòng yǔ yán', translation: 'using language' } },
                     { id: 's71-sqc', role: 'Head Verb', text: { hanzi: '说清楚', pinyin: 'shuō qīng chǔ', translation: 'speak clearly' } },
                 ]},
                 { id: 's71-result', role: 'Comment', subRole: 'consequence (就)', children: [
                     { id: 's71-na', role: 'Adjunct', text: { hanzi: '那', pinyin: 'nà', translation: 'then' } },
-                    { id: 's71-ta', role: 'Subject', text: { hanzi: '它', pinyin: 'tā', translation: 'it' } },
+                    { id: 's71-ta', role: 'Topic', text: { hanzi: '它', pinyin: 'tā', translation: 'it' } },
                     { id: 's71-jiu', role: 'Adjunct', text: { hanzi: '就', pinyin: 'jiù', translation: '(consequence)' } },
                     { id: 's71-bushi', role: 'Head Verb', text: { hanzi: '不是', pinyin: 'bú shì', translation: 'is not' } },
                     { id: 's71-obj', role: 'Object', children: [
@@ -5143,7 +5242,7 @@ export const sampleSentences: SentenceData[] = [
 
     {
         id: 's72',
-        category: 'Even (\u8fde\u2026\u90fd/\u4e5f)',
+        category: 'Emphasis & Rhetoric (强调句)',
         chinese: '连一千里的路，也要从第一步开始走。',
         pinyin: 'Lián yī qiān lǐ de lù, yě yào cóng dì yī bù kāi shǐ zǒu.',
         translation: 'Even a journey of a thousand miles must begin with the first step.',
@@ -5170,7 +5269,7 @@ export const sampleSentences: SentenceData[] = [
 
     {
         id: 's73',
-        category: 'Conditional Sentences (\u5982\u679c\u2026\u5c31\u2026)',
+        category: 'Conditional & Correlative (条件句)',
         chinese: '如果你经常复习学过的东西，就能发现新的道理。',
         pinyin: 'Rú guǒ nǐ jīng cháng fù xí xué guò de dōng xi, jiù néng fā xiàn xīn de dào lǐ.',
         translation: 'If you regularly review what you have learned, you can discover new insights.',
@@ -5179,7 +5278,7 @@ export const sampleSentences: SentenceData[] = [
             id: 's73-root', role: 'Sentence', children: [
                 { id: 's73-cond', role: 'Topic', subRole: 'conditional (如果)', children: [
                     { id: 's73-rg', role: 'Adjunct', text: { hanzi: '如果', pinyin: 'rú guǒ', translation: 'if' } },
-                    { id: 's73-ni', role: 'Subject', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } },
+                    { id: 's73-ni', role: 'Topic', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } },
                     { id: 's73-jc', role: 'Adjunct', text: { hanzi: '经常', pinyin: 'jīng cháng', translation: 'regularly' } },
                     { id: 's73-fx', role: 'Head Verb', text: { hanzi: '复习', pinyin: 'fù xí', translation: 'review' } },
                     { id: 's73-obj', role: 'Object', children: [
@@ -5227,7 +5326,7 @@ export const sampleSentences: SentenceData[] = [
 
     {
         id: 's75',
-        category: 'Aspect Markers (\u7740/\u8fc7/\u4e86)',
+        category: 'Basic Topic–Comment (主题评论)',
         chinese: '我每天都会反省自己三次。',
         pinyin: 'Wǒ měi tiān dōu huì fǎn xǐng zì jǐ sān cì.',
         translation: 'Every day I reflect on myself three times.',
@@ -5248,7 +5347,7 @@ export const sampleSentences: SentenceData[] = [
 
     {
         id: 's76',
-        category: 'Rhetorical Questions (\u53cd\u95ee\u53e5)',
+        category: 'Emphasis & Rhetoric (强调句)',
         chinese: '王侯将相难道是天生的吗？',
         pinyin: 'Wáng hóu jiàng xiàng nán dào shì tiān shēng de ma?',
         translation: 'Are kings and generals really born into their roles?',
@@ -5370,7 +5469,7 @@ export const sampleSentences: SentenceData[] = [
 
     {
         id: 's81',
-        category: 'Aspect Markers (\u7740/\u8fc7/\u4e86)',
+        category: 'Basic Topic–Comment (主题评论)',
         chinese: '从来没有过这样的事。',
         pinyin: 'Cóng lái méi yǒu guò zhè yàng de shì.',
         translation: 'There has never been such a thing.',
@@ -5390,7 +5489,7 @@ export const sampleSentences: SentenceData[] = [
 
     {
         id: 's82',
-        category: 'Conditional Sentences (\u5982\u679c\u2026\u5c31\u2026)',
+        category: 'Conditional & Correlative (条件句)',
         chinese: '如果早上能明白人生的道理，晚上死了也值得。',
         pinyin: 'Rú guǒ zǎo shang néng míng bai rén shēng de dào lǐ, wǎn shang sǐ le yě zhí de.',
         translation: 'If in the morning you grasp the truths of life, dying that evening would still be worthwhile.',
@@ -5419,7 +5518,7 @@ export const sampleSentences: SentenceData[] = [
 
     {
         id: 's83',
-        category: 'Conditional Sentences (\u5982\u679c\u2026\u5c31\u2026)',
+        category: 'Conditional & Correlative (条件句)',
         chinese: '了解敌人又了解自己，打一百场仗也不会有危险。',
         pinyin: 'Liǎo jiě dí rén yòu liǎo jiě zì jǐ, dǎ yì bǎi chǎng zhàng yě bú huì yǒu wéi xiǎn.',
         translation: 'If you understand the enemy and understand yourself, a hundred battles will bring no peril.',
@@ -5452,7 +5551,7 @@ export const sampleSentences: SentenceData[] = [
 
     {
         id: 's84',
-        category: 'Correlative Patterns (\u8d8a\u2026\u8d8a\u2026)',
+        category: 'Conditional & Correlative (条件句)',
         chinese: '只学习不思考，越学越糊涂；只思考不学习，越想越危险。',
         pinyin: 'Zhǐ xué xí bù sī kǎo, yuè xué yuè hú tu; zhǐ sī kǎo bù xué xí, yuè xiǎng yuè wéi xiǎn.',
         translation: 'If you only study without thinking, the more you study the more confused you get; if you only think without studying, the more you think the more perilous it becomes.',
@@ -5475,7 +5574,7 @@ export const sampleSentences: SentenceData[] = [
 
     {
         id: 's85',
-        category: 'Even (\u8fde\u2026\u90fd/\u4e5f)',
+        category: 'Emphasis & Rhetoric (强调句)',
         chinese: '连别人不了解你，你都不生气，这才是有修养的人。',
         pinyin: 'Lián bié rén bù liǎo jiě nǐ, nǐ dōu bù shēng qì, zhè cái shì yǒu xiū yǎng de rén.',
         translation: 'Even when others do not understand you, you are not resentful; this is truly the mark of a cultivated person.',
@@ -5487,12 +5586,12 @@ export const sampleSentences: SentenceData[] = [
                     { id: 's85-clause', role: 'Object', text: { hanzi: '别人不了解你', pinyin: 'bié rén bù liǎo jiě nǐ', translation: 'others don\'t understand you' } },
                 ]},
                 { id: 's85-result', role: 'Comment', children: [
-                    { id: 's85-ni', role: 'Subject', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } },
+                    { id: 's85-ni', role: 'Topic', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } },
                     { id: 's85-dou', role: 'Adjunct', text: { hanzi: '都', pinyin: 'dōu', translation: 'still/all' } },
                     { id: 's85-bsq', role: 'Head Verb', text: { hanzi: '不生气', pinyin: 'bù shēng qì', translation: 'not angry' } },
                 ]},
                 { id: 's85-judge', role: 'Comment', subRole: 'judgment clause', children: [
-                    { id: 's85-zhe', role: 'Subject', text: { hanzi: '这', pinyin: 'zhè', translation: 'this' } },
+                    { id: 's85-zhe', role: 'Topic', text: { hanzi: '这', pinyin: 'zhè', translation: 'this' } },
                     { id: 's85-cai', role: 'Adjunct', text: { hanzi: '才', pinyin: 'cái', translation: 'only then' } },
                     { id: 's85-shi', role: 'Copula', text: { hanzi: '是', pinyin: 'shì', translation: 'is' } },
                     { id: 's85-obj', role: 'Object', children: [
@@ -5514,7 +5613,7 @@ export const sampleSentences: SentenceData[] = [
         tree: {
             id: 's86-root', role: 'Sentence', children: [
                 { id: 's86-c1', role: 'Topic', subRole: 'first clause', children: [
-                    { id: 's86-s1', role: 'Subject', children: [
+                    { id: 's86-s1', role: 'Topic', children: [
                         { id: 's86-a1', role: 'Attributive', text: { hanzi: '了解别人的', pinyin: 'liǎo jiě bié rén de', translation: 'who understand others' } },
                         { id: 's86-r1', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
                     ]},
@@ -5522,7 +5621,7 @@ export const sampleSentences: SentenceData[] = [
                     { id: 's86-cm', role: 'Complement', text: { hanzi: '聪明', pinyin: 'cōng míng', translation: 'clever' } },
                 ]},
                 { id: 's86-c2', role: 'Comment', subRole: 'second clause', children: [
-                    { id: 's86-s2', role: 'Subject', children: [
+                    { id: 's86-s2', role: 'Topic', children: [
                         { id: 's86-a2', role: 'Attributive', text: { hanzi: '了解自己的', pinyin: 'liǎo jiě zì jǐ de', translation: 'who understand themselves' } },
                         { id: 's86-r2', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
                     ]},
@@ -5544,7 +5643,7 @@ export const sampleSentences: SentenceData[] = [
         tree: {
             id: 's87-root', role: 'Sentence', children: [
                 { id: 's87-c1', role: 'Topic', subRole: 'first comparison', children: [
-                    { id: 's87-s1', role: 'Subject', children: [
+                    { id: 's87-s1', role: 'Topic', children: [
                         { id: 's87-a1', role: 'Attributive', text: { hanzi: '好的', pinyin: 'hǎo de', translation: 'good' } },
                         { id: 's87-sj', role: 'Head Noun', text: { hanzi: '时机', pinyin: 'shí jī', translation: 'timing' } },
                     ]},
@@ -5555,7 +5654,7 @@ export const sampleSentences: SentenceData[] = [
                     ]},
                 ]},
                 { id: 's87-c2', role: 'Comment', subRole: 'second comparison', children: [
-                    { id: 's87-s2', role: 'Subject', children: [
+                    { id: 's87-s2', role: 'Topic', children: [
                         { id: 's87-a3', role: 'Attributive', text: { hanzi: '好的', pinyin: 'hǎo de', translation: 'good' } },
                         { id: 's87-dx2', role: 'Head Noun', text: { hanzi: '地形', pinyin: 'dì xíng', translation: 'terrain' } },
                     ]},
@@ -5599,13 +5698,13 @@ export const sampleSentences: SentenceData[] = [
         tree: {
             id: 's89-root', role: 'Sentence', children: [
                 { id: 's89-c1', role: 'Topic', subRole: 'first pivotal', children: [
-                    { id: 's89-kn', role: 'Subject', text: { hanzi: '困难', pinyin: 'kùn nan', translation: 'hardship' } },
+                    { id: 's89-kn', role: 'Topic', text: { hanzi: '困难', pinyin: 'kùn nan', translation: 'hardship' } },
                     { id: 's89-rang1', role: 'Head Verb', subRole: 'causative', text: { hanzi: '让', pinyin: 'ràng', translation: 'makes' } },
                     { id: 's89-ren1', role: 'Object', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
                     { id: 's89-cz', role: 'Complement', text: { hanzi: '成长', pinyin: 'chéng zhǎng', translation: 'grow' } },
                 ]},
                 { id: 's89-c2', role: 'Comment', subRole: 'second pivotal', children: [
-                    { id: 's89-ay', role: 'Subject', text: { hanzi: '安逸', pinyin: 'ān yì', translation: 'comfort' } },
+                    { id: 's89-ay', role: 'Topic', text: { hanzi: '安逸', pinyin: 'ān yì', translation: 'comfort' } },
                     { id: 's89-rang2', role: 'Head Verb', subRole: 'causative', text: { hanzi: '让', pinyin: 'ràng', translation: 'makes' } },
                     { id: 's89-ren2', role: 'Object', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
                     { id: 's89-tb', role: 'Complement', text: { hanzi: '退步', pinyin: 'tuì bù', translation: 'regress' } },
@@ -5624,11 +5723,11 @@ export const sampleSentences: SentenceData[] = [
         tree: {
             id: 's90-root', role: 'Sentence', children: [
                 { id: 's90-c1', role: 'Topic', subRole: 'first clause', children: [
-                    { id: 's90-t1', role: 'Subject', children: [
+                    { id: 's90-t1', role: 'Topic', children: [
                         { id: 's90-a1', role: 'Attributive', text: { hanzi: '做事正义的', pinyin: 'zuò shì zhèng yì de', translation: 'who act justly' } },
                         { id: 's90-r1', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
                     ]},
-                    { id: 's90-s1', role: 'Subject', children: [
+                    { id: 's90-s1', role: 'Topic', children: [
                         { id: 's90-bz1', role: 'Attributive', text: { hanzi: '帮助他的', pinyin: 'bāng zhù tā de', translation: 'who help them' } },
                         { id: 's90-r2', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
                     ]},
@@ -5636,11 +5735,11 @@ export const sampleSentences: SentenceData[] = [
                     { id: 's90-duo', role: 'Head Verb', text: { hanzi: '多', pinyin: 'duō', translation: 'many' } },
                 ]},
                 { id: 's90-c2', role: 'Comment', subRole: 'second clause', children: [
-                    { id: 's90-t2', role: 'Subject', children: [
+                    { id: 's90-t2', role: 'Topic', children: [
                         { id: 's90-a2', role: 'Attributive', text: { hanzi: '做事不正义的', pinyin: 'zuò shì bú zhèng yì de', translation: 'who act unjustly' } },
                         { id: 's90-r3', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
                     ]},
-                    { id: 's90-s2', role: 'Subject', children: [
+                    { id: 's90-s2', role: 'Topic', children: [
                         { id: 's90-bz2', role: 'Attributive', text: { hanzi: '帮助他的', pinyin: 'bāng zhù tā de', translation: 'who help them' } },
                         { id: 's90-r4', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
                     ]},
@@ -5664,7 +5763,7 @@ export const sampleSentences: SentenceData[] = [
                 { id: 's91-yw', role: 'Adjunct', subRole: 'causal', children: [
                     { id: 's91-yw-p', role: 'Preposition', text: { hanzi: '因为', pinyin: 'yīn wèi', translation: 'because' } },
                     { id: 's91-yw-clause', role: 'Object', children: [
-                        { id: 's91-hs', role: 'Subject', text: { hanzi: '好事', pinyin: 'hǎo shì', translation: 'good deed' } },
+                        { id: 's91-hs', role: 'Topic', text: { hanzi: '好事', pinyin: 'hǎo shì', translation: 'good deed' } },
                         { id: 's91-tx', role: 'Head Verb', text: { hanzi: '太小', pinyin: 'tài xiǎo', translation: 'too small' } },
                     ]},
                 ]},
@@ -5680,7 +5779,7 @@ export const sampleSentences: SentenceData[] = [
 
     {
         id: 's92',
-        category: 'Double Topic (\u53cc\u4e3b\u9898)',
+        category: 'Basic Topic–Comment (主题评论)',
         chinese: '一个人犯的错，跟他的性格是分不开的。',
         pinyin: 'Yí gè rén fàn de cuò, gēn tā de xìng gé shì fēn bù kāi de.',
         translation: 'The mistakes a person makes are inseparable from their character.',

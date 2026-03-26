@@ -11,6 +11,7 @@ import { useIsClassical } from '../contexts/AppModeContext';
 export type GrammarNodeViewData = {
     role: GrammarRole;
     subRole?: string;
+    isNull?: boolean;
     isDropped?: boolean;
     impliedText?: string;
     refersToId?: string;
@@ -50,18 +51,21 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
         }
     }, []);
 
-    const getRoleColorClass = (role: GrammarRole) => {
+    const getRoleColorClass = (role: GrammarRole, subRole?: string) => {
         switch (role) {
             case 'Sentence': return 'bg-slate-800/80 text-slate-100 border-purple-400/60 shadow-[0_0_28px_rgba(139,92,246,0.45),inset_0_1px_0_rgba(255,255,255,0.08)]';
             case 'Topic': return 'bg-fuchsia-900/40 text-fuchsia-200 border-fuchsia-500/50 shadow-[0_0_15px_rgba(217,70,239,0.3)]';
             case 'Comment': return 'bg-blue-900/40 text-blue-200 border-blue-500/50 shadow-[0_0_15px_rgba(59,130,246,0.3)]';
-            case 'Subject': return 'bg-indigo-900/40 text-indigo-300 border-indigo-600/50';
-            case 'Predicate': return 'bg-cyan-900/40 text-cyan-200 border-cyan-500/50';
-            case 'Verb Phrase': return 'bg-teal-900/40 text-teal-200 border-teal-500/50';
+            // ── Fractal VP: color by subRole ──
+            case 'VP': return subRole?.includes('primitive')
+                ? 'bg-emerald-900/40 text-emerald-200 border-emerald-500/50 shadow-[0_0_12px_rgba(16,185,129,0.2)]'
+                : 'bg-teal-900/40 text-teal-200 border-teal-500/50 shadow-[0_0_12px_rgba(20,184,166,0.2)]';
+            case 'Verb Package': return 'bg-green-900/50 text-green-200 border-green-500/50 shadow-[0_0_12px_rgba(34,197,94,0.2)]';
+            // ── Kept roles ──
             case 'Noun Phrase': return 'bg-orange-900/40 text-orange-200 border-orange-600/50';
-            case 'Verb': return 'bg-green-900/40 text-green-300 border-green-600/50';
             case 'Object': return 'bg-amber-900/40 text-amber-200 border-amber-600/50';
             case 'Adjunct': return 'bg-rose-900/40 text-rose-300 border-rose-600/50';
+            case 'Coverb': return 'bg-pink-900/40 text-pink-200 border-pink-500/50 shadow-[0_0_12px_rgba(236,72,153,0.15)]';
             case 'Adjective': return 'bg-fuchsia-900/40 text-fuchsia-200 border-fuchsia-600/50 shadow-[0_0_12px_rgba(192,38,211,0.15)]';
             case 'Attributive': return 'bg-lime-900/40 text-lime-300 border-lime-600/50 shadow-[0_0_15px_rgba(132,204,22,0.15)]';
             case 'Complement': return 'bg-violet-900/40 text-violet-300 border-violet-600/50 shadow-[0_0_15px_rgba(139,92,246,0.15)]';
@@ -72,22 +76,31 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
             case 'Object Morpheme': return 'bg-amber-900/50 text-amber-200 border-amber-500/60 shadow-[0_0_12px_rgba(245,158,11,0.2)]';
             case 'Pivot': return 'bg-orange-800/50 text-orange-100 border-orange-400/70 shadow-[0_0_16px_rgba(251,146,60,0.35)] border-b-2';
             case 'Copula': return 'bg-indigo-800/50 text-indigo-100 border-indigo-400/60 shadow-[0_0_14px_rgba(99,102,241,0.3)] border-b-2';
+            // ── Legacy roles (backward compat) ──
+            case 'Subject': return 'bg-indigo-900/40 text-indigo-300 border-indigo-600/50';
+            case 'Action Node': return 'bg-emerald-900/40 text-emerald-200 border-emerald-500/50';
+            case 'VP-Chain': return 'bg-teal-900/40 text-teal-200 border-teal-500/50';
+            case 'Predicate': return 'bg-cyan-900/40 text-cyan-200 border-cyan-500/50';
+            case 'Verb Phrase': return 'bg-teal-900/40 text-teal-200 border-teal-500/50';
+            case 'Verb': return 'bg-green-900/40 text-green-300 border-green-600/50';
+            case 'Preposition': return 'bg-pink-900/40 text-pink-200 border-pink-500/50';
             default: return 'bg-slate-900/60 text-slate-300 border-slate-700/50';
         }
     };
 
-    const getClassicalRoleColorClass = (role: GrammarRole) => {
+    const getClassicalRoleColorClass = (role: GrammarRole, subRole?: string) => {
         switch (role) {
             case 'Sentence': return 'bg-stone-800/80 text-stone-100 border-amber-400/60 shadow-[0_0_28px_rgba(217,169,109,0.4),inset_0_1px_0_rgba(255,255,255,0.08)]';
             case 'Topic': return 'bg-amber-900/40 text-amber-200 border-amber-500/50 shadow-[0_0_15px_rgba(245,158,11,0.25)]';
             case 'Comment': return 'bg-orange-900/40 text-orange-200 border-orange-500/50 shadow-[0_0_15px_rgba(234,88,12,0.2)]';
-            case 'Subject': return 'bg-yellow-900/40 text-yellow-300 border-yellow-600/50';
-            case 'Predicate': return 'bg-stone-800/50 text-stone-200 border-stone-500/50';
-            case 'Verb Phrase': return 'bg-stone-800/40 text-stone-300 border-stone-500/40';
+            case 'VP': return subRole?.includes('primitive')
+                ? 'bg-emerald-900/40 text-emerald-200 border-emerald-500/50'
+                : 'bg-stone-800/40 text-stone-300 border-stone-500/40';
+            case 'Verb Package': return 'bg-emerald-900/50 text-emerald-200 border-emerald-500/60';
             case 'Noun Phrase': return 'bg-amber-900/40 text-amber-200 border-amber-600/50';
-            case 'Verb': return 'bg-emerald-900/40 text-emerald-300 border-emerald-600/50';
             case 'Object': return 'bg-yellow-900/40 text-yellow-200 border-yellow-600/50';
             case 'Adjunct': return 'bg-rose-900/40 text-rose-300 border-rose-600/50';
+            case 'Coverb': return 'bg-rose-800/40 text-rose-200 border-rose-500/50';
             case 'Adjective': return 'bg-orange-900/40 text-orange-200 border-orange-600/50 shadow-[0_0_12px_rgba(234,88,12,0.15)]';
             case 'Attributive': return 'bg-lime-900/40 text-lime-300 border-lime-600/50 shadow-[0_0_15px_rgba(132,204,22,0.15)]';
             case 'Complement': return 'bg-amber-800/40 text-amber-300 border-amber-500/50 shadow-[0_0_15px_rgba(217,169,109,0.2)]';
@@ -98,13 +111,21 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
             case 'Object Morpheme': return 'bg-yellow-900/50 text-yellow-200 border-yellow-500/60 shadow-[0_0_12px_rgba(234,179,8,0.2)]';
             case 'Pivot': return 'bg-orange-800/50 text-orange-100 border-orange-400/70 shadow-[0_0_16px_rgba(251,146,60,0.35)] border-b-2';
             case 'Copula': return 'bg-stone-700/50 text-stone-100 border-stone-400/60 shadow-[0_0_14px_rgba(168,162,158,0.2)] border-b-2';
+            // ── Legacy ──
+            case 'Subject': return 'bg-yellow-900/40 text-yellow-300 border-yellow-600/50';
+            case 'Action Node': return 'bg-emerald-900/40 text-emerald-200 border-emerald-500/50';
+            case 'VP-Chain': return 'bg-stone-800/40 text-stone-300 border-stone-500/40';
+            case 'Predicate': return 'bg-stone-800/50 text-stone-200 border-stone-500/50';
+            case 'Verb Phrase': return 'bg-stone-800/40 text-stone-300 border-stone-500/40';
+            case 'Verb': return 'bg-emerald-900/40 text-emerald-300 border-emerald-600/50';
+            case 'Preposition': return 'bg-rose-800/40 text-rose-200 border-rose-500/50';
             default: return 'bg-stone-900/60 text-stone-300 border-stone-700/50';
         }
     };
 
     const roleColorClass = isClassical ? getClassicalRoleColorClass : getRoleColorClass;
 
-    const isGhost = !!data.isDropped;
+    const isGhost = !!(data.isNull || data.isDropped);
 
     const isCollapsedWithChildren = data.hasChildren && !data.isExpanded && !isGhost;
 
@@ -117,7 +138,7 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
                 ${data.hasChildren && !isGhost ? 'cursor-pointer hover:border-slate-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:-translate-y-0.5' : ''}
                 ${isGhost
                         ? 'border-dashed border-rose-500/50 bg-slate-900/30 opacity-60'
-                        : roleColorClass(data.role)
+                        : roleColorClass(data.role, data.subRole)
                     }
                 ${data.corefGlow ? '!border-rose-400 !shadow-[0_0_24px_rgba(244,63,94,0.5)] !opacity-100 ring-2 ring-rose-400/60' : ''}
                 ${data.isExiting ? 'animate-node-exit' : data.isFresh ? 'animate-node-enter' : ''}

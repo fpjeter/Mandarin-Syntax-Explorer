@@ -31,6 +31,10 @@ const ROLE_HEADER_COLORS: Record<string, string> = {
     'Comment': '#2563eb',
     'Predicate': '#2563eb',
     'Verb Phrase': '#1d4ed8',
+    'VP': '#0d9488',
+    'VP-Chain': '#0d9488',
+    'Action Node': '#059669',
+    'Verb Package': '#16a34a',
     'Head Verb': '#3b82f6',
     'Object': '#c2410c',
     'Head Noun': '#ea580c',
@@ -44,6 +48,7 @@ const ROLE_HEADER_COLORS: Record<string, string> = {
     'Adjective': '#15803d',
     'Adjunct': '#0e7490',
     'Preposition': '#0e7490',
+    'Coverb': '#0e7490',
     'Measure Word': '#92400e',
     'Verb Morpheme': '#1e40af',
     'Object Morpheme': '#c2410c',
@@ -51,7 +56,8 @@ const ROLE_HEADER_COLORS: Record<string, string> = {
     'Copula': '#6d28d9',
 };
 
-function getRoleHeaderColor(role: string): string {
+function getRoleHeaderColor(role: string, subRole?: string): string {
+    if (role === 'VP' && subRole?.includes('primitive')) return '#059669';
     return ROLE_HEADER_COLORS[role] ?? '#475569';
 }
 
@@ -63,6 +69,10 @@ const ROLE_HEADER_COLORS_CLASSICAL: Record<string, string> = {
     'Comment': '#1d4ed8',
     'Predicate': '#1d4ed8',
     'Verb Phrase': '#1d4ed8',
+    'VP': '#0d9488',
+    'VP-Chain': '#0d9488',
+    'Action Node': '#059669',
+    'Verb Package': '#166534',
     'Head Verb': '#2563eb',
     'Object': '#92400e',
     'Head Noun': '#b45309',
@@ -76,15 +86,17 @@ const ROLE_HEADER_COLORS_CLASSICAL: Record<string, string> = {
     'Adjective': '#14532d',
     'Adjunct': '#0c4a6e',
     'Preposition': '#0c4a6e',
+    'Coverb': '#0c4a6e',
     'Measure Word': '#78350f',
 };
 
-function getClassicalRoleHeaderColor(role: string): string {
+function getClassicalRoleHeaderColor(role: string, subRole?: string): string {
+    if (role === 'VP' && subRole?.includes('primitive')) return '#059669';
     return ROLE_HEADER_COLORS_CLASSICAL[role] ?? '#78716c';
 }
 
 function nodeHeight(node: GrammarNodeData): number {
-    return node.text || node.isDropped ? NODE_H_FULL : NODE_H_LABEL;
+    return node.text || node.isDropped || node.isNull ? NODE_H_FULL : NODE_H_LABEL;
 }
 
 function estimatePrintNodeWidth(node: GrammarNodeData): number {
@@ -199,7 +211,7 @@ function renderTreeSVG(root: GrammarNodeData, isClassical: boolean): string {
         const y1 = parent.cy + parent.h;
         const x2 = n.cx;
         const y2 = n.cy;
-        const color = getColor(parent.data.role);
+        const color = getColor(parent.data.role, parent.data.subRole);
         // Cubic bezier for smooth branching
         const cy1 = y1 + (y2 - y1) * 0.45;
         const cy2 = y1 + (y2 - y1) * 0.55;
@@ -213,10 +225,11 @@ function renderTreeSVG(root: GrammarNodeData, isClassical: boolean): string {
     nodes.forEach(n => {
         const { cx, cy, w, h, data } = n;
         const x = cx - w / 2;
-        const color = getColor(data.role);
+        const color = getColor(data.role, data.subRole);
         const label = data.subRole ? `${data.role} (${data.subRole})` : data.role;
         const isDropped = data.isDropped;
-        const hasContent = !!(data.text || data.isDropped);
+        const isNull = data.isNull;
+        const hasContent = !!(data.text || data.isDropped || data.isNull);
 
         nodeBoxes.push(`<g class="tree-node" filter="url(#shadow)">`);
 
@@ -225,7 +238,7 @@ function renderTreeSVG(root: GrammarNodeData, isClassical: boolean): string {
             nodeBoxes.push(
                 // Outer rounded rect
                 `<rect x="${x}" y="${cy}" width="${w}" height="${h}" rx="${CORNER_R}" ` +
-                `fill="${isDropped ? '#f8fafc' : '#ffffff'}" stroke="${color}" stroke-width="1.5"/>`,
+                `fill="${isDropped || isNull ? '#f8fafc' : '#ffffff'}" stroke="${color}" stroke-width="1.5"${isNull ? ' stroke-dasharray="6,3" opacity="0.7"' : ''}/>`,
                 // Colored header band — clipPath has matching rx so corners align with outer box
                 `<clipPath id="cp-${data.id}"><rect x="${x}" y="${cy}" width="${w}" height="${HEADER_H + CORNER_R}" rx="${CORNER_R}"/></clipPath>`,
                 `<rect x="${x}" y="${cy}" width="${w}" height="${HEADER_H + CORNER_R * 2}" clip-path="url(#cp-${data.id})" fill="${color}"/>`,
@@ -263,6 +276,12 @@ function renderTreeSVG(root: GrammarNodeData, isClassical: boolean): string {
                         `font-family="Georgia,Palatino,serif" font-size="9" fill="#6b7280" font-style="italic">"${xmlEscape(truncated)}"</text>`
                     );
                 }
+            } else if (isNull) {
+                const impliedLabel = data.impliedText ? `Ø ${data.impliedText}` : 'Ø';
+                nodeBoxes.push(
+                    `<text x="${cx}" y="${cy + HEADER_H + 24}" text-anchor="middle" ` +
+                    `font-family="Inter,Segoe UI,sans-serif" font-size="11" fill="#94a3b8" font-style="italic">⟨${xmlEscape(impliedLabel)}⟩</text>`
+                );
             } else if (isDropped) {
                 nodeBoxes.push(
                     `<text x="${cx}" y="${cy + HEADER_H + 24}" text-anchor="middle" ` +
@@ -424,6 +443,10 @@ const ROLE_COLORS: Record<string, string> = {
     // Predicate / Verb family
     'Comment': '#2563eb',        // blue
     'Verb Phrase': '#2563eb',
+    'VP': '#0d9488',       // teal
+    'VP-Chain': '#0d9488',   // teal (legacy)
+    'Action Node': '#059669',    // emerald
+    'Verb Package': '#16a34a',   // green
     'Head Verb': '#3b82f6',
     'Auxiliary': '#60a5fa',
     // Objects / Nouns
@@ -442,12 +465,16 @@ const ROLE_COLORS: Record<string, string> = {
     'Adverbial': '#0891b2',      // cyan
     'Adverb': '#0891b2',
     'Preposition': '#0891b2',
+    'Coverb': '#0891b2',
     'Prepositional Phrase': '#0891b2',
     'Conjunction': '#78716c',
     'Connector': '#78716c',
+    // Pivotal
+    'Pivot': '#6d28d9',
 };
 
-function getRoleColor(role: string): string {
+function getRoleColor(role: string, subRole?: string): string {
+    if (role === 'VP' && subRole?.includes('primitive')) return '#059669';
     if (ROLE_COLORS[role]) return ROLE_COLORS[role];
     // Fuzzy match
     for (const [key, color] of Object.entries(ROLE_COLORS)) {
@@ -467,13 +494,15 @@ function renderTreeOutline(node: GrammarNodeData, depth = 0, isLast = true): str
         : '<span class="connector">' + '│  '.repeat(depth - 1) + (isLast ? '└─ ' : '├─ ') + '</span>';
 
     const role = node.subRole ? `${node.role} (${node.subRole})` : node.role;
-    const roleColor = getRoleColor(node.role);
+    const roleColor = getRoleColor(node.role, node.subRole);
 
     const text = node.text
         ? `: <span class="hanzi">${node.text.hanzi}</span> <span class="pinyin">(${node.text.pinyin})</span>${node.text.translation ? ` <span class="dash">—</span> <span class="trans">"${node.text.translation}"</span>` : ''}`
         : '';
 
-    const dropped = node.isDropped ? ' <span class="dropped">⟨implied⟩</span>' : '';
+    const dropped = node.isNull
+        ? ` <span class="dropped">⟨Ø ${node.impliedText ?? ''}⟩</span>`
+        : node.isDropped ? ' <span class="dropped">⟨implied⟩</span>' : '';
 
     let html = `<div class="tree-line">${connector}<span class="role" style="color:${roleColor}">${role}</span>${text}${dropped}</div>\n`;
 
@@ -998,10 +1027,10 @@ export function generatePrintSheet(sentence: SentenceData, isClassical: boolean)
 
 /**
  * Downloads the syntax tree for the given sentence as a 2× PNG file.
- * Must be called from the main app context (not from about:blank) so that
- * blob URL downloads work correctly.
+ * Uses the File System Access API (showSaveFilePicker) for reliable filename control,
+ * with a blob URL fallback for browsers that don't support it.
  */
-export function downloadTreePNG(sentence: SentenceData, isClassical: boolean): void {
+export async function downloadTreePNG(sentence: SentenceData, isClassical: boolean): Promise<void> {
     const svgString = renderTreeSVG(sentence.tree, isClassical);
 
     // Parse viewBox dimensions synchronously
@@ -1022,29 +1051,60 @@ export function downloadTreePNG(sentence: SentenceData, isClassical: boolean): v
     canvas.height = svgH * scale;
     const ctx = canvas.getContext('2d')!;
 
-    const img = new Image();
-    img.onload = () => {
-        ctx.fillStyle = '#ffffff';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.scale(scale, scale);
-        ctx.drawImage(img, 0, 0);
+    // Load SVG image onto canvas
+    const img = await new Promise<HTMLImageElement>((resolve, reject) => {
+        const image = new Image();
+        image.onload = () => resolve(image);
+        image.onerror = (e) => reject(e);
+        image.src = svgDataUrl;
+    });
 
-        // toDataURL is synchronous — no nested async, download name is respected
-        let pngDataUrl: string;
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.scale(scale, scale);
+    ctx.drawImage(img, 0, 0);
+
+    // Get PNG blob from canvas
+    const blob = await new Promise<Blob>((resolve, reject) => {
+        canvas.toBlob((b) => {
+            if (b) resolve(b);
+            else reject(new Error('Canvas toBlob returned null'));
+        }, 'image/png');
+    });
+
+    const filename = `syntax-tree-${sentence.id}.png`;
+
+    // Primary: File System Access API — proper Save As dialog
+    if ('showSaveFilePicker' in window) {
         try {
-            pngDataUrl = canvas.toDataURL('image/png');
-        } catch (e) {
-            console.error('[downloadTreePNG] Canvas export blocked:', e);
+            const handle = await (window as any).showSaveFilePicker({
+                suggestedName: filename,
+                types: [{
+                    description: 'PNG Image',
+                    accept: { 'image/png': ['.png'] },
+                }],
+            });
+            const writable = await handle.createWritable();
+            await writable.write(blob);
+            await writable.close();
             return;
+        } catch (e: any) {
+            // User cancelled the save dialog — not an error
+            if (e?.name === 'AbortError') return;
+            console.warn('[downloadTreePNG] showSaveFilePicker failed, falling back:', e);
         }
+    }
 
-        const a = document.createElement('a');
-        a.download = `syntax-tree-${sentence.id}.png`;
-        a.href = pngDataUrl;
-        document.body.appendChild(a);
-        a.click();
+    // Fallback: blob URL download
+    const blobUrl = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.download = filename;
+    a.href = blobUrl;
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => {
         document.body.removeChild(a);
-    };
-    img.onerror = (e) => console.error('[downloadTreePNG] SVG image load failed:', e);
-    img.src = svgDataUrl;
+        URL.revokeObjectURL(blobUrl);
+    }, 500);
 }

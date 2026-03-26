@@ -11,7 +11,7 @@ export const TREE_EDGE_COLOR = '#94a3b8';
 
 // ── Edge color by source role ────────────────────────────────────────────────
 const TOP_LEVEL_ROLES = new Set<GrammarRole>(['Sentence']);
-const MID_LEVEL_ROLES = new Set<GrammarRole>(['Topic', 'Comment', 'Subject', 'Predicate']);
+const MID_LEVEL_ROLES = new Set<GrammarRole>(['Topic', 'Comment', 'Subject', 'Predicate', 'VP', 'VP-Chain', 'Action Node']);
 
 export const getEdgeColor = (sourceRole?: GrammarRole, classical?: boolean): string => {
     if (classical) {

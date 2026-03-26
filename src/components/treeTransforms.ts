@@ -32,9 +32,9 @@ export const getAggregateText = (node: AppGrammarNodeData): AppGrammarNodeData['
 
 // ── Pro-drop detection ───────────────────────────────────────────────────────
 
-/** Returns true if any node in the tree has isDropped=true */
+/** Returns true if any node in the tree has isNull=true or isDropped=true */
 export const hasProDrop = (node: AppGrammarNodeData): boolean => {
-    if (node.isDropped) return true;
+    if (node.isNull || node.isDropped) return true;
     return (node.children ?? []).some(hasProDrop);
 };
 
@@ -50,8 +50,8 @@ export const parseTreeToFlow = (root: AppGrammarNodeData | undefined, expandedId
     const corefPairs = new Map<string, string>();
 
     const traverse = (node: AppGrammarNodeData, parentId: string | null = null, depth = 0) => {
-        // Skip ghost nodes when the toggle is off
-        if (node.isDropped && !showGhost) return;
+        // Skip ghost/null nodes when the toggle is off
+        if ((node.isNull || node.isDropped) && !showGhost) return;
 
         const hasChildren = !!node.children && node.children.length > 0;
         const isExpanded = expandedIds.has(node.id);
@@ -73,6 +73,7 @@ export const parseTreeToFlow = (root: AppGrammarNodeData | undefined, expandedId
             data: {
                 role: node.role,
                 subRole: node.subRole,
+                isNull: node.isNull,
                 isDropped: node.isDropped,
                 impliedText: node.impliedText,
                 refersToId: node.refersToId,
@@ -86,7 +87,7 @@ export const parseTreeToFlow = (root: AppGrammarNodeData | undefined, expandedId
         nodeDataMap.set(node.id, displayData);
 
         // Build co-ref pair map for hover highlighting
-        if (node.isDropped && node.refersToId && showGhost) {
+        if ((node.isNull || node.isDropped) && node.refersToId && showGhost) {
             corefPairs.set(node.id, node.refersToId);
             corefPairs.set(node.refersToId, node.id);
         }
