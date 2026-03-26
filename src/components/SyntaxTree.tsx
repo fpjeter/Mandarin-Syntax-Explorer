@@ -14,6 +14,7 @@ import { glossary } from '../data/glossary';
 import { classicalGlossary } from '../data/classicalGlossary';
 import { useIsClassical } from '../contexts/AppModeContext';
 import { hasProDrop, parseTreeToFlow, getFitViewPadding } from './treeTransforms';
+import { NestedBoxView } from './NestedBoxView';
 
 const nodeTypes = {
     grammarNode: GrammarNode,
@@ -137,6 +138,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible, onRando
     const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set());
     const [showGhost, setShowGhost] = useState(true);
     const [isGlossaryOpen, setIsGlossaryOpen] = useState(false);
+    const [viewMode, setViewMode] = useState<'tree' | 'boxes'>('tree');
     const isClassical = useIsClassical();
     const activeGlossary = isClassical ? classicalGlossary : glossary;
 
@@ -269,27 +271,33 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible, onRando
                 onRandom={onRandom ?? (() => {})}
                 onPrint={onPrint ?? (() => {})}
                 onDownloadPNG={onDownloadPNG ?? (() => {})}
+                viewMode={viewMode}
+                onToggleView={() => setViewMode(m => m === 'tree' ? 'boxes' : 'tree')}
             />
 
-            <ReactFlow
-                nodes={nodes}
-                edges={edges}
-                nodeTypes={nodeTypes}
-                onNodeClick={onNodeClick}
-                onPaneClick={() => setTappedNodeInfo(null)}
-                onNodeMouseEnter={onNodeMouseEnter}
-                onNodeMouseLeave={onNodeMouseLeave}
-                minZoom={0.3}
-                maxZoom={1.5}
-                proOptions={{ hideAttribution: true }}
-                nodesDraggable={true}
-                nodesConnectable={false}
-            >
-                <Background color="#1e293b" gap={24} size={1} />
-                <ZoomControls />
-                <PinchHint />
-                <FitViewOnChange nodes={nodes} isVisible={isVisible} />
-            </ReactFlow>
+            {viewMode === 'tree' ? (
+                <ReactFlow
+                    nodes={nodes}
+                    edges={edges}
+                    nodeTypes={nodeTypes}
+                    onNodeClick={onNodeClick}
+                    onPaneClick={() => setTappedNodeInfo(null)}
+                    onNodeMouseEnter={onNodeMouseEnter}
+                    onNodeMouseLeave={onNodeMouseLeave}
+                    minZoom={0.3}
+                    maxZoom={1.5}
+                    proOptions={{ hideAttribution: true }}
+                    nodesDraggable={true}
+                    nodesConnectable={false}
+                >
+                    <Background color="#1e293b" gap={24} size={1} />
+                    <ZoomControls />
+                    <PinchHint />
+                    <FitViewOnChange nodes={nodes} isVisible={isVisible} />
+                </ReactFlow>
+            ) : (
+                <NestedBoxView tree={tree} showGhost={showGhost} />
+            )}
 
             <GlossaryPanel isOpen={isGlossaryOpen} onClose={() => setIsGlossaryOpen(false)} />
             <BadgeLegend />

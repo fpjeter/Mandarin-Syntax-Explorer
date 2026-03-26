@@ -1,5 +1,5 @@
 import React from 'react';
-import { Eye, EyeOff, Maximize2, Minimize2, BookOpen, Shuffle, Printer, ImageDown } from 'lucide-react';
+import { Eye, EyeOff, Maximize2, Minimize2, BookOpen, Shuffle, Printer, ImageDown, GitBranch, Layers } from 'lucide-react';
 import { useIsClassical } from '../contexts/AppModeContext';
 
 interface TreeToolbarProps {
@@ -12,6 +12,8 @@ interface TreeToolbarProps {
     onRandom: () => void;
     onPrint: () => void;
     onDownloadPNG: () => void;
+    viewMode: 'tree' | 'boxes';
+    onToggleView: () => void;
 }
 
 /** Toolbar with expand/collapse, ghost toggle, glossary, random, and print buttons. */
@@ -25,12 +27,30 @@ export const TreeToolbar: React.FC<TreeToolbarProps> = ({
     onRandom,
     onPrint,
     onDownloadPNG,
+    viewMode,
+    onToggleView,
 }) => {
     const isClassical = useIsClassical();
 
     return (
         <div className="absolute top-3 right-3 z-20 pointer-events-auto">
             <div className="glass-panel rounded-2xl border border-slate-700/60 p-1.5 flex items-center gap-1 shadow-2xl">
+                {/* View mode toggle */}
+                <button
+                    onClick={onToggleView}
+                    className={`flex items-center gap-1.5 px-2 py-1.5 rounded-xl text-[11px] font-semibold tracking-wide transition-all duration-200 ${
+                        viewMode === 'boxes'
+                            ? isClassical ? 'bg-stone-700/80 text-amber-300' : 'bg-slate-700/80 text-purple-300'
+                            : 'bg-slate-800/60 text-slate-400 hover:bg-slate-700/80 hover:text-slate-200'
+                    }`}
+                    title={viewMode === 'tree' ? 'Switch to box view' : 'Switch to tree view'}
+                >
+                    {viewMode === 'tree' ? <Layers className="w-3.5 h-3.5" /> : <GitBranch className="w-3.5 h-3.5" />}
+                    <span className="hidden xl:inline">{viewMode === 'tree' ? 'Boxes' : 'Tree'}</span>
+                </button>
+
+                <div className="w-px h-5 bg-slate-700/60 mx-0.5" />
+
                 <button
                     onClick={onExpandAll}
                     className="flex items-center gap-1.5 px-2 py-1.5 rounded-xl text-[11px] font-semibold tracking-wide transition-all duration-200 bg-slate-800/60 text-slate-400 hover:bg-slate-700/80 hover:text-slate-200"

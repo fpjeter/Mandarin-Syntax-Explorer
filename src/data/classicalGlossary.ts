@@ -125,4 +125,30 @@ export const classicalGlossary: Record<GrammarRole, { headline: string; detail: 
         detail:
             'In classical Chinese, the copula is often implicit. 非 (fēi) serves as the negative copula ("is not"), while positive identity can be expressed with 為 (wéi) or simply juxtaposition.',
     },
+    // ── UMSM roles (needed for type completeness) ─────────────────────────────
+    VP: {
+        headline: 'Verb phrase',
+        detail:
+            'A container for one or more actions. In classical Chinese, multi-verb chains are common (e.g. 學而時習之 chains 學 and 習).',
+    },
+    'Verb Package': {
+        headline: 'A verb and everything attached to it',
+        detail:
+            'The full verb unit including any result or aspect suffix. Classical Chinese verbs rarely have suffixes, so the verb package is usually just the core verb.',
+    },
+    Coverb: {
+        headline: 'A linking word (於/以/自)',
+        detail:
+            'Classical coverbs like 於, 以, and 自 mark relationships between verbs and nouns. They are the ancestors of modern 在, 用, and 从.',
+    },
+    'Action Node': {
+        headline: 'Older term — see VP',
+        detail:
+            'A single action unit. In the current model this is labeled VP. You may see this label in older data.',
+    },
+    'VP-Chain': {
+        headline: 'Older term — see VP',
+        detail:
+            'In the current model, a VP covers both single actions and multi-action chains. You may see this label in older data.',
+    },
 };
