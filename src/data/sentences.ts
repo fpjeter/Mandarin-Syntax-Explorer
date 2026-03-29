@@ -1867,54 +1867,60 @@ export const sampleSentences: SentenceData[] = [
                 {
                     id: 'n21-c',
                     role: 'Comment',
-                    subRole: 'similarity comparison (像…一样)',
                     children: [
                         {
                             id: 'n21-vp',
-                            role: 'Verb Phrase',
+                            role: 'VP',
+                            subRole: 'primitive · degree unit',
                             children: [
                                 {
-                                    id: 'n21-hv',
-                                    role: 'Head Verb',
-                                    text: { hanzi: '跑', pinyin: 'pǎo', translation: 'run' }
-                                },
-                                {
-                                    id: 'n21-de',
-                                    role: 'Particle',
-                                    subRole: 'degree complement linker',
-                                    text: { hanzi: '得', pinyin: 'de', translation: '(links verb to degree)' }
-                                },
-                                {
-                                    id: 'n21-comp',
-                                    role: 'Complement',
-                                    subRole: 'degree complement',
+                                    id: 'n21-pkg',
+                                    role: 'Verb Package',
                                     children: [
                                         {
-                                            id: 'n21-comp-pp',
-                                            role: 'Preposition',
-                                            subRole: 'simile frame (像…)',
+                                            id: 'n21-hv',
+                                            role: 'Head Verb',
+                                            text: { hanzi: '跑', pinyin: 'pǎo', translation: 'run' }
+                                        },
+                                        {
+                                            id: 'n21-de',
+                                            role: 'Particle',
+                                            subRole: 'degree hinge',
+                                            text: { hanzi: '得', pinyin: 'de', translation: '(how)' }
+                                        }
+                                    ]
+                                },
+                                {
+                                    id: 'n21-c2',
+                                    role: 'Comment',
+                                    subRole: 'degree description',
+                                    children: [
+                                        {
+                                            id: 'n21-c2-adj',
+                                            role: 'Adjunct',
+                                            subRole: 'simile frame',
                                             children: [
                                                 {
-                                                    id: 'n21-comp-pp-prep',
-                                                    role: 'Preposition',
-                                                    text: { hanzi: '像', pinyin: 'xiàng', translation: 'like / as' }
+                                                    id: 'n21-c2-xiang',
+                                                    role: 'Coverb',
+                                                    text: { hanzi: '像', pinyin: 'xiàng', translation: 'like' }
                                                 },
                                                 {
-                                                    id: 'n21-comp-pp-n',
-                                                    role: 'Noun',
+                                                    id: 'n21-c2-obj',
+                                                    role: 'Object',
                                                     text: { hanzi: '风', pinyin: 'fēng', translation: 'wind' }
+                                                },
+                                                {
+                                                    id: 'n21-c2-yy',
+                                                    role: 'Particle',
+                                                    text: { hanzi: '一样', pinyin: 'yī yàng', translation: 'equally / the same' }
                                                 }
                                             ]
                                         },
                                         {
-                                            id: 'n21-comp-eq',
-                                            role: 'Adjunct',
-                                            subRole: 'equality marker',
-                                            text: { hanzi: '一样', pinyin: 'yī yàng', translation: 'equally / the same' }
-                                        },
-                                        {
-                                            id: 'n21-comp-adj',
-                                            role: 'Adjective',
+                                            id: 'n21-c2-head',
+                                            role: 'Head Verb',
+                                            subRole: 'adjectival',
                                             text: { hanzi: '快', pinyin: 'kuài', translation: 'fast' }
                                         }
                                     ]
@@ -3054,41 +3060,53 @@ export const sampleSentences: SentenceData[] = [
                 {
                     id: 'n36-c',
                     role: 'Comment',
-                    subRole: 'degree complement (consequence)',
                     children: [
                         {
-                            id: 'n36-pred',
-                            role: 'Adjective',
-                            subRole: 'predicate',
-                            text: { hanzi: '高兴', pinyin: 'gāo xìng', translation: 'happy' },
-                        },
-                        {
-                            id: 'n36-de',
-                            role: 'Particle',
-                            subRole: 'degree complement linker',
-                            text: { hanzi: '得', pinyin: 'de', translation: '(links to degree/consequence)' },
-                        },
-                        {
-                            id: 'n36-comp',
-                            role: 'Complement',
-                            subRole: 'degree complement (consequence clause)',
+                            id: 'n36-vp',
+                            role: 'VP',
+                            subRole: 'primitive · degree unit',
                             children: [
                                 {
-                                    id: 'n36-comp-hv',
-                                    role: 'Head Verb',
-                                    text: { hanzi: '跳', pinyin: 'tiào', translation: 'jump' },
+                                    id: 'n36-pkg',
+                                    role: 'Verb Package',
+                                    children: [
+                                        {
+                                            id: 'n36-pred',
+                                            role: 'Head Verb',
+                                            subRole: 'adjectival',
+                                            text: { hanzi: '高兴', pinyin: 'gāo xìng', translation: 'happy' },
+                                        },
+                                        {
+                                            id: 'n36-de',
+                                            role: 'Particle',
+                                            subRole: 'degree hinge',
+                                            text: { hanzi: '得', pinyin: 'de', translation: '(to the point of)' },
+                                        },
+                                    ],
                                 },
                                 {
-                                    id: 'n36-comp-le',
-                                    role: 'Particle',
-                                    subRole: 'completion',
-                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
-                                },
-                                {
-                                    id: 'n36-comp-dir',
-                                    role: 'Complement',
-                                    subRole: 'directional',
-                                    text: { hanzi: '起来', pinyin: 'qǐ lái', translation: 'up' },
+                                    id: 'n36-c2',
+                                    role: 'Comment',
+                                    subRole: 'consequence',
+                                    children: [
+                                        {
+                                            id: 'n36-c2-hv',
+                                            role: 'Head Verb',
+                                            text: { hanzi: '跳', pinyin: 'tiào', translation: 'jump' },
+                                        },
+                                        {
+                                            id: 'n36-c2-le',
+                                            role: 'Particle',
+                                            subRole: 'completion',
+                                            text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
+                                        },
+                                        {
+                                            id: 'n36-c2-dir',
+                                            role: 'Complement',
+                                            subRole: 'directional',
+                                            text: { hanzi: '起来', pinyin: 'qǐ lái', translation: 'up' },
+                                        },
+                                    ],
                                 },
                             ],
                         },
@@ -3116,36 +3134,43 @@ export const sampleSentences: SentenceData[] = [
                 {
                     id: 'n37-c',
                     role: 'Comment',
-                    subRole: 'degree complement (manner)',
                     children: [
                         {
                             id: 'n37-vp',
-                            role: 'Verb Phrase',
+                            role: 'VP',
+                            subRole: 'primitive · degree unit',
                             children: [
                                 {
-                                    id: 'n37-hv',
-                                    role: 'Head Verb',
-                                    text: { hanzi: '跑', pinyin: 'pǎo', translation: 'run' },
-                                },
-                                {
-                                    id: 'n37-de',
-                                    role: 'Particle',
-                                    subRole: 'degree complement linker',
-                                    text: { hanzi: '得', pinyin: 'de', translation: '(links to degree)' },
-                                },
-                                {
-                                    id: 'n37-comp',
-                                    role: 'Complement',
-                                    subRole: 'degree complement (manner)',
+                                    id: 'n37-pkg',
+                                    role: 'Verb Package',
                                     children: [
                                         {
-                                            id: 'n37-comp-adv',
+                                            id: 'n37-hv',
+                                            role: 'Head Verb',
+                                            text: { hanzi: '跑', pinyin: 'pǎo', translation: 'run' },
+                                        },
+                                        {
+                                            id: 'n37-de',
+                                            role: 'Particle',
+                                            subRole: 'degree hinge',
+                                            text: { hanzi: '得', pinyin: 'de', translation: '(how)' },
+                                        },
+                                    ],
+                                },
+                                {
+                                    id: 'n37-c2',
+                                    role: 'Comment',
+                                    subRole: 'degree description',
+                                    children: [
+                                        {
+                                            id: 'n37-c2-adv',
                                             role: 'Adjunct',
                                             text: { hanzi: '非常', pinyin: 'fēi cháng', translation: 'very / extremely' },
                                         },
                                         {
-                                            id: 'n37-comp-adj',
-                                            role: 'Adjective',
+                                            id: 'n37-c2-adj',
+                                            role: 'Head Verb',
+                                            subRole: 'adjectival',
                                             text: { hanzi: '快', pinyin: 'kuài', translation: 'fast' },
                                         },
                                     ],
@@ -3733,52 +3758,64 @@ export const sampleSentences: SentenceData[] = [
                 {
                     id: 'n46-c',
                     role: 'Comment',
-                    subRole: 'degree complement (consequence)',
                     children: [
                         {
-                            id: 'n46-pred',
-                            role: 'Adjective',
-                            subRole: 'predicate',
-                            text: { hanzi: '气', pinyin: 'qì', translation: 'angry / furious' },
-                        },
-                        {
-                            id: 'n46-de',
-                            role: 'Particle',
-                            subRole: 'degree complement linker',
-                            text: { hanzi: '得', pinyin: 'de', translation: '(links to consequence)' },
-                        },
-                        {
-                            id: 'n46-comp',
-                            role: 'Complement',
-                            subRole: 'degree: consequence (itself a negative potential complement)',
+                            id: 'n46-vp',
+                            role: 'VP',
+                            subRole: 'primitive · degree unit',
                             children: [
                                 {
-                                    id: 'n46-comp-hv',
-                                    role: 'Head Verb',
-                                    text: { hanzi: '说', pinyin: 'shuō', translation: 'speak / say' },
+                                    id: 'n46-pkg',
+                                    role: 'Verb Package',
+                                    children: [
+                                        {
+                                            id: 'n46-pred',
+                                            role: 'Head Verb',
+                                            subRole: 'adjectival',
+                                            text: { hanzi: '气', pinyin: 'qì', translation: 'angry / furious' },
+                                        },
+                                        {
+                                            id: 'n46-de',
+                                            role: 'Particle',
+                                            subRole: 'degree hinge',
+                                            text: { hanzi: '得', pinyin: 'de', translation: '(to the point of)' },
+                                        },
+                                    ],
                                 },
                                 {
-                                    id: 'n46-comp-neg',
-                                    role: 'Particle',
-                                    subRole: 'potential negator',
-                                    text: { hanzi: '不', pinyin: 'bù', translation: 'cannot (potential)' },
-                                },
-                                {
-                                    id: 'n46-comp-out',
-                                    role: 'Complement',
-                                    subRole: 'direction morpheme (exit/out)',
-                                    text: { hanzi: '出', pinyin: 'chū', translation: 'out / exit' },
-                                },
-                                {
-                                    id: 'n46-comp-obj',
-                                    role: 'Object',
-                                    text: { hanzi: '话', pinyin: 'huà', translation: 'words / speech' },
-                                },
-                                {
-                                    id: 'n46-comp-lai',
-                                    role: 'Complement',
-                                    subRole: 'orientation: toward speaker (coming out)',
-                                    text: { hanzi: '来', pinyin: 'lái', translation: 'come (complete the exit)' },
+                                    id: 'n46-c2',
+                                    role: 'Comment',
+                                    subRole: 'consequence (negative potential complement)',
+                                    children: [
+                                        {
+                                            id: 'n46-c2-hv',
+                                            role: 'Head Verb',
+                                            text: { hanzi: '说', pinyin: 'shuō', translation: 'speak / say' },
+                                        },
+                                        {
+                                            id: 'n46-c2-neg',
+                                            role: 'Particle',
+                                            subRole: 'potential negator',
+                                            text: { hanzi: '不', pinyin: 'bù', translation: 'cannot (potential)' },
+                                        },
+                                        {
+                                            id: 'n46-c2-out',
+                                            role: 'Complement',
+                                            subRole: 'direction morpheme (exit/out)',
+                                            text: { hanzi: '出', pinyin: 'chū', translation: 'out / exit' },
+                                        },
+                                        {
+                                            id: 'n46-c2-obj',
+                                            role: 'Object',
+                                            text: { hanzi: '话', pinyin: 'huà', translation: 'words / speech' },
+                                        },
+                                        {
+                                            id: 'n46-c2-lai',
+                                            role: 'Complement',
+                                            subRole: 'orientation: toward speaker',
+                                            text: { hanzi: '来', pinyin: 'lái', translation: 'come (complete the exit)' },
+                                        },
+                                    ],
                                 },
                             ],
                         },
@@ -3826,25 +3863,38 @@ export const sampleSentences: SentenceData[] = [
                         },
                         {
                             id: 'n47-vp',
-                            role: 'Verb Phrase',
-                            subRole: 'degree complement (manner)',
+                            role: 'VP',
+                            subRole: 'primitive · degree unit',
                             children: [
                                 {
-                                    id: 'n47-hv',
-                                    role: 'Head Verb',
-                                    text: { hanzi: '打扫', pinyin: 'dǎ sǎo', translation: 'clean / sweep' },
+                                    id: 'n47-pkg',
+                                    role: 'Verb Package',
+                                    children: [
+                                        {
+                                            id: 'n47-hv',
+                                            role: 'Head Verb',
+                                            text: { hanzi: '打扫', pinyin: 'dǎ sǎo', translation: 'clean / sweep' },
+                                        },
+                                        {
+                                            id: 'n47-de',
+                                            role: 'Particle',
+                                            subRole: 'degree hinge',
+                                            text: { hanzi: '得', pinyin: 'de', translation: '(how)' },
+                                        },
+                                    ],
                                 },
                                 {
-                                    id: 'n47-de',
-                                    role: 'Particle',
-                                    subRole: 'degree complement linker',
-                                    text: { hanzi: '得', pinyin: 'de', translation: '(links to degree)' },
-                                },
-                                {
-                                    id: 'n47-comp',
-                                    role: 'Complement',
-                                    subRole: 'degree complement (reduplicated adjective)',
-                                    text: { hanzi: '干干净净', pinyin: 'gān gān jìng jìng', translation: 'spotlessly clean (reduplicated)' },
+                                    id: 'n47-c2',
+                                    role: 'Comment',
+                                    subRole: 'degree description',
+                                    children: [
+                                        {
+                                            id: 'n47-c2-adj',
+                                            role: 'Head Verb',
+                                            subRole: 'adjectival (reduplicated)',
+                                            text: { hanzi: '干干净净', pinyin: 'gān gān jìng jìng', translation: 'spotlessly clean' },
+                                        },
+                                    ],
                                 },
                             ],
                         },
@@ -5374,17 +5424,36 @@ export const sampleSentences: SentenceData[] = [
         explanation: 'This modernizes the classical 逝者如斯夫不舍晝夜. The classical metaphor is preserved but expressed with modern comparative grammar. *Grammatically,* 时间 (\"time\") is the Topic. The Comment uses a **degree complement**: 过得 (verb + 得) introduces a description of *how* time passes. The simile 就像流水一样快 (\"as fast as flowing water\") uses the 像...一样 (\"like...the same\") comparison pattern. The second clause 日夜不停 (\"day and night, not stopping\") mirrors the classical 不舍晝夜.',
         tree: {
             id: 's77-root', role: 'Sentence', children: [
-                { id: 's77-t', role: 'Topic', text: { hanzi: '时间', pinyin: 'shí jiān', translation: 'time' } },
-                { id: 's77-c', role: 'Comment', children: [
-                    { id: 's77-vp', role: 'Verb Phrase', children: [
-                        { id: 's77-guo', role: 'Head Verb', text: { hanzi: '过', pinyin: 'guò', translation: 'pass' } },
-                        { id: 's77-de', role: 'Particle', subRole: 'degree complement marker', text: { hanzi: '得', pinyin: 'de', translation: '(how)' } },
+                { id: 's77-t1', role: 'Topic', text: { hanzi: '时间', pinyin: 'shí jiān', translation: 'time' } },
+                { id: 's77-c1', role: 'Comment', children: [
+                    // VP1: Degree Unit — 过得就像流水一样快
+                    { id: 's77-vp1', role: 'VP', subRole: 'primitive · degree unit', children: [
+                        { id: 's77-vp1-pkg', role: 'Verb Package', children: [
+                            { id: 's77-vp1-hv', role: 'Head Verb', text: { hanzi: '过', pinyin: 'guò', translation: 'pass' } },
+                            { id: 's77-vp1-de', role: 'Particle', subRole: 'degree hinge', text: { hanzi: '得', pinyin: 'de', translation: '(how)' } },
+                        ]},
+                        // C2: the degree description — a full clause
+                        { id: 's77-c2', role: 'Comment', subRole: 'degree description', children: [
+                            { id: 's77-c2-adj', role: 'Adjunct', subRole: 'simile frame', children: [
+                                { id: 's77-c2-adj-jiu', role: 'Adjunct', text: { hanzi: '就', pinyin: 'jiù', translation: 'precisely' } },
+                                { id: 's77-c2-adj-xiang', role: 'Coverb', text: { hanzi: '像', pinyin: 'xiàng', translation: 'like' } },
+                                { id: 's77-c2-adj-obj', role: 'Object', text: { hanzi: '流水', pinyin: 'liú shuǐ', translation: 'flowing water' } },
+                                { id: 's77-c2-adj-yy', role: 'Particle', text: { hanzi: '一样', pinyin: 'yí yàng', translation: 'equally / the same' } },
+                            ]},
+                            { id: 's77-c2-head', role: 'Head Verb', subRole: 'adjectival', text: { hanzi: '快', pinyin: 'kuài', translation: 'fast' } },
+                        ]},
                     ]},
-                    { id: 's77-comp', role: 'Complement', subRole: 'degree (simile)', children: [
-                        { id: 's77-jx', role: 'Adjunct', text: { hanzi: '就像流水一样', pinyin: 'jiù xiàng liú shuǐ yí yàng', translation: 'just like flowing water' } },
-                        { id: 's77-kuai', role: 'Head Verb', subRole: 'adjectival', text: { hanzi: '快', pinyin: 'kuài', translation: 'fast' } },
+                    // VP2: Persistence Unit — 日夜不停
+                    { id: 's77-vp2', role: 'VP', subRole: 'primitive · persistence unit', children: [
+                        { id: 's77-t3', role: 'Topic', isNull: true, impliedText: '时间', refersToId: 's77-t1' },
+                        { id: 's77-c3', role: 'Comment', children: [
+                            { id: 's77-t4', role: 'Topic', subRole: 'scope', text: { hanzi: '日夜', pinyin: 'rì yè', translation: 'day and night' } },
+                            { id: 's77-c4', role: 'Comment', children: [
+                                { id: 's77-c4-neg', role: 'Adjunct', text: { hanzi: '不', pinyin: 'bù', translation: 'not' } },
+                                { id: 's77-c4-hv', role: 'Head Verb', text: { hanzi: '停', pinyin: 'tíng', translation: 'stop' } },
+                            ]},
+                        ]},
                     ]},
-                    { id: 's77-c2', role: 'Adjunct', subRole: 'supplementary clause', text: { hanzi: '日夜不停', pinyin: 'rì yè bù tíng', translation: 'never ceasing day or night' } },
                 ]},
             ]
         }
