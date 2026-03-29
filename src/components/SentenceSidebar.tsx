@@ -1,7 +1,7 @@
 import { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LibraryBig, ChevronDown, Search, X } from 'lucide-react';
-import { SENTENCE_CATEGORIES, CATEGORY_DESCRIPTIONS, CATEGORY_EXPLANATIONS } from '../data/categories';
+import { SENTENCE_CATEGORIES, CATEGORY_DESCRIPTIONS } from '../data/categories';
 import type { SentenceData } from '../types/grammar';
 import { useIsClassical } from '../contexts/AppModeContext';
 
@@ -14,8 +14,6 @@ interface SentenceSidebarProps {
     categories?: readonly string[];
     /** Override the category descriptions (for classical mode). Falls back to CATEGORY_DESCRIPTIONS. */
     categoryDescriptions?: Record<string, string>;
-    /** Override the full category explanations (for classical mode). Falls back to CATEGORY_EXPLANATIONS. */
-    categoryExplanations?: Record<string, string>;
 }
 
 export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
@@ -24,17 +22,14 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
     sentences,
     categories: categoriesProp,
     categoryDescriptions: descriptionsProp,
-    categoryExplanations: explanationsProp,
 }) => {
     const categories = categoriesProp ?? SENTENCE_CATEGORIES;
     const descriptions = descriptionsProp ?? CATEGORY_DESCRIPTIONS;
-    const explanations = explanationsProp ?? CATEGORY_EXPLANATIONS;
     const isClassical = useIsClassical();
 
     const [openGroup, setOpenGroup] = useState<string | null>(null);
     const [searchQuery, setSearchQuery] = useState('');
     const [highlightedId, setHighlightedId] = useState<string | null>(null);
-    const [expandedExplanation, setExpandedExplanation] = useState<string | null>(null);
     const highlightedRef = useRef<HTMLButtonElement | null>(null);
     const groupRefs = useRef<Map<string, HTMLDivElement>>(new Map());
 
@@ -210,33 +205,6 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
                                         <p className="px-4 pt-2 pb-1 text-[10px] text-slate-400 italic leading-relaxed">
                                             {(descriptions as Record<string, string>)[category]}
                                         </p>
-                                        {(explanations as Record<string, string>)[category] && (
-                                            <div className="px-4 pb-1">
-                                                <button
-                                                    onClick={(e) => { e.stopPropagation(); setExpandedExplanation(prev => prev === category ? null : category as string); }}
-                                                    className={`text-[9px] font-medium transition-colors ${isClassical ? 'text-amber-400/70 hover:text-amber-300' : 'text-purple-400/70 hover:text-purple-300'}`}
-                                                >
-                                                    {expandedExplanation === category ? '▾ Hide details' : '▸ Learn more'}
-                                                </button>
-                                                <AnimatePresence initial={false}>
-                                                    {expandedExplanation === category && (
-                                                        <motion.div
-                                                            initial={{ height: 0, opacity: 0 }}
-                                                            animate={{ height: 'auto', opacity: 1 }}
-                                                            exit={{ height: 0, opacity: 0 }}
-                                                            transition={{ duration: 0.2, ease: 'easeInOut' }}
-                                                            className="overflow-hidden"
-                                                        >
-                                                            <div className="pt-1.5 pb-2 text-[10px] text-slate-300/80 leading-relaxed space-y-2">
-                                                                {(explanations as Record<string, string>)[category].split('\n\n').map((para, i) => (
-                                                                    <p key={i} dangerouslySetInnerHTML={{ __html: para.replace(/\*\*([^*]+)\*\*/g, '<strong class="text-slate-200">$1</strong>').replace(/\*([^*]+)\*/g, '<em>$1</em>') }} />
-                                                                ))}
-                                                            </div>
-                                                        </motion.div>
-                                                    )}
-                                                </AnimatePresence>
-                                            </div>
-                                        )}
                                         <div className="p-2 space-y-2">
                                             {sentences.map(sentence => {
                                                 const isSelected = selectedId === sentence.id;
