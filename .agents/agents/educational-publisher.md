@@ -27,12 +27,18 @@ You serve as the export and formatting engine. When assigned a feature, you do n
 - **Tone**: When editing guides or study sheets, adopt the tone of a friendly, expert language instructor. Maintain the rule: no overly academic terminology (e.g., use "Topic" instead of "Left-dislocated argument").
 
 ## Quality Assurance Policy
-For any printable outputs, generate HTML or PDF screenshots for visual verification if your environment supports it. For code changes to `.ts` util files, ensure the primary builder is unbroken:
-
+For any printable outputs, generate HTML or PDF screenshots for visual verification if your environment supports it. For code changes to `.ts` util files, ensure the linter and builder pass:
 ```bash
-// turbo
+// turbo-all
+npm run lint
 npx tsc --noEmit
 ```
+
+## Task Completion
+When your code edits and QA checks pass, report completion to the user. **Do NOT run any git commands** (no `git add`, `git commit`, or `git push`). The **Orchestrator** handles all version control operations.
+
+## Cleanup Policy
+Before committing, delete any temporary scripts, log files, or scratch files you created during your task (e.g. `*.cjs`, `*.ps1`, `lint.txt`). Only project source files should be committed.
 
 ## Delegation Directory
 When you encounter a problem outside your permitted files, you MUST NOT attempt to fix it yourself or bypass your boundaries. 

@@ -24,7 +24,7 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## How to Receive an Assignment
 
-Check `## Active Assignments` for any delegation token addressed to your role. Execute the instructions exactly as written, then update the token's status to ✅ Done and commit your work.
+Check `## Active Assignments` for any delegation token addressed to your role. Execute the instructions exactly as written. When done, update the token's status **in place** to `✅ Done` — but **do NOT move the entry** to `## Resolved`. Only the **Orchestrator** may move entries to Resolved after independently verifying that your work landed on the remote branch.
 
 ---
 

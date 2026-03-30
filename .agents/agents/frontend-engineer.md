@@ -26,11 +26,18 @@ When working on UI tickets, you MUST follow the `/ui-design` workflow.
 - **Graphing**: The core tree visualizer uses `@xyflow/react` and custom Matryoshka-styled nesting logic.
 
 ## Quality Assurance Policy
-Before concluding any UI feature, you must ensure the React build pipeline completes without generic mapping errors.
+Before concluding any UI feature, you must ensure the React build pipeline and linter complete without errors:
 ```bash
-// turbo
+// turbo-all
+npm run lint
 npm run build
 ```
+
+## Task Completion
+When your code edits and QA checks pass, report completion to the user. **Do NOT run any git commands** (no `git add`, `git commit`, or `git push`). The **Orchestrator** handles all version control operations.
+
+## Cleanup Policy
+Before committing, delete any temporary scripts, log files, or scratch files you created during your task (e.g. `*.cjs`, `*.ps1`, `lint.txt`, `inspect_line.ps1`). Only project source files should be committed.
 
 ## Delegation Directory
 When you encounter a problem outside your permitted files, you MUST NOT attempt to fix it yourself or bypass your boundaries. 

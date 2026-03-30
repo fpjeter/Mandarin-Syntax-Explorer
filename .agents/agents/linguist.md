@@ -25,10 +25,17 @@ When adding sentences, you MUST follow the `/add-sentences` workflow. You are re
 ## Quality Assurance Policy
 As the linguist, you cannot permit broken JSON, dangling commas, or empty nodes into the datastore. Prior to concluding any task, you must independently run:
 ```bash
-// turbo
+// turbo-all
 npm run qa
+npm run lint
 ```
-If the QA script reports errors (e.g., "Missing text property", "Duplicate Node ID"), you must parse the console output and fix your data.
+If the QA script reports errors (e.g., "Missing text property", "Duplicate Node ID"), you must parse the console output and fix your data. If `lint` reports errors in your files, fix those too.
+
+## Task Completion
+When your code edits and QA checks pass, report completion to the user. **Do NOT run any git commands** (no `git add`, `git commit`, or `git push`). The **Orchestrator** handles all version control operations.
+
+## Cleanup Policy
+Before committing, delete any temporary scripts, log files, or scratch files you created during your task (e.g. `*.cjs`, `*.ps1`, `lint.txt`). Only project source files should be committed.
 
 ## Delegation Directory
 When you encounter a problem outside your permitted files, you MUST NOT attempt to fix it yourself or bypass your boundaries. 
