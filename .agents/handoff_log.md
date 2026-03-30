@@ -36,7 +36,12 @@ _No pending requests._
 
 ## Active Assignments
 
-_No active assignments._
+### 2026-03-30 Orchestrator → Educational Publisher
+**Status**: 🔴 Active
+**Task**: Fix 3 `no-useless-escape` lint errors in `src/utils/generateStudySheet.ts`
+**Branch**: `chore/agent-integration`
+**Details**: Line 385 contains 3 unnecessary `\"` escape sequences inside a single-quoted string. Replace `\"` with `"`.
+**Validation**: Run `npx eslint src/utils/generateStudySheet.ts` and confirm 0 errors. Then commit and push to `chore/agent-integration`.
 
 ---
 
@@ -49,10 +54,3 @@ _No active assignments._
 **Details**: The CI linter found ~291 instances of `\"` (escaped double quotes) inside single-quoted strings across 10 files in `src/data/sentences/`. The `\"` escape is unnecessary inside single-quoted strings — replace every `\"` with `"` in the `explanation` fields.
 **Affected Files**: `ba_construction.ts`, `correlative_patterns.ts`, `degree_complements.ts`, `double_topic.ts`, `even.ts`, `pivotal_constructions.ts`, `resultative_complements.ts`, `rhetorical_questions.ts`, `serial_verb_constructions.ts`, `sh_de_construction.ts`
 **Validation**: Run `npm run lint` and confirm 0 errors in your files. Then commit and push to `chore/agent-integration`.
-
-### 2026-03-30 Orchestrator → Educational Publisher
-**Status**: ✅ Done
-**Task**: Fix 3 `no-useless-escape` lint errors in `src/utils/generateStudySheet.ts`
-**Branch**: `chore/agent-integration`
-**Details**: Line 385 contains 3 unnecessary `\"` escape sequences inside a single-quoted string. Replace `\"` with `"`.
-**Validation**: Run `npx eslint src/utils/generateStudySheet.ts` and confirm 0 errors. Then commit and push to `chore/agent-integration`.
