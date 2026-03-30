@@ -1,4 +1,5 @@
 import { sampleSentences } from '../src/data/sentences/index.js';
+import type { GrammarNodeData } from '../src/types/grammar.js';
 
 let hasErrors = false;
 
@@ -25,7 +26,7 @@ for (const s of sampleSentences) {
         }
         allSentenceIds.add(s.id);
     }
-    const collectNodeIds = (node: any) => {
+    const collectNodeIds = (node: GrammarNodeData) => {
         if (node.id) {
             if (allNodeIds.has(node.id)) {
                 logError(s.id || 'UNKNOWN', node.id, 'Duplicate Node ID found across the dataset');
@@ -40,7 +41,7 @@ for (const s of sampleSentences) {
 }
 
 // 2. Second pass to validate thoroughly
-function validateNode(node: any, sentenceId: string) {
+function validateNode(node: GrammarNodeData, sentenceId: string) {
     if (!node.id) {
         logError(sentenceId, 'UNKNOWN', 'Node is missing an ID');
     }
