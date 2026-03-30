@@ -222,7 +222,7 @@ export const serialVerbConstructions: SentenceData[] = [
         chinese: '学了以后要经常练习，这样才会有收获。',
         pinyin: 'Xué le yǐ hòu yào jīng cháng liàn xí, zhè yàng cái huì yǒu shōu huò.',
         translation: 'After studying, you should practice regularly; only then will you gain something.',
-        explanation: 'This is the modern Mandarin way of expressing the classical 學而時習之. Instead of the terse classical connective 而, modern Chinese uses **以后** ("after") to sequence the two actions "study" and "practice." The second clause uses the **才** pattern: only *then* will the result follow. *Grammatically,* the sentence chains two verb phrases under one implied subject (you): first 学了以后 ("after studying"), then 要经常练习 ("should regularly practice"). The second clause introduces a new frame with 这样 (\"this way\"), followed by 才会 (\"only then will\") and the result 有收获 (\"have gains\").',
+        explanation: 'This is the modern Mandarin way of expressing the classical 學而時習之. Instead of the terse classical connective 而, modern Chinese uses **以后** ("after") to sequence the two actions "study" and "practice." The second clause uses the **才** pattern: only *then* will the result follow. *Grammatically,* the sentence chains two verb phrases under one implied subject (you): first 学了以后 ("after studying"), then 要经常练习 ("should regularly practice"). The second clause introduces a new frame with 这样 ("this way"), followed by 才会 ("only then will") and the result 有收获 ("have gains").',
         tree: {
             id: 's68-root', role: 'Sentence', children: [
                 { id: 's68-c1', role: 'Topic', subRole: 'clause 1', children: [

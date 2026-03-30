@@ -310,7 +310,7 @@ export const shDeConstruction: SentenceData[] = [
         chinese: '老师是用来传授知识和解答疑惑的。',
         pinyin: 'Lǎo shī shì yòng lái chuán shòu zhī shi hé jiě dá yí huò de.',
         translation: 'A teacher is someone used to transmit knowledge and resolve doubts.',
-        explanation: 'This modernizes the classical 師者所以傳道授業解惑也. Modern Mandarin uses the **是...的** construction to define the purpose of a teacher. *Grammatically,* 老师 (\"teacher\") is the Topic. The Comment uses 是 (\"is\") + a purpose phrase 用来 (\"used for\") + two verb-object pairs connected by 和 (\"and\"): 传授知识 (\"transmit knowledge\") and 解答疑惑 (\"resolve doubts\"). The 的 at the end turns the whole phrase into a noun.',
+        explanation: 'This modernizes the classical 師者所以傳道授業解惑也. Modern Mandarin uses the **是...的** construction to define the purpose of a teacher. *Grammatically,* 老师 ("teacher") is the Topic. The Comment uses 是 ("is") + a purpose phrase 用来 ("used for") + two verb-object pairs connected by 和 ("and"): 传授知识 ("transmit knowledge") and 解答疑惑 ("resolve doubts"). The 的 at the end turns the whole phrase into a noun.',
         tree: {
             id: 's79-root', role: 'Sentence', children: [
                 { id: 's79-t', role: 'Topic', text: { hanzi: '老师', pinyin: 'lǎo shī', translation: 'teacher' } },

@@ -336,7 +336,7 @@ export const resultativeComplements: SentenceData[] = [
         chinese: '不要因为好事太小就不去做。',
         pinyin: 'Bú yào yīn wèi hǎo shì tài xiǎo jiù bú qù zuò.',
         translation: 'Do not refrain from doing good just because it is small.',
-        explanation: 'This modernizes the classical 勿以善小而不為. The classical 以 (\"because of\") becomes 因为, the concessive 而 becomes 就, and the prohibitive 勿 becomes 不要. *Grammatically,* 不要 opens the prohibition. 因为好事太小 (\"because the good deed is too small\") gives the rejected reason, using the stative predicate 太小 (\"too small\"). 就 (\"then/so\") introduces the consequence being negated: 不去做 (\"not go and do it\"). The serial verb 去做 (\"go do\") adds purposive flavor to the action.',
+        explanation: 'This modernizes the classical 勿以善小而不為. The classical 以 ("because of") becomes 因为, the concessive 而 becomes 就, and the prohibitive 勿 becomes 不要. *Grammatically,* 不要 opens the prohibition. 因为好事太小 ("because the good deed is too small") gives the rejected reason, using the stative predicate 太小 ("too small"). 就 ("then/so") introduces the consequence being negated: 不去做 ("not go and do it"). The serial verb 去做 ("go do") adds purposive flavor to the action.',
         tree: {
             id: 's91-root', role: 'Sentence', children: [
                 { id: 's91-by', role: 'Adjunct', subRole: 'prohibition', text: { hanzi: '不要', pinyin: 'bú yào', translation: 'do not' } },

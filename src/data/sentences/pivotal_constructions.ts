@@ -68,7 +68,7 @@ export const pivotalConstructions: SentenceData[] = [
         chinese: '妈妈叫我去买牛奶。',
         pinyin: 'Māma jiào wǒ qù mǎi niú nǎi.',
         translation: 'Mom told me to go buy milk.',
-        explanation: '**妈妈** ("Mom") is the Topic. The verb **叫** ("call/tell") creates a pivotal structure: **我** ("me") serves as both the object of 叫 *and* the subject of what follows. After the pivot, there is a **serial verb construction**: **去买**: go in order to buy. Two advanced patterns stack together here, which is completely natural in everyday speech. This sentence shows why pivotal constructions matter: English hides the double-function behind \"told me to\"; Mandarin makes it visible by placing 我 at the hinge point between two verb phrases.',
+        explanation: '**妈妈** ("Mom") is the Topic. The verb **叫** ("call/tell") creates a pivotal structure: **我** ("me") serves as both the object of 叫 *and* the subject of what follows. After the pivot, there is a **serial verb construction**: **去买**: go in order to buy. Two advanced patterns stack together here, which is completely natural in everyday speech. This sentence shows why pivotal constructions matter: English hides the double-function behind "told me to"; Mandarin makes it visible by placing 我 at the hinge point between two verb phrases.',
         tree: {
             id: 'n33',
             role: 'Sentence',
@@ -266,7 +266,7 @@ export const pivotalConstructions: SentenceData[] = [
         chinese: '困难让人成长，安逸让人退步。',
         pinyin: 'Kùn nan ràng rén chéng zhǎng, ān yì ràng rén tuì bù.',
         translation: 'Hardship makes people grow; comfort makes people regress.',
-        explanation: 'This modernizes the classical 生於憂患死於安樂. The abstract classical 於 (\"from/in\") construction becomes a concrete **pivotal construction** with 让 (\"make/let\"). *Grammatically,* each clause follows the pivotal pattern: Topic (困难/安逸) + 让 (\"makes\") + pivot (人, \"people\") + result verb. The person 人 is simultaneously the object of 让 and the subject of the following verb (成长/退步). This double role is the defining feature of pivotal constructions.',
+        explanation: 'This modernizes the classical 生於憂患死於安樂. The abstract classical 於 ("from/in") construction becomes a concrete **pivotal construction** with 让 ("make/let"). *Grammatically,* each clause follows the pivotal pattern: Topic (困难/安逸) + 让 ("makes") + pivot (人, "people") + result verb. The person 人 is simultaneously the object of 让 and the subject of the following verb (成长/退步). This double role is the defining feature of pivotal constructions.',
         tree: {
             id: 's89-root', role: 'Sentence', children: [
                 { id: 's89-c1', role: 'Topic', subRole: 'first pivotal', children: [

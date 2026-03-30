@@ -108,7 +108,7 @@ export const aspectMarkers: SentenceData[] = [
         chinese: '我每天都会反省自己三次。',
         pinyin: 'Wǒ měi tiān dōu huì fǎn xǐng zì jǐ sān cì.',
         translation: 'Every day I reflect on myself three times.',
-        explanation: 'This modernizes the classical 吾日三省吾身. Modern Mandarin makes the frequency explicit with 每天 (\"every day\") and the habitual marker 都会 (\"always will\"), while classical Chinese compressed it into 日 (\"daily\"). *Grammatically,* 我 is the Topic. The Comment uses 每天 ("time adverb") + 都会 (habitual marker, \"always will\") + 反省 (\"reflect on\") + 自己 (\"oneself\") + 三次 (\"three times,\" a verb complement showing frequency). The classical 吾身 (\"my person\") becomes reflexive 自己.',
+        explanation: 'This modernizes the classical 吾日三省吾身. Modern Mandarin makes the frequency explicit with 每天 ("every day") and the habitual marker 都会 ("always will"), while classical Chinese compressed it into 日 ("daily"). *Grammatically,* 我 is the Topic. The Comment uses 每天 ("time adverb") + 都会 (habitual marker, "always will") + 反省 ("reflect on") + 自己 ("oneself") + 三次 ("three times," a verb complement showing frequency). The classical 吾身 ("my person") becomes reflexive 自己.',
         tree: {
             id: 's75-root', role: 'Sentence', children: [
                 { id: 's75-t', role: 'Topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
@@ -128,7 +128,7 @@ export const aspectMarkers: SentenceData[] = [
         chinese: '从来没有过这样的事。',
         pinyin: 'Cóng lái méi yǒu guò zhè yàng de shì.',
         translation: 'There has never been such a thing.',
-        explanation: 'This modernizes the classical 未之有也. The classical object-fronting pattern (之 before the verb 有) becomes standard modern word order. *Grammatically,* 从来 (\"ever/always\") + 没有 (\"have not\") + 过 ("experiential aspect marker") together express \"have never experienced.\" The 过 marks that this negation covers all past experience, not just a single event. The object 这样的事 (\"this kind of thing\") uses 的 to turn the description into a noun phrase.',
+        explanation: 'This modernizes the classical 未之有也. The classical object-fronting pattern (之 before the verb 有) becomes standard modern word order. *Grammatically,* 从来 ("ever/always") + 没有 ("have not") + 过 ("experiential aspect marker") together express "have never experienced." The 过 marks that this negation covers all past experience, not just a single event. The object 这样的事 ("this kind of thing") uses 的 to turn the description into a noun phrase.',
         tree: {
             id: 's81-root', role: 'Sentence', children: [
                 { id: 's81-adv', role: 'Adjunct', subRole: 'time scope', text: { hanzi: '从来', pinyin: 'cóng lái', translation: 'ever/never' } },

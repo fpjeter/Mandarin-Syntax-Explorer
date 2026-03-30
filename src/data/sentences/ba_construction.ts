@@ -396,7 +396,7 @@ export const baConstruction: SentenceData[] = [
         chinese: '不要把自己不想要的东西强加给别人。',
         pinyin: 'Bú yào bǎ zì jǐ bù xiǎng yào de dōng xi qiáng jiā gěi bié rén.',
         translation: 'Do not force upon others what you yourself do not want.',
-        explanation: 'This modernizes the classical 己所不欲勿施於人. Modern Mandarin uses the **把** construction to front the object before the verb, just as classical Chinese used fronted objects but with different mechanisms. *Grammatically,* 不要 (\"do not\") opens the prohibition. 把 then fronts the complex object: 自己不想要的东西 (\"things you yourself don\'t want\"). The verb phrase 强加给别人 (\"force upon others\") completes the action. The classical 勿 becomes 不要, 所不欲 becomes 不想要的东西, and 施於人 becomes 强加给别人.',
+        explanation: 'This modernizes the classical 己所不欲勿施於人. Modern Mandarin uses the **把** construction to front the object before the verb, just as classical Chinese used fronted objects but with different mechanisms. *Grammatically,* 不要 ("do not") opens the prohibition. 把 then fronts the complex object: 自己不想要的东西 ("things you yourself don\'t want"). The verb phrase 强加给别人 ("force upon others") completes the action. The classical 勿 becomes 不要, 所不欲 becomes 不想要的东西, and 施於人 becomes 强加给别人.',
         tree: {
             id: 's74-root', role: 'Sentence', children: [
                 { id: 's74-neg', role: 'Adjunct', subRole: 'prohibition', text: { hanzi: '不要', pinyin: 'bú yào', translation: 'do not' } },
@@ -421,7 +421,7 @@ export const baConstruction: SentenceData[] = [
         chinese: '要用善良把怨恨化解掉。',
         pinyin: 'Yào yòng shàn liáng bǎ yuàn hèn huà jiě diào.',
         translation: 'One should use kindness to resolve resentment.',
-        explanation: 'This modernizes the classical 以德報怨. The classical instrumental coverb 以 (\"with/using\") becomes 用 (\"use\"), while the disposal construction uses 把 to highlight the affected object. *Grammatically,* 要 (\"should\") sets the advisory tone. 用善良 (\"using kindness\") is an instrumental adjunct. 把怨恨 fronts the object (resentment) before the verb. 化解掉 uses a resultative complement: 化解 (\"dissolve/resolve\") + 掉 (\"away, gone\"), indicating complete removal.',
+        explanation: 'This modernizes the classical 以德報怨. The classical instrumental coverb 以 ("with/using") becomes 用 ("use"), while the disposal construction uses 把 to highlight the affected object. *Grammatically,* 要 ("should") sets the advisory tone. 用善良 ("using kindness") is an instrumental adjunct. 把怨恨 fronts the object (resentment) before the verb. 化解掉 uses a resultative complement: 化解 ("dissolve/resolve") + 掉 ("away, gone"), indicating complete removal.',
         tree: {
             id: 's88-root', role: 'Sentence', children: [
                 { id: 's88-yao', role: 'Adjunct', text: { hanzi: '要', pinyin: 'yào', translation: 'should' } },

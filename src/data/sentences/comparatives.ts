@@ -278,7 +278,7 @@ export const comparatives: SentenceData[] = [
         chinese: '知道的人比不上喜欢的人，喜欢的人比不上乐在其中的人。',
         pinyin: 'Zhī dào de rén bǐ bù shàng xǐ huān de rén, xǐ huān de rén bǐ bù shàng lè zài qí zhōng de rén.',
         translation: 'Those who merely know cannot compare to those who love it; those who love it cannot compare to those who delight in it.',
-        explanation: 'This modernizes the classical 知之者不如好之者. The classical 者 particle becomes **的人** (\"the person who...\"), and the classical comparative 不如 becomes the modern equivalent **比不上** (\"cannot compare to\"). *Grammatically,* this sentence uses the **比** comparative construction twice in parallel. Each clause follows the pattern: [subject 的人] + 比不上 + [reference 的人]. The 的 particle turns verb phrases into noun phrases, functioning exactly like the classical 者.',
+        explanation: 'This modernizes the classical 知之者不如好之者. The classical 者 particle becomes **的人** ("the person who..."), and the classical comparative 不如 becomes the modern equivalent **比不上** ("cannot compare to"). *Grammatically,* this sentence uses the **比** comparative construction twice in parallel. Each clause follows the pattern: [subject 的人] + 比不上 + [reference 的人]. The 的 particle turns verb phrases into noun phrases, functioning exactly like the classical 者.',
         tree: {
             id: 's69-root', role: 'Sentence', children: [
                 { id: 's69-c1', role: 'Topic', subRole: 'first comparison', children: [
@@ -312,7 +312,7 @@ export const comparatives: SentenceData[] = [
         chinese: '好的时机不如好的地形，好的地形不如人心齐。',
         pinyin: 'Hǎo de shí jī bù rú hǎo de dì xíng, hǎo de dì xíng bù rú rén xīn qí.',
         translation: 'Favorable timing is not as good as advantageous terrain; advantageous terrain is not as good as unity among people.',
-        explanation: 'This modernizes the classical 天時不如地利地利不如人和. The classical four-character parallelism is preserved in modern form using **不如** (\"not as good as\"), which is one of the few classical comparative structures that survives directly into modern Mandarin. *Grammatically,* each clause follows the pattern: Topic + 不如 + Object. The 的 particle is added to make attributive phrases (好的时机, \"good timing\") where classical Chinese needed no marker. The final comparison uses 人心齐 (\"people\'s hearts aligned\") to modernize 人和.',
+        explanation: 'This modernizes the classical 天時不如地利地利不如人和. The classical four-character parallelism is preserved in modern form using **不如** ("not as good as"), which is one of the few classical comparative structures that survives directly into modern Mandarin. *Grammatically,* each clause follows the pattern: Topic + 不如 + Object. The 的 particle is added to make attributive phrases (好的时机, "good timing") where classical Chinese needed no marker. The final comparison uses 人心齐 ("people\'s hearts aligned") to modernize 人和.',
         tree: {
             id: 's87-root', role: 'Sentence', children: [
                 { id: 's87-c1', role: 'Topic', subRole: 'first comparison', children: [

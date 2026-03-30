@@ -141,7 +141,7 @@ export const conditionalSentences: SentenceData[] = [
         chinese: '如果一个道理能用语言说清楚，那它就不是永恒的道理。',
         pinyin: 'Rú guǒ yí gè dào lǐ néng yòng yǔ yán shuō qīng chǔ, nà tā jiù bú shì yǒng héng de dào lǐ.',
         translation: 'If a truth can be expressed clearly in words, then it is not an eternal truth.',
-        explanation: 'This modernizes the classical 道可道，非常道. The terse classical parallelism becomes a full conditional sentence with 如果...那...就... *Grammatically,* the first clause uses **如果** to introduce the condition: \"if a truth can be spoken clearly.\" The 能 (\"can\") + 用语言 (\"using language\") + 说清楚 (\"speak clearly\") spells out what classical Chinese compressed into 可道 (\"can be spoken\"). The second clause uses **那它就不是** (\"then it is not\") as the consequence.',
+        explanation: 'This modernizes the classical 道可道，非常道. The terse classical parallelism becomes a full conditional sentence with 如果...那...就... *Grammatically,* the first clause uses **如果** to introduce the condition: "if a truth can be spoken clearly." The 能 ("can") + 用语言 ("using language") + 说清楚 ("speak clearly") spells out what classical Chinese compressed into 可道 ("can be spoken"). The second clause uses **那它就不是** ("then it is not") as the consequence.',
         tree: {
             id: 's71-root', role: 'Sentence', children: [
                 { id: 's71-cond', role: 'Topic', subRole: 'conditional (如果)', children: [
@@ -170,7 +170,7 @@ export const conditionalSentences: SentenceData[] = [
         chinese: '如果你经常复习学过的东西，就能发现新的道理。',
         pinyin: 'Rú guǒ nǐ jīng cháng fù xí xué guò de dōng xi, jiù néng fā xiàn xīn de dào lǐ.',
         translation: 'If you regularly review what you have learned, you can discover new insights.',
-        explanation: 'This modernizes the classical 溫故而知新. The classical sentence packs two sequential actions into four characters; modern Mandarin unpacks them into a conditional frame with 如果...就... *Grammatically,* the condition clause uses 经常 (\"regularly\") + 复习 (\"review\") + a descriptive noun phrase (学过的东西, \"things you have studied\"). The consequence clause uses 就能 (\"then can\") + 发现 (\"discover\") + 新的道理 (\"new insights\"). The aspect marker 过 marks past experience.',
+        explanation: 'This modernizes the classical 溫故而知新. The classical sentence packs two sequential actions into four characters; modern Mandarin unpacks them into a conditional frame with 如果...就... *Grammatically,* the condition clause uses 经常 ("regularly") + 复习 ("review") + a descriptive noun phrase (学过的东西, "things you have studied"). The consequence clause uses 就能 ("then can") + 发现 ("discover") + 新的道理 ("new insights"). The aspect marker 过 marks past experience.',
         tree: {
             id: 's73-root', role: 'Sentence', children: [
                 { id: 's73-cond', role: 'Topic', subRole: 'conditional (如果)', children: [
@@ -200,7 +200,7 @@ export const conditionalSentences: SentenceData[] = [
         chinese: '如果早上能明白人生的道理，晚上死了也值得。',
         pinyin: 'Rú guǒ zǎo shang néng míng bai rén shēng de dào lǐ, wǎn shang sǐ le yě zhí de.',
         translation: 'If in the morning you grasp the truths of life, dying that evening would still be worthwhile.',
-        explanation: 'This modernizes the classical 朝聞道夕死可矣. The stark four-character classical rhythm is expanded into a 如果...也值得 conditional. *Grammatically,* the condition clause uses 如果 + time (早上) + 能明白 (\"can understand\") + 人生的道理 (\"the truths of life\"). The result clause uses 晚上 ("time") + 死了 (die + completion marker) + 也值得 (\"would also be worthwhile\"). The concessive 也 (\"even so, still\") softens what would otherwise be a blunt assertion.',
+        explanation: 'This modernizes the classical 朝聞道夕死可矣. The stark four-character classical rhythm is expanded into a 如果...也值得 conditional. *Grammatically,* the condition clause uses 如果 + time (早上) + 能明白 ("can understand") + 人生的道理 ("the truths of life"). The result clause uses 晚上 ("time") + 死了 (die + completion marker) + 也值得 ("would also be worthwhile"). The concessive 也 ("even so, still") softens what would otherwise be a blunt assertion.',
         tree: {
             id: 's82-root', role: 'Sentence', children: [
                 { id: 's82-cond', role: 'Topic', subRole: 'conditional', children: [
@@ -228,7 +228,7 @@ export const conditionalSentences: SentenceData[] = [
         chinese: '了解敌人又了解自己，打一百场仗也不会有危险。',
         pinyin: 'Liǎo jiě dí rén yòu liǎo jiě zì jǐ, dǎ yì bǎi chǎng zhàng yě bú huì yǒu wéi xiǎn.',
         translation: 'If you understand the enemy and understand yourself, a hundred battles will bring no peril.',
-        explanation: 'This modernizes the classical 知彼知己百戰不殆. The classical four-character parallel (知彼知己) becomes a pair of modern verb phrases linked by 又 (\"and also\"). *Grammatically,* the Topic frames the condition with two parallel verb phrases: 了解敌人 (\"understand the enemy\") + 又 + 了解自己 (\"understand yourself\"). The Comment gives the result: 打一百场仗 (\"fight a hundred battles\") + 也不会有 (\"also will not have\") + 危险 (\"danger\"). The pattern 也不会 (\"still won\'t\") expresses certainty about the outcome.',
+        explanation: 'This modernizes the classical 知彼知己百戰不殆. The classical four-character parallel (知彼知己) becomes a pair of modern verb phrases linked by 又 ("and also"). *Grammatically,* the Topic frames the condition with two parallel verb phrases: 了解敌人 ("understand the enemy") + 又 + 了解自己 ("understand yourself"). The Comment gives the result: 打一百场仗 ("fight a hundred battles") + 也不会有 ("also will not have") + 危险 ("danger"). The pattern 也不会 ("still won\'t") expresses certainty about the outcome.',
         tree: {
             id: 's83-root', role: 'Sentence', children: [
                 { id: 's83-cond', role: 'Topic', subRole: 'conditional premise', children: [

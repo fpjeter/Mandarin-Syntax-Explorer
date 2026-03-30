@@ -132,7 +132,7 @@ export const correlativePatterns: SentenceData[] = [
         chinese: '只学习不思考，越学越糊涂；只思考不学习，越想越危险。',
         pinyin: 'Zhǐ xué xí bù sī kǎo, yuè xué yuè hú tu; zhǐ sī kǎo bù xué xí, yuè xiǎng yuè wéi xiǎn.',
         translation: 'If you only study without thinking, the more you study the more confused you get; if you only think without studying, the more you think the more perilous it becomes.',
-        explanation: 'This modernizes the classical 學而不思則罔思而不學則殆. The classical conditional pattern 則 (\"then\") becomes the modern correlative **越...越...** (\"the more X, the more Y\"). *Grammatically,* each half follows the same pattern: 只A不B (\"only A, not B\") sets up the flawed approach, then 越A越B gives the escalating consequence. The 越...越 pattern shows that two changes happen together: as one increases, so does the other.',
+        explanation: 'This modernizes the classical 學而不思則罔思而不學則殆. The classical conditional pattern 則 ("then") becomes the modern correlative **越...越...** ("the more X, the more Y"). *Grammatically,* each half follows the same pattern: 只A不B ("only A, not B") sets up the flawed approach, then 越A越B gives the escalating consequence. The 越...越 pattern shows that two changes happen together: as one increases, so does the other.',
         tree: {
             id: 's84-root', role: 'Sentence', children: [
                 { id: 's84-c1', role: 'Topic', subRole: 'first correlative', children: [

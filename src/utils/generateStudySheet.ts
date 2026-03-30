@@ -382,7 +382,7 @@ export function generatePrintSheet(sentence: SentenceData, isClassical: boolean)
     const explanationHtml = sentence.explanation
         ? sentence.explanation
             .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-            .replace(/\(\"([^\"]+)\"\)/g, '<span class="literal-trans">("$1")</span>')
+            .replace(/\("([^"]+)"\)/g, '<span class="literal-trans">("$1")</span>')
             .replace(/\n/g, '<br>')
         : '';
 

@@ -314,7 +314,7 @@ export const beiPassive: SentenceData[] = [
         chinese: '青色是从蓝草里提取出来的，但是比蓝草还要蓝。',
         pinyin: 'Qīng sè shì cóng lán cǎo lǐ tí qǔ chū lái de, dàn shì bǐ lán cǎo hái yào lán.',
         translation: 'Blue dye is extracted from the indigo plant, yet it is even bluer than indigo.',
-        explanation: 'This modernizes the classical 青取之於藍而青於藍. Modern Mandarin uses 是...的 plus a directional complement to express the extraction, and 比...还要 for the comparison. *Grammatically,* 青色 (\"blue color\") is the Topic. The first Comment uses 是从...里提取出来的 (\"is extracted from...\"), where 提取出来 uses a directional complement (出来, \"out\"). The second clause uses the comparative 比...还要 (\"even more than\") + 蓝 (\"blue\").',
+        explanation: 'This modernizes the classical 青取之於藍而青於藍. Modern Mandarin uses 是...的 plus a directional complement to express the extraction, and 比...还要 for the comparison. *Grammatically,* 青色 ("blue color") is the Topic. The first Comment uses 是从...里提取出来的 ("is extracted from..."), where 提取出来 uses a directional complement (出来, "out"). The second clause uses the comparative 比...还要 ("even more than") + 蓝 ("blue").',
         tree: {
             id: 's80-root', role: 'Sentence', children: [
                 { id: 's80-t', role: 'Topic', text: { hanzi: '青色', pinyin: 'qīng sè', translation: 'blue dye' } },
