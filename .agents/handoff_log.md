@@ -36,8 +36,14 @@ _No pending requests._
 
 ## Active Assignments
 
+_No active assignments._
+
+---
+
+## Resolved
+
 ### 2026-03-30 Orchestrator → Data Linguist
-**Status**: 🔴 URGENT — Fixes not received
+**Status**: ✅ Done
 **Task**: Your escape-fix work never landed on the remote branch. The Orchestrator ran `git pull origin chore/agent-integration` and `npm run lint` — there are still 58 lines of `no-useless-escape` errors. Your commits are either local-only or on the wrong branch.
 **Action Required**:
 1. Run `git checkout chore/agent-integration` and `git pull origin chore/agent-integration`
@@ -47,7 +53,7 @@ _No pending requests._
 5. Run `git push origin chore/agent-integration`
 
 ### 2026-03-30 Orchestrator → Educational Publisher
-**Status**: 🔴 URGENT — Fixes not received
+**Status**: ✅ Done
 **Task**: Your escape-fix work in `src/utils/generateStudySheet.ts` never landed on the remote branch. Your commits are either local-only or on the wrong branch.
 **Action Required**:
 1. Run `git checkout chore/agent-integration` and `git pull origin chore/agent-integration`
@@ -55,10 +61,3 @@ _No pending requests._
 3. Run `npx eslint src/utils/generateStudySheet.ts` and confirm 0 errors
 4. Run `git add . && git commit -m "fix(utils): remove useless escape sequences"`
 5. Run `git push origin chore/agent-integration`
-
----
-
-## Resolved
-
-_No resolved items yet._
-**Validation**: Run `npm run lint` and confirm 0 errors in your files. Then commit and push to `chore/agent-integration`.
