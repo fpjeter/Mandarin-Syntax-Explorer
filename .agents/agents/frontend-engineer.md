@@ -26,8 +26,22 @@ When working on UI tickets, you MUST follow the `/ui-design` workflow.
 - **Graphing**: The core tree visualizer uses `@xyflow/react` and custom Matryoshka-styled nesting logic.
 
 ## Quality Assurance Policy
-Before concluding any UI feature, you must ensure the React build pipeline completes without generic mapping errors.
+Before concluding any UI feature, you must ensure the React build pipeline and linter complete without errors:
 ```bash
-// turbo
+// turbo-all
+npm run lint
 npm run build
 ```
+
+## Task Completion
+When your code edits and QA checks pass, report completion to the user. **Do NOT run any git commands** (no `git add`, `git commit`, or `git push`). The **Orchestrator** handles all version control operations.
+
+## Cleanup Policy
+Before committing, delete any temporary scripts, log files, or scratch files you created during your task (e.g. `*.cjs`, `*.ps1`, `lint.txt`, `inspect_line.ps1`). Only project source files should be committed.
+
+## Delegation Directory
+When you encounter a problem outside your permitted files, you MUST NOT attempt to fix it yourself or bypass your boundaries. 
+
+Instead, append a **Handoff Request** to `.agents/handoff_log.md` using the template defined in that file. Describe exactly what dependency you are missing. Then instruct the user to relay it to the **Orchestrator**. The Orchestrator will review the log, handle any global architecture changes, and dispatch the correct specialist to unblock your workflow.
+
+**Before starting any task**, also check `.agents/handoff_log.md` under `## Active Assignments` for any delegation tokens addressed to your role.

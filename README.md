@@ -82,6 +82,7 @@ Key differences from formal linguistic models:
 | **Adjunct** (状语) is a first-class tree role for pre-verbal modifiers | Adverbials are specifiers of functional projections or VP-adjuncts |
 | **Complement** is a single role with subtype badges (结果补语, 趋向补语, etc.) | Different complement types occupy distinct structural positions |
 | **Verb Morpheme / Object Morpheme** explicitly decompose separable verbs (离合词) | Separable verbs are either lexical units or undergo syntactic movement |
+| **Degree Complements** establish 得 as an active structural hierarchy node; **Potential Complements** map 得/不 as internal leaf particles | 得/不 are typically analyzed as functional heads (Deg0 / Mod0) uniformly across both constructions |
 | **Pivot** (兼语) is a labeled role for nouns serving two functions simultaneously | Handled through Exceptional Case Marking (ECM) or control structures |
 | Dropped pronouns are **visible ghost nodes** with coreference links (`isDropped`, `refersToId`) | Null pronouns are abstract empty categories (pro / PRO) |
 

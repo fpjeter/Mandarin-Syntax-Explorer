@@ -7,7 +7,7 @@ export const separableVerbs: SentenceData[] = [
         chinese: '我们见过好几次面了。',
         pinyin: 'Wǒ men jiàn guo hǎo jǐ cì miàn le.',
         translation: 'We have met quite a few times already.',
-        explanation: '**我们** (we) is the Topic. The Comment shows one of Mandarin\'s most surprising quirks: **见面** (meet) is a two-part word that can be split apart so other words insert between the halves. 见 means "see" and 面 means "face." In this sentence, the aspect marker 过 (done before) and the frequency count 好几次 (quite a few times) are inserted directly between 见 and 面. Think of it like inserting words into the middle of a single English word. These are called **separable verbs** (离合词), and they\'re common in everyday Mandarin.',
+        explanation: '**我们** ("we") is the Topic. The Comment shows one of Mandarin\'s most surprising quirks: **见面** (meet) is a two-part word that can be split apart so other words insert between the halves. 见 means "see" and 面 means "face." In this sentence, the aspect marker 过 (done before) and the frequency count 好几次 (quite a few times) are inserted directly between 见 and 面. Think of it like inserting words into the middle of a single English word. These are called **separable verbs** (离合词), and they\'re common in everyday Mandarin.',
         tree: {
             id: 'n12',
             role: 'Sentence',
@@ -82,7 +82,7 @@ export const separableVerbs: SentenceData[] = [
         chinese: '她早上散了一个小时的步。',
         pinyin: 'Tā zǎo shàng sàn le yī gè xiǎo shí de bù.',
         translation: 'She took a one-hour walk this morning.',
-        explanation: '**散步** (walk/stroll) is another separable verb: 散 (scatter, disperse → take a stroll) and 步 (step/pace). Here, **了一个小时的** (one hour of) is inserted directly between the two halves. In English you would just say "walked for an hour": one verb, duration at the end. Mandarin must insert the duration *inside* the verb because 步 acts as an internal object. The 的 before 步 is a special linker that glues the duration phrase to the noun morpheme. This insertion pattern (verb + aspect/duration + 的 + object morpheme) is the standard template for separable verbs with time complements.',
+        explanation: '**散步** ("walk/stroll") is another separable verb: 散 (scatter, disperse → take a stroll) and 步 ("step/pace"). Here, **了一个小时的** ("one hour of") is inserted directly between the two halves. In English you would just say "walked for an hour": one verb, duration at the end. Mandarin must insert the duration *inside* the verb because 步 acts as an internal object. The 的 before 步 is a special linker that glues the duration phrase to the noun morpheme. This insertion pattern (verb + aspect/duration + 的 + object morpheme) is the standard template for separable verbs with time complements.',
         tree: {
             id: 'n24',
             role: 'Sentence',
@@ -166,7 +166,7 @@ export const separableVerbs: SentenceData[] = [
         chinese: '他们分了手。',
         pinyin: 'Tā men fēn le shǒu.',
         translation: 'They broke up.',
-        explanation: '**他们** (they) is the Topic. **分手** (break up) is a separable verb: **分** (split) is the verb morpheme and **手** (hand) is the object morpheme. When you insert the completion particle **了** between them, the compound splits: 分**了**手. This is the simplest split: just 了 slotting in. The separable verb frame works exactly the same way as in 见面, 散步, and 睡觉; any particle, duration phrase, or frequency word goes between the verb half and the object half. Both 分了手 (split) and 分手了 (unsplit) are natural. The split form emphasizes the completion of the breakup; the unsplit form is more neutral.',
+        explanation: '**他们** ("they") is the Topic. **分手** ("break up") is a separable verb: **分** ("split") is the verb morpheme and **手** ("hand") is the object morpheme. When you insert the completion particle **了** between them, the compound splits: 分**了**手. This is the simplest split: just 了 slotting in. The separable verb frame works exactly the same way as in 见面, 散步, and 睡觉; any particle, duration phrase, or frequency word goes between the verb half and the object half. Both 分了手 ("split") and 分手了 ("unsplit") are natural. The split form emphasizes the completion of the breakup; the unsplit form is more neutral.',
         tree: {
             id: 'n54',
             role: 'Sentence',
@@ -214,7 +214,7 @@ export const separableVerbs: SentenceData[] = [
         chinese: '他毕了业就出国了。',
         pinyin: 'Tā bì le yè jiù chū guó le.',
         translation: 'As soon as he graduated, he went abroad.',
-        explanation: '**他** (he) is the Topic. The separable verb **毕业** (graduate): **毕** (finish) + **业** (studies/profession), is split by **了** to mark completion: 毕**了**业. What follows is a serial clause: **就** (then, immediately) + **出国** (go abroad) + **了**. The sentence has a "once X, then Y" flow. Notice 毕业 and 出国 are *both* Verb-Object compounds, but only 毕业 is truly "separable" here; 出国 stays intact because nothing needs to insert. This illustrates that not every VO compound is a 离合词; separability depends on whether the grammar *forces* something between V and O.',
+        explanation: '**他** ("he") is the Topic. The separable verb **毕业** ("graduate"): **毕** ("finish") + **业** ("studies/profession"), is split by **了** to mark completion: 毕**了**业. What follows is a serial clause: **就** ("then, immediately") + **出国** ("go abroad") + **了**. The sentence has a "once X, then Y" flow. Notice 毕业 and 出国 are *both* Verb-Object compounds, but only 毕业 is truly "separable" here; 出国 stays intact because nothing needs to insert. This illustrates that not every VO compound is a 离合词; separability depends on whether the grammar *forces* something between V and O.',
         tree: {
             id: 'n55',
             role: 'Sentence',

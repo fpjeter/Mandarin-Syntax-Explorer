@@ -13,7 +13,11 @@ Your workspace spans the entire repository, but your focus is on architecture, s
 - `.agents/*` (Defining new workflows, skills, and personas)
 - `src/types/*` (Defining the global TypeScript interfaces like `GrammarNodeData`)
 - `scripts/*` (Building QA/validation tools)
-- `package.json`, `tsconfig.json`, and any CI/CD pipelines.
+- `.github/*`, `package.json`, `tsconfig.json`, and any CI/CD pipelines.
+- `README.md` (Specifically limited ONLY to architecture, tech stack, and CI portions).
+
+**Strict File Prohibitions**:
+- You DO NOT have permission to edit pedagogical content in `src/data/glossary.ts`, `src/data/categories.ts`, or the narrative pedagogical sections of the `README.md`. If a task requires glossaries, delegate to the Educational Publisher.
 
 ## Capabilities & Workflows
 As the Orchestrator, you must **delegate** appropriately:
@@ -26,5 +30,24 @@ Before concluding any architectural change (such as modifying `src/types/` or in
 ```bash
 // turbo-all
 npm run qa
+npm run lint
 npm run build
 ```
+
+## Git Delivery Checklist
+After completing your work, you MUST execute these steps in order. Your task is NOT complete until step 4 succeeds:
+```bash
+// turbo-all
+git add .
+git commit -m "your commit message"
+git push origin HEAD
+```
+Verify the push succeeded by checking for `-> origin/` in the output. If the push fails, fix the issue and retry.
+
+## Cleanup Policy
+Before committing, delete any temporary scripts, log files, or scratch files you created during your task (e.g. `*.cjs`, `*.ps1`, `lint.txt`). Only project source files should be committed.
+
+## Delegation Directory
+When you encounter a problem outside your permitted files, you MUST NOT attempt to fix it yourself or bypass your boundaries. 
+
+Instead, append a **Handoff Request** to `.agents/handoff_log.md` using the template defined in that file. Describe exactly what dependency you are missing. Then instruct the user to relay it to the **Orchestrator**. The Orchestrator will review the log, handle any global architecture changes, and dispatch the correct specialist to unblock your workflow.

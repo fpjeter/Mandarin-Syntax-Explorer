@@ -99,7 +99,7 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
                             <path d="M5 6 L0 0 L10 0 Z" />
                         </svg>
                         <span className="text-[7px] xl:text-[8px] text-rose-400 font-semibold tracking-widest uppercase -mt-0.5">
-                            pro-drop
+                            implied
                         </span>
                     </div>
                 </>
@@ -133,7 +133,7 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
                         {/* Position counter pill */}
                         {categoryTotal !== undefined && categoryTotal > 1 && sentenceIndex !== undefined && (
                             <span className="absolute top-2.5 right-3 text-[9px] font-semibold tabular-nums text-slate-400 select-none bg-slate-800/70 border border-slate-700/40 rounded-full px-2 py-0.5">
-                                {sentenceIndex} / {categoryTotal}
+                                {sentenceIndex} / {categoryTotal}
                             </span>
                         )}
 

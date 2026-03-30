@@ -13,6 +13,7 @@ const PARTICLES = Array.from({ length: 18 }, (_, i) => ({
     size: 2 + Math.random() * 4,
     delay: Math.random() * 0.6,
     duration: 1.5 + Math.random() * 1.5,
+    yDrift: -20 - Math.random() * 30,
 }));
 
 /**
@@ -65,7 +66,7 @@ export default function InkWashTransition({ active, targetMode }: InkWashTransit
                             animate={{
                                 opacity: [0, 0.8, 0.4, 0.7, 0],
                                 scale: [0, 1.2, 0.8, 1, 0.5],
-                                y: [0, -20 - Math.random() * 30],
+                                y: [0, p.yDrift],
                             }}
                             transition={{
                                 delay: p.delay,

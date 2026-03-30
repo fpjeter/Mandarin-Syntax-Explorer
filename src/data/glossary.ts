@@ -62,7 +62,7 @@ export const glossary: Record<GrammarRole, { headline: string; detail: string }>
     Particle: {
         headline: 'A small grammatical word',
         detail:
-            'Short words added to sentences or verbs to show tense, mood, or grammatical role. E.g. 了 (completion), 的 (possession), 吗 (yes/no question), 过 (past experience).',
+            'Short words added to sentences or verbs to show tense, mood, or grammatical role. Examples include 了 (completion) and 吗 (question mark). In Potential Complements (可能补语), the **得** or **不** are just small particles inserted to show possibility: "can" or "cannot" do it.',
     },
     Adjective: {
         headline: 'A describing word',
@@ -87,7 +87,7 @@ export const glossary: Record<GrammarRole, { headline: string; detail: string }>
     Complement: {
         headline: 'Extra info completing a verb',
         detail:
-            'Comes after the verb to add info about the result, direction, possibility, or degree of the action. Look for specific complement badges (结果补语, 方向补语, etc.) for details on each type.',
+            'Comes after the verb to add info about the result, direction, possibility, or degree of the action. **Key rule for 得**: In a Degree Complement (程度补语), **得** acts as a structural "Recursive Hinge", firmly linking the action to a full description of *how* it was done (e.g. 跑得快). In a Potential Complement (可能补语), **得/不** are just tiny internal particles signaling *if* it can be done.',
     },
     'Head Noun': {
         headline: 'The main noun in a noun phrase',

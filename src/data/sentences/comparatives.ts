@@ -8,7 +8,7 @@ export const comparatives: SentenceData[] = [
         pinyin: 'Nà zuò shān bǐ zhè zuò shān gāo de duō.',
         translation: 'That mountain is much taller than this mountain.',
 
-        explanation: '**那座山** (that mountain) is the Topic. 座 is the measure word for mountains and large structures. The Comment makes a comparison using **比** (compared to), which always comes before the thing being compared against. The pattern is: Topic → 比 → [reference] → [quality] → [how much]. Here: that mountain → compared to this mountain → tall → by a lot. The **得多** at the end means "by a great amount" and is always placed after the quality, never before it. English has flexibility in word order here; Mandarin does not.',
+        explanation: '**那座山** ("that mountain") is the Topic. 座 is the measure word for mountains and large structures. The Comment makes a comparison using **比** ("compared to"), which always comes before the thing being compared against. The pattern is: Topic → 比 → [reference] → [quality] → [how much]. Here: that mountain → compared to this mountain → tall → by a lot. The **得多** at the end means "by a great amount" and is always placed after the quality, never before it. English has flexibility in word order here; Mandarin does not.',
         tree: {
             id: 'n9',
             role: 'Sentence',
@@ -200,7 +200,7 @@ export const comparatives: SentenceData[] = [
         chinese: '他跑得像风一样快。',
         pinyin: 'Tā pǎo de xiàng fēng yī yàng kuài.',
         translation: 'He runs as fast as the wind.',
-        explanation: 'This sentence uses **像…一样** (xiàng…yīyàng) to draw a vivid simile, literally "like [something], the same [quality]". The structure **verb + 得** links the verb to how well or how much the action was done; everything after 得 is the **degree complement**. Inside that complement: **像风** (like the wind) sets up the image, **一样** says "equally," and **快** (fast) is the adjective being compared. In English we use "as … as": "as fast as the wind." Unlike 跟…一样 (which compares two real things), 像…一样 often introduces a poetic or figurative standard: the wind, a tiger, a machine.',
+        explanation: 'This sentence uses **像…一样** (xiàng…yīyàng) to draw a vivid simile, literally "like [something], the same [quality]". The structure **verb + 得** links the verb to how well or how much the action was done; everything after 得 is the **degree complement**. Inside that complement: **像风** ("like the wind") sets up the image, **一样** says "equally," and **快** ("fast") is the adjective being compared. In English we use "as … as": "as fast as the wind." Unlike 跟…一样 ("which compares two real things"), 像…一样 often introduces a poetic or figurative standard: the wind, a tiger, a machine.',
         tree: {
             id: 'n21',
             role: 'Sentence',
@@ -278,7 +278,7 @@ export const comparatives: SentenceData[] = [
         chinese: '知道的人比不上喜欢的人，喜欢的人比不上乐在其中的人。',
         pinyin: 'Zhī dào de rén bǐ bù shàng xǐ huān de rén, xǐ huān de rén bǐ bù shàng lè zài qí zhōng de rén.',
         translation: 'Those who merely know cannot compare to those who love it; those who love it cannot compare to those who delight in it.',
-        explanation: 'This modernizes the classical 知之者不如好之者. The classical 者 nominalizer becomes **的人** (\"the person who...\"), and the classical comparative 不如 becomes the modern equivalent **比不上** (\"cannot compare to\"). *Grammatically,* this sentence uses the **比** comparative construction twice in parallel. Each clause follows the pattern: [subject 的人] + 比不上 + [reference 的人]. The 的 particle nominalizes verb phrases into noun phrases, functioning exactly like the classical 者.',
+        explanation: 'This modernizes the classical 知之者不如好之者. The classical 者 particle becomes **的人** ("the person who..."), and the classical comparative 不如 becomes the modern equivalent **比不上** ("cannot compare to"). *Grammatically,* this sentence uses the **比** comparative construction twice in parallel. Each clause follows the pattern: [subject 的人] + 比不上 + [reference 的人]. The 的 particle turns verb phrases into noun phrases, functioning exactly like the classical 者.',
         tree: {
             id: 's69-root', role: 'Sentence', children: [
                 { id: 's69-c1', role: 'Topic', subRole: 'first comparison', children: [
@@ -312,7 +312,7 @@ export const comparatives: SentenceData[] = [
         chinese: '好的时机不如好的地形，好的地形不如人心齐。',
         pinyin: 'Hǎo de shí jī bù rú hǎo de dì xíng, hǎo de dì xíng bù rú rén xīn qí.',
         translation: 'Favorable timing is not as good as advantageous terrain; advantageous terrain is not as good as unity among people.',
-        explanation: 'This modernizes the classical 天時不如地利地利不如人和. The classical four-character parallelism is preserved in modern form using **不如** (\"not as good as\"), which is one of the few classical comparative structures that survives directly into modern Mandarin. *Grammatically,* each clause follows the pattern: Topic + 不如 + Object. The 的 particle is added to make attributive phrases (好的时机, \"good timing\") where classical Chinese needed no marker. The final comparison uses 人心齐 (\"people\'s hearts aligned\") to modernize 人和.',
+        explanation: 'This modernizes the classical 天時不如地利地利不如人和. The classical four-character parallelism is preserved in modern form using **不如** ("not as good as"), which is one of the few classical comparative structures that survives directly into modern Mandarin. *Grammatically,* each clause follows the pattern: Topic + 不如 + Object. The 的 particle is added to make attributive phrases (好的时机, "good timing") where classical Chinese needed no marker. The final comparison uses 人心齐 ("people\'s hearts aligned") to modernize 人和.',
         tree: {
             id: 's87-root', role: 'Sentence', children: [
                 { id: 's87-c1', role: 'Topic', subRole: 'first comparison', children: [

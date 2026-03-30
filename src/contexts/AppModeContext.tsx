@@ -9,4 +9,5 @@ const AppModeContext = createContext<boolean>(false);
 export const AppModeProvider = AppModeContext.Provider;
 
 /** Returns `true` when the app is in Classical Chinese mode. */
+// eslint-disable-next-line react-refresh/only-export-components
 export const useIsClassical = () => useContext(AppModeContext);

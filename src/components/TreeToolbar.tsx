@@ -48,7 +48,7 @@ export const TreeToolbar: React.FC<TreeToolbarProps> = ({
                     <span className="hidden xl:inline">Collapse All</span>
                 </button>
 
-                {/* Pro-drop toggle */}
+                {/* Implied Subject toggle */}
                 {treeHasProDrop && (
                     <button
                         onClick={onToggleGhost}
@@ -60,7 +60,7 @@ export const TreeToolbar: React.FC<TreeToolbarProps> = ({
                                 : 'bg-slate-800/60 text-slate-400 hover:bg-slate-800/80'
                             }
                         `}
-                        title={showGhost ? 'Hide implied (pro-dropped) subjects' : 'Show implied (pro-dropped) subjects'}
+                        title={showGhost ? 'Hide implied subjects' : 'Show implied subjects'}
                     >
                         {showGhost ? <Eye className="w-3.5 h-3.5" /> : <EyeOff className="w-3.5 h-3.5" />}
                         <span className="hidden xl:inline">{showGhost ? 'Implied On' : 'Implied Off'}</span>

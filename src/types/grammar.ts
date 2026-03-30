@@ -57,7 +57,7 @@ export interface SentenceData {
     author?: string;
     /** Plain-English structural analysis of the sentence for non-specialist readers. */
     explanation?: string;
-    /** Optional preceding sentence that establishes the discourse context (topic), enabling pro-drop in this sentence. */
+    /** Optional preceding sentence that establishes the discourse context (topic), enabling a dropped subject in this sentence. */
     discourseContext?: {
         chinese: string;
         pinyin: string;

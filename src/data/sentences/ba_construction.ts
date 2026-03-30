@@ -8,7 +8,7 @@ export const baConstruction: SentenceData[] = [
         pinyin: 'Tā zuó tiān bǎ wǒ de qián bāo wàng zài chū zū chē shàng le.',
         translation: 'She forgot my wallet in the taxi yesterday.',
 
-        explanation: '**她** (she) is the Topic. The Comment opens with a time stamp, **昨天** (yesterday), because in Mandarin, time and place come before the verb, not after it. Then comes a special pattern: **把** moves the object (my wallet) in front of the verb. This is called the **把 construction**: it is used when something specific is being acted upon and something notable happens to it. Think of 把 as a spotlight on the wallet: *"as for the wallet, she forgot it in the taxi."* The tree shows 把 and the wallet grouped together before the verb.',
+        explanation: '**她** ("she") is the Topic. The Comment opens with a time stamp, **昨天** ("yesterday"), because in Mandarin, time and place come before the verb, not after it. Then comes a special pattern: **把** moves the object (my wallet) in front of the verb. This is called the **把 construction**: it is used when something specific is being acted upon and something notable happens to it. Think of 把 as a spotlight on the wallet: *"as for the wallet, she forgot it in the taxi."* The tree shows 把 and the wallet grouped together before the verb.',
         tree: {
             id: 'n3',
             role: 'Sentence',
@@ -109,7 +109,7 @@ export const baConstruction: SentenceData[] = [
         pinyin: 'Nà zhī māo zài chú fáng lǐ shēng qì de yòng zhuǎ zi bǎ wǒ de bēi zi nòng dào dì shàng le.',
         translation: 'That cat angrily knocked my cup to the floor with its claws.',
 
-        explanation: '**那只猫** (that cat) is the Topic. 只 is a **measure word**, a counting word specific to cats and certain animals. Before the main action even appears, Mandarin layers up the scene inside the Comment: **how** the cat acted (angrily), then **with what** (its claws), then **把** spotlights the cup as the thing being affected. Only after all that setup does the verb **弄** (knock/move) appear. In English, you would lead with the verb much earlier. This sentence shows how Mandarin packs rich detail around the verb systematically.',
+        explanation: '**那只猫** ("that cat") is the Topic. 只 is a **measure word**, a counting word specific to cats and certain animals. Before the main action even appears, Mandarin layers up the scene inside the Comment: **how** the cat acted (angrily), then **with what** (its claws), then **把** spotlights the cup as the thing being affected. Only after all that setup does the verb **弄** ("knock/move") appear. In English, you would lead with the verb much earlier. This sentence shows how Mandarin packs rich detail around the verb systematically.',
         tree: {
             id: 'n4',
             role: 'Sentence',
@@ -237,7 +237,7 @@ export const baConstruction: SentenceData[] = [
         chinese: '请把窗户关上。',
         pinyin: 'Qǐng bǎ chuāng hu guān shàng.',
         translation: 'Please close the window.',
-        explanation: 'A minimal, everyday BA sentence. **请** (please) is a politeness adverb. Then **把** spotlights **窗户** (the window) before the verb; this is the classic BA move: take the object and bring it in front of the verb to show it will be *affected*. The verb **关** (close) is followed by the directional complement **上** (up/onto, here meaning "shut"). The pattern **把 [thing] [verb]+[result]** is the standard template for giving instructions or describing a deliberate act with a clear outcome on an object.',
+        explanation: 'A minimal, everyday BA sentence. **请** ("please") is a politeness adverb. Then **把** spotlights **窗户** ("the window") before the verb; this is the classic BA move: take the object and bring it in front of the verb to show it will be *affected*. The verb **关** ("close") is followed by the directional complement **上** (up/onto, here meaning "shut"). The pattern **把 [thing] [verb]+[result]** is the standard template for giving instructions or describing a deliberate act with a clear outcome on an object. Notice that the subject **[你]** ("you") is heavily implied, appearing as a ghost node in the tree.',
         tree: {
             id: 'n28',
             role: 'Sentence',
@@ -303,7 +303,7 @@ export const baConstruction: SentenceData[] = [
         chinese: '她把那封信藏在枕头下面了。',
         pinyin: 'Tā bǎ nà fēng xìn cáng zài zhěn tou xià miàn le.',
         translation: 'She hid that letter under the pillow.',
-        explanation: '**她** (she) is the Topic. The Comment uses **把** to spotlight **那封信** (that letter, where 封 is the measure word for letters and envelopes. The verb **藏** (hide) is then followed by a location phrase: **在枕头下面** (under the pillow). This location tells you *where the object ended up*: the final resting state after the action. This shows BA\'s core job: once you\'ve fronted the object, the verb naturally attaches a result or destination. Compare with English: "She hid the letter under the pillow"; Mandarin and English are parallel here, but Mandarin uses 把 to mark the intent and outcome much more explicitly.',
+        explanation: '**她** ("she") is the Topic. The Comment uses **把** to spotlight **那封信** (that letter, where 封 is the measure word for letters and envelopes. The verb **藏** ("hide") is then followed by a location phrase: **在枕头下面** ("under the pillow"). This location tells you *where the object ended up*: the final resting state after the action. This shows BA\'s core job: once you\'ve fronted the object, the verb naturally attaches a result or destination. Compare with English: "She hid the letter under the pillow"; Mandarin and English are parallel here, but Mandarin uses 把 to mark the intent and outcome much more explicitly.',
         tree: {
             id: 'n29',
             role: 'Sentence',
@@ -396,7 +396,7 @@ export const baConstruction: SentenceData[] = [
         chinese: '不要把自己不想要的东西强加给别人。',
         pinyin: 'Bú yào bǎ zì jǐ bù xiǎng yào de dōng xi qiáng jiā gěi bié rén.',
         translation: 'Do not force upon others what you yourself do not want.',
-        explanation: 'This modernizes the classical 己所不欲勿施於人. Modern Mandarin uses the **把** construction to front the object before the verb, just as classical Chinese used fronted objects but with different mechanisms. *Grammatically,* 不要 (\"do not\") opens the prohibition. 把 then fronts the complex object: 自己不想要的东西 (\"things you yourself don\'t want\"). The verb phrase 强加给别人 (\"force upon others\") completes the action. The classical 勿 becomes 不要, 所不欲 becomes 不想要的东西, and 施於人 becomes 强加给别人.',
+        explanation: 'This modernizes the classical 己所不欲勿施於人. Modern Mandarin uses the **把** construction to front the object before the verb, just as classical Chinese used fronted objects but with different mechanisms. *Grammatically,* 不要 ("do not") opens the prohibition. 把 then fronts the complex object: 自己不想要的东西 ("things you yourself don\'t want"). The verb phrase 强加给别人 ("force upon others") completes the action. The classical 勿 becomes 不要, 所不欲 becomes 不想要的东西, and 施於人 becomes 强加给别人.',
         tree: {
             id: 's74-root', role: 'Sentence', children: [
                 { id: 's74-neg', role: 'Adjunct', subRole: 'prohibition', text: { hanzi: '不要', pinyin: 'bú yào', translation: 'do not' } },
@@ -421,7 +421,7 @@ export const baConstruction: SentenceData[] = [
         chinese: '要用善良把怨恨化解掉。',
         pinyin: 'Yào yòng shàn liáng bǎ yuàn hèn huà jiě diào.',
         translation: 'One should use kindness to resolve resentment.',
-        explanation: 'This modernizes the classical 以德報怨. The classical instrumental coverb 以 (\"with/using\") becomes 用 (\"use\"), while the disposal construction uses 把 to highlight the affected object. *Grammatically,* 要 (\"should\") sets the advisory tone. 用善良 (\"using kindness\") is an instrumental adjunct. 把怨恨 fronts the object (resentment) before the verb. 化解掉 uses a resultative complement: 化解 (\"dissolve/resolve\") + 掉 (\"away, gone\"), indicating complete removal.',
+        explanation: 'This modernizes the classical 以德報怨. The classical instrumental coverb 以 ("with/using") becomes 用 ("use"), while the disposal construction uses 把 to highlight the affected object. *Grammatically,* 要 ("should") sets the advisory tone. 用善良 ("using kindness") is an instrumental adjunct. 把怨恨 fronts the object (resentment) before the verb. 化解掉 uses a resultative complement: 化解 ("dissolve/resolve") + 掉 ("away, gone"), indicating complete removal.',
         tree: {
             id: 's88-root', role: 'Sentence', children: [
                 { id: 's88-yao', role: 'Adjunct', text: { hanzi: '要', pinyin: 'yào', translation: 'should' } },

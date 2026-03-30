@@ -3,6 +3,7 @@ import type { SentenceData } from '../types/grammar';
 import type { GrammarRole } from '../types/grammar';
 import { glossary } from '../data/glossary';
 import { renderExplanation } from '../utils/renderExplanation';
+import { TreeVisualKey } from './TreeVisualKey';
 
 interface GlossaryLinkProps {
     role: GrammarRole;
@@ -205,14 +206,14 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                     </p>
                 </section>
 
-                {/* ── 4. Pro-drop ── */}
+                {/* ── 4. Dropped Subjects ── */}
                 <section>
                     <h3 className="text-[10px] font-bold uppercase tracking-widest text-rose-400 mb-1.5">Why subjects disappear</h3>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
                         Once the Topic is set, the listener knows who is being talked about.
                         So Mandarin often skips the subject inside the Comment entirely —
                         this is called{' '}
-                        <span className="text-rose-400 font-bold">pro-drop</span>.
+                        <span className="text-rose-400 font-bold">subject omission</span>.
                         The tree shows missing words as faded{' '}
                         <span className="text-rose-300 font-mono text-[10px]">[ghost]</span> nodes.
                     </p>
@@ -241,75 +242,10 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                     </div>
                 </section>
 
-                {/* ── 2. How to read the tree ── */}
+                {/* ── 2. How to Read the Tree (interactive visual key) ── */}
                 <section>
-                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-violet-400 mb-2">Reading the tree</h3>
-                    <div className="space-y-1.5 text-[10px] text-slate-300">
-                        <div className="flex items-center gap-2">
-                            <span className="w-3 h-3 rounded-sm bg-fuchsia-900/40 border border-fuchsia-500/50 flex-shrink-0" />
-                            <span><strong className="text-fuchsia-300">Fuchsia</strong> = Topic</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <span className="w-3 h-3 rounded-sm bg-blue-900/40 border border-blue-500/50 flex-shrink-0" />
-                            <span><strong className="text-blue-300">Blue</strong> = Comment</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <span className="w-3 h-3 rounded-sm bg-indigo-900/40 border border-indigo-600/50 flex-shrink-0" />
-                            <span><strong className="text-indigo-300">Indigo</strong> = Subject</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <span className="w-3 h-3 rounded-sm bg-cyan-900/40 border border-cyan-500/50 flex-shrink-0" />
-                            <span><strong className="text-cyan-200">Cyan</strong> = Predicate</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <span className="w-3 h-3 rounded-sm bg-teal-900/40 border border-teal-500/50 flex-shrink-0" />
-                            <span><strong className="text-teal-300">Teal</strong> = Verb Phrase</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <span className="w-3 h-3 rounded-sm bg-amber-900/40 border border-amber-600/50 flex-shrink-0" />
-                            <span><strong className="text-amber-200">Amber</strong> = Object</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <span className="w-3 h-3 rounded-sm bg-rose-900/40 border border-rose-600/50 flex-shrink-0" />
-                            <span><strong className="text-rose-300">Rose</strong> = Adjunct (modifier)</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <span className="w-3 h-3 rounded-sm bg-violet-900/40 border border-violet-600/50 flex-shrink-0" />
-                            <span><strong className="text-violet-300">Violet</strong> = Complement</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <div className="relative w-4 h-4 flex-shrink-0">
-                                <span className="absolute inset-0 rounded-full bg-slate-400/20 animate-ping" />
-                                <span className="absolute inset-[3px] rounded-full bg-slate-500" />
-                            </div>
-                            <span><strong className="text-slate-200">Pulsing dot</strong> = tap to expand/collapse</span>
-                        </div>
-                    </div>
-                </section>
-
-                {/* ── 4b. Using the tree (UI tips) ── */}
-                <section>
-                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1.5">Using the tree</h3>
-                    <ul className="space-y-1.5 text-[11px] text-slate-300 leading-relaxed list-disc list-inside marker:text-slate-500">
-                        <li>
-                            <strong>Hover</strong> (desktop) or <strong>long-press</strong> (mobile) any node
-                            for a plain-English explanation.
-                        </li>
-                        <li>
-                            <strong>Co-reference glow</strong> — when a ghost node refers back to the
-                            Topic, hover (desktop) or long-press (mobile) either one and both
-                            light up with a{' '}
-                            <span className="text-rose-400 font-bold">rose glow</span>.
-                        </li>
-                        <li>
-                            <strong>Ghost toggle</strong> — tap the ghost icon in the tree controls
-                            to show or hide implied (pro-dropped) subjects.
-                        </li>
-                        <li>
-                            <strong>Pinch</strong> to zoom, <strong>drag</strong> to pan.
-                            Use <strong>+/−</strong> buttons for precise zoom.
-                        </li>
-                    </ul>
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-violet-400 mb-2">How to read the tree</h3>
+                    <TreeVisualKey />
                 </section>
 
                 {/* ── Linguistic footnote (collapsible) ── */}

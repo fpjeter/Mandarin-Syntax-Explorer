@@ -7,7 +7,7 @@ export const shDeConstruction: SentenceData[] = [
         chinese: '我是昨天晚上在图书馆看到她的。',
         pinyin: 'Wǒ shì zuó tiān wǎn shang zài tú shū guǎn kàn dào tā de.',
         translation: 'It was last night in the library that I saw her.',
-        explanation: '**我** (I) sets the scene, think of it as "as for me…" The rest of the sentence uses the **是…的** pattern to zoom in on *when* and *where* something happened. **是** works like "was" in the English phrasing *"it was last night in the library that I saw her."* The focused details, **昨天晚上** (last night) and **在图书馆** (in the library), sit between 是 and the verb. **的** at the end turns the whole action into a description: "the [saw-her-last-night-in-the-library] one." So the sentence literally reads something like: *As for me, (I) am the one who saw her last night in the library.* Without 是…的 you\'d just say 我昨天晚上在图书馆看到她, a plain statement. With 是…的, you\'re emphasizing the circumstances, typically in response to a question like "When and where did you see her?"',
+        explanation: '**我** ("I") sets the scene, think of it as "as for me…" The rest of the sentence uses the **是…的** pattern to zoom in on *when* and *where* something happened. **是** works like "was" in the English phrasing *"it was last night in the library that I saw her."* The focused details, **昨天晚上** ("last night") and **在图书馆** ("in the library"), sit between 是 and the verb. **的** at the end turns the whole action into a description: "the [saw-her-last-night-in-the-library] one." So the sentence literally reads something like: *As for me, (I) am the one who saw her last night in the library.* Without 是…的 you\'d just say 我昨天晚上在图书馆看到她, a plain statement. With 是…的, you\'re emphasizing the circumstances, typically in response to a question like "When and where did you see her?"',
         tree: {
             id: 'n8',
             role: 'Sentence',
@@ -121,30 +121,37 @@ export const shDeConstruction: SentenceData[] = [
                             text: { hanzi: '是', pinyin: 'shì', translation: '(it was…)' }
                         },
                         {
-                            id: 'n23-lp',
-                            role: 'Adjunct',
-                            subRole: 'location · focused element (where)',
+                            id: 'n23-p-vp',
+                            role: 'Verb Phrase',
+                            subRole: 'focused constituents + embedded predicate',
                             children: [
                                 {
-                                    id: 'n23-lp-prep',
-                                    role: 'Preposition',
-                                    text: { hanzi: '在', pinyin: 'zài', translation: 'in/at' }
+                                    id: 'n23-lp',
+                                    role: 'Adjunct',
+                                    subRole: 'location · focused element (where)',
+                                    children: [
+                                        {
+                                            id: 'n23-lp-prep',
+                                            role: 'Preposition',
+                                            text: { hanzi: '在', pinyin: 'zài', translation: 'in/at' }
+                                        },
+                                        {
+                                            id: 'n23-lp-n',
+                                            role: 'Noun',
+                                            text: { hanzi: '上海', pinyin: 'Shàng hǎi', translation: 'Shanghai' }
+                                        }
+                                    ]
                                 },
                                 {
-                                    id: 'n23-lp-n',
-                                    role: 'Noun',
-                                    text: { hanzi: '上海', pinyin: 'Shàng hǎi', translation: 'Shanghai' }
-                                }
-                            ]
-                        },
-                        {
-                            id: 'n23-vp',
-                            role: 'Verb Phrase',
-                            children: [
-                                {
-                                    id: 'n23-vp-hv',
-                                    role: 'Head Verb',
-                                    text: { hanzi: '长大', pinyin: 'zhǎng dà', translation: 'grow up' }
+                                    id: 'n23-vp',
+                                    role: 'Verb Phrase',
+                                    children: [
+                                        {
+                                            id: 'n23-vp-hv',
+                                            role: 'Head Verb',
+                                            text: { hanzi: '长大', pinyin: 'zhǎng dà', translation: 'grow up' }
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -165,7 +172,7 @@ export const shDeConstruction: SentenceData[] = [
         chinese: '我是昨天到的。',
         pinyin: 'Wǒ shì zuó tiān dào de.',
         translation: 'It was yesterday that I arrived.',
-        explanation: '**我** (I) sets the scene: "as for me…" Then the **是…的** pattern highlights a specific detail about a past event. Here, **是** acts like "was" (*it was yesterday*) and **的** at the end wraps the action into a bundle: "the [arrived-yesterday] one." The focused detail is **昨天** (yesterday), answering a question like "When did you arrive?" Think of it as: *As for me, (I) am the one who arrived yesterday.* This is the simplest 是…的 shape: 是 + [the detail you want to stress] + verb + 的. Without 是…的 you\'d just say 我昨天到了, a straightforward statement with no special emphasis.',
+        explanation: '**我** ("I") sets the scene: "as for me…" Then the **是…的** pattern highlights a specific detail about a past event. Here, **是** acts like "was" (*it was yesterday*) and **的** at the end wraps the action into a bundle: "the [arrived-yesterday] one." The focused detail is **昨天** ("yesterday"), answering a question like "When did you arrive?" Think of it as: *As for me, (I) am the one who arrived yesterday.* This is the simplest 是…的 shape: 是 + [the detail you want to stress] + verb + 的. Without 是…的 you\'d just say 我昨天到了, a straightforward statement with no special emphasis.',
         tree: {
             id: 'n50',
             role: 'Sentence',
@@ -188,16 +195,23 @@ export const shDeConstruction: SentenceData[] = [
                             text: { hanzi: '是', pinyin: 'shì', translation: '(it was…)' },
                         },
                         {
-                            id: 'n50-focus',
-                            role: 'Adjunct',
-                            subRole: 'time · focused element (when)',
-                            text: { hanzi: '昨天', pinyin: 'zuó tiān', translation: 'yesterday' },
-                        },
-                        {
-                            id: 'n50-hv',
-                            role: 'Head Verb',
-                            subRole: 'embedded predicate (null subject = 我)',
-                            text: { hanzi: '到', pinyin: 'dào', translation: 'arrive' },
+                            id: 'n50-p-vp',
+                            role: 'Verb Phrase',
+                            subRole: 'focused constituents + embedded predicate',
+                            children: [
+                                {
+                                    id: 'n50-focus',
+                                    role: 'Adjunct',
+                                    subRole: 'time · focused element (when)',
+                                    text: { hanzi: '昨天', pinyin: 'zuó tiān', translation: 'yesterday' },
+                                },
+                                {
+                                    id: 'n50-hv',
+                                    role: 'Head Verb',
+                                    subRole: 'embedded predicate (null subject = 我)',
+                                    text: { hanzi: '到', pinyin: 'dào', translation: 'arrive' },
+                                }
+                            ]
                         },
                         {
                             id: 'n50-de',
@@ -216,7 +230,7 @@ export const shDeConstruction: SentenceData[] = [
         chinese: '这件衣服是在北京买的。',
         pinyin: 'Zhè jiàn yī fu shì zài Běi jīng mǎi de.',
         translation: 'This item of clothing was bought in Beijing.',
-        explanation: '**这件衣服** (this item of clothing; 件 is the measure word for garments) sets the scene: "as for this clothing…" Notice the topic here is a *thing*, not a person. The **是…的** pattern then highlights *where* the buying happened. **是** acts like "was," and the focused detail is **在北京** (in Beijing). **的** at the end packages the action: "the [bought-in-Beijing] one." So the sentence reads: *As for this clothing, (it) is the one that was bought in Beijing.* This answers a question like "Where was it bought?" The buyer isn\'t stated; Mandarin often leaves it out when it\'s obvious from context. Compare: 这件衣服是谁买的？ (*Who* was it that bought this?) Same pattern, just swapping the focused detail.',
+        explanation: '**这件衣服** (this item of clothing; 件 is the measure word for garments) sets the scene: "as for this clothing…" Notice the topic here is a *thing*, not a person. The **是…的** pattern then highlights *where* the buying happened. **是** acts like "was," and the focused detail is **在北京** ("in Beijing"). **的** at the end packages the action: "the [bought-in-Beijing] one." So the sentence reads: *As for this clothing, (it) is the one that was bought in Beijing.* This answers a question like "Where was it bought?" The buyer isn\'t stated; Mandarin often leaves it out when it\'s obvious from context. Compare: 这件衣服是谁买的？ (*Who* was it that bought this?) Same pattern, just swapping the focused detail.',
         tree: {
             id: 'n51',
             role: 'Sentence',
@@ -250,27 +264,34 @@ export const shDeConstruction: SentenceData[] = [
                             text: { hanzi: '是', pinyin: 'shì', translation: '(it was…)' },
                         },
                         {
-                            id: 'n51-focus',
-                            role: 'Adjunct',
-                            subRole: 'location · focused element (where)',
+                            id: 'n51-p-vp',
+                            role: 'Verb Phrase',
+                            subRole: 'focused constituents + embedded predicate',
                             children: [
                                 {
-                                    id: 'n51-focus-prep',
-                                    role: 'Preposition',
-                                    text: { hanzi: '在', pinyin: 'zài', translation: 'at / in' },
+                                    id: 'n51-focus',
+                                    role: 'Adjunct',
+                                    subRole: 'location · focused element (where)',
+                                    children: [
+                                        {
+                                            id: 'n51-focus-prep',
+                                            role: 'Preposition',
+                                            text: { hanzi: '在', pinyin: 'zài', translation: 'at / in' },
+                                        },
+                                        {
+                                            id: 'n51-focus-n',
+                                            role: 'Noun',
+                                            text: { hanzi: '北京', pinyin: 'Běi jīng', translation: 'Beijing' },
+                                        },
+                                    ],
                                 },
                                 {
-                                    id: 'n51-focus-n',
-                                    role: 'Noun',
-                                    text: { hanzi: '北京', pinyin: 'Běi jīng', translation: 'Beijing' },
-                                },
-                            ],
-                        },
-                        {
-                            id: 'n51-hv',
-                            role: 'Head Verb',
-                            subRole: 'embedded predicate (null subject = contextual)',
-                            text: { hanzi: '买', pinyin: 'mǎi', translation: 'buy' },
+                                    id: 'n51-hv',
+                                    role: 'Head Verb',
+                                    subRole: 'embedded predicate (null subject = contextual)',
+                                    text: { hanzi: '买', pinyin: 'mǎi', translation: 'buy' },
+                                }
+                            ]
                         },
                         {
                             id: 'n51-de',
@@ -289,7 +310,7 @@ export const shDeConstruction: SentenceData[] = [
         chinese: '老师是用来传授知识和解答疑惑的。',
         pinyin: 'Lǎo shī shì yòng lái chuán shòu zhī shi hé jiě dá yí huò de.',
         translation: 'A teacher is someone used to transmit knowledge and resolve doubts.',
-        explanation: 'This modernizes the classical 師者所以傳道授業解惑也. Modern Mandarin uses the **是...的** construction to define the purpose of a teacher. *Grammatically,* 老师 (\"teacher\") is the Topic. The Comment uses 是 (\"is\") + a purpose phrase 用来 (\"used for\") + two verb-object pairs connected by 和 (\"and\"): 传授知识 (\"transmit knowledge\") and 解答疑惑 (\"resolve doubts\"). The 的 at the end nominalizes the whole phrase.',
+        explanation: 'This modernizes the classical 師者所以傳道授業解惑也. Modern Mandarin uses the **是...的** construction to define the purpose of a teacher. *Grammatically,* 老师 ("teacher") is the Topic. The Comment uses 是 ("is") + a purpose phrase 用来 ("used for") + two verb-object pairs connected by 和 ("and"): 传授知识 ("transmit knowledge") and 解答疑惑 ("resolve doubts"). The 的 at the end turns the whole phrase into a noun.',
         tree: {
             id: 's79-root', role: 'Sentence', children: [
                 { id: 's79-t', role: 'Topic', text: { hanzi: '老师', pinyin: 'lǎo shī', translation: 'teacher' } },

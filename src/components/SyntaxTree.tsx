@@ -73,7 +73,7 @@ const PinchHint: React.FC = () => {
         const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
         const alreadyShown = sessionStorage.getItem('pinchHintShown');
         if (isTouchDevice && !alreadyShown) {
-            setShow(true);
+            queueMicrotask(() => setShow(true));
             sessionStorage.setItem('pinchHintShown', '1');
             const timer = setTimeout(() => setShow(false), 3500);
             return () => clearTimeout(timer);
@@ -148,8 +148,10 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible, onRando
 
     // Reset state whenever the sentence changes.
     useEffect(() => {
-        setExpandedIds(tree ? new Set([tree.id]) : new Set());
-        setShowGhost(true);
+        queueMicrotask(() => {
+            setExpandedIds(tree ? new Set([tree.id]) : new Set());
+            setShowGhost(true);
+        });
     }, [tree]);
 
     const { nodes: rawNodes, edges, corefPairs } = useMemo(() => parseTreeToFlow(tree, expandedIds, showGhost, isClassical), [tree, expandedIds, showGhost, isClassical]);
