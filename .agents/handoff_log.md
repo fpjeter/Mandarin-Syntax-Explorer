@@ -36,8 +36,14 @@ _No pending requests._
 
 ## Active Assignments
 
+_No active assignments._
+
+---
+
+## Resolved
+
 ### 2026-03-30 Orchestrator → Data Linguist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Fix `no-useless-escape` lint errors across all sentence data files
 **Branch**: `chore/agent-integration`
 **Details**: The CI linter found ~291 instances of `\"` (escaped double quotes) inside single-quoted strings across 10 files in `src/data/sentences/`. The `\"` escape is unnecessary inside single-quoted strings — replace every `\"` with `"` in the `explanation` fields.
@@ -45,14 +51,8 @@ _No pending requests._
 **Validation**: Run `npm run lint` and confirm 0 errors in your files. Then commit and push to `chore/agent-integration`.
 
 ### 2026-03-30 Orchestrator → Educational Publisher
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Fix 3 `no-useless-escape` lint errors in `src/utils/generateStudySheet.ts`
 **Branch**: `chore/agent-integration`
 **Details**: Line 385 contains 3 unnecessary `\"` escape sequences inside a single-quoted string. Replace `\"` with `"`.
 **Validation**: Run `npx eslint src/utils/generateStudySheet.ts` and confirm 0 errors. Then commit and push to `chore/agent-integration`.
-
----
-
-## Resolved
-
-_No resolved items yet._
