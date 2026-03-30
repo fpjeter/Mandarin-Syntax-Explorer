@@ -7,7 +7,7 @@ export const pivotalConstructions: SentenceData[] = [
         chinese: '老师让学生回答问题。',
         pinyin: 'Lǎo shī ràng xué sheng huí dá wèn tí.',
         translation: 'The teacher had the students answer questions.',
-        explanation: '**老师** (teacher) is the Topic. This is a **pivotal construction** (兼语句). The verb **让** (let/have) takes **学生** (students) as its object. But then, crucially, 学生 immediately becomes the *subject* of the next verb **回答** (answer). It plays both roles at once: object of 让, subject of 回答. The tree shows this double-function node as a **Pivot**. Verbs that create pivotal structures include 让 (let/have), 叫 (tell), 请 (invite), 使 (cause), 帮 (help). In English: "The teacher *had* the students *answer*"; the structure is the same, just without a special grammatical label.',
+        explanation: '**老师** ("teacher") is the Topic. This is a **pivotal construction** (兼语句). The verb **让** ("let/have") takes **学生** ("students") as its object. But then, crucially, 学生 immediately becomes the *subject* of the next verb **回答** ("answer"). It plays both roles at once: object of 让, subject of 回答. The tree shows this double-function node as a **Pivot**. Verbs that create pivotal structures include 让 ("let/have"), 叫 ("tell"), 请 ("invite"), 使 ("cause"), 帮 ("help"). In English: "The teacher *had* the students *answer*"; the structure is the same, just without a special grammatical label.',
         tree: {
             id: 'n32',
             role: 'Sentence',
@@ -68,7 +68,7 @@ export const pivotalConstructions: SentenceData[] = [
         chinese: '妈妈叫我去买牛奶。',
         pinyin: 'Māma jiào wǒ qù mǎi niú nǎi.',
         translation: 'Mom told me to go buy milk.',
-        explanation: '**妈妈** (Mom) is the Topic. The verb **叫** (call/tell) creates a pivotal structure: **我** (me) serves as both the object of 叫 *and* the subject of what follows. After the pivot, there is a **serial verb construction**: **去买**: go in order to buy. Two advanced patterns stack together here, which is completely natural in everyday speech. This sentence shows why pivotal constructions matter: English hides the double-function behind \"told me to\"; Mandarin makes it visible by placing 我 at the hinge point between two verb phrases.',
+        explanation: '**妈妈** ("Mom") is the Topic. The verb **叫** ("call/tell") creates a pivotal structure: **我** ("me") serves as both the object of 叫 *and* the subject of what follows. After the pivot, there is a **serial verb construction**: **去买**: go in order to buy. Two advanced patterns stack together here, which is completely natural in everyday speech. This sentence shows why pivotal constructions matter: English hides the double-function behind \"told me to\"; Mandarin makes it visible by placing 我 at the hinge point between two verb phrases.',
         tree: {
             id: 'n33',
             role: 'Sentence',
@@ -142,7 +142,7 @@ export const pivotalConstructions: SentenceData[] = [
         chinese: '公司派他去谈判。',
         pinyin: 'Gōng sī pài tā qù tán pàn.',
         translation: 'The company sent him to negotiate.',
-        explanation: '**公司** (company) is the Topic. The verb **派** (dispatch/send) takes **他** (him) as its object, but 他 simultaneously becomes the subject of what follows: **去谈判** (go negotiate). This is the pivot. Unlike s32 and s33 where the pivot verbs were 让/叫 (permission/command), here **派** implies authority and assignment: the company dispatched him. The embedded predicate uses a serial verb: 去 (go) + 谈判 (negotiate), showing purpose chaining inside a pivotal frame. Mandarin layers these patterns with ease.',
+        explanation: '**公司** ("company") is the Topic. The verb **派** ("dispatch/send") takes **他** ("him") as its object, but 他 simultaneously becomes the subject of what follows: **去谈判** ("go negotiate"). This is the pivot. Unlike s32 and s33 where the pivot verbs were 让/叫 ("permission/command"), here **派** implies authority and assignment: the company dispatched him. The embedded predicate uses a serial verb: 去 ("go") + 谈判 ("negotiate"), showing purpose chaining inside a pivotal frame. Mandarin layers these patterns with ease.',
         tree: {
             id: 'n52',
             role: 'Sentence',
@@ -205,7 +205,7 @@ export const pivotalConstructions: SentenceData[] = [
         chinese: '她请我吃饭。',
         pinyin: 'Tā qǐng wǒ chī fàn.',
         translation: 'She invited me to eat (out / to dinner).',
-        explanation: '**她** (she) is the Topic. **请** (invite/treat) creates the pivotal structure: **我** (me) is both the object of 请 and the subject of **吃饭** (eat a meal). The verb 请 has a special cultural weight in Mandarin. 请你吃饭 often implies treating someone to a meal (paying for them). The embedded predicate 吃饭 is itself a simple VO compound. This sentence is a good contrast with s32 (让) and s33 (叫): 请 implies hospitality and courtesy, while 让/叫 imply permission or command, same syntactic frame, very different social register.',
+        explanation: '**她** ("she") is the Topic. **请** ("invite/treat") creates the pivotal structure: **我** ("me") is both the object of 请 and the subject of **吃饭** ("eat a meal"). The verb 请 has a special cultural weight in Mandarin. 请你吃饭 often implies treating someone to a meal (paying for them). The embedded predicate 吃饭 is itself a simple VO compound. This sentence is a good contrast with s32 (让) and s33 (叫): 请 implies hospitality and courtesy, while 让/叫 imply permission or command, same syntactic frame, very different social register.',
         tree: {
             id: 'n53',
             role: 'Sentence',

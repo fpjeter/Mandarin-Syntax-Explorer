@@ -7,7 +7,7 @@ export const even: SentenceData[] = [
         chinese: '他连自己的名字都不会写。',
         pinyin: 'Tā lián zì jǐ de míng zi dōu bù huì xiě.',
         translation: 'He can\'t even write his own name.',
-        explanation: '**他** (he) is the Topic. The **连…都…** frame emphasizes an extreme case: 连 (even) + **自己的名字** (his own name) + **都** (all / even) + **不会写** (can\'t write). The structure says: "Even something as basic as his own name: he can\'t write it." 连 picks out the extreme item; 都 reinforces the "even" emphasis. The implied logic: if he can\'t do this simple thing, he certainly can\'t do harder things. This pattern always implies surprise, disappointment, or emphasis. Other examples: 连饭都没吃 (didn\'t even eat), 连一块钱都没有 (doesn\'t even have one yuan).',
+        explanation: '**他** ("he") is the Topic. The **连…都…** frame emphasizes an extreme case: 连 ("even") + **自己的名字** ("his own name") + **都** ("all / even") + **不会写** (can\'t write). The structure says: "Even something as basic as his own name: he can\'t write it." 连 picks out the extreme item; 都 reinforces the "even" emphasis. The implied logic: if he can\'t do this simple thing, he certainly can\'t do harder things. This pattern always implies surprise, disappointment, or emphasis. Other examples: 连饭都没吃 (didn\'t even eat), 连一块钱都没有 (doesn\'t even have one yuan).',
         tree: {
             id: 'n66',
             role: 'Sentence',
@@ -85,7 +85,7 @@ export const even: SentenceData[] = [
         chinese: '连小孩子也能做到。',
         pinyin: 'Lián xiǎo hái zi yě néng zuò dào.',
         translation: 'Even children can do it.',
-        explanation: 'This sentence uses **连…也…** (the 也 variant of the "even" construction). **连** picks out the extreme example: **小孩子** (children, the least expected group to succeed). **也** (also/even) + **能做到** (can accomplish it). The implied logic: if even children can do it, then anyone can. The difference between 都 and 也 in this pattern is subtle. 都 emphasizes exhaustive inclusion ("every single one"), while 也 emphasizes unexpected inclusion ("even this group too"). In practice, they\'re largely interchangeable. Notice this sentence has no separate Topic; 连 fronts the entire construction.',
+        explanation: 'This sentence uses **连…也…** (the 也 variant of the "even" construction). **连** picks out the extreme example: **小孩子** ("children, the least expected group to succeed"). **也** ("also/even") + **能做到** ("can accomplish it"). The implied logic: if even children can do it, then anyone can. The difference between 都 and 也 in this pattern is subtle. 都 emphasizes exhaustive inclusion ("every single one"), while 也 emphasizes unexpected inclusion ("even this group too"). In practice, they\'re largely interchangeable. Notice this sentence has no separate Topic; 连 fronts the entire construction.',
         tree: {
             id: 'n67',
             role: 'Sentence',
@@ -147,7 +147,7 @@ export const even: SentenceData[] = [
         chinese: '连一千里的路，也要从第一步开始走。',
         pinyin: 'Lián yī qiān lǐ de lù, yě yào cóng dì yī bù kāi shǐ zǒu.',
         translation: 'Even a journey of a thousand miles must begin with the first step.',
-        explanation: 'This modernizes the classical 千里之行始於足下. Modern Mandarin uses the **连...也** pattern for \"even,\" turning the classical observation into an emphatic statement. *Grammatically,* **连** fronts the emphasized noun phrase (一千里的路, \"a thousand-mile road\"), and **也** in the Comment says \"even so, you still must...\" The classical 之 (genitive marker) becomes 的, 始 (\"begin\") becomes 开始, and 於足下 (\"from beneath one\'s feet\") becomes 从第一步 (\"from the first step\").',
+        explanation: 'This modernizes the classical 千里之行始於足下. Modern Mandarin uses the **连...也** pattern for \"even,\" turning the classical observation into an emphatic statement. *Grammatically,* **连** fronts the emphasized noun phrase (一千里的路, \"a thousand-mile road\"), and **也** in the Comment says \"even so, you still must...\" The classical 之 ("possession or linking marker") becomes 的, 始 (\"begin\") becomes 开始, and 於足下 (\"from beneath one\'s feet\") becomes 从第一步 (\"from the first step\").',
         tree: {
             id: 's72-root', role: 'Sentence', children: [
                 { id: 's72-topic', role: 'Topic', subRole: '连-construction (even)', children: [

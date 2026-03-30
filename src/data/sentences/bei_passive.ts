@@ -8,7 +8,7 @@ export const beiPassive: SentenceData[] = [
         pinyin: 'Nà zhī dà xiàng, bí zi bèi xiǎo hái er lā le yī xià.',
         translation: 'As for that elephant, its trunk was pulled by a child.',
 
-        explanation: 'This sentence has a **two-level structure**. The outer Topic sets the stage with a big frame: *as for that elephant...* Then inside the Comment, a narrower subject appears: **鼻子** (trunk). The trunk is then described using **被** (by), which marks a passive construction: something was done *to* the trunk. So the elephant frames the scene, and the trunk is what actually acts as the subject of the passive event. English would say it more directly: "A child pulled the elephant\'s trunk." Mandarin works from the outside in.',
+        explanation: 'This sentence has a **two-level structure**. The outer Topic sets the stage with a big frame: *as for that elephant...* Then inside the Comment, a narrower subject appears: **鼻子** ("trunk"). The trunk is then described using **被** ("by"), which marks a passive construction: something was done *to* the trunk. So the elephant frames the scene, and the trunk is what actually acts as the subject of the passive event. English would say it more directly: "A child pulled the elephant\'s trunk." Mandarin works from the outside in.',
         tree: {
             id: 'n6',
             role: 'Sentence',
@@ -106,7 +106,7 @@ export const beiPassive: SentenceData[] = [
         pinyin: 'Wǒ de qián bāo bèi rén tōu le.',
         translation: 'My wallet was stolen.',
 
-        explanation: 'The Topic is **我的钱包** (my wallet), the thing that was acted upon. Inside the Comment, **被** (bèi) introduces the agent: **人** (someone, literally "a person"). Then comes the verb **偷** (steal) and completion marker **了**. Compared to s6, this is a simpler and more everyday form of the BEI passive. Notice that 被 does not always name a specific agent; here it just says "by someone." The BEI frame always flips normal word order: instead of "person stole wallet," the wallet is foregrounded as Topic, and 被 marks that it is the *receiver* of the action.',
+        explanation: 'The Topic is **我的钱包** ("my wallet"), the thing that was acted upon. Inside the Comment, **被** (bèi) introduces the agent: **人** (someone, literally "a person"). Then comes the verb **偷** ("steal") and completion marker **了**. Compared to s6, this is a simpler and more everyday form of the BEI passive. Notice that 被 does not always name a specific agent; here it just says "by someone." The BEI frame always flips normal word order: instead of "person stole wallet," the wallet is foregrounded as Topic, and 被 marks that it is the *receiver* of the action.',
         tree: {
             id: 'n22',
             role: 'Sentence',
@@ -171,7 +171,7 @@ export const beiPassive: SentenceData[] = [
         chinese: '那封信被他撕掉了。',
         pinyin: 'Nà fēng xìn bèi tā sī diào le.',
         translation: 'That letter was torn up by him.',
-        explanation: '**那封信** (that letter) is the Topic, the thing affected. **被** introduces the agent: **他** (he/him). The verb **撕** (tear) is followed by the resultative complement **掉** (off / away, signals destruction or removal). BEI sentences almost always require a complement or 了 after the verb; bare *被+agent+verb* sounds incomplete. The **掉** tells you the letter didn\'t just get torn; it was torn *to pieces* or *away*. Compare: 撕破 (torn broken), 撕碎 (torn to shreds); each complement shades the result differently.',
+        explanation: '**那封信** ("that letter") is the Topic, the thing affected. **被** introduces the agent: **他** ("he/him"). The verb **撕** ("tear") is followed by the resultative complement **掉** ("off / away, signals destruction or removal"). BEI sentences almost always require a complement or 了 after the verb; bare *被+agent+verb* sounds incomplete. The **掉** tells you the letter didn\'t just get torn; it was torn *to pieces* or *away*. Compare: 撕破 (torn broken), 撕碎 (torn to shreds); each complement shades the result differently.',
         tree: {
             id: 'n48',
             role: 'Sentence',
@@ -248,7 +248,7 @@ export const beiPassive: SentenceData[] = [
         chinese: '小偷被警察抓住了。',
         pinyin: 'Xiǎo tōu bèi jǐng chá zhuā zhù le.',
         translation: 'The thief was caught by the police.',
-        explanation: '**小偷** (thief) is the Topic, the person affected. **被** marks the passive; **警察** (police) is the agent. The verb **抓** (grab/catch) is followed by the resultative complement **住** (firmly / hold in place). The **住** is key: it signals that the catching *stuck*: the thief didn\'t just get grabbed momentarily, he was held fast. The pattern V+住 is very common for actions that result in a fixed state: 记住 (remember firmly), 站住 (stand still / halt), 拿住 (hold onto). BEI + resultative is the most natural BEI pattern in speech.',
+        explanation: '**小偷** ("thief") is the Topic, the person affected. **被** marks the passive; **警察** ("police") is the agent. The verb **抓** ("grab/catch") is followed by the resultative complement **住** ("firmly / hold in place"). The **住** is key: it signals that the catching *stuck*: the thief didn\'t just get grabbed momentarily, he was held fast. The pattern V+住 is very common for actions that result in a fixed state: 记住 (remember firmly), 站住 (stand still / halt), 拿住 (hold onto). BEI + resultative is the most natural BEI pattern in speech.',
         tree: {
             id: 'n49',
             role: 'Sentence',

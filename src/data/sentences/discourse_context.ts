@@ -7,7 +7,7 @@ export const discourseContext: SentenceData[] = [
         chinese: '说想学中文。',
         pinyin: 'Shuō xiǎng xué Zhōng wén .',
         translation: '(He) said (he) wants to learn Chinese.',
-        explanation: 'This sentence drops **two subjects**: the outer one (who said it) and the inner one (who wants to learn), both are **[他]** (he), shown as ghost nodes in the tree. But here is the twist: these pronouns refer to someone in the **preceding sentence** (the grey card above), not anyone named in this sentence\'s own tree. The person was mentioned one sentence earlier, so Mandarin simply leaves them out here. It sounds incomplete in English, but it is completely natural in Mandarin when the context is clear.',
+        explanation: 'This sentence drops **two subjects**: the outer one (who said it) and the inner one (who wants to learn), both are **[他]** ("he"), shown as ghost nodes in the tree. But here is the twist: these pronouns refer to someone in the **preceding sentence** (the grey card above), not anyone named in this sentence\'s own tree. The person was mentioned one sentence earlier, so Mandarin simply leaves them out here. It sounds incomplete in English, but it is completely natural in Mandarin when the context is clear.',
         discourseContext: {
             chinese: '张三昨天来找我了。',
             pinyin: 'Zhāng Sān zuó tiān lái zhǎo wǒ le .',
@@ -92,7 +92,7 @@ export const discourseContext: SentenceData[] = [
         chinese: '非常有意思。',
         pinyin: 'Fēi cháng yǒu yì si .',
         translation: '(It\'s) really interesting.',
-        explanation: 'Just four words, and the subject is completely silent. The tree shows a ghost **[它]** (it) as the dropped topic, but the thing it refers to is the **book from the previous sentence**, shown in the grey card above. Once a topic is introduced in conversation, Mandarin can go several sentences without repeating it. What sounds like an incomplete fragment in English ("really interesting") is a perfectly formed, natural sentence in Mandarin. It is a vivid example of how much work context does in the language.',
+        explanation: 'Just four words, and the subject is completely silent. The tree shows a ghost **[它]** ("it") as the dropped topic, but the thing it refers to is the **book from the previous sentence**, shown in the grey card above. Once a topic is introduced in conversation, Mandarin can go several sentences without repeating it. What sounds like an incomplete fragment in English ("really interesting") is a perfectly formed, natural sentence in Mandarin. It is a vivid example of how much work context does in the language.',
         discourseContext: {
             chinese: '我买了一本新书。',
             pinyin: 'Wǒ mǎi le yī běn xīn shū .',

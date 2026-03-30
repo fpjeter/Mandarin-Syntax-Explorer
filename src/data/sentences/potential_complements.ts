@@ -177,7 +177,7 @@ export const potentialComplements: SentenceData[] = [
         chinese: '这本书你看得懂吗？',
         pinyin: 'Zhè běn shū nǐ kàn de dǒng ma？',
         translation: 'Can you understand this book?',
-        explanation: 'A **double-topic** structure with a potential complement question. **这本书** (this book; 本 is the measure word for books) is the outer Topic. **你** (you) is the inner Topic. The potential complement **看得懂** uses **看** (read/look) + **得** + **懂** (understand): *can read-to-the-point-of-understanding*. The **吗** at the end turns it into a yes/no question. To answer yes: 看**得**懂 (can understand). To answer no: 看**不**懂 (can\'t understand). This is a natural question form when politely checking comprehension.',
+        explanation: 'A **double-topic** structure with a potential complement question. **这本书** (this book; 本 is the measure word for books) is the outer Topic. **你** ("you") is the inner Topic. The potential complement **看得懂** uses **看** ("read/look") + **得** + **懂** ("understand"): *can read-to-the-point-of-understanding*. The **吗** at the end turns it into a yes/no question. To answer yes: 看**得**懂 ("can understand"). To answer no: 看**不**懂 (can\'t understand). This is a natural question form when politely checking comprehension.',
         tree: {
             id: 'n44',
             role: 'Sentence',
@@ -249,7 +249,7 @@ export const potentialComplements: SentenceData[] = [
         chinese: '昨晚我睡不着，一直到天亮。',
         pinyin: 'Zuó wǎn wǒ shuì bu zháo, yī zhí dào tiān liàng.',
         translation: 'Last night I couldn\'t fall asleep, right up until dawn.',
-        explanation: 'The time phrase **昨晚** (last night) sets the scene. **我** (I) is the Topic. The potential complement **睡不着**: **睡** (sleep) + **不** + **着** (着 here means "catch / latch onto": the state of being asleep was unreachable), conveys the inability to *reach* the state of sleep. This is a uniquely vivid potential complement: 着 as a result morpheme expresses "catching" or "settling into" a state. Compare: 找得着 (can find / manage to locate), 猜不着 (can\'t guess). The second clause **一直到天亮** (straight until dawn) extends the picture.',
+        explanation: 'The time phrase **昨晚** ("last night") sets the scene. **我** ("I") is the Topic. The potential complement **睡不着**: **睡** ("sleep") + **不** + **着** (着 here means "catch / latch onto": the state of being asleep was unreachable), conveys the inability to *reach* the state of sleep. This is a uniquely vivid potential complement: 着 as a result morpheme expresses "catching" or "settling into" a state. Compare: 找得着 ("can find / manage to locate"), 猜不着 (can\'t guess). The second clause **一直到天亮** (straight until dawn) extends the picture.',
         tree: {
             id: 'n45',
             role: 'Sentence',

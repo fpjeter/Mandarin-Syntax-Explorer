@@ -8,7 +8,7 @@ export const serialVerbConstructions: SentenceData[] = [
         pinyin: 'Dào le , zhǎo dào le , chī wán zài zǒu .',
         translation: '(We\'ve) arrived, (we) found it, (we\'ll) leave after eating.',
 
-        explanation: 'Three complete events chained in sequence, the hallmark of a **serial verb construction**. VP1: 到了 (arrived). VP2: 找到了 (found it, with the resultative 到 meaning "reached the target"). VP3: 吃完再走 (eat-finish-then-leave, a classic "finish X before Y" sequence). All three VPs share the same unnamed subject **[我们]** (we); the listener infers it from the surrounding conversation. This is why serial verbs feel so natural in Mandarin: once the actor is clear, you just stack events one after another, no conjunctions needed.',
+        explanation: 'Three complete events chained in sequence, the hallmark of a **serial verb construction**. Action 1: 到了 ("arrived"). Action 2: 找到了 (found it, with the resultative 到 meaning "reached the target"). Action 3: 吃完再走 (eat-finish-then-leave, a classic "finish X before Y" sequence). All three actions share the same implied subject **[我们]** ("we"), represented as a ghost node in the tree; the listener infers it from the surrounding conversation. This is why serial verbs feel so natural in Mandarin: once the actor is clear, you just stack events one after another, no conjunctions needed.',
         tree: {
             id: 'n14',
             role: 'Sentence',
@@ -100,7 +100,7 @@ export const serialVerbConstructions: SentenceData[] = [
         pinyin: 'Tā qí zì xíng chē qù shàng bān.',
         translation: 'He rides a bicycle to go to work.',
 
-        explanation: '**他** (he) is the Topic. The Comment chains three VPs sharing the same subject: **骑自行车** (ride a bicycle) → **去** (go) → **上班** (go to work). No conjunctions link them. In Mandarin, serial verb constructions simply stack VPs in chronological or purpose order. VP1 describes the manner/means (riding), VP2 the motion (going), VP3 the purpose (working). This pattern is pervasive: Chinese rarely uses "and then" or "in order to"; the sequence says it all. Compare with pivotal constructions where the subject changes at the pivot; here, the subject stays the same throughout.',
+        explanation: '**他** ("he") is the Topic. The Comment chains three actions sharing the same subject: **骑自行车** ("ride a bicycle") → **去** ("go") → **上班** ("go to work"). No conjunctions link them. In Mandarin, serial verb constructions simply stack actions in chronological or purpose order. The first action describes the manner/means (riding), the second the motion (going), the third the purpose (working). This pattern is pervasive: Chinese rarely uses "and then" or "in order to"; the sequence says it all. Compare with pivotal constructions where the subject changes at the pivot; here, the subject stays the same throughout.',
         tree: {
             id: 'n58',
             role: 'Sentence',
@@ -155,7 +155,7 @@ export const serialVerbConstructions: SentenceData[] = [
         chinese: '我拿着伞出门了。',
         pinyin: 'Wǒ ná zhe sǎn chū mén le.',
         translation: 'I took (was holding) an umbrella and went out.',
-        explanation: '**我** (I) is the Topic. Two VPs are chained: **拿着伞** (holding an umbrella) → **出门** (go out the door). The **着** on the first verb is the durative aspect marker, meaning the umbrella-holding is *ongoing* while the second action happens. This is a very common serial verb pattern: V1着 + object + V2 = "while doing V1, do V2." Examples: 听着音乐跑步 (run while listening to music), 笑着说 (say while laughing). The 着 on V1 turns it into a concurrent background action rather than a sequential step.',
+        explanation: '**我** ("I") is the Topic. Two actions are chained: **拿着伞** ("holding an umbrella") → **出门** ("go out the door"). The **着** on the first verb is the durative aspect marker, meaning the umbrella-holding is *ongoing* while the second action happens. This is a very common serial verb pattern: V1着 + object + V2 = "while doing V1, do V2." Examples: 听着音乐跑步 ("run while listening to music"), 笑着说 ("say while laughing"). The 着 on V1 turns it into a concurrent background action rather than a sequential step.',
         tree: {
             id: 'n59',
             role: 'Sentence',
@@ -222,7 +222,7 @@ export const serialVerbConstructions: SentenceData[] = [
         chinese: '学了以后要经常练习，这样才会有收获。',
         pinyin: 'Xué le yǐ hòu yào jīng cháng liàn xí, zhè yàng cái huì yǒu shōu huò.',
         translation: 'After studying, you should practice regularly; only then will you gain something.',
-        explanation: 'This is the modern Mandarin way of expressing the classical 學而時習之. Instead of the terse classical connective 而, modern Chinese uses **以后** (after) to sequence the two actions "study" and "practice." The second clause uses the **才** pattern: only *then* will the result follow. *Grammatically,* the sentence chains two verb phrases under one implied subject (you): first 学了以后 (after studying), then 要经常练习 (should regularly practice). The second clause introduces a new frame with 这样 (\"this way\"), followed by 才会 (\"only then will\") and the result 有收获 (\"have gains\").',
+        explanation: 'This is the modern Mandarin way of expressing the classical 學而時習之. Instead of the terse classical connective 而, modern Chinese uses **以后** ("after") to sequence the two actions "study" and "practice." The second clause uses the **才** pattern: only *then* will the result follow. *Grammatically,* the sentence chains two verb phrases under one implied subject (you): first 学了以后 ("after studying"), then 要经常练习 ("should regularly practice"). The second clause introduces a new frame with 这样 (\"this way\"), followed by 才会 (\"only then will\") and the result 有收获 (\"have gains\").',
         tree: {
             id: 's68-root', role: 'Sentence', children: [
                 { id: 's68-c1', role: 'Topic', subRole: 'clause 1', children: [

@@ -7,7 +7,7 @@ export const correlativePatterns: SentenceData[] = [
         chinese: '中文越学越有意思。',
         pinyin: 'Zhōng wén yuè xué yuè yǒu yì si.',
         translation: 'The more you study Chinese, the more interesting it gets.',
-        explanation: '**中文** (Chinese) is the Topic. The **越…越…** (yuè…yuè…) frame pairs two clauses: **越学** (the more you study) and **越有意思** (the more interesting). The pattern is: 越 A 越 B: as A increases, B increases. The subject of 学 is dropped (pro-drop, the general "you"). This correlative frame is one of the most elegant in Mandarin: no conjunction, no relative clause, just the repeated 越 linking cause and effect. Other examples: 越吃越胖 (the more you eat, the fatter you get), 越想越难过 (the more you think about it, the sadder you feel).',
+        explanation: '**中文** ("Chinese") is the Topic. The **越…越…** (yuè…yuè…) frame pairs two clauses: **越学** ("the more you study") and **越有意思** ("the more interesting"). The pattern is: 越 A 越 B: as A increases, B increases. The subject of 学 is omitted (an implied general "you"). This correlative frame is one of the most elegant in Mandarin: no conjunction, no relative clause, just the repeated 越 linking cause and effect. Other examples: 越吃越胖 ("the more you eat, the fatter you get"), 越想越难过 ("the more you think about it, the sadder you feel").',
         tree: {
             id: 'n60',
             role: 'Sentence',
@@ -69,7 +69,7 @@ export const correlativePatterns: SentenceData[] = [
         chinese: '他一说话就脸红。',
         pinyin: 'Tā yī shuō huà jiù liǎn hóng.',
         translation: 'The moment he speaks, he blushes.',
-        explanation: '**他** (he) is the Topic. The **一…就…** (yī…jiù…) frame expresses "as soon as A, immediately B." **一说话** (as soon as he speaks) triggers **就脸红** (immediately blushes). The 一 + verb signals the trigger event; the 就 signals instantaneous consequence. 脸红 is a subject-predicate compound: 脸 (face) + 红 (turns red). This pattern is extremely common in everyday speech: 一下雨就堵车 (as soon as it rains, traffic jams), 一看见她就笑 (the moment he sees her, he smiles). The two clauses share the same subject here, but they don\'t have to.',
+        explanation: '**他** ("he") is the Topic. The **一…就…** (yī…jiù…) frame expresses "as soon as A, immediately B." **一说话** ("as soon as he speaks") triggers **就脸红** ("immediately blushes"). The 一 + verb signals the trigger event; the 就 signals instantaneous consequence. 脸红 is a subject-predicate compound: 脸 ("face") + 红 ("turns red"). This pattern is extremely common in everyday speech: 一下雨就堵车 ("as soon as it rains, traffic jams"), 一看见她就笑 ("the moment he sees her, he smiles"). The two clauses share the same subject here, but they don\'t have to.',
         tree: {
             id: 'n61',
             role: 'Sentence',

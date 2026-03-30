@@ -7,7 +7,7 @@ export const basicTopicComment: SentenceData[] = [
         chinese: '他打碎了那个花瓶。',
         pinyin: 'Tā dǎ suì le nà ge huā píng.',
         translation: 'He broke that vase.',
-        explanation: 'This is the most basic Mandarin sentence pattern: first say **who or what you are talking about**, then say **what happened**. Here, **他** (he) is what the sentence is about; this is called the **Topic**. Everything that follows (the breaking, the vase) is the **Comment**: the actual event. The tree splits directly at that boundary. Notice that **打碎** is a compound action: 打 means "hit" and 碎 means "shatter," stacked together they mean "smash to pieces". The **了** after it marks that the action is done and complete.',
+        explanation: 'This is the most basic Mandarin sentence pattern: first say **who or what you are talking about**, then say **what happened**. Here, **他** ("he") is what the sentence is about; this is called the **Topic**. Everything that follows (the breaking, the vase) is the **Comment**: the actual event. The tree splits directly at that boundary. Notice that **打碎** is a compound action: 打 means "hit" and 碎 means "shatter," stacked together they mean "smash to pieces". The **了** after it marks that the action is done and complete.',
         tree: {
             id: 'n1',
             role: 'Sentence',
@@ -71,7 +71,7 @@ export const basicTopicComment: SentenceData[] = [
         chinese: '我喜欢在图书馆看书。',
         pinyin: 'Wǒ xǐ huān zài tú shū guǎn kàn shū.',
         translation: 'I like reading books in the library.',
-        explanation: '**我** (I) is the Topic. The Comment strings two verb phrases together without repeating the subject. Mandarin can chain actions like this naturally. First **喜欢** (like), then the thing being liked: **going to the library and reading**. Notice how the location (在图书馆) comes *before* the verb (看), not after it the way English does. In Mandarin, where something happens is set up as background context before the action is named.',
+        explanation: '**我** ("I") is the Topic. The Comment strings two verb phrases together without repeating the subject. Mandarin can chain actions like this naturally. First **喜欢** ("like"), then the thing being liked: **going to the library and reading**. Notice how the location (在图书馆) comes *before* the verb (看), not after it the way English does. In Mandarin, where something happens is set up as background context before the action is named.',
         tree: {
             id: 'n2',
             role: 'Sentence',
@@ -143,7 +143,7 @@ export const basicTopicComment: SentenceData[] = [
         chinese: '他决定开始学开车。',
         pinyin: 'Tā jué dìng kāi shǐ xué kāi chē.',
         translation: 'He decided to start learning to drive a car.',
-        explanation: '**他** (he) is the Topic. The Comment stacks **four verb phrases** one inside the other like Russian dolls, with no connecting word between them, with no equivalent of English "to". Each verb is the object of the one before it: decided → [to start → [to learn → [to drive a car]]]. This pattern, where verbs chain together without joining words, is completely natural in Mandarin and very common in everyday speech. The tree expands outward to show all four nested layers.',
+        explanation: '**他** ("he") is the Topic. The Comment stacks **four verb phrases** one inside the other like Russian dolls, with no connecting word between them, with no equivalent of English "to". Each verb is the object of the one before it: decided → [to start → [to learn → [to drive a car]]]. This pattern, where verbs chain together without joining words, is completely natural in Mandarin and very common in everyday speech. The tree expands outward to show all four nested layers.',
         tree: {
             id: 'n5',
             role: 'Sentence',
@@ -222,7 +222,7 @@ export const basicTopicComment: SentenceData[] = [
         chinese: '我看了半天，还是看不了，就不看了。',
         pinyin: 'Wǒ kàn le bàn tiān, hái shì kàn bù liǎo, jiù bù kàn le.',
         translation: 'I looked at it for a long time, still couldn\'t finish, so I gave up looking.',
-        explanation: '**我** (I) is the Topic once, and then acts as the unstated subject of **three separate clauses** in a row. Mandarin does not repeat the subject between clauses. The Comment chains three events: tried for a long time → still couldn\'t finish → so gave up. The middle clause **看不了** is especially interesting: sandwiching **不** (not) between the verb and its result means *"unable to achieve"*; here, unable to finish reading. This is called a **potential complement** and is a very common pattern in Mandarin.',
+        explanation: '**我** ("I") is the Topic once, and then acts as the unstated subject of **three separate clauses** in a row. Mandarin does not repeat the subject between clauses. The Comment chains three events: tried for a long time → still couldn\'t finish → so gave up. The middle clause **看不了** is especially interesting: sandwiching **不** (not) between the verb and its result means *"unable to achieve"*; here, unable to finish reading. This is called a **potential complement** and is a very common pattern in Mandarin.',
         tree: {
             id: 'n7',
             role: 'Sentence',
@@ -332,7 +332,7 @@ export const basicTopicComment: SentenceData[] = [
         pinyin: 'Nà běn shū , fàng zài zhuō zi shàng le .',
         translation: 'That book, (it\'s been) put on the table.',
 
-        explanation: '**那本书** (that book) is the Topic. Inside the Comment, the actual subject (whoever placed the book) is never stated. But there\'s something more: the dropped **[它]** (it) clearly refers *back* to the book in the Topic. The Topic is not just setting the scene; it is literally acting as the hidden subject of the action that follows. The **red arc** in the tree draws a connecting line from the ghost node back to the Topic, making this invisible link visible. This is one of the most common patterns in Mandarin: name a topic, then silently use it as the subject.',
+        explanation: '**那本书** ("that book") is the Topic. Inside the Comment, the actual subject (whoever placed the book) is never stated. But there\'s something more: the dropped **[它]** (it) clearly refers *back* to the book in the Topic. The Topic is not just setting the scene; it is literally acting as the hidden subject of the action that follows. The **red arc** in the tree draws a connecting line from the ghost node back to the Topic, making this invisible link visible. This is one of the most common patterns in Mandarin: name a topic, then silently use it as the subject.',
         tree: {
             id: 'n15',
             role: 'Sentence',
@@ -415,7 +415,7 @@ export const basicTopicComment: SentenceData[] = [
         chinese: '张三，爱唱歌。',
         pinyin: 'Zhāng Sān , ài chàng gē .',
         translation: 'Zhang San, (he) loves singing.',
-        explanation: '**张三** (Zhang San, a personal name) is the Topic. The Comment describes what he does: loves singing. But the grammatical subject of "loves" (爱唱歌) is never stated; the listener understands it is the same Zhang San who was just named. The **red arc** in the tree runs from the invisible **[他]** node back to 张三, making that link visible. Naming someone as the Topic and then talking about them without repeating the name is one of the most natural patterns in everyday Mandarin conversation.',
+        explanation: '**张三** ("Zhang San, a personal name") is the Topic. The Comment describes what he does: loves singing. But the grammatical subject of "loves" (爱唱歌) is never stated; the listener understands it is the same Zhang San who was just named. The **red arc** in the tree runs from the invisible **[他]** node back to 张三, making that link visible. Naming someone as the Topic and then talking about them without repeating the name is one of the most natural patterns in everyday Mandarin conversation.',
         tree: {
             id: 'n16',
             role: 'Sentence',
@@ -481,7 +481,7 @@ export const basicTopicComment: SentenceData[] = [
         chinese: '他学中文学了五年了。',
         pinyin: 'Tā xué Zhōng wén xué le wǔ nián le.',
         translation: 'He has been studying Chinese for five years now.',
-        explanation: 'When a Mandarin verb has both an **object** (the thing acted on) and a **duration** (how long), you cannot place them side by side; the verb must be **repeated**. First: **学中文** (study Chinese, verb + object). Then: **学了五年** (studied for five years, same verb again, now followed by the time). In English we just say "studied Chinese for five years": one verb, no repetition. Mandarin separates the two ideas into two verb phrases, glued by repeating the verb. The final **了** signals that the studying is still ongoing up to this moment.',
+        explanation: 'When a Mandarin verb has both an **object** ("the thing acted on") and a **duration** ("how long"), you cannot place them side by side; the verb must be **repeated**. First: **学中文** (study Chinese, verb + object). Then: **学了五年** ("studied for five years, same verb again, now followed by the time"). In English we just say "studied Chinese for five years": one verb, no repetition. Mandarin separates the two ideas into two verb phrases, glued by repeating the verb. The final **了** signals that the studying is still ongoing up to this moment.',
         tree: {
             id: 'n19',
             role: 'Sentence',
@@ -566,7 +566,7 @@ export const basicTopicComment: SentenceData[] = [
         chinese: '几个人一起走，里面肯定有值得我学习的人。',
         pinyin: 'Jǐ gè rén yì qǐ zǒu, lǐ miàn kěn dìng yǒu zhí de wǒ xué xí de rén.',
         translation: 'When a few people walk together, there is surely someone worth learning from among them.',
-        explanation: 'This modernizes the classical 三人行必有我師焉. The classical construction compresses the entire idea into eight characters; modern Mandarin spells it out with a Topic-Comment frame. *Grammatically,* the Topic (几个人一起走) sets up a situation: \"when a few people walk together.\" The Comment then asserts: 里面 (\"among them\") + 肯定有 (\"surely there is\") + a complex noun phrase. The noun phrase 值得我学习的人 (\"a person worth my studying\") uses a nested 的 nominalization.',
+        explanation: 'This modernizes the classical 三人行必有我師焉. The classical construction compresses the entire idea into eight characters; modern Mandarin spells it out with a Topic-Comment frame. *Grammatically,* the Topic (几个人一起走) sets up a situation: \"when a few people walk together.\" The Comment then asserts: 里面 (\"among them\") + 肯定有 (\"surely there is\") + a complex noun phrase. The noun phrase 值得我学习的人 (\"a person worth my studying\") uses a nested 的 descriptive noun phrase.',
         tree: {
             id: 's70-root', role: 'Sentence', children: [
                 { id: 's70-topic', role: 'Topic', subRole: 'situational frame', children: [
@@ -592,7 +592,7 @@ export const basicTopicComment: SentenceData[] = [
         chinese: '生命也是我想要的东西。',
         pinyin: 'Shēng mìng yě shì wǒ xiǎng yào de dōng xi.',
         translation: 'Life is also something I desire.',
-        explanation: 'This modernizes the classical 生亦我所欲也. The classical 所欲 (\"that which is desired\") becomes 想要的东西 (\"things I want to\"); the classical copula-like 也 at the end becomes the modern copula 是. *Grammatically,* 生命 (\"life\") is the Topic. The Comment uses 也 (\"also\") as an adverb before 是 (\"is\"), then a 的 nominalization: 我想要的东西 (\"the thing I want\"). This is a straightforward Topic-Comment identification sentence.',
+        explanation: 'This modernizes the classical 生亦我所欲也. The classical 所欲 (\"that which is desired\") becomes 想要的东西 (\"things I want to\"); the classical linking verb-like 也 at the end becomes the modern linking verb 是. *Grammatically,* 生命 (\"life\") is the Topic. The Comment uses 也 (\"also\") as an adverb before 是 (\"is\"), then a 的 descriptive noun phrase: 我想要的东西 (\"the thing I want\"). This is a straightforward Topic-Comment identification sentence.',
         tree: {
             id: 's78-root', role: 'Sentence', children: [
                 { id: 's78-t', role: 'Topic', text: { hanzi: '生命', pinyin: 'shēng mìng', translation: 'life' } },
@@ -613,7 +613,7 @@ export const basicTopicComment: SentenceData[] = [
         chinese: '了解别人的人算聪明，了解自己的人才算高明。',
         pinyin: 'Liǎo jiě bié rén de rén suàn cōng míng, liǎo jiě zì jǐ de rén cái suàn gāo míng.',
         translation: 'Those who understand others are clever; those who understand themselves are truly wise.',
-        explanation: 'This modernizes the classical 知人者智自知者明. The classical 者 nominalizer becomes 的人, and the classical terse predication becomes 算 (\"counts as\") + quality. *Grammatically,* two parallel Topic-Comment clauses share the same structure. Each Topic is a 的 nominalization: 了解别人的人 (\"people who understand others\"). Each Comment uses 算 (\"counts as\") as the copula-like verb. The second clause adds 才 (\"only then\") for emphasis, distinguishing mere cleverness from true wisdom.',
+        explanation: 'This modernizes the classical 知人者智自知者明. The classical 者 particle becomes 的人, and the classical terse predication becomes 算 (\"counts as\") + quality. *Grammatically,* two parallel Topic-Comment clauses share the same structure. Each Topic is a 的 descriptive noun phrase: 了解别人的人 (\"people who understand others\"). Each Comment uses 算 (\"counts as\") as the linking verb. The second clause adds 才 (\"only then\") for emphasis, distinguishing mere cleverness from true wisdom.',
         tree: {
             id: 's86-root', role: 'Sentence', children: [
                 { id: 's86-c1', role: 'Topic', subRole: 'first clause', children: [
@@ -642,7 +642,7 @@ export const basicTopicComment: SentenceData[] = [
         chinese: '做事正义的人，帮助他的人就多；做事不正义的人，帮助他的人就少。',
         pinyin: 'Zuò shì zhèng yì de rén, bāng zhù tā de rén jiù duō; zuò shì bú zhèng yì de rén, bāng zhù tā de rén jiù shǎo.',
         translation: 'Those who act justly gain much support; those who act unjustly find little.',
-        explanation: 'This modernizes the classical 得道者多助失道者寡助. The classical 者 nominalizer becomes 的人, and the terse two-character predicates expand into full modern clauses. *Grammatically,* two parallel Topic-Comment pairs share the same structure. Each Topic is a 的 nominalization: 做事正义的人 (\"people who do things justly\"). Each Comment is also a 的 nominalization used as subject: 帮助他的人 (\"people who help them\") + 就 + quality (多/少). This showcases how modern Mandarin builds complex subjects through nested 的 phrases.',
+        explanation: 'This modernizes the classical 得道者多助失道者寡助. The classical 者 particle becomes 的人, and the terse two-character predicates expand into full modern clauses. *Grammatically,* two parallel Topic-Comment pairs share the same structure. Each Topic is a 的 descriptive noun phrase: 做事正义的人 (\"people who do things justly\"). Each Comment is also a 的 descriptive noun phrase used as subject: 帮助他的人 (\"people who help them\") + 就 + quality (多/少). This showcases how modern Mandarin builds complex subjects through nested 的 phrases.',
         tree: {
             id: 's90-root', role: 'Sentence', children: [
                 { id: 's90-c1', role: 'Topic', subRole: 'first clause', children: [

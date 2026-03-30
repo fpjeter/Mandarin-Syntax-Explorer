@@ -7,7 +7,7 @@ export const aspectMarkers: SentenceData[] = [
         chinese: '门开着呢。',
         pinyin: 'Mén kāi zhe ne.',
         translation: 'The door is open (right now).',
-        explanation: '**门** (door) is the Topic. The verb **开** (open) carries the durative aspect marker **着** (zhe). This doesn\'t mean "opening" (action in progress); it means the *state that resulted from opening* is still in effect. The door opened at some point and remains open now. The sentence-final **呢** (ne) reinforces the ongoing-state reading. This is **着** in its stative sense, one of its two primary functions. The other is the concurrent-action sense (V着 while doing something else, as in s59). Distinguishing these two is key: 坐着 can mean "is seated (state)" or "while sitting (concurrent)."',
+        explanation: '**门** ("door") is the Topic. The verb **开** ("open") carries the durative aspect marker **着** ("zhe"). This doesn\'t mean "opening" (action in progress); it means the *state that resulted from opening* is still in effect. The door opened at some point and remains open now. The sentence-final **呢** (ne) reinforces the ongoing-state reading. This is **着** in its stative sense, one of its two primary functions. The other is the concurrent-action sense (V着 while doing something else, as in s59). Distinguishing these two is key: 坐着 can mean "is seated (state)" or "while sitting (concurrent)."',
         tree: {
             id: 'n62',
             role: 'Sentence',
@@ -55,7 +55,7 @@ export const aspectMarkers: SentenceData[] = [
         chinese: '你去过长城吗？',
         pinyin: 'Nǐ qù guo Cháng Chéng ma?',
         translation: 'Have you been to the Great Wall?',
-        explanation: '**你** (you) is the Topic. The verb **去** (go) is followed by the experiential aspect marker **过** (guo). This doesn\'t ask "Did you go?" (specific past event) but "Have you ever gone?" (life experience). The difference between 了 and 过 is crucial: 我去了长城 means "I went to the Great Wall (at a specific time)"; 我去过长城 means "I\'ve been to the Great Wall (at some point in my life)." The **吗** makes it a question. To answer: 去过 (yes, I have) or 没去过 (no, never). Notice the negation uses 没, not 不. Experiential 过 always pairs with 没.',
+        explanation: '**你** ("you") is the Topic. The verb **去** ("go") is followed by the experiential aspect marker **过** ("guo"). This doesn\'t ask "Did you go?" (specific past event) but "Have you ever gone?" (life experience). The difference between 了 and 过 is crucial: 我去了长城 means "I went to the Great Wall (at a specific time)"; 我去过长城 means "I\'ve been to the Great Wall (at some point in my life)." The **吗** makes it a question. To answer: 去过 (yes, I have) or 没去过 (no, never). Notice the negation uses 没, not 不. Experiential 过 always pairs with 没.',
         tree: {
             id: 'n63',
             role: 'Sentence',
@@ -108,7 +108,7 @@ export const aspectMarkers: SentenceData[] = [
         chinese: '我每天都会反省自己三次。',
         pinyin: 'Wǒ měi tiān dōu huì fǎn xǐng zì jǐ sān cì.',
         translation: 'Every day I reflect on myself three times.',
-        explanation: 'This modernizes the classical 吾日三省吾身. Modern Mandarin makes the frequency explicit with 每天 (\"every day\") and the habitual marker 都会 (\"always will\"), while classical Chinese compressed it into 日 (\"daily\"). *Grammatically,* 我 is the Topic. The Comment uses 每天 (time adverb) + 都会 (habitual marker, \"always will\") + 反省 (\"reflect on\") + 自己 (\"oneself\") + 三次 (\"three times,\" a verb complement showing frequency). The classical 吾身 (\"my person\") becomes reflexive 自己.',
+        explanation: 'This modernizes the classical 吾日三省吾身. Modern Mandarin makes the frequency explicit with 每天 (\"every day\") and the habitual marker 都会 (\"always will\"), while classical Chinese compressed it into 日 (\"daily\"). *Grammatically,* 我 is the Topic. The Comment uses 每天 ("time adverb") + 都会 (habitual marker, \"always will\") + 反省 (\"reflect on\") + 自己 (\"oneself\") + 三次 (\"three times,\" a verb complement showing frequency). The classical 吾身 (\"my person\") becomes reflexive 自己.',
         tree: {
             id: 's75-root', role: 'Sentence', children: [
                 { id: 's75-t', role: 'Topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
@@ -128,7 +128,7 @@ export const aspectMarkers: SentenceData[] = [
         chinese: '从来没有过这样的事。',
         pinyin: 'Cóng lái méi yǒu guò zhè yàng de shì.',
         translation: 'There has never been such a thing.',
-        explanation: 'This modernizes the classical 未之有也. The classical object-fronting pattern (之 before the verb 有) becomes standard modern word order. *Grammatically,* 从来 (\"ever/always\") + 没有 (\"have not\") + 过 (experiential aspect marker) together express \"have never experienced.\" The 过 marks that this negation covers all past experience, not just a single event. The object 这样的事 (\"this kind of thing\") uses 的 to nominalize the description.',
+        explanation: 'This modernizes the classical 未之有也. The classical object-fronting pattern (之 before the verb 有) becomes standard modern word order. *Grammatically,* 从来 (\"ever/always\") + 没有 (\"have not\") + 过 ("experiential aspect marker") together express \"have never experienced.\" The 过 marks that this negation covers all past experience, not just a single event. The object 这样的事 (\"this kind of thing\") uses 的 to turn the description into a noun phrase.',
         tree: {
             id: 's81-root', role: 'Sentence', children: [
                 { id: 's81-adv', role: 'Adjunct', subRole: 'time scope', text: { hanzi: '从来', pinyin: 'cóng lái', translation: 'ever/never' } },

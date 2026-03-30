@@ -30,7 +30,7 @@ export const getAggregateText = (node: AppGrammarNodeData): AppGrammarNodeData['
     return hanzi ? { hanzi, pinyin, translation: translation.trim() } : undefined;
 };
 
-// ── Pro-drop detection ───────────────────────────────────────────────────────
+// ── Dropped subject detection ────────────────────────────────────────────────
 
 /** Returns true if any node in the tree has isDropped=true */
 export const hasProDrop = (node: AppGrammarNodeData): boolean => {

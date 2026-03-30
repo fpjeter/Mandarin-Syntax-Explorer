@@ -99,7 +99,7 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
                             <path d="M5 6 L0 0 L10 0 Z" />
                         </svg>
                         <span className="text-[7px] xl:text-[8px] text-rose-400 font-semibold tracking-widest uppercase -mt-0.5">
-                            pro-drop
+                            implied
                         </span>
                     </div>
                 </>

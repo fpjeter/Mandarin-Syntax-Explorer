@@ -117,7 +117,7 @@ export const rhetoricalQuestions: SentenceData[] = [
         pinyin: 'Zhè jiàn shì fēi nǐ qīn zì qù bàn bù kě.',
         translation: 'This matter absolutely must be handled by you yourself; there is no way around it.',
 
-        explanation: 'The outer Topic **这件事** (this matter) sets the frame. The Comment uses a paired framing structure: **非** at the start and **不可** at the end lock together to express absolute necessity, literally *"it is not the case that it can be avoided"*. Between them: who must act (you), how (personally, **亲自**), and what the action is (go handle it). This double negative is a fixed expression: 非...不可 roughly means *"must, without exception"*. You\'ll encounter the same pattern in Chinese proverbs and formal writing.',
+        explanation: 'The outer Topic **这件事** ("this matter") sets the frame. The Comment uses a paired framing structure: **非** at the start and **不可** at the end lock together to express absolute necessity, literally *"it is not the case that it can be avoided"*. Between them: who must act (you), how (personally, **亲自**), and what the action is (go handle it). This double negative is a fixed expression: 非...不可 roughly means *"must, without exception"*. You\'ll encounter the same pattern in Chinese proverbs and formal writing.',
         tree: {
             id: 'n11',
             role: 'Sentence',
@@ -209,7 +209,7 @@ export const rhetoricalQuestions: SentenceData[] = [
         pinyin: 'Nǐ nán dào bù zhī dào ma?',
         translation: 'Don\'t you know? (Surely you must know!)',
 
-        explanation: '**你** (you) is the Topic. **难道** (don\'t tell me / could it be that) is the rhetorical marker: it signals that the speaker expects the opposite of what the sentence literally says. The negation **不知道** (don\'t know) combined with 难道 produces: "You couldn\'t possibly not know" → "Of course you know!" The sentence-final **吗** reinforces the questioning tone but the expected answer is already baked in. 难道 always implies surprise, disbelief, or reproach. It\'s one of the most emotionally loaded adverbs in Mandarin.',
+        explanation: '**你** ("you") is the Topic. **难道** (don\'t tell me / could it be that) is the rhetorical marker: it signals that the speaker expects the opposite of what the sentence literally says. The negation **不知道** (don\'t know) combined with 难道 produces: "You couldn\'t possibly not know" → "Of course you know!" The sentence-final **吗** reinforces the questioning tone but the expected answer is already baked in. 难道 always implies surprise, disbelief, or reproach. It\'s one of the most emotionally loaded adverbs in Mandarin.',
         tree: {
             id: 'n56',
             role: 'Sentence',
@@ -263,7 +263,7 @@ export const rhetoricalQuestions: SentenceData[] = [
         chinese: '这件事非解决不可。',
         pinyin: 'Zhè jiàn shì fēi jiě jué bù kě.',
         translation: 'This matter absolutely must be resolved.',
-        explanation: '**这件事** (this matter; 件 is the measure word for affairs/items) is the Topic. The Comment uses the double-negation frame **非…不可**: 非 (must / unless) + verb + 不可 (not acceptable). The two negatives produce a strong affirmative: "it is not acceptable to NOT resolve it" → "it must be resolved." This is one of Mandarin\'s most emphatic constructions for expressing necessity. Unlike 难道 which questions, 非…不可 *demands*. The pattern is formulaic: 非 + [verb phrase] + 不可. You can slot any VP inside: 非去不可 (must go), 非说清楚不可 (must explain clearly).',
+        explanation: '**这件事** (this matter; 件 is the measure word for affairs/items) is the Topic. The Comment uses the double-negative pattern **非…不可**: 非 ("must / unless") + verb + 不可 ("not acceptable"). The two negatives produce a strong affirmative: "it is not acceptable to NOT resolve it" → "it must be resolved." This is one of Mandarin\'s most emphatic constructions for expressing necessity. Unlike 难道 which questions, 非…不可 *demands*. The pattern is formulaic: 非 + [verb phrase] + 不可. You can slot any action inside: 非去不可 (must go), 非说清楚不可 (must explain clearly).',
         tree: {
             id: 'n57',
             role: 'Sentence',

@@ -185,7 +185,7 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
                             )}
                             {isGhost && (
                                 <span className="ml-1 text-[9px] text-rose-400 font-bold bg-rose-900/30 border border-rose-500/40 px-1 py-0.5 rounded tracking-normal normal-case">
-                                    pro-drop
+                                    implied
                                 </span>
                             )}
                             {showBadges && matchedBadges.map(b => (

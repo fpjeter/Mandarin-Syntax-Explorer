@@ -66,16 +66,16 @@ export const ClassicalGrammarGuide: React.FC = () => {
                 </p>
                 <div className="space-y-1.5">
                     {([
-                        ['之 zhī', 'Genitive marker ("\'s"), object pronoun ("it"), or structural filler'],
-                        ['者 zhě', 'Nominalizer — "the one who…" or "that which…"'],
-                        ['所 suǒ', 'Nominalizer — "that which (is verbed)" — marks the passive recipient'],
+                        ['之 zhī', 'Possession marker ("\'s"), object pronoun ("it"), or structural filler'],
+                        ['者 zhě', 'Person/Thing marker — "the one who…" or "that which…"'],
+                        ['所 suǒ', 'Action receiver — "that which (is acted upon)"'],
                         ['而 ér', 'Connective — "and then", "but", or links sequential actions'],
                         ['乎 hū', 'Question particle — turns a statement into a rhetorical question'],
                         ['也 yě', 'Sentence-final — asserts identity or states a fact: "X is Y 也"'],
-                        ['於 yú', 'Coverb — "at / in / from / to" — locative & comparative marker'],
-                        ['以 yǐ', 'Coverb — "using / by means of / in order to"'],
+                        ['於 yú', 'Location & Comparison marker — "at / in / from / to"'],
+                        ['以 yǐ', 'Tool word — "using / by means of / in order to"'],
                         ['非 fēi', 'Negation — "is not" (negates identity, not action)'],
-                        ['莫 mò', 'Negation — "no one / nothing" — negative indefinite pronoun'],
+                        ['莫 mò', 'Negation — means "no one" or "nothing"'],
                     ] as const).map(([word, desc]) => (
                         <div key={word} className="flex items-baseline gap-2">
                             <span className="text-[11px] font-bold text-amber-200 whitespace-nowrap font-chinese-ui min-w-[52px]">{word}</span>
@@ -85,7 +85,7 @@ export const ClassicalGrammarGuide: React.FC = () => {
                 </div>
             </section>
 
-            {/* ── 4. The 之 System (Genitive & Modification) ── */}
+            {/* ── 4. The 之 System (Possession & Description) ── */}
             <section>
                 <h3 className="text-[10px] font-bold uppercase tracking-widest text-amber-400 mb-1.5">之 — the backbone particle</h3>
                 <p className="text-[11px] text-slate-300 leading-relaxed">
@@ -94,7 +94,7 @@ export const ClassicalGrammarGuide: React.FC = () => {
                 </p>
                 <div className="mt-2 space-y-1.5">
                     <div className="bg-stone-800/40 border border-stone-700/30 rounded-lg px-3 py-2">
-                        <p className="text-[10px] text-amber-300 font-bold">Genitive (possessive)</p>
+                        <p className="text-[10px] text-amber-300 font-bold">Showing possession ('s)</p>
                         <p className="text-[10px] text-slate-300 mt-0.5">
                             <span className="text-amber-200 font-chinese-ui">師者，所以傳道授業解惑<strong className="text-amber-400">之</strong>者也。</span>
                         </p>
@@ -147,7 +147,7 @@ export const ClassicalGrammarGuide: React.FC = () => {
                     {([
                         ['不 bù', 'General negation of verbs & adjectives', 'bg-rose-900/20 border-rose-600/30'],
                         ['非 fēi', 'Negates identity: "is not X"', 'bg-red-900/20 border-red-600/30'],
-                        ['莫 mò', 'No one / nothing (neg. pronoun)', 'bg-pink-900/20 border-pink-600/30'],
+                        ['莫 mò', 'No one / nothing (means "none")', 'bg-pink-900/20 border-pink-600/30'],
                     ] as const).map(([word, desc, cls]) => (
                         <div key={word} className={`${cls} border rounded-xl p-2`}>
                             <p className="text-[11px] font-bold text-slate-200 font-chinese-ui">{word}</p>
@@ -165,8 +165,7 @@ export const ClassicalGrammarGuide: React.FC = () => {
             <section>
                 <h3 className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-1.5">Coverbs · 介詞</h3>
                 <p className="text-[11px] text-slate-300 leading-relaxed">
-                    Classical Chinese uses <strong className="text-emerald-300">coverbs</strong> (介詞) where
-                    modern Chinese uses prepositions. They always come{' '}
+                    Classical Chinese uses <strong className="text-emerald-300">coverbs</strong> (介詞) — action words that function like prepositions ('at', 'with', 'from'). They always come{' '}
                     <strong className="text-emerald-300">before</strong> the main verb:
                 </p>
                 <div className="mt-2 space-y-1.5">

@@ -23,12 +23,12 @@ export const classicalGlossary: Record<GrammarRole, { headline: string; detail: 
     Subject: {
         headline: 'Who does the action',
         detail:
-            'The agent of the verb. Often the same as the topic, but in classical Chinese the subject is frequently omitted (pro-dropped) when recoverable from context.',
+            'The agent of the verb. Often the same as the topic, but in classical Chinese the subject is frequently omitted (dropped) when recoverable from context.',
     },
     Predicate: {
         headline: 'The action or description',
         detail:
-            'Everything said about the subject: the verb, its object, and any adjuncts. Classical predicates are often strikingly compact — a single character can carry the full predicate.',
+            'Everything said about the subject: the verb, its object, and any modifiers. Classical predicates are often strikingly compact — a single character can carry the full predicate.',
     },
     'Verb Phrase': {
         headline: 'A verb and its dependents',
@@ -58,17 +58,17 @@ export const classicalGlossary: Record<GrammarRole, { headline: string; detail: 
     Preposition: {
         headline: 'A linking word showing relationship',
         detail:
-            'Classical coverbs like 於 (at/from/than), 以 (by means of/with), and 自 (from) that mark the relationship between a verb and a noun. These are the ancestors of modern 在, 从, 用.',
+            'Linking words (often called "coverbs") like 於 (at/from/than), 以 (by means of/with), and 自 (from) that mark the relationship between a verb and a noun. These are the ancestors of modern 在, 从, 用.',
     },
     Particle: {
         headline: 'A grammatical function word',
         detail:
-            'Small words with purely grammatical roles: 者 (nominalizer), 所 (object nominalizer), 乎 (question marker), 矣 (conclusion), 焉 (fusional coverb), 而 (connective), 之 (genitive/pronoun).',
+            'Small words with purely grammatical roles: 者 (turns verbs into nouns like "the one who"), 所 (marks "that which is done"), 乎 (question marker), 矣 (conclusion), 焉 (fused location word), 而 (connective), 之 (possession marker/pronoun).',
     },
     Adjective: {
         headline: 'A describing word',
         detail:
-            'Describes a quality. In classical Chinese, adjectives freely function as nouns (故 = "the old", 新 = "the new") or predicates (說/悅 = "joyful") without any morphological change.',
+            'Describes a quality. In classical Chinese, adjectives freely function as nouns (故 = "the old", 新 = "the new") or predicates (說/悅 = "joyful") without changing their written form.',
     },
     Noun: {
         headline: 'A person, place, or thing',
@@ -83,7 +83,7 @@ export const classicalGlossary: Record<GrammarRole, { headline: string; detail: 
     Attributive: {
         headline: 'A word or phrase modifying a noun',
         detail:
-            'Descriptors that come BEFORE the head noun, often linked by 之 (the classical counterpart of modern 的). E.g. 常 ("constant") in 常道 ("the constant Way").',
+            'Descriptors that come BEFORE the head noun, often linked by 之 (similar to modern 的). E.g. 常 ("constant") in 常道 ("the constant Way").',
     },
     Complement: {
         headline: 'Extra info completing a verb',
@@ -123,6 +123,6 @@ export const classicalGlossary: Record<GrammarRole, { headline: string; detail: 
     Copula: {
         headline: 'The linking verb "to be"',
         detail:
-            'In classical Chinese, the copula is often implicit. 非 (fēi) serves as the negative copula ("is not"), while positive identity can be expressed with 為 (wéi) or simply juxtaposition.',
+            'In classical Chinese, the linking word "is" or "are" is often absent. 非 (fēi) means "is not", while saying "A is B" is often done by just placing them side by side, or with 為 (wéi).',
     },
 };

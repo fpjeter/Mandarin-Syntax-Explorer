@@ -11,14 +11,15 @@ When you are asked to add sentences to the Mandarin Grammar Tree project, you ar
 3. **No Index Touching**: Do not modify `src/data/sentences/index.ts`. It dynamically aggregates the categories.
 
 ## Step-by-Step Data Entry
-1. **Identify the Category**: Decide which grammar category the requested sentence belongs to.
-2. **Open the File**: Use `view_file` to open `src/data/sentences/[category].ts` to see previous examples and maintain the correct data schema.
-3. **Format the Object**:
+1. **Create a Feature Branch**: Before making any data modifications, immediately create and checkout a new branch (e.g. `git checkout -b data/new-sentences`). Never commit directly to `main`.
+2. **Identify the Category**: Decide which grammar category the requested sentence belongs to.
+3. **Open the File**: Use `view_file` to open `src/data/sentences/[category].ts` to see previous examples and maintain the correct data schema.
+4. **Format the Object**:
    - `id`: Must be universally unique (e.g., `s93`).
    - `category`: The full string name of the category.
    - `explanation`: A learner-focused, jargon-free explanation.
    - `tree`: Follow the strict UMSM topic-comment split. Every text node must include `hanzi`, `pinyin`, and `translation`.
-4. **Append the Sentence**: Use `multi_replace_file_content` or `replace_file_content` to append your new sentence block to the array.
+5. **Append the Sentence**: Use `multi_replace_file_content` or `replace_file_content` to append your new sentence block to the array.
 
 ## Mandatory QA Validation
 After adding or modifying any sentences, **you are required** to run the structural QA test.
@@ -27,3 +28,5 @@ After adding or modifying any sentences, **you are required** to run the structu
 npm run qa
 ```
 If this command throws an error, you must fix the data (e.g., missing IDs, missing text) before continuing.
+
+Once testing passes, commit your work, push to the remote, and create a **Pull Request** for CI pipeline validation.

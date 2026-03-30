@@ -11,10 +11,13 @@ When you are asked to improve the user interface, styling, animations, or ReactF
 3. **Styling Tools**: The project uses **Tailwind CSS** (v4.0 Alpha) and **Framer Motion**. Do not install new styling libraries.
 
 ## Step-by-Step Development
-1. **Mock Data Inspection**: If you need to understand the shape of the grammar trees to build a new view, check `src/types/grammar.ts`. It holds the absolute source of truth for the `GrammarNodeData` schema.
-2. **UI Implementation**: Modify component files (e.g., `SyntaxTree.tsx`, `NestedBoxView.tsx`) to alter how the trees are rendered.
-3. **Validation**: Before finishing, you must run the build step to ensure no TypeScript generic errors were introduced.
+1. **Create a Feature Branch**: Before touching any UI code, immediately create and checkout a new branch (e.g. `git checkout -b ui/hover-animations`). Never commit directly to `main`.
+2. **Mock Data Inspection**: If you need to understand the shape of the grammar trees to build a new view, check `src/types/grammar.ts`. It holds the absolute source of truth for the `GrammarNodeData` schema.
+3. **UI Implementation**: Modify component files (e.g., `SyntaxTree.tsx`, `NestedBoxView.tsx`) to alter how the trees are rendered.
+4. **Validation**: Before finishing, you must run the build step to ensure no TypeScript generic errors were introduced.
 ```bash
 // turbo
 npm run build
 ```
+
+Once checking passes, commit your work, push to the remote, and create a **Pull Request** for CI pipeline validation.

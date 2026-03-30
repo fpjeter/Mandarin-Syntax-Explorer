@@ -1,0 +1,32 @@
+name: CI Checks
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22
+
+    - name: Install Dependencies
+      run: npm ci
+
+    - name: Run QA Validation
+      run: npm run qa
+
+    - name: Run ESLint
+      run: npm run lint
+
+    - name: Build Application
+      run: npm run build
