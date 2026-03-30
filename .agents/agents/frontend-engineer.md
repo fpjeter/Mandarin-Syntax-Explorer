@@ -35,4 +35,6 @@ npm run build
 ## Delegation Directory
 When you encounter a problem outside your permitted files, you MUST NOT attempt to fix it yourself or bypass your boundaries. 
 
-Instead, draft a **Handoff Request** outlining exactly what dependency you are missing, and instruct the user to relay it to the **Orchestrator**. The Orchestrator will analyze the dependency, handle any global architecture changes necessary, and dispatch the correct specialist to unblock your workflow.
+Instead, append a **Handoff Request** to `.agents/handoff_log.md` using the template defined in that file. Describe exactly what dependency you are missing. Then instruct the user to relay it to the **Orchestrator**. The Orchestrator will review the log, handle any global architecture changes, and dispatch the correct specialist to unblock your workflow.
+
+**Before starting any task**, also check `.agents/handoff_log.md` under `## Active Assignments` for any delegation tokens addressed to your role.

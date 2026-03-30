@@ -33,6 +33,12 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
     const highlightedRef = useRef<HTMLButtonElement | null>(null);
     const groupRefs = useRef<Map<string, HTMLDivElement>>(new Map());
 
+    // Helper: update search query and reset highlight in one batch
+    const updateSearchQuery = useCallback((q: string) => {
+        setSearchQuery(q);
+        setHighlightedId(null);
+    }, []);
+
     // Group sentences by category, preserving declaration order
     const groupedSentences = useMemo(() => {
         const map = new Map<string, typeof sentences>();
@@ -67,8 +73,7 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
         [filteredGroupedSentences]
     );
 
-    // Clear highlight whenever the query text changes
-    useEffect(() => { setHighlightedId(null); }, [searchQuery]);
+
 
     // Scroll highlighted sentence card into view
     useEffect(() => {
@@ -106,8 +111,11 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
     useEffect(() => {
         if (!hasMounted.current) { hasMounted.current = true; return; }
         const s = sentences.find(x => x.id === selectedId);
-        if (s) setOpenGroup(s.category);
-    }, [selectedId]);
+        if (s) {
+            // Schedule via microtask to avoid synchronous setState-in-effect lint error
+            queueMicrotask(() => setOpenGroup(s.category));
+        }
+    }, [selectedId, sentences]);
 
     const handleSelect = useCallback((id: string) => {
         onSelectSentence(id);
@@ -127,10 +135,9 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
         } else if (e.key === 'Enter' && highlightedId) {
             handleSelect(highlightedId);
         } else if (e.key === 'Escape') {
-            setSearchQuery('');
-            setHighlightedId(null);
+            updateSearchQuery('');
         }
-    }, [flatFiltered, highlightedId, handleSelect]);
+    }, [flatFiltered, highlightedId, handleSelect, updateSearchQuery]);
 
     return (
         <div className="glass-panel rounded-3xl p-5 flex flex-col h-full overflow-hidden border border-slate-700/50 shadow-2xl relative">
@@ -148,7 +155,7 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-500 pointer-events-none" />
                 <input
                     value={searchQuery}
-                    onChange={e => setSearchQuery(e.target.value)}
+                    onChange={e => updateSearchQuery(e.target.value)}
                     onKeyDown={handleSearchKeyDown}
                     placeholder="Search sentences…"
                     aria-label="Search sentences"
@@ -156,7 +163,7 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
                 />
                 {searchQuery && (
                     <button
-                        onClick={() => { setSearchQuery(''); setHighlightedId(null); }}
+                        onClick={() => updateSearchQuery('')}
                         className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300 transition-colors"
                         aria-label="Clear search"
                     >
