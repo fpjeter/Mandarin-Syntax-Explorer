@@ -36,21 +36,29 @@ _No pending requests._
 
 ## Active Assignments
 
+### 2026-03-30 Orchestrator → Data Linguist
+**Status**: 🔴 URGENT — Fixes not received
+**Task**: Your escape-fix work never landed on the remote branch. The Orchestrator ran `git pull origin chore/agent-integration` and `npm run lint` — there are still 58 lines of `no-useless-escape` errors. Your commits are either local-only or on the wrong branch.
+**Action Required**:
+1. Run `git checkout chore/agent-integration` and `git pull origin chore/agent-integration`
+2. Re-apply your `\"` → `"` fixes across all 10 files in `src/data/sentences/`
+3. Run `npm run lint` and confirm 0 `no-useless-escape` errors in your files
+4. Run `git add . && git commit -m "fix(data): remove useless escape sequences"` 
+5. Run `git push origin chore/agent-integration`
+
 ### 2026-03-30 Orchestrator → Educational Publisher
-**Status**: 🔴 Active
-**Task**: Fix 3 `no-useless-escape` lint errors in `src/utils/generateStudySheet.ts`
-**Branch**: `chore/agent-integration`
-**Details**: Line 385 contains 3 unnecessary `\"` escape sequences inside a single-quoted string. Replace `\"` with `"`.
-**Validation**: Run `npx eslint src/utils/generateStudySheet.ts` and confirm 0 errors. Then commit and push to `chore/agent-integration`.
+**Status**: 🔴 URGENT — Fixes not received
+**Task**: Your escape-fix work in `src/utils/generateStudySheet.ts` never landed on the remote branch. Your commits are either local-only or on the wrong branch.
+**Action Required**:
+1. Run `git checkout chore/agent-integration` and `git pull origin chore/agent-integration`
+2. Re-apply your `\"` → `"` fix on line 385 of `src/utils/generateStudySheet.ts`
+3. Run `npx eslint src/utils/generateStudySheet.ts` and confirm 0 errors
+4. Run `git add . && git commit -m "fix(utils): remove useless escape sequences"`
+5. Run `git push origin chore/agent-integration`
 
 ---
 
 ## Resolved
 
-### 2026-03-30 Orchestrator → Data Linguist
-**Status**: ✅ Done
-**Task**: Fix `no-useless-escape` lint errors across all sentence data files
-**Branch**: `chore/agent-integration`
-**Details**: The CI linter found ~291 instances of `\"` (escaped double quotes) inside single-quoted strings across 10 files in `src/data/sentences/`. The `\"` escape is unnecessary inside single-quoted strings — replace every `\"` with `"` in the `explanation` fields.
-**Affected Files**: `ba_construction.ts`, `correlative_patterns.ts`, `degree_complements.ts`, `double_topic.ts`, `even.ts`, `pivotal_constructions.ts`, `resultative_complements.ts`, `rhetorical_questions.ts`, `serial_verb_constructions.ts`, `sh_de_construction.ts`
+_No resolved items yet._
 **Validation**: Run `npm run lint` and confirm 0 errors in your files. Then commit and push to `chore/agent-integration`.
