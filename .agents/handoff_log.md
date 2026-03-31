@@ -42,6 +42,16 @@ _No active assignments._
 
 ## Resolved
 
+### 2026-03-31 Orchestrator → Data Linguist
+**Status**: ✅ Done
+**Task**: Execute Phase 1-4 Linguistic Audit FLS Refactors
+**Branch**: `feature/fls-refactor`
+
+### 2026-03-31 Orchestrator → Educational Publisher
+**Status**: ✅ Done
+**Task**: Update Grammar Guides for FLS Terminology
+**Branch**: `feature/fls-refactor`
+
 ### 2026-03-30 Orchestrator → Data Linguist
 **Status**: ✅ Done
 **Task**: Your escape-fix work never landed on the remote branch. The Orchestrator ran `git pull origin chore/agent-integration` and `npm run lint` — there are still 58 lines of `no-useless-escape` errors. Your commits are either local-only or on the wrong branch.
