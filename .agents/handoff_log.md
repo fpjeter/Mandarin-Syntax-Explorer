@@ -36,24 +36,14 @@ _No pending requests._
 
 ## Active Assignments
 
-### [DATE] Orchestrator → Data Linguist
-**Status**: 🔴 Active
-**Task**: Execute Approved Sentence Deletions
-**Branch**: `develop`
-
-> [!NOTE]
-> The Educational Publisher has finalized their review of your `removal_recommendation_list.md`. The Orchestrator clears you to execute all items annotated with `[APPROVED]`.
-
-**Action Required**:
-1. Review the `removal_recommendation_list.md` artifact.
-2. Locate every sentence that the Educational Publisher explicitly marked `[APPROVED]`.
-3. Erase those sentences entirely from their respective compiled array in `src/data/sentences/*.ts`.
-4. Ignore any sentence marked `[VETOED]`.
-5. Run your required `npm run qa` script when finished to ensure no comma/syntax errors remain in the arrays.
-
-**Validation**: Mark as ✅ Done when the `[APPROVED]` sentences are deleted from the underlying `.ts` files and pass validation tests to ensure the application still builds.
+_No active assignments._
 
 ## Resolved
+
+### [DATE] Orchestrator → Data Linguist
+**Status**: ✅ Done
+**Task**: Execute Approved Sentence Deletions
+**Branch**: `develop`
 
 ### [DATE] Orchestrator → Data Linguist
 **Status**: ✅ Done
