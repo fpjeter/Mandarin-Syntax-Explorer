@@ -36,7 +36,21 @@ _No pending requests._
 
 ## Active Assignments
 
-_No active assignments._
+### 2026-03-31 Orchestrator → Linguistics Specialist
+**Status**: 🔴 Active
+**Task**: FLS Post-Integration Review
+**Branch**: `develop`
+
+> [!NOTE]
+> The Orchestrator and Data Linguist have successfully enforced the Fractal Logic Stream (Topic-Comment roots, Logic Zone mapping, recursive Matryoshka principle) across the `src/data/sentences/` JSON arrays.
+
+**Action Required**:
+1. Review the newly implemented structure of the FLS framework.
+2. Evaluate if the current Topic-Comment structure logically covers edge cases like Double Topic constructions, Classical relative clauses, or complex pivotal clauses.
+3. Output your findings into a new Markdown artifact named `fls_post_integration_review.md` (or similar). 
+4. Include any further structural recommendations you have for the Data Linguist before we continue bulk data entry.
+
+**Validation**: When you have completed and committed your review artifact to the `develop` branch, mark this task as ✅ Done (but do not move it).
 
 ---
 
