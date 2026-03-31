@@ -399,19 +399,31 @@ export const baConstruction: SentenceData[] = [
         explanation: 'This modernizes the classical 己所不欲勿施於人. Modern Mandarin uses the **把** construction to front the object before the verb, just as classical Chinese used fronted objects but with different mechanisms. *Grammatically,* 不要 ("do not") opens the prohibition. 把 then fronts the complex object: 自己不想要的东西 ("things you yourself don\'t want"). The verb phrase 强加给别人 ("force upon others") completes the action. The classical 勿 becomes 不要, 所不欲 becomes 不想要的东西, and 施於人 becomes 强加给别人.',
         tree: {
             id: 's74-root', role: 'Sentence', children: [
-                { id: 's74-neg', role: 'Adjunct', subRole: 'prohibition', text: { hanzi: '不要', pinyin: 'bú yào', translation: 'do not' } },
-                { id: 's74-ba', role: 'Adjunct', subRole: 'ba-construction', children: [
-                    { id: 's74-ba-p', role: 'Preposition', text: { hanzi: '把', pinyin: 'bǎ', translation: '(object fronting)' } },
-                    { id: 's74-ba-obj', role: 'Object', children: [
-                        { id: 's74-attr', role: 'Attributive', text: { hanzi: '自己不想要的', pinyin: 'zì jǐ bù xiǎng yào de', translation: 'that you yourself don\'t want' } },
-                        { id: 's74-dx', role: 'Head Noun', text: { hanzi: '东西', pinyin: 'dōng xi', translation: 'things' } },
-                    ]},
-                ]},
-                { id: 's74-vp', role: 'Verb Phrase', children: [
-                    { id: 's74-qj', role: 'Head Verb', text: { hanzi: '强加', pinyin: 'qiáng jiā', translation: 'force upon' } },
-                    { id: 's74-gei', role: 'Complement', text: { hanzi: '给', pinyin: 'gěi', translation: 'to/for' } },
-                    { id: 's74-br', role: 'Object', text: { hanzi: '别人', pinyin: 'bié rén', translation: 'others' } },
-                ]},
+                {
+                    id: 's74-t',
+                    role: 'Topic',
+                    isDropped: true,
+                    impliedText: '你'
+                },
+                {
+                    id: 's74-c',
+                    role: 'Comment',
+                    children: [
+                        { id: 's74-neg', role: 'Adjunct', subRole: 'prohibition', text: { hanzi: '不要', pinyin: 'bú yào', translation: 'do not' } },
+                        { id: 's74-ba', role: 'Adjunct', subRole: 'ba-construction', children: [
+                            { id: 's74-ba-p', role: 'Preposition', text: { hanzi: '把', pinyin: 'bǎ', translation: '(object fronting)' } },
+                            { id: 's74-ba-obj', role: 'Object', children: [
+                                { id: 's74-attr', role: 'Attributive', text: { hanzi: '自己不想要的', pinyin: 'zì jǐ bù xiǎng yào de', translation: 'that you yourself don\'t want' } },
+                                { id: 's74-dx', role: 'Head Noun', text: { hanzi: '东西', pinyin: 'dōng xi', translation: 'things' } },
+                            ]},
+                        ]},
+                        { id: 's74-vp', role: 'Verb Phrase', children: [
+                            { id: 's74-qj', role: 'Head Verb', text: { hanzi: '强加', pinyin: 'qiáng jiā', translation: 'force upon' } },
+                            { id: 's74-gei', role: 'Complement', text: { hanzi: '给', pinyin: 'gěi', translation: 'to/for' } },
+                            { id: 's74-br', role: 'Object', text: { hanzi: '别人', pinyin: 'bié rén', translation: 'others' } },
+                        ]},
+                    ]
+                }
             ]
         }
     },
@@ -424,16 +436,19 @@ export const baConstruction: SentenceData[] = [
         explanation: 'This modernizes the classical 以德報怨. The classical instrumental coverb 以 ("with/using") becomes 用 ("use"), while the disposal construction uses 把 to highlight the affected object. *Grammatically,* 要 ("should") sets the advisory tone. 用善良 ("using kindness") is an instrumental adjunct. 把怨恨 fronts the object (resentment) before the verb. 化解掉 uses a resultative complement: 化解 ("dissolve/resolve") + 掉 ("away, gone"), indicating complete removal.',
         tree: {
             id: 's88-root', role: 'Sentence', children: [
-                { id: 's88-yao', role: 'Adjunct', text: { hanzi: '要', pinyin: 'yào', translation: 'should' } },
-                { id: 's88-yong', role: 'Adjunct', subRole: 'instrument', text: { hanzi: '用善良', pinyin: 'yòng shàn liáng', translation: 'using kindness' } },
-                { id: 's88-ba', role: 'Adjunct', subRole: 'ba-construction', children: [
-                    { id: 's88-ba-p', role: 'Preposition', text: { hanzi: '把', pinyin: 'bǎ', translation: '(object fronting)' } },
-                    { id: 's88-yh', role: 'Object', text: { hanzi: '怨恨', pinyin: 'yuàn hèn', translation: 'resentment' } },
-                ]},
-                { id: 's88-vp', role: 'Verb Phrase', children: [
-                    { id: 's88-hj', role: 'Head Verb', text: { hanzi: '化解', pinyin: 'huà jiě', translation: 'resolve' } },
-                    { id: 's88-diao', role: 'Complement', subRole: 'resultative', text: { hanzi: '掉', pinyin: 'diào', translation: 'away (completed removal)' } },
-                ]},
+                { id: 's88-t', role: 'Topic', isDropped: true, impliedText: '我们' },
+                { id: 's88-c', role: 'Comment', children: [
+                    { id: 's88-yao', role: 'Adjunct', text: { hanzi: '要', pinyin: 'yào', translation: 'should' } },
+                    { id: 's88-yong', role: 'Adjunct', subRole: 'instrument', text: { hanzi: '用善良', pinyin: 'yòng shàn liáng', translation: 'using kindness' } },
+                    { id: 's88-ba', role: 'Adjunct', subRole: 'ba-construction', children: [
+                        { id: 's88-ba-p', role: 'Preposition', text: { hanzi: '把', pinyin: 'bǎ', translation: '(object fronting)' } },
+                        { id: 's88-yh', role: 'Object', text: { hanzi: '怨恨', pinyin: 'yuàn hèn', translation: 'resentment' } },
+                    ]},
+                    { id: 's88-vp', role: 'Verb Phrase', children: [
+                        { id: 's88-hj', role: 'Head Verb', text: { hanzi: '化解', pinyin: 'huà jiě', translation: 'resolve' } },
+                        { id: 's88-diao', role: 'Complement', subRole: 'resultative', text: { hanzi: '掉', pinyin: 'diào', translation: 'away (completed removal)' } },
+                    ]},
+                ]}
             ]
         }
     }

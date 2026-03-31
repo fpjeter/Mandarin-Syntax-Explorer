@@ -281,28 +281,31 @@ export const comparatives: SentenceData[] = [
         explanation: 'This modernizes the classical 知之者不如好之者. The classical 者 particle becomes **的人** ("the person who..."), and the classical comparative 不如 becomes the modern equivalent **比不上** ("cannot compare to"). *Grammatically,* this sentence uses the **比** comparative construction twice in parallel. Each clause follows the pattern: [subject 的人] + 比不上 + [reference 的人]. The 的 particle turns verb phrases into noun phrases, functioning exactly like the classical 者.',
         tree: {
             id: 's69-root', role: 'Sentence', children: [
-                { id: 's69-c1', role: 'Topic', subRole: 'first comparison', children: [
-                    { id: 's69-s1', role: 'Subject', children: [
-                        { id: 's69-zd', role: 'Attributive', text: { hanzi: '知道的', pinyin: 'zhī dào de', translation: 'who know' } },
-                        { id: 's69-r1', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                { id: 's69-t', role: 'Topic', isDropped: true, impliedText: '规律' },
+                { id: 's69-c', role: 'Comment', subRole: 'parallel comparisons', children: [
+                    { id: 's69-c1', role: 'Verb Phrase', subRole: 'first comparison', children: [
+                        { id: 's69-s1', role: 'Subject', children: [
+                            { id: 's69-zd', role: 'Attributive', text: { hanzi: '知道的', pinyin: 'zhī dào de', translation: 'who know' } },
+                            { id: 's69-r1', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                        ]},
+                        { id: 's69-bbs1', role: 'Head Verb', text: { hanzi: '比不上', pinyin: 'bǐ bù shàng', translation: 'cannot compare to' } },
+                        { id: 's69-o1', role: 'Object', children: [
+                            { id: 's69-xh', role: 'Attributive', text: { hanzi: '喜欢的', pinyin: 'xǐ huān de', translation: 'who love' } },
+                            { id: 's69-r2', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                        ]},
                     ]},
-                    { id: 's69-bbs1', role: 'Head Verb', text: { hanzi: '比不上', pinyin: 'bǐ bù shàng', translation: 'cannot compare to' } },
-                    { id: 's69-o1', role: 'Object', children: [
-                        { id: 's69-xh', role: 'Attributive', text: { hanzi: '喜欢的', pinyin: 'xǐ huān de', translation: 'who love' } },
-                        { id: 's69-r2', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                    { id: 's69-c2', role: 'Verb Phrase', subRole: 'second comparison', children: [
+                        { id: 's69-s2', role: 'Subject', children: [
+                            { id: 's69-xh2', role: 'Attributive', text: { hanzi: '喜欢的', pinyin: 'xǐ huān de', translation: 'who love' } },
+                            { id: 's69-r3', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                        ]},
+                        { id: 's69-bbs2', role: 'Head Verb', text: { hanzi: '比不上', pinyin: 'bǐ bù shàng', translation: 'cannot compare to' } },
+                        { id: 's69-o2', role: 'Object', children: [
+                            { id: 's69-le', role: 'Attributive', text: { hanzi: '乐在其中的', pinyin: 'lè zài qí zhōng de', translation: 'who delight in it' } },
+                            { id: 's69-r4', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                        ]},
                     ]},
-                ]},
-                { id: 's69-c2', role: 'Comment', subRole: 'second comparison', children: [
-                    { id: 's69-s2', role: 'Subject', children: [
-                        { id: 's69-xh2', role: 'Attributive', text: { hanzi: '喜欢的', pinyin: 'xǐ huān de', translation: 'who love' } },
-                        { id: 's69-r3', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
-                    ]},
-                    { id: 's69-bbs2', role: 'Head Verb', text: { hanzi: '比不上', pinyin: 'bǐ bù shàng', translation: 'cannot compare to' } },
-                    { id: 's69-o2', role: 'Object', children: [
-                        { id: 's69-le', role: 'Attributive', text: { hanzi: '乐在其中的', pinyin: 'lè zài qí zhōng de', translation: 'who delight in it' } },
-                        { id: 's69-r4', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
-                    ]},
-                ]},
+                ]}
             ]
         }
     },
@@ -315,25 +318,28 @@ export const comparatives: SentenceData[] = [
         explanation: 'This modernizes the classical 天時不如地利地利不如人和. The classical four-character parallelism is preserved in modern form using **不如** ("not as good as"), which is one of the few classical comparative structures that survives directly into modern Mandarin. *Grammatically,* each clause follows the pattern: Topic + 不如 + Object. The 的 particle is added to make attributive phrases (好的时机, "good timing") where classical Chinese needed no marker. The final comparison uses 人心齐 ("people\'s hearts aligned") to modernize 人和.',
         tree: {
             id: 's87-root', role: 'Sentence', children: [
-                { id: 's87-c1', role: 'Topic', subRole: 'first comparison', children: [
-                    { id: 's87-s1', role: 'Subject', children: [
-                        { id: 's87-a1', role: 'Attributive', text: { hanzi: '好的', pinyin: 'hǎo de', translation: 'good' } },
-                        { id: 's87-sj', role: 'Head Noun', text: { hanzi: '时机', pinyin: 'shí jī', translation: 'timing' } },
+                { id: 's87-t', role: 'Topic', isDropped: true, impliedText: '规律' },
+                { id: 's87-c', role: 'Comment', subRole: 'parallel comparisons', children: [
+                    { id: 's87-c1', role: 'Verb Phrase', subRole: 'first comparison', children: [
+                        { id: 's87-s1', role: 'Subject', children: [
+                            { id: 's87-a1', role: 'Attributive', text: { hanzi: '好的', pinyin: 'hǎo de', translation: 'good' } },
+                            { id: 's87-sj', role: 'Head Noun', text: { hanzi: '时机', pinyin: 'shí jī', translation: 'timing' } },
+                        ]},
+                        { id: 's87-br1', role: 'Head Verb', text: { hanzi: '不如', pinyin: 'bù rú', translation: 'not as good as' } },
+                        { id: 's87-o1', role: 'Object', children: [
+                            { id: 's87-a2', role: 'Attributive', text: { hanzi: '好的', pinyin: 'hǎo de', translation: 'good' } },
+                            { id: 's87-dx', role: 'Head Noun', text: { hanzi: '地形', pinyin: 'dì xíng', translation: 'terrain' } },
+                        ]},
                     ]},
-                    { id: 's87-br1', role: 'Head Verb', text: { hanzi: '不如', pinyin: 'bù rú', translation: 'not as good as' } },
-                    { id: 's87-o1', role: 'Object', children: [
-                        { id: 's87-a2', role: 'Attributive', text: { hanzi: '好的', pinyin: 'hǎo de', translation: 'good' } },
-                        { id: 's87-dx', role: 'Head Noun', text: { hanzi: '地形', pinyin: 'dì xíng', translation: 'terrain' } },
+                    { id: 's87-c2', role: 'Verb Phrase', subRole: 'second comparison', children: [
+                        { id: 's87-s2', role: 'Subject', children: [
+                            { id: 's87-a3', role: 'Attributive', text: { hanzi: '好的', pinyin: 'hǎo de', translation: 'good' } },
+                            { id: 's87-dx2', role: 'Head Noun', text: { hanzi: '地形', pinyin: 'dì xíng', translation: 'terrain' } },
+                        ]},
+                        { id: 's87-br2', role: 'Head Verb', text: { hanzi: '不如', pinyin: 'bù rú', translation: 'not as good as' } },
+                        { id: 's87-o2', role: 'Object', text: { hanzi: '人心齐', pinyin: 'rén xīn qí', translation: 'unity among people' } },
                     ]},
-                ]},
-                { id: 's87-c2', role: 'Comment', subRole: 'second comparison', children: [
-                    { id: 's87-s2', role: 'Subject', children: [
-                        { id: 's87-a3', role: 'Attributive', text: { hanzi: '好的', pinyin: 'hǎo de', translation: 'good' } },
-                        { id: 's87-dx2', role: 'Head Noun', text: { hanzi: '地形', pinyin: 'dì xíng', translation: 'terrain' } },
-                    ]},
-                    { id: 's87-br2', role: 'Head Verb', text: { hanzi: '不如', pinyin: 'bù rú', translation: 'not as good as' } },
-                    { id: 's87-o2', role: 'Object', text: { hanzi: '人心齐', pinyin: 'rén xīn qí', translation: 'unity among people' } },
-                ]},
+                ]}
             ]
         }
     }

@@ -170,22 +170,29 @@ export const directionalComplements: SentenceData[] = [
                                     text: { hanzi: '跑', pinyin: 'pǎo', translation: 'run' },
                                 },
                                 {
-                                    id: 'n42-comp-dir',
+                                    id: 'n42-comp',
                                     role: 'Complement',
-                                    subRole: 'direction morpheme (upward)',
-                                    text: { hanzi: '上', pinyin: 'shàng', translation: 'up' },
-                                },
-                                {
-                                    id: 'n42-obj',
-                                    role: 'Object',
-                                    subRole: 'inserted between direction and 去',
-                                    text: { hanzi: '楼', pinyin: 'lóu', translation: 'stairs / floor' },
-                                },
-                                {
-                                    id: 'n42-comp-qu',
-                                    role: 'Complement',
-                                    subRole: 'orientation: away from speaker',
-                                    text: { hanzi: '去', pinyin: 'qù', translation: 'go (away)' },
+                                    subRole: 'split directional',
+                                    children: [
+                                        {
+                                            id: 'n42-comp-dir',
+                                            role: 'Complement',
+                                            subRole: 'direction morpheme (upward)',
+                                            text: { hanzi: '上', pinyin: 'shàng', translation: 'up' },
+                                        },
+                                        {
+                                            id: 'n42-obj',
+                                            role: 'Object',
+                                            subRole: 'inserted between direction and 去',
+                                            text: { hanzi: '楼', pinyin: 'lóu', translation: 'stairs / floor' },
+                                        },
+                                        {
+                                            id: 'n42-comp-qu',
+                                            role: 'Complement',
+                                            subRole: 'orientation: away from speaker',
+                                            text: { hanzi: '去', pinyin: 'qù', translation: 'go (away)' },
+                                        },
+                                    ]
                                 },
                                 {
                                     id: 'n42-le',

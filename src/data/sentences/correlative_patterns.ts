@@ -137,13 +137,17 @@ export const correlativePatterns: SentenceData[] = [
             id: 's84-root', role: 'Sentence', children: [
                 { id: 's84-c1', role: 'Topic', subRole: 'first correlative', children: [
                     { id: 's84-premise1', role: 'Adjunct', subRole: 'condition', text: { hanzi: '只学习不思考', pinyin: 'zhǐ xué xí bù sī kǎo', translation: 'only study, not think' } },
-                    { id: 's84-yue1a', role: 'Adjunct', text: { hanzi: '越学', pinyin: 'yuè xué', translation: 'the more you study' } },
-                    { id: 's84-yue1b', role: 'Head Verb', text: { hanzi: '越糊涂', pinyin: 'yuè hú tu', translation: 'the more confused' } },
+                    { id: 's84-yue1a', role: 'Adjunct', subRole: 'correlative marker', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
+                    { id: 's84-xue', role: 'Head Verb', text: { hanzi: '学', pinyin: 'xué', translation: 'study' } },
+                    { id: 's84-yue1b', role: 'Adjunct', subRole: 'correlative marker', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
+                    { id: 's84-hutu', role: 'Head Verb', text: { hanzi: '糊涂', pinyin: 'hú tu', translation: 'confused' } },
                 ]},
                 { id: 's84-c2', role: 'Comment', subRole: 'second correlative', children: [
                     { id: 's84-premise2', role: 'Adjunct', subRole: 'condition', text: { hanzi: '只思考不学习', pinyin: 'zhǐ sī kǎo bù xué xí', translation: 'only think, not study' } },
-                    { id: 's84-yue2a', role: 'Adjunct', text: { hanzi: '越想', pinyin: 'yuè xiǎng', translation: 'the more you think' } },
-                    { id: 's84-yue2b', role: 'Head Verb', text: { hanzi: '越危险', pinyin: 'yuè wéi xiǎn', translation: 'the more perilous' } },
+                    { id: 's84-yue2a', role: 'Adjunct', subRole: 'correlative marker', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
+                    { id: 's84-xiang', role: 'Head Verb', text: { hanzi: '想', pinyin: 'xiǎng', translation: 'think' } },
+                    { id: 's84-yue2b', role: 'Adjunct', subRole: 'correlative marker', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
+                    { id: 's84-weixian', role: 'Head Verb', text: { hanzi: '危险', pinyin: 'wéi xiǎn', translation: 'perilous' } },
                 ]},
             ]
         }

@@ -245,5 +245,47 @@ export const serialVerbConstructions: SentenceData[] = [
                 ]},
             ]
         }
+    },
+    {
+        id: 's91',
+        category: 'Serial Verb Constructions (连动句)',
+        chinese: '不要因为好事太小就不去做。',
+        pinyin: 'Bú yào yīn wèi hǎo shì tài xiǎo jiù bú qù zuò.',
+        translation: 'Do not refrain from doing good just because it is small.',
+        explanation: 'This modernizes the classical 勿以善小而不為. The classical 以 ("because of") becomes 因为, the concessive 而 becomes 就, and the prohibitive 勿 becomes 不要. *Grammatically,* 不要 opens the prohibition. 因为好事太小 ("because the good deed is too small") gives the rejected reason, using the stative predicate 太小 ("too small"). 就 ("then/so") introduces the consequence being negated: 不去做 ("not go and do it"). The serial verb 去做 ("go do") adds purposive flavor to the action.',
+        tree: {
+            id: 's91-root', role: 'Sentence', children: [
+                {
+                    id: 's91-t',
+                    role: 'Topic',
+                    isDropped: true,
+                    impliedText: '你'
+                },
+                {
+                    id: 's91-c',
+                    role: 'Comment',
+                    children: [
+                        { id: 's91-by', role: 'Adjunct', subRole: 'prohibition', text: { hanzi: '不要', pinyin: 'bú yào', translation: 'do not' } },
+                        { id: 's91-yw', role: 'Adjunct', subRole: 'causal', children: [
+                            { id: 's91-yw-p', role: 'Preposition', text: { hanzi: '因为', pinyin: 'yīn wèi', translation: 'because' } },
+                            { id: 's91-yw-clause', role: 'Object', children: [
+                                { id: 's91-hs', role: 'Subject', text: { hanzi: '好事', pinyin: 'hǎo shì', translation: 'good deed' } },
+                                { id: 's91-tx', role: 'Head Verb', text: { hanzi: '太小', pinyin: 'tài xiǎo', translation: 'too small' } },
+                            ]},
+                        ]},
+                        { id: 's91-jiu', role: 'Adjunct', text: { hanzi: '就', pinyin: 'jiù', translation: 'then/so' } },
+                        { id: 's91-vp', role: 'Verb Phrase', subRole: 'serial verbs', children: [
+                            { id: 's91-bq', role: 'Adjunct', subRole: 'negation', text: { hanzi: '不', pinyin: 'bú', translation: 'not' } },
+                            { id: 's91-vp1', role: 'Verb Phrase', children: [
+                                { id: 's91-qu', role: 'Head Verb', subRole: 'motion verb', text: { hanzi: '去', pinyin: 'qù', translation: 'go' } }
+                            ]},
+                            { id: 's91-vp2', role: 'Verb Phrase', children: [
+                                { id: 's91-zuo', role: 'Head Verb', subRole: 'purpose verb', text: { hanzi: '做', pinyin: 'zuò', translation: 'do' } }
+                            ]}
+                        ]},
+                    ]
+                }
+            ]
+        }
     }
 ];

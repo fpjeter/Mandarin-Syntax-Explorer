@@ -131,12 +131,15 @@ export const aspectMarkers: SentenceData[] = [
         explanation: 'This modernizes the classical 未之有也. The classical object-fronting pattern (之 before the verb 有) becomes standard modern word order. *Grammatically,* 从来 ("ever/always") + 没有 ("have not") + 过 ("experiential aspect marker") together express "have never experienced." The 过 marks that this negation covers all past experience, not just a single event. The object 这样的事 ("this kind of thing") uses 的 to turn the description into a noun phrase.',
         tree: {
             id: 's81-root', role: 'Sentence', children: [
-                { id: 's81-adv', role: 'Adjunct', subRole: 'time scope', text: { hanzi: '从来', pinyin: 'cóng lái', translation: 'ever/never' } },
-                { id: 's81-neg', role: 'Adjunct', subRole: 'negation', text: { hanzi: '没有', pinyin: 'méi yǒu', translation: 'have not' } },
-                { id: 's81-guo', role: 'Particle', subRole: 'experiential aspect', text: { hanzi: '过', pinyin: 'guò', translation: '(past experience)' } },
-                { id: 's81-obj', role: 'Object', children: [
-                    { id: 's81-attr', role: 'Attributive', text: { hanzi: '这样的', pinyin: 'zhè yàng de', translation: 'this kind of' } },
-                    { id: 's81-shi', role: 'Head Noun', text: { hanzi: '事', pinyin: 'shì', translation: 'thing/matter' } },
+                { id: 's81-t', role: 'Topic', isDropped: true, impliedText: '[现场]' },
+                { id: 's81-c', role: 'Comment', children: [
+                    { id: 's81-adv', role: 'Adjunct', subRole: 'time scope', text: { hanzi: '从来', pinyin: 'cóng lái', translation: 'ever/never' } },
+                    { id: 's81-neg', role: 'Adjunct', subRole: 'negation', text: { hanzi: '没有', pinyin: 'méi yǒu', translation: 'have not' } },
+                    { id: 's81-guo', role: 'Particle', subRole: 'experiential aspect', text: { hanzi: '过', pinyin: 'guò', translation: '(past experience)' } },
+                    { id: 's81-obj', role: 'Object', children: [
+                        { id: 's81-attr', role: 'Attributive', text: { hanzi: '这样的', pinyin: 'zhè yàng de', translation: 'this kind of' } },
+                        { id: 's81-shi', role: 'Head Noun', text: { hanzi: '事', pinyin: 'shì', translation: 'thing/matter' } },
+                    ]},
                 ]},
             ]
         }

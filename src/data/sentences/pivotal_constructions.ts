@@ -271,16 +271,24 @@ export const pivotalConstructions: SentenceData[] = [
             id: 's89-root', role: 'Sentence', children: [
                 { id: 's89-c1', role: 'Topic', subRole: 'first pivotal', children: [
                     { id: 's89-kn', role: 'Subject', text: { hanzi: '困难', pinyin: 'kùn nan', translation: 'hardship' } },
-                    { id: 's89-rang1', role: 'Head Verb', subRole: 'causative', text: { hanzi: '让', pinyin: 'ràng', translation: 'makes' } },
-                    { id: 's89-ren1', role: 'Object', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
-                    { id: 's89-cz', role: 'Complement', text: { hanzi: '成长', pinyin: 'chéng zhǎng', translation: 'grow' } },
+                    { id: 's89-vp1', role: 'Verb Phrase', children: [
+                        { id: 's89-rang1', role: 'Head Verb', subRole: 'causative', text: { hanzi: '让', pinyin: 'ràng', translation: 'makes' } },
+                        { id: 's89-ren1', role: 'Pivot', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                        { id: 's89-vp1-pred', role: 'Verb Phrase', children: [
+                            { id: 's89-cz', role: 'Head Verb', text: { hanzi: '成长', pinyin: 'chéng zhǎng', translation: 'grow' } }
+                        ]}
+                    ]}
                 ]},
                 { id: 's89-c2', role: 'Comment', subRole: 'second pivotal', children: [
                     { id: 's89-ay', role: 'Subject', text: { hanzi: '安逸', pinyin: 'ān yì', translation: 'comfort' } },
-                    { id: 's89-rang2', role: 'Head Verb', subRole: 'causative', text: { hanzi: '让', pinyin: 'ràng', translation: 'makes' } },
-                    { id: 's89-ren2', role: 'Object', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
-                    { id: 's89-tb', role: 'Complement', text: { hanzi: '退步', pinyin: 'tuì bù', translation: 'regress' } },
-                ]},
+                    { id: 's89-vp2', role: 'Verb Phrase', children: [
+                        { id: 's89-rang2', role: 'Head Verb', subRole: 'causative', text: { hanzi: '让', pinyin: 'ràng', translation: 'makes' } },
+                        { id: 's89-ren2', role: 'Pivot', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                        { id: 's89-vp2-pred', role: 'Verb Phrase', children: [
+                            { id: 's89-tb', role: 'Head Verb', text: { hanzi: '退步', pinyin: 'tuì bù', translation: 'regress' } }
+                        ]}
+                    ]}
+                ]}
             ]
         }
     }

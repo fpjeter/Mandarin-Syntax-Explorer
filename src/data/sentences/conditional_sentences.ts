@@ -14,7 +14,7 @@ export const conditionalSentences: SentenceData[] = [
             children: [
                 {
                     id: 'n64-cl1',
-                    role: 'Verb Phrase',
+                    role: 'Topic',
                     subRole: 'condition clause (如果…)',
                     children: [
                         {
@@ -38,12 +38,12 @@ export const conditionalSentences: SentenceData[] = [
                 },
                 {
                     id: 'n64-cl2',
-                    role: 'Verb Phrase',
+                    role: 'Comment',
                     subRole: 'consequence clause (…就…)',
                     children: [
                         {
                             id: 'n64-subj',
-                            role: 'Topic',
+                            role: 'Subject',
                             text: { hanzi: '我们', pinyin: 'wǒ men', translation: 'we' },
                         },
                         {
@@ -87,7 +87,7 @@ export const conditionalSentences: SentenceData[] = [
             children: [
                 {
                     id: 'n65-cl1',
-                    role: 'Verb Phrase',
+                    role: 'Topic',
                     subRole: 'condition clause (只要…)',
                     children: [
                         {
@@ -98,7 +98,7 @@ export const conditionalSentences: SentenceData[] = [
                         },
                         {
                             id: 'n65-subj1',
-                            role: 'Topic',
+                            role: 'Subject',
                             text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' },
                         },
                         {
@@ -110,7 +110,7 @@ export const conditionalSentences: SentenceData[] = [
                 },
                 {
                     id: 'n65-cl2',
-                    role: 'Verb Phrase',
+                    role: 'Comment',
                     subRole: 'consequence clause (…就…)',
                     children: [
                         {

@@ -89,16 +89,13 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
     if (tab === 'framework') {
         return (
             <div className="space-y-5">
-                {/* ── 1. The Big Idea ── */}
+                {/* ── 1. The Atomic Unit ── */}
                 <section>
-                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-fuchsia-400 mb-1.5">The big idea</h3>
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-fuchsia-400 mb-1.5">1. The Atomic Unit</h3>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
-                        In English, you build a sentence around a <em>subject</em> — the person or thing doing the action.
-                        Mandarin works differently: you first say <em>what you want to talk about</em>,
-                        then say something about it. That opening word or phrase is the{' '}
-                        <GlossaryLink role="Topic" onOpenGlossary={onOpenGlossary}><span className="text-fuchsia-400 font-bold">Topic</span></GlossaryLink>, and everything
-                        said about it is the{' '}
-                        <GlossaryLink role="Comment" onOpenGlossary={onOpenGlossary}><span className="text-blue-400 font-bold">Comment</span></GlossaryLink>.
+                        In English, you build a sentence around a <em>subject</em> doing an action.
+                        Mandarin works differently: the fundamental building block is the <strong className="text-slate-100">Topic-Comment pair</strong>. You first state <em>what you want to talk about</em> (the <GlossaryLink role="Topic" onOpenGlossary={onOpenGlossary}><span className="text-fuchsia-400 font-bold">Topic</span></GlossaryLink>),
+                        then say something about it (the <GlossaryLink role="Comment" onOpenGlossary={onOpenGlossary}><span className="text-blue-400 font-bold">Comment</span></GlossaryLink>).
                     </p>
                     {/* Mini example */}
                     <div className="mt-3 bg-slate-800/50 border border-slate-700/40 rounded-xl px-3 py-2.5">
@@ -113,76 +110,20 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                     </div>
                 </section>
 
-                {/* ── Mini tree diagram ── */}
+                {/* ── 2. The Matryoshka Principle ── */}
                 <section>
-                    <div className="flex justify-center">
-                        <div className="flex flex-col items-center text-[9px]">
-                            {/* Sentence root */}
-                            <div className="bg-slate-800/80 text-slate-100 border border-purple-400/60 rounded-lg px-3 py-1.5 font-bold uppercase tracking-wide shadow-[0_0_16px_rgba(139,92,246,0.3)]">
-                                Sentence
-                            </div>
-                            {/* Branches */}
-                            <div className="flex items-start gap-0 mt-0">
-                                {/* Left branch */}
-                                <div className="flex flex-col items-center">
-                                    <div className="w-px h-4 bg-slate-600" />
-                                    <div className="bg-fuchsia-900/40 text-fuchsia-200 border border-fuchsia-500/50 rounded-lg px-2.5 py-1 font-bold uppercase tracking-wide shadow-[0_0_10px_rgba(217,70,239,0.2)]">
-                                        Topic
-                                    </div>
-                                    <div className="w-px h-3 bg-slate-600" />
-                                    <div className="bg-slate-800/60 text-slate-300 border border-slate-600/50 rounded-lg px-2 py-1 text-[10px] font-chinese-ui">
-                                        这只大象
-                                    </div>
-                                </div>
-                                {/* Connector line */}
-                                <div className="w-8 h-px bg-slate-600 mt-4 self-start" />
-                                {/* Right branch */}
-                                <div className="flex flex-col items-center">
-                                    <div className="w-px h-4 bg-slate-600" />
-                                    <div className="bg-blue-900/40 text-blue-200 border border-blue-500/50 rounded-lg px-2.5 py-1 font-bold uppercase tracking-wide shadow-[0_0_10px_rgba(59,130,246,0.2)]">
-                                        Comment
-                                    </div>
-                                    <div className="w-px h-3 bg-slate-600" />
-                                    <div className="bg-slate-800/60 text-slate-300 border border-slate-600/50 rounded-lg px-2 py-1 text-[10px] font-chinese-ui">
-                                        鼻子很长
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* ── 2. Topic vs. Comment ── */}
-                <section>
-                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-blue-400 mb-2">Topic vs. Comment</h3>
-                    <div className="grid grid-cols-2 gap-2">
-                        <div className="bg-fuchsia-900/20 border border-fuchsia-600/30 rounded-xl p-2.5">
-                            <p className="text-[10px] font-bold text-fuchsia-300 uppercase tracking-wider mb-1">
-                                <GlossaryLink role="Topic" onOpenGlossary={onOpenGlossary}>Topic</GlossaryLink>
-                            </p>
-                            <p className="text-[10px] text-slate-300 leading-snug">
-                                Sets the scene. Roughly: <em>"As for X…"</em><br />
-                                Can be a person, a thing, a time, or a place.
-                            </p>
-                        </div>
-                        <div className="bg-blue-900/20 border border-blue-600/30 rounded-xl p-2.5">
-                            <p className="text-[10px] font-bold text-blue-300 uppercase tracking-wider mb-1">
-                                <GlossaryLink role="Comment" onOpenGlossary={onOpenGlossary}>Comment</GlossaryLink>
-                            </p>
-                            <p className="text-[10px] text-slate-300 leading-snug">
-                                The actual statement about the topic. Contains the main verb and everything around it.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                {/* ── 3. Word Order ── */}
-                <section>
-                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-1.5">Word order</h3>
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-violet-400 mb-1.5">2. The Matryoshka Principle</h3>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
-                        In English, <em>when</em>, <em>where</em>, and <em>how</em> can go after the verb.
-                        In Mandarin, they always go <strong className="text-emerald-300">before</strong> it.
-                        The order is typically:
+                        Mandarin grammar is intensely recursive. A Comment slot frequently contains another fully nested <strong className="text-slate-100">Topic-Comment pair</strong> inside it, like Russian nesting dolls. This allows complex ideas to be stacked harmoniously without endless conjunctions.
+                    </p>
+                </section>
+
+                {/* ── 3. The Logic Zone ── */}
+                <section>
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-1.5">3. The Logic Zone</h3>
+                    <p className="text-[11px] text-slate-300 leading-relaxed">
+                        Inside the Comment slot, any contextual framing (<em>when</em>, <em>where</em>, <em>how</em>, and <em>by whom</em>) is strictly placed in the <strong className="text-emerald-300">Logic Zone</strong> immediately <strong className="text-emerald-300">before</strong> the verb, never after.
+                        The flow of modifiers resolves toward the verb.
                     </p>
                     <div className="mt-2 flex flex-wrap gap-1.5 items-center">
                         {['Time', 'Place', 'Manner', 'Verb'].map((label, i) => (
@@ -197,13 +138,6 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                             </span>
                         ))}
                     </div>
-                    <p className="text-[10px] text-slate-400 mt-2 italic">
-                        Example: <span className="text-rose-300 not-italic">昨天</span>{' '}
-                        <span className="text-rose-300 not-italic">在图书馆</span>{' '}
-                        <span className="text-rose-300 not-italic">安静地</span>{' '}
-                        <span className="text-teal-300 not-italic">看书</span>{' '}
-                        — "Yesterday, in the library, quietly, read."
-                    </p>
                 </section>
 
                 {/* ── 4. Dropped Subjects ── */}

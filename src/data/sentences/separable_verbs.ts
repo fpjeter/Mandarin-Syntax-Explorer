@@ -29,7 +29,7 @@ export const separableVerbs: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n12-p-verb-v',
-                                    role: 'Head Verb',
+                                    role: 'Verb Morpheme',
                                     subRole: 'separable verb (离合词): verb morpheme of 见面',
                                     text: { hanzi: '见', pinyin: 'jiàn', translation: 'see / meet' },
                                 },
@@ -59,7 +59,7 @@ export const separableVerbs: SentenceData[] = [
                                 },
                                 {
                                     id: 'n12-p-verb-obj',
-                                    role: 'Object',
+                                    role: 'Object Morpheme',
                                     subRole: 'noun morpheme of 见面 (split to end)',
                                     text: { hanzi: '面', pinyin: 'miàn', translation: 'face (→ meet)' }
                                 }
@@ -109,7 +109,7 @@ export const separableVerbs: SentenceData[] = [
                             children: [
                                 {
                                     id: 'n24-vp-v',
-                                    role: 'Head Verb',
+                                    role: 'Verb Morpheme',
                                     subRole: 'separable verb (离合词): verb morpheme of 散步',
                                     text: { hanzi: '散', pinyin: 'sàn', translation: 'stroll / disperse' },
                                 },
@@ -149,7 +149,7 @@ export const separableVerbs: SentenceData[] = [
                                 },
                                 {
                                     id: 'n24-vp-obj',
-                                    role: 'Object',
+                                    role: 'Object Morpheme',
                                     subRole: 'noun morpheme of 散步 (split to end)',
                                     text: { hanzi: '步', pinyin: 'bù', translation: 'step / pace (→ stroll)' }
                                 }

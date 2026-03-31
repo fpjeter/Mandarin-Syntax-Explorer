@@ -41,7 +41,7 @@ export const discourseContext: SentenceData[] = [
                                 },
                                 {
                                     id: 'n17-comp',
-                                    role: 'Complement',
+                                    role: 'Object',
                                     subRole: 'embedded clause',
                                     children: [
                                         {

@@ -150,15 +150,21 @@ export const beiPassive: SentenceData[] = [
                             ]
                         },
                         {
-                            id: 'n22-c-hv',
-                            role: 'Head Verb',
-                            text: { hanzi: '偷', pinyin: 'tōu', translation: 'steal' }
-                        },
-                        {
-                            id: 'n22-c-le',
-                            role: 'Particle',
-                            subRole: 'completion',
-                            text: { hanzi: '了', pinyin: 'le', translation: '(done)' }
+                            id: 'n22-c-vp',
+                            role: 'Verb Phrase',
+                            children: [
+                                {
+                                    id: 'n22-c-hv',
+                                    role: 'Head Verb',
+                                    text: { hanzi: '偷', pinyin: 'tōu', translation: 'steal' }
+                                },
+                                {
+                                    id: 'n22-c-le',
+                                    role: 'Particle',
+                                    subRole: 'completion',
+                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' }
+                                }
+                            ]
                         }
                     ]
                 }
