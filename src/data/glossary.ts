@@ -124,4 +124,14 @@ export const glossary: Record<GrammarRole, { headline: string; detail: string }>
         detail:
             'The linking verb 是 ("to be"). In the 是…的 pattern, 是 opens the focus and 的 closes it, like saying "it WAS [yesterday] that…"',
     },
+    'Parallel Sentence': {
+        headline: 'Side-by-side independent statements',
+        detail:
+            'A compound sentence where two or more independent clauses are placed neatly side-by-side to compare or contrast, often without needing an "and" or a "but".',
+    },
+    'Embedded Clause': {
+        headline: 'A sentence hiding inside a sentence',
+        detail:
+            'A fully-formed mini-sentence (complete with its own topic and comment) that is nested inside a larger structure. Think of Russian nesting dolls!',
+    },
 };

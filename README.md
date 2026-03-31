@@ -5,8 +5,10 @@ An interactive visualizer for Mandarin Chinese grammar structures. Select an exa
 ## Features
 
 - **Interactive syntax trees** — Nodes expand and collapse; pan and zoom the canvas freely
-- **92 curated modern sentences** across 19 grammar categories
+- **Nearly 100 curated modern sentences** across 19 grammar categories
 - **30 annotated classical quotes** from Confucius, Laozi, Mencius, Xunzi, and more
+- **Fractal Logic Stream (FLS)** — Custom topic-comment Matryoshka framework replacing Eurocentric SVO parsing
+- **Inline Pedagogical Explanations** — Expandable, textbook-grade category breakdowns inside the sidebar using the "Train Metaphor"
 - **Badge system** — Construction-specific badges (把字句, 被字句, 是…的, 结果补语, etc.) appear on relevant nodes
 - **Classical badges** — Function word badges (者, 所, 而, 非, 勿, 於, 焉, 之) for classical mode
 - **Grammar glossary** — Tap any node role to see a plain-English definition
@@ -70,16 +72,17 @@ The `category` field must match a value in `src/data/classicalCategories.ts`. Ev
 
 ---
 
-## 📝 A Note on the Grammar Model
+## 📝 The Fractal Logic Stream (FLS) Framework
 
-This app does **not** use standard generative syntax (X-bar theory / Minimalism). Instead, the trees follow a **pedagogically-motivated hybrid** influenced by the Chinese grammatical tradition (赵元任, 朱德熙, 吕叔湘) and modern teaching grammar (教学语法).
+This app does **not** use standard generative syntax (X-bar theory / Minimalism). Instead, the trees follow a **pedagogically-motivated hybrid** influenced by the Chinese grammatical tradition (赵元任, 朱德熙, 吕叔湘) and unified underneath our custom **Fractal Logic Stream (FLS)** methodology.
 
 Key differences from formal linguistic models:
 
-| This app | Standard generative syntax |
+| FLS Framework | Standard generative syntax |
 |---|---|
 | **Topic–Comment** is the primary structural split at the sentence root | Subject–Predicate (IP → NP + I') is the primary split; topic is a derived pragmatic movement |
-| **Adjunct** (状语) is a first-class tree role for pre-verbal modifiers | Adverbials are specifiers of functional projections or VP-adjuncts |
+| **Logic Zones** (Adjuncts/状语) are first-class containers for pre-verbal modifiers | Adverbials are specifiers of functional projections or VP-adjuncts |
+| **Matryoshka Principle** — Embedded clauses and pivotal nouns nest recursively | Rigid binary trees (X-bar) restrict recursive mapping |
 | **Complement** is a single role with subtype badges (结果补语, 趋向补语, etc.) | Different complement types occupy distinct structural positions |
 | **Verb Morpheme / Object Morpheme** explicitly decompose separable verbs (离合词) | Separable verbs are either lexical units or undergo syntactic movement |
 | **Degree Complements** establish 得 as an active structural hierarchy node; **Potential Complements** map 得/不 as internal leaf particles | 得/不 are typically analyzed as functional heads (Deg0 / Mod0) uniformly across both constructions |

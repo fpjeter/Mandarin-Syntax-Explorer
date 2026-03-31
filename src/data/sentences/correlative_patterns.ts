@@ -151,5 +151,98 @@ export const correlativePatterns: SentenceData[] = [
                 ]},
             ]
         }
+    },
+    {
+        id: 's97',
+        category: 'Correlative Patterns (越…越…)',
+        chinese: '一个人读书越多，他就越能理解世界。',
+        pinyin: 'Yī ge rén dú shū yuè duō, tā jiù yuè néng lǐ jiě shì jiè.',
+        translation: 'The more a person reads, the more they can understand the world.',
+        explanation: 'This sentence links two complete clauses together in a **Parallel Sentence** framework, bound by the **越...越...** (the more... the more) correlative pattern. The first `Embedded Clause` establishes the condition: "a person reads more". The second `Embedded Clause` provides the escalating consequence: "he can increasingly understand the world". The `越` adjuncts sit inside their respective predicates to formally tie the "waterfall" cascade together.',
+        tree: {
+            id: 'n97-root', role: 'Sentence', children: [
+                { id: 'n97-ps', role: 'Parallel Sentence', children: [
+                    { id: 'n97-cl1', role: 'Embedded Clause', subRole: 'condition', children: [
+                        { id: 'n97-subj1', role: 'Subject', text: { hanzi: '一个人', pinyin: 'yī ge rén', translation: 'a person' } },
+                        { id: 'n97-vp1', role: 'Verb Phrase', children: [
+                            { id: 'n97-hv1', role: 'Head Verb', text: { hanzi: '读书', pinyin: 'dú shū', translation: 'read books' } },
+                            { id: 'n97-yue1', role: 'Adjunct', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
+                            { id: 'n97-duo', role: 'Complement', text: { hanzi: '多', pinyin: 'duō', translation: 'much/many' } }
+                        ]}
+                    ]},
+                    { id: 'n97-cl2', role: 'Embedded Clause', subRole: 'consequence', children: [
+                        { id: 'n97-subj2', role: 'Subject', text: { hanzi: '他', pinyin: 'tā', translation: 'he / they' } },
+                        { id: 'n97-vp2', role: 'Verb Phrase', children: [
+                            { id: 'n97-jiu', role: 'Adjunct', text: { hanzi: '就', pinyin: 'jiù', translation: 'then' } },
+                            { id: 'n97-yue2', role: 'Adjunct', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
+                            { id: 'n97-neng', role: 'Adjunct', text: { hanzi: '能', pinyin: 'néng', translation: 'can/able to' } },
+                            { id: 'n97-hv2', role: 'Head Verb', text: { hanzi: '理解', pinyin: 'lǐ jiě', translation: 'understand' } },
+                            { id: 'n97-obj', role: 'Object', text: { hanzi: '世界', pinyin: 'shì jiè', translation: 'world' } }
+                        ]}
+                    ]}
+                ]}
+            ]
+        }
+    },
+    {
+        id: 's98',
+        category: 'Correlative Patterns (越…越…)',
+        chinese: '天气越冷，大家越不想出门。',
+        pinyin: 'Tiān qì yuè lěng, dà jiā yuè bù xiǎng chū mén.',
+        translation: 'The colder the weather gets, the less people want to go out.',
+        explanation: 'Another beautiful "waterfall" cascade spanning two clauses. The first clause handles the environment: The weather gets increasingly cold. The second clause handles human action: everyone increasingly doesn\'t want to go out. The formal AST groups these two halves as `Embedded Clauses` bound inside a `Parallel Sentence`.',
+        tree: {
+            id: 'n98-root', role: 'Sentence', children: [
+                { id: 'n98-ps', role: 'Parallel Sentence', children: [
+                    { id: 'n98-cl1', role: 'Embedded Clause', children: [
+                        { id: 'n98-t1', role: 'Subject', text: { hanzi: '天气', pinyin: 'tiān qì', translation: 'weather' } },
+                        { id: 'n98-vp1', role: 'Verb Phrase', children: [
+                            { id: 'n98-yue1', role: 'Adjunct', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
+                            { id: 'n98-hv1', role: 'Head Verb', subRole: 'adjectival', text: { hanzi: '冷', pinyin: 'lěng', translation: 'cold' } }
+                        ]}
+                    ]},
+                    { id: 'n98-cl2', role: 'Embedded Clause', children: [
+                        { id: 'n98-t2', role: 'Subject', text: { hanzi: '大家', pinyin: 'dà jiā', translation: 'everyone' } },
+                        { id: 'n98-vp2', role: 'Verb Phrase', children: [
+                            { id: 'n98-yue2', role: 'Adjunct', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
+                            { id: 'n98-neg', role: 'Adjunct', text: { hanzi: '不', pinyin: 'bù', translation: 'not' } },
+                            { id: 'n98-xiang', role: 'Adjunct', text: { hanzi: '想', pinyin: 'xiǎng', translation: 'want' } },
+                            { id: 'n98-hv2', role: 'Head Verb', text: { hanzi: '出门', pinyin: 'chū mén', translation: 'go out' } }
+                        ]}
+                    ]}
+                ]}
+            ]
+        }
+    },
+    {
+        id: 's99',
+        category: 'Correlative Patterns (越…越…)',
+        chinese: '期望越高，失望往往也就越大。',
+        pinyin: 'Qī wàng yuè gāo, shī wàng wǎng wǎng yě jiù yuè dà.',
+        translation: 'The higher the expectations, the greater the disappointment often is.',
+        explanation: 'The classic "the higher they climb, the harder they fall" correlative cascade. Look at the deep adverbial stack in the second clause: 往往 (often) + 也 (also) + 就 (then) + 越 (increasingly). Mandarin stacks these adjunct modifiers elegantly before the adjectival verb 大 (big/great) without ever feeling grammatically clunky.',
+        tree: {
+            id: 'n99-root', role: 'Sentence', children: [
+                { id: 'n99-ps', role: 'Parallel Sentence', children: [
+                    { id: 'n99-cl1', role: 'Embedded Clause', children: [
+                        { id: 'n99-t1', role: 'Subject', text: { hanzi: '期望', pinyin: 'qī wàng', translation: 'expectation' } },
+                        { id: 'n99-vp1', role: 'Verb Phrase', children: [
+                            { id: 'n99-yue1', role: 'Adjunct', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
+                            { id: 'n99-hv1', role: 'Head Verb', subRole: 'adjectival', text: { hanzi: '高', pinyin: 'gāo', translation: 'high' } }
+                        ]}
+                    ]},
+                    { id: 'n99-cl2', role: 'Embedded Clause', children: [
+                        { id: 'n99-t2', role: 'Subject', text: { hanzi: '失望', pinyin: 'shī wàng', translation: 'disappointment' } },
+                        { id: 'n99-vp2', role: 'Verb Phrase', children: [
+                            { id: 'n99-wang', role: 'Adjunct', text: { hanzi: '往往', pinyin: 'wǎng wǎng', translation: 'often' } },
+                            { id: 'n99-ye', role: 'Adjunct', text: { hanzi: '也', pinyin: 'yě', translation: 'also' } },
+                            { id: 'n99-jiu', role: 'Adjunct', text: { hanzi: '就', pinyin: 'jiù', translation: 'then' } },
+                            { id: 'n99-yue2', role: 'Adjunct', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
+                            { id: 'n99-hv2', role: 'Head Verb', subRole: 'adjectival', text: { hanzi: '大', pinyin: 'dà', translation: 'big / great' } }
+                        ]}
+                    ]}
+                ]}
+            ]
+        }
     }
 ];

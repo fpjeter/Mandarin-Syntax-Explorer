@@ -26,7 +26,9 @@ export type GrammarRole =
     | 'Verb Morpheme'
     | 'Object Morpheme'
     | 'Pivot'
-    | 'Copula';
+    | 'Copula'
+    | 'Parallel Sentence'
+    | 'Embedded Clause';
 
 export interface MandarinWord {
     hanzi: string;

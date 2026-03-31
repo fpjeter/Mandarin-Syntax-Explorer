@@ -15,7 +15,8 @@ const VALID_ROLES = new Set([
     'Sentence', 'Topic', 'Comment', 'Subject', 'Predicate', 'Verb Phrase', 
     'Noun Phrase', 'Verb', 'Object', 'Adjunct', 'Preposition', 'Particle', 
     'Adjective', 'Noun', 'Pronoun', 'Attributive', 'Complement', 'Head Noun', 
-    'Head Verb', 'Measure Word', 'Verb Morpheme', 'Object Morpheme', 'Pivot', 'Copula'
+    'Head Verb', 'Measure Word', 'Verb Morpheme', 'Object Morpheme', 'Pivot', 'Copula',
+    'Parallel Sentence', 'Embedded Clause'
 ]);
 
 // 1. First pass to collect all valid IDs for referential integrity checks
