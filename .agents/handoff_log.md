@@ -36,37 +36,33 @@ _No pending requests._
 
 ## Active Assignments
 
+### [DATE] Orchestrator → Data Linguist
+**Status**: 🔴 Active
+**Task**: Execute Curriculum Gap Sentence Expansion
+**Branch**: `develop`
+
+> [!NOTE]
+> Based on the `curriculum_gap_analysis.md`, the Orchestrator has formulated an expansion plan detailing exactly 8 new sentences to inject into the databank, alongside targeted refactor constraints.
+
+**Action Required**:
+1. Review the `implementation_plan.md` artifact provided by the Orchestrator. It lists the exact 8 sentences you need to generate, the target files (`discourse_context.ts`, `correlative_patterns.ts`, `rhetorical_questions.ts`), and their specific FLS structural constraints.
+2. Generate and inject those 8 sentences as parsed AST nodes into the codebase.
+3. Execute the extant data audits listed in the plan (e.g. validating the Completeness Constraint for all `ba`/`bei` nodes).
+4. Run `npm run qa` to mathematically verify your new sentences.
+
+**Validation**: Mark as ✅ Done when your new outputs pass all validation scripts and are committed to `develop`.
+
+## Resolved
+
 ### [DATE] Orchestrator → Linguistics Specialist
 **Status**: ✅ Done
 **Task**: Define Category Learning Objectives
 **Branch**: `develop`
 
-> [!NOTE]
-> We are preparing for a massive databank expansion. We need to define exactly what grammatical laws each category must demonstrate.
-
-**Action Required**:
-1. Review the list of categories in `src/data/categories.ts`.
-2. For each category, explicitly define the mathematical/structural syntactic constraints that sentences inside it MUST demonstrate (e.g., what specific FLS structures must a 'Pivotal Construction' vs. a 'Result Complement' contain?).
-3. Output a detailed report to a new artifact named `category_linguistics_demonstrations.md`. 
-4. Mark this task as ✅ Done when the artifact is committed.
-
 ### [DATE] Orchestrator → Educational Publisher
-**Status**: 🔴 Active *(Blocked on Linguistics Specialist)*
+**Status**: ✅ Done
 **Task**: Curriculum Gap Analysis
 **Branch**: `develop`
-
-> [!NOTE]
-> The Orchestrator will use your findings to order the Data Linguist to create new sentences.
-
-**Action Required**:
-1. Wait for the Linguistics Specialist to output `category_linguistics_demonstrations.md`.
-2. Read their structural objectives for each category.
-3. Cross-reference those objectives against the *actual* parsed sentences we currently have in `src/data/sentences/*.ts`.
-4. Determine if we are successfully meeting those learning objectives. Are there categories with too few sentences? Are there categories lacking variety? How should these objectives be taught?
-5. Output a detailed audit to a new artifact named `curriculum_gap_analysis.md`. 
-6. Mark this task as ✅ Done when the artifact is committed.
-
-## Resolved
 
 ### [DATE] Orchestrator → Linguistics Specialist
 **Status**: ✅ Done
