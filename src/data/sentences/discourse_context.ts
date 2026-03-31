@@ -143,5 +143,81 @@ export const discourseContext: SentenceData[] = [
                 }
             ]
         }
+    },
+    {
+        id: 's94',
+        category: 'Discourse Context (跨句语境)',
+        chinese: '已经吃过了。',
+        pinyin: 'Yǐ jīng chī guò le.',
+        translation: '(I) have already eaten.',
+        explanation: 'A common short answer to the frequent greeting "Have you eaten?". The subject (I) and object (the meal) are both completely dropped because context naturally binds them. The tree relies on a ghost Topic node for the speaker. Inside the Comment, the adjunct **已经** ("already") modifies the verb **吃** ("eat"), followed by the experiential aspect **过** and completion particle **了**.',
+        discourseContext: {
+            chinese: '你吃饭了吗？',
+            pinyin: 'Nǐ chī fàn le ma?',
+            translation: 'Have you eaten?',
+        },
+        tree: {
+            id: 'n94-root', role: 'Sentence', children: [
+                { id: 'n94-t', role: 'Topic', isDropped: true, impliedText: '我' },
+                { id: 'n94-c', role: 'Comment', children: [
+                    { id: 'n94-adv', role: 'Adjunct', text: { hanzi: '已经', pinyin: 'yǐ jīng', translation: 'already' } },
+                    { id: 'n94-vp', role: 'Verb Phrase', children: [
+                        { id: 'n94-hv', role: 'Head Verb', text: { hanzi: '吃', pinyin: 'chī', translation: 'eat' } },
+                        { id: 'n94-guo', role: 'Particle', subRole: 'experiential', text: { hanzi: '过', pinyin: 'guò', translation: '(experienced)' } },
+                        { id: 'n94-le', role: 'Particle', subRole: 'completion', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
+                    ]}
+                ]}
+            ]
+        }
+    },
+    {
+        id: 's95',
+        category: 'Discourse Context (跨句语境)',
+        chinese: '今天特别累。',
+        pinyin: 'Jīn tiān tè bié lèi.',
+        translation: '(I am) especially tired today.',
+        explanation: 'In conversational Mandarin, when someone asks how you are, answering directly with "Today is especially tired" sounds natural, with the Topic ("I") being entirely dropped. The time noun **今天** ("today") sits inside the Comment framing the predicate. The adverb **特别** ("especially") intensifies the adjectival verb **累** ("tired").',
+        discourseContext: {
+            chinese: '你今天感觉怎么样？',
+            pinyin: 'Nǐ jīn tiān gǎn jué zěn me yàng?',
+            translation: 'How are you feeling today?',
+        },
+        tree: {
+            id: 'n95-root', role: 'Sentence', children: [
+                { id: 'n95-t', role: 'Topic', isDropped: true, impliedText: '我' },
+                { id: 'n95-c', role: 'Comment', children: [
+                    { id: 'n95-time', role: 'Adjunct', subRole: 'time', text: { hanzi: '今天', pinyin: 'jīn tiān', translation: 'today' } },
+                    { id: 'n95-vp', role: 'Verb Phrase', children: [
+                        { id: 'n95-adv', role: 'Adjunct', text: { hanzi: '特别', pinyin: 'tè bié', translation: 'especially' } },
+                        { id: 'n95-hv', role: 'Head Verb', subRole: 'adjectival', text: { hanzi: '累', pinyin: 'lèi', translation: 'tired' } }
+                    ]}
+                ]}
+            ]
+        }
+    },
+    {
+        id: 's96',
+        category: 'Discourse Context (跨句语境)',
+        chinese: '早就回家了。',
+        pinyin: 'Zǎo jiù huí jiā le.',
+        translation: '(He) went home a long time ago.',
+        explanation: 'When someone asks where a person is, the reply drops the pronoun entirely. The subject ("he" or "she") lives purely in the external discourse context. The Comment begins with **早就** ("early on / long ago"), emphasizing the completion of the action long before the speaker asked. The verb phrase **回家了** describes the returned state.',
+        discourseContext: {
+            chinese: '他去哪儿了？',
+            pinyin: 'Tā qù nǎ er le?',
+            translation: 'Where did he go?',
+        },
+        tree: {
+            id: 'n96-root', role: 'Sentence', children: [
+                { id: 'n96-t', role: 'Topic', isDropped: true, impliedText: '他' },
+                { id: 'n96-c', role: 'Comment', children: [
+                    { id: 'n96-adv', role: 'Adjunct', text: { hanzi: '早就', pinyin: 'zǎo jiù', translation: 'long ago' } },
+                    { id: 'n96-vp', role: 'Verb Phrase', children: [
+                        { id: 'n96-hv', role: 'Head Verb', text: { hanzi: '回家', pinyin: 'huí jiā', translation: 'return home' } },
+                        { id: 'n96-le', role: 'Particle', subRole: 'completion', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
+                    ]}
+                ]}
+            ]
+        }
     }
 ];

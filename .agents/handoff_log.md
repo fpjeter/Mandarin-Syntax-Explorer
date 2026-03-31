@@ -37,37 +37,33 @@ _No pending requests._
 ## Active Assignments
 
 ### [DATE] Orchestrator → Data Linguist
-**Status**: ✅ Done
-**Task**: Execute Curriculum Gap Sentence Expansion
+**Status**: 🔴 Active
+**Task**: Execute Approved Sentence Deletions
 **Branch**: `develop`
 
 > [!NOTE]
-> Based on the `curriculum_gap_analysis.md`, the Orchestrator has formulated an expansion plan detailing exactly 8 new sentences to inject into the databank, alongside targeted refactor constraints.
+> The Educational Publisher has finalized their review of your `removal_recommendation_list.md`. The Orchestrator clears you to execute all items annotated with `[APPROVED]`.
 
 **Action Required**:
-1. Review the `implementation_plan.md` artifact provided by the Orchestrator. It lists the exact 8 sentences you need to generate, the target files (`discourse_context.ts`, `correlative_patterns.ts`, `rhetorical_questions.ts`), and their specific FLS structural constraints.
-2. Generate and inject those 8 sentences as parsed AST nodes into the codebase.
-3. Execute the extant data audits listed in the plan (e.g. validating the Completeness Constraint for all `ba`/`bei` nodes).
-4. Sweep all categories to identify redundant sentences that do not offer unique FLS pedagogical value. Do NOT delete them yet. Instead, compile a `removal_recommendation_list.md` artifact.
-5. Run `npm run qa` to mathematically verify your parsed sentence lists.
+1. Review the `removal_recommendation_list.md` artifact.
+2. Locate every sentence that the Educational Publisher explicitly marked `[APPROVED]`.
+3. Erase those sentences entirely from their respective compiled array in `src/data/sentences/*.ts`.
+4. Ignore any sentence marked `[VETOED]`.
+5. Run your required `npm run qa` script when finished to ensure no comma/syntax errors remain in the arrays.
 
-**Validation**: Mark as ✅ Done when your new outputs pass all validation scripts and are committed to `develop`.
+**Validation**: Mark as ✅ Done when the `[APPROVED]` sentences are deleted from the underlying `.ts` files and pass validation tests to ensure the application still builds.
+
+## Resolved
+
+### [DATE] Orchestrator → Data Linguist
+**Status**: ✅ Done
+**Task**: Execute Curriculum Gap Sentence Expansion
+**Branch**: `develop`
 
 ### [DATE] Orchestrator → Educational Publisher
 **Status**: ✅ Done
 **Task**: Pedagogical Review of Redundant Sentences
 **Branch**: `develop`
-
-> [!NOTE]
-> The Data Linguist is compiling a list of potentially redundant sentences to prune the databank. We need your pedagogical approval before deletion.
-
-**Action Required**:
-1. Wait for the Data Linguist to output the `removal_recommendation_list.md`.
-2. Review each recommended sentence. Does removing it harm the beginner's learning curve? Is there a pedagogical reason to keep it?
-3. Annotate the list with `[APPROVED]` or `[VETOED]` for each recommendation, providing a brief justification.
-4. Once you have fully annotated the list, mark this task as ✅ Done. The Orchestrator will review the findings and dispatch the final deletion ticket.
-
-## Resolved
 
 ### [DATE] Orchestrator → Linguistics Specialist
 **Status**: ✅ Done
