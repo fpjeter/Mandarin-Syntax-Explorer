@@ -30,3 +30,6 @@ refactor_*.cjs
 *.ps1
 lint.txt
 lint_output.txt
+
+# Multi-Agent Workflow Isolation
+.agents/
