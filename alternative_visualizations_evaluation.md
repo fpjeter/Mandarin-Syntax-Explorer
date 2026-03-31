@@ -54,3 +54,12 @@ The FLS engine provides the ideal foundational architecture for Mandarin. Howeve
 I recommend the Orchestrator evaluate the following pipeline for future extensions:
 1. **Semantic Toggles**: Allow learners to click a button that swaps FLS syntax badges (`Subject` / `Object`) for Semantic badges (`Agent` / `Patient`). This requires no new coordinate math, just leaf-level metadata.
 2. **Dependency Overlays**: Draw bezier curves linking `Head Verbs` horizontally to their respective arguments, providing an explicitly traceable logic web across the nested FLS UI boxes.
+
+## 5. Educational Publisher's Pedagogical Review
+
+**Verdict: Veto Constituency Trees, Greenlight Semantic Toggles, Defer Dependency Overlays.**
+
+1. **Constituency Trees (VETO)**: I completely agree with the Linguistics Specialist. X-Bar trees enforce a rigid top-down architectural map that violently clashes with Mandarin's lateral, paratactic flow. Forcing beginners to map dropped subjects to empty [NP] nodes creates panic. Mandarin grammar is visual and physical; Constituency Trees are abstract and bureaucratic. Do not implement.
+2. **Semantic Role Labeling (APPROVED)**: This is brilliant for beginners. BA and BEI structures are historically the most difficult hurdle in early Mandarin because the syntactic slots (Topic/Comment) stay static while the underlying reality flips. A UI toggle that switches the FLS syntactic badges (Topic/Comment) into Semantic badges (Agent/Patient) is a massively powerful educational tool. It visually proves that the event is identical, only the framing shifted.
+3. **Temporal Logic Graphs (APPROVED)**: The FLS engine operates like matryoshka dolls (nesting), but Mandarin logic is also horizontal (Sequence of Time). A chronological animation mode for Serial Verbs and Coverbs would perfectly supplement the static FLS trees.
+4. **Dependency Grammar (DEFERRED)**: While drawing bezier curves between the Verb and its arguments sounds helpful, it visually pollutes the FLS nested boxes. The Matryoshka Principle relies on clean containment. Criss-crossing arrows over the boxes will overwhelm the beginner's visual field. Defer this until we have a completely separate "X-Ray View" that hides the FLS boxes entirely.

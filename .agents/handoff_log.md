@@ -51,7 +51,7 @@ _No pending requests._
 4. Do not modify any codebase data or components. Mark this task as ✅ Done when the artifact is committed to `develop`.
 
 ### [DATE] Orchestrator → Educational Publisher
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Author Full Pedagogical Category Explanations
 **Branch**: `develop`
 
@@ -66,7 +66,7 @@ _No pending requests._
 5. Mark this task as ✅ Done when your explanations are committed to `develop`.
 
 ### [DATE] Orchestrator → Educational Publisher
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Pedagogical Review of Alternative Visualizations
 **Branch**: `develop`
 
