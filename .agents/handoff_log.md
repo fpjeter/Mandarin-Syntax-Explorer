@@ -37,7 +37,7 @@ _No pending requests._
 ## Active Assignments
 
 ### [DATE] Orchestrator → Educational Publisher
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Pedagogical Guidance on Chinese UI Toggles & Semantic Display
 **Branch**: `develop`
 
