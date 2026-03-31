@@ -45,10 +45,11 @@ _No pending requests._
 > Based on an out-of-band discussion, the Linguistics Specialist has proposed a paradigm-shifting AST refactor: causative and passive constructions are structurally identical models that behave as Situation-Taking Verbs.
 
 **Action Required**:
-1. Formally document this new theoretical position in a Markdown artifact (or update an existing one like `pedagogical_position_paper.md`).
-2. Explain mechanically why "被" (bèi) should no longer be treated as a preposition inside an Adjunct modifier, but rather as an active Head Verb ("to suffer/undergo") anchoring an Embedded Clause.
-3. If you have already written an `implementation_plan.md` detailing the AST refactoring steps, confirm that the plan is ready for User Review.
-4. Mark this task as ✅ Done when your documentation is tracked in the repository.
+1. Formally document this new theoretical position in a Markdown artifact. (The user noted you produced an `fls-position-paper.md` covering Cathedral vs Train Architecture, Formalized Logic Equations, Asymmetric Identity Subscription (GCR), Unified Situational Object Slots, and Occupied Silence).
+2. Ensure this updated theoretical framework is merged or synced with our existing `pedagogical_position_paper.md` artifact if they overlap.
+3. Explain mechanically why "被" (bèi) should no longer be treated as a preposition inside an Adjunct modifier, but rather as an active Head Verb ("to suffer/undergo") anchoring an Embedded Clause.
+4. Review your `implementation_plan.md` detailing the required AST refactoring steps to convert passives to this new Situation-Taking Verb model, and confirm the plan is ready for User Review.
+5. Mark this task as ✅ Done when your recommendation is tracked in the repository.
 
 ## Resolved
 
