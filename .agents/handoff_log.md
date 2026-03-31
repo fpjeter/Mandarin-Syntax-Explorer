@@ -24,7 +24,10 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## How to Receive an Assignment
 
-Check `## Active Assignments` for any delegation token addressed to your role. Execute the instructions exactly as written. When done, update the token's status **in place** to `✅ Done` — but **do NOT move the entry** to `## Resolved`. Only the **Orchestrator** may move entries to Resolved after independently verifying that your work landed on the remote branch.
+1. **Verify Persona**: Before reading any ticket, strictly ensure the `[YOUR ROLE]` matches your exact expert persona. Never execute tickets assigned to others.
+2. **Execute on Branch**: Checkout a new feature branch `git checkout -b <your-role>/<task>`. Do all your work there.
+3. **Log Completion & Issues**: When done, update your ticket's status **in place** to `✅ Done` using a targeted single-line replacement (do NOT use multi-line regex replacements that might swallow adjacent tickets). If you ran into blockers, append a `**Issues Encountered:**` line to your ticket explaining any workarounds. Do NOT move the ticket to `## Resolved`.
+4. **Backup Communication Protocol**: If you try to view this log and find it corrupted, unreadable, or formatted improperly, **DO NOT attempt to modify it**. Instead, halt execution and print a Markdown block to the user starting with `"I have successfully completed [My Task]... here is what I accomplished:"` so the user can securely relay the status offline to the Orchestrator.
 
 ---
 

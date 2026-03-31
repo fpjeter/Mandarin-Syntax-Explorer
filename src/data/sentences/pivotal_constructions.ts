@@ -100,41 +100,48 @@ export const pivotalConstructions: SentenceData[] = [
                                     text: { hanzi: '叫', pinyin: 'jiào', translation: 'call / tell' },
                                 },
                                 {
-                                    id: 'n33-pivot',
-                                    role: 'Pivot',
-                                    subRole: 'object of 叫, subject of 去买',
-                                    text: { hanzi: '我', pinyin: 'wǒ', translation: 'me' },
-                                },
-                                {
-                                    id: 'n33-serial',
-                                    role: 'Verb Phrase',
-                                    subRole: 'serial verb construction (purpose chain)',
+                                    id: 'n33-embedded-clause',
+                                    role: 'Embedded Clause',
+                                    subRole: 'situation object',
                                     children: [
                                         {
-                                            id: 'n33-serial-v1',
-                                            role: 'Head Verb',
-                                            subRole: 'motion verb',
-                                            text: { hanzi: '去', pinyin: 'qù', translation: 'go' },
+                                            id: 'n33-pivot',
+                                            role: 'Pivot',
+                                            subRole: 'object of 叫, subject of 去买',
+                                            text: { hanzi: '我', pinyin: 'wǒ', translation: 'me' },
                                         },
                                         {
-                                            id: 'n33-serial-v2',
+                                            id: 'n33-serial',
                                             role: 'Verb Phrase',
-                                            subRole: 'purpose clause',
+                                            subRole: 'serial verb construction (purpose chain)',
                                             children: [
                                                 {
-                                                    id: 'n33-serial-v2-hv',
+                                                    id: 'n33-serial-v1',
                                                     role: 'Head Verb',
-                                                    text: { hanzi: '买', pinyin: 'mǎi', translation: 'buy' },
+                                                    subRole: 'motion verb',
+                                                    text: { hanzi: '去', pinyin: 'qù', translation: 'go' },
                                                 },
                                                 {
-                                                    id: 'n33-serial-v2-obj',
-                                                    role: 'Object',
-                                                    text: { hanzi: '牛奶', pinyin: 'niú nǎi', translation: 'milk' },
+                                                    id: 'n33-serial-v2',
+                                                    role: 'Verb Phrase',
+                                                    subRole: 'purpose clause',
+                                                    children: [
+                                                        {
+                                                            id: 'n33-serial-v2-hv',
+                                                            role: 'Head Verb',
+                                                            text: { hanzi: '买', pinyin: 'mǎi', translation: 'buy' },
+                                                        },
+                                                        {
+                                                            id: 'n33-serial-v2-obj',
+                                                            role: 'Object',
+                                                            text: { hanzi: '牛奶', pinyin: 'niú nǎi', translation: 'milk' },
+                                                        },
+                                                    ],
                                                 },
                                             ],
                                         },
-                                    ],
-                                },
+                                    ]
+                                }
                             ],
                         },
                     ],
@@ -174,30 +181,37 @@ export const pivotalConstructions: SentenceData[] = [
                                     text: { hanzi: '派', pinyin: 'pài', translation: 'send / dispatch' },
                                 },
                                 {
-                                    id: 'n52-pivot',
-                                    role: 'Pivot',
-                                    subRole: 'object of 派, subject of 去谈判',
-                                    text: { hanzi: '他', pinyin: 'tā', translation: 'him' },
-                                },
-                                {
-                                    id: 'n52-embedded',
-                                    role: 'Verb Phrase',
-                                    subRole: 'serial verb (go + negotiate)',
+                                    id: 'n52-embedded-clause',
+                                    role: 'Embedded Clause',
+                                    subRole: 'situation object',
                                     children: [
                                         {
-                                            id: 'n52-embedded-v1',
-                                            role: 'Head Verb',
-                                            subRole: 'motion verb',
-                                            text: { hanzi: '去', pinyin: 'qù', translation: 'go' },
+                                            id: 'n52-pivot',
+                                            role: 'Pivot',
+                                            subRole: 'object of 派, subject of 去谈判',
+                                            text: { hanzi: '他', pinyin: 'tā', translation: 'him' },
                                         },
                                         {
-                                            id: 'n52-embedded-v2',
-                                            role: 'Head Verb',
-                                            subRole: 'purpose verb',
-                                            text: { hanzi: '谈判', pinyin: 'tán pàn', translation: 'negotiate' },
+                                            id: 'n52-embedded',
+                                            role: 'Verb Phrase',
+                                            subRole: 'serial verb (go + negotiate)',
+                                            children: [
+                                                {
+                                                    id: 'n52-embedded-v1',
+                                                    role: 'Head Verb',
+                                                    subRole: 'motion verb',
+                                                    text: { hanzi: '去', pinyin: 'qù', translation: 'go' },
+                                                },
+                                                {
+                                                    id: 'n52-embedded-v2',
+                                                    role: 'Head Verb',
+                                                    subRole: 'purpose verb',
+                                                    text: { hanzi: '谈判', pinyin: 'tán pàn', translation: 'negotiate' },
+                                                },
+                                            ],
                                         },
-                                    ],
-                                },
+                                    ]
+                                }
                             ],
                         },
                     ],
@@ -237,28 +251,35 @@ export const pivotalConstructions: SentenceData[] = [
                                     text: { hanzi: '请', pinyin: 'qǐng', translation: 'invite / treat' },
                                 },
                                 {
-                                    id: 'n53-pivot',
-                                    role: 'Pivot',
-                                    subRole: 'object of 请, subject of 吃饭',
-                                    text: { hanzi: '我', pinyin: 'wǒ', translation: 'me' },
-                                },
-                                {
-                                    id: 'n53-embedded',
-                                    role: 'Verb Phrase',
-                                    subRole: 'embedded predicate of pivot',
+                                    id: 'n53-embedded-clause',
+                                    role: 'Embedded Clause',
+                                    subRole: 'situation object',
                                     children: [
                                         {
-                                            id: 'n53-embedded-hv',
-                                            role: 'Head Verb',
-                                            text: { hanzi: '吃', pinyin: 'chī', translation: 'eat' },
+                                            id: 'n53-pivot',
+                                            role: 'Pivot',
+                                            subRole: 'object of 请, subject of 吃饭',
+                                            text: { hanzi: '我', pinyin: 'wǒ', translation: 'me' },
                                         },
                                         {
-                                            id: 'n53-embedded-obj',
-                                            role: 'Object',
-                                            text: { hanzi: '饭', pinyin: 'fàn', translation: 'meal / rice' },
+                                            id: 'n53-embedded',
+                                            role: 'Verb Phrase',
+                                            subRole: 'embedded predicate of pivot',
+                                            children: [
+                                                {
+                                                    id: 'n53-embedded-hv',
+                                                    role: 'Head Verb',
+                                                    text: { hanzi: '吃', pinyin: 'chī', translation: 'eat' },
+                                                },
+                                                {
+                                                    id: 'n53-embedded-obj',
+                                                    role: 'Object',
+                                                    text: { hanzi: '饭', pinyin: 'fàn', translation: 'meal / rice' },
+                                                },
+                                            ],
                                         },
-                                    ],
-                                },
+                                    ]
+                                }
                             ],
                         },
                     ],
@@ -280,9 +301,11 @@ export const pivotalConstructions: SentenceData[] = [
                         { id: 's89-kn', role: 'Subject', text: { hanzi: '困难', pinyin: 'kùn nan', translation: 'hardship' } },
                         { id: 's89-vp1', role: 'Verb Phrase', children: [
                             { id: 's89-rang1', role: 'Head Verb', subRole: 'causative', text: { hanzi: '让', pinyin: 'ràng', translation: 'makes' } },
-                            { id: 's89-ren1', role: 'Pivot', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
-                            { id: 's89-vp1-pred', role: 'Verb Phrase', children: [
-                                { id: 's89-cz', role: 'Head Verb', text: { hanzi: '成长', pinyin: 'chéng zhǎng', translation: 'grow' } }
+                            { id: 's89-embedded1', role: 'Embedded Clause', subRole: 'situation object', children: [
+                                { id: 's89-ren1', role: 'Pivot', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                                { id: 's89-vp1-pred', role: 'Verb Phrase', children: [
+                                    { id: 's89-cz', role: 'Head Verb', text: { hanzi: '成长', pinyin: 'chéng zhǎng', translation: 'grow' } }
+                                ]}
                             ]}
                         ]}
                     ]},
@@ -290,9 +313,11 @@ export const pivotalConstructions: SentenceData[] = [
                         { id: 's89-ay', role: 'Subject', text: { hanzi: '安逸', pinyin: 'ān yì', translation: 'comfort' } },
                         { id: 's89-vp2', role: 'Verb Phrase', children: [
                             { id: 's89-rang2', role: 'Head Verb', subRole: 'causative', text: { hanzi: '让', pinyin: 'ràng', translation: 'makes' } },
-                            { id: 's89-ren2', role: 'Pivot', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
-                            { id: 's89-vp2-pred', role: 'Verb Phrase', children: [
-                                { id: 's89-tb', role: 'Head Verb', text: { hanzi: '退步', pinyin: 'tuì bù', translation: 'regress' } }
+                            { id: 's89-embedded2', role: 'Embedded Clause', subRole: 'situation object', children: [
+                                { id: 's89-ren2', role: 'Pivot', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                                { id: 's89-vp2-pred', role: 'Verb Phrase', children: [
+                                    { id: 's89-tb', role: 'Head Verb', text: { hanzi: '退步', pinyin: 'tuì bù', translation: 'regress' } }
+                                ]}
                             ]}
                         ]}
                     ]}
