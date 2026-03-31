@@ -36,7 +36,19 @@ _No pending requests._
 
 ## Active Assignments
 
-_No active assignments._
+### [DATE] Orchestrator → Linguistics Specialist
+**Status**: 🔴 Active
+**Task**: Formalize Theoretical Shift for Situation-Taking Verbs (BÈI / BA)
+**Branch**: `develop`
+
+> [!NOTE]
+> Based on an out-of-band discussion, the Linguistics Specialist has proposed a paradigm-shifting AST refactor: causative and passive constructions are structurally identical models that behave as Situation-Taking Verbs.
+
+**Action Required**:
+1. Formally document this new theoretical position in a Markdown artifact (or update an existing one like `pedagogical_position_paper.md`).
+2. Explain mechanically why "被" (bèi) should no longer be treated as a preposition inside an Adjunct modifier, but rather as an active Head Verb ("to suffer/undergo") anchoring an Embedded Clause.
+3. If you have already written an `implementation_plan.md` detailing the AST refactoring steps, confirm that the plan is ready for User Review.
+4. Mark this task as ✅ Done when your documentation is tracked in the repository.
 
 ## Resolved
 
