@@ -30,37 +30,35 @@ Check `## Active Assignments` for any delegation token addressed to your role. E
 
 ## Pending Requests
 
-### 2026-03-31 Linguistics Specialist → Orchestrator
-**Status**: 🟡 Pending
-**Blocked Task**: Finalizing the pedagogical rollout of the FLS framework.
-**Dependency**: The theoretical `fls-position-paper.md` is ratified, but we need the Educational Publisher to review it and develop a pedagogical equivalent (a plan for translating strict theoretical structures like "Embedded Clauses" and "Topic-Comment recursion" into learner-friendly teaching language).
-**Suggested Fix**: Dispatch a task to the Educational Publisher to formulate a "Pedagogical Position Paper" based on the FLS concepts, setting the tone and strategy for updating `GrammarGuide.tsx` and our glossaries.
-**Urgency**: MEDIUM
+_No pending requests._
 
 ---
 
 ## Active Assignments
 
-### [DATE] Orchestrator → Data Linguist
-**Status**: ✅ Done
-**Task**: Execute FLS Structural Role Replacements (s32, s89, cc2)
+### [DATE] Orchestrator → Educational Publisher
+**Status**: 🔴 Active
+**Task**: Draft FLS Pedagogical Position Paper
 **Branch**: `develop`
 
 > [!NOTE]
-> The Orchestrator has successfully registered `Parallel Sentence` and `Embedded Clause` into the TypeScript union (src/types/grammar.ts), Validator Script (scripts/validate_trees.ts), and UI Glossary (src/data/glossary.ts + src/data/classicalGlossary.ts).
+> The Linguistics Specialist and Data Linguist have finalized the structural integration of the Fractal Logic Stream (FLS) framework. All edge cases now perfectly map to `Topic`/`Comment`, `Parallel Sentence`, and `Embedded Clause`. 
 
 **Action Required**:
-1. Execute the structural changes recommended by the Linguistics Specialist's `fls_post_integration_review.md`.
-2. In `src/data/sentences/pivotal_constructions.ts` (s32): Wrap the `Pivot` and its `Verb Phrase` into an `Embedded Clause`.
-3. In `src/data/sentences/pivotal_constructions.ts` (s89): Remove the fake `Topic`/`Comment` root. Wrap the sentence in a `Parallel Sentence` containing two independent `Embedded Clause` nodes.
-4. In `src/data/classicalSentences.ts` (cc2): Wrap the parallel comparison into a `Parallel Sentence` containing two independent `Embedded Clause` nodes.
-5. Run your standard `qa` and `lint` checks before reporting completion.
+1. Review the theoretical concepts in `fls_post_integration_review.md` and `nomenclature_review.md` authored by the Linguistics Specialist.
+2. Draft a comprehensive `pedagogical_position_paper.md` designed to teach these exact frameworks to absolute beginners.
+3. Your paper should explicitly explain how to teach the "Matryoshka Principle" (nested `Embedded Clauses`), the "Logic Zone" (adjunct placement), and the "Parallel Sentence" parataxis. 
+4. This paper will serve as our blueprint for updating all in-game `GrammarGuide.tsx` content in future updates.
 
-**Validation**: Mark as ✅ Done when your refactored nodes pass `npm run qa` and are safely verified.
-
+**Validation**: Mark as ✅ Done when the artifact is committed to `develop`.
 ---
 
 ## Resolved
+
+### 2026-03-31 Orchestrator → Data Linguist
+**Status**: ✅ Done
+**Task**: Execute FLS Structural Role Replacements (s32, s89, cc2)
+**Branch**: `develop`
 
 ### 2026-03-31 Orchestrator → Linguistics Specialist
 **Status**: ✅ Done

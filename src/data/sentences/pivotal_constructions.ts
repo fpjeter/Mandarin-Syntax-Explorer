@@ -33,28 +33,34 @@ export const pivotalConstructions: SentenceData[] = [
                                     text: { hanzi: '让', pinyin: 'ràng', translation: 'let / have' },
                                 },
                                 {
-                                    id: 'n32-pivot',
-                                    role: 'Pivot',
-                                    subRole: 'object of 让, subject of 回答',
-                                    text: { hanzi: '学生', pinyin: 'xué sheng', translation: 'students' },
-                                },
-                                {
-                                    id: 'n32-embedded',
-                                    role: 'Verb Phrase',
-                                    subRole: 'embedded predicate of pivot',
+                                    id: 'n32-embedded-clause',
+                                    role: 'Embedded Clause',
                                     children: [
                                         {
-                                            id: 'n32-embedded-hv',
-                                            role: 'Head Verb',
-                                            text: { hanzi: '回答', pinyin: 'huí dá', translation: 'answer' },
+                                            id: 'n32-pivot',
+                                            role: 'Pivot',
+                                            subRole: 'object of 让, subject of 回答',
+                                            text: { hanzi: '学生', pinyin: 'xué sheng', translation: 'students' },
                                         },
                                         {
-                                            id: 'n32-embedded-obj',
-                                            role: 'Object',
-                                            text: { hanzi: '问题', pinyin: 'wèn tí', translation: 'questions' },
+                                            id: 'n32-embedded',
+                                            role: 'Verb Phrase',
+                                            subRole: 'embedded predicate of pivot',
+                                            children: [
+                                                {
+                                                    id: 'n32-embedded-hv',
+                                                    role: 'Head Verb',
+                                                    text: { hanzi: '回答', pinyin: 'huí dá', translation: 'answer' },
+                                                },
+                                                {
+                                                    id: 'n32-embedded-obj',
+                                                    role: 'Object',
+                                                    text: { hanzi: '问题', pinyin: 'wèn tí', translation: 'questions' },
+                                                },
+                                            ],
                                         },
-                                    ],
-                                },
+                                    ]
+                                }
                             ],
                         },
                     ],
@@ -269,23 +275,25 @@ export const pivotalConstructions: SentenceData[] = [
         explanation: 'This modernizes the classical 生於憂患死於安樂. The abstract classical 於 ("from/in") construction becomes a concrete **pivotal construction** with 让 ("make/let"). *Grammatically,* each clause follows the pivotal pattern: Topic (困难/安逸) + 让 ("makes") + pivot (人, "people") + result verb. The person 人 is simultaneously the object of 让 and the subject of the following verb (成长/退步). This double role is the defining feature of pivotal constructions.',
         tree: {
             id: 's89-root', role: 'Sentence', children: [
-                { id: 's89-c1', role: 'Topic', subRole: 'first pivotal', children: [
-                    { id: 's89-kn', role: 'Subject', text: { hanzi: '困难', pinyin: 'kùn nan', translation: 'hardship' } },
-                    { id: 's89-vp1', role: 'Verb Phrase', children: [
-                        { id: 's89-rang1', role: 'Head Verb', subRole: 'causative', text: { hanzi: '让', pinyin: 'ràng', translation: 'makes' } },
-                        { id: 's89-ren1', role: 'Pivot', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
-                        { id: 's89-vp1-pred', role: 'Verb Phrase', children: [
-                            { id: 's89-cz', role: 'Head Verb', text: { hanzi: '成长', pinyin: 'chéng zhǎng', translation: 'grow' } }
+                { id: 's89-parallel', role: 'Parallel Sentence', children: [
+                    { id: 's89-c1', role: 'Embedded Clause', subRole: 'first pivotal', children: [
+                        { id: 's89-kn', role: 'Subject', text: { hanzi: '困难', pinyin: 'kùn nan', translation: 'hardship' } },
+                        { id: 's89-vp1', role: 'Verb Phrase', children: [
+                            { id: 's89-rang1', role: 'Head Verb', subRole: 'causative', text: { hanzi: '让', pinyin: 'ràng', translation: 'makes' } },
+                            { id: 's89-ren1', role: 'Pivot', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                            { id: 's89-vp1-pred', role: 'Verb Phrase', children: [
+                                { id: 's89-cz', role: 'Head Verb', text: { hanzi: '成长', pinyin: 'chéng zhǎng', translation: 'grow' } }
+                            ]}
                         ]}
-                    ]}
-                ]},
-                { id: 's89-c2', role: 'Comment', subRole: 'second pivotal', children: [
-                    { id: 's89-ay', role: 'Subject', text: { hanzi: '安逸', pinyin: 'ān yì', translation: 'comfort' } },
-                    { id: 's89-vp2', role: 'Verb Phrase', children: [
-                        { id: 's89-rang2', role: 'Head Verb', subRole: 'causative', text: { hanzi: '让', pinyin: 'ràng', translation: 'makes' } },
-                        { id: 's89-ren2', role: 'Pivot', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
-                        { id: 's89-vp2-pred', role: 'Verb Phrase', children: [
-                            { id: 's89-tb', role: 'Head Verb', text: { hanzi: '退步', pinyin: 'tuì bù', translation: 'regress' } }
+                    ]},
+                    { id: 's89-c2', role: 'Embedded Clause', subRole: 'second pivotal', children: [
+                        { id: 's89-ay', role: 'Subject', text: { hanzi: '安逸', pinyin: 'ān yì', translation: 'comfort' } },
+                        { id: 's89-vp2', role: 'Verb Phrase', children: [
+                            { id: 's89-rang2', role: 'Head Verb', subRole: 'causative', text: { hanzi: '让', pinyin: 'ràng', translation: 'makes' } },
+                            { id: 's89-ren2', role: 'Pivot', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
+                            { id: 's89-vp2-pred', role: 'Verb Phrase', children: [
+                                { id: 's89-tb', role: 'Head Verb', text: { hanzi: '退步', pinyin: 'tuì bù', translation: 'regress' } }
+                            ]}
                         ]}
                     ]}
                 ]}

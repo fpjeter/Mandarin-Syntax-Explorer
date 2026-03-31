@@ -108,130 +108,136 @@ export const classicalSentences: SentenceData[] = [
             role: 'Sentence',
             children: [
                 {
-                    id: 'cc2-clause1',
-                    role: 'Topic',
-                    subRole: 'first comparison',
+                    id: 'cc2-parallel',
+                    role: 'Parallel Sentence',
                     children: [
                         {
-                            id: 'cc2-c1-subj',
-                            role: 'Subject',
-                            subRole: '者-nominalization',
+                            id: 'cc2-clause1',
+                            role: 'Embedded Clause',
+                            subRole: 'first comparison',
                             children: [
                                 {
-                                    id: 'cc2-c1-subj-v',
-                                    role: 'Head Verb',
-                                    text: { hanzi: '知', pinyin: 'zhī', translation: 'know' }
-                                },
-                                {
-                                    id: 'cc2-c1-subj-obj',
-                                    role: 'Object',
-                                    text: { hanzi: '之', pinyin: 'zhī', translation: 'it' }
-                                },
-                                {
-                                    id: 'cc2-c1-subj-zhe',
-                                    role: 'Particle',
-                                    subRole: 'nominalizer',
-                                    text: { hanzi: '者', pinyin: 'zhě', translation: '(the one who…)' }
-                                }
-                            ]
-                        },
-                        {
-                            id: 'cc2-c1-pred',
-                            role: 'Predicate',
-                            subRole: 'comparative (不如)',
-                            children: [
-                                {
-                                    id: 'cc2-c1-pred-neg',
-                                    role: 'Adjunct',
-                                    subRole: 'negation',
-                                    text: { hanzi: '不如', pinyin: 'bù rú', translation: 'is not equal to' }
-                                },
-                                {
-                                    id: 'cc2-c1-pred-obj',
-                                    role: 'Object',
+                                    id: 'cc2-c1-subj',
+                                    role: 'Subject',
                                     subRole: '者-nominalization',
                                     children: [
                                         {
-                                            id: 'cc2-c1-pred-obj-v',
+                                            id: 'cc2-c1-subj-v',
                                             role: 'Head Verb',
-                                            text: { hanzi: '好', pinyin: 'hào', translation: 'love' }
+                                            text: { hanzi: '知', pinyin: 'zhī', translation: 'know' }
                                         },
                                         {
-                                            id: 'cc2-c1-pred-obj-o',
+                                            id: 'cc2-c1-subj-obj',
                                             role: 'Object',
                                             text: { hanzi: '之', pinyin: 'zhī', translation: 'it' }
                                         },
                                         {
-                                            id: 'cc2-c1-pred-obj-zhe',
+                                            id: 'cc2-c1-subj-zhe',
                                             role: 'Particle',
                                             subRole: 'nominalizer',
                                             text: { hanzi: '者', pinyin: 'zhě', translation: '(the one who…)' }
                                         }
                                     ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    id: 'cc2-clause2',
-                    role: 'Comment',
-                    subRole: 'second comparison (climax)',
-                    children: [
-                        {
-                            id: 'cc2-c2-subj',
-                            role: 'Subject',
-                            subRole: '者-nominalization',
-                            children: [
-                                {
-                                    id: 'cc2-c2-subj-v',
-                                    role: 'Head Verb',
-                                    text: { hanzi: '好', pinyin: 'hào', translation: 'love' }
                                 },
                                 {
-                                    id: 'cc2-c2-subj-obj',
-                                    role: 'Object',
-                                    text: { hanzi: '之', pinyin: 'zhī', translation: 'it' }
-                                },
-                                {
-                                    id: 'cc2-c2-subj-zhe',
-                                    role: 'Particle',
-                                    subRole: 'nominalizer',
-                                    text: { hanzi: '者', pinyin: 'zhě', translation: '(the one who…)' }
+                                    id: 'cc2-c1-pred',
+                                    role: 'Predicate',
+                                    subRole: 'comparative (不如)',
+                                    children: [
+                                        {
+                                            id: 'cc2-c1-pred-neg',
+                                            role: 'Adjunct',
+                                            subRole: 'negation',
+                                            text: { hanzi: '不如', pinyin: 'bù rú', translation: 'is not equal to' }
+                                        },
+                                        {
+                                            id: 'cc2-c1-pred-obj',
+                                            role: 'Object',
+                                            subRole: '者-nominalization',
+                                            children: [
+                                                {
+                                                    id: 'cc2-c1-pred-obj-v',
+                                                    role: 'Head Verb',
+                                                    text: { hanzi: '好', pinyin: 'hào', translation: 'love' }
+                                                },
+                                                {
+                                                    id: 'cc2-c1-pred-obj-o',
+                                                    role: 'Object',
+                                                    text: { hanzi: '之', pinyin: 'zhī', translation: 'it' }
+                                                },
+                                                {
+                                                    id: 'cc2-c1-pred-obj-zhe',
+                                                    role: 'Particle',
+                                                    subRole: 'nominalizer',
+                                                    text: { hanzi: '者', pinyin: 'zhě', translation: '(the one who…)' }
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         },
                         {
-                            id: 'cc2-c2-pred',
-                            role: 'Predicate',
-                            subRole: 'comparative (不如)',
+                            id: 'cc2-clause2',
+                            role: 'Embedded Clause',
+                            subRole: 'second comparison (climax)',
                             children: [
                                 {
-                                    id: 'cc2-c2-pred-neg',
-                                    role: 'Adjunct',
-                                    subRole: 'negation',
-                                    text: { hanzi: '不如', pinyin: 'bù rú', translation: 'is not equal to' }
-                                },
-                                {
-                                    id: 'cc2-c2-pred-obj',
-                                    role: 'Object',
+                                    id: 'cc2-c2-subj',
+                                    role: 'Subject',
                                     subRole: '者-nominalization',
                                     children: [
                                         {
-                                            id: 'cc2-c2-pred-obj-v',
+                                            id: 'cc2-c2-subj-v',
                                             role: 'Head Verb',
-                                            text: { hanzi: '樂', pinyin: 'lè', translation: 'delight in' }
+                                            text: { hanzi: '好', pinyin: 'hào', translation: 'love' }
                                         },
                                         {
-                                            id: 'cc2-c2-pred-obj-o',
+                                            id: 'cc2-c2-subj-obj',
                                             role: 'Object',
                                             text: { hanzi: '之', pinyin: 'zhī', translation: 'it' }
                                         },
                                         {
-                                            id: 'cc2-c2-pred-obj-zhe',
+                                            id: 'cc2-c2-subj-zhe',
                                             role: 'Particle',
                                             subRole: 'nominalizer',
                                             text: { hanzi: '者', pinyin: 'zhě', translation: '(the one who…)' }
+                                        }
+                                    ]
+                                },
+                                {
+                                    id: 'cc2-c2-pred',
+                                    role: 'Predicate',
+                                    subRole: 'comparative (不如)',
+                                    children: [
+                                        {
+                                            id: 'cc2-c2-pred-neg',
+                                            role: 'Adjunct',
+                                            subRole: 'negation',
+                                            text: { hanzi: '不如', pinyin: 'bù rú', translation: 'is not equal to' }
+                                        },
+                                        {
+                                            id: 'cc2-c2-pred-obj',
+                                            role: 'Object',
+                                            subRole: '者-nominalization',
+                                            children: [
+                                                {
+                                                    id: 'cc2-c2-pred-obj-v',
+                                                    role: 'Head Verb',
+                                                    text: { hanzi: '樂', pinyin: 'lè', translation: 'delight in' }
+                                                },
+                                                {
+                                                    id: 'cc2-c2-pred-obj-o',
+                                                    role: 'Object',
+                                                    text: { hanzi: '之', pinyin: 'zhī', translation: 'it' }
+                                                },
+                                                {
+                                                    id: 'cc2-c2-pred-obj-zhe',
+                                                    role: 'Particle',
+                                                    subRole: 'nominalizer',
+                                                    text: { hanzi: '者', pinyin: 'zhě', translation: '(the one who…)' }
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
