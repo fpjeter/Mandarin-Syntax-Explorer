@@ -65,6 +65,20 @@ _No pending requests._
 4. Review your `implementation_plan.md` detailing the required AST refactoring steps to convert passives to this new Situation-Taking Verb model, and confirm the plan is ready for User Review.
 5. Mark this task as ✅ Done when your recommendation is tracked in the repository.
 
+### [DATE] Orchestrator → Educational Publisher
+**Status**: 🔴 Active
+**Task**: Rewrite Category Explanations for Beginner Accessibility
+**Branch**: `develop`
+
+> [!NOTE]
+> The Orchestrator has received negative user feedback regarding the `FULL_CATEGORY_EXPLANATIONS` written into `src/data/categories.ts` during the "Inline Pedagogy Integration" epic. They are too theoretically dense.
+
+**Action Required**:
+1. Review the current long-form explanations inside `src/data/categories.ts`.
+2. Rewrite them completely. Remove pedantic "pedagogy" and academic linguistic terminology. Instead, focus exclusively on accessible, empathetic "explanations for learners" that quickly and intuitively summarize how the grammar actually works in everyday practice.
+3. Because these strings are rendered dynamically into the UI Sidebar, run `npm run lint` and boot the UI locally if you need to preview string length.
+4. Mark this task as ✅ Done when your accessible rewrites are merged into the repository.
+
 ## Resolved
 
 ### [DATE] Orchestrator → Educational Publisher
