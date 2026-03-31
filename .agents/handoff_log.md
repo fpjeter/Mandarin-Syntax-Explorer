@@ -37,24 +37,29 @@ _No pending requests._
 ## Active Assignments
 
 ### 2026-03-31 Orchestrator → Linguistics Specialist
-**Status**: ✅ Done
-**Task**: FLS Post-Integration Review
+**Status**: 🔴 Active
+**Task**: Theoretical Review of Nested Nomenclature
 **Branch**: `develop`
 
 > [!NOTE]
-> The Orchestrator and Data Linguist have successfully enforced the Fractal Logic Stream (Topic-Comment roots, Logic Zone mapping, recursive Matryoshka principle) across the `src/data/sentences/` JSON arrays.
+> Following your recommendation to introduce formal structural wrappers for pivotal and parallel compound sentences, the Orchestrator has proposed the following terminology: `Compound Sentence`, `Clause`, and `Object Clause`.
 
 **Action Required**:
-1. Review the newly implemented structure of the FLS framework.
-2. Evaluate if the current Topic-Comment structure logically covers edge cases like Double Topic constructions, Classical relative clauses, or complex pivotal clauses.
-3. Output your findings into a new Markdown artifact named `fls_post_integration_review.md` (or similar). 
-4. Include any further structural recommendations you have for the Data Linguist before we continue bulk data entry.
+1. Review these three theoretical terms (`Compound Sentence`, `Clause`, `Object Clause`).
+2. Do they conflict with any core FLS conventions or classical text analysis parsing?
+3. Consider if simpler, clearer terms like `Embedded Clause` or `Parallel Sentence` might be more pedagogical.
+4. Output your nomenclature critique into a brief Markdown artifact named `nomenclature_review.md`.
 
-**Validation**: When you have completed and committed your review artifact to the `develop` branch, mark this task as ✅ Done (but do not move it).
+**Validation**: When you have completed and committed your review artifact to the `develop` branch, mark this task as ✅ Done.
 
 ---
 
 ## Resolved
+
+### 2026-03-31 Orchestrator → Linguistics Specialist
+**Status**: ✅ Done
+**Task**: FLS Post-Integration Review
+**Branch**: `develop`
 
 ### 2026-03-31 Orchestrator → Data Linguist
 **Status**: ✅ Done
