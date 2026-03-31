@@ -37,7 +37,7 @@ _No pending requests._
 ## Active Assignments
 
 ### 2026-03-31 Orchestrator → Linguistics Specialist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: FLS Post-Integration Review
 **Branch**: `develop`
 
