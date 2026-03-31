@@ -48,7 +48,8 @@ _No pending requests._
 1. Review the `implementation_plan.md` artifact provided by the Orchestrator. It lists the exact 8 sentences you need to generate, the target files (`discourse_context.ts`, `correlative_patterns.ts`, `rhetorical_questions.ts`), and their specific FLS structural constraints.
 2. Generate and inject those 8 sentences as parsed AST nodes into the codebase.
 3. Execute the extant data audits listed in the plan (e.g. validating the Completeness Constraint for all `ba`/`bei` nodes).
-4. Run `npm run qa` to mathematically verify your new sentences.
+4. Sweep all categories to identify and DELETE redundant sentences that do not offer unique FLS pedagogical value. Keep the databank lean.
+5. Run `npm run qa` to mathematically verify your parsed sentence lists.
 
 **Validation**: Mark as ✅ Done when your new outputs pass all validation scripts and are committed to `develop`.
 
