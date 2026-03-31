@@ -36,7 +36,21 @@ _No pending requests._
 
 ## Active Assignments
 
-_No active assignments._
+### [DATE] Orchestrator → Educational Publisher
+**Status**: 🔴 Active
+**Task**: Pedagogical Guidance on Chinese UI Toggles & Semantic Display
+**Branch**: `develop`
+
+> [!NOTE]
+> We are planning a "Chinese Teacher Mode" and a "Semantic Mode" toggle for the UI. The user prefers translating existing beginner explanations (updating tone for TCFL audience), and hiding the English translation line.
+
+**Action Required**:
+1. Review the proposed `implementation_plan.md` artifact (specifically the "Design Decisions & Pending Reviews" block).
+2. Write a formal recommendation report answering two questions:
+   - Do you agree with translating the existing "Train Metaphor" explanations into TCFL Chinese, or is there a pedagogical danger in using those specific metaphors with native instructors? 
+   - When "Semantic Mode" is toggled ON, should the UI strictly maintain the FLS nesting boxes (just recoloring the `Topic` badge to `[Agent]`), or should it visually collapse the wrapper nodes to forcefully highlight the logic?
+3. Append your recommendations to the bottom of the `implementation_plan.md` artifact under a new `## Educational Publisher's Verdict` header.
+4. Mark this task as ✅ Done when the artifact is updated.
 
 ## Resolved
 
