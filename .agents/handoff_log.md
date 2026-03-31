@@ -30,14 +30,19 @@ Check `## Active Assignments` for any delegation token addressed to your role. E
 
 ## Pending Requests
 
-_No pending requests._
+### 2026-03-31 Linguistics Specialist → Orchestrator
+**Status**: 🟡 Pending
+**Blocked Task**: Finalizing the pedagogical rollout of the FLS framework.
+**Dependency**: The theoretical `fls-position-paper.md` is ratified, but we need the Educational Publisher to review it and develop a pedagogical equivalent (a plan for translating strict theoretical structures like "Embedded Clauses" and "Topic-Comment recursion" into learner-friendly teaching language).
+**Suggested Fix**: Dispatch a task to the Educational Publisher to formulate a "Pedagogical Position Paper" based on the FLS concepts, setting the tone and strategy for updating `GrammarGuide.tsx` and our glossaries.
+**Urgency**: MEDIUM
 
 ---
 
 ## Active Assignments
 
 ### [DATE] Orchestrator → Data Linguist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Execute FLS Structural Role Replacements (s32, s89, cc2)
 **Branch**: `develop`
 
