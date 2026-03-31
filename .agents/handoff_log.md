@@ -66,7 +66,7 @@ _No pending requests._
 5. Mark this task as ✅ Done when your recommendation is tracked in the repository.
 
 ### [DATE] Orchestrator → Educational Publisher
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Rewrite Category Explanations for Beginner Accessibility
 **Branch**: `develop`
 
