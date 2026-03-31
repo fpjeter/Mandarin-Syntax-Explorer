@@ -65,6 +65,19 @@ _No pending requests._
 4. If modifying `.ts` code, execute `npm run lint` and `npx tsc --noEmit` before concluding.
 5. Mark this task as ✅ Done when your explanations are committed to `develop`.
 
+### [DATE] Orchestrator → Educational Publisher
+**Status**: 🔴 Active
+**Task**: Pedagogical Review of Alternative Visualizations
+**Branch**: `develop`
+
+> [!NOTE]
+> The Linguistics Specialist has authored `alternative_visualizations_evaluation.md` proposing non-FLS UI models.
+
+**Action Required**:
+1. Review the artifact evaluating alternative UI architectures (e.g. Dependency Grammar, Constituency Trees).
+2. Append a "Pedagogical Review" section to the bottom of the artifact with your explicit recommendations on whether these alternative UIs would help or hinder a beginner's learning curve compared to our current FLS system.
+3. Mark this task as ✅ Done when the review is committed to `develop`.
+
 ## Resolved
 
 ### [DATE] Orchestrator → Data Linguist
