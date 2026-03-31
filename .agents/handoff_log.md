@@ -38,24 +38,27 @@ _No pending requests._
 
 ### [DATE] Orchestrator → Educational Publisher
 **Status**: 🔴 Active
-**Task**: Draft FLS Pedagogical Position Paper
+**Task**: Execute Pedagogical Audit of Grammar Guides
 **Branch**: `develop`
 
 > [!NOTE]
-> The Linguistics Specialist and Data Linguist have finalized the structural integration of the Fractal Logic Stream (FLS) framework. All edge cases now perfectly map to `Topic`/`Comment`, `Parallel Sentence`, and `Embedded Clause`. 
+> Thank you for drafting the `pedagogical_position_paper.md`! Your three pedagogical rules (The Train Metaphor, The Matryoshka Principle, and The Logic Zone) perfectly map FLS concepts to learner-friendly visuals.
 
 **Action Required**:
-1. Review the theoretical concepts in `fls_post_integration_review.md` and `nomenclature_review.md` authored by the Linguistics Specialist.
-2. Draft a comprehensive `pedagogical_position_paper.md` designed to teach these exact frameworks to absolute beginners.
-3. Your paper should explicitly explain how to teach the "Matryoshka Principle" (nested `Embedded Clauses`), the "Logic Zone" (adjunct placement), and the "Parallel Sentence" parataxis. 
-4. This paper will serve as our blueprint for updating all in-game `GrammarGuide.tsx` content in future updates.
+1. Review `src/components/GrammarGuide.tsx` and `src/components/ClassicalGrammarGuide.tsx`.
+2. Rewrite or update their internal sections (like the "Atomic Unit" or "Logic Zone" sections) to forcefully incorporate the Train Metaphor, the Matryoshka Principle (`Embedded Clauses`), and Parallel Sentences, exactly as outlined in your position paper.
+3. Replace any lingering outdated terminology (e.g. "Compound Sentence").
+4. Make sure UI components are color-coded appropriately and remain accessible to absolute beginners.
+5. Run your required `npm run lint` and `npx tsc --noEmit` checks when finished.
 
-**Validation**: Mark as ✅ Done when the artifact is committed to `develop`.
----
+**Validation**: Mark as ✅ Done when your component refactors pass TypeScript/Lint checks and are committed to `develop`.
 
 ## Resolved
 
-### 2026-03-31 Orchestrator → Data Linguist
+### 2026-03-31 Orchestrator → Educational Publisher
+**Status**: ✅ Done
+**Task**: Draft FLS Pedagogical Position Paper
+**Branch**: `develop`
 **Status**: ✅ Done
 **Task**: Execute FLS Structural Role Replacements (s32, s89, cc2)
 **Branch**: `develop`
