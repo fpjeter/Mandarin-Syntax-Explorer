@@ -37,7 +37,7 @@ _No pending requests._
 ## Active Assignments
 
 ### [DATE] Orchestrator → Linguistics Specialist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Exploratory Evaluation of Alternative Visualizations
 **Branch**: `develop`
 
