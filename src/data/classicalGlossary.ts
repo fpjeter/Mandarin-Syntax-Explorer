@@ -125,4 +125,14 @@ export const classicalGlossary: Record<GrammarRole, { headline: string; detail: 
         detail:
             'In classical Chinese, the linking word "is" or "are" is often absent. 非 (fēi) means "is not", while saying "A is B" is often done by just placing them side by side, or with 為 (wéi).',
     },
+    'Parallel Sentence': {
+        headline: 'Side-by-side independent statements',
+        detail:
+            'Very common in classical syntax. A compound sentence where two or more independent clauses are placed neatly side-by-side to compare or contrast, without coordinating conjunctions.',
+    },
+    'Embedded Clause': {
+        headline: 'A sentence hiding inside a sentence',
+        detail:
+            'A fully-formed mini-sentence that is nested inside a larger structure. Crucial for understanding classical structures like 所-nominalizations where entire clauses act as nouns.',
+    },
 };

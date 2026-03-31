@@ -36,25 +36,31 @@ _No pending requests._
 
 ## Active Assignments
 
-### 2026-03-31 Orchestrator → Linguistics Specialist
-**Status**: ✅ Done
-**Task**: Theoretical Review of Nested Nomenclature
+### [DATE] Orchestrator → Data Linguist
+**Status**: 🔴 Active
+**Task**: Execute FLS Structural Role Replacements (s32, s89, cc2)
 **Branch**: `develop`
 
 > [!NOTE]
-> Following your recommendation to introduce formal structural wrappers for pivotal and parallel compound sentences, the Orchestrator has proposed the following terminology: `Compound Sentence`, `Clause`, and `Object Clause`.
+> The Orchestrator has successfully registered `Parallel Sentence` and `Embedded Clause` into the TypeScript union (src/types/grammar.ts), Validator Script (scripts/validate_trees.ts), and UI Glossary (src/data/glossary.ts + src/data/classicalGlossary.ts).
 
 **Action Required**:
-1. Review these three theoretical terms (`Compound Sentence`, `Clause`, `Object Clause`).
-2. Do they conflict with any core FLS conventions or classical text analysis parsing?
-3. Consider if simpler, clearer terms like `Embedded Clause` or `Parallel Sentence` might be more pedagogical.
-4. Output your nomenclature critique into a brief Markdown artifact named `nomenclature_review.md`.
+1. Execute the structural changes recommended by the Linguistics Specialist's `fls_post_integration_review.md`.
+2. In `src/data/sentences/pivotal_constructions.ts` (s32): Wrap the `Pivot` and its `Verb Phrase` into an `Embedded Clause`.
+3. In `src/data/sentences/pivotal_constructions.ts` (s89): Remove the fake `Topic`/`Comment` root. Wrap the sentence in a `Parallel Sentence` containing two independent `Embedded Clause` nodes.
+4. In `src/data/classicalSentences.ts` (cc2): Wrap the parallel comparison into a `Parallel Sentence` containing two independent `Embedded Clause` nodes.
+5. Run your standard `qa` and `lint` checks before reporting completion.
 
-**Validation**: When you have completed and committed your review artifact to the `develop` branch, mark this task as ✅ Done.
+**Validation**: Mark as ✅ Done when your refactored nodes pass `npm run qa` and are safely verified.
 
 ---
 
 ## Resolved
+
+### 2026-03-31 Orchestrator → Linguistics Specialist
+**Status**: ✅ Done
+**Task**: Theoretical Review of Nested Nomenclature
+**Branch**: `develop`
 
 ### 2026-03-31 Orchestrator → Linguistics Specialist
 **Status**: ✅ Done
