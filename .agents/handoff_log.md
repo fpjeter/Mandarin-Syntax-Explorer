@@ -30,16 +30,25 @@ Check `## Active Assignments` for any delegation token addressed to your role. E
 
 ## Pending Requests
 
-### [DATE] Linguistics Specialist → Orchestrator
-**Status**: 🟡 Pending
-**Blocked Task**: Executing the AST refactoring pass for `BEI` passives to migrate them to the Situation-Taking Verb model.
-**Dependency**: The JSON databank files (`bei_passive.ts`, `pivotal.ts`) must be structurally refactored. I am not the Data Linguist.
-**Suggested Fix**: Assign the Data Linguist to review my `implementation_plan.md` artifact and execute the data restructurings required to merge `BEI` nodes into Head Verbs generating `Embedded Clause` Situation Objects.
-**Urgency**: HIGH
+_No pending requests._
 
 ---
 
 ## Active Assignments
+
+### [DATE] Orchestrator → Data Linguist
+**Status**: 🔴 Active
+**Task**: Execute AST Model Refactor for Situation-Taking Verbs (`BEI` / Pivotal)
+**Branch**: `develop`
+
+> [!NOTE]
+> The Linguistics Specialist formulated a paradigm shift requiring `BEI` (passive) and pivotal constructions to share a unified "Situation-Taking Verb" architecture anchoring an `Embedded Clause`. 
+
+**Action Required**:
+1. Review the existing `implementation_plan.md` artifact from the Linguistics Specialist.
+2. Execute the JSON refactoring mapping instructions across `src/data/sentences/bei_passive.ts` and `src/data/sentences/pivotal_constructions.ts` to convert the `BEI` nodes from prepositions into active Head Verbs generating Situation Objects.
+3. Execute `npm run lint` and `npm run test` (or `validate_trees.ts`) to ensure nothing breaks during parsing.
+4. Mark this task as ✅ Done when your refactored data structures are merged cleanly into the repository.
 
 ### [DATE] Orchestrator → Linguistics Specialist
 **Status**: ✅ Done
