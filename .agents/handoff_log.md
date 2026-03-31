@@ -27,7 +27,8 @@ Append a new block to `## Pending Requests` using this exact format:
 1. **Verify Persona**: Before reading any ticket, strictly ensure the `[YOUR ROLE]` matches your exact expert persona. Never execute tickets assigned to others.
 2. **Execute on Branch**: Checkout a new feature branch `git checkout -b <your-role>/<task>`. Do all your work there.
 3. **Log Completion & Issues**: When done, update your ticket's status **in place** to `✅ Done` using a targeted single-line replacement (do NOT use multi-line regex replacements that might swallow adjacent tickets). If you ran into blockers, append a `**Issues Encountered:**` line to your ticket explaining any workarounds. Do NOT move the ticket to `## Resolved`.
-4. **Backup Communication Protocol**: If you try to view this log and find it corrupted, unreadable, or formatted improperly, **DO NOT attempt to modify it**. Instead, halt execution and print a Markdown block to the user starting with `"I have successfully completed [My Task]... here is what I accomplished:"` so the user can securely relay the status offline to the Orchestrator.
+4. **Backup Communication Protocol**: If you try to view this log and find it corrupted, unreadable, or formatted improperly, **DO NOT attempt to modify it**. Instead, halt execution and print a Markdown block to the user starting with `"I have successfully completed [My Task]... here is what I accomplished:"`. You MUST also explicitly describe what you know about the log issue (e.g., "The file was blocked due to a regex overlap on line 30") so the user can securely relay both the status and the error diagnostic offline to the Orchestrator.
+5. **Out-of-Band Tasks**: If the User gives you a direct verbal instruction that skips the Orchestrator and does not have an existing `🔴 Active` ticket in this log, you MUST generate a new tracking ticket for yourself under `## Active Assignments`. Document the user's out-of-band instructions, summarize your work, and mark it `✅ Done` so the Orchestrator has a paper trail.
 
 ---
 
@@ -39,8 +40,12 @@ _No pending requests._
 
 ## Active Assignments
 
+_No active assignments._
+
+## Resolved
+
 ### [DATE] Orchestrator → Data Linguist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Execute AST Model Refactor for Situation-Taking Verbs (`BEI` / Pivotal)
 **Branch**: `develop`
 
@@ -81,8 +86,6 @@ _No pending requests._
 2. Rewrite them completely. Remove pedantic "pedagogy" and academic linguistic terminology. Instead, focus exclusively on accessible, empathetic "explanations for learners" that quickly and intuitively summarize how the grammar actually works in everyday practice.
 3. Because these strings are rendered dynamically into the UI Sidebar, run `npm run lint` and boot the UI locally if you need to preview string length.
 4. Mark this task as ✅ Done when your accessible rewrites are merged into the repository.
-
-## Resolved
 
 ### [DATE] Orchestrator → Educational Publisher
 **Status**: ✅ Done
