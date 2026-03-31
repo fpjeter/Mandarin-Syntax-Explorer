@@ -16,8 +16,9 @@ When you are asked to improve the user interface, styling, animations, or ReactF
 
 ## Step-by-Step Development
 1. **Follow the Branch Protocol above.**
-2. **Mock Data Inspection**: If you need to understand the shape of the grammar trees to build a new view, check `src/types/grammar.ts`. It holds the absolute source of truth for the `GrammarNodeData` schema.
-3. **UI Implementation**: Modify component files (e.g., `SyntaxTree.tsx`, `NestedBoxView.tsx`) to alter how the trees are rendered.
+2. **Study the Architecture**: You MUST open and read `ARCHITECTURE.md` before attempting any visual changes. It explains exactly how `SyntaxTree.tsx` mathematically maps coordinates via `treeLayout.ts`.
+3. **Mock Data Inspection**: If you need to understand the shape of the grammar trees to build a new view, check `src/types/grammar.ts`. It holds the absolute source of truth for the `GrammarNodeData` schema.
+4. **UI Implementation**: Modify component files (e.g., `SyntaxTree.tsx`, `NestedBoxView.tsx`) to alter how the trees are rendered.
 4. **Validation**: Before finishing, you must run both the linter and the build:
 ```bash
 // turbo-all
