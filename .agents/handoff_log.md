@@ -37,7 +37,7 @@ _No pending requests._
 ## Active Assignments
 
 ### [DATE] Orchestrator → Data Linguist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Execute Curriculum Gap Sentence Expansion
 **Branch**: `develop`
 
@@ -54,7 +54,7 @@ _No pending requests._
 **Validation**: Mark as ✅ Done when your new outputs pass all validation scripts and are committed to `develop`.
 
 ### [DATE] Orchestrator → Educational Publisher
-**Status**: 🔴 Active *(Blocked on Data Linguist)*
+**Status**: ✅ Done
 **Task**: Pedagogical Review of Redundant Sentences
 **Branch**: `develop`
 
