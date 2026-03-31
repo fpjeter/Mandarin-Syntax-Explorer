@@ -33,7 +33,18 @@ export const ClassicalGrammarGuide: React.FC = () => {
                 </div>
             </section>
 
-            {/* ── 2. Classical vs. Modern ── */}
+            {/* ── 2. The Train Metaphor & Atomic Unit ── */}
+            <section>
+                <h3 className="text-[10px] font-bold uppercase tracking-widest text-blue-400 mb-1.5">The Train Metaphor & Atomic Unit</h3>
+                <p className="text-[11px] text-slate-300 leading-relaxed mb-2">
+                    Beneath the extremely terse surface of Classical Chinese lies the exact same <strong>Train</strong> architecture that drives modern Mandarin. The only mandatory carriage is the <strong>Topic-Comment pair</strong>—the true atomic functional unit of the sentence.
+                </p>
+                <p className="text-[11px] text-slate-300 leading-relaxed">
+                    Inside the Comment slot sits the rigidly ordered <strong>Logic Zone</strong>. Furthermore, Classical Chinese relies heavily on the <strong>Matryoshka principle</strong>, shrinking down entire sentences into <strong className="text-violet-300">Embedded Clauses</strong>. You will also frequently see independent thoughts sitting side-by-side as <strong className="text-orange-300">Parallel Sentences</strong> with no connecting words (parataxis).
+                </p>
+            </section>
+
+            {/* ── 3. Classical vs. Modern ── */}
             <section>
                 <h3 className="text-[10px] font-bold uppercase tracking-widest text-orange-400 mb-2">Classical vs. Modern</h3>
                 <div className="grid grid-cols-2 gap-2">

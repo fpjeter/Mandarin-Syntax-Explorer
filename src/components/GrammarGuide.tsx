@@ -115,7 +115,9 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                 <section>
                     <h3 className="text-[10px] font-bold uppercase tracking-widest text-violet-400 mb-1.5">2. The Matryoshka Principle</h3>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
-                        Mandarin grammar is intensely recursive. A Comment slot frequently contains another fully nested <strong className="text-slate-100">Topic-Comment pair</strong> inside it, like Russian nesting dolls. This allows complex ideas to be stacked harmoniously without endless conjunctions.
+                        Mandarin grammar is intensely recursive. Because a Topic-Comment unit is self-contained, an entire sentence can shrink and fit completely inside another Comment slot like a nested doll. 
+                        We refer to these purely spacially as <strong className="text-violet-300">Embedded Clauses</strong>. 
+                        For example, a causative verb ("let/make") doesn't act on a person—it triggers an entirely self-contained <strong className="text-violet-300">Situation Object</strong> embedded perfectly within.
                     </p>
                 </section>
 
@@ -123,8 +125,8 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                 <section>
                     <h3 className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-1.5">3. The Logic Zone</h3>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
-                        Inside the Comment slot, any contextual framing (<em>when</em>, <em>where</em>, <em>how</em>, and <em>by whom</em>) is strictly placed in the <strong className="text-emerald-300">Logic Zone</strong> immediately <strong className="text-emerald-300">before</strong> the verb, never after.
-                        The flow of modifiers resolves toward the verb.
+                        Unlike English, you cannot dump modifiers haphazardly at the end. The Comment slot acts as a strictly ordered <strong className="text-emerald-300">Logic Zone</strong>. 
+                        Adjuncts (<em className="text-emerald-200">Time</em>, <em className="text-emerald-200">Place</em>, <em className="text-emerald-200">Manner</em>) must be mathematically stacked <strong className="text-emerald-300">before</strong> the action verb, reflecting how reality chronologically unfolds.
                     </p>
                     <div className="mt-2 flex flex-wrap gap-1.5 items-center">
                         {['Time', 'Place', 'Manner', 'Verb'].map((label, i) => (
@@ -141,7 +143,15 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                     </div>
                 </section>
 
-                {/* ── 4. Dropped Subjects ── */}
+                {/* ── 4. Parallel Sentences (Parataxis) ── */}
+                <section>
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-orange-400 mb-1.5">4. Parallel Sentences</h3>
+                    <p className="text-[11px] text-slate-300 leading-relaxed">
+                        Watch out for the "Fake Topic" trap! When Mandarin compares two independent thoughts ("Hardship makes you grow, comfort makes you regress"), they simply sit side-by-side on the tracks as <strong className="text-orange-300">Parallel Sentences</strong>. You don't need connecting cars like "and" or "but" (parataxis). If a sentence consists of two independent contrasting thoughts, never falsely lump the first half as the "Topic" of the second!
+                    </p>
+                </section>
+
+                {/* ── 5. Dropped Subjects ── */}
                 <section>
                     <h3 className="text-[10px] font-bold uppercase tracking-widest text-rose-400 mb-1.5">Why subjects disappear</h3>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
