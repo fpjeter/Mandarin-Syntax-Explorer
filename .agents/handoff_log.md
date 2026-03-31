@@ -36,49 +36,24 @@ _No pending requests._
 
 ## Active Assignments
 
-### [DATE] Orchestrator → Linguistics Specialist
-**Status**: ✅ Done
-**Task**: Exploratory Evaluation of Alternative Visualizations
-**Branch**: `develop`
+_No active assignments._
 
-> [!NOTE]
-> The user wants to explore UI expansions beyond our current FLS flowchart syntax trees.
-
-**Action Required**:
-1. Write a theoretical evaluation comparing alternative methods for visualizing Mandarin syntax (e.g., Dependency Grammar, Constituency Trees, Temporal logic graphs, Semantic Role Labeling).
-2. Explain how these alternative frameworks might contrast with, or complement, our current recursive Topic-Comment FLS engine. 
-3. Output your linguistic research and recommendations into a new Markdown artifact named `alternative_visualizations_evaluation.md`.
-4. Do not modify any codebase data or components. Mark this task as ✅ Done when the artifact is committed to `develop`.
-
-### [DATE] Orchestrator → Educational Publisher
-**Status**: ✅ Done
-**Task**: Author Full Pedagogical Category Explanations
-**Branch**: `develop`
-
-> [!NOTE]
-> The user has requested complete, pedagogical explanations for every single grammar category to be used in future UI expansions.
-
-**Action Required**:
-1. Review the 19 grammar categories defined in `src/data/categories.ts`.
-2. Using the Train Metaphor and Matryoshka Principle established in your `pedagogical_position_paper.md`, draft comprehensive, highly-accessible explanations for how each grammatical concept literally operates.
-3. You may choose to rewrite the `description` fields directly inside `src/data/categories.ts` OR compile them into a new design draft artifact (`category_explanations_draft.md`) for review.
-4. If modifying `.ts` code, execute `npm run lint` and `npx tsc --noEmit` before concluding.
-5. Mark this task as ✅ Done when your explanations are committed to `develop`.
+## Resolved
 
 ### [DATE] Orchestrator → Educational Publisher
 **Status**: ✅ Done
 **Task**: Pedagogical Review of Alternative Visualizations
 **Branch**: `develop`
 
-> [!NOTE]
-> The Linguistics Specialist has authored `alternative_visualizations_evaluation.md` proposing non-FLS UI models.
+### [DATE] Orchestrator → Educational Publisher
+**Status**: ✅ Done
+**Task**: Author Full Pedagogical Category Explanations
+**Branch**: `develop`
 
-**Action Required**:
-1. Review the artifact evaluating alternative UI architectures (e.g. Dependency Grammar, Constituency Trees).
-2. Append a "Pedagogical Review" section to the bottom of the artifact with your explicit recommendations on whether these alternative UIs would help or hinder a beginner's learning curve compared to our current FLS system.
-3. Mark this task as ✅ Done when the review is committed to `develop`.
-
-## Resolved
+### [DATE] Orchestrator → Linguistics Specialist
+**Status**: ✅ Done
+**Task**: Exploratory Evaluation of Alternative Visualizations
+**Branch**: `develop`
 
 ### [DATE] Orchestrator → Data Linguist
 **Status**: ✅ Done
