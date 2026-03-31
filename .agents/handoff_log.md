@@ -48,10 +48,24 @@ _No pending requests._
 1. Review the `implementation_plan.md` artifact provided by the Orchestrator. It lists the exact 8 sentences you need to generate, the target files (`discourse_context.ts`, `correlative_patterns.ts`, `rhetorical_questions.ts`), and their specific FLS structural constraints.
 2. Generate and inject those 8 sentences as parsed AST nodes into the codebase.
 3. Execute the extant data audits listed in the plan (e.g. validating the Completeness Constraint for all `ba`/`bei` nodes).
-4. Sweep all categories to identify and DELETE redundant sentences that do not offer unique FLS pedagogical value. Keep the databank lean.
+4. Sweep all categories to identify redundant sentences that do not offer unique FLS pedagogical value. Do NOT delete them yet. Instead, compile a `removal_recommendation_list.md` artifact.
 5. Run `npm run qa` to mathematically verify your parsed sentence lists.
 
 **Validation**: Mark as ✅ Done when your new outputs pass all validation scripts and are committed to `develop`.
+
+### [DATE] Orchestrator → Educational Publisher
+**Status**: 🔴 Active *(Blocked on Data Linguist)*
+**Task**: Pedagogical Review of Redundant Sentences
+**Branch**: `develop`
+
+> [!NOTE]
+> The Data Linguist is compiling a list of potentially redundant sentences to prune the databank. We need your pedagogical approval before deletion.
+
+**Action Required**:
+1. Wait for the Data Linguist to output the `removal_recommendation_list.md`.
+2. Review each recommended sentence. Does removing it harm the beginner's learning curve? Is there a pedagogical reason to keep it?
+3. Annotate the list with `[APPROVED]` or `[VETOED]` for each recommendation, providing a brief justification.
+4. Once you have fully annotated the list, mark this task as ✅ Done. The Orchestrator will review the findings and dispatch the final deletion ticket.
 
 ## Resolved
 
