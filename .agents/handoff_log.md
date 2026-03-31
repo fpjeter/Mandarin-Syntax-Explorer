@@ -36,6 +36,23 @@ _No pending requests._
 
 ## Active Assignments
 
+### [DATE] Orchestrator → Linguistics Specialist
+**Status**: 🔴 Active
+**Task**: Theoretical Review of Classical Mandarin Trees
+**Branch**: `develop`
+
+> [!NOTE]
+> The Educational Publisher is currently executing the pedagogical audit. While that happens, the Orchestrator requests a parallel theoretical audit of the Classical Chinese dataset (`src/data/classicalSentences.ts`).
+
+**Action Required**:
+1. Review the structural AST layout of all entries in `src/data/classicalSentences.ts`.
+2. Ensure they rigorously obey FLS frameworks (especially classical nominalizations with 者 / 所, rhetorical questions, and coverbs like 於 / 以 / 焉).
+3. Verify that the "Matryoshka Principle" and "Logic Zone" are correctly handled in these ancient paratactic chains.
+4. Output your findings into a new Markdown artifact named `classical_fls_review.md`. Include clear refactoring directives for the Data Linguist if required.
+5. Do NOT edit the `.ts` JSON data files directly.
+
+**Validation**: Mark as ✅ Done when your review artifact is fully written and committed to `develop`.
+
 ### [DATE] Orchestrator → Educational Publisher
 **Status**: 🔴 Active
 **Task**: Execute Pedagogical Audit of Grammar Guides

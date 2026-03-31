@@ -89,13 +89,14 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
     if (tab === 'framework') {
         return (
             <div className="space-y-5">
-                {/* ── 1. The Atomic Unit ── */}
+                {/* ── 1. The Train Architecture ── */}
                 <section>
-                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-fuchsia-400 mb-1.5">1. The Atomic Unit</h3>
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-fuchsia-400 mb-1.5">1. The Train Architecture</h3>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
-                        In English, you build a sentence around a <em>subject</em> doing an action.
-                        Mandarin works differently: the fundamental building block is the <strong className="text-slate-100">Topic-Comment pair</strong>. You first state <em>what you want to talk about</em> (the <GlossaryLink role="Topic" onOpenGlossary={onOpenGlossary}><span className="text-fuchsia-400 font-bold">Topic</span></GlossaryLink>),
-                        then say something about it (the <GlossaryLink role="Comment" onOpenGlossary={onOpenGlossary}><span className="text-blue-400 font-bold">Comment</span></GlossaryLink>).
+                        English sentences are rigid <em>Cathedrals</em> (Subject + Verb + Object). Mandarin is a <strong className="text-slate-100">Train</strong>. It is a sequence of connected cars.
+                        The only required "car" is the <strong className="text-slate-100">Topic-Comment pair</strong> (the entire language's atomic unit).
+                        You establish what to talk about (the <GlossaryLink role="Topic" onOpenGlossary={onOpenGlossary}><span className="text-fuchsia-400 font-bold">Topic</span></GlossaryLink>),
+                        and then state something about it (the <GlossaryLink role="Comment" onOpenGlossary={onOpenGlossary}><span className="text-blue-400 font-bold">Comment</span></GlossaryLink>).
                     </p>
                     {/* Mini example */}
                     <div className="mt-3 bg-slate-800/50 border border-slate-700/40 rounded-xl px-3 py-2.5">
