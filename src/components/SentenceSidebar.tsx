@@ -1,9 +1,26 @@
 import { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { LibraryBig, ChevronDown, Search, X } from 'lucide-react';
-import { SENTENCE_CATEGORIES, CATEGORY_DESCRIPTIONS } from '../data/categories';
+import { LibraryBig, ChevronDown, Search, X, BookOpen } from 'lucide-react';
+import { SENTENCE_CATEGORIES, CATEGORY_DESCRIPTIONS, FULL_CATEGORY_EXPLANATIONS } from '../data/categories';
 import type { SentenceData } from '../types/grammar';
 import { useIsClassical } from '../contexts/AppModeContext';
+
+const parseMarkdownBold = (text: string) => {
+    if (!text) return null;
+    const parts = text.split(/(\*\*.*?\*\*|\*.*?\*|`.*?`)/g);
+    return parts.map((part, i) => {
+        if (part.startsWith('**') && part.endsWith('**')) {
+            return <strong key={i} className="text-slate-100 font-bold">{part.slice(2, -2)}</strong>;
+        }
+        if (part.startsWith('*') && part.endsWith('*')) {
+            return <em key={i} className="text-slate-200 italic">{part.slice(1, -1)}</em>;
+        }
+        if (part.startsWith('`') && part.endsWith('`')) {
+            return <span key={i} className="bg-slate-700/50 px-1 py-0.5 rounded text-[10px] font-mono text-amber-200">{part.slice(1, -1)}</span>;
+        }
+        return part;
+    });
+};
 
 interface SentenceSidebarProps {
     selectedId: string;
@@ -14,6 +31,8 @@ interface SentenceSidebarProps {
     categories?: readonly string[];
     /** Override the category descriptions (for classical mode). Falls back to CATEGORY_DESCRIPTIONS. */
     categoryDescriptions?: Record<string, string>;
+    /** Override the full category descriptions. Falls back to FULL_CATEGORY_EXPLANATIONS. */
+    fullCategoryDescriptions?: Record<string, string>;
 }
 
 export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
@@ -22,12 +41,15 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
     sentences,
     categories: categoriesProp,
     categoryDescriptions: descriptionsProp,
+    fullCategoryDescriptions,
 }) => {
     const categories = categoriesProp ?? SENTENCE_CATEGORIES;
     const descriptions = descriptionsProp ?? CATEGORY_DESCRIPTIONS;
+    const fullDescriptions = fullCategoryDescriptions ?? FULL_CATEGORY_EXPLANATIONS;
     const isClassical = useIsClassical();
 
     const [openGroup, setOpenGroup] = useState<string | null>(null);
+    const [expandedCategoryDesc, setExpandedCategoryDesc] = useState<string | null>(null);
     const [searchQuery, setSearchQuery] = useState('');
     const [highlightedId, setHighlightedId] = useState<string | null>(null);
     const highlightedRef = useRef<HTMLButtonElement | null>(null);
@@ -89,6 +111,7 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
     const toggleGroup = (cat: string) => {
         setOpenGroup(prev => {
             const next = prev === cat ? null : cat;
+            if (prev !== cat) setExpandedCategoryDesc(null);
             if (next) {
                 // Scroll the opened category into view after animation starts
                 setTimeout(() => {
@@ -209,9 +232,40 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
                                         transition={{ duration: 0.2, ease: 'easeInOut' }}
                                         className="overflow-hidden"
                                     >
-                                        <p className="px-4 pt-2 pb-1 text-[10px] text-slate-400 italic leading-relaxed">
+                                        <div className="px-4 pt-2 pb-2">
+                                            <p className="text-[10px] text-slate-400 italic leading-relaxed">
                                             {(descriptions as Record<string, string>)[category]}
-                                        </p>
+                                            </p>
+                                            
+                                            {(fullDescriptions as Record<string, string>)[category] && (
+                                                <button
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        setExpandedCategoryDesc(prev => prev === category ? null : category);
+                                                    }}
+                                                    className="mt-2 flex items-center gap-1.5 text-[9px] font-bold tracking-widest uppercase text-slate-500 hover:text-slate-300 transition-colors"
+                                                >
+                                                    <BookOpen className="w-3 h-3" />
+                                                    {expandedCategoryDesc === category ? 'Hide Pedagogy' : 'Read Pedagogy'}
+                                                </button>
+                                            )}
+
+                                            <AnimatePresence initial={false}>
+                                                {expandedCategoryDesc === category && (
+                                                    <motion.div
+                                                        initial={{ height: 0, opacity: 0 }}
+                                                        animate={{ height: 'auto', opacity: 1 }}
+                                                        exit={{ height: 0, opacity: 0 }}
+                                                        transition={{ duration: 0.2, ease: 'easeInOut' }}
+                                                        className="overflow-hidden mt-2"
+                                                    >
+                                                        <div className="p-3 mb-1 rounded-xl bg-slate-800/80 border border-slate-700/60 shadow-inner text-[11px] leading-relaxed text-slate-300 font-medium">
+                                                            {parseMarkdownBold((fullDescriptions as Record<string, string>)[category])}
+                                                        </div>
+                                                    </motion.div>
+                                                )}
+                                            </AnimatePresence>
+                                        </div>
                                         <div className="p-2 space-y-2">
                                             {sentences.map(sentence => {
                                                 const isSelected = selectedId === sentence.id;
