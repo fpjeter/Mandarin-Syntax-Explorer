@@ -37,40 +37,46 @@ _No pending requests._
 ## Active Assignments
 
 ### [DATE] Orchestrator → Linguistics Specialist
+**Status**: 🔴 Active
+**Task**: Define Category Learning Objectives
+**Branch**: `develop`
+
+> [!NOTE]
+> We are preparing for a massive databank expansion. We need to define exactly what grammatical laws each category must demonstrate.
+
+**Action Required**:
+1. Review the list of categories in `src/data/categories.ts`.
+2. For each category, explicitly define the mathematical/structural syntactic constraints that sentences inside it MUST demonstrate (e.g., what specific FLS structures must a 'Pivotal Construction' vs. a 'Result Complement' contain?).
+3. Output a detailed report to a new artifact named `category_linguistics_demonstrations.md`. 
+4. Mark this task as ✅ Done when the artifact is committed.
+
+### [DATE] Orchestrator → Educational Publisher
+**Status**: 🔴 Active *(Blocked on Linguistics Specialist)*
+**Task**: Curriculum Gap Analysis
+**Branch**: `develop`
+
+> [!NOTE]
+> The Orchestrator will use your findings to order the Data Linguist to create new sentences.
+
+**Action Required**:
+1. Wait for the Linguistics Specialist to output `category_linguistics_demonstrations.md`.
+2. Read their structural objectives for each category.
+3. Cross-reference those objectives against the *actual* parsed sentences we currently have in `src/data/sentences/*.ts`.
+4. Determine if we are successfully meeting those learning objectives. Are there categories with too few sentences? Are there categories lacking variety? How should these objectives be taught?
+5. Output a detailed audit to a new artifact named `curriculum_gap_analysis.md`. 
+6. Mark this task as ✅ Done when the artifact is committed.
+
+## Resolved
+
+### [DATE] Orchestrator → Linguistics Specialist
 **Status**: ✅ Done
 **Task**: Theoretical Review of Classical Mandarin Trees
 **Branch**: `develop`
 
-> [!NOTE]
-> The Educational Publisher is currently executing the pedagogical audit. While that happens, the Orchestrator requests a parallel theoretical audit of the Classical Chinese dataset (`src/data/classicalSentences.ts`).
-
-**Action Required**:
-1. Review the structural AST layout of all entries in `src/data/classicalSentences.ts`.
-2. Ensure they rigorously obey FLS frameworks (especially classical nominalizations with 者 / 所, rhetorical questions, and coverbs like 於 / 以 / 焉).
-3. Verify that the "Matryoshka Principle" and "Logic Zone" are correctly handled in these ancient paratactic chains.
-4. Output your findings into a new Markdown artifact named `classical_fls_review.md`. Include clear refactoring directives for the Data Linguist if required.
-5. Do NOT edit the `.ts` JSON data files directly.
-
-**Validation**: Mark as ✅ Done when your review artifact is fully written and committed to `develop`.
-
 ### [DATE] Orchestrator → Educational Publisher
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Execute Pedagogical Audit of Grammar Guides
 **Branch**: `develop`
-
-> [!NOTE]
-> Thank you for drafting the `pedagogical_position_paper.md`! Your three pedagogical rules (The Train Metaphor, The Matryoshka Principle, and The Logic Zone) perfectly map FLS concepts to learner-friendly visuals.
-
-**Action Required**:
-1. Review `src/components/GrammarGuide.tsx` and `src/components/ClassicalGrammarGuide.tsx`.
-2. Rewrite or update their internal sections (like the "Atomic Unit" or "Logic Zone" sections) to forcefully incorporate the Train Metaphor, the Matryoshka Principle (`Embedded Clauses`), and Parallel Sentences, exactly as outlined in your position paper.
-3. Replace any lingering outdated terminology (e.g. "Compound Sentence").
-4. Make sure UI components are color-coded appropriately and remain accessible to absolute beginners.
-5. Run your required `npm run lint` and `npx tsc --noEmit` checks when finished.
-
-**Validation**: Mark as ✅ Done when your component refactors pass TypeScript/Lint checks and are committed to `develop`.
-
-## Resolved
 
 ### 2026-03-31 Orchestrator → Educational Publisher
 **Status**: ✅ Done
