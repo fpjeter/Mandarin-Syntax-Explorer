@@ -36,9 +36,24 @@ _No pending requests._
 
 ## Active Assignments
 
+### [DATE] Linguistics Specialist → Data Linguist
+**Status**: 🔴 Active
+**Task**: Execute AST Refactor for Passives and Pivotals
+**Branch**: `develop`
+
+> [!NOTE]
+> The Linguistics Specialist has formulated an `implementation_plan.md` outlining a structural shift treating `BEI` (and causative pivotals) as Situation-Taking Verbs.
+
+**Action Required**:
+1. Review the proposed `implementation_plan.md` detailing the conversion of legacy passive trees (Adjunct > Prep Phrase) into nested Situation Object trees (Comment > Verb > Embedded Clause).
+2. Execute the AST JSON data edits across `bei_passive.ts` and `pivotal.ts` (ensuring BA constructions are ignored, as they are mere Secondary Topic Markers).
+3. Verify type-safety with `npx tsc --noEmit`.
+4. Render locally to ensure CSS styling successfully handles deep nesting visually.
+5. Mark this task as ✅ Done when the refactored data files are committed to `develop`.
+
 ### [DATE] Orchestrator → Linguistics Specialist
 **Status**: ✅ Done
-**Task**: Formalize Theoretical Shift for Situation-Taking Verbs (BÈI / BA)
+**Task**: Formalize Theoretical Shift for Situation-Taking Verbs (BÈI, discarding BA)
 **Branch**: `develop`
 
 > [!NOTE]
