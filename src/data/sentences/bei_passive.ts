@@ -48,47 +48,48 @@ export const beiPassive: SentenceData[] = [
                         },
                         {
                             id: 'n6-c-p',
-                            role: 'Predicate',
+                            role: 'Verb Phrase',
                             subRole: 'passive verbal',
                             children: [
                                 {
-                                    id: 'n6-c-p-bei',
-                                    role: 'Adjunct',
-                                    subRole: 'bèi-construction (passive)',
-                                    children: [
-                                        {
-                                            id: 'n6-c-p-bei-prep',
-                                            role: 'Preposition',
-                                            text: { hanzi: '被', pinyin: 'bèi', translation: 'by' }
-                                        },
-                                        {
-                                            id: 'n6-c-p-bei-agent',
-                                            role: 'Noun',
-                                            subRole: 'agent',
-                                            text: { hanzi: '小孩儿', pinyin: 'xiǎo hái er', translation: 'child' }
-                                        }
-                                    ]
+                                    id: 'n6-c-p-bei-hv',
+                                    role: 'Head Verb',
+                                    subRole: 'passive / undergo',
+                                    text: { hanzi: '被', pinyin: 'bèi', translation: 'suffer / undergo' }
                                 },
                                 {
-                                    id: 'n6-c-p-vp',
-                                    role: 'Verb Phrase',
+                                    id: 'n6-c-p-embedded',
+                                    role: 'Embedded Clause',
+                                    subRole: 'situation object',
                                     children: [
                                         {
-                                            id: 'n6-c-p-vp-hv',
-                                            role: 'Head Verb',
-                                            text: { hanzi: '拉', pinyin: 'lā', translation: 'pull' }
+                                            id: 'n6-c-p-bei-agent',
+                                            role: 'Subject',
+                                            subRole: 'agent',
+                                            text: { hanzi: '小孩儿', pinyin: 'xiǎo hái er', translation: 'child' }
                                         },
                                         {
-                                            id: 'n6-c-p-vp-part',
-                                            role: 'Particle',
-                                            subRole: 'aspect',
-                                            text: { hanzi: '了', pinyin: 'le', translation: '(completion)' }
-                                        },
-                                        {
-                                            id: 'n6-c-p-vp-comp',
-                                            role: 'Complement',
-                                            subRole: 'quantity / brief action',
-                                            text: { hanzi: '一下', pinyin: 'yī xià', translation: 'a bit/once' }
+                                            id: 'n6-c-p-vp',
+                                            role: 'Verb Phrase',
+                                            children: [
+                                                {
+                                                    id: 'n6-c-p-vp-hv',
+                                                    role: 'Head Verb',
+                                                    text: { hanzi: '拉', pinyin: 'lā', translation: 'pull' }
+                                                },
+                                                {
+                                                    id: 'n6-c-p-vp-part',
+                                                    role: 'Particle',
+                                                    subRole: 'aspect',
+                                                    text: { hanzi: '了', pinyin: 'le', translation: '(completion)' }
+                                                },
+                                                {
+                                                    id: 'n6-c-p-vp-comp',
+                                                    role: 'Complement',
+                                                    subRole: 'quantity / brief action',
+                                                    text: { hanzi: '一下', pinyin: 'yī xià', translation: 'a bit/once' }
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
@@ -132,37 +133,44 @@ export const beiPassive: SentenceData[] = [
                     role: 'Comment',
                     children: [
                         {
-                            id: 'n22-c-bei',
-                            role: 'Adjunct',
-                            subRole: 'bèi-construction (passive)',
-                            children: [
-                                {
-                                    id: 'n22-c-bei-prep',
-                                    role: 'Preposition',
-                                    text: { hanzi: '被', pinyin: 'bèi', translation: 'by (passive marker)' }
-                                },
-                                {
-                                    id: 'n22-c-bei-agent',
-                                    role: 'Noun',
-                                    subRole: 'agent',
-                                    text: { hanzi: '人', pinyin: 'rén', translation: 'someone / a person' }
-                                }
-                            ]
-                        },
-                        {
-                            id: 'n22-c-vp',
+                            id: 'n22-c-vp-root',
                             role: 'Verb Phrase',
                             children: [
                                 {
-                                    id: 'n22-c-hv',
+                                    id: 'n22-c-bei-hv',
                                     role: 'Head Verb',
-                                    text: { hanzi: '偷', pinyin: 'tōu', translation: 'steal' }
+                                    subRole: 'passive / undergo',
+                                    text: { hanzi: '被', pinyin: 'bèi', translation: 'suffer / undergo' }
                                 },
                                 {
-                                    id: 'n22-c-le',
-                                    role: 'Particle',
-                                    subRole: 'completion',
-                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' }
+                                    id: 'n22-c-embedded',
+                                    role: 'Embedded Clause',
+                                    subRole: 'situation object',
+                                    children: [
+                                        {
+                                            id: 'n22-c-bei-agent',
+                                            role: 'Subject',
+                                            subRole: 'agent',
+                                            text: { hanzi: '人', pinyin: 'rén', translation: 'someone / a person' }
+                                        },
+                                        {
+                                            id: 'n22-c-vp',
+                                            role: 'Verb Phrase',
+                                            children: [
+                                                {
+                                                    id: 'n22-c-hv',
+                                                    role: 'Head Verb',
+                                                    text: { hanzi: '偷', pinyin: 'tōu', translation: 'steal' }
+                                                },
+                                                {
+                                                    id: 'n22-c-le',
+                                                    role: 'Particle',
+                                                    subRole: 'completion',
+                                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' }
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         }
@@ -203,44 +211,51 @@ export const beiPassive: SentenceData[] = [
                     role: 'Comment',
                     children: [
                         {
-                            id: 'n48-bei',
-                            role: 'Adjunct',
-                            subRole: 'bèi-construction (passive)',
-                            children: [
-                                {
-                                    id: 'n48-bei-prep',
-                                    role: 'Preposition',
-                                    text: { hanzi: '被', pinyin: 'bèi', translation: '(passive)' },
-                                },
-                                {
-                                    id: 'n48-agent',
-                                    role: 'Noun',
-                                    subRole: 'agent (doer)',
-                                    text: { hanzi: '他', pinyin: 'tā', translation: 'he / him' },
-                                },
-                            ],
-                        },
-                        {
-                            id: 'n48-vp',
+                            id: 'n48-vp-root',
                             role: 'Verb Phrase',
                             children: [
                                 {
-                                    id: 'n48-hv',
+                                    id: 'n48-bei-hv',
                                     role: 'Head Verb',
-                                    text: { hanzi: '撕', pinyin: 'sī', translation: 'tear' },
+                                    subRole: 'passive / undergo',
+                                    text: { hanzi: '被', pinyin: 'bèi', translation: 'suffer / undergo' },
                                 },
                                 {
-                                    id: 'n48-comp',
-                                    role: 'Complement',
-                                    subRole: 'resultative (removal/destruction)',
-                                    text: { hanzi: '掉', pinyin: 'diào', translation: 'off / away (destroyed)' },
-                                },
-                                {
-                                    id: 'n48-le',
-                                    role: 'Particle',
-                                    subRole: 'completion',
-                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
-                                },
+                                    id: 'n48-embedded',
+                                    role: 'Embedded Clause',
+                                    subRole: 'situation object',
+                                    children: [
+                                        {
+                                            id: 'n48-agent',
+                                            role: 'Subject',
+                                            subRole: 'agent (doer)',
+                                            text: { hanzi: '他', pinyin: 'tā', translation: 'he / him' },
+                                        },
+                                        {
+                                            id: 'n48-vp',
+                                            role: 'Verb Phrase',
+                                            children: [
+                                                {
+                                                    id: 'n48-hv',
+                                                    role: 'Head Verb',
+                                                    text: { hanzi: '撕', pinyin: 'sī', translation: 'tear' },
+                                                },
+                                                {
+                                                    id: 'n48-comp',
+                                                    role: 'Complement',
+                                                    subRole: 'resultative (removal/destruction)',
+                                                    text: { hanzi: '掉', pinyin: 'diào', translation: 'off / away (destroyed)' },
+                                                },
+                                                {
+                                                    id: 'n48-le',
+                                                    role: 'Particle',
+                                                    subRole: 'completion',
+                                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
+                                                },
+                                            ],
+                                        },
+                                    ]
+                                }
                             ],
                         },
                     ],
@@ -269,44 +284,51 @@ export const beiPassive: SentenceData[] = [
                     role: 'Comment',
                     children: [
                         {
-                            id: 'n49-bei',
-                            role: 'Adjunct',
-                            subRole: 'bèi-construction (passive)',
-                            children: [
-                                {
-                                    id: 'n49-bei-prep',
-                                    role: 'Preposition',
-                                    text: { hanzi: '被', pinyin: 'bèi', translation: '(passive)' },
-                                },
-                                {
-                                    id: 'n49-agent',
-                                    role: 'Noun',
-                                    subRole: 'agent (doer)',
-                                    text: { hanzi: '警察', pinyin: 'jǐng chá', translation: 'police' },
-                                },
-                            ],
-                        },
-                        {
-                            id: 'n49-vp',
+                            id: 'n49-vp-root',
                             role: 'Verb Phrase',
                             children: [
                                 {
-                                    id: 'n49-hv',
+                                    id: 'n49-bei-hv',
                                     role: 'Head Verb',
-                                    text: { hanzi: '抓', pinyin: 'zhuā', translation: 'grab / catch' },
+                                    subRole: 'passive / undergo',
+                                    text: { hanzi: '被', pinyin: 'bèi', translation: 'suffer / undergo' },
                                 },
                                 {
-                                    id: 'n49-comp',
-                                    role: 'Complement',
-                                    subRole: 'resultative (firmly held)',
-                                    text: { hanzi: '住', pinyin: 'zhù', translation: 'firmly / hold in place' },
-                                },
-                                {
-                                    id: 'n49-le',
-                                    role: 'Particle',
-                                    subRole: 'completion',
-                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
-                                },
+                                    id: 'n49-embedded',
+                                    role: 'Embedded Clause',
+                                    subRole: 'situation object',
+                                    children: [
+                                        {
+                                            id: 'n49-agent',
+                                            role: 'Subject',
+                                            subRole: 'agent (doer)',
+                                            text: { hanzi: '警察', pinyin: 'jǐng chá', translation: 'police' },
+                                        },
+                                        {
+                                            id: 'n49-vp',
+                                            role: 'Verb Phrase',
+                                            children: [
+                                                {
+                                                    id: 'n49-hv',
+                                                    role: 'Head Verb',
+                                                    text: { hanzi: '抓', pinyin: 'zhuā', translation: 'grab / catch' },
+                                                },
+                                                {
+                                                    id: 'n49-comp',
+                                                    role: 'Complement',
+                                                    subRole: 'resultative (firmly held)',
+                                                    text: { hanzi: '住', pinyin: 'zhù', translation: 'firmly / hold in place' },
+                                                },
+                                                {
+                                                    id: 'n49-le',
+                                                    role: 'Particle',
+                                                    subRole: 'completion',
+                                                    text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
+                                                },
+                                            ],
+                                        },
+                                    ]
+                                }
                             ],
                         },
                     ],

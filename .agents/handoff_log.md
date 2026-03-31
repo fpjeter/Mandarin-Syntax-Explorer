@@ -24,7 +24,11 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## How to Receive an Assignment
 
-Check `## Active Assignments` for any delegation token addressed to your role. Execute the instructions exactly as written. When done, update the token's status **in place** to `✅ Done` — but **do NOT move the entry** to `## Resolved`. Only the **Orchestrator** may move entries to Resolved after independently verifying that your work landed on the remote branch.
+1. **Verify Persona**: Before reading any ticket, strictly ensure the `[YOUR ROLE]` matches your exact expert persona. Never execute tickets assigned to others.
+2. **Execute on Branch**: Checkout a new feature branch `git checkout -b <your-role>/<task>`. Do all your work there.
+3. **Log Completion & Issues**: When done, update your ticket's status **in place** to `✅ Done` using a targeted single-line replacement (do NOT use multi-line regex replacements that might swallow adjacent tickets). If you ran into blockers, append a `**Issues Encountered:**` line to your ticket explaining any workarounds. Do NOT move the ticket to `## Resolved`.
+4. **Backup Communication Protocol**: If you try to view this log and find it corrupted, unreadable, or formatted improperly, **DO NOT attempt to modify it**. Instead, halt execution and print a Markdown block to the user starting with `"I have successfully completed [My Task]... here is what I accomplished:"`. You MUST also explicitly describe what you know about the log issue (e.g., "The file was blocked due to a regex overlap on line 30") so the user can securely relay both the status and the error diagnostic offline to the Orchestrator.
+5. **Out-of-Band Tasks**: If the User gives you a direct verbal instruction that skips the Orchestrator and does not have an existing `🔴 Active` ticket in this log, you MUST generate a new tracking ticket for yourself under `## Active Assignments`. Document the user's out-of-band instructions, summarize your work, and mark it `✅ Done` so the Orchestrator has a paper trail.
 
 ---
 
@@ -39,6 +43,49 @@ _No pending requests._
 _No active assignments._
 
 ## Resolved
+
+### [DATE] Orchestrator → Data Linguist
+**Status**: ✅ Done
+**Task**: Execute AST Model Refactor for Situation-Taking Verbs (`BEI` / Pivotal)
+**Branch**: `develop`
+
+> [!NOTE]
+> The Linguistics Specialist formulated a paradigm shift requiring `BEI` (passive) and pivotal constructions to share a unified "Situation-Taking Verb" architecture anchoring an `Embedded Clause`. 
+
+**Action Required**:
+1. Review the existing `implementation_plan.md` artifact from the Linguistics Specialist.
+2. Execute the JSON refactoring mapping instructions across `src/data/sentences/bei_passive.ts` and `src/data/sentences/pivotal_constructions.ts` to convert the `BEI` nodes from prepositions into active Head Verbs generating Situation Objects.
+3. Execute `npm run lint` and `npm run test` (or `validate_trees.ts`) to ensure nothing breaks during parsing.
+4. Mark this task as ✅ Done when your refactored data structures are merged cleanly into the repository.
+
+### [DATE] Orchestrator → Linguistics Specialist
+**Status**: ✅ Done
+**Task**: Formalize Theoretical Shift for Situation-Taking Verbs (BÈI, discarding BA)
+**Branch**: `develop`
+
+> [!NOTE]
+> Based on an out-of-band discussion, the Linguistics Specialist has proposed a paradigm-shifting AST refactor: causative and passive constructions are structurally identical models that behave as Situation-Taking Verbs.
+
+**Action Required**:
+1. Formally document this new theoretical position in a Markdown artifact. (The user noted you produced an `fls-position-paper.md` covering Cathedral vs Train Architecture, Formalized Logic Equations, Asymmetric Identity Subscription (GCR), Unified Situational Object Slots, and Occupied Silence).
+2. Ensure this updated theoretical framework is merged or synced with our existing `pedagogical_position_paper.md` artifact if they overlap.
+3. Explain mechanically why "被" (bèi) should no longer be treated as a preposition inside an Adjunct modifier, but rather as an active Head Verb ("to suffer/undergo") anchoring an Embedded Clause.
+4. Review your `implementation_plan.md` detailing the required AST refactoring steps to convert passives to this new Situation-Taking Verb model, and confirm the plan is ready for User Review.
+5. Mark this task as ✅ Done when your recommendation is tracked in the repository.
+
+### [DATE] Orchestrator → Educational Publisher
+**Status**: ✅ Done
+**Task**: Rewrite Category Explanations for Beginner Accessibility
+**Branch**: `develop`
+
+> [!NOTE]
+> The Orchestrator has received negative user feedback regarding the `FULL_CATEGORY_EXPLANATIONS` written into `src/data/categories.ts` during the "Inline Pedagogy Integration" epic. They are too theoretically dense.
+
+**Action Required**:
+1. Review the current long-form explanations inside `src/data/categories.ts`.
+2. Rewrite them completely. Remove pedantic "pedagogy" and academic linguistic terminology. Instead, focus exclusively on accessible, empathetic "explanations for learners" that quickly and intuitively summarize how the grammar actually works in everyday practice.
+3. Because these strings are rendered dynamically into the UI Sidebar, run `npm run lint` and boot the UI locally if you need to preview string length.
+4. Mark this task as ✅ Done when your accessible rewrites are merged into the repository.
 
 ### [DATE] Orchestrator → Educational Publisher
 **Status**: ✅ Done
