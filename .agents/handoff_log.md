@@ -37,7 +37,7 @@ _No pending requests._
 ## Active Assignments
 
 ### [DATE] Orchestrator → Linguistics Specialist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Define Category Learning Objectives
 **Branch**: `develop`
 
