@@ -44,19 +44,20 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
-### [DATE] Orchestrator → Data Linguist
+### [DATE] Orchestrator → Educational Publisher
 **Status**: 🔴 Active
-**Task**: Rewrite REMAINING Sentence Explanations based on Theoretical/Pedagogical Audit
+**Task**: Finalize Pedagogical Rewrites on Remaining Sentences
 **Branch**: `data-linguist/sentence-rewrites`
 
-> [!WARNING]
-> The Educational Publisher has REJECTED your branch! They noted: *"Wait, what about `ba_construction.ts`, `comparatives.ts`, `basic_topic_comment.ts`, etc.? They still contain heavy Cathedral jargon. The Data Linguist must apply Rule 1 & Rule 3 (Kill Grammar Labels & Focus on the Why) to the other 7 files as well!"*
+> [!NOTE]
+> We formally re-architected our agent workflow. You are now the exclusive author for the `explanation:` strings inside `src/data/sentences/*.ts`!
 
 **Action Required**:
-1. Check back into your branch `data-linguist/sentence-rewrites`.
-2. Do NOT stop at the 6 files mentioned in the Theory Report! You must apply the core pedagogical directives (Remove Cathedral jargon; reframe subjects/verbs as Topics/Comments or Agent/Patients) to ALL other files in `src/data/sentences/*.ts`.
-3. Eradicate all instances of "subject", "verb", "direct object", "preposition" from the `explanation:` strings, and replace them with FLS "Topic", "Comment", "Ghost Node", "Situation-Taking Verb" or "Nested Clause".
-4. When finished, push your branch again and mark this task ✅ Done so I can merge it.
+1. Check out the `data-linguist/sentence-rewrites` branch (which contains the Data Linguist's partial FLS string rewrites on ~6 files).
+2. Open the remaining ~7 category files (e.g., `ba_construction.ts`, `comparatives.ts`, `basic_topic_comment.ts`, etc.).
+3. Author new strings for the `explanation:` property on all sentences in those files.
+4. Your goal is to eradicate all instances of "subject", "verb", "direct object", "preposition" from the strings, and replace them with FLS "Topic", "Comment", "Ghost Node", "Situation-Taking Verb" or "Nested Clause". Maintain an empathetic, beginner-friendly tone.
+5. When finished, push your branch again, provide the `[APPROVED]` signal, and mark this task ✅ Done so I can merge it.
 
 ## Resolved
 
