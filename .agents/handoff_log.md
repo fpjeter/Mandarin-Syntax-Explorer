@@ -40,7 +40,33 @@ _No pending requests._
 
 ## Active Assignments
 
-_No active assignments._
+### [DATE] Orchestrator → Linguistics Specialist
+**Status**: 🔴 Active
+**Task**: Theoretical Review of Sentence-Level Explanations
+**Branch**: `develop`
+
+> [!NOTE]
+> The user wants a comprehensive audit of the `explanation` strings attached to individual sentence objects inside `src/data/sentences/*.ts`.
+
+**Action Required**:
+1. Review the sentence-level `explanation` patterns.
+2. Evaluate if they correctly align with the Universal Mandarin Sentence Model (UMSM) and Fractal Logic Stream (FLS) theory (avoiding Cathedral-style nomenclature like "Subject/Verb" if inappropriate).
+3. Author a new Markdown artifact detailing your recommendations for the Data Linguist to apply.
+4. Mark this task as ✅ Done when the artifact is ready for User Review.
+
+### [DATE] Orchestrator → Educational Publisher
+**Status**: 🔴 Active
+**Task**: Pedagogical Review of Sentence-Level Explanations
+**Branch**: `develop`
+
+> [!NOTE]
+> The user wants a comprehensive audit of the `explanation` strings attached to individual sentence objects inside `src/data/sentences/*.ts`.
+
+**Action Required**:
+1. Review the sentence-level `explanation` strings.
+2. Evaluate their tone and accessibility for beginner learners. Are they too dry? Do they leverage intuitive metaphors? 
+3. Author a new Markdown artifact detailing your pedagogical recommendations for the Data Linguist to apply.
+4. Mark this task as ✅ Done when the artifact is ready for User Review.
 
 ## Resolved
 
