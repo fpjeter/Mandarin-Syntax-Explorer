@@ -40,35 +40,33 @@ _No pending requests._
 
 ## Active Assignments
 
+### [DATE] Orchestrator → Data Linguist
+**Status**: 🔴 Active
+**Task**: Rewrite Sentence Explanations based on Theoretical/Pedagogical Audit
+**Branch**: `develop`
+
+> [!NOTE]
+> The Linguistics Specialist and Educational Publisher have audited all inline sentence explanations for FLS accuracy and beginner tone.
+
+**Action Required**:
+1. Review the generated recommendation report: `theoretical_review_explanations.md`.
+2. Follow their exact directives. Do a global search across `src/data/sentences/*.ts` for `explanation: ` strings.
+3. Eliminate "Cathedral-style" nomenclature (e.g. "dropped subjects", "passive particles"). Reframe passives and pivotals as Situation-Taking Verbs taking Embedded Clauses. Introduce "Ghost Nodes" and "Identity Subscription."
+4. Ensure the actual typescript dictionary structure remains completely intact (only rewrite the text values).
+5. Run `npm run lint` and `npm run qa` when completed to ensure the dataset is safe.
+6. Check out your own branch (`git checkout -b data-linguist/sentence-rewrites`) and mark this task as ✅ Done when your changes are pushed!
+
+## Resolved
+
 ### [DATE] Orchestrator → Linguistics Specialist
 **Status**: ✅ Done
 **Task**: Theoretical Review of Sentence-Level Explanations
 **Branch**: `develop`
 
-> [!NOTE]
-> The user wants a comprehensive audit of the `explanation` strings attached to individual sentence objects inside `src/data/sentences/*.ts`.
-
-**Action Required**:
-1. Review the sentence-level `explanation` patterns.
-2. Evaluate if they correctly align with the Universal Mandarin Sentence Model (UMSM) and Fractal Logic Stream (FLS) theory (avoiding Cathedral-style nomenclature like "Subject/Verb" if inappropriate).
-3. Author a new Markdown artifact detailing your recommendations for the Data Linguist to apply.
-4. Mark this task as ✅ Done when the artifact is ready for User Review.
-
 ### [DATE] Orchestrator → Educational Publisher
 **Status**: ✅ Done
 **Task**: Pedagogical Review of Sentence-Level Explanations
 **Branch**: `develop`
-
-> [!NOTE]
-> The user wants a comprehensive audit of the `explanation` strings attached to individual sentence objects inside `src/data/sentences/*.ts`.
-
-**Action Required**:
-1. Review the sentence-level `explanation` strings.
-2. Evaluate their tone and accessibility for beginner learners. Are they too dry? Do they leverage intuitive metaphors? 
-3. Author a new Markdown artifact detailing your pedagogical recommendations for the Data Linguist to apply.
-4. Mark this task as ✅ Done when the artifact is ready for User Review.
-
-## Resolved
 
 ### [DATE] Orchestrator → Data Linguist
 **Status**: ✅ Done
