@@ -44,29 +44,26 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
-### [DATE] Orchestrator → Educational Publisher
+### [DATE] Orchestrator → Data Linguist
 **Status**: 🔴 Active
-**Task**: Review Sentence Explanations on `data-linguist/sentence-rewrites`
+**Task**: Rewrite REMAINING Sentence Explanations based on Theoretical/Pedagogical Audit
 **Branch**: `data-linguist/sentence-rewrites`
 
-> [!NOTE]
-> The Data Linguist has successfully generated their string rewrites applying the Fractal Logic Stream mechanics into beginner-friendly explanations, and explicitly requested you to review their work.
+> [!WARNING]
+> The Educational Publisher has REJECTED your branch! They noted: *"Wait, what about `ba_construction.ts`, `comparatives.ts`, `basic_topic_comment.ts`, etc.? They still contain heavy Cathedral jargon. The Data Linguist must apply Rule 1 & Rule 3 (Kill Grammar Labels & Focus on the Why) to the other 7 files as well!"*
 
 **Action Required**:
-1. Check out the `data-linguist/sentence-rewrites` branch.
-2. Review the `explanation:` strings updated in `src/data/sentences/*.ts`.
-3. Evaluate if the tone is perfectly accessible and empathetic for beginner learners.
-4. If approved, mark this task as ✅ Done. If you find jargon or pedagogy that needs softening, suggest the changes.
-
-### [DATE] Orchestrator → Data Linguist
-**Status**: 🟡 Pending
-**Task**: Rewrite Sentence Explanations based on Theoretical/Pedagogical Audit
-**Branch**: `develop`
-
-> [!NOTE]
-> Active execution halted. Branch `data-linguist/sentence-rewrites` pushed. Awaiting Educational Publisher's pedagogical approval before merge.
+1. Check back into your branch `data-linguist/sentence-rewrites`.
+2. Do NOT stop at the 6 files mentioned in the Theory Report! You must apply the core pedagogical directives (Remove Cathedral jargon; reframe subjects/verbs as Topics/Comments or Agent/Patients) to ALL other files in `src/data/sentences/*.ts`.
+3. Eradicate all instances of "subject", "verb", "direct object", "preposition" from the `explanation:` strings, and replace them with FLS "Topic", "Comment", "Ghost Node", "Situation-Taking Verb" or "Nested Clause".
+4. When finished, push your branch again and mark this task ✅ Done so I can merge it.
 
 ## Resolved
+
+### [DATE] Orchestrator → Educational Publisher
+**Status**: ✅ Done
+**Task**: Review Sentence Explanations on `data-linguist/sentence-rewrites` (Result: REJECTED)
+**Branch**: `develop`
 
 ### [DATE] Orchestrator → Linguistics Specialist
 **Status**: ✅ Done
