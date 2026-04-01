@@ -21,7 +21,7 @@ When you are asked to add sentences to the Mandarin Grammar Tree project, you ar
 4. **Format the Object**:
    - `id`: Must be universally unique (e.g., `s93`).
    - `category`: The full string name of the category.
-   - `explanation`: A learner-focused, jargon-free explanation.
+   - `explanation`: A rough placeholder or `[PENDING PUBLISHER]` string. Do not attempt to write the final polished pedagogical explanations yourself.
    - `tree`: Follow the strict UMSM topic-comment split. Every text node must include `hanzi`, `pinyin`, and `translation`.
 5. **Append the Sentence**: Use `multi_replace_file_content` or `replace_file_content` to append your new sentence block to the array.
 
@@ -34,4 +34,9 @@ npm run lint
 ```
 If either command throws an error, you must fix the data before continuing.
 
-Once testing passes, report completion to the user. The **Orchestrator** will handle all git operations (commit, push, PR).
+## 🤝 Multi-Agent Pipeline Handoff
+Once testing passes, you are NOT done. You must pass the baton so the explanations can be written.
+1. Run `git add`, `git commit -m "feat(data): build AST structure for [category]"`, and `git push` to `origin` so your work is safe on the remote.
+2. Open `.agents/handoff_log.md`.
+3. Manually edit the file to append a `🟡 Pending` request instructing the **Orchestrator** to deploy the **Educational Publisher** to review your branch and author the final `explanation` strings.
+4. Report completion to the user.
