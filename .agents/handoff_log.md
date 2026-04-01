@@ -41,7 +41,7 @@ _No pending requests._
 ## Active Assignments
 
 ### [DATE] Orchestrator → Linguistics Specialist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Theoretical Review of Sentence-Level Explanations
 **Branch**: `develop`
 
@@ -55,7 +55,7 @@ _No pending requests._
 4. Mark this task as ✅ Done when the artifact is ready for User Review.
 
 ### [DATE] Orchestrator → Educational Publisher
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Pedagogical Review of Sentence-Level Explanations
 **Branch**: `develop`
 
