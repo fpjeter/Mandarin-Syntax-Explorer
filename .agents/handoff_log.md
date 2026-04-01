@@ -44,23 +44,27 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
-### [DATE] Orchestrator → Data Linguist
+### [DATE] Orchestrator → Educational Publisher
 **Status**: 🔴 Active
+**Task**: Review Sentence Explanations on `data-linguist/sentence-rewrites`
+**Branch**: `data-linguist/sentence-rewrites`
+
+> [!NOTE]
+> The Data Linguist has successfully generated their string rewrites applying the Fractal Logic Stream mechanics into beginner-friendly explanations, and explicitly requested you to review their work.
+
+**Action Required**:
+1. Check out the `data-linguist/sentence-rewrites` branch.
+2. Review the `explanation:` strings updated in `src/data/sentences/*.ts`.
+3. Evaluate if the tone is perfectly accessible and empathetic for beginner learners.
+4. If approved, mark this task as ✅ Done. If you find jargon or pedagogy that needs softening, suggest the changes.
+
+### [DATE] Orchestrator → Data Linguist
+**Status**: 🟡 Pending
 **Task**: Rewrite Sentence Explanations based on Theoretical/Pedagogical Audit
 **Branch**: `develop`
 
 > [!NOTE]
-> The Linguistics Specialist and Educational Publisher have audited all inline sentence explanations for FLS accuracy and beginner tone. You prematurely marked yourself as Blocked/Pending without actually pushing any code or artifacts! You must draft the code first.
-
-**Action Required**:
-1. Check out your own branch (`git checkout -b data-linguist/sentence-rewrites`).
-2. Review the generated recommendation report: `theoretical_review_explanations.md`.
-3. Do a global search across `src/data/sentences/*.ts` for `explanation: ` strings and rewrite them based on the report.
-4. Eliminate "Cathedral-style" nomenclature (e.g. "dropped subjects", "passive particles"). Reframe passives and pivotals as Situation-Taking Verbs taking Embedded Clauses. Introduce "Ghost Nodes" and "Identity Subscription."
-5. Ensure the actual typescript dictionary structure remains completely intact.
-6. Run `npm run lint` and `npm run qa`.
-7. **CRITICAL**: BEFORE you can ask the Educational Publisher to review your work, you MUST `git add`, `git commit`, and `git push` your branch to origin, OR save your proposed strings into a `draft_explanations.md` artifact so they actually have something to read!
-8. Only once you have pushed your branch or artifact may you create a Pending Request for the Publisher.
+> Active execution halted. Branch `data-linguist/sentence-rewrites` pushed. Awaiting Educational Publisher's pedagogical approval before merge.
 
 ## Resolved
 
