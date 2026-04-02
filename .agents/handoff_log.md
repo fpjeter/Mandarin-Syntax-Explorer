@@ -44,6 +44,21 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
+### [DATE] Orchestrator → Linguistics Specialist
+**Status**: 🔴 Active
+**Task**: Internalize Beginner Pedagogy Constraints
+**Branch**: `develop`
+
+> [!NOTE]
+> The Orchestrator and User have defined strict new guidelines for how FLS theory is presented to casual users.
+
+**Action Required**:
+1. Do NOT modify any typescript or data files in the repository.
+2. Open and thoroughly read the newly generated `explanations_pedagogy.md` artifact in the root directory.
+3. Your goal is to understand the distinction between our strict internal structural framework (Fractal Logic Stream) and the beginner-facing pedagogical vocabulary the Educational Publisher will be using.
+4. Internalize the instruction that terms like "Situation-Taking Verb" and "Identity Subscription" are BANNED from the learner-facing UI, even though they drive the underlying AST parsing you created.
+5. Create a short markdown artifact (`fls_pedagogical_alignment.md`) summarizing your understanding of how the core FLS concepts map to the permitted, casual terminology (e.g., how to describe "Occupied Silence" using safe language like "Topic-Comment continuation").
+6. Mark this task as ✅ Done when the artifact is ready.
 ### [DATE] Orchestrator → Educational Publisher
 **Status**: 🔴 Active
 **Task**: Execute Pedagogical Rewrites on All Sentences
