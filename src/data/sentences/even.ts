@@ -147,7 +147,7 @@ export const even: SentenceData[] = [
         chinese: '连一千里的路，也要从第一步开始走。',
         pinyin: 'Lián yī qiān lǐ de lù, yě yào cóng dì yī bù kāi shǐ zǒu.',
         translation: 'Even a journey of a thousand miles must begin with the first step.',
-        explanation: 'This modernizes the classical 千里之行始於足下. Modern Mandarin uses the **连...也** pattern for "even," turning the classical observation into an emphatic statement. *Grammatically,* **连** fronts the emphasized noun phrase (一千里的路, "a thousand-mile road"), and **也** in the Comment says "even so, you still must..." The classical 之 ("possession or linking marker") becomes 的, 始 ("begin") becomes 开始, and 於足下 ("from beneath one\'s feet") becomes 从第一步 ("from the first step").',
+        explanation: 'This is a modern version of 千里之行始於足下 (from the Dao De Jing: "A journey of a thousand miles begins with a single step"). Modern Mandarin uses the **连...也** pattern for "even," turning the classical observation into an emphatic statement. 连 fronts the emphasized noun phrase (一千里的路, "a thousand-mile road"), and 也 in the Comment says "even so, you still must..." The classical 之 becomes 的, 始 ("begin") becomes 开始, and 於足下 ("from beneath one\'s feet") becomes 从第一步 ("from the first step").',
         tree: {
             id: 's72-root', role: 'Sentence', children: [
                 { id: 's72-topic', role: 'Topic', subRole: '连-construction (even)', children: [
@@ -169,11 +169,11 @@ export const even: SentenceData[] = [
     },
     {
         id: 's85',
-        category: 'Even (\u8fde\u2026\u90fd/\u4e5f)',
+        category: 'Even (连…都/也)',
         chinese: '连别人不了解你，你都不生气，这才是有修养的人。',
         pinyin: 'Lián bié rén bù liǎo jiě nǐ, nǐ dōu bù shēng qì, zhè cái shì yǒu xiū yǎng de rén.',
         translation: 'Even when others do not understand you, you are not resentful; this is truly the mark of a cultivated person.',
-        explanation: 'This modernizes the classical 人不知而不慍不亦君子乎. The classical rhetorical question becomes a declarative statement using the **连...都** emphatic pattern. *Grammatically,* 连 fronts the extreme scenario (others not understanding you), then 都不生气 ("still not angry") completes the emphasis. The final clause 这才是 ("only this is") adds the judgment: 有修养的人 ("a person of cultivation"). The classical 君子 ("noble person") becomes the more modern 有修养的人.',
+        explanation: 'This is a modern version of 人不知而不愠，不亦君子乎 (from Confucius: "If others do not understand you and you feel no resentment, is that not the mark of a noble person?"). The classical rhetorical question becomes a declarative statement using the **连...都** emphatic pattern. 连 fronts the extreme scenario (others not understanding you), then 都不生气 ("still not angry") completes the emphasis. The final clause 这才是 ("only this is") adds the judgment: 有修养的人 ("a person of cultivation"). The classical 君子 ("noble person") becomes the more modern 有修养的人.',
         tree: {
             id: 's85-root', role: 'Sentence', children: [
                 { id: 's85-lian', role: 'Topic', subRole: 'lian-construction', children: [

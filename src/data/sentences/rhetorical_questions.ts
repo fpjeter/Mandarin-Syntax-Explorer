@@ -64,7 +64,7 @@ export const rhetoricalQuestions: SentenceData[] = [
         chinese: '王侯将相难道是天生的吗？',
         pinyin: 'Wáng hóu jiàng xiàng nán dào shì tiān shēng de ma?',
         translation: 'Are kings and generals really born into their roles?',
-        explanation: 'This modernizes the classical 王侯將相寧有種乎. The rhetorical question pattern shifts from the classical 寧...乎 frame to the modern **难道...吗** frame. *Grammatically,* the Topic 王侯将相 ("kings, lords, generals, ministers") remains identical to the classical version. The Comment uses 难道 ("don\'t tell me") to signal disbelief, then 是...的 to focus on the quality "天生的" ("innate/born that way"), closed by 吗 (yes/no question marker). The rhetorical force is the same: the expected answer is "of course not!"',
+        explanation: 'This is a modern version of 王侯將相寧有種乎 (from the Shiji: "Are kings, lords, generals, and ministers a breed apart?"). The classical rhetorical question pattern shifts from the classical 寧...乎 to the modern **难道...吗** frame. The Topic 王侯将相 ("kings, lords, generals, ministers") remains identical to the classical version. The Comment uses 难道 ("don\'t tell me") to signal disbelief, then 是...的 to focus on 天生的 ("innate/born that way"), closed by 吗. The rhetorical force is the same: the expected answer is "of course not!"',
         tree: {
             id: 's76-root', role: 'Sentence', children: [
                 { id: 's76-t', role: 'Topic', text: { hanzi: '王侯将相', pinyin: 'wáng hóu jiàng xiàng', translation: 'kings, lords, generals' } },

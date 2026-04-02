@@ -107,7 +107,7 @@ export const beiPassive: SentenceData[] = [
         pinyin: 'Wǒ de qián bāo bèi rén tōu le.',
         translation: 'My wallet was stolen.',
 
-        explanation: 'The Topic is **我的钱包** ("my wallet"), the thing that was acted upon. Inside the Comment, **被** (bèi) introduces the agent: **人** (someone, literally "a person"). Then comes the verb **偷** ("steal") and completion marker **了**. Compared to s6, this is a simpler and more everyday form of the BEI passive. Notice that 被 does not always name a specific agent; here it just says "by someone." The BEI frame always flips normal word order: instead of "person stole wallet," the wallet is foregrounded as Topic, and 被 marks that it is the *receiver* of the action.',
+        explanation: 'The Topic is **我的钱包** ("my wallet"), the thing that was acted upon. Inside the Comment, **被** (bèi) introduces the agent: **人** (someone, literally "a person"). Then comes the verb **偷** ("steal") and completion marker **了**. This is a simpler, more everyday form of the BEI passive. Notice that 被 does not always name a specific agent; here it just says "by someone." The BEI frame always flips normal word order: instead of "person stole wallet," the wallet is foregrounded as Topic, and 被 marks that it is the *receiver* of the action.',
         tree: {
             id: 'n22',
             role: 'Sentence',
@@ -342,7 +342,7 @@ export const beiPassive: SentenceData[] = [
         chinese: '青色是从蓝草里提取出来的，但是比蓝草还要蓝。',
         pinyin: 'Qīng sè shì cóng lán cǎo lǐ tí qǔ chū lái de, dàn shì bǐ lán cǎo hái yào lán.',
         translation: 'Blue dye is extracted from the indigo plant, yet it is even bluer than indigo.',
-        explanation: 'This modernizes the classical 青取之於藍而青於藍. Modern Mandarin uses 是...的 plus a directional complement to express the extraction, and 比...还要 for the comparison. *Grammatically,* 青色 ("blue color") is the Topic. The first Comment uses 是从...里提取出来的 ("is extracted from..."), where 提取出来 uses a directional complement (出来, "out"). The second clause uses the comparative 比...还要 ("even more than") + 蓝 ("blue").',
+        explanation: 'This is a modern version of 青取之於藍而青於藍 (from Xunzi: "Blue dye comes from the indigo plant, yet surpasses it in color"). Modern Mandarin uses 是...的 plus a directional complement to express the extraction, and 比...还要 for the comparison. In the tree, 青色 ("blue color") is the Topic. The first Comment uses 是从...里提取出来的 ("is extracted from..."), where 提取出来 uses a directional complement (出来, "out"). The second clause uses the comparative pattern 比...还要 ("even more than") + 蓝 ("blue").',
         tree: {
             id: 's80-root', role: 'Sentence', children: [
                 { id: 's80-t', role: 'Topic', text: { hanzi: '青色', pinyin: 'qīng sè', translation: 'blue dye' } },

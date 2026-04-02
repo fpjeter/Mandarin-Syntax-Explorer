@@ -7,7 +7,7 @@ export const directionalComplements: SentenceData[] = [
         chinese: '他走进来了。',
         pinyin: 'Tā zǒu jìn lái le.',
         translation: 'He walked in.',
-        explanation: '**他** ("he") is the Topic. The Comment\'s verb **走** (walk) is followed by a **compound directional complement**: **进** (enter) + **来** (come). Together, 进来 means entering toward the speaker\'s location. The three-part structure (main verb + direction morpheme + **来/去**) is the full directional complement frame. **来** signals movement toward the speaker; **去** signals movement away. So 走**出去** would mean "walk out (away)." These complements answer the question: *which direction did the action take?* The **了** confirms the action is complete.',
+        explanation: '**他** ("he") is the Topic. The Comment\'s verb **走** (walk) is followed by a **compound directional complement**: **进** (enter) + **来** (come). Together, 进来 means entering toward the speaker\'s location. The three-part structure (main verb + direction word + **来/去**) is the full directional complement frame. **来** signals movement toward the speaker; **去** signals movement away. So 走**出去** would mean "walk out (away)." These complements answer the question: *which direction did the action take?* The **了** confirms the action is complete.',
         tree: {
             id: 'n38',
             role: 'Sentence',
@@ -146,7 +146,7 @@ export const directionalComplements: SentenceData[] = [
         chinese: '她跑上楼去了。',
         pinyin: 'Tā pǎo shàng lóu qù le.',
         translation: 'She ran upstairs (away from the speaker).',
-        explanation: '**她** ("she") is the Topic. The directional complement here is **上去**: 上 ("up") + 去 ("away"). But notice something: the object **楼** ("stairs/floor") slots *between* 上 and 去. This is a key rule: when a directional complement has an object and uses a compound form (direction + 来/去), the object inserts between them: V + direction + *object* + 来/去. Compare s38 where there was no object: 走进来 ("no insertion"). The **上** signals upward movement; the **去** confirms it was *away* from the speaker\'s vantage.',
+        explanation: '**她** ("she") is the Topic. The directional complement here is **上去**: 上 ("up") + 去 ("away"). But notice something: the object **楼** ("stairs/floor") slots *between* 上 and 去. This is a key rule: when a directional complement has an object and uses a compound form (direction + 来/去), the object inserts between them: V + direction + *object* + 来/去. In the previous sentence, there was no object, so 走进来 stays together. The **上** signals upward movement; the **去** confirms it was *away* from the speaker\'s vantage.',
         tree: {
             id: 'n42',
             role: 'Sentence',
@@ -213,7 +213,7 @@ export const directionalComplements: SentenceData[] = [
         chinese: '他从树上摘下来一个苹果。',
         pinyin: 'Tā cóng shù shàng zhāi xià lái yī gè píng guǒ.',
         translation: 'He plucked an apple down from the tree.',
-        explanation: '**他** ("he") is the Topic. The location phrase **从树上** ("from the tree") sets the scene. The verb **摘** ("pluck/pick") is followed by the directional compound **下来**: 下 ("down") + 来 ("toward speaker"). After 下来 comes the indefinite object **一个苹果** ("one apple"). When the object is indefinite (not "the apple" but "an apple"), it typically slots *after* the full directional compound, not inside it. Compare with s42 where a definite place word (楼) slots inside. This difference (definite/place words inside vs indefinite nouns after) is one of the trickier positional rules for directional complements.',
+        explanation: '**他** ("he") is the Topic. The location phrase **从树上** ("from the tree") sets the scene. The verb **摘** ("pluck/pick") is followed by the directional compound **下来**: 下 ("down") + 来 ("toward speaker"). After 下来 comes the indefinite object **一个苹果** ("one apple"). When the object is indefinite (not "the apple" but "an apple"), it typically slots *after* the full directional compound, not inside it. When a definite place word is involved, it slots inside the compound instead. This difference (definite/place words inside vs indefinite nouns after) is one of the trickier positional rules for directional complements.',
         tree: {
             id: 'n43',
             role: 'Sentence',
