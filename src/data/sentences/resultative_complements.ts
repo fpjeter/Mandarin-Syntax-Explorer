@@ -7,7 +7,7 @@ export const resultativeComplements: SentenceData[] = [
         chinese: '吃饱了，想睡觉。',
         pinyin: 'Chī bǎo le , xiǎng shuì jiào .',
         translation: '(I\'m) full, (I) want to sleep.',
-        explanation: 'The key pattern here is the resultative compound **吃饱**: the action 吃 ("eat") fused with the result 饱 ("full"). Rather than saying "eat until I am full" with separate words, Mandarin collapses the action and its outcome into a single unit. A second event follows: 想睡觉 ("want to sleep"). The implied speaker [我] is a Ghost Node that anchors both parts of the Comment without being said aloud.',
+        explanation: 'The key pattern here is the **resultative complement** **吃饱**: the verb **吃** ("eat") fuses directly with the result **饱** ("full") to mean "eat until full." In Mandarin, the verb and its outcome are welded together as a single compound. There is no word for "until" needed. The **了** after the compound marks completion: the eating happened and the fullness was achieved. The **没有** at the end asks a follow-up question: "or not?" This V-not-V pattern (吃饱了没有) is one of the most common ways to ask about completed results.',
         tree: {
             id: 'n13',
             role: 'Sentence',
@@ -93,7 +93,7 @@ export const resultativeComplements: SentenceData[] = [
         chinese: '我听懂了他说的话。',
         pinyin: 'Wǒ tīng dǒng le tā shuō de huà.',
         translation: 'I understood what he said.',
-        explanation: 'The Topic is **我** ("I"). The core of this sentence is the resultative compound **听懂**: the action 听 ("listen") fused directly with the result 懂 ("understand"). The action flows straight into its outcome without any linking words. Saying just 我听了 ("I listened") would leave the outcome unclear; by fusing the result into the verb, Mandarin confirms the goal was reached. You will see this action-plus-result pattern across many sentence categories in this app.',
+        explanation: 'The Topic is **我** ("I"). The core action is the resultative compound **看完**: **看** ("read/watch") + **完** ("finish"). The 完 tells you the action reached its natural endpoint. The **了** confirms this happened. Then the sentence continues: **才发现...** ("only then discovered..."), where 才 marks that the realization came only *after* finishing. The tree shows this sequence: 看完了 (completed reading), then 才发现 (only then realized), followed by what was discovered. This chaining of resultative + consequence is extremely natural in Mandarin.',
         tree: {
             id: 'n30',
             role: 'Sentence',
@@ -175,7 +175,7 @@ export const resultativeComplements: SentenceData[] = [
         chinese: '她哭红了眼睛。',
         pinyin: 'Tā kū hóng le yǎn jing.',
         translation: 'She cried her eyes red.',
-        explanation: 'The Topic is **她** ("she"). The action 哭 ("cry") fuses with the descriptive result 红 ("red") into a tight resultative compound, meaning the crying directly caused redness. The object **眼睛** ("eyes") tells you what turned red. These action-plus-result fusions are wonderfully common in Mandarin: 笑哭了 ("laugh until you cry"), 吃撑了 ("eat until stuffed"). They intuitively describe how an action ends in a new state.',
+        explanation: 'The Topic is **她** ("she"). The verb **哭** ("cry") fuses with the resultative complement **红** ("red") to form **哭红**: cried until (her eyes turned) red. Then **了** marks completion, and **眼睛** ("eyes") tells you what turned red. Mandarin loves these compact verb-result pairings: cry + red, eat + full, run + tired. Each result describes what *happened* as a consequence of the action. The tree shows 哭 and 红 fused together, with 眼睛 as the affected object.',
         tree: {
             id: 'n31',
             role: 'Sentence',
@@ -230,7 +230,7 @@ export const resultativeComplements: SentenceData[] = [
         chinese: '我找到钥匙了。',
         pinyin: 'Wǒ zhǎo dào yào shi le.',
         translation: 'I found the key.',
-        explanation: 'The Topic is **我** ("I"). The core of this sentence is the resultative compound **找到**: 找 ("search") fused with 到 ("reach/arrive"). In Mandarin, 到 signals that the action successfully reached its goal. It guarantees completion. This pattern is incredibly useful: 买到 ("buy and actually get it"), 看到 ("look and actually see it"). Think of these as mini-confirmations that the action landed.',
+        explanation: 'The Topic is **我** ("I"). The verb **听** ("listen/hear") fuses with the result **懂** ("understand") to form **听懂**: heard and understood. The **了** confirms it happened. This compound tells you not just that listening occurred, but that comprehension was achieved. Compare: 听不懂 ("cannot understand what is heard"), 听得懂 ("can understand"). The tree shows 听 and 懂 fused as a tight pair. This is one of the most frequently used resultative compounds in daily life, especially for language learners.',
         tree: {
             id: 'n40',
             role: 'Sentence',
@@ -283,7 +283,7 @@ export const resultativeComplements: SentenceData[] = [
         chinese: '他写错字了。',
         pinyin: 'Tā xiě cuò zì le.',
         translation: 'He wrote a character incorrectly.',
-        explanation: 'The Topic is **他** ("he"). The key pattern is the resultative compound **写错**: 写 ("write") fused with 错 ("wrong/error"). Rather than using a separate adverb like "incorrectly," Mandarin fuses the error directly into the verb as the result. The object 字 ("character") follows naturally. You will see similar pairings everywhere: 说错 ("speak wrongly"), 拿错 ("grab the wrong one"). The result always tells you exactly how the action turned out.',
+        explanation: 'The Topic is **他** ("he"). The verb **喝** ("drink") fuses with the resultative complement **醉** ("drunk") to form **喝醉**: drank until drunk. The **了** marks completion. This is a classic V+Result compound: the action (drinking) leads directly to the state (drunkenness). Mandarin compresses what English spreads across several words ("got drunk from drinking") into a tight two-character unit. Other examples: 吃腻 ("ate until sick of it"), 跑累 ("ran until tired"), 笑疯 ("laughed until crazy").',
         tree: {
             id: 'n41',
             role: 'Sentence',

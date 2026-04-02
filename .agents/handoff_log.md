@@ -44,7 +44,45 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
-(none)
+### [2026-04-02] Orchestrator → Linguistics Specialist
+**Status**: ✅ Done
+**Task**: Accuracy Review of All 97 Sentence Explanations
+**Branch**: `feature/sentence-accuracy-review`
+**Sequence**: Ticket 1 of 2 (must complete before Ticket 2 begins)
+
+**Action Required**:
+1. Check out `feature/sentence-accuracy-review`.
+2. Read every file in `src/data/sentences/` (19 category files, 97 sentences total).
+3. For each sentence, compare the `explanation:` string against the `tree:` AST structure. Check for:
+   - Factual inaccuracies (e.g., calling a resultative complement a "compound verb")
+   - Misidentified roles (e.g., saying something is the Subject when the tree labels it Topic)
+   - Missing key structural features that the explanation fails to mention
+   - Incorrect descriptions of particle behavior (了, 着, 过, 得, 不, etc.)
+   - Any remaining FLS jargon that slipped through earlier rewrites
+4. Produce a structured report at `sentence_accuracy_report.md` in the project root. Format:
+   ```
+   ## [filename.ts]
+   ### s[ID] — [chinese sentence]
+   - **Issue**: [description of inaccuracy]
+   - **AST Reality**: [what the tree actually shows]
+   - **Suggested Fix**: [brief correction note]
+   ```
+   If a sentence has no issues, you may skip it or mark it "✅ Accurate".
+5. Commit and push the report. Mark this ticket as ✅ Done.
+
+**CRITICAL**: Do NOT edit any sentence files. Your output is the report only.
+
+---
+
+### [2026-04-02] Orchestrator → Educational Publisher
+**Status**: ✅ Done
+**Task**: Fresh Rewrite of All 97 Sentence Explanations
+**Branch**: `feature/sentence-accuracy-review`
+**Commit**: `2461d1e` — feat(pedagogy): fresh rewrite of all 97 sentence explanations
+
+> [!NOTE]
+> All 97 explanation strings across 19 category files freshly rewritten. Applied all 7 accuracy fixes from `sentence_accuracy_report.md` (Subject → Topic/actor terminology). Purged all em-dashes and FLS jargon. Varied Topic callouts across entries. Guided-tour tone maintained throughout. QA passed: 97 sentences, 1164 nodes validated. No new lint errors.
+
 
 ## Resolved
 

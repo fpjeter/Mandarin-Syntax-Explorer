@@ -9,7 +9,7 @@ export const rhetoricalQuestions: SentenceData[] = [
         pinyin: 'Nǐ nán dào bù zhī dào ma?',
         translation: 'Don\'t you know? (Surely you must know!)',
 
-        explanation: '**你** ("you") is the Topic. **难道** (don\'t tell me / could it be that) is the rhetorical marker: it signals that the speaker expects the opposite of what the sentence literally says. The negation **不知道** (don\'t know) combined with 难道 produces: "You couldn\'t possibly not know" → "Of course you know!" The sentence-final **吗** reinforces the questioning tone but the expected answer is already baked in. 难道 always implies surprise, disbelief, or reproach. It\'s one of the most emotionally loaded adverbs in Mandarin.',
+        explanation: '**你** ("you") is the Topic. **难道** ("could it be that / don\'t tell me") opens the Comment and signals a rhetorical question: the speaker already knows the answer and is challenging the listener. The expected response is denial: "Of course not." The **吗** at the end confirms this is a question, but 难道 makes it rhetorical rather than genuine. The tree shows 难道 as a mood marker wrapping the entire Comment. This pattern is extremely common in arguments and emotional speech: 难道你不知道吗 ("Don\'t you know?"), 难道这不对吗 ("Isn\'t this right?").',
         tree: {
             id: 'n56',
             role: 'Sentence',
@@ -64,7 +64,7 @@ export const rhetoricalQuestions: SentenceData[] = [
         chinese: '王侯将相难道是天生的吗？',
         pinyin: 'Wáng hóu jiàng xiàng nán dào shì tiān shēng de ma?',
         translation: 'Are kings and generals really born into their roles?',
-        explanation: 'This is a modern version of 王侯將相寧有種乎 (from the Shiji: "Are kings, lords, generals, and ministers a breed apart?"). The classical rhetorical question pattern shifts from the classical 寧...乎 to the modern **难道...吗** frame. The Topic 王侯将相 ("kings, lords, generals, ministers") remains identical to the classical version. The Comment uses 难道 ("don\'t tell me") to signal disbelief, then 是...的 to focus on 天生的 ("innate/born that way"), closed by 吗. The rhetorical force is the same: the expected answer is "of course not!"',
+        explanation: 'A modern take on 王侯將相寧有種乎 (from the Shiji: "Are kings and generals born to their station?"). The classical rhetorical marker 寧...乎 becomes modern **难道...吗**. The tree shows 难道 at the start of the Comment, framing the entire clause as a challenge. The modern version spells out: **难道当官的人就天生比别人强吗** ("Could it be that those in power are inherently stronger than others?"). The expected answer is "no," just as in the original. This is one of the most famous lines in Chinese history, used to justify rebellion.',
         tree: {
             id: 's76-root', role: 'Sentence', children: [
                 { id: 's76-t', role: 'Topic', text: { hanzi: '王侯将相', pinyin: 'wáng hóu jiàng xiàng', translation: 'kings, lords, generals' } },
@@ -83,7 +83,7 @@ export const rhetoricalQuestions: SentenceData[] = [
         chinese: '难道你连这么重要的事都忘了吗？',
         pinyin: 'Nán dào nǐ lián zhè me zhòng yào de shì dōu wàng le ma?',
         translation: 'Could it be that you forgot even such an important thing?',
-        explanation: 'The sentence opens with **难道** ("could it be that / don\'t tell me") as a rhetorical marker of disbelief. **你** (you) is the Topic. The Comment uses the emphatic **连...都** ("even... [all]") bracket to surround the object ("such an important thing"). Finally, the verb **忘** (forget) with aspect **了** is followed by the interrogative particle **吗**. The speaker uses this structure not to ask for information, but to express shock at the forgetting.',
+        explanation: 'The sentence opens with **难道** ("could it be that"), immediately signaling a rhetorical question. The **不** inside the clause creates a double negative effect with the rhetorical frame: 难道不知道 = "don\'t tell me you don\'t know" = "surely you know." The expected answer is "yes, you do know." The tree shows 难道 wrapping the Comment, with the negation 不 inside the verb phrase. Rhetorical questions with 难道 are one of Mandarin\'s strongest tools for expressing disbelief or mild accusation.',
         tree: {
             id: 'n100-root', role: 'Sentence', children: [
                 { id: 'n100-t', role: 'Topic', isDropped: true, impliedText: '这' },
@@ -113,7 +113,7 @@ export const rhetoricalQuestions: SentenceData[] = [
         chinese: '大家都同意了，难道我还能反对吗？',
         pinyin: 'Dà jiā dōu tóng yì le, nán dào wǒ hái néng fǎn duì ma?',
         translation: 'Everyone has agreed, how could I still object?',
-        explanation: 'A classic defensive rhetorical question set within a `Parallel Sentence`. The first clause (大家都同意了) establishes the inescapable context. The second clause (难道我还能反对吗) uses **难道** to assert the absurdity of doing the opposite. The sequence `还能` ("still can") sits alongside `难道` as adjuncts modifying the core verb `反对` (object/oppose).',
+        explanation: 'A classic defensive rhetorical question. The **难道** signals the speaker is pushing back: "Could it be that this is my fault?" The expected answer is "no, of course not." The tree shows the rhetorical frame wrapping the entire Comment. The **是** links the topic to the blame (是我的错), and 吗 confirms it as a question. Notice that without 难道, the sentence would be a genuine question ("Is this my fault?"). With 难道, it becomes a challenge: the speaker already believes the answer is no.',
         tree: {
             id: 'n101-root', role: 'Sentence', children: [
                 { id: 'n101-ps', role: 'Parallel Sentence', children: [

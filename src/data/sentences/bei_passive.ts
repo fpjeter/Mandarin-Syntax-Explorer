@@ -8,7 +8,7 @@ export const beiPassive: SentenceData[] = [
         pinyin: 'Nà zhī dà xiàng, bí zi bèi xiǎo hái er lā le yī xià.',
         translation: 'As for that elephant, its trunk was pulled by a child.',
 
-        explanation: 'This sentence has a **two-level structure**. The outer Topic sets the stage with a big frame: *as for that elephant...* Then inside the Comment, a narrower subject appears: **鼻子** ("trunk"). The trunk is then described using **被** ("by"), which marks a passive construction: something was done *to* the trunk. So the elephant frames the scene, and the trunk is what actually acts as the subject of the passive event. English would say it more directly: "A child pulled the elephant\'s trunk." Mandarin works from the outside in.',
+        explanation: 'This sentence has a **two-level structure**. The outer Topic **那只大象** ("that elephant") sets the big frame: "as for that elephant..." Then inside the Comment, a narrower topic appears: **鼻子** ("trunk"). The trunk is the thing that actually gets acted upon, using **被** to mark the passive: it was pulled by a child (**小孩儿**). The tree shows this nesting clearly: the elephant contains the trunk, which contains the passive event. English would flatten this into "A child pulled the elephant\'s trunk," but Mandarin works from the outside in.',
         tree: {
             id: 'n6',
             role: 'Sentence',
@@ -107,7 +107,7 @@ export const beiPassive: SentenceData[] = [
         pinyin: 'Wǒ de qián bāo bèi rén tōu le.',
         translation: 'My wallet was stolen.',
 
-        explanation: 'The Topic is **我的钱包** ("my wallet"), the thing that was acted upon. Inside the Comment, **被** (bèi) introduces the agent: **人** (someone, literally "a person"). Then comes the verb **偷** ("steal") and completion marker **了**. This is a simpler, more everyday form of the BEI passive. Notice that 被 does not always name a specific agent; here it just says "by someone." The BEI frame always flips normal word order: instead of "person stole wallet," the wallet is foregrounded as Topic, and 被 marks that it is the *receiver* of the action.',
+        explanation: 'The Topic is **我的钱包** ("my wallet"), the thing affected. Inside the Comment, **被** introduces who did it: **人** ("someone"). Then comes the verb **偷** ("steal") and the completion marker **了**. This is a simple, everyday form of the 被 passive. Notice that 被 does not always name a specific person; here it just says "by someone." The 被 pattern puts the affected thing first as the Topic, then marks who acted on it.',
         tree: {
             id: 'n22',
             role: 'Sentence',
@@ -185,7 +185,7 @@ export const beiPassive: SentenceData[] = [
         chinese: '那封信被他撕掉了。',
         pinyin: 'Nà fēng xìn bèi tā sī diào le.',
         translation: 'That letter was torn up by him.',
-        explanation: '**那封信** ("that letter") is the Topic, the thing affected. **被** introduces the agent: **他** ("he/him"). The verb **撕** ("tear") is followed by the resultative complement **掉** ("off / away, signals destruction or removal"). BEI sentences almost always require a complement or 了 after the verb; bare *被+agent+verb* sounds incomplete. The **掉** tells you the letter didn\'t just get torn; it was torn *to pieces* or *away*. Compare: 撕破 (torn broken), 撕碎 (torn to shreds); each complement shades the result differently.',
+        explanation: '**那封信** ("that letter") is the Topic, the thing being acted upon. **被** marks the passive and **他** ("he/him") is the agent. The verb **撕** ("tear") is followed by the resultative complement **掉** ("off/away," signals destruction or removal). 被 sentences almost always need a complement or 了 after the verb; a bare 被+agent+verb sounds incomplete. The **掉** tells you the letter was not just torn; it was torn away or destroyed. Compare: 撕破 (torn broken), 撕碎 (torn to shreds). Each complement shades the result differently.',
         tree: {
             id: 'n48',
             role: 'Sentence',
@@ -269,7 +269,7 @@ export const beiPassive: SentenceData[] = [
         chinese: '小偷被警察抓住了。',
         pinyin: 'Xiǎo tōu bèi jǐng chá zhuā zhù le.',
         translation: 'The thief was caught by the police.',
-        explanation: '**小偷** ("thief") is the Topic, the person affected. **被** marks the passive; **警察** ("police") is the agent. The verb **抓** ("grab/catch") is followed by the resultative complement **住** ("firmly / hold in place"). The **住** is key: it signals that the catching *stuck*: the thief didn\'t just get grabbed momentarily, he was held fast. The pattern V+住 is very common for actions that result in a fixed state: 记住 (remember firmly), 站住 (stand still / halt), 拿住 (hold onto). BEI + resultative is the most natural BEI pattern in speech.',
+        explanation: '**小偷** ("thief") is the Topic, the person being acted upon. **被** marks the passive, and **警察** ("police") is the agent. The verb **抓** ("grab/catch") is followed by the resultative complement **住** ("firmly, hold in place"). That **住** is important: it signals the catching stuck. The thief was not just grabbed momentarily; he was held fast. The pattern V+住 is very common for actions that result in a fixed state: 记住 (remember firmly), 站住 (stand still), 拿住 (hold onto). 被 + resultative complement is the most natural 被 pattern in everyday speech.',
         tree: {
             id: 'n49',
             role: 'Sentence',
@@ -342,7 +342,7 @@ export const beiPassive: SentenceData[] = [
         chinese: '青色是从蓝草里提取出来的，但是比蓝草还要蓝。',
         pinyin: 'Qīng sè shì cóng lán cǎo lǐ tí qǔ chū lái de, dàn shì bǐ lán cǎo hái yào lán.',
         translation: 'Blue dye is extracted from the indigo plant, yet it is even bluer than indigo.',
-        explanation: 'This is a modern version of 青取之於藍而青於藍 (from Xunzi: "Blue dye comes from the indigo plant, yet surpasses it in color"). Modern Mandarin uses 是...的 plus a directional complement to express the extraction, and 比...还要 for the comparison. In the tree, 青色 ("blue color") is the Topic. The first Comment uses 是从...里提取出来的 ("is extracted from..."), where 提取出来 uses a directional complement (出来, "out"). The second clause uses the comparative pattern 比...还要 ("even more than") + 蓝 ("blue").',
+        explanation: 'A modern take on 青取之於藍而青於藍 (from Xunzi: "Blue dye comes from the indigo plant, yet surpasses it in color"). Modern Mandarin uses 是...的 plus a directional complement for the extraction, and 比...还要 for the comparison. In the tree, **青色** ("blue color") is the Topic. The first Comment uses **是从...里提取出来的** ("is extracted from..."), where 提取出来 uses a directional complement (出来, "out"). The second clause uses the comparative pattern **比...还要** ("even more than") + **蓝** ("blue").',
         tree: {
             id: 's80-root', role: 'Sentence', children: [
                 { id: 's80-t', role: 'Topic', text: { hanzi: '青色', pinyin: 'qīng sè', translation: 'blue dye' } },

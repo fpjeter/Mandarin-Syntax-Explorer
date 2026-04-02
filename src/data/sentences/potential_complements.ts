@@ -7,7 +7,7 @@ export const potentialComplements: SentenceData[] = [
         chinese: '这道题太难，我做不出来。',
         pinyin: 'Zhè dào tí tài nán, wǒ zuò bù chū lái.',
         translation: 'This question is too hard; I can\'t work it out.',
-        explanation: 'The sentence opens with **这道题** ("this question") as the Topic. The fascinating part is **做不出来**. Mandarin treats 做出来 ("do and produce a result") as a unit, but you can flip a switch right inside it: inserting **不** between the verb and the result blocks the connection, meaning "cannot produce." If you swap 不 for **得**, the result flows through successfully, meaning "can produce." This internal switch is the **potential complement**, and it is one of the most elegant patterns in Mandarin.',
+        explanation: '**你放心** ("don\'t worry") sets a reassuring tone at the start. The main event follows: **我一定做得到** = 做 ("do") + 得 (able) + 到 ("arrive at, achieve"). This is the positive form of the potential complement: I *can* achieve it. Compare with the negative: 做不到 ("cannot achieve it"). The 得 signals ability; the complement 到 describes the result (reaching the goal). This pattern is extremely common for expressing confidence or doubt: 看得见/看不见 ("can see / cannot see"), 听得清/听不清 ("can hear clearly / cannot hear clearly").',
         tree: {
             id: 'n34',
             role: 'Sentence',
@@ -177,7 +177,7 @@ export const potentialComplements: SentenceData[] = [
         chinese: '这本书你看得懂吗？',
         pinyin: 'Zhè běn shū nǐ kàn de dǒng ma？',
         translation: 'Can you understand this book?',
-        explanation: 'A **double-topic** structure with a potential complement question. **这本书** (this book; 本 is the measure word for books) is the outer Topic. **你** ("you") is the inner Topic. The potential complement **看得懂** uses **看** ("read/look") + **得** + **懂** ("understand"): *can read-to-the-point-of-understanding*. The **吗** at the end turns it into a yes/no question. To answer yes: 看**得**懂 ("can understand"). To answer no: 看**不**懂 (can\'t understand). This is a natural question form when politely checking comprehension.',
+        explanation: 'A **double-Topic** structure with a potential complement question. The outer Topic **这个字** ("this character") sets the frame: "as for this character..." The inner Topic zooms in on a specific aspect: what about reading it? The potential complement **看得出来看不出来** repeats the positive and negative forms back-to-back to form a question: "can you make it out, or not?" This is the A-not-A question pattern applied to potential complements. The tree shows both halves of the question nested inside the Comment.',
         tree: {
             id: 'n44',
             role: 'Sentence',
@@ -249,7 +249,7 @@ export const potentialComplements: SentenceData[] = [
         chinese: '昨晚我睡不着，一直到天亮。',
         pinyin: 'Zuó wǎn wǒ shuì bu zháo, yī zhí dào tiān liàng.',
         translation: 'Last night I couldn\'t fall asleep, right up until dawn.',
-        explanation: 'Framed by **昨晚** ("last night"), the Topic is **我** ("I"). The potential complement here is **睡不着**: 睡 ("sleep") with 不 (the negative switch) blocking the result 着 ("settle into the state of sleeping"). The 不 physically prevents the action from reaching completion, meaning "could not fall asleep." The sentence then continues seamlessly into a second clause: **一直到天亮** ("all the way until dawn").',
+        explanation: 'Framed by **昨晚** ("last night"), the Topic is **我** ("I"). The Comment describes a failed attempt using two potential complements. First, **睡不着** = 睡 ("sleep") + 不 + 着 ("achieve the state"), meaning "unable to fall asleep." Then, after tossing and turning, **怎么也睡不着**: the 怎么也 ("no matter what") emphasizes the impossibility. The 着 complement specifically means "achieving or entering a state." Compare: 找着 ("found it, achieved finding") versus 找不着 ("cannot find it"). The tree shows both potential complements in sequence.',
         tree: {
             id: 'n45',
             role: 'Sentence',

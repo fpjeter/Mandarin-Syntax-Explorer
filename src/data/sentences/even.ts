@@ -7,7 +7,7 @@ export const even: SentenceData[] = [
         chinese: '他连自己的名字都不会写。',
         pinyin: 'Tā lián zì jǐ de míng zi dōu bù huì xiě.',
         translation: 'He can\'t even write his own name.',
-        explanation: '**他** ("he") is the Topic. The **连…都…** frame emphasizes an extreme case: 连 ("even") + **自己的名字** ("his own name") + **都** ("all / even") + **不会写** (can\'t write). The structure says: "Even something as basic as his own name: he can\'t write it." 连 picks out the extreme item; 都 reinforces the "even" emphasis. The implied logic: if he can\'t do this simple thing, he certainly can\'t do harder things. This pattern always implies surprise, disappointment, or emphasis. Other examples: 连饭都没吃 (didn\'t even eat), 连一块钱都没有 (doesn\'t even have one yuan).',
+        explanation: '**他** ("he") is the Topic. The **连…都…** frame singles out the most extreme or surprising case to make a point. Here, **连最简单的题** ("even the simplest questions") is marked by 连 as the unexpected case, and **都不会** ("cannot even do") confirms it with 都. The logic is: if he cannot do even the *easiest* ones, he certainly cannot do harder ones. This "even" construction always uses 连 to pick out the extreme, and 都 or 也 to drive the point home. The tree groups the 连 phrase and 都 together, showing how they bracket the surprising fact.',
         tree: {
             id: 'n66',
             role: 'Sentence',
@@ -85,7 +85,7 @@ export const even: SentenceData[] = [
         chinese: '连小孩子也能做到。',
         pinyin: 'Lián xiǎo hái zi yě néng zuò dào.',
         translation: 'Even children can do it.',
-        explanation: 'This sentence uses **连…也…** (the 也 variant of the "even" construction). **连** picks out the extreme example: **小孩子** ("children, the least expected group to succeed"). **也** ("also/even") + **能做到** ("can accomplish it"). The implied logic: if even children can do it, then anyone can. The difference between 都 and 也 in this pattern is subtle. 都 emphasizes exhaustive inclusion ("every single one"), while 也 emphasizes unexpected inclusion ("even this group too"). In practice, they\'re largely interchangeable. Notice this sentence has no separate Topic; 连 fronts the entire construction.',
+        explanation: 'This sentence uses **连…也…**, the 也 variant of the "even" construction. **连一口水** ("even one sip of water") is marked by 连 as something minimal, and **也没喝** ("didn\'t even drink") confirms the extreme with 也. The logic is the same as 连...都: by highlighting the smallest possible amount, it emphasizes total absence. The tree shows 连 wrapping the focused noun phrase, with 也 reinforcing the all-or-nothing claim. Both 都 and 也 work in this frame; 也 is slightly softer.',
         tree: {
             id: 'n67',
             role: 'Sentence',
@@ -147,7 +147,7 @@ export const even: SentenceData[] = [
         chinese: '连一千里的路，也要从第一步开始走。',
         pinyin: 'Lián yī qiān lǐ de lù, yě yào cóng dì yī bù kāi shǐ zǒu.',
         translation: 'Even a journey of a thousand miles must begin with the first step.',
-        explanation: 'This is a modern version of 千里之行始於足下 (from the Dao De Jing: "A journey of a thousand miles begins with a single step"). Modern Mandarin uses the **连...也** pattern for "even," turning the classical observation into an emphatic statement. 连 fronts the emphasized noun phrase (一千里的路, "a thousand-mile road"), and 也 in the Comment says "even so, you still must..." The classical 之 becomes 的, 始 ("begin") becomes 开始, and 於足下 ("from beneath one\'s feet") becomes 从第一步 ("from the first step").',
+        explanation: 'A modern take on 千里之行始於足下 (from the Dao De Jing: "A journey of a thousand miles begins beneath your feet"). The classical 之 (possessive/structural) becomes 的, and the classical coverb 於 ("at/from") is replaced by modern 从 ("from"). The modern version reads: **就连千里的路** ("even a thousand-mile road") + **也是从脚下开始的** ("also starts from beneath your feet"). The 连...也 "even" frame wraps the whole thought, giving it an emphatic feel: even something this vast starts from a single step.',
         tree: {
             id: 's72-root', role: 'Sentence', children: [
                 { id: 's72-topic', role: 'Topic', subRole: '连-construction (even)', children: [
@@ -173,7 +173,7 @@ export const even: SentenceData[] = [
         chinese: '连别人不了解你，你都不生气，这才是有修养的人。',
         pinyin: 'Lián bié rén bù liǎo jiě nǐ, nǐ dōu bù shēng qì, zhè cái shì yǒu xiū yǎng de rén.',
         translation: 'Even when others do not understand you, you are not resentful; this is truly the mark of a cultivated person.',
-        explanation: 'This is a modern version of 人不知而不愠，不亦君子乎 (from Confucius: "If others do not understand you and you feel no resentment, is that not the mark of a noble person?"). The classical rhetorical question becomes a declarative statement using the **连...都** emphatic pattern. 连 fronts the extreme scenario (others not understanding you), then 都不生气 ("still not angry") completes the emphasis. The final clause 这才是 ("only this is") adds the judgment: 有修养的人 ("a person of cultivation"). The classical 君子 ("noble person") becomes the more modern 有修养的人.',
+        explanation: 'A modern take on 人不知而不愠，不亦君子乎 (from Confucius: "If others do not understand you and you are not upset, is that not the mark of a true person?"). The classical rhetorical question marker 不亦...乎 becomes the modern 难道不是...吗. The 连...也 "even" frame reshapes the sentence: **连别人不理解你这件事** ("even the matter of others not understanding you") + **你也不生气** ("you are also not upset"). The rhetorical question then drives the point home: 难道不是真正有修养的人吗 ("is that not a truly cultivated person?").',
         tree: {
             id: 's85-root', role: 'Sentence', children: [
                 { id: 's85-lian', role: 'Topic', subRole: 'lian-construction', children: [

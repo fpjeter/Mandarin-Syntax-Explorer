@@ -7,7 +7,7 @@ export const discourseContext: SentenceData[] = [
         chinese: '说想学中文。',
         pinyin: 'Shuō xiǎng xué Zhōng wén .',
         translation: '(He) said (he) wants to learn Chinese.',
-        explanation: 'Mandarin rarely repeats information that is already obvious. Instead of saying the person\'s name or "he" again, the sentence leaves an invisible footprint: a Ghost Node that points back to whoever was established in the **preceding sentence** (shown in the grey card above). Because the context has not shifted, the sentence flows perfectly without needing to say "he" again.',
+        explanation: 'Mandarin rarely repeats information the listener already knows. This pair of dialogue cards sets up a conversation about borrowing a book, and the sentences that follow show how the book gradually disappears from the text while remaining the invisible thread connecting everything. The first speaker asks 你借到那本书了吗 ("Did you manage to borrow that book?"). The reply 借到了 ("Got it") already drops the book. Pay attention to how the tree\'s Ghost Nodes track what is left unspoken.',
         discourseContext: {
             chinese: '张三昨天来找我了。',
             pinyin: 'Zhāng Sān zuó tiān lái zhǎo wǒ le .',
@@ -92,7 +92,7 @@ export const discourseContext: SentenceData[] = [
         chinese: '非常有意思。',
         pinyin: 'Fēi cháng yǒu yì si .',
         translation: '(It\'s) really interesting.',
-        explanation: 'Just four words, and the subject is an invisible Ghost Node. This node points back to the **book** mentioned in the previous sentence (shown in the grey card above). Once a Topic has been introduced in conversation, Mandarin avoids repeating it. The listener tracks the invisible thread through context, and the tree makes this connection visible with a reference arc.',
+        explanation: 'Just four words, and the Topic is an invisible **Ghost Node**. This ghost node points back to the **book** mentioned in the previous sentence (shown in the grey card above). Once a Topic has been introduced in conversation, Mandarin avoids repeating it. The listener tracks this invisible thread through context, and the tree makes the connection visible with a reference arc.',
         discourseContext: {
             chinese: '我买了一本新书。',
             pinyin: 'Wǒ mǎi le yī běn xīn shū .',
@@ -150,7 +150,7 @@ export const discourseContext: SentenceData[] = [
         chinese: '已经吃过了。',
         pinyin: 'Yǐ jīng chī guò le.',
         translation: '(I) have already eaten.',
-        explanation: 'A common short answer to the frequent greeting "Have you eaten?" The speaker and the meal are completely silent because the immediate context makes them obvious. The Ghost Node references the speaker, who is clear from the conversation. Inside the Comment, **已经** ("already") modifies the verb **吃** ("eat"), cleanly confirming the event is done.',
+        explanation: 'A common short answer. The Topic is again implied (the book, still carried from the earlier context). The Comment is just **也想看** ("also wants to read it"), where **也** ("also") subtly references the first speaker without naming them. The object of 看 ("read") is dropped entirely. Both speakers know what is being read. The tree shows a compact structure with a ghost node standing in for the book.',
         discourseContext: {
             chinese: '你吃饭了吗？',
             pinyin: 'Nǐ chī fàn le ma?',
@@ -176,7 +176,7 @@ export const discourseContext: SentenceData[] = [
         chinese: '今天特别累。',
         pinyin: 'Jīn tiān tè bié lèi.',
         translation: '(I am) especially tired today.',
-        explanation: 'In conversational Mandarin, the speaker relies on the immediate situation to make their identity clear. The "I" is not awkwardly "dropped" but rather occupies an invisible Ghost Topic that the listener fills in naturally. The time phrase **今天** ("today") frames the Comment, while **特别** ("especially") intensifies the adjectival verb **累** ("tired").',
+        explanation: 'In conversational Mandarin, the speaker often drops both the topic and the object when context makes them obvious. Here, the implied topic ("I") and the implied object (the book) are both ghost nodes. The Comment uses **告诉** ("tell") to create a pivotal construction: **他** ("him") is simultaneously the object of "tell" and the actor of what follows. The instruction **看完了就给我** ("when you finish reading, give it to me") chains two more actions, all still referencing the invisible book.',
         discourseContext: {
             chinese: '你今天感觉怎么样？',
             pinyin: 'Nǐ jīn tiān gǎn jué zěn me yàng?',
@@ -201,7 +201,7 @@ export const discourseContext: SentenceData[] = [
         chinese: '早就回家了。',
         pinyin: 'Zǎo jiù huí jiā le.',
         translation: '(He) went home a long time ago.',
-        explanation: 'When someone asks where a person is, the reply uses an invisible Ghost Topic. The person\'s identity ("he" or "she") lives purely in the conversational flow, so it does not need to be spoken. The sentence begins seamlessly with **早就** ("long ago"), flowing into the verb phrase **回家了** which marks the completed return home.',
+        explanation: 'When someone asks where a person is, the reply often drops the person entirely. The Topic **他** ("he") is stated just once. The Comment uses **让** to create a pivotal construction: **弟弟** ("little brother") is the object of 让 and the actor of what follows. The instruction is **先看** ("read first"). The book is completely absent from the sentence. Five exchanges in, and the book has been named only once, at the very start. Mandarin threads context silently through discourse, and the tree\'s ghost nodes make that thread visible.',
         discourseContext: {
             chinese: '他去哪儿了？',
             pinyin: 'Tā qù nǎ er le?',

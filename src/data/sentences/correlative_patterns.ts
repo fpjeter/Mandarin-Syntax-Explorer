@@ -7,7 +7,7 @@ export const correlativePatterns: SentenceData[] = [
         chinese: '中文越学越有意思。',
         pinyin: 'Zhōng wén yuè xué yuè yǒu yì si.',
         translation: 'The more you study Chinese, the more interesting it gets.',
-        explanation: '**中文** ("Chinese") is the Topic. The **越…越…** (yuè…yuè…) frame pairs two clauses: **越学** ("the more you study") and **越有意思** ("the more interesting"). The pattern is: 越 A 越 B: as A increases, B increases. The subject of 学 is omitted (an implied general "you"). This correlative frame is one of the most elegant in Mandarin: no conjunction, no relative clause, just the repeated 越 linking cause and effect. Other examples: 越吃越胖 ("the more you eat, the fatter you get"), 越想越难过 ("the more you think about it, the sadder you feel").',
+        explanation: '**中文** ("Chinese") is the Topic, sitting at the top of the tree. The **越…越…** (yuè…yuè…) frame pairs two clauses: **越学** ("the more you study") and **越有意思** ("the more interesting it gets"). The pattern works like this: 越 A 越 B means "as A increases, B increases." The actor of 学 is left out here (an implied general "you"). This correlative frame is one of the most elegant in Mandarin: no conjunction, no relative clause, just the repeated 越 linking cause and effect. Other examples: 越吃越胖 ("the more you eat, the fatter you get"), 越想越难过 ("the more you think, the sadder you feel").',
         tree: {
             id: 'n60',
             role: 'Sentence',
@@ -69,7 +69,7 @@ export const correlativePatterns: SentenceData[] = [
         chinese: '他一说话就脸红。',
         pinyin: 'Tā yī shuō huà jiù liǎn hóng.',
         translation: 'The moment he speaks, he blushes.',
-        explanation: '**他** ("he") is the Topic. The **一…就…** (yī…jiù…) frame expresses "as soon as A, immediately B." **一说话** ("as soon as he speaks") triggers **就脸红** ("immediately blushes"). The 一 + verb signals the trigger event; the 就 signals instantaneous consequence. 脸红 is a subject-predicate compound: 脸 ("face") + 红 ("turns red"). This pattern is extremely common in everyday speech: 一下雨就堵车 ("as soon as it rains, traffic jams"), 一看见她就笑 ("the moment he sees her, he smiles"). The two clauses share the same subject here, but they don\'t have to.',
+        explanation: '**他** ("he") is the Topic. The **一…就…** (yī…jiù…) frame expresses "as soon as A, immediately B." **一说话** ("as soon as he speaks") is the trigger; **就脸红** ("immediately blushes") is the consequence. The 一 + verb signals the trigger event, and 就 signals the instant result. 脸红 is itself a compact compound: 脸 ("face") + 红 ("turns red"). This pattern is extremely common in everyday speech: 一下雨就堵车 ("as soon as it rains, traffic jams up"), 一看见她就笑 ("the moment he sees her, he smiles"). The two clauses are anchored by the same Topic here, but they do not have to be.',
         tree: {
             id: 'n61',
             role: 'Sentence',
@@ -132,7 +132,7 @@ export const correlativePatterns: SentenceData[] = [
         chinese: '只学习不思考，越学越糊涂；只思考不学习，越想越危险。',
         pinyin: 'Zhǐ xué xí bù sī kǎo, yuè xué yuè hú tu; zhǐ sī kǎo bù xué xí, yuè xiǎng yuè wéi xiǎn.',
         translation: 'If you only study without thinking, the more you study the more confused you get; if you only think without studying, the more you think the more perilous it becomes.',
-        explanation: 'This is a modern version of 學而不思則罔，思而不學則殆 (from Confucius: "Learning without thinking leads to confusion; thinking without learning leads to peril"). The classical conditional pattern 則 ("then") becomes the modern correlative **越...越...** ("the more X, the more Y"). Each half follows the same pattern: 只A不B ("only A, not B") sets up the flawed approach, then 越A越B gives the escalating consequence. The 越...越 pattern shows that two changes happen together: as one increases, so does the other.',
+        explanation: 'A modern take on 學而不思則罔，思而不學則殆 (from the Analects: "To study without thinking is wasteful; to think without studying is dangerous"). The classical 而 ("but/and") and 則 ("then") are replaced by modern **如果...就...** ("if...then..."). The tree shows two parallel conditional clauses. Each has the same shape: 如果 + condition, 就 + consequence. The first clause warns 如果只学习不思考 ("if you only study without thinking"), result: 就会迷茫 ("you will be lost"). The second warns 如果只思考不学习 ("if you only think without studying"), result: 就很危险 ("it is very dangerous").',
         tree: {
             id: 's84-root', role: 'Sentence', children: [
                 { id: 's84-c1', role: 'Topic', subRole: 'first correlative', children: [
@@ -158,7 +158,7 @@ export const correlativePatterns: SentenceData[] = [
         chinese: '一个人读书越多，他就越能理解世界。',
         pinyin: 'Yī ge rén dú shū yuè duō, tā jiù yuè néng lǐ jiě shì jiè.',
         translation: 'The more a person reads, the more they can understand the world.',
-        explanation: 'This sentence links two complete clauses together in a **Parallel Sentence** framework, bound by the **越...越...** (the more... the more) correlative pattern. The first `Embedded Clause` establishes the condition: "a person reads more". The second `Embedded Clause` provides the escalating consequence: "he can increasingly understand the world". The `越` adjuncts sit inside their respective predicates to formally tie the "waterfall" cascade together.',
+        explanation: 'This sentence links two complete clauses with **因为...所以...** ("because...therefore..."). The cause comes first: **因为他学习很努力** ("because he studies very hard"). Then the result: **所以成绩一直很好** ("therefore his grades have always been good"). Mandarin typically requires both markers, not just one. The tree shows the 因为 clause as a causal Adjunct to the main Comment. This is one of the most important patterns for expressing reasoning in Mandarin.',
         tree: {
             id: 'n97-root', role: 'Sentence', children: [
                 { id: 'n97-ps', role: 'Parallel Sentence', children: [
@@ -190,7 +190,7 @@ export const correlativePatterns: SentenceData[] = [
         chinese: '天气越冷，大家越不想出门。',
         pinyin: 'Tiān qì yuè lěng, dà jiā yuè bù xiǎng chū mén.',
         translation: 'The colder the weather gets, the less people want to go out.',
-        explanation: 'Another beautiful "waterfall" cascade spanning two clauses. The first clause handles the environment: The weather gets increasingly cold. The second clause handles human action: everyone increasingly doesn\'t want to go out. The formal AST groups these two halves as `Embedded Clauses` bound inside a `Parallel Sentence`.',
+        explanation: 'The **连...都/也...** frame means "even..." and is used for extreme or surprising cases. **连小孩** ("even children") marks who; **都知道** ("all know") states what they know. The 连 singles out the most unexpected case, and 都 or 也 confirms that even that case is included. The tree shows 连 as a focus marker wrapping the noun, with 都 reinforcing universality. Other examples: 连他都不知道 ("even he doesn\'t know"), 连一块钱都没有 ("doesn\'t even have one yuan").',
         tree: {
             id: 'n98-root', role: 'Sentence', children: [
                 { id: 'n98-ps', role: 'Parallel Sentence', children: [
@@ -220,7 +220,7 @@ export const correlativePatterns: SentenceData[] = [
         chinese: '期望越高，失望往往也就越大。',
         pinyin: 'Qī wàng yuè gāo, shī wàng wǎng wǎng yě jiù yuè dà.',
         translation: 'The higher the expectations, the greater the disappointment often is.',
-        explanation: 'The classic "the higher they climb, the harder they fall" correlative cascade. Look at the deep adverbial stack in the second clause: 往往 (often) + 也 (also) + 就 (then) + 越 (increasingly). Mandarin stacks these adjunct modifiers elegantly before the adjectival verb 大 (big/great) without ever feeling grammatically clunky.',
+        explanation: 'The classic "the higher something goes, the harder it falls" idea. This sentence uses the **越...越...** frame again, but this time on a single dimension: **越来越** ("more and more"). **天气越来越冷** means "the weather is getting colder and colder." The first 越 marks the starting direction, and the second 越 + adjective shows the ongoing change. The tree shows this as a single frame with the adjective 冷 as the expanding endpoint. This 越来越 pattern is extremely common for describing trends: 越来越好 ("better and better"), 越来越贵 ("more and more expensive").',
         tree: {
             id: 'n99-root', role: 'Sentence', children: [
                 { id: 'n99-ps', role: 'Parallel Sentence', children: [

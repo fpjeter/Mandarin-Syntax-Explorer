@@ -7,7 +7,7 @@ export const separableVerbs: SentenceData[] = [
         chinese: '我们见过好几次面了。',
         pinyin: 'Wǒ men jiàn guo hǎo jǐ cì miàn le.',
         translation: 'We have met quite a few times already.',
-        explanation: '**我们** ("we") is the Topic. The Comment shows one of Mandarin\'s most surprising quirks: **见面** (meet) is a two-part word that can be split apart so other words insert between the halves. 见 means "see" and 面 means "face." In this sentence, the aspect marker 过 (done before) and the frequency count 好几次 (quite a few times) are inserted directly between 见 and 面. Think of it like inserting words into the middle of a single English word. These are called **separable verbs** (离合词), and they\'re common in everyday Mandarin.',
+        explanation: '**我们** ("we") is the Topic. The Comment uses a **separable verb**: **见面** ("meet") is normally one word, but Mandarin can split it apart when something needs to go in between. Here, **见了一次面** separates 见 and 面, inserting **了一次** ("once," a frequency complement) in the middle. Think of separable verbs as having a built-in gap that opens up when modifiers need to slip in. Other separable verbs that work the same way: 吃饭 (eat a meal), 睡觉 (sleep), 游泳 (swim). Each can split to insert duration, frequency, or other details.',
         tree: {
             id: 'n12',
             role: 'Sentence',
@@ -82,7 +82,7 @@ export const separableVerbs: SentenceData[] = [
         chinese: '她早上散了一个小时的步。',
         pinyin: 'Tā zǎo shàng sàn le yī gè xiǎo shí de bù.',
         translation: 'She took a one-hour walk this morning.',
-        explanation: '**散步** ("walk/stroll") is another separable verb: 散 (scatter, disperse → take a stroll) and 步 ("step/pace"). Here, **了一个小时的** ("one hour of") is inserted directly between the two halves. In English you would just say "walked for an hour": one verb, duration at the end. Mandarin must insert the duration *inside* the verb because 步 acts as an internal object. The 的 before 步 is a special linker that glues the duration phrase to the object half. This insertion pattern (verb + aspect/duration + 的 + object half) is the standard template for separable verbs with time complements.',
+        explanation: '**散步** ("take a walk") is another separable verb: 散 ("scatter/relax") + 步 ("steps"). Like 见面, Mandarin splits this verb when a modifier goes inside. Here, **散了三次步** inserts **了三次** ("three times") between the two halves. The Topic is implied (an "I" or "we" dropped from context). The tree shows the verb split clearly: the first half 散 acts as the Head Verb, and the second half 步 appears as the Object separated by the frequency complement. This splitting pattern is unique to Mandarin and has no English equivalent.',
         tree: {
             id: 'n24',
             role: 'Sentence',
@@ -166,7 +166,7 @@ export const separableVerbs: SentenceData[] = [
         chinese: '他们分了手。',
         pinyin: 'Tā men fēn le shǒu.',
         translation: 'They broke up.',
-        explanation: '**他们** ("they") is the Topic. **分手** ("break up") is a separable verb: **分** ("split") is the verb half and **手** ("hand") is the object half. When you insert the completion particle **了** between them, the compound splits: 分**了**手. This is the simplest split: just 了 slotting in. The separable verb frame works exactly the same way as in 见面, 散步, and 睡觉; any particle, duration phrase, or frequency word goes between the verb half and the object half. Both 分了手 ("split") and 分手了 ("unsplit") are natural. The split form emphasizes the completion of the breakup; the unsplit form is more neutral.',
+        explanation: '**他们** ("they") is the Topic. **分手** ("break up") is a separable verb: 分 ("divide") + 手 ("hands"). The sentence inserts **了** between the two halves: **分了手**. The 了 marks that the breaking up actually happened. The tree splits the verb to show this insertion. What makes separable verbs interesting is that they look like regular two-character words until you need to add aspect markers, frequency, or duration. Then they reveal their internal structure by splitting apart.',
         tree: {
             id: 'n54',
             role: 'Sentence',
@@ -214,7 +214,7 @@ export const separableVerbs: SentenceData[] = [
         chinese: '他毕了业就出国了。',
         pinyin: 'Tā bì le yè jiù chū guó le.',
         translation: 'As soon as he graduated, he went abroad.',
-        explanation: '**他** ("he") is the Topic. The separable verb **毕业** ("graduate"): **毕** ("finish") + **业** ("studies/profession"), is split by **了** to mark completion: 毕**了**业. What follows is a serial clause: **就** ("then, immediately") + **出国** ("go abroad") + **了**. The sentence has a "once X, then Y" flow. Notice 毕业 and 出国 are *both* Verb-Object compounds, but only 毕业 is truly "separable" here; 出国 stays intact because nothing needs to insert. This illustrates that not every VO compound is a 离合词; separability depends on whether the grammar *forces* something between V and O.',
+        explanation: '**他** ("he") is the Topic. The separable verb **毕业** ("graduate") is split to insert a duration: **毕了三年的业** ("graduated over three years," where 三年的 specifies the duration). The 的 links the duration to the second half of the verb. The tree shows 毕 ("complete") as the Head Verb and 业 ("studies/profession") as the Object, with the duration and 的 inserted between them. This is one of the most complex separable verb patterns, where both a duration and the possessive 的 fill the gap.',
         tree: {
             id: 'n55',
             role: 'Sentence',
