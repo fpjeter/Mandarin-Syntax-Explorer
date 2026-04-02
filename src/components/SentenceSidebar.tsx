@@ -246,7 +246,7 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
                                                     className="mt-2 flex items-center gap-1.5 text-[9px] font-bold tracking-widest uppercase text-slate-500 hover:text-slate-300 transition-colors"
                                                 >
                                                     <BookOpen className="w-3 h-3" />
-                                                    {expandedCategoryDesc === category ? 'Hide Pedagogy' : 'Read Pedagogy'}
+                                                    {expandedCategoryDesc === category ? 'Show Less' : 'Learn More'}
                                                 </button>
                                             )}
 
