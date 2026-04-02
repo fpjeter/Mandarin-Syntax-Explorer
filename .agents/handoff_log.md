@@ -44,7 +44,22 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
-(none)
+### [DATE] Orchestrator → Educational Publisher
+**Status**: 🔴 Active
+**Task**: Comprehensive Rewrite of Grammar Guides, Glossaries, and Badges
+**Branch**: `feature/grammar-guide-rewrites`
+
+> [!NOTE]
+> The Orchestrator has authorized you to completely restructure the HTML section headers in the `GrammarGuide` React components.
+
+**Action Required**:
+1. Check out the `feature/grammar-guide-rewrites` branch.
+2. Read the `explanations_pedagogy.md` file.
+3. Open `src/components/GrammarGuide.tsx` and `src/components/ClassicalGrammarGuide.tsx`. Completely rewrite the text, and freely rename the `1. The Train Architecture` and `2. The Matryoshka Principle` HTML headers to standard pedagogy terms (e.g. `1. Topic and Comment`).
+4. Open `src/data/glossary.ts` and `src/data/classicalGlossary.ts`. Rewrite all definitions to purge FLS jargon (e.g., remove "Recursive Hinge").
+5. Open `src/data/badges.ts` and `src/data/classicalBadges.ts`. Rewrite the `headline` and `detail` fields (e.g., remove "Fusional coverb").
+6. **CRITICAL INSTRUCTION**: Do NOT use `sed`! Use `multi_replace_file_content` to safely edit the Typescript/TSX files.
+7. Mark this task as ✅ Done when you have pushed the commits.
 
 ## Resolved
 
