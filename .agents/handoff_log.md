@@ -45,46 +45,58 @@ Append a new block to `## Pending Requests` using this exact format:
 ## Active Assignments
 
 ### [2026-04-02] Orchestrator → Linguistics Specialist
+**Status**: 🔴 Active
+**Task**: Structural Coverage Gap Analysis Across All 19 Categories
+**Branch**: `develop` (report only, no source edits)
+
+**Context**: We have 97 sentences across 19 grammar categories. The user suspects we are missing important structural variations within categories. For example, the 被 (BEI) construction may lack an example where the embedded clause has no stated agent.
+
+**Action Required**:
+1. Check out `develop`.
+2. Read every file in `src/data/sentences/` (19 category files).
+3. For **each category**, analyze what structural patterns the current examples cover and what important variations are missing. Think about:
+   - **Missing sub-patterns**: e.g., 被 without an agent, 把 with a complex result, 是…的 emphasizing manner vs. time vs. place
+   - **Missing structural complexity**: e.g., does the category only have simple examples but lacks a sentence with nested clauses, ghost nodes, or chained verbs?
+   - **Missing particle/marker combinations**: e.g., does the aspect markers category cover 了, 着, and 过 individually but miss combinations like V了O了?
+   - **Missing real-world usage patterns**: e.g., are all examples textbook-style, or do we also show colloquial/conversational forms?
+   - **Imbalanced difficulty**: e.g., are all sentences beginner-level, or is there a progression to intermediate complexity?
+4. Produce a structured report at `coverage_gap_analysis.md` in the project root. Format:
+   ```markdown
+   ## [Category Name]
+   **Current coverage** (N sentences): [brief summary of what patterns are covered]
+
+   **Missing patterns**:
+   1. [Pattern name]: [description of what's missing and why it matters for learners]
+   2. ...
+
+   **Priority**: High / Medium / Low
+   ```
+5. At the end of the report, include a **Summary Table** ranking all categories by gap severity.
+6. Commit and push the report. Mark this ticket as ✅ Done.
+
+**CRITICAL**: Do NOT edit any sentence files. Your output is the report only. Do NOT use FLS jargon in the report; use standard grammar terminology.
+
+## Resolved
+
+### [2026-04-02] Orchestrator → Linguistics Specialist
 **Status**: ✅ Done
 **Task**: Accuracy Review of All 97 Sentence Explanations
 **Branch**: `feature/sentence-accuracy-review`
-**Sequence**: Ticket 1 of 2 (must complete before Ticket 2 begins)
+**Commit**: `073ea78`
 
-**Action Required**:
-1. Check out `feature/sentence-accuracy-review`.
-2. Read every file in `src/data/sentences/` (19 category files, 97 sentences total).
-3. For each sentence, compare the `explanation:` string against the `tree:` AST structure. Check for:
-   - Factual inaccuracies (e.g., calling a resultative complement a "compound verb")
-   - Misidentified roles (e.g., saying something is the Subject when the tree labels it Topic)
-   - Missing key structural features that the explanation fails to mention
-   - Incorrect descriptions of particle behavior (了, 着, 过, 得, 不, etc.)
-   - Any remaining FLS jargon that slipped through earlier rewrites
-4. Produce a structured report at `sentence_accuracy_report.md` in the project root. Format:
-   ```
-   ## [filename.ts]
-   ### s[ID] — [chinese sentence]
-   - **Issue**: [description of inaccuracy]
-   - **AST Reality**: [what the tree actually shows]
-   - **Suggested Fix**: [brief correction note]
-   ```
-   If a sentence has no issues, you may skip it or mark it "✅ Accurate".
-5. Commit and push the report. Mark this ticket as ✅ Done.
-
-**CRITICAL**: Do NOT edit any sentence files. Your output is the report only.
-
----
+> [!NOTE]
+> Reviewed all 97 explanations against AST structures. Found 7 accuracy issues (all Subject→Topic terminology leaks) across 5 files. Produced `sentence_accuracy_report.md`.
 
 ### [2026-04-02] Orchestrator → Educational Publisher
 **Status**: ✅ Done
 **Task**: Fresh Rewrite of All 97 Sentence Explanations
 **Branch**: `feature/sentence-accuracy-review`
-**Commit**: `2461d1e` — feat(pedagogy): fresh rewrite of all 97 sentence explanations
+**Commit**: `2461d1e`
 
 > [!NOTE]
-> All 97 explanation strings across 19 category files freshly rewritten. Applied all 7 accuracy fixes from `sentence_accuracy_report.md` (Subject → Topic/actor terminology). Purged all em-dashes and FLS jargon. Varied Topic callouts across entries. Guided-tour tone maintained throughout. QA passed: 97 sentences, 1164 nodes validated. No new lint errors.
+> All 97 explanation strings freshly rewritten. Applied all 7 accuracy fixes. Purged em-dashes and FLS jargon. QA passed: 97 sentences, 1164 nodes.
 
 
-## Resolved
 
 ### [2026-04-01] Orchestrator → Educational Publisher
 **Status**: ✅ Done
