@@ -99,7 +99,7 @@ export const shDeConstruction: SentenceData[] = [
         chinese: '我是在上海长大的。',
         pinyin: 'Wǒ shì zài Shàng hǎi zhǎng dà de.',
         translation: 'It was in Shanghai that I grew up.',
-        explanation: 'Compare this with s8: both use **是…的** to highlight one specific detail. In s8 the spotlight was on *when and where* something happened. Here it\'s on *where* the speaker grew up. The verb **长大** (grow up) is not in doubt; the speaker definitely grew up somewhere. **是** acts like "was" and **的** wraps the clause into "the one that [grew up in Shanghai]." Together they bracket the location **在上海** as the key piece of info. Strip away 是 and 的 and you get a plain sentence (我在上海长大); add them back and the sentence says "Shanghai is the answer you\'re looking for." This is one of the most useful frames for answering "where/when/how did you…?" questions in Mandarin.',
+        explanation: 'This is another **是…的** sentence, this time spotlighting *where* the speaker grew up. The verb **长大** (grow up) is not in doubt; the speaker definitely grew up somewhere. **是** acts like "was" and **的** wraps the clause into "the one that [grew up in Shanghai]." Together they bracket the location **在上海** as the key piece of info. Strip away 是 and 的 and you get a plain sentence (我在上海长大); add them back and the sentence says "Shanghai is the answer you\'re looking for." This is one of the most useful frames for answering "where/when/how did you…?" questions in Mandarin.',
         tree: {
             id: 'n23',
             role: 'Sentence',
@@ -310,7 +310,7 @@ export const shDeConstruction: SentenceData[] = [
         chinese: '老师是用来传授知识和解答疑惑的。',
         pinyin: 'Lǎo shī shì yòng lái chuán shòu zhī shi hé jiě dá yí huò de.',
         translation: 'A teacher is someone used to transmit knowledge and resolve doubts.',
-        explanation: 'This modernizes the classical 師者所以傳道授業解惑也. Modern Mandarin uses the **是...的** construction to define the purpose of a teacher. *Grammatically,* 老师 ("teacher") is the Topic. The Comment uses 是 ("is") + a purpose phrase 用来 ("used for") + two verb-object pairs connected by 和 ("and"): 传授知识 ("transmit knowledge") and 解答疑惑 ("resolve doubts"). The 的 at the end turns the whole phrase into a noun.',
+        explanation: 'This is a modern version of 師者所以傳道授業解惑也 (from Han Yu\'s famous essay: "A teacher is one who transmits the Way, imparts knowledge, and resolves doubts"). Modern Mandarin uses the **是...的** construction to define the purpose of a teacher. In the tree, 老师 ("teacher") is the Topic. The Comment uses 是 ("is") + a purpose phrase 用来 ("used for") + two verb-object pairs connected by 和 ("and"): 传授知识 ("transmit knowledge") and 解答疑惑 ("resolve doubts"). The 的 at the end turns the whole phrase into a nominal description.',
         tree: {
             id: 's79-root', role: 'Sentence', children: [
                 { id: 's79-t', role: 'Topic', text: { hanzi: '老师', pinyin: 'lǎo shī', translation: 'teacher' } },

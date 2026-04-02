@@ -82,7 +82,7 @@ export const separableVerbs: SentenceData[] = [
         chinese: '她早上散了一个小时的步。',
         pinyin: 'Tā zǎo shàng sàn le yī gè xiǎo shí de bù.',
         translation: 'She took a one-hour walk this morning.',
-        explanation: '**散步** ("walk/stroll") is another separable verb: 散 (scatter, disperse → take a stroll) and 步 ("step/pace"). Here, **了一个小时的** ("one hour of") is inserted directly between the two halves. In English you would just say "walked for an hour": one verb, duration at the end. Mandarin must insert the duration *inside* the verb because 步 acts as an internal object. The 的 before 步 is a special linker that glues the duration phrase to the noun morpheme. This insertion pattern (verb + aspect/duration + 的 + object morpheme) is the standard template for separable verbs with time complements.',
+        explanation: '**散步** ("walk/stroll") is another separable verb: 散 (scatter, disperse → take a stroll) and 步 ("step/pace"). Here, **了一个小时的** ("one hour of") is inserted directly between the two halves. In English you would just say "walked for an hour": one verb, duration at the end. Mandarin must insert the duration *inside* the verb because 步 acts as an internal object. The 的 before 步 is a special linker that glues the duration phrase to the object half. This insertion pattern (verb + aspect/duration + 的 + object half) is the standard template for separable verbs with time complements.',
         tree: {
             id: 'n24',
             role: 'Sentence',
@@ -166,7 +166,7 @@ export const separableVerbs: SentenceData[] = [
         chinese: '他们分了手。',
         pinyin: 'Tā men fēn le shǒu.',
         translation: 'They broke up.',
-        explanation: '**他们** ("they") is the Topic. **分手** ("break up") is a separable verb: **分** ("split") is the verb morpheme and **手** ("hand") is the object morpheme. When you insert the completion particle **了** between them, the compound splits: 分**了**手. This is the simplest split: just 了 slotting in. The separable verb frame works exactly the same way as in 见面, 散步, and 睡觉; any particle, duration phrase, or frequency word goes between the verb half and the object half. Both 分了手 ("split") and 分手了 ("unsplit") are natural. The split form emphasizes the completion of the breakup; the unsplit form is more neutral.',
+        explanation: '**他们** ("they") is the Topic. **分手** ("break up") is a separable verb: **分** ("split") is the verb half and **手** ("hand") is the object half. When you insert the completion particle **了** between them, the compound splits: 分**了**手. This is the simplest split: just 了 slotting in. The separable verb frame works exactly the same way as in 见面, 散步, and 睡觉; any particle, duration phrase, or frequency word goes between the verb half and the object half. Both 分了手 ("split") and 分手了 ("unsplit") are natural. The split form emphasizes the completion of the breakup; the unsplit form is more neutral.',
         tree: {
             id: 'n54',
             role: 'Sentence',

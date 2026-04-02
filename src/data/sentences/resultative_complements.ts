@@ -7,7 +7,7 @@ export const resultativeComplements: SentenceData[] = [
         chinese: '吃饱了，想睡觉。',
         pinyin: 'Chī bǎo le , xiǎng shuì jiào .',
         translation: '(I\'m) full, (I) want to sleep.',
-        explanation: 'The key pattern here is the **resultative complement** **吃饱**: **吃** ("eat") stacked with **饱** ("full"). Eating *resulted in* fullness: that\'s the result morpheme at work, just like 听懂 (listen-understand) or 找到 (look-find). The sentence then chains a second event: 想睡觉 (want to sleep). Notice there is **no stated subject**; the speaker is obvious from context, so Mandarin leaves it out. The tree shows a ghost **[我]** node that you can reveal or hide with the toggle. This silent-subject pattern happens constantly in natural speech.',
+        explanation: 'The key pattern here is the resultative compound **吃饱**: the action 吃 ("eat") fused with the result 饱 ("full"). Rather than saying "eat until I am full" with separate words, Mandarin collapses the action and its outcome into a single unit. A second event follows: 想睡觉 ("want to sleep"). The implied speaker [我] is a Ghost Node that anchors both parts of the Comment without being said aloud.',
         tree: {
             id: 'n13',
             role: 'Sentence',
@@ -93,7 +93,7 @@ export const resultativeComplements: SentenceData[] = [
         chinese: '我听懂了他说的话。',
         pinyin: 'Wǒ tīng dǒng le tā shuō de huà.',
         translation: 'I understood what he said.',
-        explanation: '**我** ("I") is the Topic. The key is **听懂**: the verb **听** ("listen") is stacked directly with the result morpheme **懂** ("understand"). Together they form a single unit meaning "listened-to-the-point-of-understanding." The **了** after them confirms the result was achieved. This is the core pattern of **resultative complements**: verb + result, no linking word, no pause. If you just said 我听了 ("I listened"), there\'s no guarantee of understanding. 听懂 asserts the outcome. The object **他说的话** (what he said) is a relative clause: 他说 (he said) + 的 + 话 (words).',
+        explanation: 'The Topic is **我** ("I"). The core of this sentence is the resultative compound **听懂**: the action 听 ("listen") fused directly with the result 懂 ("understand"). The action flows straight into its outcome without any linking words. Saying just 我听了 ("I listened") would leave the outcome unclear; by fusing the result into the verb, Mandarin confirms the goal was reached. You will see this action-plus-result pattern across many sentence categories in this app.',
         tree: {
             id: 'n30',
             role: 'Sentence',
@@ -175,7 +175,7 @@ export const resultativeComplements: SentenceData[] = [
         chinese: '她哭红了眼睛。',
         pinyin: 'Tā kū hóng le yǎn jing.',
         translation: 'She cried her eyes red.',
-        explanation: '**她** ("she") is the Topic. The verb **哭** ("cry") stacks with the adjective **红** ("red"), meaning the crying *caused* a result: the eyes turned red. The object **眼睛** ("eyes") is the thing that changed, not what was cried. Compare with the English phrasing: "She cried her eyes red"; both languages use the same compact pattern. This kind of verb + result stacking is found everywhere in Mandarin: 笑哭了 ("laugh until you cry"), 吃撑了 ("eat until stuffed"), 写累了 ("write until tired"); any action that causes a change of state can use this frame.',
+        explanation: 'The Topic is **她** ("she"). The action 哭 ("cry") fuses with the descriptive result 红 ("red") into a tight resultative compound, meaning the crying directly caused redness. The object **眼睛** ("eyes") tells you what turned red. These action-plus-result fusions are wonderfully common in Mandarin: 笑哭了 ("laugh until you cry"), 吃撑了 ("eat until stuffed"). They intuitively describe how an action ends in a new state.',
         tree: {
             id: 'n31',
             role: 'Sentence',
@@ -230,7 +230,7 @@ export const resultativeComplements: SentenceData[] = [
         chinese: '我找到钥匙了。',
         pinyin: 'Wǒ zhǎo dào yào shi le.',
         translation: 'I found the key.',
-        explanation: '**我** ("I") is the Topic. The resultative compound **找到** is one of the most useful in the language: **找** ("look for") + **到** ("arrive at / reach"). The result morpheme 到 means "reached the destination of searching," which is exactly what finding something is. This **V+到** pattern is extremely productive: 买到 ("buy and obtain"), 拿到 ("get hold of"), 看到 (look and perceive = see), 听到 (listen and perceive = hear). The 到 always signals that the action reached its target. **了** confirms the action is complete.',
+        explanation: 'The Topic is **我** ("I"). The core of this sentence is the resultative compound **找到**: 找 ("search") fused with 到 ("reach/arrive"). In Mandarin, 到 signals that the action successfully reached its goal. It guarantees completion. This pattern is incredibly useful: 买到 ("buy and actually get it"), 看到 ("look and actually see it"). Think of these as mini-confirmations that the action landed.',
         tree: {
             id: 'n40',
             role: 'Sentence',
@@ -283,7 +283,7 @@ export const resultativeComplements: SentenceData[] = [
         chinese: '他写错字了。',
         pinyin: 'Tā xiě cuò zì le.',
         translation: 'He wrote a character incorrectly.',
-        explanation: '**他** ("he") is the Topic. The resultative compound **写错**: **写** ("write") + **错** ("wrong/mistaken"), means "wrote and the result was wrong." This is a very natural everyday pattern: you don\'t need separate words for "make a mistake writing"; one compact verb covers it. Other V+错 compounds: 说错 (say wrongly), 听错 (mishear), 拿错 (pick up the wrong thing), 走错 (go the wrong way). The object **字** (character/word) comes *after* the resultative compound; this is standard for resultatives with a regular (non-BA) object.',
+        explanation: 'The Topic is **他** ("he"). The key pattern is the resultative compound **写错**: 写 ("write") fused with 错 ("wrong/error"). Rather than using a separate adverb like "incorrectly," Mandarin fuses the error directly into the verb as the result. The object 字 ("character") follows naturally. You will see similar pairings everywhere: 说错 ("speak wrongly"), 拿错 ("grab the wrong one"). The result always tells you exactly how the action turned out.',
         tree: {
             id: 'n41',
             role: 'Sentence',

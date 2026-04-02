@@ -7,7 +7,7 @@ export const potentialComplements: SentenceData[] = [
         chinese: '这道题太难，我做不出来。',
         pinyin: 'Zhè dào tí tài nán, wǒ zuò bù chū lái.',
         translation: 'This question is too hard; I can\'t work it out.',
-        explanation: 'The outer Topic is **这道题** (this question; 道 is the measure word for questions and paths). The Comment plays out in two clauses: the first says *it\'s too hard*; the second says *I can\'t manage it*. The key is **做不出来**: the verb **做** (do/work) + the potential negator **不** + the directional complement **出来** (come out). Inserting **不** between the verb and its result says: *unable to achieve that result*. Swap 不 for **得** and you get 做**得**出来, meaning *can* work it out. This V + 得/不 + complement slot is how Mandarin expresses possibility and impossibility for almost any action.',
+        explanation: 'The sentence opens with **这道题** ("this question") as the Topic. The fascinating part is **做不出来**. Mandarin treats 做出来 ("do and produce a result") as a unit, but you can flip a switch right inside it: inserting **不** between the verb and the result blocks the connection, meaning "cannot produce." If you swap 不 for **得**, the result flows through successfully, meaning "can produce." This internal switch is the **potential complement**, and it is one of the most elegant patterns in Mandarin.',
         tree: {
             id: 'n34',
             role: 'Sentence',
@@ -97,7 +97,7 @@ export const potentialComplements: SentenceData[] = [
         chinese: '你放心，一个小时就写得完。',
         pinyin: 'Nǐ fàng xīn, yī gè xiǎo shí jiù xiě de wán.',
         translation: 'Don\'t worry, (you) can finish writing it in an hour.',
-        explanation: '**你放心** (don\'t worry, literally "you release heart") is a fixed opening phrase. The main clause shows the **affirmative potential complement**: **写得完**: write + **得** (can) + 完 (finish). Inserting **得** between the verb and its result says: *able to achieve that outcome*. The time phrase **一个小时** (one hour) and adverb **就** (just/only) add "in just one hour." Compare with the negative: 写**不**完 would mean *can\'t finish writing*. The only difference is that tiny 得/不 slot; one syllable switches the meaning between possible and impossible.',
+        explanation: '**你放心** ("don\'t worry") sets a reassuring tone. The main event features a positive potential complement: **写得完** ("can finish writing"). By inserting **得** between the verb 写 ("write") and the result 完 ("finish"), you confirm that the writing *can* reach completion. Flipping the switch to **不** would block it: 写不完 ("cannot finish writing"). One tiny syllable changes the entire meaning. This is the same internal switch you see in all potential complement sentences.',
         tree: {
             id: 'n35',
             role: 'Sentence',
@@ -249,7 +249,7 @@ export const potentialComplements: SentenceData[] = [
         chinese: '昨晚我睡不着，一直到天亮。',
         pinyin: 'Zuó wǎn wǒ shuì bu zháo, yī zhí dào tiān liàng.',
         translation: 'Last night I couldn\'t fall asleep, right up until dawn.',
-        explanation: 'The time phrase **昨晚** ("last night") sets the scene. **我** ("I") is the Topic. The potential complement **睡不着**: **睡** ("sleep") + **不** + **着** (着 here means "catch / latch onto": the state of being asleep was unreachable), conveys the inability to *reach* the state of sleep. This is a uniquely vivid potential complement: 着 as a result morpheme expresses "catching" or "settling into" a state. Compare: 找得着 ("can find / manage to locate"), 猜不着 (can\'t guess). The second clause **一直到天亮** (straight until dawn) extends the picture.',
+        explanation: 'Framed by **昨晚** ("last night"), the Topic is **我** ("I"). The potential complement here is **睡不着**: 睡 ("sleep") with 不 (the negative switch) blocking the result 着 ("settle into the state of sleeping"). The 不 physically prevents the action from reaching completion, meaning "could not fall asleep." The sentence then continues seamlessly into a second clause: **一直到天亮** ("all the way until dawn").',
         tree: {
             id: 'n45',
             role: 'Sentence',

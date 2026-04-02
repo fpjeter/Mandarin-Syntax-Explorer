@@ -45,6 +45,17 @@ I noticed a severe over-correction in sentences containing two completely indepe
 
 **Recommendation**: Do not force independent parallel sentences into a false Topic-Comment relationship just to satisfy the root constraint. If a sentence genuinely consists of two independent Topic-Comment frames, it should either have two root-level `Sentence` nodes, or a new root-level wrapper (e.g., `Compound Sentence`) that is allowed to contain sibling clauses. Using `Topic` as a generic wrapper for the first half of a compound sentence destroys the linguistic meaning of the Topic position.
 
+## 5. FLS as an Internal Structural Engine (Pedagogical Boundary)
+**Status: Strict UI Separation Enforced**
+
+Per the latest pedagogical guidelines (`explanations_pedagogy.md`), it is critical to formalize that the **Fractal Logic Stream (FLS)** theory serves *exclusively* as our backend structural parsing engine. The FLS ensures our Abstract Syntax Trees (ASTs) are mathematically consistent. 
+
+However, this strict theoretical framework must **never** bleed into the learner-facing UI. 
+- Internal architectural constants such as "Situation-Taking Verb", "Identity Subscription", and "Occupied Silence" are explicitly **banned** from the app's `explanation` strings.
+- The UI layer must translate these deep structural truths into accessible, warm metaphors (e.g., "Ghost Node" or "Embedded Clause").
+
+The role of the Linguistics Specialist is to act as the silent structural architect: strictly governing the JSON taxonomy, while the Educational Publisher owns the presentation layer.
+
 ---
 
 ### Next Steps for Data Linguist:

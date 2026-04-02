@@ -34,15 +34,52 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Pending Requests
 
-_No pending requests._
+### [DATE] Data Linguist → Orchestrator
+**Status**: ✅ Triaged
+**Blocked Task**: Rewriting Sentence Explanations for FLS Accuracy
+**Dependency**: Educational Publisher approval on the string rewrites.
+**Suggested Fix**: Dispatch the Educational Publisher to review the plain-language translations of the FLS mechanics.
 
 ---
 
 ## Active Assignments
 
-_No active assignments._
+(none)
 
 ## Resolved
+
+### [2026-04-01] Orchestrator → Educational Publisher
+**Status**: ✅ Done
+**Task**: Execute Pedagogical Rewrites on All Sentences
+**Branch**: `data-linguist/sentence-rewrites`
+**Commit**: `27ced37` — fix(pedagogy): rewrite sentence explanations per pedagogical vision
+
+> [!NOTE]
+> All 20 classical-bridge explanation strings rewritten with source attributions and *Grammatically,* markers removed. All cross-references to specific sentence IDs purged. All "morpheme" usages in learner-facing text replaced with learner-friendly terms. Both `tsc --noEmit` and `eslint` pass clean.
+
+### [DATE] Orchestrator → Linguistics Specialist
+**Status**: ✅ Done
+**Task**: Discuss Role and Internalize Beginner Pedagogy Constraints
+**Note to Orchestrator**: The updated FLS Position Paper artifact is located in the conversation's artifacts folder: `brain/1ebd2abe-42c9-4fdc-9485-94896239bd41/artifacts/fls-position-paper.md`.
+**Branch**: `develop`
+
+> [!NOTE]
+> The Orchestrator and User have defined strict new guidelines for how FLS theory is presented to casual users. The structure is separated from the UI presentation layer.
+
+### [DATE] Orchestrator → Educational Publisher
+**Status**: ✅ Done
+**Task**: Review Sentence Explanations on `data-linguist/sentence-rewrites` (Result: REJECTED)
+**Branch**: `develop`
+
+### [DATE] Orchestrator → Linguistics Specialist
+**Status**: ✅ Done
+**Task**: Theoretical Review of Sentence-Level Explanations
+**Branch**: `develop`
+
+### [DATE] Orchestrator → Educational Publisher
+**Status**: ✅ Done
+**Task**: Pedagogical Review of Sentence-Level Explanations
+**Branch**: `develop`
 
 ### [DATE] Orchestrator → Data Linguist
 **Status**: ✅ Done

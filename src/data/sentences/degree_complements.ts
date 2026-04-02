@@ -304,7 +304,7 @@ export const degreeComplements: SentenceData[] = [
         chinese: '时间过得就像流水一样快，日夜不停。',
         pinyin: 'Shí jiān guò de jiù xiàng liú shuǐ yí yàng kuài, rì yè bù tíng.',
         translation: 'Time passes as swiftly as flowing water, never ceasing day or night.',
-        explanation: 'This modernizes the classical 逝者如斯夫不舍晝夜. The classical metaphor is preserved but expressed with modern comparative grammar. *Grammatically,* 时间 ("time") is the Topic. The Comment uses a **degree complement**: 过得 (verb + 得) introduces a description of *how* time passes. The simile 就像流水一样快 ("as fast as flowing water") uses the 像...一样 ("like...the same") comparison pattern. The second clause 日夜不停 ("day and night, not stopping") mirrors the classical 不舍晝夜.',
+        explanation: 'This is a modern version of 逝者如斯夫，不舍晝夜 (from Confucius, standing beside a river: "What passes away is like this, not ceasing day or night"). The classical metaphor is preserved but expressed with modern comparative grammar. The Topic is 时间 ("time"). The Comment uses a **degree complement**: 过得 (verb + 得) introduces a description of *how* time passes. The simile 就像流水一样快 ("as fast as flowing water") uses the 像...一样 ("like...the same") comparison pattern. The second clause 日夜不停 ("day and night, not stopping") mirrors the classical 不舍晝夜.',
         tree: {
             id: 's77-root', role: 'Sentence', children: [
                 { id: 's77-t', role: 'Topic', text: { hanzi: '时间', pinyin: 'shí jiān', translation: 'time' } },

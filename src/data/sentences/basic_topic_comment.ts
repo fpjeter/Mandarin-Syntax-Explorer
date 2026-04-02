@@ -566,7 +566,7 @@ export const basicTopicComment: SentenceData[] = [
         chinese: '几个人一起走，里面肯定有值得我学习的人。',
         pinyin: 'Jǐ gè rén yì qǐ zǒu, lǐ miàn kěn dìng yǒu zhí de wǒ xué xí de rén.',
         translation: 'When a few people walk together, there is surely someone worth learning from among them.',
-        explanation: 'This modernizes the classical 三人行必有我師焉. The classical construction compresses the entire idea into eight characters; modern Mandarin spells it out with a Topic-Comment frame. *Grammatically,* the Topic (几个人一起走) sets up a situation: "when a few people walk together." The Comment then asserts: 里面 ("among them") + 肯定有 ("surely there is") + a complex noun phrase. The noun phrase 值得我学习的人 ("a person worth my studying") uses a nested 的 descriptive noun phrase.',
+        explanation: 'This is a modern version of 三人行必有我師焉 (from the Analects: "Among three people walking, there is surely my teacher"). Where classical Chinese compressed the whole idea into eight characters, modern Mandarin spells it out with a Topic-Comment frame. The Topic (几个人一起走, "a few people walk together") sets up the situation. The Comment then asserts: 里面 ("among them") + 肯定有 ("surely there is") + a descriptive noun phrase built with 的: 值得我学习的人 ("a person worth learning from").',
         tree: {
             id: 's70-root', role: 'Sentence', children: [
                 { id: 's70-topic', role: 'Topic', subRole: 'situational frame', children: [
@@ -592,7 +592,7 @@ export const basicTopicComment: SentenceData[] = [
         chinese: '生命也是我想要的东西。',
         pinyin: 'Shēng mìng yě shì wǒ xiǎng yào de dōng xi.',
         translation: 'Life is also something I desire.',
-        explanation: 'This modernizes the classical 生亦我所欲也. The classical 所欲 ("that which is desired") becomes 想要的东西 ("things I want to"); the classical linking verb-like 也 at the end becomes the modern linking verb 是. *Grammatically,* 生命 ("life") is the Topic. The Comment uses 也 ("also") as an adverb before 是 ("is"), then a 的 descriptive noun phrase: 我想要的东西 ("the thing I want"). This is a straightforward Topic-Comment identification sentence.',
+        explanation: 'This is a modern version of 生亦我所欲也 (from Mencius: "Life is also what I desire"). The classical 所欲 ("that which is desired") becomes 想要的东西 ("things I want"), and the classical sentence-final 也 becomes the modern linking verb 是 ("is"). In the tree, 生命 ("life") sits as the Topic. The Comment uses 也 ("also") before 是, followed by a descriptive noun phrase built with 的: 我想要的东西 ("the thing I want"). A clean, straightforward identification sentence.',
         tree: {
             id: 's78-root', role: 'Sentence', children: [
                 { id: 's78-t', role: 'Topic', text: { hanzi: '生命', pinyin: 'shēng mìng', translation: 'life' } },
@@ -613,7 +613,7 @@ export const basicTopicComment: SentenceData[] = [
         chinese: '了解别人的人算聪明，了解自己的人才算高明。',
         pinyin: 'Liǎo jiě bié rén de rén suàn cōng míng, liǎo jiě zì jǐ de rén cái suàn gāo míng.',
         translation: 'Those who understand others are clever; those who understand themselves are truly wise.',
-        explanation: 'This modernizes the classical 知人者智自知者明. The classical 者 particle becomes 的人, and the classical terse predication becomes 算 ("counts as") + quality. *Grammatically,* two parallel Topic-Comment clauses share the same structure. Each Topic is a 的 descriptive noun phrase: 了解别人的人 ("people who understand others"). Each Comment uses 算 ("counts as") as the linking verb. The second clause adds 才 ("only then") for emphasis, distinguishing mere cleverness from true wisdom.',
+        explanation: 'This is a modern version of 知人者智，自知者明 (from the Dao De Jing: "Those who know others are wise; those who know themselves are enlightened"). The classical particle 者 ("the one who") becomes 的人 in modern Mandarin. Look at the tree and you will see two parallel clauses with the same structure: each Topic is a descriptive noun phrase built with 的 (了解别人的人, "people who understand others"), and each Comment uses 算 ("counts as") to link to a quality. The second clause adds 才 ("only then") for emphasis, drawing a distinction between cleverness and true wisdom.',
         tree: {
             id: 's86-root', role: 'Sentence', children: [
                 { id: 's86-c1', role: 'Topic', subRole: 'first clause', children: [
@@ -642,7 +642,7 @@ export const basicTopicComment: SentenceData[] = [
         chinese: '做事正义的人，帮助他的人就多；做事不正义的人，帮助他的人就少。',
         pinyin: 'Zuò shì zhèng yì de rén, bāng zhù tā de rén jiù duō; zuò shì bú zhèng yì de rén, bāng zhù tā de rén jiù shǎo.',
         translation: 'Those who act justly gain much support; those who act unjustly find little.',
-        explanation: 'This modernizes the classical 得道者多助失道者寡助. The classical 者 particle becomes 的人, and the terse two-character predicates expand into full modern clauses. *Grammatically,* two parallel Topic-Comment pairs share the same structure. Each Topic is a 的 descriptive noun phrase: 做事正义的人 ("people who do things justly"). Each Comment is also a 的 descriptive noun phrase used as subject: 帮助他的人 ("people who help them") + 就 + quality (多/少). This showcases how modern Mandarin builds complex subjects through nested 的 phrases.',
+        explanation: 'This is a modern version of 得道者多助，失道者寡助 (from Mencius: "The just gain much support; the unjust find little"). The classical 者 becomes 的人, and the compact classical predicates expand into full modern clauses. The tree shows two beautifully parallel Topic-Comment pairs. Each Topic is a descriptive noun phrase built with 的: 做事正义的人 ("people who act justly"). Each Comment nests another 的 phrase as its own subject: 帮助他的人 ("people who help them"), followed by 就 and a quality (多 "many" or 少 "few"). Notice how 的 phrases stack inside each other to build complex meanings.',
         tree: {
             id: 's90-root', role: 'Sentence', children: [
                 { id: 's90-c1', role: 'Topic', subRole: 'first clause', children: [

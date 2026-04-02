@@ -260,7 +260,7 @@ export const doubleTopic: SentenceData[] = [
         chinese: '一个人犯的错，跟他的性格是分不开的。',
         pinyin: 'Yí gè rén fàn de cuò, gēn tā de xìng gé shì fēn bù kāi de.',
         translation: 'The mistakes a person makes are inseparable from their character.',
-        explanation: 'This modernizes the classical 人之過也各於其黨. Modern Mandarin uses a double Topic structure to convey that faults and character are linked. *Grammatically,* the outer Topic is a descriptive noun phrase: 一个人犯的错 ("the mistakes a person makes"). The inner Comment uses 跟...是分不开的 ("with...are inseparable"). The potential complement 分不开 (分 + 不 + 开, "separate + cannot + apart") is a negative potential form expressing inherent inability to separate the two.',
+        explanation: 'This is a modern version of 人之过也，各于其党 (from Confucius: "A person\'s faults reveal what kind of person they are"). Modern Mandarin uses a double Topic structure to convey that faults and character are linked. The outer Topic is a descriptive noun phrase: 一个人犯的错 ("the mistakes a person makes"). The inner Comment uses 跟...是分不开的 ("with...are inseparable"). The potential complement 分不开 (分 + 不 + 开, "separate + cannot + apart") uses the negative switch 不 to express inherent inability to separate the two.',
         tree: {
             id: 's92-root', role: 'Sentence', children: [
                 { id: 's92-t', role: 'Topic', children: [
