@@ -56,9 +56,10 @@ Append a new block to `## Pending Requests` using this exact format:
 1. Do NOT modify any typescript or data files in the repository.
 2. Open and thoroughly read the newly generated `explanations_pedagogy.md` artifact in the root directory.
 3. Your goal is to understand the distinction between our strict internal structural framework (Fractal Logic Stream) and the beginner-facing pedagogical vocabulary the Educational Publisher will be using.
-4. Internalize the instruction that terms like "Situation-Taking Verb" and "Identity Subscription" are BANNED from the learner-facing UI, even though they drive the underlying AST parsing.
-5. Initialize a clarifying discussion with the user about your specific role as the silent structural architect under this new paradigm. Share your takeaways from the pedagogy document and how you see your deep FLS structural models functioning as the invisible backend backbone of the app.
-6. When the user explicitly states they are satisfied with your understanding of your boundaries, mark this task as ✅ Done.
+4. Internalize the instruction that terms like "Situation-Taking Verb" and "Identity Subscription" are BANNED from the learner-facing UI.
+5. Update the `fls_post_integration_review.md` position paper. You must add a specific section clarifying that the FLS theory serves ONLY as the strict internal parsing engine for the AST structure, and must not bleed into the casual learner-facing UI.
+6. Initialize a clarifying discussion with the user about your specific role as the silent structural architect under this new paradigm. Share your takeaways from the pedagogy document and how you updated the FLS position paper.
+7. When the user explicitly states they are satisfied with your understanding of your boundaries, mark this task as ✅ Done.
 ### [DATE] Orchestrator → Educational Publisher
 **Status**: 🔴 Active
 **Task**: Execute Pedagogical Rewrites on All Sentences

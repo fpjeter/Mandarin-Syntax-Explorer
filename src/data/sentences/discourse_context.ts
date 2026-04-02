@@ -7,7 +7,7 @@ export const discourseContext: SentenceData[] = [
         chinese: '说想学中文。',
         pinyin: 'Shuō xiǎng xué Zhōng wén .',
         translation: '(He) said (he) wants to learn Chinese.',
-        explanation: 'This sentence drops **two subjects**: the outer one (who said it) and the inner one (who wants to learn), both are **[他]** ("he"), shown as ghost nodes in the tree. But here is the twist: these pronouns refer to someone in the **preceding sentence** (the grey card above), not anyone named in this sentence\'s own tree. The person was mentioned one sentence earlier, so Mandarin simply leaves them out here. It sounds incomplete in English, but it is completely natural in Mandarin when the context is clear.',
+        explanation: 'Mandarin rarely repeats information that is already obvious. Instead of saying the person\'s name or "he" again, the sentence leaves an invisible footprint: a Ghost Node that points back to whoever was established in the **preceding sentence** (shown in the grey card above). Because the context has not shifted, the sentence flows perfectly without needing to say "he" again.',
         discourseContext: {
             chinese: '张三昨天来找我了。',
             pinyin: 'Zhāng Sān zuó tiān lái zhǎo wǒ le .',
@@ -92,7 +92,7 @@ export const discourseContext: SentenceData[] = [
         chinese: '非常有意思。',
         pinyin: 'Fēi cháng yǒu yì si .',
         translation: '(It\'s) really interesting.',
-        explanation: 'Just four words, and the subject is completely silent. The tree shows a ghost **[它]** ("it") as the dropped topic, but the thing it refers to is the **book from the previous sentence**, shown in the grey card above. Once a topic is introduced in conversation, Mandarin can go several sentences without repeating it. What sounds like an incomplete fragment in English ("really interesting") is a perfectly formed, natural sentence in Mandarin. It is a vivid example of how much work context does in the language.',
+        explanation: 'Just four words, and the subject is an invisible Ghost Node. This node points back to the **book** mentioned in the previous sentence (shown in the grey card above). Once a Topic has been introduced in conversation, Mandarin avoids repeating it. The listener tracks the invisible thread through context, and the tree makes this connection visible with a reference arc.',
         discourseContext: {
             chinese: '我买了一本新书。',
             pinyin: 'Wǒ mǎi le yī běn xīn shū .',
@@ -150,7 +150,7 @@ export const discourseContext: SentenceData[] = [
         chinese: '已经吃过了。',
         pinyin: 'Yǐ jīng chī guò le.',
         translation: '(I) have already eaten.',
-        explanation: 'A common short answer to the frequent greeting "Have you eaten?". The subject (I) and object (the meal) are both completely dropped because context naturally binds them. The tree relies on a ghost Topic node for the speaker. Inside the Comment, the adjunct **已经** ("already") modifies the verb **吃** ("eat"), followed by the experiential aspect **过** and completion particle **了**.',
+        explanation: 'A common short answer to the frequent greeting "Have you eaten?" The speaker and the meal are completely silent because the immediate context makes them obvious. The Ghost Node references the speaker, who is clear from the conversation. Inside the Comment, **已经** ("already") modifies the verb **吃** ("eat"), cleanly confirming the event is done.',
         discourseContext: {
             chinese: '你吃饭了吗？',
             pinyin: 'Nǐ chī fàn le ma?',
@@ -176,7 +176,7 @@ export const discourseContext: SentenceData[] = [
         chinese: '今天特别累。',
         pinyin: 'Jīn tiān tè bié lèi.',
         translation: '(I am) especially tired today.',
-        explanation: 'In conversational Mandarin, when someone asks how you are, answering directly with "Today is especially tired" sounds natural, with the Topic ("I") being entirely dropped. The time noun **今天** ("today") sits inside the Comment framing the predicate. The adverb **特别** ("especially") intensifies the adjectival verb **累** ("tired").',
+        explanation: 'In conversational Mandarin, the speaker relies on the immediate situation to make their identity clear. The "I" is not awkwardly "dropped" but rather occupies an invisible Ghost Topic that the listener fills in naturally. The time phrase **今天** ("today") frames the Comment, while **特别** ("especially") intensifies the adjectival verb **累** ("tired").',
         discourseContext: {
             chinese: '你今天感觉怎么样？',
             pinyin: 'Nǐ jīn tiān gǎn jué zěn me yàng?',
@@ -201,7 +201,7 @@ export const discourseContext: SentenceData[] = [
         chinese: '早就回家了。',
         pinyin: 'Zǎo jiù huí jiā le.',
         translation: '(He) went home a long time ago.',
-        explanation: 'When someone asks where a person is, the reply drops the pronoun entirely. The subject ("he" or "she") lives purely in the external discourse context. The Comment begins with **早就** ("early on / long ago"), emphasizing the completion of the action long before the speaker asked. The verb phrase **回家了** describes the returned state.',
+        explanation: 'When someone asks where a person is, the reply uses an invisible Ghost Topic. The person\'s identity ("he" or "she") lives purely in the conversational flow, so it does not need to be spoken. The sentence begins seamlessly with **早就** ("long ago"), flowing into the verb phrase **回家了** which marks the completed return home.',
         discourseContext: {
             chinese: '他去哪儿了？',
             pinyin: 'Tā qù nǎ er le?',
