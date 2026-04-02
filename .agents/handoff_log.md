@@ -44,37 +44,53 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
-### [2026-04-02] Orchestrator → Linguistics Specialist
-**Status**: ✅ Done
-**Task**: Structural Coverage Gap Analysis Across All 19 Categories
-**Branch**: `develop` (report only, no source edits)
+### [2026-04-02] Orchestrator → Educational Publisher
+**Status**: 🔴 Active
+**Task**: Design New Sentences to Fill Coverage Gaps
+**Branch**: `feature/coverage-gap-sentences`
+**Sequence**: Ticket 1 of 2 (must complete before Ticket 2 begins)
 
-**Context**: We have 97 sentences across 19 grammar categories. The user suspects we are missing important structural variations within categories. For example, the 被 (BEI) construction may lack an example where the embedded clause has no stated agent.
+**Context**: The Linguistics Specialist produced `coverage_gap_analysis.md` identifying missing structural patterns across all 19 categories, ranked by severity. You are designing the actual sentences to fill these gaps.
 
 **Action Required**:
-1. Check out `develop`.
-2. Read every file in `src/data/sentences/` (19 category files).
-3. For **each category**, analyze what structural patterns the current examples cover and what important variations are missing. Think about:
-   - **Missing sub-patterns**: e.g., 被 without an agent, 把 with a complex result, 是…的 emphasizing manner vs. time vs. place
-   - **Missing structural complexity**: e.g., does the category only have simple examples but lacks a sentence with nested clauses, ghost nodes, or chained verbs?
-   - **Missing particle/marker combinations**: e.g., does the aspect markers category cover 了, 着, and 过 individually but miss combinations like V了O了?
-   - **Missing real-world usage patterns**: e.g., are all examples textbook-style, or do we also show colloquial/conversational forms?
-   - **Imbalanced difficulty**: e.g., are all sentences beginner-level, or is there a progression to intermediate complexity?
-4. Produce a structured report at `coverage_gap_analysis.md` in the project root. Format:
+1. Check out `feature/coverage-gap-sentences`.
+2. Read `coverage_gap_analysis.md` carefully.
+3. Read `explanations_pedagogy.md` for tone rules.
+4. Produce a spec file at `new_sentences_spec.md` in the project root. For **each gap you are filling**, provide:
    ```markdown
-   ## [Category Name]
-   **Current coverage** (N sentences): [brief summary of what patterns are covered]
-
-   **Missing patterns**:
-   1. [Pattern name]: [description of what's missing and why it matters for learners]
-   2. ...
-
-   **Priority**: High / Medium / Low
+   ## [Category Name] — [Gap Being Filled]
+   - **Chinese**: [full sentence in characters]
+   - **Pinyin**: [full pinyin with tones]
+   - **Translation**: [natural English translation]
+   - **Explanation**: [full explanation string following all 7 pedagogy rules]
+   - **Structural Notes**: [brief note for the Data Linguist on the key structural feature, e.g., "agentless 被: no agent NP between 被 and the verb"]
    ```
-5. At the end of the report, include a **Summary Table** ranking all categories by gap severity.
-6. Commit and push the report. Mark this ticket as ✅ Done.
+5. Cover **all High-priority gaps** and as many Medium-priority gaps as you can. Low-priority gaps are optional.
+6. Commit and push the spec. Mark this ticket as ✅ Done.
 
-**CRITICAL**: Do NOT edit any sentence files. Your output is the report only. Do NOT use FLS jargon in the report; use standard grammar terminology.
+**CRITICAL**: Do NOT edit any sentence `.ts` files. Your output is the spec document only. The Data Linguist will generate the AST structures from your spec.
+
+---
+
+### [2026-04-02] Orchestrator → Data Linguist
+**Status**: ⏳ Blocked (waiting for Ticket 1)
+**Task**: Generate AST Trees for New Sentences
+**Branch**: `feature/coverage-gap-sentences`
+**Sequence**: Ticket 2 of 2 (requires `new_sentences_spec.md` from Ticket 1)
+
+**Action Required**:
+1. Check out `feature/coverage-gap-sentences`.
+2. Read `new_sentences_spec.md` (produced by the Educational Publisher).
+3. For each sentence in the spec, generate the full `SentenceData` object with a proper AST `tree`, following the `/add-sentences` workflow.
+4. Use existing sentences in each category file as structural templates.
+5. Copy the `explanation` string directly from the spec file (do NOT rewrite it).
+6. Use `multi_replace_file_content` to append each sentence to its category file.
+7. Run `npm run qa && npm run lint` to validate.
+8. Commit and push. Mark this ticket as ✅ Done.
+
+**CRITICAL**: Use `multi_replace_file_content` to edit. Do NOT use `sed`. Do NOT modify `src/data/sentences/index.ts`.
+
+
 
 ## Resolved
 
