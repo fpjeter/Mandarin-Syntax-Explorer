@@ -47,6 +47,7 @@ Append a new block to `## Pending Requests` using this exact format:
 ### [DATE] Orchestrator → Linguistics Specialist
 **Status**: ✅ Done
 **Task**: Discuss Role and Internalize Beginner Pedagogy Constraints
+**Note to Orchestrator**: The updated FLS Position Paper artifact is located in the conversation's artifacts folder: `brain/1ebd2abe-42c9-4fdc-9485-94896239bd41/artifacts/fls-position-paper.md`.
 **Branch**: `develop`
 
 > [!NOTE]
