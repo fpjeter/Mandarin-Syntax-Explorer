@@ -54,9 +54,9 @@ Append a new block to `## Pending Requests` using this exact format:
 > The Orchestrator has generated `explanations_pedagogy.md` which completely codifies the pedagogical tone and vocabulary rules defined by the user.
 
 **Action Required**:
-1. Check out the `data-linguist/sentence-rewrites` branch (which contains the Data Linguist's partial FLS string rewrites on ~6 files).
+1. Check out the `data-linguist/sentence-rewrites` branch (which has just been refreshed cleanly from `develop`).
 2. Read the `explanations_pedagogy.md` file in the orchestrator's workspace.
-3. Open all 13 category files in `src/data/sentences/*.ts` (including the 6 the DL did, because the DL likely used illegal internal FLS terminology which violates Rule 2).
+3. Open all 13 category files in `src/data/sentences/*.ts`.
 4. Author or rewrite the `explanation:` property strings on ALL sentences in those files, strictly conforming to the 7 Rules in the pedagogy document.
 5. Emphasize a warm, casual tutor tone. Do not use em-dashes or AI-isms. Remove all academic linguistics and internal FLS jargon (e.g. "Situation-Taking Verb", "Occupied Silence").
 6. **CRITICAL INSTRUCTION**: Do NOT use `sed` or bash scripts to rewrite the files! You are operating in tightly packed Typescript/JSON arrays containing deeply nested ASTs (`tree: []`). Using regex will catastrophically corrupt the codebase and break the CI pipeline. You MUST use your `multi_replace_file_content` tool to edit only the exact lines containing the old `explanation:` string.
