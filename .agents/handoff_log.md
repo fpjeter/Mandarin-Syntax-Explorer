@@ -44,23 +44,7 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
-### [DATE] Orchestrator → Linguistics Specialist
-**Status**: ✅ Done
-**Task**: Discuss Role and Internalize Beginner Pedagogy Constraints
-**Note to Orchestrator**: The updated FLS Position Paper artifact is located in the conversation's artifacts folder: `brain/1ebd2abe-42c9-4fdc-9485-94896239bd41/artifacts/fls-position-paper.md`.
-**Branch**: `develop`
 
-> [!NOTE]
-> The Orchestrator and User have defined strict new guidelines for how FLS theory is presented to casual users. The structure is separated from the UI presentation layer.
-
-**Action Required**:
-1. Do NOT modify any typescript or data files in the repository.
-2. Open and thoroughly read the newly generated `explanations_pedagogy.md` artifact in the root directory.
-3. Your goal is to understand the distinction between our strict internal structural framework (Fractal Logic Stream) and the beginner-facing pedagogical vocabulary the Educational Publisher will be using.
-4. Internalize the instruction that terms like "Situation-Taking Verb" and "Identity Subscription" are BANNED from the learner-facing UI.
-5. Update the `fls_post_integration_review.md` position paper. You must add a specific section clarifying that the FLS theory serves ONLY as the strict internal parsing engine for the AST structure, and must not bleed into the casual learner-facing UI.
-6. Initialize a clarifying discussion with the user about your specific role as the silent structural architect under this new paradigm. Share your takeaways from the pedagogy document and how you updated the FLS position paper.
-7. When the user explicitly states they are satisfied with your understanding of your boundaries, mark this task as ✅ Done.
 ### [DATE] Orchestrator → Educational Publisher
 **Status**: 🔴 Active
 **Task**: Execute Pedagogical Rewrites on All Sentences
@@ -75,9 +59,19 @@ Append a new block to `## Pending Requests` using this exact format:
 3. Open all 13 category files in `src/data/sentences/*.ts` (including the 6 the DL did, because the DL likely used illegal internal FLS terminology which violates Rule 2).
 4. Author or rewrite the `explanation:` property strings on ALL sentences in those files, strictly conforming to the 7 Rules in the pedagogy document.
 5. Emphasize a warm, casual tutor tone. Do not use em-dashes or AI-isms. Remove all academic linguistics and internal FLS jargon (e.g. "Situation-Taking Verb", "Occupied Silence").
-6. When finished, push your branch again, provide the `[APPROVED]` signal, and mark this task ✅ Done.
+6. **CRITICAL INSTRUCTION**: Do NOT use `sed` or bash scripts to rewrite the files! You are operating in tightly packed Typescript/JSON arrays containing deeply nested ASTs (`tree: []`). Using regex will catastrophically corrupt the codebase and break the CI pipeline. You MUST use your `multi_replace_file_content` tool to edit only the exact lines containing the old `explanation:` string.
+7. When finished, push your branch again, provide the `[APPROVED]` signal, and mark this task ✅ Done.
 
 ## Resolved
+
+### [DATE] Orchestrator → Linguistics Specialist
+**Status**: ✅ Done
+**Task**: Discuss Role and Internalize Beginner Pedagogy Constraints
+**Note to Orchestrator**: The updated FLS Position Paper artifact is located in the conversation's artifacts folder: `brain/1ebd2abe-42c9-4fdc-9485-94896239bd41/artifacts/fls-position-paper.md`.
+**Branch**: `develop`
+
+> [!NOTE]
+> The Orchestrator and User have defined strict new guidelines for how FLS theory is presented to casual users. The structure is separated from the UI presentation layer.
 
 ### [DATE] Orchestrator → Educational Publisher
 **Status**: ✅ Done
