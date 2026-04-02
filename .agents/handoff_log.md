@@ -50,6 +50,15 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ### [2026-04-01] Orchestrator → Educational Publisher
 **Status**: ✅ Done
+**Task**: Comprehensive Rewrite of Category Glossaries (`categories.ts` & `classicalCategories.ts`)
+**Branch**: `develop`
+**Commit**: `9ff5a38` — fix(pedagogy): rewrite category glossaries per pedagogical vision
+
+> [!NOTE]
+> All 19 FULL_CATEGORY_EXPLANATIONS rewritten: removed LLM-isms, all-caps romanizations, em-dashes, and performative tone. All 19 CATEGORY_DESCRIPTIONS polished for consistency. All 6 CLASSICAL_CATEGORY_DESCRIPTIONS warmed up with modern-bridge context. Both `tsc --noEmit` and `eslint` pass clean.
+
+### [2026-04-01] Orchestrator → Educational Publisher
+**Status**: ✅ Done
 **Task**: Execute Pedagogical Rewrites on All Sentences
 **Branch**: `data-linguist/sentence-rewrites`
 **Commit**: `27ced37` — fix(pedagogy): rewrite sentence explanations per pedagogical vision
