@@ -7,7 +7,7 @@ export const pivotalConstructions: SentenceData[] = [
         chinese: '老师让学生回答问题。',
         pinyin: 'Lǎo shī ràng xué sheng huí dá wèn tí.',
         translation: 'The teacher had the students answer questions.',
-        explanation: 'The Topic is **老师** ("teacher"). The verb **让** ("let/make") does not just act on a single word; it introduces an entire scene: **学生回答** ("students answer"). Inside that scene, the students are the ones doing the answering. Verbs like 让, 叫, and 请 all work this way: they introduce a complete event with its own characters and actions. Look at how the tree nests that event inside the Comment.',
+        explanation: 'The Topic is **老师** ("teacher"). The verb **让** ("let/make") creates a **pivotal construction**: it introduces a person who is simultaneously the object of 让 and the actor of what follows. Here, **我们** ("us") is the pivot. The teacher lets *us*, and *we* do what comes next: **写一篇作文** ("write an essay"). This pivot pattern is one of the most common ways Mandarin embeds one action inside another. Other pivotal verbs include 叫 ("tell/ask"), 请 ("invite"), and 派 ("send").',
         tree: {
             id: 'n32',
             role: 'Sentence',
@@ -74,7 +74,7 @@ export const pivotalConstructions: SentenceData[] = [
         chinese: '妈妈叫我去买牛奶。',
         pinyin: 'Māma jiào wǒ qù mǎi niú nǎi.',
         translation: 'Mom told me to go buy milk.',
-        explanation: 'Here **妈妈** ("Mom") is the Topic. The verb **叫** ("tell/ask") introduces an embedded scene: **我去买** ("I go buy"). Inside that scene, 我 ("I") performs two chained actions: going and buying. English hides this with a connecting word ("told me *to* go"), but Mandarin just places the entire scene directly after 叫. If you compare this tree to the 让 sentence above, you will notice the exact same structure.',
+        explanation: 'Here **妈妈** ("Mom") is the Topic. The verb **叫** ("tell/ask") creates another pivotal construction: **弟弟** ("little brother") is the pivot, simultaneously the object of 叫 and the actor of the next action, **去买菜** ("go buy groceries"). The tree shows 弟弟 sitting right at the hinge between the two verb phrases. Notice how the serial verb chain continues inside the embedded action: 去 ("go") + 买菜 ("buy groceries"), with the purpose following the motion verb naturally.',
         tree: {
             id: 'n33',
             role: 'Sentence',
@@ -155,7 +155,7 @@ export const pivotalConstructions: SentenceData[] = [
         chinese: '公司派他去谈判。',
         pinyin: 'Gōng sī pài tā qù tán pàn.',
         translation: 'The company sent him to negotiate.',
-        explanation: 'The Topic is **公司** ("company"). The verb **派** ("dispatch/send") introduces the embedded scene: **他去谈判** ("he goes to negotiate"). Inside that scene, going naturally flows into negotiating without any connecting words. If you compare the tree here to the 让 and 叫 sentences, you will see that 派 works the exact same way: all of these verbs introduce a complete event with its own characters.',
+        explanation: 'The Topic is **公司** ("company"). The verb **派** ("dispatch/send") creates a pivotal construction: **他** ("him") is the pivot. The company dispatches *him*, and *he* then goes to do something: **去上海出差** ("go to Shanghai on a business trip"). The tree shows the embedded action chain: 去 ("go") + 上海 (destination) + 出差 ("on a business trip"). This is a common pattern in professional and organizational language: someone in authority dispatches someone to do something.',
         tree: {
             id: 'n52',
             role: 'Sentence',
@@ -225,7 +225,7 @@ export const pivotalConstructions: SentenceData[] = [
         chinese: '她请我吃饭。',
         pinyin: 'Tā qǐng wǒ chī fàn.',
         translation: 'She invited me to eat (out / to dinner).',
-        explanation: 'Here **她** ("she") is the Topic. The verb **请** ("invite/treat") introduces the scene: **我吃饭** ("I eat a meal"). Rather than a simple transaction between two things, 请 sets up a social situation where the guest performs an action. Culturally, 请 often implies hospitality and paying the bill. But structurally, it works the exact same way as 让 or 叫: it introduces a complete event nested inside the Comment.',
+        explanation: 'Here **她** ("she") is the Topic. The verb **请** ("invite/treat") creates a pivotal construction: **朋友们** ("friends") is the pivot, both the object of 请 and the actors of what follows, **吃饭** ("eat"). But **请** has a special meaning here: it does not just mean "invite." 请吃饭 means "treat someone to a meal." The tree shows the pivotal structure neatly: she invites, friends eat, and the social meaning of treating is carried by the combination of 请 + 吃饭.',
         tree: {
             id: 'n53',
             role: 'Sentence',
@@ -293,7 +293,7 @@ export const pivotalConstructions: SentenceData[] = [
         chinese: '困难让人成长，安逸让人退步。',
         pinyin: 'Kùn nan ràng rén chéng zhǎng, ān yì ràng rén tuì bù.',
         translation: 'Hardship makes people grow; comfort makes people regress.',
-        explanation: 'This is a modern version of the classical 生於忧患死於安樂 (from Mencius: "Born of hardship, perished in comfort"). The sentence uses a beautifully balanced structure: two Topics (困难, "hardship" and 安逸, "comfort") each trigger the same verb **让** ("make/let"). In both halves, 让 introduces a complete event (**人成长**, "people grow" and **人退步**, "people regress"). The people inside each event are simply the characters performing the action. This parallel structure makes the contrast vivid and balanced.',
+        explanation: 'A modern take on 生於忧患死於安樂 (from Mencius: "Life springs from adversity; death comes from ease"). The classical coverb 於 becomes modern 在 or 从, and the compact classical phrasing expands into full modern clauses. The tree shows a pivotal structure where adversity and comfort are placed as the conditions that *make* people grow or decline. The modern version uses **使** ("cause, make") as the pivotal verb: hardship *causes* people to grow, comfort *causes* people to decline.',
         tree: {
             id: 's89-root', role: 'Sentence', children: [
                 { id: 's89-parallel', role: 'Parallel Sentence', children: [

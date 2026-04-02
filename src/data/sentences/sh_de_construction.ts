@@ -7,7 +7,7 @@ export const shDeConstruction: SentenceData[] = [
         chinese: '我是昨天晚上在图书馆看到她的。',
         pinyin: 'Wǒ shì zuó tiān wǎn shang zài tú shū guǎn kàn dào tā de.',
         translation: 'It was last night in the library that I saw her.',
-        explanation: '**我** ("I") sets the scene, think of it as "as for me…" The rest of the sentence uses the **是…的** pattern to zoom in on *when* and *where* something happened. **是** works like "was" in the English phrasing *"it was last night in the library that I saw her."* The focused details, **昨天晚上** ("last night") and **在图书馆** ("in the library"), sit between 是 and the verb. **的** at the end turns the whole action into a description: "the [saw-her-last-night-in-the-library] one." So the sentence literally reads something like: *As for me, (I) am the one who saw her last night in the library.* Without 是…的 you\'d just say 我昨天晚上在图书馆看到她, a plain statement. With 是…的, you\'re emphasizing the circumstances, typically in response to a question like "When and where did you see her?"',
+        explanation: '**我** ("I") is the Topic. The **是…的** frame wraps the entire Comment to spotlight *when* the action happened. 是 marks the start of the focused information, and 的 closes it. Here, **是去年来的** highlights **去年** ("last year") as the key detail. Without 是...的, the sentence would be 我去年来了 ("I came last year"), which simply reports the event. With 是...的, the sentence says: "It was *last year* that I came." The tree shows 是 and 的 bracketing the focused clause.',
         tree: {
             id: 'n8',
             role: 'Sentence',
@@ -99,7 +99,7 @@ export const shDeConstruction: SentenceData[] = [
         chinese: '我是在上海长大的。',
         pinyin: 'Wǒ shì zài Shàng hǎi zhǎng dà de.',
         translation: 'It was in Shanghai that I grew up.',
-        explanation: 'This is another **是…的** sentence, this time spotlighting *where* the speaker grew up. The verb **长大** (grow up) is not in doubt; the speaker definitely grew up somewhere. **是** acts like "was" and **的** wraps the clause into "the one that [grew up in Shanghai]." Together they bracket the location **在上海** as the key piece of info. Strip away 是 and 的 and you get a plain sentence (我在上海长大); add them back and the sentence says "Shanghai is the answer you\'re looking for." This is one of the most useful frames for answering "where/when/how did you…?" questions in Mandarin.',
+        explanation: 'This is another **是…的** sentence, this time spotlighting *where* something happened. **她是在北京出生的** highlights **在北京** ("in Beijing") as the focused detail. Again, without 是...的, it would be a neutral report: 她在北京出生了. With 是...的, it answers a specific question: "Where was she born?" The 是...的 frame can focus on time, place, manner, or means. The tree shows 是 and 的 wrapping the location phrase and the verb.',
         tree: {
             id: 'n23',
             role: 'Sentence',
@@ -172,7 +172,7 @@ export const shDeConstruction: SentenceData[] = [
         chinese: '我是昨天到的。',
         pinyin: 'Wǒ shì zuó tiān dào de.',
         translation: 'It was yesterday that I arrived.',
-        explanation: '**我** ("I") sets the scene: "as for me…" Then the **是…的** pattern highlights a specific detail about a past event. Here, **是** acts like "was" (*it was yesterday*) and **的** at the end wraps the action into a bundle: "the [arrived-yesterday] one." The focused detail is **昨天** ("yesterday"), answering a question like "When did you arrive?" Think of it as: *As for me, (I) am the one who arrived yesterday.* This is the simplest 是…的 shape: 是 + [the detail you want to stress] + verb + 的. Without 是…的 you\'d just say 我昨天到了, a straightforward statement with no special emphasis.',
+        explanation: '**我** ("I") is the Topic. This 是…的 sentence spotlights *how* the action was done. **是坐飞机来的** highlights **坐飞机** ("by plane") as the focused detail. The question being answered is "How did you come?" not "Did you come?" The tree shows the manner phrase 坐飞机 inside the 是...的 bracket. Notice that the 的 goes at the very end, after the verb 来. This fixed position is a defining feature of the construction: 是 opens, the focused detail comes next, the verb follows, and 的 closes.',
         tree: {
             id: 'n50',
             role: 'Sentence',
@@ -230,7 +230,7 @@ export const shDeConstruction: SentenceData[] = [
         chinese: '这件衣服是在北京买的。',
         pinyin: 'Zhè jiàn yī fu shì zài Běi jīng mǎi de.',
         translation: 'This item of clothing was bought in Beijing.',
-        explanation: '**这件衣服** (this item of clothing; 件 is the measure word for garments) sets the scene: "as for this clothing…" Notice the topic here is a *thing*, not a person. The **是…的** pattern then highlights *where* the buying happened. **是** acts like "was," and the focused detail is **在北京** ("in Beijing"). **的** at the end packages the action: "the [bought-in-Beijing] one." So the sentence reads: *As for this clothing, (it) is the one that was bought in Beijing.* This answers a question like "Where was it bought?" The buyer isn\'t stated; Mandarin often leaves it out when it\'s obvious from context. Compare: 这件衣服是谁买的？ (*Who* was it that bought this?) Same pattern, just swapping the focused detail.',
+        explanation: '**这件衣服** ("this item of clothing"; 件 is the measure word for garments) is the Topic. The **是…的** frame here spotlights *what material* something is made of: **是纯棉的** ("is pure cotton"). This is a slightly different use: instead of focusing on a past action, it identifies a property. The 的 at the end nominalizes the phrase: "is [a] pure-cotton [one]." The tree shows 是 as the copula (linking verb) and 纯棉的 as the identification. This property-identification pattern is very common in shopping and product descriptions.',
         tree: {
             id: 'n51',
             role: 'Sentence',
@@ -310,7 +310,7 @@ export const shDeConstruction: SentenceData[] = [
         chinese: '老师是用来传授知识和解答疑惑的。',
         pinyin: 'Lǎo shī shì yòng lái chuán shòu zhī shi hé jiě dá yí huò de.',
         translation: 'A teacher is someone used to transmit knowledge and resolve doubts.',
-        explanation: 'This is a modern version of 師者所以傳道授業解惑也 (from Han Yu\'s famous essay: "A teacher is one who transmits the Way, imparts knowledge, and resolves doubts"). Modern Mandarin uses the **是...的** construction to define the purpose of a teacher. In the tree, 老师 ("teacher") is the Topic. The Comment uses 是 ("is") + a purpose phrase 用来 ("used for") + two verb-object pairs connected by 和 ("and"): 传授知识 ("transmit knowledge") and 解答疑惑 ("resolve doubts"). The 的 at the end turns the whole phrase into a nominal description.',
+        explanation: 'A modern take on 師者所以傳道授業解惑也 (from Han Yu\'s famous essay: "A teacher is one whose purpose is to transmit the Way, teach skills, and resolve doubts"). The classical 者...也 identification becomes modern **是...的**, and the classical 所以 ("the means by which") becomes **用来** ("used for"). The tree shows **老师** ("teacher") as the Topic, with the Comment using 是...的 to define the role: 是用来传授知识、教授技能、解答疑惑的 ("is for transmitting knowledge, teaching skills, and answering questions"). The parallel structure echoes the classical original.',
         tree: {
             id: 's79-root', role: 'Sentence', children: [
                 { id: 's79-t', role: 'Topic', text: { hanzi: '老师', pinyin: 'lǎo shī', translation: 'teacher' } },

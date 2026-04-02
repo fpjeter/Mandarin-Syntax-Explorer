@@ -7,7 +7,7 @@ export const conditionalSentences: SentenceData[] = [
         chinese: '如果明天下雨，我们就不去了。',
         pinyin: 'Rú guǒ míng tiān xià yǔ, wǒ men jiù bù qù le.',
         translation: 'If it rains tomorrow, we won\'t go.',
-        explanation: 'The **如果…就…** frame is Mandarin\'s if–then construction. **如果** (if) heads the condition clause: **明天下雨** (tomorrow rains). **就** (then) heads the consequence: **不去了** (won\'t go). The two clauses share no explicit conjunction beyond 如果 and 就. In casual speech, 如果 is often dropped entirely; 就 alone can carry the conditional sense: 明天下雨就不去了. The **了** at the end signals a change of plan (we were going to go, now we won\'t). Notice the condition clause has no subject; the weather "rains" without an explicit "it."',
+        explanation: 'The **如果…就…** frame is Mandarin\'s "if...then..." construction. **如果你明天有空** ("if you have time tomorrow") sets the condition; **就来我家吧** ("then come to my place") states the consequence. The 如果 clause always comes first. The **就** in the result clause is important; it signals that this outcome follows naturally from the condition. The sentence-final **吧** softens the invitation, making it a suggestion rather than a command. The tree shows the 如果 clause as a conditional Adjunct to the main Comment.',
         tree: {
             id: 'n64',
             role: 'Sentence',
@@ -80,7 +80,7 @@ export const conditionalSentences: SentenceData[] = [
         chinese: '只要你努力，就能成功。',
         pinyin: 'Zhǐ yào nǐ nǔ lì, jiù néng chéng gōng.',
         translation: 'As long as you work hard, you can succeed.',
-        explanation: 'The **只要…就…** frame is a close cousin of 如果…就…, but with a different nuance: "as long as / provided that" (lighter condition, stronger confidence in the result). **只要** ("as long as") heads the condition: **你努力** ("you work hard"). **就** ("then") introduces the guaranteed consequence: **能成功** ("can succeed"). The modal verb **能** ("can / able to") signals capability/possibility. Unlike 如果, which is neutral ("if X, then Y"), 只要 implies the speaker is confident that the condition is sufficient: *all you need is to try hard*. Other 只要 examples: 只要有钱就行 (as long as there\'s money, it\'s fine).',
+        explanation: 'The **只要…就…** frame is a close cousin of 如果...就..., but with a crucial difference: it expresses a *sufficient* condition. "As long as this one thing is true, the result is guaranteed." **只要你努力** ("as long as you work hard") is the minimum requirement; **就一定能成功** ("then you will definitely succeed") is the assured result. The tree shows the 只要 clause as a conditional Adjunct. Compare with 只有...才 ("only if...only then"), which states a *necessary* condition and is much stricter.',
         tree: {
             id: 'n65',
             role: 'Sentence',
@@ -141,7 +141,7 @@ export const conditionalSentences: SentenceData[] = [
         chinese: '如果一个道理能用语言说清楚，那它就不是永恒的道理。',
         pinyin: 'Rú guǒ yí gè dào lǐ néng yòng yǔ yán shuō qīng chǔ, nà tā jiù bú shì yǒng héng de dào lǐ.',
         translation: 'If a truth can be expressed clearly in words, then it is not an eternal truth.',
-        explanation: 'This is a modern version of 道可道，非常道 (from the Dao De Jing: "The Way that can be spoken of is not the constant Way"). The terse classical parallelism becomes a full conditional sentence with 如果...那...就... In the first clause, **如果** introduces the condition: "if a truth can be spoken clearly." The 能 ("can") + 用语言 ("using language") + 说清楚 ("speak clearly") spells out what classical Chinese compressed into 可道 ("can be spoken"). The second clause uses **那它就不是** ("then it is not") as the consequence.',
+        explanation: 'A modern take on 道可道，非常道 (from the Dao De Jing: "The Way that can be spoken of is not the eternal Way"). The classical sentence uses extreme compression: each clause is just three characters. Modern Mandarin expands this with a conditional: **如果道理可以用语言说清楚** ("if the principle can be explained clearly with words") + **那就不是真正的道理** ("then it is not a real principle"). The 如果...那就... frame replaces the classical\'s implicit logic. The classical 非 ("is not") becomes 不是, and the abstract 常道 ("eternal Way") becomes 真正的道理 ("real principle").',
         tree: {
             id: 's71-root', role: 'Sentence', children: [
                 { id: 's71-cond', role: 'Topic', subRole: 'conditional (如果)', children: [
@@ -170,7 +170,7 @@ export const conditionalSentences: SentenceData[] = [
         chinese: '如果你经常复习学过的东西，就能发现新的道理。',
         pinyin: 'Rú guǒ nǐ jīng cháng fù xí xué guò de dōng xi, jiù néng fā xiàn xīn de dào lǐ.',
         translation: 'If you regularly review what you have learned, you can discover new insights.',
-        explanation: 'This is a modern version of 溫故而知新 (from Confucius: "Review the old and understand the new"). The classical sentence packs two sequential actions into four characters; modern Mandarin unpacks them into a conditional frame with 如果...就... The condition clause uses 经常 ("regularly") + 复习 ("review") + a descriptive noun phrase (学过的东西, "things you have studied"). The consequence clause uses 就能 ("then can") + 发现 ("discover") + 新的道理 ("new insights"). The aspect marker 过 marks past experience.',
+        explanation: 'A modern take on 溫故而知新 (from Confucius: "Review the old and learn the new"). The classical sentence compresses the thought into five characters using 而 to link the actions. Modern Mandarin uses a full conditional: **如果能复习旧的知识** ("if you can review old knowledge") + **就能学到新的东西** ("then you can learn new things"). The 如果...就... frame makes the logical connection explicit. The classical 故 ("the old") becomes 旧的知识, and 新 ("the new") becomes 新的东西.',
         tree: {
             id: 's73-root', role: 'Sentence', children: [
                 { id: 's73-cond', role: 'Topic', subRole: 'conditional (如果)', children: [
@@ -200,7 +200,7 @@ export const conditionalSentences: SentenceData[] = [
         chinese: '如果早上能明白人生的道理，晚上死了也值得。',
         pinyin: 'Rú guǒ zǎo shang néng míng bai rén shēng de dào lǐ, wǎn shang sǐ le yě zhí de.',
         translation: 'If in the morning you grasp the truths of life, dying that evening would still be worthwhile.',
-        explanation: 'This is a modern version of 朝聞道夕死可矣 (from Confucius: "If one hears the Way in the morning, one can die content that evening"). The stark four-character classical rhythm is expanded into a 如果...也值得 conditional. The condition clause uses 如果 + time (早上) + 能明白 ("can understand") + 人生的道理 ("the truths of life"). The result clause uses 晚上 (evening) + 死了 (die + completion marker) + 也值得 ("would also be worthwhile"). The concessive 也 ("even so, still") softens what would otherwise be a blunt assertion.',
+        explanation: 'A modern take on 朝聞道夕死可矣 (from Confucius: "If one hears the Way in the morning, one can die content that evening"). The classical compression is extreme: just seven characters for a complete conditional. Modern Mandarin spells it out: **如果早上能明白道理** ("if in the morning you can understand the principle") + **晚上死了也值得** ("dying in the evening would also be worthwhile"). The 如果 replaces the implicit "if" of the classical placement of 朝 and 夕, and 值得 ("worthwhile") replaces 可矣 ("is acceptable").',
         tree: {
             id: 's82-root', role: 'Sentence', children: [
                 { id: 's82-cond', role: 'Topic', subRole: 'conditional', children: [
@@ -228,7 +228,7 @@ export const conditionalSentences: SentenceData[] = [
         chinese: '了解敌人又了解自己，打一百场仗也不会有危险。',
         pinyin: 'Liǎo jiě dí rén yòu liǎo jiě zì jǐ, dǎ yì bǎi chǎng zhàng yě bú huì yǒu wéi xiǎn.',
         translation: 'If you understand the enemy and understand yourself, a hundred battles will bring no peril.',
-        explanation: 'This is a modern version of 知彼知己百戰不殆 (from Sun Tzu: "Know the enemy and know yourself, and in a hundred battles you will never be in peril"). The classical four-character parallel (知彼知己) becomes a pair of modern verb phrases linked by 又 ("and also"). The Topic frames the condition with two parallel verb phrases: 了解敌人 ("understand the enemy") + 又 + 了解自己 ("understand yourself"). The Comment gives the result: 打一百场仗 ("fight a hundred battles") + 也不会有 ("also will not have") + 危险 ("danger"). The pattern 也不会 ("still will not") expresses certainty about the outcome.',
+        explanation: 'A modern take on 知彼知己百戰不殆 (from Sun Tzu: "Know the enemy and know yourself, and you will not be defeated in a hundred battles"). The classical sentence is pure Topic-Comment: the conditions (知彼知己) precede the result (百戰不殆) with no explicit connector. Modern Mandarin uses **如果…就…**: **如果了解对方也了解自己** ("if you understand the other side and also understand yourself") + **就不会在任何战斗中失败** ("you will not fail in any battle"). The parallel 知 ("know") becomes the fuller 了解 ("understand").',
         tree: {
             id: 's83-root', role: 'Sentence', children: [
                 { id: 's83-cond', role: 'Topic', subRole: 'conditional premise', children: [

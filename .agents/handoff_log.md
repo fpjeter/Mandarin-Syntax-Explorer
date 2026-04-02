@@ -75,25 +75,14 @@ Append a new block to `## Pending Requests` using this exact format:
 ---
 
 ### [2026-04-02] Orchestrator → Educational Publisher
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Fresh Rewrite of All 97 Sentence Explanations
 **Branch**: `feature/sentence-accuracy-review`
-**Sequence**: Ticket 2 of 2 (requires `sentence_accuracy_report.md` from Ticket 1)
+**Commit**: `2461d1e` — feat(pedagogy): fresh rewrite of all 97 sentence explanations
 
-**Action Required**:
-1. Check out `feature/sentence-accuracy-review`.
-2. Read `explanations_pedagogy.md` (the 7 pedagogical rules).
-3. Read `sentence_accuracy_report.md` (produced by the Linguistics Specialist).
-4. For each of the 19 sentence files in `src/data/sentences/`, rewrite every `explanation:` string:
-   - Incorporate all accuracy fixes from the report
-   - Follow all 7 rules in `explanations_pedagogy.md` strictly
-   - Vary Topic callout phrasing (Rule 3)
-   - No em-dashes (Rule 7)
-   - No FLS jargon (Rule 2)
-   - Each explanation should be a guided tour of the tree (Rule 1)
-5. **CRITICAL**: Use `multi_replace_file_content` to edit. Do NOT use `sed`.
-6. Run `npm run qa && npm run lint` to verify.
-7. Commit and push. Mark this ticket as ✅ Done.
+> [!NOTE]
+> All 97 explanation strings across 19 category files freshly rewritten. Applied all 7 accuracy fixes from `sentence_accuracy_report.md` (Subject → Topic/actor terminology). Purged all em-dashes and FLS jargon. Varied Topic callouts across entries. Guided-tour tone maintained throughout. QA passed: 97 sentences, 1164 nodes validated. No new lint errors.
+
 
 ## Resolved
 

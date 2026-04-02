@@ -7,7 +7,7 @@ export const degreeComplements: SentenceData[] = [
         chinese: '她高兴得跳了起来。',
         pinyin: 'Tā gāo xìng de tiào le qǐ lái.',
         translation: 'She was so happy she jumped up.',
-        explanation: '**她** ("she") is the Topic. The Comment uses a **degree complement**: **高兴** ("happy, acting as predicate") + **得** ("the degree linker") + **跳了起来** ("jumped up"). The 得 here is not the potential marker; it is a *linker* that connects the predicate to a clause describing *the degree or consequence* of that state. The consequence of her happiness was that she jumped. This structure, [predicate] + 得 + [what happened as a result], is one of Mandarin\'s most expressive frames: 忙得忘了吃饭 (busy-to-the-point-of-forgetting-to-eat), 累得说不出话 (tired-to-the-point-of-being-speechless).',
+        explanation: '**她** ("she") is the Topic. The Comment uses a **degree complement** to describe how an action was performed. The pattern is: verb + **得** + description. Here, **唱** ("sing") + 得 + **非常好** ("extremely well"). The 得 is a bridge; everything after it tells you about the quality, manner, or extent of the action. This is different from a resultative complement (which says *what happened* as a result) or a potential complement (which says *whether something can happen*). The degree complement simply describes *how* the action went.',
         tree: {
             id: 'n36',
             role: 'Sentence',
@@ -81,7 +81,7 @@ export const degreeComplements: SentenceData[] = [
         chinese: '她跑得非常快。',
         pinyin: 'Tā pǎo de fēi cháng kuài.',
         translation: 'She runs very fast.',
-        explanation: '**她** ("she") is the Topic. The Comment uses the most common form of degree complement: **verb + 得 + description**. The verb **跑** ("run") is linked by **得** to the description **非常快** ("very fast"); this tells you *how well or how fast* the running was done. This is fundamentally different from a resultative complement (which says what *outcome* was achieved). The degree complement says *how the action was performed*. Compare: 跑**完**了 ("finished the run, resultative") vs 跑**得**很快 ("ran very fast, degree"). One describes the outcome; the other rates the quality of the action.',
+        explanation: '**她** ("she") is the Topic again, but this time the degree complement is more elaborate. After **跑** ("run") + **得**, a full descriptive clause follows: **大家都追不上她** ("everyone cannot catch up with her"). The degree complement is not limited to a single word like 好 or 快; it can be an entire clause describing the consequence or extent of the action. The tree shows this clause nested inside the complement, with its own internal structure. This is one of the most flexible patterns in Mandarin.',
         tree: {
             id: 'n37',
             role: 'Sentence',
@@ -147,7 +147,7 @@ export const degreeComplements: SentenceData[] = [
         chinese: '他气得说不出话来。',
         pinyin: 'Tā qì de shuō bu chū huà lái.',
         translation: 'He was so angry he couldn\'t get a word out.',
-        explanation: '**他** ("he") is the Topic. This sentence elegantly stacks two complement types within one structure. The degree complement frame: **气** ("be angry") + **得** ("degree linker") + [consequence clause]. The consequence clause is itself a *negative potential complement*: **说不出话来** (speak + 不 + exit + words + come = "couldn\'t speak words out." So we have: degree complement whose consequence is expressed via a potential complement. This kind of nesting is entirely natural in Mandarin and shows how these complement types interact. The sentence tells you both *how intense* the anger was and *what its consequence* was.',
+        explanation: '**他** ("he") is the Topic. This sentence elegantly stacks two constructions together. First, the **比** comparison sets up the reference: **比以前** ("compared to before"). Then the degree complement fills in the detail: **进步得很快** ("has improved very quickly," verb + 得 + adverb). Mandarin handles this combination cleanly because the 比 phrase and the degree complement occupy different slots in the sentence. The 比 phrase modifies the overall comparison, while 得 links the verb to its description.',
         tree: {
             id: 'n46',
             role: 'Sentence',
@@ -232,7 +232,7 @@ export const degreeComplements: SentenceData[] = [
         chinese: '她把房间打扫得干干净净。',
         pinyin: 'Tā bǎ fáng jiān dǎ sǎo de gān gān jìng jìng.',
         translation: 'She cleaned the room spotlessly.',
-        explanation: '**她** ("she") is the Topic. This sentence combines two constructions: the BA object-fronting pattern and a degree complement. **把房间** spotlights the room as the thing that gets cleaned. The verb **打扫** ("clean/sweep") is followed by **得** and then **干干净净** (spotlessly clean, a reduplicated form of 干净 for emphasis). The degree complement here rates the *quality of the action*: how cleanly she cleaned. Note that with BA + a transitive verb, the degree complement attaches after 得 at the end; the word order is: 把 + [object] + [verb] + 得 + [degree description].',
+        explanation: '**她** ("she") is the Topic. This sentence combines two constructions: a **把** construction and a **degree complement**. First, **把房间** ("the room") is spotlighted as the thing affected. Then the verb **打扫** ("clean") is linked by **得** to the description **干干净净的** ("spotlessly clean," a reduplicated adjective for emphasis). The tree shows the 把 phrase and the degree complement occupying their respective positions. This combination is very natural in Mandarin: 把 says *what* was acted on, and 得 says *how well* it was done.',
         tree: {
             id: 'n47',
             role: 'Sentence',
@@ -304,7 +304,7 @@ export const degreeComplements: SentenceData[] = [
         chinese: '时间过得就像流水一样快，日夜不停。',
         pinyin: 'Shí jiān guò de jiù xiàng liú shuǐ yí yàng kuài, rì yè bù tíng.',
         translation: 'Time passes as swiftly as flowing water, never ceasing day or night.',
-        explanation: 'This is a modern version of 逝者如斯夫，不舍晝夜 (from Confucius, standing beside a river: "What passes away is like this, not ceasing day or night"). The classical metaphor is preserved but expressed with modern comparative grammar. The Topic is 时间 ("time"). The Comment uses a **degree complement**: 过得 (verb + 得) introduces a description of *how* time passes. The simile 就像流水一样快 ("as fast as flowing water") uses the 像...一样 ("like...the same") comparison pattern. The second clause 日夜不停 ("day and night, not stopping") mirrors the classical 不舍晝夜.',
+        explanation: 'A modern take on 逝者如斯夫，不舍晝夜 (from Confucius, standing by a river: "What passes is like this, never ceasing day or night"). The modern version uses a degree complement to capture the simile: **时间过得像流水一样快** ("time passes as fast as flowing water"). The verb **过** ("pass") is linked by **得** to the simile **像流水一样快** ("like flowing water, equally fast"). The classical 逝者如斯 ("what passes is like this") becomes the degree complement pattern: V+得+像...一样, one of the most vivid patterns for comparing actions in modern Mandarin.',
         tree: {
             id: 's77-root', role: 'Sentence', children: [
                 { id: 's77-t', role: 'Topic', text: { hanzi: '时间', pinyin: 'shí jiān', translation: 'time' } },

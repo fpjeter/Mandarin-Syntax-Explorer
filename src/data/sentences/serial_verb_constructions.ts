@@ -8,7 +8,7 @@ export const serialVerbConstructions: SentenceData[] = [
         pinyin: 'Dào le , zhǎo dào le , chī wán zài zǒu .',
         translation: '(We\'ve) arrived, (we) found it, (we\'ll) leave after eating.',
 
-        explanation: 'Three events flow in sequence: arriving, finding food, eating and then leaving. All three verbs chain smoothly from a single implied speaker (a Ghost Node **[我们]**, "we"). This is how serial verb constructions work in Mandarin: actions line up in chronological order with no connecting words like "and then." The language maps events purely by the order they happen.',
+        explanation: 'Three events flow in sequence, with no connecting words between them. The Topic is implied (a general "you" or "one"). The Comment chains: **到了中国** ("arrived in China") then **开始学中文** ("started learning Chinese") then **交了很多朋友** ("made a lot of friends"). Each action follows naturally from the previous one. This is one of the most common serial verb patterns: actions lined up in timeline order, with 了 marking completion on each. The tree expands rightward, showing each new verb phrase nested as the continuation of the one before it.',
         tree: {
             id: 'n14',
             role: 'Sentence',
@@ -100,7 +100,7 @@ export const serialVerbConstructions: SentenceData[] = [
         pinyin: 'Tā qí zì xíng chē qù shàng bān.',
         translation: 'He rides a bicycle to go to work.',
 
-        explanation: 'The Topic is **他** ("he"). The Comment chains three actions: 骑自行车 ("ride a bicycle"), 去 ("go"), and 上班 ("go to work"). Rather than connecting these with words like "in order to," Mandarin places them in strict chronological sequence. The first action is the means, the second is the motion, and the third is the purpose. This is a perfectly natural way to express a chain of related events in everyday speech.',
+        explanation: 'The Topic is **他** ("he"). The Comment chains two verb phrases: **骑自行车** ("rides a bicycle") and **去上班** ("to go to work"). The first verb describes the method of transport, and the second states the purpose. No linking word is needed; Mandarin naturally reads method-purpose verb chains left to right. The tree shows the second verb phrase nested inside the first as its object. Compare with English: "He rides his bicycle to go to work" needs "to," but Mandarin just stacks them.',
         tree: {
             id: 'n58',
             role: 'Sentence',
@@ -155,7 +155,7 @@ export const serialVerbConstructions: SentenceData[] = [
         chinese: '我拿着伞出门了。',
         pinyin: 'Wǒ ná zhe sǎn chū mén le.',
         translation: 'I took (was holding) an umbrella and went out.',
-        explanation: 'The Topic is **我** ("I"), and the Comment triggers two actions that happen at the same time: **拿着伞** ("holding an umbrella") and **出门** ("go out the door"). The particle **着** locks the first action into a continuous background state, so it acts as the environment for the second action. Rather than a sequence (first hold, then leave), this produces a synchronized flow: "exiting the door while holding an umbrella."',
+        explanation: 'The Topic is **我** ("I"), and the Comment uses a purpose chain: **去图书馆** ("go to the library") + **借书** ("borrow books"). The first verb phrase names the destination, and the second names the purpose. This go-somewhere-to-do-something structure is one of the most common serial verb patterns. The 了 at the end marks the whole chain as completed. Notice the tree branches: 去 takes 图书馆 as its location, and 借 takes 书 as its object. Both verb phrases share the same Topic.',
         tree: {
             id: 'n59',
             role: 'Sentence',
@@ -222,7 +222,7 @@ export const serialVerbConstructions: SentenceData[] = [
         chinese: '学了以后要经常练习，这样才会有收获。',
         pinyin: 'Xué le yǐ hòu yào jīng cháng liàn xí, zhè yàng cái huì yǒu shōu huò.',
         translation: 'After studying, you should practice regularly; only then will you gain something.',
-        explanation: 'This is a modern version of the classical 學而時習之 (from the Analerta of Confucius: "Study and regularly practice what you have studied"). Instead of the terse classical connective 而, modern Chinese uses **以后** ("after") to sequence the two actions. The second clause uses the **才** pattern: only *then* will the result follow. The sentence chains two verb phrases under one implied subject (you): first 学了以后 ("after studying"), then 要经常练习 ("should regularly practice"). The second clause introduces a new frame with 这样 ("this way"), followed by 才会 ("only then will") and the result 有收获 ("have gains").',
+        explanation: 'A modern take on the classical 學而時習之 (from the Analects of Confucius: "Study and regularly practice what you have studied"). Instead of the terse classical connective 而, modern Chinese uses **以后** ("after") to sequence the two actions. The sentence opens with an implied topic ("you") and chains two ideas: first **学了以后** ("after studying"), then **要经常练习** ("should regularly practice"). The second clause introduces a new frame with **这样** ("this way"), followed by **才会** ("only then will") and the result **有收获** ("have gains"). The 才 emphasizes that the result only comes if you follow through.',
         tree: {
             id: 's68-root', role: 'Sentence', children: [
                 { id: 's68-c1', role: 'Topic', subRole: 'clause 1', children: [
@@ -252,7 +252,7 @@ export const serialVerbConstructions: SentenceData[] = [
         chinese: '不要因为好事太小就不去做。',
         pinyin: 'Bú yào yīn wèi hǎo shì tài xiǎo jiù bú qù zuò.',
         translation: 'Do not refrain from doing good just because it is small.',
-        explanation: 'This is a modern version of the classical 勿以善小而不為 (from Liu Bei: "Do not neglect to do good just because the good deed is small"). The classical 以 ("because of") becomes 因为, the classical 而 becomes 就, and the classical 勿 becomes 不要. The verb 不要 opens the prohibition. 因为好事太小 ("because the good deed is too small") gives the rejected reason. 就 ("then") introduces the consequence being negated: 不去做 ("not go and do it"). The serial verb 去做 ("go do") adds a purposeful flavor to the action.',
+        explanation: 'A modern take on 溫故而知新 (from the Analects of Confucius: "Review the old and learn the new"). Where the classical version compresses the thought into five characters with 而 linking the two actions, modern Mandarin expands this with **通过** ("through, by means of") + **复习学过的内容** ("reviewing what you have studied") as the method, then **就能** ("then you can") + **学到新东西** ("learn new things") as the result. The 就 signals a natural consequence: reviewing leads to discovering new things.',
         tree: {
             id: 's91-root', role: 'Sentence', children: [
                 {
