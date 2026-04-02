@@ -44,7 +44,22 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
-(none)
+### [DATE] Orchestrator → Educational Publisher
+**Status**: 🔴 Active
+**Task**: Comprehensive Rewrite of Category Glossaries (`categories.ts` & `classicalCategories.ts`)
+**Branch**: `feature/category-explanation-rewrites`
+
+> [!NOTE]
+> The Orchestrator has authorized you to slightly lengthen the descriptions if needed to maintain a warm pedagogical tone. The strict "one-line" rule is lifted.
+
+**Action Required**:
+1. Check out the `feature/category-explanation-rewrites` branch.
+2. Read the `explanations_pedagogy.md` file in the orchestrator's workspace.
+3. Open `src/data/categories.ts` and `src/data/classicalCategories.ts`.
+4. Extensively rewrite all strings inside `CATEGORY_DESCRIPTIONS` and `CLASSICAL_CATEGORY_DESCRIPTIONS`, as well as `FULL_CATEGORY_EXPLANATIONS`.
+5. Remove all "Cathedral" logic, LLM-isms (e.g. "Think of it like a..."), and academic phrasing, strictly adhering to the 7 Pedagogy Rules.
+6. **CRITICAL INSTRUCTION**: Do NOT use bash `sed` for the rewrites! You must use `multi_replace_file_content` to safely target the strings.
+7. Mark this task as ✅ Done when you have pushed the commits.
 
 ## Resolved
 
