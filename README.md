@@ -7,8 +7,8 @@ An interactive visualizer for Mandarin Chinese grammar structures. Select an exa
 - **Interactive syntax trees** — Nodes expand and collapse; pan and zoom the canvas freely
 - **Nearly 100 curated modern sentences** across 19 grammar categories
 - **30 annotated classical quotes** from Confucius, Laozi, Mencius, Xunzi, and more
-- **Fractal Logic Stream (FLS)** — Custom topic-comment Matryoshka framework replacing Eurocentric SVO parsing
-- **Inline Pedagogical Explanations** — Expandable, textbook-grade category breakdowns inside the sidebar using the "Train Metaphor"
+- **Fractal Logic Stream (FLS)** — Custom topic-comment Matryoshka framework replacing Eurocentric SVO parsing (serving as our strict internal AST architecture)
+- **Inline Pedagogical Explanations** — Expandable category breakdowns inside the sidebar written in a warm, accessible tutor tone
 - **Badge system** — Construction-specific badges (把字句, 被字句, 是…的, 结果补语, etc.) appear on relevant nodes
 - **Classical badges** — Function word badges (者, 所, 而, 非, 勿, 於, 焉, 之) for classical mode
 - **Grammar glossary** — Tap any node role to see a plain-English definition
@@ -143,7 +143,7 @@ src/
 ├── contexts/
 │   └── AppModeContext.tsx          # Modern/classical mode context provider
 ├── data/
-│   ├── sentences.ts                # Modern Mandarin example sentences (92)
+│   ├── sentences/              # Modern Mandarin example sentences by category (97)
 │   ├── categories.ts               # Modern category list and descriptions
 │   ├── badges.ts                   # Modern badge specs and matching rules
 │   ├── glossary.ts                 # Modern grammar role definitions
@@ -162,7 +162,7 @@ src/
 
 ### Modern Mandarin
 
-Each sentence lives in `src/data/sentences.ts` as a `SentenceData` object with:
+Each sentence lives in its respective category file within the `src/data/sentences/` directory (e.g., `src/data/sentences/ba_construction.ts`) as a `SentenceData` object with:
 - `category` — the grammar group it belongs to (must match a value in `categories.ts`)
 - `chinese`, `pinyin`, `translation` — the sentence itself
 - `explanation` — a learner-friendly description (supports **bold** and *italic* markdown)
