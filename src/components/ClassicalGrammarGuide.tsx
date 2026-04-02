@@ -14,7 +14,7 @@ export const ClassicalGrammarGuide: React.FC = () => {
                 <p className="text-[11px] text-slate-300 leading-relaxed">
                     Classical Chinese (文言文 <em>wényánwén</em>) is the written literary language used from
                     roughly the 5th century BC through the early 20th century. Unlike modern Mandarin,
-                    it is extremely <strong className="text-amber-300">terse</strong> — a single character
+                    it is extremely <strong className="text-amber-300">terse</strong>: a single character
                     often carries the weight of an entire modern phrase. Meaning comes from{' '}
                     <em>position</em>, <em>function words</em> (虚词), and <em>context</em>, not
                     from explicit grammatical markers.
@@ -26,21 +26,21 @@ export const ClassicalGrammarGuide: React.FC = () => {
                         <span className="text-orange-300 font-bold text-sm font-chinese-ui">不亦說乎？</span>
                     </div>
                     <p className="text-[10px] text-slate-400 mt-1.5 italic">
-                        <span className="text-amber-400 not-italic font-semibold">To study and regularly practice it —</span>{' '}
+                        <span className="text-amber-400 not-italic font-semibold">To study and regularly practice it,</span>{' '}
                         <span className="text-orange-400 not-italic font-semibold">is that not a joy?</span>
                     </p>
                     <p className="text-[9px] text-stone-500 mt-1">— Confucius,《論語》</p>
                 </div>
             </section>
 
-            {/* ── 2. The Train Metaphor & Atomic Unit ── */}
+            {/* ── 2. Shared Structure with Modern Mandarin ── */}
             <section>
-                <h3 className="text-[10px] font-bold uppercase tracking-widest text-blue-400 mb-1.5">The Train Metaphor & Atomic Unit</h3>
+                <h3 className="text-[10px] font-bold uppercase tracking-widest text-blue-400 mb-1.5">Shared Structure with Modern Mandarin</h3>
                 <p className="text-[11px] text-slate-300 leading-relaxed mb-2">
-                    Beneath the extremely terse surface of Classical Chinese lies the exact same <strong>Train</strong> architecture that drives modern Mandarin. The only mandatory carriage is the <strong>Topic-Comment pair</strong>—the true atomic functional unit of the sentence.
+                    Beneath the extremely terse surface of Classical Chinese lies the same <strong>Topic-Comment</strong> structure that drives modern Mandarin. Every sentence names what it is about, then makes an assertion about it.
                 </p>
                 <p className="text-[11px] text-slate-300 leading-relaxed">
-                    Inside the Comment slot sits the rigidly ordered <strong>Logic Zone</strong>. Furthermore, Classical Chinese relies heavily on the <strong>Matryoshka principle</strong>, shrinking down entire sentences into <strong className="text-violet-300">Embedded Clauses</strong>. You will also frequently see independent thoughts sitting side-by-side as <strong className="text-orange-300">Parallel Sentences</strong> with no connecting words (parataxis).
+                    Inside the Comment, modifiers still come before the verb in a fixed order. Classical Chinese also loves to nest entire sentences inside other sentences as <strong className="text-violet-300">Embedded Clauses</strong>, and you will frequently see independent thoughts sitting side by side as <strong className="text-orange-300">Parallel Sentences</strong> with no connecting words.
                 </p>
             </section>
 
@@ -78,15 +78,15 @@ export const ClassicalGrammarGuide: React.FC = () => {
                 <div className="space-y-1.5">
                     {([
                         ['之 zhī', 'Possession marker ("\'s"), object pronoun ("it"), or structural filler'],
-                        ['者 zhě', 'Person/Thing marker — "the one who…" or "that which…"'],
-                        ['所 suǒ', 'Action receiver — "that which (is acted upon)"'],
-                        ['而 ér', 'Connective — "and then", "but", or links sequential actions'],
-                        ['乎 hū', 'Question particle — turns a statement into a rhetorical question'],
-                        ['也 yě', 'Sentence-final — asserts identity or states a fact: "X is Y 也"'],
-                        ['於 yú', 'Location & Comparison marker — "at / in / from / to"'],
-                        ['以 yǐ', 'Tool word — "using / by means of / in order to"'],
-                        ['非 fēi', 'Negation — "is not" (negates identity, not action)'],
-                        ['莫 mò', 'Negation — means "no one" or "nothing"'],
+                        ['者 zhě', 'Person/Thing marker: "the one who…" or "that which…"'],
+                        ['所 suǒ', 'Action receiver: "that which (is acted upon)"'],
+                        ['而 ér', 'Connective: "and then", "but", or links sequential actions'],
+                        ['乎 hū', 'Question particle that turns a statement into a rhetorical question'],
+                        ['也 yě', 'Sentence-final particle that asserts identity or states a fact: "X is Y 也"'],
+                        ['於 yú', 'Location and comparison marker: "at / in / from / to"'],
+                        ['以 yǐ', 'Tool word: "using / by means of / in order to"'],
+                        ['非 fēi', 'Negation: "is not" (negates identity, not action)'],
+                        ['莫 mò', 'Negation: means "no one" or "nothing"'],
                     ] as const).map(([word, desc]) => (
                         <div key={word} className="flex items-baseline gap-2">
                             <span className="text-[11px] font-bold text-amber-200 whitespace-nowrap font-chinese-ui min-w-[52px]">{word}</span>
@@ -98,7 +98,7 @@ export const ClassicalGrammarGuide: React.FC = () => {
 
             {/* ── 4. The 之 System (Possession & Description) ── */}
             <section>
-                <h3 className="text-[10px] font-bold uppercase tracking-widest text-amber-400 mb-1.5">之 — the backbone particle</h3>
+                <h3 className="text-[10px] font-bold uppercase tracking-widest text-amber-400 mb-1.5">之: the backbone particle</h3>
                 <p className="text-[11px] text-slate-300 leading-relaxed">
                     之 is arguably the most common character in classical Chinese. Its meaning
                     shifts by position:
@@ -109,14 +109,14 @@ export const ClassicalGrammarGuide: React.FC = () => {
                         <p className="text-[10px] text-slate-300 mt-0.5">
                             <span className="text-amber-200 font-chinese-ui">師者，所以傳道授業解惑<strong className="text-amber-400">之</strong>者也。</span>
                         </p>
-                        <p className="text-[9px] text-slate-500 italic mt-0.5">之 = "of" — links "transmitting the Way" to 者 "one who"</p>
+                        <p className="text-[9px] text-slate-500 italic mt-0.5">之 = "of", linking "transmitting the Way" to 者 "one who"</p>
                     </div>
                     <div className="bg-stone-800/40 border border-stone-700/30 rounded-lg px-3 py-2">
                         <p className="text-[10px] text-amber-300 font-bold">Object pronoun</p>
                         <p className="text-[10px] text-slate-300 mt-0.5">
                             <span className="text-amber-200 font-chinese-ui">學而時習<strong className="text-amber-400">之</strong></span>
                         </p>
-                        <p className="text-[9px] text-slate-500 italic mt-0.5">之 = "it" — direct object referring to what was previously studied</p>
+                        <p className="text-[9px] text-slate-500 italic mt-0.5">之 = "it", a direct object referring to what was previously studied</p>
                     </div>
                 </div>
             </section>
@@ -139,7 +139,7 @@ export const ClassicalGrammarGuide: React.FC = () => {
                             </span>
                         ))}
                     </div>
-                    <p className="text-[9px] text-slate-500 italic mt-1.5">"Is that not also (adj)?" — expects agreement from the listener</p>
+                    <p className="text-[9px] text-slate-500 italic mt-1.5">"Is that not also (adj)?" Expects agreement from the listener</p>
                 </div>
                 <p className="text-[10px] text-slate-400 mt-2">
                     Other question markers: <span className="text-orange-300 font-chinese-ui not-italic">哉</span> (exclamatory),
@@ -167,7 +167,7 @@ export const ClassicalGrammarGuide: React.FC = () => {
                     ))}
                 </div>
                 <p className="text-[10px] text-slate-400 mt-2 italic">
-                    Also: <span className="text-rose-300 not-italic font-chinese-ui">勿</span> (prohibitive — "do not!")
+                    Also: <span className="text-rose-300 not-italic font-chinese-ui">勿</span> (prohibitive, "do not!")
                     and <span className="text-rose-300 not-italic font-chinese-ui">未</span> ("not yet").
                 </p>
             </section>
@@ -176,7 +176,7 @@ export const ClassicalGrammarGuide: React.FC = () => {
             <section>
                 <h3 className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-1.5">Coverbs · 介詞</h3>
                 <p className="text-[11px] text-slate-300 leading-relaxed">
-                    Classical Chinese uses <strong className="text-emerald-300">coverbs</strong> (介詞) — action words that function like prepositions ('at', 'with', 'from'). They always come{' '}
+                    Classical Chinese uses <strong className="text-emerald-300">coverbs</strong> (介詞), action words that function like prepositions ('at', 'with', 'from'). They always come{' '}
                     <strong className="text-emerald-300">before</strong> the main verb:
                 </p>
                 <div className="mt-2 space-y-1.5">
@@ -192,7 +192,7 @@ export const ClassicalGrammarGuide: React.FC = () => {
                             ))}
                         </div>
                         <p className="text-[9px] text-slate-500 italic mt-1">
-                            於 = at/in/from/to — <span className="not-italic font-chinese-ui text-emerald-300">生<strong>於</strong>憂患</span> "born <strong>from</strong> hardship"
+                            於 = at/in/from/to. <span className="not-italic font-chinese-ui text-emerald-300">生<strong>於</strong>憂患</span> "born <strong>from</strong> hardship"
                         </p>
                     </div>
                     <div className="bg-stone-800/40 border border-stone-700/30 rounded-lg px-3 py-2">
@@ -207,7 +207,7 @@ export const ClassicalGrammarGuide: React.FC = () => {
                             ))}
                         </div>
                         <p className="text-[9px] text-slate-500 italic mt-1">
-                            以 = using/by means of — <span className="not-italic font-chinese-ui text-emerald-300"><strong>以</strong>德報怨</span> "<strong>with</strong> virtue repay resentment"
+                            以 = using/by means of. <span className="not-italic font-chinese-ui text-emerald-300"><strong>以</strong>德報怨</span> "<strong>with</strong> virtue repay resentment"
                         </p>
                     </div>
                 </div>
@@ -215,7 +215,7 @@ export const ClassicalGrammarGuide: React.FC = () => {
 
             {/* ── 8. 而 — Sequential & Contrastive Connector ── */}
             <section>
-                <h3 className="text-[10px] font-bold uppercase tracking-widest text-violet-400 mb-1.5">而 — the connective</h3>
+                <h3 className="text-[10px] font-bold uppercase tracking-widest text-violet-400 mb-1.5">而: the connective</h3>
                 <p className="text-[11px] text-slate-300 leading-relaxed">
                     而 is the classical "and/but/then". It links two actions or states, and
                     its exact meaning depends on context:
@@ -223,7 +223,7 @@ export const ClassicalGrammarGuide: React.FC = () => {
                 <div className="mt-2 space-y-1">
                     {([
                         ['Sequential', '學而時習之', '"study and then practice it"'],
-                        ['Contrastive', '學而不思則罔', '"study but not think → lost"'],
+                        ['Contrastive', '學而不思則罔', '"study but not think = lost"'],
                         ['Conditional', '人不知而不慍', '"others don\'t know, yet not upset"'],
                     ] as const).map(([type, example, meaning]) => (
                         <div key={type} className="flex items-baseline gap-2">
@@ -240,11 +240,11 @@ export const ClassicalGrammarGuide: React.FC = () => {
                 <h3 className="text-[10px] font-bold uppercase tracking-widest text-amber-400 mb-2">Tree labels at a glance</h3>
                 <div className="space-y-1.5">
                     {([
-                        ['Topic', 'The theme being discussed — still the Topic–Comment frame'],
+                        ['Topic', 'The theme being discussed, using the Topic-Comment frame'],
                         ['Comment', 'Everything said about the topic'],
-                        ['Head Verb', 'The core verb — marked with a thick bottom border'],
-                        ['Adjunct', 'Pre-verbal modifier — coverbs, negation, or adverbs'],
-                        ['Complement', 'Post-verbal element — result, object, or continuation'],
+                        ['Head Verb', 'The core verb, marked with a thick bottom border'],
+                        ['Adjunct', 'Pre-verbal modifier: coverbs, negation, or adverbs'],
+                        ['Complement', 'Post-verbal element: result, object, or continuation'],
                         ['Connective', 'Linking particles like 而, 則, 故'],
                         ['Particle', 'Function words: 之/乎/者/也/焉'],
                     ] as const).map(([label, desc]) => (
@@ -265,7 +265,7 @@ export const ClassicalGrammarGuide: React.FC = () => {
                         for a plain-English explanation.
                     </li>
                     <li>
-                        <strong>Expand/collapse</strong> — tap the pulsing dot to drill into
+                        <strong>Expand/collapse</strong>: tap the pulsing dot to drill into
                         nested clauses.
                     </li>
                     <li>
@@ -273,8 +273,8 @@ export const ClassicalGrammarGuide: React.FC = () => {
                         Use <strong>+/−</strong> for precise zoom.
                     </li>
                     <li>
-                        Classical trees tend to be <strong>flatter</strong> than modern ones —
-                        fewer nested clauses, more parallel structures.
+                        Classical trees tend to be <strong>flatter</strong> than modern ones,
+                        with fewer nested clauses and more parallel structures.
                     </li>
                 </ul>
             </section>

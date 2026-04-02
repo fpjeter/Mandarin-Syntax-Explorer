@@ -27,7 +27,7 @@ export const BADGES: BadgeSpec[] = [
         label: '方向补语',
         color: 'text-sky-200 bg-sky-900/40 border-sky-400/50',
         headline: 'Directional complement',
-        detail: 'Verb + direction word (上/下/进/出…) + 来/去 — shows which way something moves and whether it\'s toward or away from the speaker.',
+        detail: 'Verb + direction word (上/下/进/出…) + 来/去. Shows which way something moves and whether it\'s toward or away from the speaker.',
         match: (role, subRole) =>
             role === 'Complement' && !!subRole?.includes('directional'),
     },
@@ -35,7 +35,7 @@ export const BADGES: BadgeSpec[] = [
         label: '可能补语',
         color: 'text-sky-300 bg-sky-900/40 border-sky-500/50',
         headline: 'Potential complement',
-        detail: 'V + 得/不 + result — says whether the outcome can or can\'t happen (e.g. 看不了 = can\'t finish reading).',
+        detail: 'V + 得/不 + result. Says whether the outcome can or can\'t happen (e.g. 看不了 = can\'t finish reading).',
         match: (role, subRole) =>
             (role === 'Complement' || role === 'Particle') &&
             !!subRole?.includes('potential'),
@@ -44,7 +44,7 @@ export const BADGES: BadgeSpec[] = [
         label: '程度补语',
         color: 'text-purple-300 bg-purple-900/40 border-purple-500/50',
         headline: 'Degree complement',
-        detail: 'V+得+description — describes the manner, extent, or consequence of an action (e.g. 跑得很快 = runs very fast)',
+        detail: 'V+得+description. Describes the manner, extent, or consequence of an action (e.g. 跑得很快 = runs very fast).',
         match: (role, subRole) =>
             role === 'Complement' && !!subRole?.includes('degree'),
     },

@@ -87,7 +87,7 @@ export const glossary: Record<GrammarRole, { headline: string; detail: string }>
     Complement: {
         headline: 'Extra info completing a verb',
         detail:
-            'Comes after the verb to add info about the result, direction, possibility, or degree of the action. **Key rule for 得**: In a Degree Complement (程度补语), **得** acts as a structural "Recursive Hinge", firmly linking the action to a full description of *how* it was done (e.g. 跑得快). In a Potential Complement (可能补语), **得/不** are just tiny internal particles signaling *if* it can be done.',
+            'Comes after the verb to add info about the result, direction, possibility, or degree of the action. The particle **得** plays two different roles depending on the complement type: in a Degree Complement (程度补语), 得 links the verb to a full description of *how* the action was done (e.g. 跑得快). In a Potential Complement (可能补语), 得/不 are small internal switches that signal whether the result *can* or *cannot* be achieved.',
     },
     'Head Noun': {
         headline: 'The main noun in a noun phrase',
@@ -132,6 +132,6 @@ export const glossary: Record<GrammarRole, { headline: string; detail: string }>
     'Embedded Clause': {
         headline: 'A sentence hiding inside a sentence',
         detail:
-            'A fully-formed mini-sentence (complete with its own topic and comment) that is nested inside a larger structure. Think of Russian nesting dolls!',
+            'A fully-formed mini-sentence (complete with its own topic and comment) that is nested inside a larger structure. You will see these inside pivotal constructions, degree complements, and many other patterns.',
     },
 };

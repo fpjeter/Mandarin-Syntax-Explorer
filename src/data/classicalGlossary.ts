@@ -13,7 +13,7 @@ export const classicalGlossary: Record<GrammarRole, { headline: string; detail: 
     Topic: {
         headline: 'What the sentence is about',
         detail:
-            'Classical Chinese, like modern Mandarin, is topic-prominent. The topic sets the scene before the comment delivers the point — e.g. 千里之行 ("a journey of a thousand miles") in 千里之行，始於足下.',
+            'Classical Chinese, like modern Mandarin, is topic-prominent. The topic sets the scene before the comment delivers the point. For example, 千里之行 ("a journey of a thousand miles") in 千里之行，始於足下.',
     },
     Comment: {
         headline: 'What is said about the topic',
@@ -28,7 +28,7 @@ export const classicalGlossary: Record<GrammarRole, { headline: string; detail: 
     Predicate: {
         headline: 'The action or description',
         detail:
-            'Everything said about the subject: the verb, its object, and any modifiers. Classical predicates are often strikingly compact — a single character can carry the full predicate.',
+            'Everything said about the subject: the verb, its object, and any modifiers. Classical predicates are often strikingly compact. A single character can carry the full predicate.',
     },
     'Verb Phrase': {
         headline: 'A verb and its dependents',
@@ -38,17 +38,17 @@ export const classicalGlossary: Record<GrammarRole, { headline: string; detail: 
     'Noun Phrase': {
         headline: 'A noun and its modifiers',
         detail:
-            'A group of words built around a noun. In classical Chinese, modifiers precede the head noun, often linked by 之 — e.g. 千里之行 ("a thousand miles\' journey").',
+            'A group of words built around a noun. In classical Chinese, modifiers precede the head noun, often linked by 之. For example, 千里之行 ("a thousand miles\' journey").',
     },
     Verb: {
         headline: 'The action or state word',
         detail:
-            'The core word expressing what happens. Classical verbs are highly flexible — the same character often serves as verb, noun, or adjective depending on position.',
+            'The core word expressing what happens. Classical verbs are highly flexible: the same character often serves as verb, noun, or adjective depending on position.',
     },
     Object: {
         headline: 'What receives the action',
         detail:
-            'The thing the verb acts on. In classical Chinese, pronouns like 之 ("it/him") often serve as objects — e.g. 知之 ("know it").',
+            'The thing the verb acts on. In classical Chinese, pronouns like 之 ("it/him") often serve as objects. For example, 知之 ("know it").',
     },
     Adjunct: {
         headline: 'Pre-verbal modifier',
@@ -73,7 +73,7 @@ export const classicalGlossary: Record<GrammarRole, { headline: string; detail: 
     Noun: {
         headline: 'A person, place, or thing',
         detail:
-            'The name of something. Classical nouns can also function as verbs or adverbs based on context — e.g. 日 ("day") used as "daily".',
+            'The name of something. Classical nouns can also function as verbs or adverbs based on context. For example, 日 ("day") can be used as "daily."',
     },
     Pronoun: {
         headline: 'A stand-in for a noun',
@@ -93,12 +93,12 @@ export const classicalGlossary: Record<GrammarRole, { headline: string; detail: 
     'Head Noun': {
         headline: 'The main noun in a noun phrase',
         detail:
-            'The core noun that all modifiers point to — e.g. 道 ("the Way") in 常道, or 師 ("teacher") in 我師.',
+            'The core noun that all modifiers point to. For example, 道 ("the Way") in 常道, or 師 ("teacher") in 我師.',
     },
     'Head Verb': {
         headline: 'The main verb in a verb phrase',
         detail:
-            'The core verb around which objects, coverb phrases, and particles are grouped — e.g. 學 ("study"), 知 ("know"), 施 ("impose").',
+            'The core verb around which objects, coverb phrases, and particles are grouped. For example, 學 ("study"), 知 ("know"), 施 ("impose").',
     },
     'Measure Word': {
         headline: 'A counting or classifying word',
@@ -118,7 +118,7 @@ export const classicalGlossary: Record<GrammarRole, { headline: string; detail: 
     Pivot: {
         headline: 'A noun playing two roles at once',
         detail:
-            'In a pivotal construction, one noun is simultaneously the object of the first verb and the subject of the second — a pattern that exists in both classical and modern Chinese.',
+            'In a pivotal construction, one noun is simultaneously the object of the first verb and the subject of the second. This pattern exists in both classical and modern Chinese.',
     },
     Copula: {
         headline: 'The linking verb "to be"',
