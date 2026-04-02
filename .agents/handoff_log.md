@@ -46,20 +46,19 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ### [DATE] Orchestrator → Educational Publisher
 **Status**: 🔴 Active
-**Task**: Discuss Pedagogical Vision & Metaphors
+**Task**: Execute Pedagogical Rewrites on All Sentences
 **Branch**: `develop`
 
 > [!NOTE]
-> The user stated: "When I get back i'm going to have a discussion with the educational publisher to nail down my pedagogical vision before we go forward with our rewrites".
+> The Orchestrator has generated `explanations_pedagogy.md` which completely codifies the pedagogical tone and vocabulary rules defined by the user.
 
 **Action Required**:
-1. DO NOT edit any category files or `src/data/sentences/*.ts` files yet.
-2. The user will initialize a philosophical dialogue with you concerning the tone, metaphors, and specific phrasing they want you to use for explaining the FLS (Fractal Logic Stream) grammar trees (e.g., reframing subjects/verbs into Topics/Comments).
-3. Act as a sounding board, proposing intuitive explanations and learning frameworks for complete beginners.
-4. When the user explicitly states they are satisfied with the defined vision, you may generate an `implementation_plan.md` artifact codifying the pedagogical rules, and then we will proceed to the actual code rewrites.
-
-**Issues Encountered:**
-- **BLOCKED (Pedagogical Alignment):** The Orchestrator has paused this execution to discuss and nail down the project's core pedagogical vision and exact target audience before proceeding with the remaining 44 strings.
+1. Check out the `data-linguist/sentence-rewrites` branch (which contains the Data Linguist's partial FLS string rewrites on ~6 files).
+2. Read the `explanations_pedagogy.md` file in the orchestrator's workspace.
+3. Open all 13 category files in `src/data/sentences/*.ts` (including the 6 the DL did, because the DL likely used illegal internal FLS terminology which violates Rule 2).
+4. Author or rewrite the `explanation:` property strings on ALL sentences in those files, strictly conforming to the 7 Rules in the pedagogy document.
+5. Emphasize a warm, casual tutor tone. Do not use em-dashes or AI-isms. Remove all academic linguistics and internal FLS jargon (e.g. "Situation-Taking Verb", "Occupied Silence").
+6. When finished, push your branch again, provide the `[APPROVED]` signal, and mark this task ✅ Done.
 
 ## Resolved
 
