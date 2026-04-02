@@ -75,7 +75,7 @@ Append a new block to `## Pending Requests` using this exact format:
 ---
 
 ### [2026-04-02] Orchestrator → Educational Publisher
-**Status**: ⏳ Blocked (waiting for Ticket 1)
+**Status**: 🔴 Active
 **Task**: Fresh Rewrite of All 97 Sentence Explanations
 **Branch**: `feature/sentence-accuracy-review`
 **Sequence**: Ticket 2 of 2 (requires `sentence_accuracy_report.md` from Ticket 1)
