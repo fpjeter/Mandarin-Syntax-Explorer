@@ -48,13 +48,14 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Resolved
 
-### [DATE] Orchestrator → Educational Publisher
+### [2026-04-01] Orchestrator → Educational Publisher
 **Status**: ✅ Done
 **Task**: Comprehensive Rewrite of Category Glossaries (`categories.ts` & `classicalCategories.ts`)
 **Branch**: `develop`
+**Commit**: `9ff5a38` — fix(pedagogy): rewrite category glossaries per pedagogical vision
 
 > [!NOTE]
-> The Orchestrator has authorized you to slightly lengthen the descriptions if needed to maintain a warm pedagogical tone. The strict "one-line" rule is lifted.
+> All 19 FULL_CATEGORY_EXPLANATIONS rewritten: removed LLM-isms, all-caps romanizations, em-dashes, and performative tone. All 19 CATEGORY_DESCRIPTIONS polished for consistency. All 6 CLASSICAL_CATEGORY_DESCRIPTIONS warmed up with modern-bridge context. Both `tsc --noEmit` and `eslint` pass clean.
 
 ### [2026-04-01] Orchestrator → Educational Publisher
 **Status**: ✅ Done
