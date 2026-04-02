@@ -11,7 +11,7 @@ interface GlossaryLinkProps {
     children: React.ReactNode;
 }
 
-/** Clickable glossary term — opens glossary panel if handler is provided */
+/** Clickable glossary term: opens glossary panel if handler is provided */
 const GlossaryLink: React.FC<GlossaryLinkProps> = ({ role, onOpenGlossary, children }) => {
     if (!onOpenGlossary) return <>{children}</>;
     const entry = glossary[role];
@@ -20,7 +20,7 @@ const GlossaryLink: React.FC<GlossaryLinkProps> = ({ role, onOpenGlossary, child
         <button
             onClick={() => onOpenGlossary(role)}
             className="underline decoration-dotted underline-offset-2 hover:text-white transition-colors"
-            title={`${entry.headline} — tap to open glossary`}
+            title={`${entry.headline}: tap to open glossary`}
         >
             {children}
         </button>
@@ -62,7 +62,7 @@ const LinguisticFootnote: React.FC = () => {
                     <li><strong className="text-slate-300">Topic–Comment</strong> is the primary structural split, not Subject–Predicate</li>
                     <li><strong className="text-slate-300">Adjunct</strong> maps directly to 状语, the pre-verbal modifier slot central to Chinese grammar</li>
                     <li><strong className="text-slate-300">Complement subtypes</strong> (结果补语, 趋向补语, etc.) are shown as badges, not separate structural positions</li>
-                    <li><strong className="text-slate-300">Separable verbs</strong> (离合词) are explicitly decomposed into verb + object morphemes</li>
+                    <li><strong className="text-slate-300">Separable verbs</strong> (离合词) are explicitly decomposed into verb and object halves</li>
                     <li><strong className="text-slate-300">Dropped pronouns</strong> appear as visible ghost nodes with coreference links, rather than abstract empty categories</li>
                 </ul>
                 <p className="mt-2 text-[10px] text-slate-500 leading-relaxed italic">
@@ -89,14 +89,14 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
     if (tab === 'framework') {
         return (
             <div className="space-y-5">
-                {/* ── 1. The Train Architecture ── */}
+                {/* ── 1. Topic and Comment ── */}
                 <section>
-                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-fuchsia-400 mb-1.5">1. The Train Architecture</h3>
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-fuchsia-400 mb-1.5">1. Topic and Comment</h3>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
-                        English sentences are rigid <em>Cathedrals</em> (Subject + Verb + Object). Mandarin is a <strong className="text-slate-100">Train</strong>. It is a sequence of connected cars.
-                        The only required "car" is the <strong className="text-slate-100">Topic-Comment pair</strong> (the entire language's atomic unit).
-                        You establish what to talk about (the <GlossaryLink role="Topic" onOpenGlossary={onOpenGlossary}><span className="text-fuchsia-400 font-bold">Topic</span></GlossaryLink>),
-                        and then state something about it (the <GlossaryLink role="Comment" onOpenGlossary={onOpenGlossary}><span className="text-blue-400 font-bold">Comment</span></GlossaryLink>).
+                        Every Mandarin sentence starts with the same move: name what you are talking about, then say something about it.
+                        The first part is the <GlossaryLink role="Topic" onOpenGlossary={onOpenGlossary}><span className="text-fuchsia-400 font-bold">Topic</span></GlossaryLink>,
+                        and the second is the <GlossaryLink role="Comment" onOpenGlossary={onOpenGlossary}><span className="text-blue-400 font-bold">Comment</span></GlossaryLink>.
+                        This Topic-Comment pair is the building block of the entire language.
                     </p>
                     {/* Mini example */}
                     <div className="mt-3 bg-slate-800/50 border border-slate-700/40 rounded-xl px-3 py-2.5">
@@ -111,22 +111,22 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                     </div>
                 </section>
 
-                {/* ── 2. The Matryoshka Principle ── */}
+                {/* ── 2. Nesting and Embedding ── */}
                 <section>
-                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-violet-400 mb-1.5">2. The Matryoshka Principle</h3>
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-violet-400 mb-1.5">2. Nesting and Embedding</h3>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
-                        Mandarin grammar is intensely recursive. Because a Topic-Comment unit is self-contained, an entire sentence can shrink and fit completely inside another Comment slot like a nested doll. 
-                        We refer to these purely spacially as <strong className="text-violet-300">Embedded Clauses</strong>. 
-                        For example, a causative verb ("let/make") doesn't act on a person—it triggers an entirely self-contained <strong className="text-violet-300">Situation Object</strong> embedded perfectly within.
+                        Because a Topic-Comment unit is self-contained, an entire sentence can shrink down and fit completely inside another one. 
+                        These are called <strong className="text-violet-300">Embedded Clauses</strong>. 
+                        For example, a causative verb like 让 ("let") or 叫 ("tell") does not just act on a person; it introduces a whole new clause where that person does something.
                     </p>
                 </section>
 
-                {/* ── 3. The Logic Zone ── */}
+                {/* ── 3. Word Order Rules ── */}
                 <section>
-                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-1.5">3. The Logic Zone</h3>
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-1.5">3. Word Order Rules</h3>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
-                        Unlike English, you cannot dump modifiers haphazardly at the end. The Comment slot acts as a strictly ordered <strong className="text-emerald-300">Logic Zone</strong>. 
-                        Adjuncts (<em className="text-emerald-200">Time</em>, <em className="text-emerald-200">Place</em>, <em className="text-emerald-200">Manner</em>) must be mathematically stacked <strong className="text-emerald-300">before</strong> the action verb, reflecting how reality chronologically unfolds.
+                        Inside the Comment, modifiers follow a strict order. 
+                        Time, place, and manner information must come <strong className="text-emerald-300">before</strong> the verb, not after it. This is one of the biggest differences from English, and the tree makes it visible by stacking these elements in order.
                     </p>
                     <div className="mt-2 flex flex-wrap gap-1.5 items-center">
                         {['Time', 'Place', 'Manner', 'Verb'].map((label, i) => (
@@ -147,7 +147,7 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                 <section>
                     <h3 className="text-[10px] font-bold uppercase tracking-widest text-orange-400 mb-1.5">4. Parallel Sentences</h3>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
-                        Watch out for the "Fake Topic" trap! When Mandarin compares two independent thoughts ("Hardship makes you grow, comfort makes you regress"), they simply sit side-by-side on the tracks as <strong className="text-orange-300">Parallel Sentences</strong>. You don't need connecting cars like "and" or "but" (parataxis). If a sentence consists of two independent contrasting thoughts, never falsely lump the first half as the "Topic" of the second!
+                        When Mandarin compares or contrasts two independent thoughts ("Hardship makes you grow, comfort makes you regress"), they sit side by side as <strong className="text-orange-300">Parallel Sentences</strong>. No connecting words like "and" or "but" are needed. Watch out: if a sentence consists of two independent, contrasting ideas, the first half is not the "Topic" of the second. They are equals.
                     </p>
                 </section>
 
@@ -156,8 +156,8 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                     <h3 className="text-[10px] font-bold uppercase tracking-widest text-rose-400 mb-1.5">Why subjects disappear</h3>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
                         Once the Topic is set, the listener knows who is being talked about.
-                        So Mandarin often skips the subject inside the Comment entirely —
-                        this is called{' '}
+                        So Mandarin often skips the subject inside the Comment entirely.
+                        This is called{' '}
                         <span className="text-rose-400 font-bold">subject omission</span>.
                         The tree shows missing words as faded{' '}
                         <span className="text-rose-300 font-mono text-[10px]">[ghost]</span> nodes.
@@ -169,9 +169,9 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                     <h3 className="text-[10px] font-bold uppercase tracking-widest text-amber-400 mb-2">Tree labels at a glance</h3>
                     <div className="space-y-1.5">
                         {([
-                            ['Adjunct', 'Pre-verbal modifier — time, place, manner, or construction (把/被)'],
+                            ['Adjunct', 'Pre-verbal modifier: time, place, manner, or construction (把/被)'],
                             ['Attributive', 'A word modifying a noun, always placed before it'],
-                            ['Complement', 'Extra info after the verb — result, direction, degree, or possibility'],
+                            ['Complement', 'Extra info after the verb: result, direction, degree, or possibility'],
                             ['Pivot', 'A noun acting as object of one verb and subject of the next'],
                             ['Copula', 'The linking verb 是 (is/was)'],
                             ['Head Verb', 'The core verb, marked with a thick bottom border'],

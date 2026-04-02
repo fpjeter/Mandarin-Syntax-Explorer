@@ -50,6 +50,15 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ### [2026-04-01] Orchestrator → Educational Publisher
 **Status**: ✅ Done
+**Task**: Comprehensive Rewrite of Grammar Guides, Glossaries, and Badges
+**Branch**: `feature/grammar-guide-rewrites`
+**Commit**: `87453ab`
+
+> [!NOTE]
+> Renamed all FLS headers in GrammarGuide.tsx (Train Architecture → Topic and Comment, Matryoshka Principle → Nesting and Embedding, Logic Zone → Word Order Rules). Removed Cathedral/Train analogy, Situation Object, Recursive Hinge, and "nesting dolls" LLM-ism. Renamed ClassicalGrammarGuide.tsx Train Metaphor → Shared Structure. Purged all em-dashes from learner-facing text across 6 files. Fixed "Fusional coverb" → "Fused preposition+pronoun" in classicalBadges.ts. Both `tsc --noEmit` and `eslint` pass clean.
+
+### [2026-04-01] Orchestrator → Educational Publisher
+**Status**: ✅ Done
 **Task**: Comprehensive Rewrite of Category Glossaries (`categories.ts` & `classicalCategories.ts`)
 **Branch**: `develop`
 **Commit**: `9ff5a38` — fix(pedagogy): rewrite category glossaries per pedagogical vision
