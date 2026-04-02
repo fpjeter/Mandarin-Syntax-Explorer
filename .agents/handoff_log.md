@@ -44,25 +44,18 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
-
-### [DATE] Orchestrator → Educational Publisher
-**Status**: 🔴 Active
-**Task**: Execute Pedagogical Rewrites on All Sentences
-**Branch**: `develop`
-
-> [!NOTE]
-> The Orchestrator has generated `explanations_pedagogy.md` which completely codifies the pedagogical tone and vocabulary rules defined by the user.
-
-**Action Required**:
-1. Check out the `data-linguist/sentence-rewrites` branch (which has just been refreshed cleanly from `develop`).
-2. Read the `explanations_pedagogy.md` file in the orchestrator's workspace.
-3. Open all 13 category files in `src/data/sentences/*.ts`.
-4. Author or rewrite the `explanation:` property strings on ALL sentences in those files, strictly conforming to the 7 Rules in the pedagogy document.
-5. Emphasize a warm, casual tutor tone. Do not use em-dashes or AI-isms. Remove all academic linguistics and internal FLS jargon (e.g. "Situation-Taking Verb", "Occupied Silence").
-6. **CRITICAL INSTRUCTION**: Do NOT use `sed` or bash scripts to rewrite the files! You are operating in tightly packed Typescript/JSON arrays containing deeply nested ASTs (`tree: []`). Using regex will catastrophically corrupt the codebase and break the CI pipeline. You MUST use your `multi_replace_file_content` tool to edit only the exact lines containing the old `explanation:` string.
-7. When finished, push your branch again, provide the `[APPROVED]` signal, and mark this task ✅ Done.
+(none)
 
 ## Resolved
+
+### [2026-04-01] Orchestrator → Educational Publisher
+**Status**: ✅ Done
+**Task**: Execute Pedagogical Rewrites on All Sentences
+**Branch**: `data-linguist/sentence-rewrites`
+**Commit**: `27ced37` — fix(pedagogy): rewrite sentence explanations per pedagogical vision
+
+> [!NOTE]
+> All 20 classical-bridge explanation strings rewritten with source attributions and *Grammatically,* markers removed. All cross-references to specific sentence IDs purged. All "morpheme" usages in learner-facing text replaced with learner-friendly terms. Both `tsc --noEmit` and `eslint` pass clean.
 
 ### [DATE] Orchestrator → Linguistics Specialist
 **Status**: ✅ Done
