@@ -44,7 +44,56 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
-(none)
+### [2026-04-02] Orchestrator → Linguistics Specialist
+**Status**: 🔴 Active
+**Task**: Accuracy Review of All 97 Sentence Explanations
+**Branch**: `feature/sentence-accuracy-review`
+**Sequence**: Ticket 1 of 2 (must complete before Ticket 2 begins)
+
+**Action Required**:
+1. Check out `feature/sentence-accuracy-review`.
+2. Read every file in `src/data/sentences/` (19 category files, 97 sentences total).
+3. For each sentence, compare the `explanation:` string against the `tree:` AST structure. Check for:
+   - Factual inaccuracies (e.g., calling a resultative complement a "compound verb")
+   - Misidentified roles (e.g., saying something is the Subject when the tree labels it Topic)
+   - Missing key structural features that the explanation fails to mention
+   - Incorrect descriptions of particle behavior (了, 着, 过, 得, 不, etc.)
+   - Any remaining FLS jargon that slipped through earlier rewrites
+4. Produce a structured report at `sentence_accuracy_report.md` in the project root. Format:
+   ```
+   ## [filename.ts]
+   ### s[ID] — [chinese sentence]
+   - **Issue**: [description of inaccuracy]
+   - **AST Reality**: [what the tree actually shows]
+   - **Suggested Fix**: [brief correction note]
+   ```
+   If a sentence has no issues, you may skip it or mark it "✅ Accurate".
+5. Commit and push the report. Mark this ticket as ✅ Done.
+
+**CRITICAL**: Do NOT edit any sentence files. Your output is the report only.
+
+---
+
+### [2026-04-02] Orchestrator → Educational Publisher
+**Status**: ⏳ Blocked (waiting for Ticket 1)
+**Task**: Fresh Rewrite of All 97 Sentence Explanations
+**Branch**: `feature/sentence-accuracy-review`
+**Sequence**: Ticket 2 of 2 (requires `sentence_accuracy_report.md` from Ticket 1)
+
+**Action Required**:
+1. Check out `feature/sentence-accuracy-review`.
+2. Read `explanations_pedagogy.md` (the 7 pedagogical rules).
+3. Read `sentence_accuracy_report.md` (produced by the Linguistics Specialist).
+4. For each of the 19 sentence files in `src/data/sentences/`, rewrite every `explanation:` string:
+   - Incorporate all accuracy fixes from the report
+   - Follow all 7 rules in `explanations_pedagogy.md` strictly
+   - Vary Topic callout phrasing (Rule 3)
+   - No em-dashes (Rule 7)
+   - No FLS jargon (Rule 2)
+   - Each explanation should be a guided tour of the tree (Rule 1)
+5. **CRITICAL**: Use `multi_replace_file_content` to edit. Do NOT use `sed`.
+6. Run `npm run qa && npm run lint` to verify.
+7. Commit and push. Mark this ticket as ✅ Done.
 
 ## Resolved
 
