@@ -44,32 +44,33 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
-### [2026-04-02] Orchestrator → Linguistics Specialist
-**Status**: ✅ Done
-**Task**: Audit AST Type System and Role Mappings
+### [2026-04-02] Orchestrator → Educational Publisher
+**Status**: 🔴 Active
+**Task**: Pedagogical Review of AST Type System (Learner Impact Assessment)
 **Branch**: `develop` (report only, no source edits)
 
-**Context**: We now have 123 sentences using our `GrammarRole` type system. The grammar guide review already caught one disconnect (把/被 described as Adjuncts in the guide but mapped as Head Verbs in the tree). We need a comprehensive audit to ensure the type definitions, the actual role usage across all sentences, and the learner-facing label definitions are all consistent.
+**Context**: The Linguistics Specialist completed `ast_type_audit.md`, identifying 6 structural issues with the type system. Now we need **your perspective**: how do these issues actually affect a learner using the tool? Which ones cause real confusion, and which are invisible to the end user?
 
 **Action Required**:
 1. Check out `develop`.
-2. Read `src/types/grammar.ts` to understand the full `GrammarRole` type definition and `GrammarNodeData` interface.
-3. Scan all 123 sentences across `src/data/sentences/` to catalog:
-   - Every distinct `role` value used in practice
-   - Every distinct `subRole` value used in practice
-   - Any role+subRole combinations that seem inconsistent across categories
-4. Cross-reference with:
-   - `src/data/glossary.ts` and `src/data/classicalGlossary.ts` (do all used roles have glossary entries?)
-   - `src/components/GrammarGuide.tsx` "Tree labels at a glance" section (do the definitions match actual usage?)
-   - `src/components/GrammarNode.tsx` (does the rendering logic handle all role values correctly?)
-5. For each issue found, document:
-   - **Inconsistency**: what doesn't match
-   - **Where**: which files/sentences are affected
-   - **Recommendation**: how to fix it
-6. Produce a report at `ast_type_audit.md` in the project root.
+2. Read `ast_type_audit.md` thoroughly.
+3. Read `explanations_pedagogy.md` for our pedagogical standards.
+4. For each of the 6 issues, evaluate from a **learner's perspective**:
+   - Does this issue cause visible confusion in the tree visualization?
+   - Does it create contradictions between what the explanation says and what the tree shows?
+   - Does it undermine the "guided tour" experience?
+   - Would a beginner-to-intermediate learner actually notice it?
+5. Additionally, do your **own independent scan** of learner-facing surfaces:
+   - Are there any `subRole` labels shown in the tree that use jargon a learner wouldn't understand?
+   - Are tooltip/hover descriptions clear and consistent?
+   - Are there places where the tree labels feel confusing or inconsistent from a user's point of view?
+6. Produce a pedagogical supplement report at `ast_pedagogical_review.md` in the project root. For each issue:
+   - **Learner impact**: None / Low / Medium / High
+   - **What the learner sees**: concrete description of the confusion
+   - **Recommendation**: what should change to improve the learning experience
 7. Commit and push. Mark this ticket as ✅ Done.
 
-**CRITICAL**: Do NOT edit any source files. Your output is the audit report only.
+**CRITICAL**: Do NOT edit any source files. Your output is the review report only.
 
 
 ## Resolved
