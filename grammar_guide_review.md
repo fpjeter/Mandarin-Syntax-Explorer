@@ -28,3 +28,27 @@ This review identifies factual inaccuracies, FLS terminology leaks, and pedagogi
 ### Section: "Tree labels at a glance" (Classical)
 - **Inaccuracy**: `Complement` is defined as *"Post-verbal element: result, object, or continuation"*.
 - **Correction**: An "object" is not a Complement in Chinese grammar; it is its own distinct grammatical role (`Object`). Combining them is factually incorrect and will confuse learners looking at trees that clearly differentiate `Object` nodes from `Complement` nodes. "Object" must be removed from this definition.
+
+---
+
+## 3. Recommended Rewrite: "A note on this grammar model" Footnote
+
+The existing collapsible footnote in `GrammarGuide.tsx` (the `LinguisticFootnote` component) needs a complete rewrite. It currently cites "X-bar theory / Minimalism," "coreference links," and "abstract empty categories" — all of which violate our pedagogical tone rules. But the footnote itself is valuable: learners deserve a brief, honest explanation of what kind of grammar model they're looking at.
+
+### Recommended content for the Educational Publisher
+
+The rewritten footnote should cover these points in warm, non-academic language:
+
+1. **What kind of model this is.** These trees follow a teaching-friendly system built around Topic and Comment, which is how Chinese grammar has traditionally been described by Chinese linguists. It is not the same system used in most Western linguistics textbooks.
+
+2. **Why "Head Verb" appears on 把 and 被.** If you've studied from a textbook, you probably learned that 把 and 被 are prepositions or markers, not verbs. That's a valid description. In our trees, we label them as Head Verbs because it lets us show 把, 被, 让, and 叫 sentences using the same consistent tree shape — they all introduce a person or thing, and then something happens to them inside a nested clause. You don't need to pick sides; the grammar works the same way regardless of the label.
+
+3. **What ghost nodes are.** When Mandarin drops a pronoun because the listener already knows who's being discussed, the tree shows a faded "ghost" node where that word would have been. This makes the underlying logic visible without cluttering the sentence.
+
+4. **What the tree labels map to.** Role names like Topic, Comment, Adjunct, and Complement correspond to terms used in Chinese-language grammar textbooks (主题, 评论, 状语, 补语), so what you learn here transfers directly to Chinese-medium study materials.
+
+### Tone constraints for the Educational Publisher
+- Maximum 4-5 short bullet points. This is a collapsible footnote, not an essay.
+- No linguistic terminology beyond what the tree itself already shows (Topic, Comment, Head Verb, Adjunct, etc.).
+- No citations, no named linguists, no acronyms (SVO, GCR, NP, etc.).
+- Warm tutor voice: "you might have learned..." not "standard analysis classifies..."
