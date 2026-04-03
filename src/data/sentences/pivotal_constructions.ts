@@ -72,7 +72,7 @@ export const pivotalConstructions: SentenceData[] = [
         id: 's33',
         category: 'Pivotal Constructions (兼语句)',
         chinese: '妈妈叫我去买牛奶。',
-        pinyin: 'Māma jiào wǒ qù mǎi niúnǎi.',
+        pinyin: 'Mā ma jiào wǒ qù mǎi niúnǎi.',
         translation: 'Mom told me to go buy milk.',
         explanation: 'Here **妈妈** ("Mom") is the Topic. The verb **叫** ("tell/ask") creates a pivotal construction: **我** ("me") is the pivot, simultaneously the object of 叫 and the actor of the next action, **去买牛奶** ("go buy milk"). The tree shows 我 sitting right at the hinge between the two verb phrases. Notice how the serial verb chain continues inside the embedded action: 去 ("go") + 买牛奶 ("buy milk"), with the purpose following the motion verb naturally.',
         tree: {
@@ -82,7 +82,7 @@ export const pivotalConstructions: SentenceData[] = [
                 {
                     id: 'n33-t',
                     role: 'Topic',
-                    text: { hanzi: '妈妈', pinyin: 'māma', translation: 'Mom' },
+                    text: { hanzi: '妈妈', pinyin: 'mā ma', translation: 'Mom' },
                 },
                 {
                     id: 'n33-c',
