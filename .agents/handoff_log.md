@@ -45,7 +45,7 @@ Append a new block to `## Pending Requests` using this exact format:
 ## Active Assignments
 
 ### [2026-04-02] Orchestrator → Linguistics Specialist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Accuracy Review of Grammar Guide Content
 **Branch**: `feature/grammar-guide-review`
 **Sequence**: Ticket 1 of 2 (must complete before Ticket 2 begins)
