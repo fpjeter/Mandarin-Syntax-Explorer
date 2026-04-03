@@ -72,9 +72,9 @@ export const pivotalConstructions: SentenceData[] = [
         id: 's33',
         category: 'Pivotal Constructions (兼语句)',
         chinese: '妈妈叫我去买牛奶。',
-        pinyin: 'Māma jiào wǒ qù mǎi niú nǎi.',
+        pinyin: 'Māma jiào wǒ qù mǎi niúnǎi.',
         translation: 'Mom told me to go buy milk.',
-        explanation: 'Here **妈妈** ("Mom") is the Topic. The verb **叫** ("tell/ask") creates another pivotal construction: **弟弟** ("little brother") is the pivot, simultaneously the object of 叫 and the actor of the next action, **去买菜** ("go buy groceries"). The tree shows 弟弟 sitting right at the hinge between the two verb phrases. Notice how the serial verb chain continues inside the embedded action: 去 ("go") + 买菜 ("buy groceries"), with the purpose following the motion verb naturally.',
+        explanation: 'Here **妈妈** ("Mom") is the Topic. The verb **叫** ("tell/ask") creates a pivotal construction: **我** ("me") is the pivot, simultaneously the object of 叫 and the actor of the next action, **去买牛奶** ("go buy milk"). The tree shows 我 sitting right at the hinge between the two verb phrases. Notice how the serial verb chain continues inside the embedded action: 去 ("go") + 买牛奶 ("buy milk"), with the purpose following the motion verb naturally.',
         tree: {
             id: 'n33',
             role: 'Sentence',
@@ -134,7 +134,7 @@ export const pivotalConstructions: SentenceData[] = [
                                                         {
                                                             id: 'n33-serial-v2-obj',
                                                             role: 'Object',
-                                                            text: { hanzi: '牛奶', pinyin: 'niú nǎi', translation: 'milk' },
+                                                            text: { hanzi: '牛奶', pinyin: 'niúnǎi', translation: 'milk' },
                                                         },
                                                     ],
                                                 },

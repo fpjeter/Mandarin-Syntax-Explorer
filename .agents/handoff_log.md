@@ -87,10 +87,11 @@ Append a new block to `## Pending Requests` using this exact format:
 ---
 
 ### [2026-04-02] Orchestrator → Frontend Engineer
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Add Preposition Rendering Color
 **Branch**: `feature/ast-type-fixes`
 **Sequence**: Ticket 3 of 3
+**Commit**: `66f8ddb` — feat(ui): add Preposition node rendering color
 
 **Action Required**:
 1. Check out `feature/ast-type-fixes` and pull latest.
