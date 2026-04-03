@@ -44,26 +44,23 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
-### [2026-04-02] Orchestrator → Linguistics Specialist
-**Status**: ✅ Done
-**Task**: Validate 26 New Coverage Gap Sentences (AST + Explanation Accuracy)
-**Branch**: `develop`
+### [2026-04-02] Orchestrator → Data Linguist
+**Status**: 🔴 Active
+**Task**: Fix 3 AST Structure Issues Flagged by Linguistics Specialist
+**Branch**: `fix/ast-corrections`
 
-**Context**: The Ed Publisher designed 26 new sentences and the Data Linguist generated their AST trees. The sentences need a final accuracy check before we consider them production-ready.
+**Context**: The Linguistics Specialist validated the 26 new sentences and approved 23. Three sentences have incorrect AST structures that need refactoring. See `new_sentences_validation.md` for full details.
 
 **Action Required**:
-1. Check out `develop`.
-2. Read `new_sentences_spec.md` for the original sentence designs.
-3. Review each of the 26 new sentences across 14 category files in `src/data/sentences/`. For each sentence, verify:
-   - The AST `tree` structure accurately reflects the Chinese grammar (correct roles, correct nesting, correct subRoles)
-   - The `explanation` text accurately describes what the tree shows (no Subject/Topic confusion, no FLS jargon)
-   - The `pinyin` is correct
-   - The `translation` is natural
-4. Produce a validation report at `new_sentences_validation.md` in the project root. For each sentence, either mark it ✅ or list specific issues.
-5. Commit and push. Mark this ticket as ✅ Done.
-
-**CRITICAL**: Do NOT edit any sentence files. Your output is the validation report only.
-
+1. Check out `fix/ast-corrections`.
+2. Read the ❌ section of `new_sentences_validation.md`.
+3. Fix the following 3 sentences:
+   - **王老板让他派人去处理。** (`pivotal_constructions.ts`): Refactor flat serial-verb array into nested Embedded Clause structure for pivotal verbs.
+   - **有人找你。** (`pivotal_constructions.ts`): Refactor flat existential pivot into Embedded Clause structure (有 → Embedded Clause → Topic(人) → Comment(找你)).
+   - **除非你道歉，否则我不会原谅你。** (`conditional_sentences.ts`): Fix the result clause so that the inner topic 我 is properly encapsulated (as Subject/Actor within the Comment), not placed as a naked Topic sibling alongside predicate nodes.
+4. Use `multi_replace_file_content` to edit. Do NOT use `sed`.
+5. Run `npm run qa && npm run lint` to validate.
+6. Commit and push. Mark this ticket as ✅ Done.
 
 
 ## Resolved
