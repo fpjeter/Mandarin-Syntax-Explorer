@@ -44,61 +44,29 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
-### [2026-04-02] Orchestrator → Educational Publisher
-**Status**: ✅ Done
-**Task**: Fix Glossary, Guide Labels, and Dead Type (Text-Only Changes)
+### [2026-04-02] Orchestrator → Linguistics Specialist
+**Status**: 🔴 Active
+**Task**: Full Data Quality Scan of All 123 Sentences
 **Branch**: `feature/ast-type-fixes`
-**Commit**: `b787b6d` — fix(pedagogy): fix glossary contradiction and expand guide labels
 
-> [!NOTE]
-> Rewrote `Preposition` glossary entry to remove 把/被 examples (replaced with 比, 跟, 像, 在). Kept `Verb` glossary entry (required by `Record<GrammarRole>` type constraint). Expanded "Tree labels at a glance" from 7 to 10 entries: added Particle, Subject, and Embedded Clause. Alphabetized the label list and removed Copula (low frequency). `tsc --noEmit` and `eslint` both pass clean.
-
----
-
-### [2026-04-02] Orchestrator → Data Linguist
-**Status**: ✅ Done
-**Task**: Migrate 把/被 Roles and Normalize Adjunct SubRoles
-**Branch**: `feature/ast-type-fixes`
-**Sequence**: Ticket 2 of 3
+**Context**: We just found s33 had a misaligned ruby (pinyin token count didn't match hanzi character count) and an explanation that referenced the wrong characters (弟弟/买菜 instead of 我/买牛奶). We need a systematic scan to catch any more issues like this.
 
 **Action Required**:
 1. Check out `feature/ast-type-fixes` and pull latest.
-2. **把/被 migration**: In `ba_construction.ts` and `bei_passive.ts`, find all older sentences where 把 or 被 is mapped as `role: 'Preposition'`. Change them to `role: 'Head Verb'` with appropriate `subRole` (`BA marker` or `passive marker (BEI)`). Do NOT change tree structure, only the role label.
-3. **Adjunct subRole normalization**: Across all 19 sentence files, normalize the visible Adjunct subRole strings to a controlled vocabulary:
-   - `time` (for all 时间状语)
-   - `location` (for all 地点状语)
-   - `manner` (for all 方式状语)
-   - `negation` (for all 不/没/别)
-   - `degree` (for all 程度状语)
-   - `ba-construction` (for all 把-related)
-   - `bei-construction` (for all 被-related)
-   - `scope` (for 都/也/连)
-   - `frequency` (for 经常/总是 etc.)
-   - `conditional` (for 如果/只要/即使/除非)
-   - `consequence` (for 就/才)
-   - `concession` (for 虽然/但是)
-   - `correlative` (for 不但/而且/越...越)
-   - `instrument` (for 用/以)
-   - `rhetorical` (for 难道/怎么)
-4. Use `multi_replace_file_content`. Do NOT use `sed`.
-5. Run `npm run qa && npm run lint` to validate.
-6. Commit and push. Mark this ticket as ✅ Done.
+2. Scan all 123 sentences across `src/data/sentences/` for the following issues:
+   - **Pinyin-Hanzi mismatch**: Does the number of pinyin tokens in the header `pinyin` field match the number of hanzi characters in `chinese`? (Compound words like 牛奶 should share ONE pinyin token so rubies align; multi-character words like 妈妈 need one token per character: "mā ma" not "māma")
+   - **Pinyin-Hanzi mismatch in tree nodes**: Same check for every `text: { hanzi, pinyin }` in the tree. Token count must match character count.
+   - **Explanation accuracy**: Does the explanation reference the correct characters/words from the actual sentence? (s33 was referencing 弟弟 and 买菜 from a different sentence)
+   - **Pinyin correctness**: Are tones correct? Any typos?
+   - **Translation accuracy**: Does the English translation match the Chinese?
+3. Produce a report at `data_quality_scan.md` in the project root. For each issue found, list:
+   - Sentence ID and file
+   - The specific issue
+   - The correction needed
+4. Commit and push. Mark this ticket as ✅ Done.
 
----
+**CRITICAL**: Do NOT edit any sentence files. Your output is the scan report only.
 
-### [2026-04-02] Orchestrator → Frontend Engineer
-**Status**: ✅ Done
-**Task**: Add Preposition Rendering Color
-**Branch**: `feature/ast-type-fixes`
-**Sequence**: Ticket 3 of 3
-**Commit**: `66f8ddb` — feat(ui): add Preposition node rendering color
-
-**Action Required**:
-1. Check out `feature/ast-type-fixes` and pull latest.
-2. In `src/components/GrammarNode.tsx`, add a dedicated color case for `'Preposition'` in both the modern and classical `getNodeColors` switches.
-3. Use a warm, muted tone (stone/amber-brown family) to suggest "supporting player" status, distinct from Adjunct (rose) and Head Verb (teal).
-4. Run `npm run lint && npx tsc --noEmit` to validate.
-5. Commit and push. Mark this ticket as ✅ Done.
 
 
 ## Resolved
