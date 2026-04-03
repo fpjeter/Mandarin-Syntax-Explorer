@@ -163,10 +163,12 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                             ['Adjunct', 'Sets the scene before the verb: time, place, manner, or condition'],
                             ['Attributive', 'Describes or limits a noun, always placed before it'],
                             ['Complement', 'Follows the verb to add detail: result, direction, degree, or potential'],
-                            ['Pivot', 'A person who is the object of one verb and the actor of the next'],
-                            ['Copula', 'The linking verb 是 ("is")'],
-                            ['Head Verb', 'The main action word, marked with a thick bottom border'],
+                            ['Embedded Clause', 'A complete mini-sentence nested inside a larger one'],
                             ['Head Noun', 'The main noun in a noun phrase, also thick-bordered'],
+                            ['Head Verb', 'The main action word, marked with a thick bottom border'],
+                            ['Particle', 'Small grammar words like \u4e86, \u5417, \u7684, \u7740 that show tense, mood, or structure'],
+                            ['Pivot', 'A person who is the object of one verb and the actor of the next'],
+                            ['Subject', 'The person or thing doing the action inside a comment'],
                         ] as const).map(([label, desc]) => (
                             <div key={label} className="flex items-baseline gap-2">
                                 <GlossaryLink role={label as GrammarRole} onOpenGlossary={onOpenGlossary}>
