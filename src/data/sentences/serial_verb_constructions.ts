@@ -8,7 +8,7 @@ export const serialVerbConstructions: SentenceData[] = [
         pinyin: 'Dào le , zhǎo dào le , chī wán zài zǒu .',
         translation: '(We\'ve) arrived, (we) found it, (we\'ll) leave after eating.',
 
-        explanation: 'Three events flow in sequence, with no connecting words between them. The Topic is implied (a general "you" or "one"). The Comment chains: **到了中国** ("arrived in China") then **开始学中文** ("started learning Chinese") then **交了很多朋友** ("made a lot of friends"). Each action follows naturally from the previous one. This is one of the most common serial verb patterns: actions lined up in timeline order, with 了 marking completion on each. The tree expands rightward, showing each new verb phrase nested as the continuation of the one before it.',
+        explanation: 'Three mini-clauses flow in sequence with no connecting words: **到了** ("arrived"), **找到了** ("found it"), **吃完再走** ("finish eating, then go"). The Topic is implied. Each clause is a compact action: 到 (arrive) + 了 (done), 找到 (find) + 了 (done), then 吃完 (finish eating) + 再 (then) + 走 (leave). The **再** in the last clause means "and then after that." The tree shows three parallel verb phrases lined up inside the Comment, each standing independently.',
         tree: {
             id: 'n14',
             role: 'Sentence',
@@ -155,7 +155,7 @@ export const serialVerbConstructions: SentenceData[] = [
         chinese: '我拿着伞出门了。',
         pinyin: 'Wǒ ná zhe sǎn chū mén le.',
         translation: 'I took (was holding) an umbrella and went out.',
-        explanation: 'The Topic is **我** ("I"), and the Comment uses a purpose chain: **去图书馆** ("go to the library") + **借书** ("borrow books"). The first verb phrase names the destination, and the second names the purpose. This go-somewhere-to-do-something structure is one of the most common serial verb patterns. The 了 at the end marks the whole chain as completed. Notice the tree branches: 去 takes 图书馆 as its location, and 借 takes 书 as its object. Both verb phrases share the same Topic.',
+        explanation: 'The Topic is **我** ("I"). The verb **拿着** ("holding") uses the aspect marker **着** to indicate an ongoing state: the umbrella is being held during the main action. The second verb **出门** ("go out") is the main event. Together, **拿着伞出门** means "went out while holding an umbrella." The **着** creates a concurrent action: holding is the background, going out is the foreground. The **了** at the end marks the whole event as completed.',
         tree: {
             id: 'n59',
             role: 'Sentence',
@@ -252,7 +252,7 @@ export const serialVerbConstructions: SentenceData[] = [
         chinese: '不要因为好事太小就不去做。',
         pinyin: 'Bú yào yīn wèi hǎo shì tài xiǎo jiù bú qù zuò.',
         translation: 'Do not refrain from doing good just because it is small.',
-        explanation: 'A modern take on 溫故而知新 (from the Analects of Confucius: "Review the old and learn the new"). Where the classical version compresses the thought into five characters with 而 linking the two actions, modern Mandarin expands this with **通过** ("through, by means of") + **复习学过的内容** ("reviewing what you have studied") as the method, then **就能** ("then you can") + **学到新东西** ("learn new things") as the result. The 就 signals a natural consequence: reviewing leads to discovering new things.',
+        explanation: 'A modern Chinese take on the idiom 勿以善小而不为 ("do not refrain from doing good because it is small"). The sentence uses a causal frame: **不要** ("do not") + **因为** ("because") + **好事太小** ("good deeds are too small") + **就不去做** ("then not go do them"). The **因为...就** pattern links the cause (smallness) to the action (not doing). The tree shows the negation wrapping around the causal frame, creating a double negative that urges action.',
         tree: {
             id: 's91-root', role: 'Sentence', children: [
                 {

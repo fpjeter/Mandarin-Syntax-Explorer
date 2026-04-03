@@ -7,7 +7,7 @@ export const even: SentenceData[] = [
         chinese: '他连自己的名字都不会写。',
         pinyin: 'Tā lián zì jǐ de míng zi dōu bù huì xiě.',
         translation: 'He can\'t even write his own name.',
-        explanation: '**他** ("he") is the Topic. The **连…都…** frame singles out the most extreme or surprising case to make a point. Here, **连最简单的题** ("even the simplest questions") is marked by 连 as the unexpected case, and **都不会** ("cannot even do") confirms it with 都. The logic is: if he cannot do even the *easiest* ones, he certainly cannot do harder ones. This "even" construction always uses 连 to pick out the extreme, and 都 or 也 to drive the point home. The tree groups the 连 phrase and 都 together, showing how they bracket the surprising fact.',
+        explanation: '**他** ("he") is the Topic. The **连…都…** frame singles out the most extreme or surprising case to make a point. Here, **连自己的名字** ("even his own name") is marked by 连 as the extreme example, and **都不会写** ("cannot even write") delivers the emphasis with 都. The logic: if he cannot write even his own name, imagine what else he cannot write. The tree shows the 连 phrase spotlighting what is surprising, with 都 in the Comment reinforcing the emphasis.',
         tree: {
             id: 'n66',
             role: 'Sentence',
@@ -85,7 +85,7 @@ export const even: SentenceData[] = [
         chinese: '连小孩子也能做到。',
         pinyin: 'Lián xiǎo hái zi yě néng zuò dào.',
         translation: 'Even children can do it.',
-        explanation: 'This sentence uses **连…也…**, the 也 variant of the "even" construction. **连一口水** ("even one sip of water") is marked by 连 as something minimal, and **也没喝** ("didn\'t even drink") confirms the extreme with 也. The logic is the same as 连...都: by highlighting the smallest possible amount, it emphasizes total absence. The tree shows 连 wrapping the focused noun phrase, with 也 reinforcing the all-or-nothing claim. Both 都 and 也 work in this frame; 也 is slightly softer.',
+        explanation: 'This sentence uses **连…也…**, the 也 variant of the "even" construction. **连小孩子** ("even children") is marked by 连 as the surprising case, and **也能做到** ("can also do it") delivers the point with 也. The logic: if even children can do it, then surely anyone can. Unlike the 都 variant, 也 carries a softer, more inclusive tone. The tree shows 连 marking the extreme example and 也 reinforcing the emphasis in the comment.',
         tree: {
             id: 'n67',
             role: 'Sentence',
@@ -147,7 +147,7 @@ export const even: SentenceData[] = [
         chinese: '连一千里的路，也要从第一步开始走。',
         pinyin: 'Lián yī qiān lǐ de lù, yě yào cóng dì yī bù kāi shǐ zǒu.',
         translation: 'Even a journey of a thousand miles must begin with the first step.',
-        explanation: 'A modern take on 千里之行始於足下 (from the Dao De Jing: "A journey of a thousand miles begins beneath your feet"). The classical 之 (possessive/structural) becomes 的, and the classical coverb 於 ("at/from") is replaced by modern 从 ("from"). The modern version reads: **就连千里的路** ("even a thousand-mile road") + **也是从脚下开始的** ("also starts from beneath your feet"). The 连...也 "even" frame wraps the whole thought, giving it an emphatic feel: even something this vast starts from a single step.',
+        explanation: 'A modern take on 千里之行始於足下 (from the Dao De Jing: "A journey of a thousand miles begins beneath your feet"). The **连…也** frame wraps the classical idea: **连一千里的路** ("even a road of a thousand miles") is the extreme case marked by 连, and **也要从第一步开始走** ("must also start from the first step") is the Comment reinforced by 也. The tree shows the 连 phrase as the emphatic Topic and the 也 clause as the Comment.',
         tree: {
             id: 's72-root', role: 'Sentence', children: [
                 { id: 's72-topic', role: 'Topic', subRole: '连-construction (even)', children: [
@@ -173,7 +173,7 @@ export const even: SentenceData[] = [
         chinese: '连别人不了解你，你都不生气，这才是有修养的人。',
         pinyin: 'Lián bié rén bù liǎo jiě nǐ, nǐ dōu bù shēng qì, zhè cái shì yǒu xiū yǎng de rén.',
         translation: 'Even when others do not understand you, you are not resentful; this is truly the mark of a cultivated person.',
-        explanation: 'A modern take on 人不知而不愠，不亦君子乎 (from Confucius: "If others do not understand you and you are not upset, is that not the mark of a true person?"). The classical rhetorical question marker 不亦...乎 becomes the modern 难道不是...吗. The 连...也 "even" frame reshapes the sentence: **连别人不理解你这件事** ("even the matter of others not understanding you") + **你也不生气** ("you are also not upset"). The rhetorical question then drives the point home: 难道不是真正有修养的人吗 ("is that not a truly cultivated person?").',
+        explanation: 'A modern rendering of 人不知而不愠，不亦君子乎 ("If others do not know you and you are not vexed, is that not the mark of a gentleman?"). The sentence uses the **连…都** frame: **连别人不了解你** ("even when others don\'t understand you") is the extreme case. The consequence: **你都不生气** ("you still don\'t get angry"). Then a judgment follows: **这才是有修养的人** ("this is truly a cultivated person"). The tree nests the 连 clause as the emphatic condition, with the judgment as a separate clause.',
         tree: {
             id: 's85-root', role: 'Sentence', children: [
                 { id: 's85-lian', role: 'Topic', subRole: 'lian-construction', children: [

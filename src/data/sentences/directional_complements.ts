@@ -7,7 +7,7 @@ export const directionalComplements: SentenceData[] = [
         chinese: '他走进来了。',
         pinyin: 'Tā zǒu jìn lái le.',
         translation: 'He walked in.',
-        explanation: '**他** ("he") is the Topic. The verb **走** ("walk") pairs with the directional complement **出来** ("out toward the speaker") to form **走出来** ("walk out"). The 出 ("out") indicates direction of movement; the 来 ("toward the speaker") adds perspective. Together they tell you someone walked out of somewhere and toward the speaker. This two-part directional complement (direction + perspective) is one of the most common patterns in Mandarin. Other examples: 走进去 ("walk in, away from speaker"), 跑上来 ("run up, toward speaker").',
+        explanation: 'The Topic is **他** ("he"). The verb **走** ("walk") pairs with the directional complement **进来** ("enter toward the speaker"): **进** indicates inward movement, and **来** signals direction toward the speaker. Together, **走进来** means "walked in (toward where I am)." The **了** at the end marks completion. The tree shows the verb and its directional complement as siblings inside the verb phrase. Compare with 走出去 ("walked out, away from speaker"), where the direction reverses.',
         tree: {
             id: 'n38',
             role: 'Sentence',
@@ -68,7 +68,7 @@ export const directionalComplements: SentenceData[] = [
         chinese: '她把书拿出去了。',
         pinyin: 'Tā bǎ shū ná chū qù le.',
         translation: 'She took the book out (and away).',
-        explanation: '**她** ("she") is the Topic. This sentence stacks two constructions: a location phrase and a directional complement. First, **从楼上** ("from upstairs") sets the starting point. Then the verb **跑** ("run") combines with **下来** ("down toward the speaker") to form **跑下来** ("run downstairs"). The 从 ("from") marks the origin, and the directional complement marks both the direction (下, "down") and the perspective (来, "toward speaker"). The tree shows the location phrase as an Adjunct before the verb, with the directional complement after it.',
+        explanation: '**她** ("she") is the Topic. This sentence uses a **把** construction combined with a directional complement. **把书** ("the book") moves the object before the verb to emphasize what happened to it. The verb **拿** ("take/hold") combines with **出去** ("exit away from speaker"): **出** indicates outward movement, **去** signals direction away from the speaker. The **了** marks completion. The tree shows the 把 phrase spotlighting the book, followed by the verb-plus-direction compound.',
         tree: {
             id: 'n39',
             role: 'Sentence',
@@ -146,7 +146,7 @@ export const directionalComplements: SentenceData[] = [
         chinese: '她跑上楼去了。',
         pinyin: 'Tā pǎo shàng lóu qù le.',
         translation: 'She ran upstairs (away from the speaker).',
-        explanation: '**她** ("she") is the Topic. The directional complement here is **回来** ("return, come back"): the verb **跑** ("run") + **回来** ("back toward the speaker") = "ran back." But notice the added twist: the object **书** ("book") is inserted *between* the direction and the perspective: 拿回书来. This is a special feature of directional complements. When there is an object, it can be placed between the two parts of the complement. The tree shows this split clearly, with the object nestled inside the directional structure.',
+        explanation: '**她** ("she") is the Topic. The verb **跑** ("run") combines with the complex directional complement **上楼去**: **上** ("up") + **楼** ("stairs/floor") + **去** ("away from speaker"). She ran upstairs and away from the speaker. The **了** marks completion. The tree shows the directional complement layered in three parts: the direction (上), the location (楼), and the orientation (去). This pattern lets Mandarin pack a lot of spatial information into a compact phrase.',
         tree: {
             id: 'n42',
             role: 'Sentence',
@@ -213,7 +213,7 @@ export const directionalComplements: SentenceData[] = [
         chinese: '他从树上摘下来一个苹果。',
         pinyin: 'Tā cóng shù shàng zhāi xià lái yī gè píng guǒ.',
         translation: 'He plucked an apple down from the tree.',
-        explanation: '**他** ("he") is the Topic. The location phrase **从树上** ("from the tree") sets the starting point. The verb **跳** ("jump") combines with the directional complement **下来** ("down toward the speaker") to form **跳下来** ("jump down"). This is a straightforward direction + perspective complement. The tree shows 从树上 as an Adjunct (setting background), followed by the verb with its directional result. Compare: 跳上去 ("jump up, away from speaker"), 跳进去 ("jump in, away from speaker"). The direction word and perspective word each add a layer of meaning.',
+        explanation: '**他** ("he") is the Topic. A location phrase **从树上** ("from the tree") sets the starting point. The verb **摘** ("pluck/pick") combines with the directional complement **下来** ("down toward the speaker"): **下** indicates downward motion, and **来** signals movement toward the speaker. The object **一个苹果** ("an apple") comes after the directional complement, which is the normal position when the object is indefinite. The tree shows the location adjunct, the verb-direction compound, and the post-verbal object in sequence.',
         tree: {
             id: 'n43',
             role: 'Sentence',

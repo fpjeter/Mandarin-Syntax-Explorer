@@ -150,7 +150,7 @@ export const discourseContext: SentenceData[] = [
         chinese: '已经吃过了。',
         pinyin: 'Yǐ jīng chī guò le.',
         translation: '(I) have already eaten.',
-        explanation: 'A common short answer. The Topic is again implied (the book, still carried from the earlier context). The Comment is just **也想看** ("also wants to read it"), where **也** ("also") subtly references the first speaker without naming them. The object of 看 ("read") is dropped entirely. Both speakers know what is being read. The tree shows a compact structure with a ghost node standing in for the book.',
+        explanation: 'A common short answer. The Topic (the speaker, "I") is implied from the previous context. The Comment is just the verb phrase: **已经** ("already") + **吃过了** ("have eaten," with the experiential **过** and completion **了**). This stacking of 过 + 了 is natural when confirming a completed experience: "I have already eaten." The ghost node in the tree shows where the dropped Topic would sit.',
         discourseContext: {
             chinese: '你吃饭了吗？',
             pinyin: 'Nǐ chī fàn le ma?',
@@ -176,7 +176,7 @@ export const discourseContext: SentenceData[] = [
         chinese: '今天特别累。',
         pinyin: 'Jīn tiān tè bié lèi.',
         translation: '(I am) especially tired today.',
-        explanation: 'In conversational Mandarin, the speaker often drops both the topic and the object when context makes them obvious. Here, the implied topic ("I") and the implied object (the book) are both ghost nodes. The Comment uses **告诉** ("tell") to create a pivotal construction: **他** ("him") is simultaneously the object of "tell" and the actor of what follows. The instruction **看完了就给我** ("when you finish reading, give it to me") chains two more actions, all still referencing the invisible book.',
+        explanation: 'The Topic ("I") is dropped because it is obvious from the conversation. The Comment fills the entire sentence: **今天** ("today") is a time adjunct, **特别** ("especially") sets the degree, and **累** ("tired") is the main adjective functioning as the predicate. No verb is needed; Chinese adjectives can serve as the main predicate on their own. The tree shows this flat structure: time + degree + adjective, with a ghost node for the implied speaker.',
         discourseContext: {
             chinese: '你今天感觉怎么样？',
             pinyin: 'Nǐ jīn tiān gǎn jué zěn me yàng?',
@@ -201,7 +201,7 @@ export const discourseContext: SentenceData[] = [
         chinese: '早就回家了。',
         pinyin: 'Zǎo jiù huí jiā le.',
         translation: '(He) went home a long time ago.',
-        explanation: 'When someone asks where a person is, the reply often drops the person entirely. The Topic **他** ("he") is stated just once. The Comment uses **让** to create a pivotal construction: **弟弟** ("little brother") is the object of 让 and the actor of what follows. The instruction is **先看** ("read first"). The book is completely absent from the sentence. Five exchanges in, and the book has been named only once, at the very start. Mandarin threads context silently through discourse, and the tree\'s ghost nodes make that thread visible.',
+        explanation: 'When someone asks "where is he?", the reply drops the person entirely. The Topic **他** ("he") is implied from the question. The Comment is: **早就** ("long ago already") + **回家了** ("went home," with completion 了). The **早就** emphasizes that the going-home happened well before the question was asked. The tree shows a ghost node for the dropped Topic and the time-emphasis adjunct **早就** before the verb.',
         discourseContext: {
             chinese: '他去哪儿了？',
             pinyin: 'Tā qù nǎ er le?',

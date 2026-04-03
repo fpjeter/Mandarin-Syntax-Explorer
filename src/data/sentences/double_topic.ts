@@ -7,7 +7,7 @@ export const doubleTopic: SentenceData[] = [
         chinese: '那家饭馆，菜很好吃，价钱也不贵。',
         pinyin: 'Nà jiā fàn guǎn, cài hěn hǎo chī, jià qián yě bù guì.',
         translation: 'That restaurant, the food is delicious and the price is not expensive either.',
-        explanation: 'This sentence has **two layers of Topic**. The outer Topic, **这道菜** ("this dish"), sets the general frame: "as for this dish..." Then inside the Comment, a second Topic appears: **味道** ("the flavor"). Only after both Topics are in place does the actual Comment arrive: **好极了** ("is absolutely wonderful"). English would merge this into one sentence ("This dish tastes wonderful"), but Mandarin separates the frame from the focus. The tree shows this nesting clearly: the outer Topic contains the inner Topic, which contains the final Comment. This double-Topic pattern is very natural in spoken Mandarin.',
+        explanation: 'This sentence has **two layers of Topic**. The outer Topic, **那家饭馆** ("that restaurant"), sets the general frame: "as for that restaurant..." Inside the Comment, two parallel sub-comments share this frame: **菜很好吃** ("the food is delicious") and **价钱也不贵** ("the price is also not expensive"). The **也** ("also") links the two points. The tree shows the restaurant as the outer Topic, with the two parallel evaluations branching from the Comment.',
         tree: {
             id: 'n25',
             role: 'Sentence',
@@ -96,7 +96,7 @@ export const doubleTopic: SentenceData[] = [
         chinese: '大象，鼻子长，耳朵大。',
         pinyin: 'Dà xiàng, bí zi cháng, ěr duo dà.',
         translation: 'Elephants, their trunk is long and their ears are big.',
-        explanation: 'The classic whole-part double Topic pattern. **大象** ("elephant") is the outer Topic, setting the frame: "as for elephants..." Inside the Comment, a second Topic narrows the focus to a specific part: **鼻子** ("trunk/nose"). Only then comes the actual description: **很长** ("is very long"). English would say "Elephants have long trunks" or "An elephant\'s trunk is very long." Mandarin first states the whole, then zooms into the part, then comments on it. The tree nests the inner Topic inside the outer one\'s Comment.',
+        explanation: 'The classic whole-part double Topic pattern. **大象** ("elephant") is the outer Topic, setting the frame: "as for elephants..." Inside, two body parts serve as inner Topics with their own Comments: **鼻子长** ("trunk is long") and **耳朵大** ("ears are big"). No verb "is" is needed; the adjectives **长** and **大** serve directly as predicates. The tree shows the elephant as the outer frame, with the two body-part descriptions as parallel branches underneath.',
         tree: {
             id: 'n26',
             role: 'Sentence',
@@ -159,7 +159,7 @@ export const doubleTopic: SentenceData[] = [
         chinese: '这件事，我觉得你的想法很有道理。',
         pinyin: 'Zhè jiàn shì, wǒ jué de nǐ de xiǎng fǎ hěn yǒu dào lǐ.',
         translation: 'As for this matter, I think your idea makes a lot of sense.',
-        explanation: 'This sentence has **three layers of nesting**. The outermost Topic **他** ("he") sets the person. Inside the Comment, a second Topic narrows to **中文** ("Chinese language"). Inside that Comment, the actual evaluation arrives: **说得很好** ("speaks very well"), which itself uses a degree complement (得 + 很好). The tree shows each layer: he > Chinese > speaks well. English compresses this into "He speaks Chinese very well," with normal SVO order. But Mandarin separates each frame, stacking them from general to specific.',
+        explanation: 'This sentence has **three layers of nesting**. The outermost Topic, **这件事** ("this matter"), sets the frame. Inside the Comment, **我** ("I") appears, and then **觉得** ("think/feel") opens an embedded clause: **你的想法很有道理** ("your idea makes a lot of sense"). The tree shows 这件事 as the outer Topic, with 我觉得 introducing the inner clause as an Embedded Clause, and 你的想法 as yet another Topic inside that clause.',
         tree: {
             id: 'n27',
             role: 'Sentence',
@@ -260,7 +260,7 @@ export const doubleTopic: SentenceData[] = [
         chinese: '一个人犯的错，跟他的性格是分不开的。',
         pinyin: 'Yí gè rén fàn de cuò, gēn tā de xìng gé shì fēn bù kāi de.',
         translation: 'The mistakes a person makes are inseparable from their character.',
-        explanation: 'A modern take on 人之过也，各于其党 (from Confucius: "A person\'s faults belong to their category"). The classical 之 (possessive) and 也 (assertive) become modern 的 and 是. The tree shows a double Topic structure: the outer Topic **一个人** ("a person") sets the frame, and an inner Topic **他的错误** ("his mistakes") narrows the focus. The Comment then delivers the judgment using 是...的: **是跟他的性格有关的** ("are related to his character"). This nesting is how Mandarin builds complex judgments: set the big frame, narrow to the specific, then comment.',
+        explanation: 'A modern take on 人之过也，各于其党 (from Confucius). The Topic is a complex noun phrase: **一个人犯的错** ("the mistakes a person makes"), where **犯的** is a relative clause modifying **错** ("mistakes"). The Comment uses a **跟** comparison and a negative potential complement: **跟他的性格是分不开的** ("are inseparable from his character"). The **分不开** is a potential complement: the result of separating *cannot* be achieved. The tree shows the relative clause inside the Topic and the comparison frame inside the Comment.',
         tree: {
             id: 's92-root', role: 'Sentence', children: [
                 { id: 's92-t', role: 'Topic', children: [

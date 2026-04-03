@@ -7,7 +7,7 @@ export const potentialComplements: SentenceData[] = [
         chinese: '这道题太难，我做不出来。',
         pinyin: 'Zhè dào tí tài nán, wǒ zuò bù chū lái.',
         translation: 'This question is too hard; I can\'t work it out.',
-        explanation: '**你放心** ("don\'t worry") sets a reassuring tone at the start. The main event follows: **我一定做得到** = 做 ("do") + 得 (able) + 到 ("arrive at, achieve"). This is the positive form of the potential complement: I *can* achieve it. Compare with the negative: 做不到 ("cannot achieve it"). The 得 signals ability; the complement 到 describes the result (reaching the goal). This pattern is extremely common for expressing confidence or doubt: 看得见/看不见 ("can see / cannot see"), 听得清/听不清 ("can hear clearly / cannot hear clearly").',
+        explanation: 'This sentence has two clauses. First, **这道题太难** ("this question is too hard") sets the context: **这道题** ("this question") is the Topic, with **太难** ("too hard") as the Comment. Then a second clause follows: **我做不出来** ("I cannot work it out"). The verb **做** ("do") + **不** + **出来** ("come out") forms a negative potential complement: the result (coming out with an answer) *cannot* be achieved. The 不 inserted between the verb and the result is what makes it "potential": it says whether the outcome is achievable or not.',
         tree: {
             id: 'n34',
             role: 'Sentence',
@@ -97,7 +97,7 @@ export const potentialComplements: SentenceData[] = [
         chinese: '你放心，一个小时就写得完。',
         pinyin: 'Nǐ fàng xīn, yī gè xiǎo shí jiù xiě de wán.',
         translation: 'Don\'t worry, (you) can finish writing it in an hour.',
-        explanation: '**你放心** ("don\'t worry") sets a reassuring tone. The main event features a positive potential complement: **写得完** ("can finish writing"). By inserting **得** between the verb 写 ("write") and the result 完 ("finish"), you confirm that the writing *can* reach completion. Flipping the switch to **不** would block it: 写不完 ("cannot finish writing"). One tiny syllable changes the entire meaning. This is the same internal switch you see in all potential complement sentences.',
+        explanation: '**你放心** ("don\'t worry") is a reassurance opener. The main clause is **一个小时就写得完**: within one hour, the writing *can* be finished. The verb **写** ("write") + **得** + **完** ("finish") forms an affirmative potential complement: the result (finishing) *can* be achieved. The **得** inserted between verb and result signals possibility: compare 写得完 ("can finish writing") with 写不完 ("cannot finish writing"). The **就** ("only, just") emphasizes how quickly it can be done.',
         tree: {
             id: 'n35',
             role: 'Sentence',
@@ -177,7 +177,7 @@ export const potentialComplements: SentenceData[] = [
         chinese: '这本书你看得懂吗？',
         pinyin: 'Zhè běn shū nǐ kàn de dǒng ma？',
         translation: 'Can you understand this book?',
-        explanation: 'A **double-Topic** structure with a potential complement question. The outer Topic **这个字** ("this character") sets the frame: "as for this character..." The inner Topic zooms in on a specific aspect: what about reading it? The potential complement **看得出来看不出来** repeats the positive and negative forms back-to-back to form a question: "can you make it out, or not?" This is the A-not-A question pattern applied to potential complements. The tree shows both halves of the question nested inside the Comment.',
+        explanation: 'A **double-Topic** structure with a potential complement question. The outer Topic **这本书** ("this book") sets the frame: "as for this book..." Inside, **你** ("you") is the actor. The verb **看** ("read") + **得** + **懂** ("understand") forms an affirmative potential complement: can the understanding be achieved? The **吗** at the end makes it a yes/no question. Compare 看得懂 ("can understand by reading") with 看不懂 ("cannot understand"). The tree shows the book as the outer Topic and the potential complement nested inside.',
         tree: {
             id: 'n44',
             role: 'Sentence',
@@ -249,7 +249,7 @@ export const potentialComplements: SentenceData[] = [
         chinese: '昨晚我睡不着，一直到天亮。',
         pinyin: 'Zuó wǎn wǒ shuì bu zháo, yī zhí dào tiān liàng.',
         translation: 'Last night I couldn\'t fall asleep, right up until dawn.',
-        explanation: 'Framed by **昨晚** ("last night"), the Topic is **我** ("I"). The Comment describes a failed attempt using two potential complements. First, **睡不着** = 睡 ("sleep") + 不 + 着 ("achieve the state"), meaning "unable to fall asleep." Then, after tossing and turning, **怎么也睡不着**: the 怎么也 ("no matter what") emphasizes the impossibility. The 着 complement specifically means "achieving or entering a state." Compare: 找着 ("found it, achieved finding") versus 找不着 ("cannot find it"). The tree shows both potential complements in sequence.',
+        explanation: 'Framed by **昨晚** ("last night"), the Topic is **我** ("I"). The verb **睡** ("sleep") + **不** + **着** ("settle into") forms a negative potential complement: **睡不着** means the result of falling asleep *cannot* be achieved, i.e., "cannot fall asleep." The continuation **一直到天亮** ("all the way until dawn") extends the scene. The tree shows the time adjunct at the top, then the potential complement, then the duration phrase. This is one of the most common potential complements in daily life.',
         tree: {
             id: 'n45',
             role: 'Sentence',
