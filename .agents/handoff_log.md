@@ -45,66 +45,31 @@ Append a new block to `## Pending Requests` using this exact format:
 ## Active Assignments
 
 ### [2026-04-02] Orchestrator → Linguistics Specialist
-**Status**: ✅ Done
-**Task**: Accuracy Review of Grammar Guide Content
-**Branch**: `feature/grammar-guide-review`
-**Sequence**: Ticket 1 of 2 (must complete before Ticket 2 begins)
-
-**Context**: We have two grammar guide components that serve as the primary educational reference for learners: `GrammarGuide.tsx` (modern Mandarin) and `ClassicalGrammarGuide.tsx` (classical Chinese). These need a thorough accuracy review before the Educational Publisher does a fresh rewrite.
-
-**Action Required**:
-1. Check out `feature/grammar-guide-review`.
-2. Read `src/components/GrammarGuide.tsx` (226 lines). Review all prose content:
-   - Section 1: "Topic and Comment" (lines 93-112)
-   - Section 2: "Nesting and Embedding" (lines 114-122)
-   - Section 3: "Word Order Rules" (lines 124-144)
-   - Section 4: "Parallel Sentences" (lines 146-152)
-   - Section 5: "Why subjects disappear" (lines 154-165)
-   - "Tree labels at a glance" definitions (lines 168-188)
-   - "A note on this grammar model" footnote (lines 55-71)
-3. Read `src/components/ClassicalGrammarGuide.tsx` (284 lines). Review all prose content:
-   - "The big idea" (lines 12-34)
-   - "Shared Structure with Modern Mandarin" (lines 36-45)
-   - "Classical vs. Modern" comparison grid (lines 48-70)
-   - "Key function words" definitions (lines 72-97)
-   - "之: the backbone particle" examples (lines 99-122)
-   - "Rhetorical questions" (lines 124-149)
-   - "Negation" (lines 151-173)
-   - "Coverbs" (lines 175-214)
-   - "而: the connective" (lines 216-236)
-   - "Tree labels at a glance" definitions (lines 238-257)
-   - "Using the tree" tips (lines 259-280)
-4. For each section, check for:
-   - Factual grammar inaccuracies
-   - Misleading simplifications
-   - Missing important caveats or exceptions
-   - Incorrect Chinese examples or translations
-   - Any remaining FLS jargon or academic terminology
-   - Content gaps (e.g., important grammar concepts not covered)
-5. Produce a report at `grammar_guide_review.md` in the project root, organized by file and section.
-6. Commit and push. Mark this ticket as ✅ Done.
-
-**CRITICAL**: Do NOT edit any component files. Your output is the review report only.
-
----
-
-### [2026-04-02] Orchestrator → Educational Publisher
 **Status**: 🔴 Active
-**Task**: Fresh Rewrite of Grammar Guide Content
-**Branch**: `feature/grammar-guide-review`
-**Sequence**: Ticket 2 of 2 (requires `grammar_guide_review.md` from Ticket 1)
+**Task**: Audit AST Type System and Role Mappings
+**Branch**: `develop` (report only, no source edits)
+
+**Context**: We now have 123 sentences using our `GrammarRole` type system. The grammar guide review already caught one disconnect (把/被 described as Adjuncts in the guide but mapped as Head Verbs in the tree). We need a comprehensive audit to ensure the type definitions, the actual role usage across all sentences, and the learner-facing label definitions are all consistent.
 
 **Action Required**:
-1. Check out `feature/grammar-guide-review`.
-2. Read `grammar_guide_review.md` (produced by the Linguistics Specialist).
-3. Read `explanations_pedagogy.md` for tone rules.
-4. Rewrite all prose content in `GrammarGuide.tsx` and `ClassicalGrammarGuide.tsx`:
-   - Incorporate all accuracy fixes from the review
-   - Follow all 7 pedagogy rules (especially: no em-dashes, no FLS jargon, warm tutor tone)
-   - Keep all React component structure, CSS classes, and JSX layout intact. Only modify string content.
-5. **CRITICAL**: Use `multi_replace_file_content` to edit. Do NOT use `sed`.
-6. Run `npm run lint && npx tsc --noEmit` to validate.
+1. Check out `develop`.
+2. Read `src/types/grammar.ts` to understand the full `GrammarRole` type definition and `GrammarNodeData` interface.
+3. Scan all 123 sentences across `src/data/sentences/` to catalog:
+   - Every distinct `role` value used in practice
+   - Every distinct `subRole` value used in practice
+   - Any role+subRole combinations that seem inconsistent across categories
+4. Cross-reference with:
+   - `src/data/glossary.ts` and `src/data/classicalGlossary.ts` (do all used roles have glossary entries?)
+   - `src/components/GrammarGuide.tsx` "Tree labels at a glance" section (do the definitions match actual usage?)
+   - `src/components/GrammarNode.tsx` (does the rendering logic handle all role values correctly?)
+5. For each issue found, document:
+   - **Inconsistency**: what doesn't match
+   - **Where**: which files/sentences are affected
+   - **Recommendation**: how to fix it
+6. Produce a report at `ast_type_audit.md` in the project root.
 7. Commit and push. Mark this ticket as ✅ Done.
+
+**CRITICAL**: Do NOT edit any source files. Your output is the audit report only.
 
 
 ## Resolved
