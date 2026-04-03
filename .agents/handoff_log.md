@@ -46,31 +46,69 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ### [2026-04-02] Orchestrator → Educational Publisher
 **Status**: 🔴 Active
-**Task**: Pedagogical Review of AST Type System (Learner Impact Assessment)
-**Branch**: `develop` (report only, no source edits)
+**Task**: Fix Glossary, Guide Labels, and Dead Type (Text-Only Changes)
+**Branch**: `feature/ast-type-fixes`
+**Sequence**: Ticket 1 of 3
 
-**Context**: The Linguistics Specialist completed `ast_type_audit.md`, identifying 6 structural issues with the type system. Now we need **your perspective**: how do these issues actually affect a learner using the tool? Which ones cause real confusion, and which are invisible to the end user?
+**Context**: See `ast_type_audit.md` and `ast_pedagogical_review.md` for full details. This ticket handles all text-only fixes that don't require data or rendering changes.
 
 **Action Required**:
-1. Check out `develop`.
-2. Read `ast_type_audit.md` thoroughly.
-3. Read `explanations_pedagogy.md` for our pedagogical standards.
-4. For each of the 6 issues, evaluate from a **learner's perspective**:
-   - Does this issue cause visible confusion in the tree visualization?
-   - Does it create contradictions between what the explanation says and what the tree shows?
-   - Does it undermine the "guided tour" experience?
-   - Would a beginner-to-intermediate learner actually notice it?
-5. Additionally, do your **own independent scan** of learner-facing surfaces:
-   - Are there any `subRole` labels shown in the tree that use jargon a learner wouldn't understand?
-   - Are tooltip/hover descriptions clear and consistent?
-   - Are there places where the tree labels feel confusing or inconsistent from a user's point of view?
-6. Produce a pedagogical supplement report at `ast_pedagogical_review.md` in the project root. For each issue:
-   - **Learner impact**: None / Low / Medium / High
-   - **What the learner sees**: concrete description of the confusion
-   - **Recommendation**: what should change to improve the learning experience
+1. Check out `feature/ast-type-fixes`.
+2. **Fix glossary contradiction** (`src/data/glossary.ts`): Rewrite the `Preposition` entry to remove 把 and 被 as examples. Use 比 (compared to), 跟 (with/and), 像 (like/resembling), 在 (at/in) instead. Use the headline and detail text from `ast_pedagogical_review.md`.
+3. **Remove dead `Verb` glossary entry** (`src/data/glossary.ts`): Delete the entry for the `Verb` role since it's never used in any tree.
+4. **Expand guide labels** (`src/components/GrammarGuide.tsx`): Add `Particle`, `Subject`, and `Embedded Clause` to the "Tree labels at a glance" array. Use the descriptions from `ast_pedagogical_review.md`:
+   - Particle: "Small grammar words like 了, 吗, 的, 着 that show tense, mood, or structure"
+   - Subject: "The person or thing doing the action inside a comment"
+   - Embedded Clause: "A complete mini-sentence nested inside a larger one"
+5. Use `multi_replace_file_content`. Do NOT use `sed`.
+6. Run `npm run lint && npx tsc --noEmit` to validate.
 7. Commit and push. Mark this ticket as ✅ Done.
 
-**CRITICAL**: Do NOT edit any source files. Your output is the review report only.
+---
+
+### [2026-04-02] Orchestrator → Data Linguist
+**Status**: ⏳ Blocked (waiting for Ticket 1)
+**Task**: Migrate 把/被 Roles and Normalize Adjunct SubRoles
+**Branch**: `feature/ast-type-fixes`
+**Sequence**: Ticket 2 of 3
+
+**Action Required**:
+1. Check out `feature/ast-type-fixes` and pull latest.
+2. **把/被 migration**: In `ba_construction.ts` and `bei_passive.ts`, find all older sentences where 把 or 被 is mapped as `role: 'Preposition'`. Change them to `role: 'Head Verb'` with appropriate `subRole` (`BA marker` or `passive marker (BEI)`). Do NOT change tree structure, only the role label.
+3. **Adjunct subRole normalization**: Across all 19 sentence files, normalize the visible Adjunct subRole strings to a controlled vocabulary:
+   - `time` (for all 时间状语)
+   - `location` (for all 地点状语)
+   - `manner` (for all 方式状语)
+   - `negation` (for all 不/没/别)
+   - `degree` (for all 程度状语)
+   - `ba-construction` (for all 把-related)
+   - `bei-construction` (for all 被-related)
+   - `scope` (for 都/也/连)
+   - `frequency` (for 经常/总是 etc.)
+   - `conditional` (for 如果/只要/即使/除非)
+   - `consequence` (for 就/才)
+   - `concession` (for 虽然/但是)
+   - `correlative` (for 不但/而且/越...越)
+   - `instrument` (for 用/以)
+   - `rhetorical` (for 难道/怎么)
+4. Use `multi_replace_file_content`. Do NOT use `sed`.
+5. Run `npm run qa && npm run lint` to validate.
+6. Commit and push. Mark this ticket as ✅ Done.
+
+---
+
+### [2026-04-02] Orchestrator → Frontend Engineer
+**Status**: ⏳ Blocked (waiting for Ticket 2)
+**Task**: Add Preposition Rendering Color
+**Branch**: `feature/ast-type-fixes`
+**Sequence**: Ticket 3 of 3
+
+**Action Required**:
+1. Check out `feature/ast-type-fixes` and pull latest.
+2. In `src/components/GrammarNode.tsx`, add a dedicated color case for `'Preposition'` in both the modern and classical `getNodeColors` switches.
+3. Use a warm, muted tone (stone/amber-brown family) to suggest "supporting player" status, distinct from Adjunct (rose) and Head Verb (teal).
+4. Run `npm run lint && npx tsc --noEmit` to validate.
+5. Commit and push. Mark this ticket as ✅ Done.
 
 
 ## Resolved
