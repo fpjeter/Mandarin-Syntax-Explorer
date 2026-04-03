@@ -315,7 +315,7 @@ export const conditionalSentences: SentenceData[] = [
                     subRole: 'result clause',
                     children: [
                         { id: 's123-c-conj', role: 'Adjunct', subRole: 'conjunction', text: { hanzi: '否则', pinyin: 'fǒu zé', translation: 'otherwise' } },
-                        { id: 's123-c-t', role: 'Topic', subRole: 'inner topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
+                        { id: 's123-c-subj', role: 'Subject', subRole: 'actor', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
                         { id: 's123-c-neg', role: 'Adjunct', subRole: 'negation', text: { hanzi: '不', pinyin: 'bú', translation: 'not' } },
                         { id: 's123-c-mod', role: 'Adjunct', subRole: 'modal', text: { hanzi: '会', pinyin: 'huì', translation: 'will' } },
                         { id: 's123-c-hv', role: 'Head Verb', text: { hanzi: '原谅', pinyin: 'yuán liàng', translation: 'forgive' } },
