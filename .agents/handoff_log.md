@@ -45,7 +45,7 @@ Append a new block to `## Pending Requests` using this exact format:
 ## Active Assignments
 
 ### [2026-04-02] Orchestrator → Linguistics Specialist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Audit AST Type System and Role Mappings
 **Branch**: `develop` (report only, no source edits)
 
