@@ -87,7 +87,7 @@ Append a new block to `## Pending Requests` using this exact format:
 ---
 
 ### [2026-04-02] Orchestrator → Frontend Engineer
-**Status**: ⏳ Blocked (waiting for Ticket 2)
+**Status**: 🔴 Active
 **Task**: Add Preposition Rendering Color
 **Branch**: `feature/ast-type-fixes`
 **Sequence**: Ticket 3 of 3
