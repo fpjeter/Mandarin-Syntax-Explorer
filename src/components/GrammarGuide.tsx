@@ -53,21 +53,16 @@ const LinguisticFootnote: React.FC = () => {
             </button>
             <div ref={contentRef} className={`overflow-hidden transition-all duration-300 ease-in-out ${open ? 'max-h-[500px] opacity-100 mt-2.5' : 'max-h-0 opacity-0'}`}>
                 <p className="text-[10px] text-slate-400 leading-relaxed">
-                    These trees use a <strong className="text-slate-300">teaching-oriented framework</strong>, not
-                    standard generative syntax (X-bar theory / Minimalism). This follows the Chinese
-                    pedagogical tradition (赵元任, 朱德熙) which treats Mandarin as a{' '}
-                    <em>topic-prominent</em> language.
+                    These trees use a <strong className="text-slate-300">Topic-Comment system</strong>, which is how Chinese linguists have traditionally described their own language. It is different from the grammar systems you might have seen in Western linguistics textbooks.
                 </p>
                 <ul className="mt-2 space-y-1 text-[10px] text-slate-400 leading-relaxed list-disc list-inside marker:text-slate-600">
-                    <li><strong className="text-slate-300">Topic–Comment</strong> is the primary structural split, not Subject–Predicate</li>
-                    <li><strong className="text-slate-300">Adjunct</strong> maps directly to 状语, the pre-verbal modifier slot central to Chinese grammar</li>
-                    <li><strong className="text-slate-300">Complement subtypes</strong> (结果补语, 趋向补语, etc.) are shown as badges, not separate structural positions</li>
-                    <li><strong className="text-slate-300">Separable verbs</strong> (离合词) are explicitly decomposed into verb and object halves</li>
-                    <li><strong className="text-slate-300">Dropped pronouns</strong> appear as visible ghost nodes with coreference links, rather than abstract empty categories</li>
+                    <li><strong className="text-slate-300">Topic and Comment</strong> is the core structural split. Every sentence names what it is about (Topic), then says something about it (Comment).</li>
+                    <li><strong className="text-slate-300">Why 把 and 被 are labeled "Head Verb."</strong> You may have learned that 把 and 被 are prepositions or markers. That is a valid description. In our trees, we label them as Head Verbs because it lets us show 把, 被, 让, and 叫 sentences using the same consistent tree shape. You do not need to pick sides; the grammar works the same way regardless of the label.</li>
+                    <li><strong className="text-slate-300">Ghost nodes.</strong> When Mandarin drops a pronoun because the listener already knows who is being discussed, the tree shows a faded "ghost" node where that word would have been. This makes the underlying logic visible without cluttering the sentence.</li>
+                    <li><strong className="text-slate-300">Complement subtypes</strong> (result, direction, degree, potential) are shown as badges on the tree nodes, so you can tell them apart at a glance.</li>
                 </ul>
                 <p className="mt-2 text-[10px] text-slate-500 leading-relaxed italic">
-                    Role names like 状语, 补语, and 兼语 map directly to the terms learners encounter
-                    in Chinese-language textbooks.
+                    The labels in these trees (Topic, Comment, Adjunct, Complement) correspond to terms used in Chinese-language grammar textbooks (主题, 评论, 状语, 补语), so what you learn here transfers directly to Chinese-medium study materials.
                 </p>
             </div>
         </section>
@@ -93,10 +88,10 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                 <section>
                     <h3 className="text-[10px] font-bold uppercase tracking-widest text-fuchsia-400 mb-1.5">1. Topic and Comment</h3>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
-                        Every Mandarin sentence starts with the same move: name what you are talking about, then say something about it.
-                        The first part is the <GlossaryLink role="Topic" onOpenGlossary={onOpenGlossary}><span className="text-fuchsia-400 font-bold">Topic</span></GlossaryLink>,
-                        and the second is the <GlossaryLink role="Comment" onOpenGlossary={onOpenGlossary}><span className="text-blue-400 font-bold">Comment</span></GlossaryLink>.
-                        This Topic-Comment pair is the building block of the entire language.
+                        Mandarin sentences follow one simple pattern: first, name what you want to talk about. Then, say something about it.
+                        The first part is the <GlossaryLink role="Topic" onOpenGlossary={onOpenGlossary}><span className="text-fuchsia-400 font-bold">Topic</span></GlossaryLink> (the frame),
+                        and everything that follows is the <GlossaryLink role="Comment" onOpenGlossary={onOpenGlossary}><span className="text-blue-400 font-bold">Comment</span></GlossaryLink> (what you say about it).
+                        Once you see this split, every sentence in the app starts to make sense.
                     </p>
                     {/* Mini example */}
                     <div className="mt-3 bg-slate-800/50 border border-slate-700/40 rounded-xl px-3 py-2.5">
@@ -106,7 +101,7 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                         </div>
                         <p className="text-[10px] text-slate-400 mt-1.5 italic">
                             <span className="text-fuchsia-400 not-italic font-semibold">As for this elephant,</span>{' '}
-                            <span className="text-blue-400 not-italic font-semibold">its nose is long.</span>
+                            <span className="text-blue-400 not-italic font-semibold">the trunk is very long.</span>
                         </p>
                     </div>
                 </section>
@@ -115,9 +110,8 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                 <section>
                     <h3 className="text-[10px] font-bold uppercase tracking-widest text-violet-400 mb-1.5">2. Nesting and Embedding</h3>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
-                        Because a Topic-Comment unit is self-contained, an entire sentence can shrink down and fit completely inside another one. 
-                        These are called <strong className="text-violet-300">Embedded Clauses</strong>. 
-                        For example, a causative verb like 让 ("let") or 叫 ("tell") does not just act on a person; it introduces a whole new clause where that person does something.
+                        A Topic-Comment pair is a complete unit, which means an entire sentence can shrink down and fit inside another sentence as an <strong className="text-violet-300">Embedded Clause</strong>.
+                        You will see this with verbs like 让 ("let"), 叫 ("tell"), and 被 (passive): they do not just act on a person, they open up a whole mini-sentence where that person does something. The tree shows this nesting clearly.
                     </p>
                 </section>
 
@@ -125,8 +119,7 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                 <section>
                     <h3 className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-1.5">3. Word Order Rules</h3>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
-                        Inside the Comment, modifiers follow a strict order. 
-                        Time, place, and manner information must come <strong className="text-emerald-300">before</strong> the verb, not after it. This is one of the biggest differences from English, and the tree makes it visible by stacking these elements in order.
+                        Inside the Comment, modifiers line up in a fixed order: time first, then place, then manner, then the verb. Everything that sets the scene comes <strong className="text-emerald-300">before</strong> the action, not after it. If you have ever wondered why Mandarin word order feels backwards compared to English, this is why. The tree stacks these elements so you can see the order at a glance.
                     </p>
                     <div className="mt-2 flex flex-wrap gap-1.5 items-center">
                         {['Time', 'Place', 'Manner', 'Verb'].map((label, i) => (
@@ -147,20 +140,18 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                 <section>
                     <h3 className="text-[10px] font-bold uppercase tracking-widest text-orange-400 mb-1.5">4. Parallel Sentences</h3>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
-                        When Mandarin compares or contrasts two independent thoughts ("Hardship makes you grow, comfort makes you regress"), they sit side by side as <strong className="text-orange-300">Parallel Sentences</strong>. No connecting words like "and" or "but" are needed. Watch out: if a sentence consists of two independent, contrasting ideas, the first half is not the "Topic" of the second. They are equals.
+                        Sometimes Mandarin places two complete thoughts side by side with no connecting word at all: "Hardship makes you grow, comfort makes you decline." These are <strong className="text-orange-300">Parallel Sentences</strong>. Neither half is the "Topic" of the other; they are equal partners. You will see this pattern especially in proverbs and classical-bridge sentences.
                     </p>
                 </section>
 
                 {/* ── 5. Dropped Subjects ── */}
                 <section>
-                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-rose-400 mb-1.5">Why subjects disappear</h3>
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-rose-400 mb-1.5">Why words disappear</h3>
                     <p className="text-[11px] text-slate-300 leading-relaxed">
-                        Once the Topic is set, the listener knows who is being talked about.
-                        So Mandarin often skips the subject inside the Comment entirely.
-                        This is called{' '}
-                        <span className="text-rose-400 font-bold">subject omission</span>.
-                        The tree shows missing words as faded{' '}
-                        <span className="text-rose-300 font-mono text-[10px]">[ghost]</span> nodes.
+                        Once everyone knows who or what is being discussed, Mandarin freely drops the word from the sentence. This happens constantly in natural speech:
+                        "Have you eaten?" "Eaten." (No "I" needed.) In the tree, these missing words appear as faded{' '}
+                        <span className="text-rose-300 font-mono text-[10px]">[ghost]</span>{' '}
+                        nodes, so you can see where they would have been.
                     </p>
                 </section>
 
@@ -169,13 +160,13 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                     <h3 className="text-[10px] font-bold uppercase tracking-widest text-amber-400 mb-2">Tree labels at a glance</h3>
                     <div className="space-y-1.5">
                         {([
-                            ['Adjunct', 'Pre-verbal modifier: time, place, manner, or construction (把/被)'],
-                            ['Attributive', 'A word modifying a noun, always placed before it'],
-                            ['Complement', 'Extra info after the verb: result, direction, degree, or possibility'],
-                            ['Pivot', 'A noun acting as object of one verb and subject of the next'],
-                            ['Copula', 'The linking verb 是 (is/was)'],
-                            ['Head Verb', 'The core verb, marked with a thick bottom border'],
-                            ['Head Noun', 'The core noun in a noun phrase, also thick-bordered'],
+                            ['Adjunct', 'Sets the scene before the verb: time, place, manner, or condition'],
+                            ['Attributive', 'Describes or limits a noun, always placed before it'],
+                            ['Complement', 'Follows the verb to add detail: result, direction, degree, or potential'],
+                            ['Pivot', 'A person who is the object of one verb and the actor of the next'],
+                            ['Copula', 'The linking verb 是 ("is")'],
+                            ['Head Verb', 'The main action word, marked with a thick bottom border'],
+                            ['Head Noun', 'The main noun in a noun phrase, also thick-bordered'],
                         ] as const).map(([label, desc]) => (
                             <div key={label} className="flex items-baseline gap-2">
                                 <GlossaryLink role={label as GrammarRole} onOpenGlossary={onOpenGlossary}>
@@ -216,10 +207,10 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
 
     return (
         <p className="text-[11px] text-slate-400 leading-relaxed italic">
-            Select a sentence from the list, then explore the tree by clicking{' '}
-            <span className="text-fuchsia-400 not-italic font-bold">TOPIC</span> and{' '}
-            <span className="text-blue-400 not-italic font-bold">COMMENT</span>.
-            Hover any label for a plain-English explanation.
+            Pick a sentence from the list to see its tree. Tap any{' '}
+            <span className="text-fuchsia-400 not-italic font-bold">TOPIC</span> or{' '}
+            <span className="text-blue-400 not-italic font-bold">COMMENT</span>{' '}
+            node to expand it, and hover any label for a quick explanation.
         </p>
     );
 };
