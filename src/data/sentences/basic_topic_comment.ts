@@ -708,7 +708,7 @@ export const basicTopicComment: SentenceData[] = [
                         {
                             id: 'n11-c-fei',
                             role: 'Adjunct',
-                            subRole: 'double-negation opener (fēi...bùkě)',
+                            subRole: 'negation',
                             text: { hanzi: '非', pinyin: 'fēi', translation: 'must / it must be that' }
                         },
                         {
@@ -754,7 +754,7 @@ export const basicTopicComment: SentenceData[] = [
                                 {
                                     id: 'n11-c-p-buke',
                                     role: 'Adjunct',
-                                    subRole: 'double-negation closure (fēi...bùkě)',
+                                    subRole: 'negation',
                                     text: { hanzi: '不可', pinyin: 'bù kě', translation: 'cannot avoid / must' }
                                 }
                             ]
@@ -799,7 +799,7 @@ export const basicTopicComment: SentenceData[] = [
                         {
                             id: 'n57-fei',
                             role: 'Adjunct',
-                            subRole: 'necessity marker (非)',
+                            subRole: 'negation',
                             text: { hanzi: '非', pinyin: 'fēi', translation: 'must / unless' },
                         },
                         {

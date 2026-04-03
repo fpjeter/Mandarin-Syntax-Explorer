@@ -114,7 +114,7 @@ export const aspectMarkers: SentenceData[] = [
                 { id: 's75-t', role: 'Topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
                 { id: 's75-c', role: 'Comment', children: [
                     { id: 's75-mt', role: 'Adjunct', subRole: 'time', text: { hanzi: '每天', pinyin: 'měi tiān', translation: 'every day' } },
-                    { id: 's75-dh', role: 'Adjunct', subRole: 'habitual', text: { hanzi: '都会', pinyin: 'dōu huì', translation: 'always will' } },
+                    { id: 's75-dh', role: 'Adjunct', subRole: 'frequency', text: { hanzi: '都会', pinyin: 'dōu huì', translation: 'always will' } },
                     { id: 's75-fx', role: 'Head Verb', text: { hanzi: '反省', pinyin: 'fǎn xǐng', translation: 'reflect on' } },
                     { id: 's75-zj', role: 'Object', text: { hanzi: '自己', pinyin: 'zì jǐ', translation: 'oneself' } },
                     { id: 's75-sc', role: 'Complement', subRole: 'frequency', text: { hanzi: '三次', pinyin: 'sān cì', translation: 'three times' } },
@@ -133,7 +133,7 @@ export const aspectMarkers: SentenceData[] = [
             id: 's81-root', role: 'Sentence', children: [
                 { id: 's81-t', role: 'Topic', isDropped: true, impliedText: '[现场]' },
                 { id: 's81-c', role: 'Comment', children: [
-                    { id: 's81-adv', role: 'Adjunct', subRole: 'time scope', text: { hanzi: '从来', pinyin: 'cóng lái', translation: 'ever/never' } },
+                    { id: 's81-adv', role: 'Adjunct', subRole: 'time', text: { hanzi: '从来', pinyin: 'cóng lái', translation: 'ever/never' } },
                     { id: 's81-neg', role: 'Adjunct', subRole: 'negation', text: { hanzi: '没有', pinyin: 'méi yǒu', translation: 'have not' } },
                     { id: 's81-guo', role: 'Particle', subRole: 'experiential aspect', text: { hanzi: '过', pinyin: 'guò', translation: '(past experience)' } },
                     { id: 's81-obj', role: 'Object', children: [
@@ -197,7 +197,7 @@ export const aspectMarkers: SentenceData[] = [
                         {
                             id: 's111-manner',
                             role: 'Adjunct',
-                            subRole: 'concurrent manner',
+                            subRole: 'manner',
                             children: [
                                 { id: 's111-vp-hv', role: 'Head Verb', text: { hanzi: '笑', pinyin: 'xiào', translation: 'smile/laugh' } },
                                 { id: 's111-vp-zhe', role: 'Particle', subRole: 'concurrent action', text: { hanzi: '着', pinyin: 'zhe', translation: '(ongoing background)' } }

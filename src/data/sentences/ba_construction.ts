@@ -32,11 +32,12 @@ export const baConstruction: SentenceData[] = [
                         {
                             id: 'n3-p-ba',
                             role: 'Adjunct',
-                            subRole: 'bǎ-construction',
+                            subRole: 'ba-construction',
                             children: [
                                 {
                                     id: 'n3-p-ba-prep',
-                                    role: 'Preposition',
+                                    role: 'Head Verb',
+                                    subRole: 'BA marker',
                                     text: { hanzi: '把', pinyin: 'bǎ', translation: '(object fronting)' }
                                 },
                                 {
@@ -178,11 +179,12 @@ export const baConstruction: SentenceData[] = [
                         {
                             id: 'n4-p-ba',
                             role: 'Adjunct',
-                            subRole: 'bǎ-construction',
+                            subRole: 'ba-construction',
                             children: [
                                 {
                                     id: 'n4-p-ba-prep',
-                                    role: 'Preposition',
+                                    role: 'Head Verb',
+                                    subRole: 'BA marker',
                                     text: { hanzi: '把', pinyin: 'bǎ', translation: '(object fronting)' }
                                 },
                                 {
@@ -261,11 +263,12 @@ export const baConstruction: SentenceData[] = [
                         {
                             id: 'n28-ba',
                             role: 'Adjunct',
-                            subRole: 'bǎ-construction',
+                            subRole: 'ba-construction',
                             children: [
                                 {
                                     id: 'n28-ba-prep',
-                                    role: 'Preposition',
+                                    role: 'Head Verb',
+                                    subRole: 'BA marker',
                                     text: { hanzi: '把', pinyin: 'bǎ', translation: '(object fronting)' },
                                 },
                                 {
@@ -320,11 +323,12 @@ export const baConstruction: SentenceData[] = [
                         {
                             id: 'n29-ba',
                             role: 'Adjunct',
-                            subRole: 'bǎ-construction',
+                            subRole: 'ba-construction',
                             children: [
                                 {
                                     id: 'n29-ba-prep',
-                                    role: 'Preposition',
+                                    role: 'Head Verb',
+                                    subRole: 'BA marker',
                                     text: { hanzi: '把', pinyin: 'bǎ', translation: '(object fronting)' },
                                 },
                                 {
@@ -449,7 +453,7 @@ export const baConstruction: SentenceData[] = [
                     id: 's127-c',
                     role: 'Comment',
                     children: [
-                        { id: 's127-c-neg', role: 'Adjunct', subRole: 'prohibition marker', text: { hanzi: '别', pinyin: 'bié', translation: 'don\'t' } },
+                        { id: 's127-c-neg', role: 'Adjunct', subRole: 'negation', text: { hanzi: '别', pinyin: 'bié', translation: 'don\'t' } },
                         {
                             id: 's127-ba-phrase',
                             role: 'Head Verb',

@@ -54,7 +54,7 @@ export const beiPassive: SentenceData[] = [
                                 {
                                     id: 'n6-c-p-bei-hv',
                                     role: 'Head Verb',
-                                    subRole: 'passive / undergo',
+                                    subRole: 'passive marker (BEI)',
                                     text: { hanzi: '被', pinyin: 'bèi', translation: 'suffer / undergo' }
                                 },
                                 {
@@ -139,7 +139,7 @@ export const beiPassive: SentenceData[] = [
                                 {
                                     id: 'n22-c-bei-hv',
                                     role: 'Head Verb',
-                                    subRole: 'passive / undergo',
+                                    subRole: 'passive marker (BEI)',
                                     text: { hanzi: '被', pinyin: 'bèi', translation: 'suffer / undergo' }
                                 },
                                 {
@@ -217,7 +217,7 @@ export const beiPassive: SentenceData[] = [
                                 {
                                     id: 'n48-bei-hv',
                                     role: 'Head Verb',
-                                    subRole: 'passive / undergo',
+                                    subRole: 'passive marker (BEI)',
                                     text: { hanzi: '被', pinyin: 'bèi', translation: 'suffer / undergo' },
                                 },
                                 {
@@ -290,7 +290,7 @@ export const beiPassive: SentenceData[] = [
                                 {
                                     id: 'n49-bei-hv',
                                     role: 'Head Verb',
-                                    subRole: 'passive / undergo',
+                                    subRole: 'passive marker (BEI)',
                                     text: { hanzi: '被', pinyin: 'bèi', translation: 'suffer / undergo' },
                                 },
                                 {
@@ -348,7 +348,7 @@ export const beiPassive: SentenceData[] = [
                 { id: 's80-t', role: 'Topic', text: { hanzi: '青色', pinyin: 'qīng sè', translation: 'blue dye' } },
                 { id: 's80-c1', role: 'Comment', subRole: 'extraction clause', children: [
                     { id: 's80-shi', role: 'Copula', text: { hanzi: '是', pinyin: 'shì', translation: 'is' } },
-                    { id: 's80-pp', role: 'Adjunct', subRole: 'source', text: { hanzi: '从蓝草里', pinyin: 'cóng lán cǎo lǐ', translation: 'from the indigo plant' } },
+                    { id: 's80-pp', role: 'Adjunct', subRole: 'location', text: { hanzi: '从蓝草里', pinyin: 'cóng lán cǎo lǐ', translation: 'from the indigo plant' } },
                     { id: 's80-tq', role: 'Head Verb', text: { hanzi: '提取', pinyin: 'tí qǔ', translation: 'extract' } },
                     { id: 's80-cl', role: 'Complement', subRole: 'directional', text: { hanzi: '出来', pinyin: 'chū lái', translation: 'out' } },
                     { id: 's80-de', role: 'Particle', text: { hanzi: '的', pinyin: 'de', translation: '(nominalizer)' } },

@@ -93,7 +93,7 @@ export const resultativeComplements: SentenceData[] = [
         chinese: '我听懂了他说的话。',
         pinyin: 'Wǒ tīng dǒng le tā shuō de huà.',
         translation: 'I understood what he said.',
-        explanation: 'The Topic is **我** ("I"). The core action is the resultative compound **看完**: **看** ("read/watch") + **完** ("finish"). The 完 tells you the action reached its natural endpoint. The **了** confirms this happened. Then the sentence continues: **才发现...** ("only then discovered..."), where 才 marks that the realization came only *after* finishing. The tree shows this sequence: 看完了 (completed reading), then 才发现 (only then realized), followed by what was discovered. This chaining of resultative + consequence is extremely natural in Mandarin.',
+        explanation: 'The Topic is **我** ("I"). The verb **听** ("listen") fuses with the result **懂** ("understand") to form the resultative compound **听懂**: listened and understood. The **了** confirms it happened. After this compound, the object is a relative clause: **他说的话** ("the words he said"), where **的** links the clause **他说** ("he said") to the noun **话** ("words"). The tree shows the verb-result pair 听+懂 fused tightly together, with the complex object branching off to the right.',
         tree: {
             id: 'n30',
             role: 'Sentence',
@@ -230,7 +230,7 @@ export const resultativeComplements: SentenceData[] = [
         chinese: '我找到钥匙了。',
         pinyin: 'Wǒ zhǎo dào yào shi le.',
         translation: 'I found the key.',
-        explanation: 'The Topic is **我** ("I"). The verb **听** ("listen/hear") fuses with the result **懂** ("understand") to form **听懂**: heard and understood. The **了** confirms it happened. This compound tells you not just that listening occurred, but that comprehension was achieved. Compare: 听不懂 ("cannot understand what is heard"), 听得懂 ("can understand"). The tree shows 听 and 懂 fused as a tight pair. This is one of the most frequently used resultative compounds in daily life, especially for language learners.',
+        explanation: 'The Topic is **我** ("I"). The verb **找** ("search for") fuses with the result **到** ("arrive at, reach") to form **找到**: searched and found. The result 到 tells you the search reached its target. The **了** at the end marks completion: the searching happened and the finding was achieved. Compare with 找不到 ("cannot find") where 不 blocks the result. The tree shows 找 and 到 as a tight verb-result pair, with **钥匙** ("key") as the object.',
         tree: {
             id: 'n40',
             role: 'Sentence',
@@ -283,7 +283,7 @@ export const resultativeComplements: SentenceData[] = [
         chinese: '他写错字了。',
         pinyin: 'Tā xiě cuò zì le.',
         translation: 'He wrote a character incorrectly.',
-        explanation: 'The Topic is **他** ("he"). The verb **喝** ("drink") fuses with the resultative complement **醉** ("drunk") to form **喝醉**: drank until drunk. The **了** marks completion. This is a classic V+Result compound: the action (drinking) leads directly to the state (drunkenness). Mandarin compresses what English spreads across several words ("got drunk from drinking") into a tight two-character unit. Other examples: 吃腻 ("ate until sick of it"), 跑累 ("ran until tired"), 笑疯 ("laughed until crazy").',
+        explanation: 'The Topic is **他** ("he"). The verb **写** ("write") fuses with the resultative complement **错** ("wrong") to form **写错**: wrote incorrectly. The result 错 tells you the outcome of the writing action was an error. The **了** marks completion, and **字** ("character") is the object that was written wrong. This is a classic V+Result compound: the action (writing) produced an unintended outcome (wrongness). Other examples of this pattern: 听错 ("heard wrong"), 看错 ("misread"), 记错 ("misremembered").',
         tree: {
             id: 'n41',
             role: 'Sentence',

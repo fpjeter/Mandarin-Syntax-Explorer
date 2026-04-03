@@ -72,6 +72,7 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
             case 'Object Morpheme': return 'bg-amber-900/50 text-amber-200 border-amber-500/60 shadow-[0_0_12px_rgba(245,158,11,0.2)]';
             case 'Pivot': return 'bg-orange-800/50 text-orange-100 border-orange-400/70 shadow-[0_0_16px_rgba(251,146,60,0.35)] border-b-2';
             case 'Copula': return 'bg-indigo-800/50 text-indigo-100 border-indigo-400/60 shadow-[0_0_14px_rgba(99,102,241,0.3)] border-b-2';
+            case 'Preposition': return 'bg-stone-800/50 text-stone-200 border-stone-500/50 shadow-[0_0_12px_rgba(168,162,158,0.2)]';
             default: return 'bg-slate-900/60 text-slate-300 border-slate-700/50';
         }
     };
@@ -98,6 +99,7 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
             case 'Object Morpheme': return 'bg-yellow-900/50 text-yellow-200 border-yellow-500/60 shadow-[0_0_12px_rgba(234,179,8,0.2)]';
             case 'Pivot': return 'bg-orange-800/50 text-orange-100 border-orange-400/70 shadow-[0_0_16px_rgba(251,146,60,0.35)] border-b-2';
             case 'Copula': return 'bg-stone-700/50 text-stone-100 border-stone-400/60 shadow-[0_0_14px_rgba(168,162,158,0.2)] border-b-2';
+            case 'Preposition': return 'bg-stone-800/50 text-amber-200/80 border-amber-700/50 shadow-[0_0_12px_rgba(180,130,80,0.15)]';
             default: return 'bg-stone-900/60 text-stone-300 border-stone-700/50';
         }
     };

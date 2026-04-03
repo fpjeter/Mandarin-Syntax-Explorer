@@ -30,7 +30,7 @@ export const correlativePatterns: SentenceData[] = [
                                 {
                                     id: 'n60-yue1',
                                     role: 'Adjunct',
-                                    subRole: 'correlative marker (越)',
+                                    subRole: 'correlative',
                                     text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' },
                                 },
                                 {
@@ -48,7 +48,7 @@ export const correlativePatterns: SentenceData[] = [
                                 {
                                     id: 'n60-yue2',
                                     role: 'Adjunct',
-                                    subRole: 'correlative marker (越)',
+                                    subRole: 'correlative',
                                     text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' },
                                 },
                                 {
@@ -92,7 +92,7 @@ export const correlativePatterns: SentenceData[] = [
                                 {
                                     id: 'n61-yi',
                                     role: 'Adjunct',
-                                    subRole: 'trigger marker (一)',
+                                    subRole: 'conditional',
                                     text: { hanzi: '一', pinyin: 'yī', translation: 'as soon as' },
                                 },
                                 {
@@ -110,7 +110,7 @@ export const correlativePatterns: SentenceData[] = [
                                 {
                                     id: 'n61-jiu',
                                     role: 'Adjunct',
-                                    subRole: 'immediate consequence marker (就)',
+                                    subRole: 'consequence',
                                     text: { hanzi: '就', pinyin: 'jiù', translation: 'immediately / then' },
                                 },
                                 {
@@ -136,17 +136,17 @@ export const correlativePatterns: SentenceData[] = [
         tree: {
             id: 's84-root', role: 'Sentence', children: [
                 { id: 's84-c1', role: 'Topic', subRole: 'first correlative', children: [
-                    { id: 's84-premise1', role: 'Adjunct', subRole: 'condition', text: { hanzi: '只学习不思考', pinyin: 'zhǐ xué xí bù sī kǎo', translation: 'only study, not think' } },
-                    { id: 's84-yue1a', role: 'Adjunct', subRole: 'correlative marker', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
+                    { id: 's84-premise1', role: 'Adjunct', subRole: 'conditional', text: { hanzi: '只学习不思考', pinyin: 'zhǐ xué xí bù sī kǎo', translation: 'only study, not think' } },
+                    { id: 's84-yue1a', role: 'Adjunct', subRole: 'correlative', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
                     { id: 's84-xue', role: 'Head Verb', text: { hanzi: '学', pinyin: 'xué', translation: 'study' } },
-                    { id: 's84-yue1b', role: 'Adjunct', subRole: 'correlative marker', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
+                    { id: 's84-yue1b', role: 'Adjunct', subRole: 'correlative', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
                     { id: 's84-hutu', role: 'Head Verb', text: { hanzi: '糊涂', pinyin: 'hú tu', translation: 'confused' } },
                 ]},
                 { id: 's84-c2', role: 'Comment', subRole: 'second correlative', children: [
-                    { id: 's84-premise2', role: 'Adjunct', subRole: 'condition', text: { hanzi: '只思考不学习', pinyin: 'zhǐ sī kǎo bù xué xí', translation: 'only think, not study' } },
-                    { id: 's84-yue2a', role: 'Adjunct', subRole: 'correlative marker', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
+                    { id: 's84-premise2', role: 'Adjunct', subRole: 'conditional', text: { hanzi: '只思考不学习', pinyin: 'zhǐ sī kǎo bù xué xí', translation: 'only think, not study' } },
+                    { id: 's84-yue2a', role: 'Adjunct', subRole: 'correlative', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
                     { id: 's84-xiang', role: 'Head Verb', text: { hanzi: '想', pinyin: 'xiǎng', translation: 'think' } },
-                    { id: 's84-yue2b', role: 'Adjunct', subRole: 'correlative marker', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
+                    { id: 's84-yue2b', role: 'Adjunct', subRole: 'correlative', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
                     { id: 's84-weixian', role: 'Head Verb', text: { hanzi: '危险', pinyin: 'wéi xiǎn', translation: 'perilous' } },
                 ]},
             ]
@@ -158,7 +158,7 @@ export const correlativePatterns: SentenceData[] = [
         chinese: '一个人读书越多，他就越能理解世界。',
         pinyin: 'Yī ge rén dú shū yuè duō, tā jiù yuè néng lǐ jiě shì jiè.',
         translation: 'The more a person reads, the more they can understand the world.',
-        explanation: 'This sentence links two complete clauses with **因为...所以...** ("because...therefore..."). The cause comes first: **因为他学习很努力** ("because he studies very hard"). Then the result: **所以成绩一直很好** ("therefore his grades have always been good"). Mandarin typically requires both markers, not just one. The tree shows the 因为 clause as a causal Adjunct to the main Comment. This is one of the most important patterns for expressing reasoning in Mandarin.',
+        explanation: 'The **越...越** correlative frame: the more X, the more Y. The first half: **一个人读书越多** ("the more a person reads"). The second half: **他就越能理解世界** ("the more he can understand the world"). The **越** markers bracket each half, and **就** in the consequence reinforces the link. The tree shows the two halves as parallel branches connected by the correlative frame. This pattern is one of the most elegant ways to express proportional change in Mandarin.',
         tree: {
             id: 'n97-root', role: 'Sentence', children: [
                 { id: 'n97-ps', role: 'Parallel Sentence', children: [
@@ -190,7 +190,7 @@ export const correlativePatterns: SentenceData[] = [
         chinese: '天气越冷，大家越不想出门。',
         pinyin: 'Tiān qì yuè lěng, dà jiā yuè bù xiǎng chū mén.',
         translation: 'The colder the weather gets, the less people want to go out.',
-        explanation: 'The **连...都/也...** frame means "even..." and is used for extreme or surprising cases. **连小孩** ("even children") marks who; **都知道** ("all know") states what they know. The 连 singles out the most unexpected case, and 都 or 也 confirms that even that case is included. The tree shows 连 as a focus marker wrapping the noun, with 都 reinforcing universality. Other examples: 连他都不知道 ("even he doesn\'t know"), 连一块钱都没有 ("doesn\'t even have one yuan").',
+        explanation: 'Another **越...越** correlative, this time with a cause-and-effect feel. The first half: **天气越冷** ("the colder the weather gets"). The second half: **大家越不想出门** ("the less everyone wants to go out"). The **越** markers link the two: as coldness increases, willingness decreases. Notice the negation **不想** sits inside the second 越 clause. The tree shows the two balanced halves, each with its own 越 marker.',
         tree: {
             id: 'n98-root', role: 'Sentence', children: [
                 { id: 'n98-ps', role: 'Parallel Sentence', children: [
@@ -220,7 +220,7 @@ export const correlativePatterns: SentenceData[] = [
         chinese: '期望越高，失望往往也就越大。',
         pinyin: 'Qī wàng yuè gāo, shī wàng wǎng wǎng yě jiù yuè dà.',
         translation: 'The higher the expectations, the greater the disappointment often is.',
-        explanation: 'The classic "the higher something goes, the harder it falls" idea. This sentence uses the **越...越...** frame again, but this time on a single dimension: **越来越** ("more and more"). **天气越来越冷** means "the weather is getting colder and colder." The first 越 marks the starting direction, and the second 越 + adjective shows the ongoing change. The tree shows this as a single frame with the adjective 冷 as the expanding endpoint. This 越来越 pattern is extremely common for describing trends: 越来越好 ("better and better"), 越来越贵 ("more and more expensive").',
+        explanation: 'The classic "the higher something goes, the harder it falls" idea. The first half: **期望越高** ("the higher the expectations"). The second half: **失望往往也就越大** ("the greater the disappointment tends to be"). The **往往** ("often/tend to") and **也** ("also") add softening nuance. The tree shows the two halves of the 越...越 frame as balanced branches, with the adverbs 往往 and 也 layered inside the consequence clause.',
         tree: {
             id: 'n99-root', role: 'Sentence', children: [
                 { id: 'n99-ps', role: 'Parallel Sentence', children: [
@@ -279,7 +279,7 @@ export const correlativePatterns: SentenceData[] = [
                             subRole: '...but also',
                             children: [
                                 { id: 's108-c2-conj', role: 'Adjunct', subRole: 'conjunction', text: { hanzi: '而且', pinyin: 'ér qiě', translation: 'but also' } },
-                                { id: 's108-c2-adv', role: 'Adjunct', subRole: 'reinforcement', text: { hanzi: '还', pinyin: 'hái', translation: 'additionally' } },
+                                { id: 's108-c2-adv', role: 'Adjunct', subRole: 'correlative', text: { hanzi: '还', pinyin: 'hái', translation: 'additionally' } },
                                 { id: 's108-c2-mod', role: 'Adjunct', subRole: 'modal', text: { hanzi: '会', pinyin: 'huì', translation: 'can' } },
                                 { id: 's108-c2-hv', role: 'Head Verb', text: { hanzi: '说', pinyin: 'shuō', translation: 'speak' } },
                                 { id: 's108-c2-obj', role: 'Object', text: { hanzi: '法语', pinyin: 'Fǎ yǔ', translation: 'French' } }

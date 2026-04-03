@@ -55,9 +55,9 @@ export const glossary: Record<GrammarRole, { headline: string; detail: string }>
             'Anything that appears before the verb to set the scene: how, when, where, how often, or to what degree. Chinese grammar calls this position 状语 (zhuàngyǔ). It covers not just classic adverbs like 都 (all) or 很 (very), but also location phrases like 在厨房里 ("in the kitchen") and manner phrases like 生气地 ("angrily").',
     },
     Preposition: {
-        headline: 'A linking word showing relationship',
+        headline: 'A linking word that shows relationship',
         detail:
-            'Comes before a noun to show direction, location, or who is affected. E.g. 把 (marks what\'s being done to), 被 (marks the doer in a passive).',
+            'Comes before a noun to show direction, location, comparison, or accompaniment. Common examples: 比 (compared to), 跟 (with/and), 像 (like/resembling), 在 (at/in).',
     },
     Particle: {
         headline: 'A small grammatical word',

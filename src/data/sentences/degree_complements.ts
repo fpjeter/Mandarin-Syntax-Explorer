@@ -7,7 +7,7 @@ export const degreeComplements: SentenceData[] = [
         chinese: '她高兴得跳了起来。',
         pinyin: 'Tā gāo xìng de tiào le qǐ lái.',
         translation: 'She was so happy she jumped up.',
-        explanation: '**她** ("she") is the Topic. The Comment uses a **degree complement** to describe how an action was performed. The pattern is: verb + **得** + description. Here, **唱** ("sing") + 得 + **非常好** ("extremely well"). The 得 is a bridge; everything after it tells you about the quality, manner, or extent of the action. This is different from a resultative complement (which says *what happened* as a result) or a potential complement (which says *whether something can happen*). The degree complement simply describes *how* the action went.',
+        explanation: '**她** ("she") is the Topic. The Comment uses a **degree complement** to show how intensely an emotion led to a physical reaction. The adjective **高兴** ("happy") is linked by **得** to a consequence clause: **跳了起来** ("jumped up"). Everything after 得 describes *how happy* she was, by showing what it made her do. The **了** inside the complement marks the jump as completed, and **起来** ("up") is a directional complement showing the upward motion. This is different from saying she simply jumped; it says her happiness was so extreme that jumping was the result.',
         tree: {
             id: 'n36',
             role: 'Sentence',
@@ -81,7 +81,7 @@ export const degreeComplements: SentenceData[] = [
         chinese: '她跑得非常快。',
         pinyin: 'Tā pǎo de fēi cháng kuài.',
         translation: 'She runs very fast.',
-        explanation: '**她** ("she") is the Topic again, but this time the degree complement is more elaborate. After **跑** ("run") + **得**, a full descriptive clause follows: **大家都追不上她** ("everyone cannot catch up with her"). The degree complement is not limited to a single word like 好 or 快; it can be an entire clause describing the consequence or extent of the action. The tree shows this clause nested inside the complement, with its own internal structure. This is one of the most flexible patterns in Mandarin.',
+        explanation: '**她** ("she") is the Topic. After the verb **跑** ("run"), the particle **得** opens a degree complement: **非常快** ("extremely fast"). This tells you *how* the running was performed. The complement here is a simple adjective phrase: the adverb **非常** ("extremely") intensifies **快** ("fast"). Compare this with s36, where 得 introduced a whole consequence clause. Here, 得 just introduces a straightforward description. The tree shows 得 as the bridge between the verb and its quality description.',
         tree: {
             id: 'n37',
             role: 'Sentence',
@@ -147,7 +147,7 @@ export const degreeComplements: SentenceData[] = [
         chinese: '他气得说不出话来。',
         pinyin: 'Tā qì de shuō bu chū huà lái.',
         translation: 'He was so angry he couldn\'t get a word out.',
-        explanation: '**他** ("he") is the Topic. This sentence elegantly stacks two constructions together. First, the **比** comparison sets up the reference: **比以前** ("compared to before"). Then the degree complement fills in the detail: **进步得很快** ("has improved very quickly," verb + 得 + adverb). Mandarin handles this combination cleanly because the 比 phrase and the degree complement occupy different slots in the sentence. The 比 phrase modifies the overall comparison, while 得 links the verb to its description.',
+        explanation: '**他** ("he") is the Topic. This sentence stacks two constructions together beautifully. The adjective **气** ("angry") is linked by **得** to a consequence: **说不出话来** ("cannot get words out"). The consequence itself is a negative potential complement: **说** ("speak") + **不** ("cannot") + **出** ("exit") + **来** ("toward speaker"). So the degree complement tells you how angry he was, and the answer is: so angry that his words could not come out. The tree nests the potential complement inside the degree complement, showing how these constructions layer naturally.',
         tree: {
             id: 'n46',
             role: 'Sentence',
@@ -232,7 +232,7 @@ export const degreeComplements: SentenceData[] = [
         chinese: '她把房间打扫得干干净净。',
         pinyin: 'Tā bǎ fáng jiān dǎ sǎo de gān gān jìng jìng.',
         translation: 'She cleaned the room spotlessly.',
-        explanation: '**她** ("she") is the Topic. This sentence combines two constructions: a **把** construction and a **degree complement**. First, **把房间** ("the room") is spotlighted as the thing affected. Then the verb **打扫** ("clean") is linked by **得** to the description **干干净净的** ("spotlessly clean," a reduplicated adjective for emphasis). The tree shows the 把 phrase and the degree complement occupying their respective positions. This combination is very natural in Mandarin: 把 says *what* was acted on, and 得 says *how well* it was done.',
+        explanation: '**她** ("she") is the Topic. This sentence combines two constructions: a **把** construction and a **degree complement**. First, **把房间** ("the room") is spotlighted as the thing affected. Then the verb **打扫** ("clean") is linked by **得** to the description **干干净净** ("spotlessly clean"), a reduplicated adjective that adds emphasis. The tree shows the 把 phrase and the degree complement occupying their separate slots. This combination is very natural: 把 says *what* was acted on, and 得 says *how well* it was done.',
         tree: {
             id: 'n47',
             role: 'Sentence',
@@ -319,7 +319,7 @@ export const degreeComplements: SentenceData[] = [
                             ]},
                         ]},
                     ]},
-                    { id: 's77-c2', role: 'Adjunct', subRole: 'supplementary clause', text: { hanzi: '日夜不停', pinyin: 'rì yè bù tíng', translation: 'never ceasing day or night' } },
+                    { id: 's77-c2', role: 'Adjunct', subRole: 'concession', text: { hanzi: '日夜不停', pinyin: 'rì yè bù tíng', translation: 'never ceasing day or night' } },
                 ]},
             ]
         }
