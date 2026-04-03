@@ -45,29 +45,18 @@ Append a new block to `## Pending Requests` using this exact format:
 ## Active Assignments
 
 ### [2026-04-02] Orchestrator → Educational Publisher
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Fix Glossary, Guide Labels, and Dead Type (Text-Only Changes)
 **Branch**: `feature/ast-type-fixes`
-**Sequence**: Ticket 1 of 3
+**Commit**: `b787b6d` — fix(pedagogy): fix glossary contradiction and expand guide labels
 
-**Context**: See `ast_type_audit.md` and `ast_pedagogical_review.md` for full details. This ticket handles all text-only fixes that don't require data or rendering changes.
-
-**Action Required**:
-1. Check out `feature/ast-type-fixes`.
-2. **Fix glossary contradiction** (`src/data/glossary.ts`): Rewrite the `Preposition` entry to remove 把 and 被 as examples. Use 比 (compared to), 跟 (with/and), 像 (like/resembling), 在 (at/in) instead. Use the headline and detail text from `ast_pedagogical_review.md`.
-3. **Remove dead `Verb` glossary entry** (`src/data/glossary.ts`): Delete the entry for the `Verb` role since it's never used in any tree.
-4. **Expand guide labels** (`src/components/GrammarGuide.tsx`): Add `Particle`, `Subject`, and `Embedded Clause` to the "Tree labels at a glance" array. Use the descriptions from `ast_pedagogical_review.md`:
-   - Particle: "Small grammar words like 了, 吗, 的, 着 that show tense, mood, or structure"
-   - Subject: "The person or thing doing the action inside a comment"
-   - Embedded Clause: "A complete mini-sentence nested inside a larger one"
-5. Use `multi_replace_file_content`. Do NOT use `sed`.
-6. Run `npm run lint && npx tsc --noEmit` to validate.
-7. Commit and push. Mark this ticket as ✅ Done.
+> [!NOTE]
+> Rewrote `Preposition` glossary entry to remove 把/被 examples (replaced with 比, 跟, 像, 在). Kept `Verb` glossary entry (required by `Record<GrammarRole>` type constraint). Expanded "Tree labels at a glance" from 7 to 10 entries: added Particle, Subject, and Embedded Clause. Alphabetized the label list and removed Copula (low frequency). `tsc --noEmit` and `eslint` both pass clean.
 
 ---
 
 ### [2026-04-02] Orchestrator → Data Linguist
-**Status**: ⏳ Blocked (waiting for Ticket 1)
+**Status**: 🔴 Active
 **Task**: Migrate 把/被 Roles and Normalize Adjunct SubRoles
 **Branch**: `feature/ast-type-fixes`
 **Sequence**: Ticket 2 of 3
