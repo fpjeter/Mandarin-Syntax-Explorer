@@ -45,35 +45,19 @@ Append a new block to `## Pending Requests` using this exact format:
 ## Active Assignments
 
 ### [2026-04-02] Orchestrator → Educational Publisher
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Design New Sentences to Fill Coverage Gaps
 **Branch**: `feature/coverage-gap-sentences`
-**Sequence**: Ticket 1 of 2 (must complete before Ticket 2 begins)
+**Commit**: `5d54192` — feat(spec): design 26 new sentences to fill coverage gaps
 
-**Context**: The Linguistics Specialist produced `coverage_gap_analysis.md` identifying missing structural patterns across all 19 categories, ranked by severity. You are designing the actual sentences to fill these gaps.
+> [!NOTE]
+> Produced `new_sentences_spec.md` with 26 fully designed sentences covering all 7 High-priority and 7 Medium-priority gaps from `coverage_gap_analysis.md`. Each entry includes Chinese, pinyin, translation, full explanation (following all 7 pedagogy rules), and structural notes for the Data Linguist. Categories covered: Basic Topic-Comment (2), BA Construction (2), BEI Passive (2), Shì-de (2), Directional Complements (2), Correlative Patterns (2), Aspect Markers (2), Comparatives (2), Rhetorical Questions (2), Separable Verbs (2), Pivotal Constructions (2), Potential Complements (1), Degree Complements (1), Conditional Sentences (2).
 
-**Action Required**:
-1. Check out `feature/coverage-gap-sentences`.
-2. Read `coverage_gap_analysis.md` carefully.
-3. Read `explanations_pedagogy.md` for tone rules.
-4. Produce a spec file at `new_sentences_spec.md` in the project root. For **each gap you are filling**, provide:
-   ```markdown
-   ## [Category Name] — [Gap Being Filled]
-   - **Chinese**: [full sentence in characters]
-   - **Pinyin**: [full pinyin with tones]
-   - **Translation**: [natural English translation]
-   - **Explanation**: [full explanation string following all 7 pedagogy rules]
-   - **Structural Notes**: [brief note for the Data Linguist on the key structural feature, e.g., "agentless 被: no agent NP between 被 and the verb"]
-   ```
-5. Cover **all High-priority gaps** and as many Medium-priority gaps as you can. Low-priority gaps are optional.
-6. Commit and push the spec. Mark this ticket as ✅ Done.
-
-**CRITICAL**: Do NOT edit any sentence `.ts` files. Your output is the spec document only. The Data Linguist will generate the AST structures from your spec.
 
 ---
 
 ### [2026-04-02] Orchestrator → Data Linguist
-**Status**: ⏳ Blocked (waiting for Ticket 1)
+**Status**: 🔴 Active
 **Task**: Generate AST Trees for New Sentences
 **Branch**: `feature/coverage-gap-sentences`
 **Sequence**: Ticket 2 of 2 (requires `new_sentences_spec.md` from Ticket 1)
