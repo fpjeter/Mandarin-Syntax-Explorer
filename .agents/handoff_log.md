@@ -57,7 +57,7 @@ Append a new block to `## Pending Requests` using this exact format:
 ---
 
 ### [2026-04-02] Orchestrator → Data Linguist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Generate AST Trees for New Sentences
 **Branch**: `feature/coverage-gap-sentences`
 **Sequence**: Ticket 2 of 2 (requires `new_sentences_spec.md` from Ticket 1)

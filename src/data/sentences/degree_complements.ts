@@ -323,5 +323,39 @@ export const degreeComplements: SentenceData[] = [
                 ]},
             ]
         }
+    },
+    {
+        id: 's121',
+        category: 'Degree Complements (程度补语)',
+        chinese: '他中文说得不太好。',
+        pinyin: 'Tā Zhōng wén shuō de bú tài hǎo.',
+        translation: 'He doesn\'t speak Chinese very well.',
+        explanation: 'There is a **Double Topic** here: **他** ("he") is the main topic, and **中文** ("Chinese language") is the sub-topic. The Comment describes how well he speaks it. A critical rule of Chinese word order is demonstrated here: **if you want to negate a degree complement, the 不 goes AFTER the 得, not before the verb**. You cannot say 他不说得太好. The action (说) happens; it is the *degree* (太好) that is being negated. So the phrase is: 说 + 得 + 不太好. This applies to all degree descriptions.',
+        tree: {
+            id: 's121-n',
+            role: 'Sentence',
+            children: [
+                { id: 's121-t', role: 'Topic', subRole: 'outer topic', text: { hanzi: '他', pinyin: 'tā', translation: 'he' } },
+                { id: 's121-st', role: 'Topic', subRole: 'inner topic', text: { hanzi: '中文', pinyin: 'Zhōng wén', translation: 'Chinese (language)' } },
+                {
+                    id: 's121-c',
+                    role: 'Comment',
+                    children: [
+                        { id: 's121-hv', role: 'Head Verb', text: { hanzi: '说', pinyin: 'shuō', translation: 'speak' } },
+                        { id: 's121-de', role: 'Particle', subRole: 'degree marker', text: { hanzi: '得', pinyin: 'de', translation: '(degree)' } },
+                        {
+                            id: 's121-comp',
+                            role: 'Complement',
+                            subRole: 'negated degree',
+                            children: [
+                                { id: 's121-comp-neg', role: 'Adjunct', subRole: 'negation', text: { hanzi: '不', pinyin: 'bú', translation: 'not' } },
+                                { id: 's121-comp-adv', role: 'Adjunct', subRole: 'degree', text: { hanzi: '太', pinyin: 'tài', translation: 'too/very' } },
+                                { id: 's121-comp-adj', role: 'Adjective', text: { hanzi: '好', pinyin: 'hǎo', translation: 'good' } }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
     }
 ];

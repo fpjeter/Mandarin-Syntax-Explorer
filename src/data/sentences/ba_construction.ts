@@ -389,5 +389,92 @@ export const baConstruction: SentenceData[] = [
                 },
             ],
         },
+    },
+    {
+        id: 's100',
+        category: 'BA Construction (把字句)',
+        chinese: '他没把门关上。',
+        pinyin: 'Tā méi bǎ mén guān shàng.',
+        translation: 'He didn\'t close the door.',
+        explanation: '**他** ("he") is the Topic. The Comment introduces a critical rule about 把 sentences: the negation word **没** ("didn\'t") must come *before* 把, never after it. The pattern is 没 + 把 + object + verb + result. Here, **没把门关上** means "didn\'t close the door," where 关 ("close") + 上 ("shut") form the verb-result pair. If you tried to put 没 after 把 (把门没关上), native speakers would find it unnatural. This ordering rule also applies to 别 ("don\'t") and 不: they always precede 把.',
+        tree: {
+            id: 's100-n',
+            role: 'Sentence',
+            children: [
+                { id: 's100-t', role: 'Topic', text: { hanzi: '他', pinyin: 'tā', translation: 'he' } },
+                {
+                    id: 's100-c',
+                    role: 'Comment',
+                    children: [
+                        { id: 's100-c-neg', role: 'Adjunct', subRole: 'negation', text: { hanzi: '没', pinyin: 'méi', translation: 'didn\'t' } },
+                        {
+                            id: 's100-ba-phrase',
+                            role: 'Head Verb',
+                            subRole: 'BA marker',
+                            text: { hanzi: '把', pinyin: 'bǎ', translation: 'take hold of' }
+                        },
+                        {
+                            id: 's100-nested',
+                            role: 'Embedded Clause',
+                            children: [
+                                { id: 's100-inner-t', role: 'Topic', text: { hanzi: '门', pinyin: 'mén', translation: 'door' } },
+                                {
+                                    id: 's100-inner-c',
+                                    role: 'Comment',
+                                    children: [
+                                        { id: 's100-hv', role: 'Head Verb', text: { hanzi: '关', pinyin: 'guān', translation: 'close' } },
+                                        { id: 's100-comp', role: 'Complement', subRole: 'directional result', text: { hanzi: '上', pinyin: 'shàng', translation: 'shut/up' } }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        id: 's101',
+        category: 'BA Construction (把字句)',
+        chinese: '别把它弄坏了。',
+        pinyin: 'Bié bǎ tā nòng huài le.',
+        translation: 'Don\'t break it.',
+        explanation: 'This is a prohibition using 把. **别** ("don\'t") opens the sentence as a command marker, placed before 把 just like 没 in negative statements. The implied topic ([你], "you") is dropped because commands naturally omit the listener. Inside the 把 phrase, **它** ("it") is the spotlighted object, and **弄坏** (nòng huài, "mess up, break") is the verb-result compound: 弄 ("do/make") + 坏 ("broken"). The **了** signals that the breaking would result in a completed change of state. The pattern 别把...弄坏了 is one of the most common warnings in everyday Mandarin.',
+        tree: {
+            id: 's101-n',
+            role: 'Sentence',
+            children: [
+                { id: 's101-ghost', role: 'Topic', subRole: 'Ghost Node', text: { hanzi: '[你]', pinyin: 'nǐ', translation: 'you(implied)' } },
+                {
+                    id: 's101-c',
+                    role: 'Comment',
+                    children: [
+                        { id: 's101-c-neg', role: 'Adjunct', subRole: 'prohibition marker', text: { hanzi: '别', pinyin: 'bié', translation: 'don\'t' } },
+                        {
+                            id: 's101-ba-phrase',
+                            role: 'Head Verb',
+                            subRole: 'BA marker',
+                            text: { hanzi: '把', pinyin: 'bǎ', translation: 'take hold of' }
+                        },
+                        {
+                            id: 's101-nested',
+                            role: 'Embedded Clause',
+                            children: [
+                                { id: 's101-inner-t', role: 'Topic', text: { hanzi: '它', pinyin: 'tā', translation: 'it' } },
+                                {
+                                    id: 's101-inner-c',
+                                    role: 'Comment',
+                                    children: [
+                                        { id: 's101-hv', role: 'Head Verb', text: { hanzi: '弄', pinyin: 'nòng', translation: 'do/make' } },
+                                        { id: 's101-comp', role: 'Complement', subRole: 'result', text: { hanzi: '坏', pinyin: 'huài', translation: 'broken' } },
+                                        { id: 's101-le', role: 'Particle', subRole: 'completion', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
     }
 ];

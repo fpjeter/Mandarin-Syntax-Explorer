@@ -342,5 +342,69 @@ export const comparatives: SentenceData[] = [
                 ]}
             ]
         }
+    },
+    {
+        id: 's112',
+        category: 'Comparatives (比较句)',
+        chinese: '我没有他高。',
+        pinyin: 'Wǒ méi yǒu tā gāo.',
+        translation: 'I am not as tall as him.',
+        explanation: '**我** ("I") is the Topic. The Comment uses the **没有** comparison frame, which is Mandarin\'s way of saying "A is not as [adjective] as B." The pattern is: A + 没有 + B + adjective. Here: I + 没有 + him + tall. This is the counterpart to the 比 comparison (which says "more than"). You cannot say 我不比他高 for this meaning; 没有 is the standard frame for "less than" or "not as much as." The tree shows 没有 linking the two people being compared, with the adjective 高 ("tall") as the quality being measured.',
+        tree: {
+            id: 's112-n',
+            role: 'Sentence',
+            children: [
+                { id: 's112-t', role: 'Topic', subRole: 'item A', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
+                {
+                    id: 's112-c',
+                    role: 'Comment',
+                    children: [
+                        { id: 's112-hv', role: 'Head Verb', subRole: 'comparative verb', text: { hanzi: '没有', pinyin: 'méi yǒu', translation: 'not as (literally: not have)' } },
+                        { id: 's112-obj', role: 'Object', subRole: 'item B', text: { hanzi: '他', pinyin: 'tā', translation: 'he' } },
+                        { id: 's112-comp', role: 'Predicate', subRole: 'compared quality', text: { hanzi: '高', pinyin: 'gāo', translation: 'tall' } }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        id: 's113',
+        category: 'Comparatives (比较句)',
+        chinese: '他比我大三岁。',
+        pinyin: 'Tā bǐ wǒ dà sān suì.',
+        translation: 'He is three years older than me.',
+        explanation: '**他** ("he") is the Topic. The Comment uses the **比** comparison with a specific number: **大三岁** ("older by three years"). The pattern is: Topic + 比 + reference + adjective + quantity. Here: he + compared to me + older + by three years. The number slips in right after the adjective, specifying the exact gap. This is how Mandarin expresses precise differences: 高两厘米 ("taller by two centimeters"), 贵十块钱 ("more expensive by ten yuan"), 早一个小时 ("earlier by one hour"). The quantity always follows the adjective, never precedes it.',
+        tree: {
+            id: 's113-n',
+            role: 'Sentence',
+            children: [
+                { id: 's113-t', role: 'Topic', subRole: 'item A', text: { hanzi: '他', pinyin: 'tā', translation: 'he' } },
+                {
+                    id: 's113-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 's113-comp-phrase',
+                            role: 'Adjunct',
+                            subRole: 'comparison reference',
+                            children: [
+                                { id: 's113-bi', role: 'Preposition', text: { hanzi: '比', pinyin: 'bǐ', translation: 'compared to' } },
+                                { id: 's113-bi-obj', role: 'Object', subRole: 'item B', text: { hanzi: '我', pinyin: 'wǒ', translation: 'me' } }
+                            ]
+                        },
+                        { id: 's113-pred', role: 'Predicate', subRole: 'quality', text: { hanzi: '大', pinyin: 'dà', translation: 'old(er) / big' } },
+                        {
+                            id: 's113-qty',
+                            role: 'Complement',
+                            subRole: 'quantity disparity',
+                            children: [
+                                { id: 's113-qty-num', role: 'Attributive', text: { hanzi: '三', pinyin: 'sān', translation: 'three' } },
+                                { id: 's113-qty-mw', role: 'Measure Word', text: { hanzi: '岁', pinyin: 'suì', translation: 'years of age' } }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
     }
 ];

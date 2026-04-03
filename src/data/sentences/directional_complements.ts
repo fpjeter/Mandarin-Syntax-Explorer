@@ -301,5 +301,70 @@ export const directionalComplements: SentenceData[] = [
                 },
             ],
         },
+    },
+    {
+        id: 's106',
+        category: 'Directional Complements (趋向补语)',
+        chinese: '我突然想起来了。',
+        pinyin: 'Wǒ tū rán xiǎng qǐ lái le.',
+        translation: 'I suddenly remembered.',
+        explanation: '**我** ("I") is the Topic. The adverb **突然** ("suddenly") sets the timing. The verb **想** ("think") combines with the directional complement **起来** ("up, come out") to form **想起来** ("recall, remember"). But nobody is physically moving upward here. The directional complement has shifted from a literal physical direction to a figurative meaning: a memory "rises up" into consciousness. This metaphorical use of directional complements is extremely common: 看出来 ("figure out," literally "see-out"), 坚持下去 ("keep going," literally "persist-down-go"), 醒过来 ("wake up," literally "awake-cross-come"). The **了** marks the moment of remembering as completed.',
+        tree: {
+            id: 's106-n',
+            role: 'Sentence',
+            children: [
+                { id: 's106-t', role: 'Topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
+                {
+                    id: 's106-c',
+                    role: 'Comment',
+                    children: [
+                        { id: 's106-adv', role: 'Adjunct', text: { hanzi: '突然', pinyin: 'tū rán', translation: 'suddenly' } },
+                        { id: 's106-hv', role: 'Head Verb', text: { hanzi: '想', pinyin: 'xiǎng', translation: 'think' } },
+                        {
+                            id: 's106-comp',
+                            role: 'Complement',
+                            subRole: 'figurative directional',
+                            children: [
+                                { id: 's106-comp-dir', role: 'Particle', subRole: 'direction', text: { hanzi: '起', pinyin: 'qǐ', translation: 'rise' } },
+                                { id: 's106-comp-pers', role: 'Particle', subRole: 'perspective', text: { hanzi: '来', pinyin: 'lái', translation: 'come' } }
+                            ]
+                        },
+                        { id: 's106-le', role: 'Particle', subRole: 'completion', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        id: 's107',
+        category: 'Directional Complements (趋向补语)',
+        chinese: '你要坚持下去。',
+        pinyin: 'Nǐ yào jiān chí xià qù.',
+        translation: 'You need to keep going.',
+        explanation: '**你** ("you") is the Topic. The Comment uses **要** ("need to, should") followed by **坚持** ("persist, hold firm") and the directional complement **下去** ("down-go," meaning "onward, continuing"). Nobody is physically going downward. The complement 下去 has shifted to an abstract meaning: keep something going into the future. This is one of the most common figurative directionals: 说下去 ("keep talking"), 活下去 ("keep living"), 学下去 ("keep studying"). The direction word 下 ("down") maps to the idea of extending forward through time, and 去 ("go, away from speaker") reinforces that the action stretches into the future.',
+        tree: {
+            id: 's107-n',
+            role: 'Sentence',
+            children: [
+                { id: 's107-t', role: 'Topic', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } },
+                {
+                    id: 's107-c',
+                    role: 'Comment',
+                    children: [
+                        { id: 's107-mod', role: 'Adjunct', subRole: 'modal auxiliary', text: { hanzi: '要', pinyin: 'yào', translation: 'need to' } },
+                        { id: 's107-hv', role: 'Head Verb', text: { hanzi: '坚持', pinyin: 'jiān chí', translation: 'persist' } },
+                        {
+                            id: 's107-comp',
+                            role: 'Complement',
+                            subRole: 'figurative directional (continuation)',
+                            children: [
+                                { id: 's107-comp-dir', role: 'Particle', subRole: 'direction', text: { hanzi: '下', pinyin: 'xià', translation: 'down' } },
+                                { id: 's107-comp-pers', role: 'Particle', subRole: 'perspective', text: { hanzi: '去', pinyin: 'qù', translation: 'go' } }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
     }
 ];
