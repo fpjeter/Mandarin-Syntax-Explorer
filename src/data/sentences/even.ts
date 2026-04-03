@@ -25,7 +25,7 @@ export const even: SentenceData[] = [
                         {
                             id: 'n66-lian',
                             role: 'Adjunct',
-                            subRole: 'even-marker opener (连)',
+                            subRole: 'scope',
                             text: { hanzi: '连', pinyin: 'lián', translation: 'even' },
                         },
                         {
@@ -48,7 +48,7 @@ export const even: SentenceData[] = [
                         {
                             id: 'n66-dou',
                             role: 'Adjunct',
-                            subRole: 'even-marker reinforcer (都)',
+                            subRole: 'scope',
                             text: { hanzi: '都', pinyin: 'dōu', translation: 'even / all' },
                         },
                         {
@@ -64,7 +64,7 @@ export const even: SentenceData[] = [
                                 {
                                     id: 'n66-modal',
                                     role: 'Adjunct',
-                                    subRole: 'modal verb (learned ability)',
+                                    subRole: 'modal',
                                     text: { hanzi: '会', pinyin: 'huì', translation: 'know how to' },
                                 },
                                 {
@@ -98,7 +98,7 @@ export const even: SentenceData[] = [
                         {
                             id: 'n67-lian',
                             role: 'Adjunct',
-                            subRole: 'even-marker opener (连)',
+                            subRole: 'scope',
                             text: { hanzi: '连', pinyin: 'lián', translation: 'even' },
                         },
                         {
@@ -110,7 +110,7 @@ export const even: SentenceData[] = [
                         {
                             id: 'n67-ye',
                             role: 'Adjunct',
-                            subRole: 'even-marker reinforcer (也)',
+                            subRole: 'scope',
                             text: { hanzi: '也', pinyin: 'yě', translation: 'also / even' },
                         },
                         {
@@ -120,7 +120,7 @@ export const even: SentenceData[] = [
                                 {
                                     id: 'n67-modal',
                                     role: 'Adjunct',
-                                    subRole: 'modal verb (ability)',
+                                    subRole: 'modal',
                                     text: { hanzi: '能', pinyin: 'néng', translation: 'can' },
                                 },
                                 {
@@ -160,7 +160,7 @@ export const even: SentenceData[] = [
                 { id: 's72-comment', role: 'Comment', children: [
                     { id: 's72-ye', role: 'Adjunct', text: { hanzi: '也', pinyin: 'yě', translation: 'also/still' } },
                     { id: 's72-yao', role: 'Adjunct', text: { hanzi: '要', pinyin: 'yào', translation: 'must' } },
-                    { id: 's72-cong', role: 'Adjunct', subRole: 'source', text: { hanzi: '从第一步', pinyin: 'cóng dì yī bù', translation: 'from the first step' } },
+                    { id: 's72-cong', role: 'Adjunct', subRole: 'location', text: { hanzi: '从第一步', pinyin: 'cóng dì yī bù', translation: 'from the first step' } },
                     { id: 's72-ks', role: 'Head Verb', text: { hanzi: '开始', pinyin: 'kāi shǐ', translation: 'begin' } },
                     { id: 's72-zou', role: 'Complement', text: { hanzi: '走', pinyin: 'zǒu', translation: 'walk' } },
                 ]},

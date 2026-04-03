@@ -37,13 +37,13 @@ export const shDeConstruction: SentenceData[] = [
                                 {
                                     id: 'n8-p-vp-tp',
                                     role: 'Adjunct',
-                                    subRole: 'time · focused element (when)',
+                                    subRole: 'time',
                                     text: { hanzi: '昨天晚上', pinyin: 'zuó tiān wǎn shang', translation: 'last night' }
                                 },
                                 {
                                     id: 'n8-p-vp-lp',
                                     role: 'Adjunct',
-                                    subRole: 'location · focused element (where)',
+                                    subRole: 'location',
                                     children: [
                                         {
                                             id: 'n8-p-vp-lp-prep',
@@ -128,7 +128,7 @@ export const shDeConstruction: SentenceData[] = [
                                 {
                                     id: 'n23-lp',
                                     role: 'Adjunct',
-                                    subRole: 'location · focused element (where)',
+                                    subRole: 'location',
                                     children: [
                                         {
                                             id: 'n23-lp-prep',
@@ -202,7 +202,7 @@ export const shDeConstruction: SentenceData[] = [
                                 {
                                     id: 'n50-focus',
                                     role: 'Adjunct',
-                                    subRole: 'time · focused element (when)',
+                                    subRole: 'time',
                                     text: { hanzi: '昨天', pinyin: 'zuó tiān', translation: 'yesterday' },
                                 },
                                 {
@@ -271,7 +271,7 @@ export const shDeConstruction: SentenceData[] = [
                                 {
                                     id: 'n51-focus',
                                     role: 'Adjunct',
-                                    subRole: 'location · focused element (where)',
+                                    subRole: 'location',
                                     children: [
                                         {
                                             id: 'n51-focus-prep',
@@ -347,7 +347,7 @@ export const shDeConstruction: SentenceData[] = [
                     children: [
                         { id: 's104-c-neg', role: 'Adjunct', subRole: 'negation', text: { hanzi: '不', pinyin: 'bù', translation: 'not' } },
                         { id: 's104-shi', role: 'Copula', subRole: 'focus marker', text: { hanzi: '是', pinyin: 'shì', translation: '(it is that)' } },
-                        { id: 's104-manner', role: 'Adjunct', subRole: 'focused manner', text: { hanzi: '故意', pinyin: 'gù yì', translation: 'on purpose' } },
+                        { id: 's104-manner', role: 'Adjunct', subRole: 'manner', text: { hanzi: '故意', pinyin: 'gù yì', translation: 'on purpose' } },
                         { id: 's104-hv', role: 'Head Verb', text: { hanzi: '打', pinyin: 'dǎ', translation: 'hit' } },
                         { id: 's104-comp', role: 'Complement', subRole: 'result', text: { hanzi: '碎', pinyin: 'suì', translation: 'shatter' } },
                         { id: 's104-de', role: 'Particle', subRole: 'focus closure', text: { hanzi: '的', pinyin: 'de', translation: '(the one that)' } }
@@ -376,7 +376,7 @@ export const shDeConstruction: SentenceData[] = [
                         { 
                             id: 's105-method', 
                             role: 'Adjunct', 
-                            subRole: 'focused method', 
+                            subRole: 'instrument', 
                             children: [
                                 { id: 's105-vp-hv', role: 'Head Verb', text: { hanzi: '坐', pinyin: 'zuò', translation: 'sit/take' } },
                                 { id: 's105-vp-obj', role: 'Object', text: { hanzi: '火车', pinyin: 'huǒ chē', translation: 'train' } }

@@ -30,7 +30,7 @@ export const correlativePatterns: SentenceData[] = [
                                 {
                                     id: 'n60-yue1',
                                     role: 'Adjunct',
-                                    subRole: 'correlative marker (越)',
+                                    subRole: 'correlative',
                                     text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' },
                                 },
                                 {
@@ -48,7 +48,7 @@ export const correlativePatterns: SentenceData[] = [
                                 {
                                     id: 'n60-yue2',
                                     role: 'Adjunct',
-                                    subRole: 'correlative marker (越)',
+                                    subRole: 'correlative',
                                     text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' },
                                 },
                                 {
@@ -92,7 +92,7 @@ export const correlativePatterns: SentenceData[] = [
                                 {
                                     id: 'n61-yi',
                                     role: 'Adjunct',
-                                    subRole: 'trigger marker (一)',
+                                    subRole: 'conditional',
                                     text: { hanzi: '一', pinyin: 'yī', translation: 'as soon as' },
                                 },
                                 {
@@ -110,7 +110,7 @@ export const correlativePatterns: SentenceData[] = [
                                 {
                                     id: 'n61-jiu',
                                     role: 'Adjunct',
-                                    subRole: 'immediate consequence marker (就)',
+                                    subRole: 'consequence',
                                     text: { hanzi: '就', pinyin: 'jiù', translation: 'immediately / then' },
                                 },
                                 {
@@ -136,17 +136,17 @@ export const correlativePatterns: SentenceData[] = [
         tree: {
             id: 's84-root', role: 'Sentence', children: [
                 { id: 's84-c1', role: 'Topic', subRole: 'first correlative', children: [
-                    { id: 's84-premise1', role: 'Adjunct', subRole: 'condition', text: { hanzi: '只学习不思考', pinyin: 'zhǐ xué xí bù sī kǎo', translation: 'only study, not think' } },
-                    { id: 's84-yue1a', role: 'Adjunct', subRole: 'correlative marker', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
+                    { id: 's84-premise1', role: 'Adjunct', subRole: 'conditional', text: { hanzi: '只学习不思考', pinyin: 'zhǐ xué xí bù sī kǎo', translation: 'only study, not think' } },
+                    { id: 's84-yue1a', role: 'Adjunct', subRole: 'correlative', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
                     { id: 's84-xue', role: 'Head Verb', text: { hanzi: '学', pinyin: 'xué', translation: 'study' } },
-                    { id: 's84-yue1b', role: 'Adjunct', subRole: 'correlative marker', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
+                    { id: 's84-yue1b', role: 'Adjunct', subRole: 'correlative', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
                     { id: 's84-hutu', role: 'Head Verb', text: { hanzi: '糊涂', pinyin: 'hú tu', translation: 'confused' } },
                 ]},
                 { id: 's84-c2', role: 'Comment', subRole: 'second correlative', children: [
-                    { id: 's84-premise2', role: 'Adjunct', subRole: 'condition', text: { hanzi: '只思考不学习', pinyin: 'zhǐ sī kǎo bù xué xí', translation: 'only think, not study' } },
-                    { id: 's84-yue2a', role: 'Adjunct', subRole: 'correlative marker', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
+                    { id: 's84-premise2', role: 'Adjunct', subRole: 'conditional', text: { hanzi: '只思考不学习', pinyin: 'zhǐ sī kǎo bù xué xí', translation: 'only think, not study' } },
+                    { id: 's84-yue2a', role: 'Adjunct', subRole: 'correlative', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
                     { id: 's84-xiang', role: 'Head Verb', text: { hanzi: '想', pinyin: 'xiǎng', translation: 'think' } },
-                    { id: 's84-yue2b', role: 'Adjunct', subRole: 'correlative marker', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
+                    { id: 's84-yue2b', role: 'Adjunct', subRole: 'correlative', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
                     { id: 's84-weixian', role: 'Head Verb', text: { hanzi: '危险', pinyin: 'wéi xiǎn', translation: 'perilous' } },
                 ]},
             ]
@@ -279,7 +279,7 @@ export const correlativePatterns: SentenceData[] = [
                             subRole: '...but also',
                             children: [
                                 { id: 's108-c2-conj', role: 'Adjunct', subRole: 'conjunction', text: { hanzi: '而且', pinyin: 'ér qiě', translation: 'but also' } },
-                                { id: 's108-c2-adv', role: 'Adjunct', subRole: 'reinforcement', text: { hanzi: '还', pinyin: 'hái', translation: 'additionally' } },
+                                { id: 's108-c2-adv', role: 'Adjunct', subRole: 'correlative', text: { hanzi: '还', pinyin: 'hái', translation: 'additionally' } },
                                 { id: 's108-c2-mod', role: 'Adjunct', subRole: 'modal', text: { hanzi: '会', pinyin: 'huì', translation: 'can' } },
                                 { id: 's108-c2-hv', role: 'Head Verb', text: { hanzi: '说', pinyin: 'shuō', translation: 'speak' } },
                                 { id: 's108-c2-obj', role: 'Object', text: { hanzi: '法语', pinyin: 'Fǎ yǔ', translation: 'French' } }

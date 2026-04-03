@@ -336,7 +336,7 @@ export const potentialComplements: SentenceData[] = [
                     id: 's120-c',
                     role: 'Comment',
                     children: [
-                        { id: 's120-adv', role: 'Adjunct', subRole: 'degree/emphasis', text: { hanzi: '实在', pinyin: 'shí zài', translation: 'really/truly' } },
+                        { id: 's120-adv', role: 'Adjunct', subRole: 'degree', text: { hanzi: '实在', pinyin: 'shí zài', translation: 'really/truly' } },
                         {
                             id: 's120-pot',
                             role: 'Complement',

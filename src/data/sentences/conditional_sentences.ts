@@ -20,7 +20,7 @@ export const conditionalSentences: SentenceData[] = [
                         {
                             id: 'n64-ruguo',
                             role: 'Adjunct',
-                            subRole: 'conditional marker',
+                            subRole: 'conditional',
                             text: { hanzi: '如果', pinyin: 'rú guǒ', translation: 'if' },
                         },
                         {
@@ -49,7 +49,7 @@ export const conditionalSentences: SentenceData[] = [
                         {
                             id: 'n64-jiu',
                             role: 'Adjunct',
-                            subRole: 'consequence marker (就)',
+                            subRole: 'consequence',
                             text: { hanzi: '就', pinyin: 'jiù', translation: 'then' },
                         },
                         {
@@ -93,7 +93,7 @@ export const conditionalSentences: SentenceData[] = [
                         {
                             id: 'n65-zhiyao',
                             role: 'Adjunct',
-                            subRole: 'conditional marker (as long as)',
+                            subRole: 'conditional',
                             text: { hanzi: '只要', pinyin: 'zhǐ yào', translation: 'as long as / provided that' },
                         },
                         {
@@ -116,13 +116,13 @@ export const conditionalSentences: SentenceData[] = [
                         {
                             id: 'n65-jiu',
                             role: 'Adjunct',
-                            subRole: 'consequence marker (就)',
+                            subRole: 'consequence',
                             text: { hanzi: '就', pinyin: 'jiù', translation: 'then' },
                         },
                         {
                             id: 'n65-modal',
                             role: 'Adjunct',
-                            subRole: 'modal verb (ability)',
+                            subRole: 'modal',
                             text: { hanzi: '能', pinyin: 'néng', translation: 'can / able to' },
                         },
                         {
@@ -280,7 +280,7 @@ export const conditionalSentences: SentenceData[] = [
                     subRole: 'result clause',
                     children: [
                         { id: 's122-c-t', role: 'Topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
-                        { id: 's122-c-adv', role: 'Adjunct', subRole: 'correlative link', text: { hanzi: '也', pinyin: 'yě', translation: 'still/also' } },
+                        { id: 's122-c-adv', role: 'Adjunct', subRole: 'correlative', text: { hanzi: '也', pinyin: 'yě', translation: 'still/also' } },
                         { id: 's122-c-mod', role: 'Adjunct', subRole: 'modal', text: { hanzi: '要', pinyin: 'yào', translation: 'want to / will' } },
                         { id: 's122-c-hv', role: 'Head Verb', text: { hanzi: '去', pinyin: 'qù', translation: 'go' } }
                     ]

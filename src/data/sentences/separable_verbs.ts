@@ -47,7 +47,7 @@ export const separableVerbs: SentenceData[] = [
                                         {
                                             id: 'n12-p-verb-freq-adv',
                                             role: 'Adjunct',
-                                            subRole: 'approximate quantity',
+                                            subRole: 'degree',
                                             text: { hanzi: '好几', pinyin: 'hǎo jǐ', translation: 'quite a few' }
                                         },
                                         {

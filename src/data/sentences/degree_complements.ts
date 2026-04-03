@@ -319,7 +319,7 @@ export const degreeComplements: SentenceData[] = [
                             ]},
                         ]},
                     ]},
-                    { id: 's77-c2', role: 'Adjunct', subRole: 'supplementary clause', text: { hanzi: '日夜不停', pinyin: 'rì yè bù tíng', translation: 'never ceasing day or night' } },
+                    { id: 's77-c2', role: 'Adjunct', subRole: 'concession', text: { hanzi: '日夜不停', pinyin: 'rì yè bù tíng', translation: 'never ceasing day or night' } },
                 ]},
             ]
         }

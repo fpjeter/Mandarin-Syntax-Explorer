@@ -56,7 +56,7 @@ Append a new block to `## Pending Requests` using this exact format:
 ---
 
 ### [2026-04-02] Orchestrator → Data Linguist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Migrate 把/被 Roles and Normalize Adjunct SubRoles
 **Branch**: `feature/ast-type-fixes`
 **Sequence**: Ticket 2 of 3

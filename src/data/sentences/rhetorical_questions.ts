@@ -26,7 +26,7 @@ export const rhetoricalQuestions: SentenceData[] = [
                         {
                             id: 'n56-rhet',
                             role: 'Adjunct',
-                            subRole: 'rhetorical marker (难道)',
+                            subRole: 'rhetorical',
                             text: { hanzi: '难道', pinyin: 'nán dào', translation: 'don\'t tell me / could it be' },
                         },
                         {
@@ -69,7 +69,7 @@ export const rhetoricalQuestions: SentenceData[] = [
             id: 's76-root', role: 'Sentence', children: [
                 { id: 's76-t', role: 'Topic', text: { hanzi: '王侯将相', pinyin: 'wáng hóu jiàng xiàng', translation: 'kings, lords, generals' } },
                 { id: 's76-c', role: 'Comment', subRole: 'rhetorical question', children: [
-                    { id: 's76-nd', role: 'Adjunct', subRole: 'rhetorical marker', text: { hanzi: '难道', pinyin: 'nán dào', translation: 'don\'t tell me' } },
+                    { id: 's76-nd', role: 'Adjunct', subRole: 'rhetorical', text: { hanzi: '难道', pinyin: 'nán dào', translation: 'don\'t tell me' } },
                     { id: 's76-shi', role: 'Copula', text: { hanzi: '是', pinyin: 'shì', translation: 'is' } },
                     { id: 's76-ts', role: 'Complement', text: { hanzi: '天生的', pinyin: 'tiān shēng de', translation: 'innate/born' } },
                     { id: 's76-ma', role: 'Particle', subRole: 'question marker', text: { hanzi: '吗', pinyin: 'ma', translation: '(?)' } },
@@ -88,7 +88,7 @@ export const rhetoricalQuestions: SentenceData[] = [
             id: 'n100-root', role: 'Sentence', children: [
                 { id: 'n100-t', role: 'Topic', isDropped: true, impliedText: '这' },
                 { id: 'n100-c', role: 'Comment', children: [
-                    { id: 'n100-nd', role: 'Adjunct', subRole: 'rhetorical marker', text: { hanzi: '难道', pinyin: 'nán dào', translation: 'could it be' } },
+                    { id: 'n100-nd', role: 'Adjunct', subRole: 'rhetorical', text: { hanzi: '难道', pinyin: 'nán dào', translation: 'could it be' } },
                     { id: 'n100-subj', role: 'Subject', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } },
                     { id: 'n100-lian-phrase', role: 'Preposition', subRole: '连...都 bracket', children: [
                         { id: 'n100-lian', role: 'Preposition', text: { hanzi: '连', pinyin: 'lián', translation: 'even' } },
@@ -127,7 +127,7 @@ export const rhetoricalQuestions: SentenceData[] = [
                     ]},
                     { id: 'n101-cl2', role: 'Embedded Clause', subRole: 'rhetorical question', children: [
                         { id: 'n101-vp2', role: 'Verb Phrase', children: [
-                            { id: 'n101-nd', role: 'Adjunct', subRole: 'rhetorical marker', text: { hanzi: '难道', pinyin: 'nán dào', translation: 'could it be' } },
+                            { id: 'n101-nd', role: 'Adjunct', subRole: 'rhetorical', text: { hanzi: '难道', pinyin: 'nán dào', translation: 'could it be' } },
                             { id: 'n101-t2', role: 'Subject', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
                             { id: 'n101-hai', role: 'Adjunct', text: { hanzi: '还', pinyin: 'hái', translation: 'still' } },
                             { id: 'n101-neng', role: 'Adjunct', text: { hanzi: '能', pinyin: 'néng', translation: 'can' } },
@@ -182,7 +182,7 @@ export const rhetoricalQuestions: SentenceData[] = [
                     id: 's115-c',
                     role: 'Comment',
                     children: [
-                        { id: 's115-adv', role: 'Adjunct', subRole: 'rhetorical question', text: { hanzi: '怎么', pinyin: 'zěn me', translation: 'how could' } },
+                        { id: 's115-adv', role: 'Adjunct', subRole: 'rhetorical', text: { hanzi: '怎么', pinyin: 'zěn me', translation: 'how could' } },
                         { id: 's115-hv', role: 'Head Verb', text: { hanzi: '知道', pinyin: 'zhī dào', translation: 'know' } }
                     ]
                 }

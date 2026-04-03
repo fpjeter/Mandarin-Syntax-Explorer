@@ -230,7 +230,7 @@ export const directionalComplements: SentenceData[] = [
                         {
                             id: 'n43-lp',
                             role: 'Adjunct',
-                            subRole: 'source location',
+                            subRole: 'location',
                             children: [
                                 {
                                     id: 'n43-lp-prep',
@@ -351,7 +351,7 @@ export const directionalComplements: SentenceData[] = [
                     id: 's107-c',
                     role: 'Comment',
                     children: [
-                        { id: 's107-mod', role: 'Adjunct', subRole: 'modal auxiliary', text: { hanzi: '要', pinyin: 'yào', translation: 'need to' } },
+                        { id: 's107-mod', role: 'Adjunct', subRole: 'modal', text: { hanzi: '要', pinyin: 'yào', translation: 'need to' } },
                         { id: 's107-hv', role: 'Head Verb', text: { hanzi: '坚持', pinyin: 'jiān chí', translation: 'persist' } },
                         {
                             id: 's107-comp',

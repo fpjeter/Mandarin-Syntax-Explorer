@@ -265,7 +265,7 @@ export const serialVerbConstructions: SentenceData[] = [
                     id: 's91-c',
                     role: 'Comment',
                     children: [
-                        { id: 's91-by', role: 'Adjunct', subRole: 'prohibition', text: { hanzi: '不要', pinyin: 'bú yào', translation: 'do not' } },
+                        { id: 's91-by', role: 'Adjunct', subRole: 'negation', text: { hanzi: '不要', pinyin: 'bú yào', translation: 'do not' } },
                         { id: 's91-yw', role: 'Adjunct', subRole: 'causal', children: [
                             { id: 's91-yw-p', role: 'Preposition', text: { hanzi: '因为', pinyin: 'yīn wèi', translation: 'because' } },
                             { id: 's91-yw-clause', role: 'Object', children: [
