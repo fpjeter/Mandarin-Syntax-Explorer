@@ -143,5 +143,71 @@ export const aspectMarkers: SentenceData[] = [
                 ]},
             ]
         }
+    },
+    {
+        id: 's110',
+        category: 'Aspect Markers (着/过/了)',
+        chinese: '我学了三年中文了。',
+        pinyin: 'Wǒ xué le sān nián Zhōng wén le.',
+        translation: 'I\'ve been studying Chinese for three years (and still am).',
+        explanation: '**我** ("I") is the Topic. This sentence uses **two separate 了**, and the difference between them matters. The first **了** (after the verb 学) marks that the action of studying has accumulated. The second **了** (at the end of the sentence) signals that this situation continues up to the present moment. Together, they mean: "I have studied for three years *and I\'m still studying*." If you removed the final 了, the sentence would mean "I studied for three years (and then stopped)." This double-了 pattern is one of the trickiest but most important aspect distinctions in Mandarin.',
+        tree: {
+            id: 's110-n',
+            role: 'Sentence',
+            children: [
+                { id: 's110-t', role: 'Topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
+                {
+                    id: 's110-c',
+                    role: 'Comment',
+                    children: [
+                        { id: 's110-hv', role: 'Head Verb', text: { hanzi: '学', pinyin: 'xué', translation: 'study' } },
+                        { id: 's110-le1', role: 'Particle', subRole: 'aspect marker', text: { hanzi: '了', pinyin: 'le', translation: '(completed)' } },
+                        { 
+                            id: 's110-dur', 
+                            role: 'Complement', 
+                            subRole: 'duration',
+                            children: [
+                                { id: 's110-dur-num', role: 'Attributive', text: { hanzi: '三', pinyin: 'sān', translation: 'three' } },
+                                { id: 's110-dur-mw', role: 'Measure Word', text: { hanzi: '年', pinyin: 'nián', translation: 'years' } }
+                            ]
+                        },
+                        { id: 's110-obj', role: 'Object', text: { hanzi: '中文', pinyin: 'Zhōng wén', translation: 'Chinese (language)' } },
+                        { id: 's110-le2', role: 'Particle', subRole: 'change of state / ongoing', text: { hanzi: '了', pinyin: 'le', translation: '(up to now)' } }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        id: 's111',
+        category: 'Aspect Markers (着/过/了)',
+        chinese: '他笑着说："没关系。"',
+        pinyin: 'Tā xiào zhe shuō: "Méi guān xi."',
+        translation: 'He said with a smile: "It\'s fine."',
+        explanation: '**他** ("he") is the Topic. The Comment chains two actions happening at the same time: **笑着** ("smiling") and **说** ("said"). The **着** after 笑 is the concurrent-action marker: it tells you that the smiling was happening while the speaking occurred. This is the *other* major use of 着, different from the stative use (门开着, "the door is open"). Stative 着 describes a lasting state; concurrent 着 describes a manner or background action. Think of it as: [verb1 + 着] sets the backdrop, then [verb2] is the main event. Other examples: 站着吃 ("eat while standing"), 哭着跑 ("run while crying").',
+        tree: {
+            id: 's111-n',
+            role: 'Sentence',
+            children: [
+                { id: 's111-t', role: 'Topic', text: { hanzi: '他', pinyin: 'tā', translation: 'he' } },
+                {
+                    id: 's111-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 's111-manner',
+                            role: 'Adjunct',
+                            subRole: 'concurrent manner',
+                            children: [
+                                { id: 's111-vp-hv', role: 'Head Verb', text: { hanzi: '笑', pinyin: 'xiào', translation: 'smile/laugh' } },
+                                { id: 's111-vp-zhe', role: 'Particle', subRole: 'concurrent action', text: { hanzi: '着', pinyin: 'zhe', translation: '(ongoing background)' } }
+                            ]
+                        },
+                        { id: 's111-hv', role: 'Head Verb', text: { hanzi: '说', pinyin: 'shuō', translation: 'say' } },
+                        { id: 's111-obj', role: 'Object', subRole: 'quoted speech', text: { hanzi: '没关系', pinyin: 'méi guān xi', translation: 'it\'s fine' } }
+                    ]
+                }
+            ]
+        }
     }
 ];

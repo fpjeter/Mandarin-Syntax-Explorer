@@ -328,5 +328,65 @@ export const shDeConstruction: SentenceData[] = [
                 ]},
             ]
         }
+    },
+    {
+        id: 's104',
+        category: 'Shì–de Construction (是…的)',
+        chinese: '我不是故意打碎的。',
+        pinyin: 'Wǒ bú shì gù yì dǎ suì de.',
+        translation: 'I didn\'t break it on purpose.',
+        explanation: '**我** ("I") is the Topic. The **是…的** frame here spotlights the *manner* of the action, but in negative form. **不是** negates the focus: it was not *on purpose* that I broke it. The focused detail **故意** ("on purpose") sits between 是 and the verb. The verb-result compound **打碎** ("hit-shatter," meaning "broke") and the closing 的 complete the frame. Without 是...的, the sentence would be 我不是故意的 ("it wasn\'t on purpose"), which is vaguer. With the full frame, the sentence specifies *what* was not on purpose: the breaking. The negation 不 always goes before 是, never after it.',
+        tree: {
+            id: 's104-n',
+            role: 'Sentence',
+            children: [
+                { id: 's104-t', role: 'Topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
+                {
+                    id: 's104-c',
+                    role: 'Comment',
+                    children: [
+                        { id: 's104-c-neg', role: 'Adjunct', subRole: 'negation', text: { hanzi: '不', pinyin: 'bù', translation: 'not' } },
+                        { id: 's104-shi', role: 'Copula', subRole: 'focus marker', text: { hanzi: '是', pinyin: 'shì', translation: '(it is that)' } },
+                        { id: 's104-manner', role: 'Adjunct', subRole: 'focused manner', text: { hanzi: '故意', pinyin: 'gù yì', translation: 'on purpose' } },
+                        { id: 's104-hv', role: 'Head Verb', text: { hanzi: '打', pinyin: 'dǎ', translation: 'hit' } },
+                        { id: 's104-comp', role: 'Complement', subRole: 'result', text: { hanzi: '碎', pinyin: 'suì', translation: 'shatter' } },
+                        { id: 's104-de', role: 'Particle', subRole: 'focus closure', text: { hanzi: '的', pinyin: 'de', translation: '(the one that)' } }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        id: 's105',
+        category: 'Shì–de Construction (是…的)',
+        chinese: '我是坐火车来的。',
+        pinyin: 'Wǒ shì zuò huǒ chē lái de.',
+        translation: 'I came by train.',
+        explanation: '**我** ("I") is the Topic. The **是…的** frame spotlights *how* the speaker came: **坐火车** ("by train," literally "sit-train"). The 是 opens the focused information, and the 的 at the end closes it. The question being answered is "How did you come?" not "Did you come?" Without 是...的, the sentence would simply be 我坐火车来了 ("I took the train here"), which reports the event. With 是...的, the emphasis shifts to the method of travel. This is one of the most practical uses of the construction: answering how, when, or where questions about past events.',
+        tree: {
+            id: 's105-n',
+            role: 'Sentence',
+            children: [
+                { id: 's105-t', role: 'Topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
+                {
+                    id: 's105-c',
+                    role: 'Comment',
+                    children: [
+                        { id: 's105-shi', role: 'Copula', subRole: 'focus marker', text: { hanzi: '是', pinyin: 'shì', translation: '(it is that)' } },
+                        { 
+                            id: 's105-method', 
+                            role: 'Adjunct', 
+                            subRole: 'focused method', 
+                            children: [
+                                { id: 's105-vp-hv', role: 'Head Verb', text: { hanzi: '坐', pinyin: 'zuò', translation: 'sit/take' } },
+                                { id: 's105-vp-obj', role: 'Object', text: { hanzi: '火车', pinyin: 'huǒ chē', translation: 'train' } }
+                            ]
+                        },
+                        { id: 's105-hv', role: 'Head Verb', text: { hanzi: '来', pinyin: 'lái', translation: 'come' } },
+                        { id: 's105-de', role: 'Particle', subRole: 'focus closure', text: { hanzi: '的', pinyin: 'de', translation: '(the one that)' } }
+                    ]
+                }
+            ]
+        }
     }
 ];

@@ -44,47 +44,59 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
+### [2026-04-02] Orchestrator → Educational Publisher
+**Status**: ✅ Done
+**Task**: Design New Sentences to Fill Coverage Gaps
+**Branch**: `feature/coverage-gap-sentences`
+**Commit**: `5d54192` — feat(spec): design 26 new sentences to fill coverage gaps
+
+> [!NOTE]
+> Produced `new_sentences_spec.md` with 26 fully designed sentences covering all 7 High-priority and 7 Medium-priority gaps from `coverage_gap_analysis.md`. Each entry includes Chinese, pinyin, translation, full explanation (following all 7 pedagogy rules), and structural notes for the Data Linguist. Categories covered: Basic Topic-Comment (2), BA Construction (2), BEI Passive (2), Shì-de (2), Directional Complements (2), Correlative Patterns (2), Aspect Markers (2), Comparatives (2), Rhetorical Questions (2), Separable Verbs (2), Pivotal Constructions (2), Potential Complements (1), Degree Complements (1), Conditional Sentences (2).
+
+
+---
+
+### [2026-04-02] Orchestrator → Data Linguist
+**Status**: ✅ Done
+**Task**: Generate AST Trees for New Sentences
+**Branch**: `feature/coverage-gap-sentences`
+**Sequence**: Ticket 2 of 2 (requires `new_sentences_spec.md` from Ticket 1)
+
+**Action Required**:
+1. Check out `feature/coverage-gap-sentences`.
+2. Read `new_sentences_spec.md` (produced by the Educational Publisher).
+3. For each sentence in the spec, generate the full `SentenceData` object with a proper AST `tree`, following the `/add-sentences` workflow.
+4. Use existing sentences in each category file as structural templates.
+5. Copy the `explanation` string directly from the spec file (do NOT rewrite it).
+6. Use `multi_replace_file_content` to append each sentence to its category file.
+7. Run `npm run qa && npm run lint` to validate.
+8. Commit and push. Mark this ticket as ✅ Done.
+
+**CRITICAL**: Use `multi_replace_file_content` to edit. Do NOT use `sed`. Do NOT modify `src/data/sentences/index.ts`.
+
+
+
+## Resolved
+
 ### [2026-04-02] Orchestrator → Linguistics Specialist
 **Status**: ✅ Done
 **Task**: Accuracy Review of All 97 Sentence Explanations
 **Branch**: `feature/sentence-accuracy-review`
-**Sequence**: Ticket 1 of 2 (must complete before Ticket 2 begins)
+**Commit**: `073ea78`
 
-**Action Required**:
-1. Check out `feature/sentence-accuracy-review`.
-2. Read every file in `src/data/sentences/` (19 category files, 97 sentences total).
-3. For each sentence, compare the `explanation:` string against the `tree:` AST structure. Check for:
-   - Factual inaccuracies (e.g., calling a resultative complement a "compound verb")
-   - Misidentified roles (e.g., saying something is the Subject when the tree labels it Topic)
-   - Missing key structural features that the explanation fails to mention
-   - Incorrect descriptions of particle behavior (了, 着, 过, 得, 不, etc.)
-   - Any remaining FLS jargon that slipped through earlier rewrites
-4. Produce a structured report at `sentence_accuracy_report.md` in the project root. Format:
-   ```
-   ## [filename.ts]
-   ### s[ID] — [chinese sentence]
-   - **Issue**: [description of inaccuracy]
-   - **AST Reality**: [what the tree actually shows]
-   - **Suggested Fix**: [brief correction note]
-   ```
-   If a sentence has no issues, you may skip it or mark it "✅ Accurate".
-5. Commit and push the report. Mark this ticket as ✅ Done.
-
-**CRITICAL**: Do NOT edit any sentence files. Your output is the report only.
-
----
+> [!NOTE]
+> Reviewed all 97 explanations against AST structures. Found 7 accuracy issues (all Subject→Topic terminology leaks) across 5 files. Produced `sentence_accuracy_report.md`.
 
 ### [2026-04-02] Orchestrator → Educational Publisher
 **Status**: ✅ Done
 **Task**: Fresh Rewrite of All 97 Sentence Explanations
 **Branch**: `feature/sentence-accuracy-review`
-**Commit**: `2461d1e` — feat(pedagogy): fresh rewrite of all 97 sentence explanations
+**Commit**: `2461d1e`
 
 > [!NOTE]
-> All 97 explanation strings across 19 category files freshly rewritten. Applied all 7 accuracy fixes from `sentence_accuracy_report.md` (Subject → Topic/actor terminology). Purged all em-dashes and FLS jargon. Varied Topic callouts across entries. Guided-tour tone maintained throughout. QA passed: 97 sentences, 1164 nodes validated. No new lint errors.
+> All 97 explanation strings freshly rewritten. Applied all 7 accuracy fixes. Purged em-dashes and FLS jargon. QA passed: 97 sentences, 1164 nodes.
 
 
-## Resolved
 
 ### [2026-04-01] Orchestrator → Educational Publisher
 **Status**: ✅ Done

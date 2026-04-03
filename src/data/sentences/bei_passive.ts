@@ -361,5 +361,110 @@ export const beiPassive: SentenceData[] = [
                 ]},
             ]
         }
+    },
+    {
+        id: 's102',
+        category: 'BEI Passive (被字句)',
+        chinese: '钱包被偷了。',
+        pinyin: 'Qián bāo bèi tōu le.',
+        translation: 'The wallet was stolen.',
+        explanation: '**钱包** ("wallet") is the Topic. The Comment uses **被** to mark a passive, but notice: there is no agent named between 被 and the verb. Nobody is specified as the thief. The sentence simply says the wallet *was stolen*, without caring by whom. This **agentless 被** pattern is extremely common in everyday Mandarin, especially when the agent is unknown or unimportant. Compare with the agent-specified version: 钱包被人偷了 ("the wallet was stolen by someone"). Both are natural, but the agentless form is shorter and more common in casual speech.',
+        tree: {
+            id: 's102-n',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 's102-t',
+                    role: 'Topic',
+                    text: { hanzi: '钱包', pinyin: 'qián bāo', translation: 'wallet' }
+                },
+                {
+                    id: 's102-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 's102-bei',
+                            role: 'Head Verb',
+                            subRole: 'passive marker (BEI)',
+                            text: { hanzi: '被', pinyin: 'bèi', translation: 'to suffer/undergo' }
+                        },
+                        {
+                            id: 's102-nested',
+                            role: 'Embedded Clause',
+                            children: [
+                                {
+                                    id: 's102-ghost-agent',
+                                    role: 'Topic',
+                                    subRole: 'Ghost Node (Empty Agent)',
+                                    text: { hanzi: '[有人]', pinyin: 'yǒu rén', translation: 'someone' }
+                                },
+                                {
+                                    id: 's102-inner-c',
+                                    role: 'Comment',
+                                    children: [
+                                        { id: 's102-hv', role: 'Head Verb', text: { hanzi: '偷', pinyin: 'tōu', translation: 'steal' } },
+                                        { id: 's102-le', role: 'Particle', subRole: 'completion', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        id: 's103',
+        category: 'BEI Passive (被字句)',
+        chinese: '我的自行车让人骑走了。',
+        pinyin: 'Wǒ de zì xíng chē ràng rén qí zǒu le.',
+        translation: 'My bicycle was ridden away by someone.',
+        explanation: '**我的自行车** ("my bicycle") is the Topic. The Comment uses **让** instead of 被 to mark the passive. In spoken Mandarin, 让 (and its cousin 叫) is far more common than 被 for passives, especially in casual conversation. **人** ("someone") is the agent, and **骑走** ("rode away") is a verb-directional compound: 骑 ("ride") + 走 ("away"). The meaning is identical to 被人骑走了, but 让 sounds more natural and colloquial. Think of 被 as the "formal" passive and 让 as the "casual" one. Both follow the same structure: Topic + passive marker + agent + verb.',
+        tree: {
+            id: 's103-n',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 's103-t',
+                    role: 'Topic',
+                    children: [
+                        { id: 's103-t-attr', role: 'Attributive', text: { hanzi: '我的', pinyin: 'wǒ de', translation: 'my' } },
+                        { id: 's103-t-hn', role: 'Head Noun', text: { hanzi: '自行车', pinyin: 'zì xíng chē', translation: 'bicycle' } }
+                    ]
+                },
+                {
+                    id: 's103-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 's103-rang',
+                            role: 'Head Verb',
+                            subRole: 'passive marker (RANG)',
+                            text: { hanzi: '让', pinyin: 'ràng', translation: 'to let/allow (passive experience)' }
+                        },
+                        {
+                            id: 's103-nested',
+                            role: 'Embedded Clause',
+                            children: [
+                                {
+                                    id: 's103-inner-t',
+                                    role: 'Topic',
+                                    text: { hanzi: '人', pinyin: 'rén', translation: 'someone/people' }
+                                },
+                                {
+                                    id: 's103-inner-c',
+                                    role: 'Comment',
+                                    children: [
+                                        { id: 's103-hv', role: 'Head Verb', text: { hanzi: '骑', pinyin: 'qí', translation: 'ride' } },
+                                        { id: 's103-comp', role: 'Complement', subRole: 'directional result', text: { hanzi: '走', pinyin: 'zǒu', translation: 'away' } },
+                                        { id: 's103-le', role: 'Particle', subRole: 'completion', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
     }
 ];

@@ -324,5 +324,73 @@ export const pivotalConstructions: SentenceData[] = [
                 ]}
             ]
         }
+    },
+    {
+        id: 's118',
+        category: 'Pivotal Constructions (兼语句)',
+        chinese: '王老板让他派人去处理。',
+        pinyin: 'Wáng lǎo bǎn ràng tā pài rén qù chǔ lǐ.',
+        translation: 'Boss Wang asked him to send someone to handle it.',
+        explanation: '**王老板** ("Boss Wang") is the initial Topic. This sentence chains **two pivots** together. Pivot 1: **他** ("him"). Boss Wang tells him to do something, and he is the one who sends someone. Pivot 2: **人** ("someone"). He sends someone, and that someone goes to handle it. The verbs line up in a causal chain: 让 (let/ask) → 派 (send) → 去处理 (go handle). This shows how Mandarin can stack pivotal structures indefinitely to build complex commands or delegations without needing words like "to" or "that".',
+        tree: {
+            id: 's118-n',
+            role: 'Sentence',
+            children: [
+                { id: 's118-t', role: 'Topic', text: { hanzi: '王老板', pinyin: 'Wáng lǎo bǎn', translation: 'Boss Wang' } },
+                {
+                    id: 's118-c',
+                    role: 'Comment',
+                    subRole: 'pivotal chain',
+                    children: [
+                        { id: 's118-v1', role: 'Head Verb', subRole: 'trigger 1', text: { hanzi: '让', pinyin: 'ràng', translation: 'ask/let' } },
+                        { id: 's118-pivot1', role: 'Object', subRole: 'Pivot 1 (doer 2)', text: { hanzi: '他', pinyin: 'tā', translation: 'him' } },
+                        { id: 's118-v2', role: 'Head Verb', subRole: 'trigger 2', text: { hanzi: '派', pinyin: 'pài', translation: 'send' } },
+                        { id: 's118-pivot2', role: 'Object', subRole: 'Pivot 2 (doer 3)', text: { hanzi: '人', pinyin: 'rén', translation: 'person' } },
+                        {
+                            id: 's118-v3-phrase',
+                            role: 'Complement',
+                            subRole: 'final action',
+                            children: [
+                                { id: 's118-v3-dir', role: 'Adjunct', subRole: 'direction', text: { hanzi: '去', pinyin: 'qù', translation: 'go' } },
+                                { id: 's118-v3-hv', role: 'Head Verb', text: { hanzi: '处理', pinyin: 'chǔ lǐ', translation: 'handle' } }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        id: 's119',
+        category: 'Pivotal Constructions (兼语句)',
+        chinese: '有人找你。',
+        pinyin: 'Yǒu rén zhǎo nǐ.',
+        translation: 'Someone is looking for you.',
+        explanation: 'In Mandarin, a sentence cannot easily start with an indefinite noun like "a person" or "someone." Instead, Mandarin uses **有** ("to have / there exists") to introduce the indefinite noun first. Here, **有人** means "there exists a person." This person (**人**) serves as the **pivot**: they are the object of 有 (which brings them into existence for the conversation) and the subject of **找你** (looking for you). This existential pivot is how Mandarin translates English sentences that start with "Someone..." or "A guy..."',
+        tree: {
+            id: 's119-n',
+            role: 'Sentence',
+            children: [
+                { id: 's119-ghost', role: 'Topic', subRole: 'Ghost Node', text: { hanzi: '[这里]', pinyin: 'zhè lǐ', translation: '(here context)' } },
+                {
+                    id: 's119-c',
+                    role: 'Comment',
+                    subRole: 'existential pivot',
+                    children: [
+                        { id: 's119-hv', role: 'Head Verb', subRole: 'existential trigger', text: { hanzi: '有', pinyin: 'yǒu', translation: 'there is' } },
+                        { id: 's119-pivot', role: 'Object', subRole: 'Pivot (doer of next verb)', text: { hanzi: '人', pinyin: 'rén', translation: 'person/someone' } },
+                        {
+                            id: 's119-action',
+                            role: 'Complement',
+                            subRole: 'pivot action',
+                            children: [
+                                { id: 's119-action-hv', role: 'Head Verb', text: { hanzi: '找', pinyin: 'zhǎo', translation: 'look for' } },
+                                { id: 's119-action-obj', role: 'Object', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
     }
 ];

@@ -138,5 +138,55 @@ export const rhetoricalQuestions: SentenceData[] = [
                 ]}
             ]
         }
+    },
+    {
+        id: 's114',
+        category: 'Rhetorical Questions (反问句)',
+        chinese: '你不是已经吃过了吗？',
+        pinyin: 'Nǐ bú shì yǐ jīng chī guò le ma?',
+        translation: 'Didn\'t you already eat?',
+        explanation: '**你** ("you") is the Topic. The Comment uses the **不是…吗** rhetorical frame, which is far more common in casual conversation than the intense 难道 pattern. **不是** ("isn\'t it that") opens the challenge, and **吗** closes the question. The expected answer is "yes, you did eat." The speaker is not genuinely asking; they are pushing back, perhaps because the listener is reaching for more food. The verb phrase **已经吃过了** ("already ate," with 过 marking past experience and 了 marking completion) sits inside the frame. This 不是...吗 pattern is one of the most natural ways to express mild surprise or gentle challenge in everyday speech.',
+        tree: {
+            id: 's114-n',
+            role: 'Sentence',
+            children: [
+                { id: 's114-t', role: 'Topic', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } },
+                {
+                    id: 's114-c',
+                    role: 'Comment',
+                    children: [
+                        { id: 's114-cop', role: 'Copula', subRole: 'rhetorical opener (negated)', text: { hanzi: '不是', pinyin: 'bú shì', translation: 'is it not that' } },
+                        { id: 's114-adv', role: 'Adjunct', text: { hanzi: '已经', pinyin: 'yǐ jīng', translation: 'already' } },
+                        { id: 's114-hv', role: 'Head Verb', text: { hanzi: '吃', pinyin: 'chī', translation: 'eat' } },
+                        { id: 's114-guo', role: 'Particle', subRole: 'experiential', text: { hanzi: '过', pinyin: 'guò', translation: '(experienced)' } },
+                        { id: 's114-le', role: 'Particle', subRole: 'completion', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } },
+                        { id: 's114-ma', role: 'Particle', subRole: 'question marker', text: { hanzi: '吗', pinyin: 'ma', translation: '?' } }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        id: 's115',
+        category: 'Rhetorical Questions (反问句)',
+        chinese: '我怎么知道？',
+        pinyin: 'Wǒ zěn me zhī dào?',
+        translation: 'How would I know?',
+        explanation: '**我** ("I") is the Topic. The Comment uses **怎么** ("how") before the verb **知道** ("know") to form a rhetorical question. The speaker is not genuinely asking "by what method would I know?" They are pushing back: "There is no way I would know." Rhetorical 怎么 is one of the most common ways to express frustration or deflect responsibility in spoken Mandarin. It is much lighter than 难道 and much more natural in casual speech. The tree shows a simple structure: just Topic + 怎么 + verb. Other examples: 我怎么会忘 ("How could I forget?"), 你怎么能这样 ("How can you be like this?").',
+        tree: {
+            id: 's115-n',
+            role: 'Sentence',
+            children: [
+                { id: 's115-t', role: 'Topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
+                {
+                    id: 's115-c',
+                    role: 'Comment',
+                    children: [
+                        { id: 's115-adv', role: 'Adjunct', subRole: 'rhetorical question', text: { hanzi: '怎么', pinyin: 'zěn me', translation: 'how could' } },
+                        { id: 's115-hv', role: 'Head Verb', text: { hanzi: '知道', pinyin: 'zhī dào', translation: 'know' } }
+                    ]
+                }
+            ]
+        }
     }
 ];

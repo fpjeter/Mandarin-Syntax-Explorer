@@ -319,5 +319,38 @@ export const potentialComplements: SentenceData[] = [
                 },
             ],
         },
+    },
+    {
+        id: 's120',
+        category: 'Potential Complements (可能补语)',
+        chinese: '我实在受不了了。',
+        pinyin: 'Wǒ shí zài shòu bù liǎo le.',
+        translation: 'I really can\'t stand it anymore.',
+        explanation: '**我** ("I") is the Topic. The verb is **受** ("to endure"). The **不了** (bù liǎo) is a highly common potential complement that acts almost like a fixed phrase. It doesn\'t literally mean "cannot finish"; it means "unable to bear/unable to happen." So 受不了 means "cannot endure." Notice how the potential marker (不) is trapped *between* the verb and the complement (了), fully integrating them. The final **了** (le) is a change-of-state marker, signaling "it has reached the point where I can\'t stand it anymore."',
+        tree: {
+            id: 's120-n',
+            role: 'Sentence',
+            children: [
+                { id: 's120-t', role: 'Topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
+                {
+                    id: 's120-c',
+                    role: 'Comment',
+                    children: [
+                        { id: 's120-adv', role: 'Adjunct', subRole: 'degree/emphasis', text: { hanzi: '实在', pinyin: 'shí zài', translation: 'really/truly' } },
+                        {
+                            id: 's120-pot',
+                            role: 'Complement',
+                            subRole: 'lexicalized potential phrase',
+                            children: [
+                                { id: 's120-pot-hv', role: 'Head Verb', text: { hanzi: '受', pinyin: 'shòu', translation: 'endure' } },
+                                { id: 's120-pot-bu', role: 'Particle', subRole: 'potential negation', text: { hanzi: '不', pinyin: 'bù', translation: 'cannot' } },
+                                { id: 's120-pot-liao', role: 'Particle', subRole: 'result', text: { hanzi: '了', pinyin: 'liǎo', translation: 'finish/bare' } }
+                            ]
+                        },
+                        { id: 's120-le', role: 'Particle', subRole: 'change of state', text: { hanzi: '了', pinyin: 'le', translation: '(anymore)' } }
+                    ]
+                }
+            ]
+        }
     }
 ];

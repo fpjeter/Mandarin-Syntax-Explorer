@@ -253,5 +253,76 @@ export const conditionalSentences: SentenceData[] = [
                 ]},
             ]
         }
+    },
+    {
+        id: 's122',
+        category: 'Conditional Sentences (如果…就…)',
+        chinese: '即使下雨，我也要去。',
+        pinyin: 'Jí shǐ xià yǔ, wǒ yě yào qù.',
+        translation: 'Even if it rains, I\'m still going to go.',
+        explanation: 'This is a concessive conditional pattern: "Even if A, still B." The first clause introduces the hypothetical extreme case using **即使** ("even if"). The second clause delivers the unwavering result, linked by **也** ("also / still"). The 也 is mandatory in Mandarin for this pattern. It anchors the second half, showing that despite the condition set by 即使, the outcome remains the same. The Topic of the first clause is implied (the weather context), while **我** ("I") is the Topic of the second.',
+        tree: {
+            id: 's122-n',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 's122-cond',
+                    role: 'Topic',
+                    subRole: 'condition clause',
+                    children: [
+                        { id: 's122-cond-conj', role: 'Adjunct', subRole: 'conjunction', text: { hanzi: '即使', pinyin: 'jí shǐ', translation: 'even if' } },
+                        { id: 's122-cond-hv', role: 'Head Verb', text: { hanzi: '下雨', pinyin: 'xià yǔ', translation: 'rain' } }
+                    ]
+                },
+                {
+                    id: 's122-c',
+                    role: 'Comment',
+                    subRole: 'result clause',
+                    children: [
+                        { id: 's122-c-t', role: 'Topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
+                        { id: 's122-c-adv', role: 'Adjunct', subRole: 'correlative link', text: { hanzi: '也', pinyin: 'yě', translation: 'still/also' } },
+                        { id: 's122-c-mod', role: 'Adjunct', subRole: 'modal', text: { hanzi: '要', pinyin: 'yào', translation: 'want to / will' } },
+                        { id: 's122-c-hv', role: 'Head Verb', text: { hanzi: '去', pinyin: 'qù', translation: 'go' } }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        id: 's123',
+        category: 'Conditional Sentences (如果…就…)',
+        chinese: '除非你道歉，否则我不会原谅你。',
+        pinyin: 'Chú fēi nǐ dào qiàn, fǒu zé wǒ bú huì yuán liàng nǐ.',
+        translation: 'Unless you apologize, (otherwise) I won\'t forgive you.',
+        explanation: 'This is the "unless" pattern. The first clause uses **除非** ("unless") to state the only condition that will change the outcome. The second clause uses **否则** ("otherwise") to show what happens if that condition isn\'t met. English just says "unless A, B", but Mandarin explicitly balances it: "unless A, *otherwise* B." As always with conditionals, the condition clause (除非你道歉) acts as the broad Topic, setting the stage, while the outcome (否则我不会原谅你) acts as the Comment.',
+        tree: {
+            id: 's123-n',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 's123-cond',
+                    role: 'Topic',
+                    subRole: 'condition clause',
+                    children: [
+                        { id: 's123-cond-conj', role: 'Adjunct', subRole: 'conjunction', text: { hanzi: '除非', pinyin: 'chú fēi', translation: 'unless' } },
+                        { id: 's123-cond-t', role: 'Topic', subRole: 'inner topic', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } },
+                        { id: 's123-cond-hv', role: 'Head Verb', text: { hanzi: '道歉', pinyin: 'dào qiàn', translation: 'apologize' } }
+                    ]
+                },
+                {
+                    id: 's123-c',
+                    role: 'Comment',
+                    subRole: 'result clause',
+                    children: [
+                        { id: 's123-c-conj', role: 'Adjunct', subRole: 'conjunction', text: { hanzi: '否则', pinyin: 'fǒu zé', translation: 'otherwise' } },
+                        { id: 's123-c-t', role: 'Topic', subRole: 'inner topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
+                        { id: 's123-c-neg', role: 'Adjunct', subRole: 'negation', text: { hanzi: '不', pinyin: 'bú', translation: 'not' } },
+                        { id: 's123-c-mod', role: 'Adjunct', subRole: 'modal', text: { hanzi: '会', pinyin: 'huì', translation: 'will' } },
+                        { id: 's123-c-hv', role: 'Head Verb', text: { hanzi: '原谅', pinyin: 'yuán liàng', translation: 'forgive' } },
+                        { id: 's123-c-obj', role: 'Object', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } }
+                    ]
+                }
+            ]
+        }
     }
 ];

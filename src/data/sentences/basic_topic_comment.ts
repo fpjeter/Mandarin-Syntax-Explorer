@@ -817,5 +817,93 @@ export const basicTopicComment: SentenceData[] = [
                 },
             ],
         },
+    },
+    {
+        id: 's124',
+        category: 'Basic Topic–Comment (主题评论)',
+        chinese: '苹果我已经吃了。',
+        pinyin: 'Píng guǒ wǒ yǐ jīng chī le.',
+        translation: 'The apple, I\'ve already eaten it.',
+        explanation: 'Here, **苹果** ("apple") sits as the Topic, but notice something different: the apple is not the one doing anything. It is the thing being acted upon. Inside the Comment, **我** ("I") is the actual actor, followed by **已经吃了** ("already ate"). This is a **patient-topic** sentence: the Topic is not the doer but the thing being discussed. English signals this with word order ("I ate the apple"), but Mandarin can freely place the patient first as a frame: "As for the apple, I already ate it." This flexibility is one of the most distinctive features of Mandarin\'s Topic-Comment system.',
+        tree: {
+            id: 's124-n',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 's124-t',
+                    role: 'Topic',
+                    subRole: 'Patient-Topic',
+                    text: { hanzi: '苹果', pinyin: 'píng guǒ', translation: 'apple' }
+                },
+                {
+                    id: 's124-c',
+                    role: 'Comment',
+                    children: [
+                        {
+                            id: 's124-c-subj',
+                            role: 'Subject',
+                            text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' }
+                        },
+                        {
+                            id: 's124-c-adj',
+                            role: 'Adjunct',
+                            text: { hanzi: '已经', pinyin: 'yǐ jīng', translation: 'already' }
+                        },
+                        {
+                            id: 's124-c-hv',
+                            role: 'Head Verb',
+                            text: { hanzi: '吃', pinyin: 'chī', translation: 'eat' }
+                        },
+                        {
+                            id: 's124-c-le',
+                            role: 'Particle',
+                            subRole: 'completion',
+                            text: { hanzi: '了', pinyin: 'le', translation: '(done)' }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        id: 's125',
+        category: 'Basic Topic–Comment (主题评论)',
+        chinese: '墙上挂着一幅画。',
+        pinyin: 'Qiáng shàng guà zhe yī fú huà.',
+        translation: 'On the wall hangs a painting.',
+        explanation: '**墙上** ("on the wall") is the Topic. It is not a person or thing but a *location* serving as the frame for what follows. The Comment uses **挂着** ("is hanging"), with the durative aspect marker **着** indicating an ongoing state: something is currently hanging there. The painting (**一幅画**, where 幅 is the measure word for paintings and posters) is the thing existing in that location. This sentence type is called an "existential" or "presentative" pattern: it introduces something by first naming where it exists. English uses inverted word order for the same effect: "On the wall hangs a painting."',
+        tree: {
+            id: 's125-n',
+            role: 'Sentence',
+            children: [
+                {
+                    id: 's125-t',
+                    role: 'Topic',
+                    subRole: 'Location',
+                    children: [
+                        { id: 's125-t-hn', role: 'Head Noun', text: { hanzi: '墙', pinyin: 'qiáng', translation: 'wall' } },
+                        { id: 's125-t-loc', role: 'Particle', subRole: 'localizer', text: { hanzi: '上', pinyin: 'shàng', translation: 'on/above' } }
+                    ]
+                },
+                {
+                    id: 's125-c',
+                    role: 'Comment',
+                    children: [
+                        { id: 's125-c-hv', role: 'Head Verb', text: { hanzi: '挂', pinyin: 'guà', translation: 'hang' } },
+                        { id: 's125-c-zhe', role: 'Particle', subRole: 'durative', text: { hanzi: '着', pinyin: 'zhe', translation: '(ongoing state)' } },
+                        {
+                            id: 's125-c-subj',
+                            role: 'Subject',
+                            subRole: 'existential subject',
+                            children: [
+                                { id: 's125-c-subj-num', role: 'Attributive', text: { hanzi: '一', pinyin: 'yī', translation: 'one' } },
+                                { id: 's125-c-subj-mw', role: 'Attributive', subRole: 'measure word', text: { hanzi: '幅', pinyin: 'fú', translation: '(measure word)' } },
+                                { id: 's99-c-subj-hn', role: 'Head Noun', text: { hanzi: '画', pinyin: 'huà', translation: 'painting' } }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
     }
 ];

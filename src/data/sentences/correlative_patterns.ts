@@ -244,5 +244,92 @@ export const correlativePatterns: SentenceData[] = [
                 ]}
             ]
         }
+    },
+    {
+        id: 's108',
+        category: 'Correlative Patterns (越…越…)',
+        chinese: '他不但会说英语，而且还会说法语。',
+        pinyin: 'Tā bú dàn huì shuō Yīng yǔ, ér qiě hái huì shuō Fǎ yǔ.',
+        translation: 'He not only speaks English, but also speaks French.',
+        explanation: '**他** ("he") is the Topic. The **不但…而且…** frame builds an escalating pair: the first clause states something already impressive (speaks English), and the second clause tops it (also speaks French). **不但** ("not only") opens the first half, and **而且** ("but also") opens the second. The **还** ("additionally, still") inside the second clause reinforces the escalation. Both clauses share the same Topic, so 他 appears only once. This correlative pattern is one of the most useful in Mandarin for building emphasis and expressing that something exceeds expectations.',
+        tree: {
+            id: 's108-n',
+            role: 'Sentence',
+            children: [
+                { id: 's108-t', role: 'Topic', text: { hanzi: '他', pinyin: 'tā', translation: 'he' } },
+                {
+                    id: 's108-c',
+                    role: 'Comment',
+                    subRole: 'correlative frame',
+                    children: [
+                        {
+                            id: 's108-clause1',
+                            role: 'Embedded Clause',
+                            subRole: 'not only...',
+                            children: [
+                                { id: 's108-c1-conj', role: 'Adjunct', subRole: 'conjunction', text: { hanzi: '不但', pinyin: 'bú dàn', translation: 'not only' } },
+                                { id: 's108-c1-mod', role: 'Adjunct', subRole: 'modal', text: { hanzi: '会', pinyin: 'huì', translation: 'can' } },
+                                { id: 's108-c1-hv', role: 'Head Verb', text: { hanzi: '说', pinyin: 'shuō', translation: 'speak' } },
+                                { id: 's108-c1-obj', role: 'Object', text: { hanzi: '英语', pinyin: 'Yīng yǔ', translation: 'English' } }
+                            ]
+                        },
+                        {
+                            id: 's108-clause2',
+                            role: 'Embedded Clause',
+                            subRole: '...but also',
+                            children: [
+                                { id: 's108-c2-conj', role: 'Adjunct', subRole: 'conjunction', text: { hanzi: '而且', pinyin: 'ér qiě', translation: 'but also' } },
+                                { id: 's108-c2-adv', role: 'Adjunct', subRole: 'reinforcement', text: { hanzi: '还', pinyin: 'hái', translation: 'additionally' } },
+                                { id: 's108-c2-mod', role: 'Adjunct', subRole: 'modal', text: { hanzi: '会', pinyin: 'huì', translation: 'can' } },
+                                { id: 's108-c2-hv', role: 'Head Verb', text: { hanzi: '说', pinyin: 'shuō', translation: 'speak' } },
+                                { id: 's108-c2-obj', role: 'Object', text: { hanzi: '法语', pinyin: 'Fǎ yǔ', translation: 'French' } }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        id: 's109',
+        category: 'Correlative Patterns (越…越…)',
+        chinese: '虽然很累，但是很开心。',
+        pinyin: 'Suī rán hěn lèi, dàn shì hěn kāi xīn.',
+        translation: 'Although tired, (I\'m) very happy.',
+        explanation: 'The Topic is an implied general actor (dropped "I" or "one"), which is very natural in Mandarin. The **虽然…但是…** frame expresses concession: "although A, but B." The first clause concedes: 虽然很累 ("although very tired"). The second clause counters: 但是很开心 ("but very happy"). In Mandarin, both markers are typically required. English uses "although" alone, but Mandarin pairs 虽然 with 但是 (or 可是, 不过). The tree shows two parallel Comment clauses joined by this concessive frame. This is one of the most essential structures for expressing contrast.',
+        tree: {
+            id: 's109-n',
+            role: 'Sentence',
+            children: [
+                { id: 's109-ghost', role: 'Topic', subRole: 'Ghost Node', text: { hanzi: '[我]', pinyin: 'wǒ', translation: 'I(implied)' } },
+                {
+                    id: 's109-c',
+                    role: 'Comment',
+                    subRole: 'correlative frame',
+                    children: [
+                        {
+                            id: 's109-clause1',
+                            role: 'Embedded Clause',
+                            subRole: 'concession',
+                            children: [
+                                { id: 's109-c1-conj', role: 'Adjunct', subRole: 'conjunction', text: { hanzi: '虽然', pinyin: 'suī rán', translation: 'although' } },
+                                { id: 's109-c1-adv', role: 'Adjunct', subRole: 'degree', text: { hanzi: '很', pinyin: 'hěn', translation: 'very' } },
+                                { id: 's109-c1-adj', role: 'Adjective', text: { hanzi: '累', pinyin: 'lèi', translation: 'tired' } }
+                            ]
+                        },
+                        {
+                            id: 's109-clause2',
+                            role: 'Embedded Clause',
+                            subRole: 'contrast',
+                            children: [
+                                { id: 's109-c2-conj', role: 'Adjunct', subRole: 'conjunction', text: { hanzi: '但是', pinyin: 'dàn shì', translation: 'but' } },
+                                { id: 's109-c2-adv', role: 'Adjunct', subRole: 'degree', text: { hanzi: '很', pinyin: 'hěn', translation: 'very' } },
+                                { id: 's109-c2-adj', role: 'Adjective', text: { hanzi: '开心', pinyin: 'kāi xīn', translation: 'happy' } }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
     }
 ];
