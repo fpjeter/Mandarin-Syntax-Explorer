@@ -44,23 +44,67 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
-### [2026-04-02] Orchestrator → Data Linguist
-**Status**: ✅ Done
-**Task**: Fix 3 AST Structure Issues Flagged by Linguistics Specialist
-**Branch**: `fix/ast-corrections`
+### [2026-04-02] Orchestrator → Linguistics Specialist
+**Status**: 🔴 Active
+**Task**: Accuracy Review of Grammar Guide Content
+**Branch**: `feature/grammar-guide-review`
+**Sequence**: Ticket 1 of 2 (must complete before Ticket 2 begins)
 
-**Context**: The Linguistics Specialist validated the 26 new sentences and approved 23. Three sentences have incorrect AST structures that need refactoring. See `new_sentences_validation.md` for full details.
+**Context**: We have two grammar guide components that serve as the primary educational reference for learners: `GrammarGuide.tsx` (modern Mandarin) and `ClassicalGrammarGuide.tsx` (classical Chinese). These need a thorough accuracy review before the Educational Publisher does a fresh rewrite.
 
 **Action Required**:
-1. Check out `fix/ast-corrections`.
-2. Read the ❌ section of `new_sentences_validation.md`.
-3. Fix the following 3 sentences:
-   - **王老板让他派人去处理。** (`pivotal_constructions.ts`): Refactor flat serial-verb array into nested Embedded Clause structure for pivotal verbs.
-   - **有人找你。** (`pivotal_constructions.ts`): Refactor flat existential pivot into Embedded Clause structure (有 → Embedded Clause → Topic(人) → Comment(找你)).
-   - **除非你道歉，否则我不会原谅你。** (`conditional_sentences.ts`): Fix the result clause so that the inner topic 我 is properly encapsulated (as Subject/Actor within the Comment), not placed as a naked Topic sibling alongside predicate nodes.
-4. Use `multi_replace_file_content` to edit. Do NOT use `sed`.
-5. Run `npm run qa && npm run lint` to validate.
+1. Check out `feature/grammar-guide-review`.
+2. Read `src/components/GrammarGuide.tsx` (226 lines). Review all prose content:
+   - Section 1: "Topic and Comment" (lines 93-112)
+   - Section 2: "Nesting and Embedding" (lines 114-122)
+   - Section 3: "Word Order Rules" (lines 124-144)
+   - Section 4: "Parallel Sentences" (lines 146-152)
+   - Section 5: "Why subjects disappear" (lines 154-165)
+   - "Tree labels at a glance" definitions (lines 168-188)
+   - "A note on this grammar model" footnote (lines 55-71)
+3. Read `src/components/ClassicalGrammarGuide.tsx` (284 lines). Review all prose content:
+   - "The big idea" (lines 12-34)
+   - "Shared Structure with Modern Mandarin" (lines 36-45)
+   - "Classical vs. Modern" comparison grid (lines 48-70)
+   - "Key function words" definitions (lines 72-97)
+   - "之: the backbone particle" examples (lines 99-122)
+   - "Rhetorical questions" (lines 124-149)
+   - "Negation" (lines 151-173)
+   - "Coverbs" (lines 175-214)
+   - "而: the connective" (lines 216-236)
+   - "Tree labels at a glance" definitions (lines 238-257)
+   - "Using the tree" tips (lines 259-280)
+4. For each section, check for:
+   - Factual grammar inaccuracies
+   - Misleading simplifications
+   - Missing important caveats or exceptions
+   - Incorrect Chinese examples or translations
+   - Any remaining FLS jargon or academic terminology
+   - Content gaps (e.g., important grammar concepts not covered)
+5. Produce a report at `grammar_guide_review.md` in the project root, organized by file and section.
 6. Commit and push. Mark this ticket as ✅ Done.
+
+**CRITICAL**: Do NOT edit any component files. Your output is the review report only.
+
+---
+
+### [2026-04-02] Orchestrator → Educational Publisher
+**Status**: ⏳ Blocked (waiting for Ticket 1)
+**Task**: Fresh Rewrite of Grammar Guide Content
+**Branch**: `feature/grammar-guide-review`
+**Sequence**: Ticket 2 of 2 (requires `grammar_guide_review.md` from Ticket 1)
+
+**Action Required**:
+1. Check out `feature/grammar-guide-review`.
+2. Read `grammar_guide_review.md` (produced by the Linguistics Specialist).
+3. Read `explanations_pedagogy.md` for tone rules.
+4. Rewrite all prose content in `GrammarGuide.tsx` and `ClassicalGrammarGuide.tsx`:
+   - Incorporate all accuracy fixes from the review
+   - Follow all 7 pedagogy rules (especially: no em-dashes, no FLS jargon, warm tutor tone)
+   - Keep all React component structure, CSS classes, and JSX layout intact. Only modify string content.
+5. **CRITICAL**: Use `multi_replace_file_content` to edit. Do NOT use `sed`.
+6. Run `npm run lint && npx tsc --noEmit` to validate.
+7. Commit and push. Mark this ticket as ✅ Done.
 
 
 ## Resolved
