@@ -45,7 +45,7 @@ Append a new block to `## Pending Requests` using this exact format:
 ## Active Assignments
 
 ### [2026-04-02] Orchestrator → Linguistics Specialist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Validate 26 New Coverage Gap Sentences (AST + Explanation Accuracy)
 **Branch**: `develop`
 
