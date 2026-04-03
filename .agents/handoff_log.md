@@ -44,36 +44,23 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
-### [2026-04-02] Orchestrator → Educational Publisher
-**Status**: ✅ Done
-**Task**: Design New Sentences to Fill Coverage Gaps
-**Branch**: `feature/coverage-gap-sentences`
-**Commit**: `5d54192` — feat(spec): design 26 new sentences to fill coverage gaps
-
-> [!NOTE]
-> Produced `new_sentences_spec.md` with 26 fully designed sentences covering all 7 High-priority and 7 Medium-priority gaps from `coverage_gap_analysis.md`. Each entry includes Chinese, pinyin, translation, full explanation (following all 7 pedagogy rules), and structural notes for the Data Linguist. Categories covered: Basic Topic-Comment (2), BA Construction (2), BEI Passive (2), Shì-de (2), Directional Complements (2), Correlative Patterns (2), Aspect Markers (2), Comparatives (2), Rhetorical Questions (2), Separable Verbs (2), Pivotal Constructions (2), Potential Complements (1), Degree Complements (1), Conditional Sentences (2).
-
-
----
-
 ### [2026-04-02] Orchestrator → Data Linguist
 **Status**: ✅ Done
-**Task**: Generate AST Trees for New Sentences
-**Branch**: `feature/coverage-gap-sentences`
-**Sequence**: Ticket 2 of 2 (requires `new_sentences_spec.md` from Ticket 1)
+**Task**: Fix 3 AST Structure Issues Flagged by Linguistics Specialist
+**Branch**: `fix/ast-corrections`
+
+**Context**: The Linguistics Specialist validated the 26 new sentences and approved 23. Three sentences have incorrect AST structures that need refactoring. See `new_sentences_validation.md` for full details.
 
 **Action Required**:
-1. Check out `feature/coverage-gap-sentences`.
-2. Read `new_sentences_spec.md` (produced by the Educational Publisher).
-3. For each sentence in the spec, generate the full `SentenceData` object with a proper AST `tree`, following the `/add-sentences` workflow.
-4. Use existing sentences in each category file as structural templates.
-5. Copy the `explanation` string directly from the spec file (do NOT rewrite it).
-6. Use `multi_replace_file_content` to append each sentence to its category file.
-7. Run `npm run qa && npm run lint` to validate.
-8. Commit and push. Mark this ticket as ✅ Done.
-
-**CRITICAL**: Use `multi_replace_file_content` to edit. Do NOT use `sed`. Do NOT modify `src/data/sentences/index.ts`.
-
+1. Check out `fix/ast-corrections`.
+2. Read the ❌ section of `new_sentences_validation.md`.
+3. Fix the following 3 sentences:
+   - **王老板让他派人去处理。** (`pivotal_constructions.ts`): Refactor flat serial-verb array into nested Embedded Clause structure for pivotal verbs.
+   - **有人找你。** (`pivotal_constructions.ts`): Refactor flat existential pivot into Embedded Clause structure (有 → Embedded Clause → Topic(人) → Comment(找你)).
+   - **除非你道歉，否则我不会原谅你。** (`conditional_sentences.ts`): Fix the result clause so that the inner topic 我 is properly encapsulated (as Subject/Actor within the Comment), not placed as a naked Topic sibling alongside predicate nodes.
+4. Use `multi_replace_file_content` to edit. Do NOT use `sed`.
+5. Run `npm run qa && npm run lint` to validate.
+6. Commit and push. Mark this ticket as ✅ Done.
 
 
 ## Resolved

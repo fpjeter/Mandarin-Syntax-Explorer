@@ -340,19 +340,42 @@ export const pivotalConstructions: SentenceData[] = [
                 {
                     id: 's118-c',
                     role: 'Comment',
-                    subRole: 'pivotal chain',
                     children: [
-                        { id: 's118-v1', role: 'Head Verb', subRole: 'trigger 1', text: { hanzi: '让', pinyin: 'ràng', translation: 'ask/let' } },
-                        { id: 's118-pivot1', role: 'Object', subRole: 'Pivot 1 (doer 2)', text: { hanzi: '他', pinyin: 'tā', translation: 'him' } },
-                        { id: 's118-v2', role: 'Head Verb', subRole: 'trigger 2', text: { hanzi: '派', pinyin: 'pài', translation: 'send' } },
-                        { id: 's118-pivot2', role: 'Object', subRole: 'Pivot 2 (doer 3)', text: { hanzi: '人', pinyin: 'rén', translation: 'person' } },
                         {
-                            id: 's118-v3-phrase',
-                            role: 'Complement',
-                            subRole: 'final action',
+                            id: 's118-vp',
+                            role: 'Verb Phrase',
+                            subRole: 'pivotal chain',
                             children: [
-                                { id: 's118-v3-dir', role: 'Adjunct', subRole: 'direction', text: { hanzi: '去', pinyin: 'qù', translation: 'go' } },
-                                { id: 's118-v3-hv', role: 'Head Verb', text: { hanzi: '处理', pinyin: 'chǔ lǐ', translation: 'handle' } }
+                                { id: 's118-v1', role: 'Head Verb', subRole: 'causative', text: { hanzi: '让', pinyin: 'ràng', translation: 'ask/let' } },
+                                {
+                                    id: 's118-emb1',
+                                    role: 'Embedded Clause',
+                                    children: [
+                                        { id: 's118-pivot1', role: 'Topic', subRole: 'pivot', text: { hanzi: '他', pinyin: 'tā', translation: 'him' } },
+                                        {
+                                            id: 's118-c1',
+                                            role: 'Comment',
+                                            children: [
+                                                { id: 's118-v2', role: 'Head Verb', subRole: 'causative', text: { hanzi: '派', pinyin: 'pài', translation: 'send' } },
+                                                {
+                                                    id: 's118-emb2',
+                                                    role: 'Embedded Clause',
+                                                    children: [
+                                                        { id: 's118-pivot2', role: 'Topic', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'person' } },
+                                                        {
+                                                            id: 's118-c2',
+                                                            role: 'Comment',
+                                                            children: [
+                                                                { id: 's118-v3-dir', role: 'Adjunct', subRole: 'direction', text: { hanzi: '去', pinyin: 'qù', translation: 'go' } },
+                                                                { id: 's118-v3-hv', role: 'Head Verb', text: { hanzi: '处理', pinyin: 'chǔ lǐ', translation: 'handle' } }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
                             ]
                         }
                     ]
@@ -375,17 +398,28 @@ export const pivotalConstructions: SentenceData[] = [
                 {
                     id: 's119-c',
                     role: 'Comment',
-                    subRole: 'existential pivot',
                     children: [
-                        { id: 's119-hv', role: 'Head Verb', subRole: 'existential trigger', text: { hanzi: '有', pinyin: 'yǒu', translation: 'there is' } },
-                        { id: 's119-pivot', role: 'Object', subRole: 'Pivot (doer of next verb)', text: { hanzi: '人', pinyin: 'rén', translation: 'person/someone' } },
                         {
-                            id: 's119-action',
-                            role: 'Complement',
-                            subRole: 'pivot action',
+                            id: 's119-vp',
+                            role: 'Verb Phrase',
+                            subRole: 'existential pivot',
                             children: [
-                                { id: 's119-action-hv', role: 'Head Verb', text: { hanzi: '找', pinyin: 'zhǎo', translation: 'look for' } },
-                                { id: 's119-action-obj', role: 'Object', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } }
+                                { id: 's119-hv', role: 'Head Verb', subRole: 'existential trigger', text: { hanzi: '有', pinyin: 'yǒu', translation: 'there is' } },
+                                {
+                                    id: 's119-emb',
+                                    role: 'Embedded Clause',
+                                    children: [
+                                        { id: 's119-pivot', role: 'Topic', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'person/someone' } },
+                                        {
+                                            id: 's119-c2',
+                                            role: 'Comment',
+                                            children: [
+                                                { id: 's119-action-hv', role: 'Head Verb', text: { hanzi: '找', pinyin: 'zhǎo', translation: 'look for' } },
+                                                { id: 's119-action-obj', role: 'Object', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } }
+                                            ]
+                                        }
+                                    ]
+                                }
                             ]
                         }
                     ]
