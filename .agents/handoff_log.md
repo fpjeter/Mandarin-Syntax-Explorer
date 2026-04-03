@@ -44,28 +44,27 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
-### [2026-04-02] Orchestrator → Linguistics Specialist
-**Status**: ✅ Done
-**Task**: Full Data Quality Scan of All 123 Sentences
+### [2026-04-02] Orchestrator → Educational Publisher
+**Status**: 🔴 Active
+**Task**: Fix ~40 Explanation Accuracy Failures
 **Branch**: `feature/ast-type-fixes`
 
-**Context**: We just found s33 had a misaligned ruby (pinyin token count didn't match hanzi character count) and an explanation that referenced the wrong characters (弟弟/买菜 instead of 我/买牛奶). We need a systematic scan to catch any more issues like this.
+**Context**: The Linguistics Specialist's `data_quality_scan.md` found ~40 explanations that reference characters/examples from other sentences. These are artifacts of batch rewrite operations.
 
 **Action Required**:
 1. Check out `feature/ast-type-fixes` and pull latest.
-2. Scan all 123 sentences across `src/data/sentences/` for the following issues:
-   - **Pinyin-Hanzi mismatch**: Does the number of pinyin tokens in the header `pinyin` field match the number of hanzi characters in `chinese`? (Compound words like 牛奶 should share ONE pinyin token so rubies align; multi-character words like 妈妈 need one token per character: "mā ma" not "māma")
-   - **Pinyin-Hanzi mismatch in tree nodes**: Same check for every `text: { hanzi, pinyin }` in the tree. Token count must match character count.
-   - **Explanation accuracy**: Does the explanation reference the correct characters/words from the actual sentence? (s33 was referencing 弟弟 and 买菜 from a different sentence)
-   - **Pinyin correctness**: Are tones correct? Any typos?
-   - **Translation accuracy**: Does the English translation match the Chinese?
-3. Produce a report at `data_quality_scan.md` in the project root. For each issue found, list:
-   - Sentence ID and file
-   - The specific issue
-   - The correction needed
-4. Commit and push. Mark this ticket as ✅ Done.
+2. Read `data_quality_scan.md` "Issue 2" section thoroughly.
+3. For each flagged sentence, open the source file and:
+   - Read the `chinese` field to know what the actual sentence says
+   - Read the `tree` structure to understand the grammar
+   - Rewrite the `explanation` to accurately reference the correct characters from THIS sentence
+   - Follow all 7 pedagogy rules from `explanations_pedagogy.md`
+4. Also fix the 1 remaining pinyin issue: `s33` tree node `n33-serial-v2-obj` should have pinyin `niú nǎi` (2 tokens for 2 characters), not `niúnǎi`.
+5. Use `multi_replace_file_content`. Do NOT use `sed`.
+6. Run `npm run qa && npm run lint` to validate.
+7. Commit and push. Mark this ticket as ✅ Done.
 
-**CRITICAL**: Do NOT edit any sentence files. Your output is the scan report only.
+**CRITICAL**: Only modify `explanation` strings and the 1 pinyin value. Do NOT change tree structures, roles, or subRoles.
 
 
 
