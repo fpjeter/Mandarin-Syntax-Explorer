@@ -44,35 +44,25 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
-### [2026-04-02] Orchestrator → Educational Publisher
-**Status**: ✅ Done
-**Task**: Design New Sentences to Fill Coverage Gaps
-**Branch**: `feature/coverage-gap-sentences`
-**Commit**: `5d54192` — feat(spec): design 26 new sentences to fill coverage gaps
+### [2026-04-02] Orchestrator → Linguistics Specialist
+**Status**: 🔴 Active
+**Task**: Validate 26 New Coverage Gap Sentences (AST + Explanation Accuracy)
+**Branch**: `develop`
 
-> [!NOTE]
-> Produced `new_sentences_spec.md` with 26 fully designed sentences covering all 7 High-priority and 7 Medium-priority gaps from `coverage_gap_analysis.md`. Each entry includes Chinese, pinyin, translation, full explanation (following all 7 pedagogy rules), and structural notes for the Data Linguist. Categories covered: Basic Topic-Comment (2), BA Construction (2), BEI Passive (2), Shì-de (2), Directional Complements (2), Correlative Patterns (2), Aspect Markers (2), Comparatives (2), Rhetorical Questions (2), Separable Verbs (2), Pivotal Constructions (2), Potential Complements (1), Degree Complements (1), Conditional Sentences (2).
-
-
----
-
-### [2026-04-02] Orchestrator → Data Linguist
-**Status**: ✅ Done
-**Task**: Generate AST Trees for New Sentences
-**Branch**: `feature/coverage-gap-sentences`
-**Sequence**: Ticket 2 of 2 (requires `new_sentences_spec.md` from Ticket 1)
+**Context**: The Ed Publisher designed 26 new sentences and the Data Linguist generated their AST trees. The sentences need a final accuracy check before we consider them production-ready.
 
 **Action Required**:
-1. Check out `feature/coverage-gap-sentences`.
-2. Read `new_sentences_spec.md` (produced by the Educational Publisher).
-3. For each sentence in the spec, generate the full `SentenceData` object with a proper AST `tree`, following the `/add-sentences` workflow.
-4. Use existing sentences in each category file as structural templates.
-5. Copy the `explanation` string directly from the spec file (do NOT rewrite it).
-6. Use `multi_replace_file_content` to append each sentence to its category file.
-7. Run `npm run qa && npm run lint` to validate.
-8. Commit and push. Mark this ticket as ✅ Done.
+1. Check out `develop`.
+2. Read `new_sentences_spec.md` for the original sentence designs.
+3. Review each of the 26 new sentences across 14 category files in `src/data/sentences/`. For each sentence, verify:
+   - The AST `tree` structure accurately reflects the Chinese grammar (correct roles, correct nesting, correct subRoles)
+   - The `explanation` text accurately describes what the tree shows (no Subject/Topic confusion, no FLS jargon)
+   - The `pinyin` is correct
+   - The `translation` is natural
+4. Produce a validation report at `new_sentences_validation.md` in the project root. For each sentence, either mark it ✅ or list specific issues.
+5. Commit and push. Mark this ticket as ✅ Done.
 
-**CRITICAL**: Use `multi_replace_file_content` to edit. Do NOT use `sed`. Do NOT modify `src/data/sentences/index.ts`.
+**CRITICAL**: Do NOT edit any sentence files. Your output is the validation report only.
 
 
 
