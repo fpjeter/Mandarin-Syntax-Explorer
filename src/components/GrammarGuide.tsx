@@ -106,6 +106,21 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                     </div>
                 </section>
 
+                {/* ── 1.5. Syntax vs Semantics (Semantic Roles Toggle) ── */}
+                <section>
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1.5 flex items-center gap-2">
+                        1.5. Syntax vs Semantics
+                        <span className="bg-cyan-900/40 text-cyan-400 px-1.5 py-0.5 rounded text-[8px] border border-cyan-700/50 flex gap-1 items-center">
+                           <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+                           TOGGLE
+                        </span>
+                    </h3>
+                    <p className="text-[11px] text-slate-300 leading-relaxed">
+                        Sometimes, an English translation tricks us into thinking a word is the "doer" (Agent) when Chinese grammar treats it as a <strong className="text-fuchsia-300">Topic</strong>. This is notoriously tricky in 被 (Passive) and 把 (Disposal) sentences. In the header menu, you will see a <strong className="text-cyan-300">Semantic Roles</strong> toggle button.
+                        Clicking it will temporarily peel back the structural labels (Topic/Comment) to reveal the underlying reality (Agent/Patient), helping you see that the actual event never changed—only the syntactic focal point shifted!
+                    </p>
+                </section>
+
                 {/* ── 2. Nesting and Embedding ── */}
                 <section>
                     <h3 className="text-[10px] font-bold uppercase tracking-widest text-violet-400 mb-1.5">2. Nesting and Embedding</h3>
