@@ -8,7 +8,7 @@ This document maps the application architecture, data flow, and custom rendering
 
 The application operates as a purely front-end, static React Single Page Application (SPA). 
 
-1. **Static Data Layer**: Sentences are deeply nested JSON objects defined in `src/data/sentences.ts` (Modern) and `src/data/classicalSentences.ts` (Classical). This data layer tracks both syntactic structure (`role`) and "who did what to whom" thematic tags (`semanticRole`).
+1. **Static Data Layer**: Sentences are deeply nested objects natively parsed from static arrays (`src/data/modern_sentences.json` and `src/data/classical_sentences.json`). This JSON data layer tracks both syntactic structure (`role`) and "who did what to whom" thematic tags (`semanticRole`).
 2. **Global State**: Managed primarily via React Context (`AppModeContext.tsx`) for the Classical vs Modern toggle, and top-level `useState` in `App.tsx` for the currently selected `selectedId`.
 3. **AST Transformation**: When a sentence is selected, its recursive JSON tree is sent to `src/components/treeTransforms.ts` to be flattened into an array of Nodes and Edges. Node data is injected with active contextual states (like semantic highlighting flags).
 4. **Algorithmic Layout**: The flat array is sent to `src/components/treeLayout.ts`, which calculates `X, Y` coordinates for every node based on textual width and structural depth.

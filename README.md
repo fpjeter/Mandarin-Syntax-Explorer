@@ -145,11 +145,12 @@ src/
 ├── contexts/
 │   └── AppModeContext.tsx          # Modern/classical mode context provider
 ├── data/
-│   ├── sentences/              # Modern Mandarin example sentences by category (97)
+│   ├── legacy_ts_archive/          # Read-only archive of pre-migration TS format
+│   ├── modern_sentences.json       # 123 curated Modern Mandarin JSON sentences
+│   ├── classical_sentences.json    # 30 curated Classical Chinese JSON quotes
 │   ├── categories.ts               # Modern category list and descriptions
 │   ├── badges.ts                   # Modern badge specs and matching rules
 │   ├── glossary.ts                 # Modern grammar role definitions
-│   ├── classicalSentences.ts       # Classical Chinese quotes with tree data (30)
 │   ├── classicalCategories.ts      # Classical category list and descriptions
 │   ├── classicalBadges.ts          # Classical badge specs (者/所/而/非/勿/於/焉/之)
 │   ├── classicalGlossary.ts       # Classical grammar role definitions
@@ -164,16 +165,16 @@ src/
 
 ### Modern Mandarin
 
-Each sentence lives in its respective category file within the `src/data/sentences/` directory (e.g., `src/data/sentences/ba_construction.ts`) as a `SentenceData` object with:
+Every databank entry is an object natively located inside `src/data/modern_sentences.json`. Each entry contains:
 - `category` — the grammar group it belongs to (must match a value in `categories.ts`)
 - `chinese`, `pinyin`, `translation` — the sentence itself
-- `explanation` — a learner-friendly description (supports **bold** and *italic* markdown)
+- `explanation` — a learner-friendly description (supports **bold** and *italic* markdown via `\n` escaping)
 - `tree` — a recursive node tree defining the syntactic structure
 - Optional: `discourseContext` for sentences that require a preceding context sentence
 
 ### Classical Chinese
 
-Each quote lives in `src/data/classicalSentences.ts` with the same structure, plus:
+Each quote lives in `src/data/classical_sentences.json` with the same JSON structure, plus:
 - `source` — text attribution (e.g. `"《論語·學而》"`)
 - `author` — author attribution (e.g. `"Confucius"`)
 - `category` — must match a value in `classicalCategories.ts`
