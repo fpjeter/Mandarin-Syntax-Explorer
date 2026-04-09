@@ -14,7 +14,7 @@ export const directionalComplements: SentenceData[] = [
             children: [
                 {
                     id: 'n38-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '他', pinyin: 'tā', translation: 'he' },
                 },
                 {
@@ -75,7 +75,7 @@ export const directionalComplements: SentenceData[] = [
             children: [
                 {
                     id: 'n39-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '她', pinyin: 'tā', translation: 'she' },
                 },
                 {
@@ -153,7 +153,7 @@ export const directionalComplements: SentenceData[] = [
             children: [
                 {
                     id: 'n42-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '她', pinyin: 'tā', translation: 'she' },
                 },
                 {
@@ -220,7 +220,7 @@ export const directionalComplements: SentenceData[] = [
             children: [
                 {
                     id: 'n43-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '他', pinyin: 'tā', translation: 'he' },
                 },
                 {
@@ -313,7 +313,7 @@ export const directionalComplements: SentenceData[] = [
             id: 's106-n',
             role: 'Sentence',
             children: [
-                { id: 's106-t', role: 'Topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
+                { id: 's106-t', role: 'Topic', semanticRole: 'Experiencer', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
                 {
                     id: 's106-c',
                     role: 'Comment',
@@ -346,7 +346,7 @@ export const directionalComplements: SentenceData[] = [
             id: 's107-n',
             role: 'Sentence',
             children: [
-                { id: 's107-t', role: 'Topic', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } },
+                { id: 's107-t', role: 'Topic', semanticRole: 'Agent', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } },
                 {
                     id: 's107-c',
                     role: 'Comment',

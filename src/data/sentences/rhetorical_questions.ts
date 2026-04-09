@@ -16,7 +16,7 @@ export const rhetoricalQuestions: SentenceData[] = [
             children: [
                 {
                     id: 'n56-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Experiencer',
                     text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' },
                 },
                 {
@@ -67,7 +67,7 @@ export const rhetoricalQuestions: SentenceData[] = [
         explanation: 'A modern take on 王侯將相寧有種乎 (from the Shiji: "Are kings and generals born to their station?"). The classical rhetorical marker 寧...乎 becomes modern **难道...吗**. The tree shows 难道 at the start of the Comment, framing the entire clause as a challenge. The modern version spells out: **难道当官的人就天生比别人强吗** ("Could it be that those in power are inherently stronger than others?"). The expected answer is "no," just as in the original. This is one of the most famous lines in Chinese history, used to justify rebellion.',
         tree: {
             id: 's76-root', role: 'Sentence', children: [
-                { id: 's76-t', role: 'Topic', text: { hanzi: '王侯将相', pinyin: 'wáng hóu jiàng xiàng', translation: 'kings, lords, generals' } },
+                { id: 's76-t', role: 'Topic', semanticRole: 'Theme', text: { hanzi: '王侯将相', pinyin: 'wáng hóu jiàng xiàng', translation: 'kings, lords, generals' } },
                 { id: 's76-c', role: 'Comment', subRole: 'rhetorical', children: [
                     { id: 's76-nd', role: 'Adjunct', subRole: 'rhetorical', text: { hanzi: '难道', pinyin: 'nán dào', translation: 'don\'t tell me' } },
                     { id: 's76-shi', role: 'Copula', text: { hanzi: '是', pinyin: 'shì', translation: 'is' } },
@@ -86,7 +86,7 @@ export const rhetoricalQuestions: SentenceData[] = [
         explanation: 'The sentence opens with **难道** ("could it be that"), immediately signaling a rhetorical question. The **不** inside the clause creates a double negative effect with the rhetorical frame: 难道不知道 = "don\'t tell me you don\'t know" = "surely you know." The expected answer is "yes, you do know." The tree shows 难道 wrapping the Comment, with the negation 不 inside the verb phrase. Rhetorical questions with 难道 are one of Mandarin\'s strongest tools for expressing disbelief or mild accusation.',
         tree: {
             id: 'n100-root', role: 'Sentence', children: [
-                { id: 'n100-t', role: 'Topic', isDropped: true, impliedText: '这' },
+                { id: 'n100-t', role: 'Topic', semanticRole: 'Experiencer', isDropped: true, impliedText: '这' },
                 { id: 'n100-c', role: 'Comment', children: [
                     { id: 'n100-nd', role: 'Adjunct', subRole: 'rhetorical', text: { hanzi: '难道', pinyin: 'nán dào', translation: 'could it be' } },
                     { id: 'n100-subj', role: 'Subject', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } },
@@ -150,7 +150,7 @@ export const rhetoricalQuestions: SentenceData[] = [
             id: 's114-n',
             role: 'Sentence',
             children: [
-                { id: 's114-t', role: 'Topic', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } },
+                { id: 's114-t', role: 'Topic', semanticRole: 'Theme', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } },
                 {
                     id: 's114-c',
                     role: 'Comment',
@@ -177,7 +177,7 @@ export const rhetoricalQuestions: SentenceData[] = [
             id: 's115-n',
             role: 'Sentence',
             children: [
-                { id: 's115-t', role: 'Topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
+                { id: 's115-t', role: 'Topic', semanticRole: 'Experiencer', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
                 {
                     id: 's115-c',
                     role: 'Comment',

@@ -14,7 +14,7 @@ export const aspectMarkers: SentenceData[] = [
             children: [
                 {
                     id: 'n62-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '门', pinyin: 'mén', translation: 'door' },
                 },
                 {
@@ -62,7 +62,7 @@ export const aspectMarkers: SentenceData[] = [
             children: [
                 {
                     id: 'n63-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' },
                 },
                 {
@@ -111,7 +111,7 @@ export const aspectMarkers: SentenceData[] = [
         explanation: 'A modern take on 吾日三省吾身 (from Zengzi, in the Analects: "Each day I examine myself on three points"). Modern Mandarin makes the frequency explicit with **每天** ("every day") and the habitual marker **都会** ("always will"), while classical Chinese compressed it into the single character 日 ("daily"). The Topic is **我** ("I"). The Comment lines up: 每天 + 都会 + **反省** ("reflect on") + **自己** ("oneself") + **三次** ("three times," a frequency complement). The classical 吾身 ("my person") becomes the modern reflexive 自己.',
         tree: {
             id: 's75-root', role: 'Sentence', children: [
-                { id: 's75-t', role: 'Topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
+                { id: 's75-t', role: 'Topic', semanticRole: 'Agent', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
                 { id: 's75-c', role: 'Comment', children: [
                     { id: 's75-mt', role: 'Adjunct', subRole: 'time', text: { hanzi: '每天', pinyin: 'měi tiān', translation: 'every day' } },
                     { id: 's75-dh', role: 'Adjunct', subRole: 'frequency', text: { hanzi: '都会', pinyin: 'dōu huì', translation: 'always will' } },
@@ -131,7 +131,7 @@ export const aspectMarkers: SentenceData[] = [
         explanation: 'A modern take on 未之有也 (a classical expression meaning "such a thing has never existed"). The classical object-fronting pattern (之 placed before the verb 有) becomes standard modern word order. The key combination is **从来** ("ever") + **没有** ("have not") + **过** (experiential aspect marker): together they mean "have never experienced." The 过 signals that this negation covers all of past experience, not just a single event. The object **这样的事** ("this kind of thing") uses 的 to turn the description into a noun phrase.',
         tree: {
             id: 's81-root', role: 'Sentence', children: [
-                { id: 's81-t', role: 'Topic', isDropped: true, impliedText: '[现场]' },
+                { id: 's81-t', role: 'Topic', semanticRole: 'Agent', isDropped: true, impliedText: '[现场]' },
                 { id: 's81-c', role: 'Comment', children: [
                     { id: 's81-adv', role: 'Adjunct', subRole: 'time', text: { hanzi: '从来', pinyin: 'cóng lái', translation: 'ever/never' } },
                     { id: 's81-neg', role: 'Adjunct', subRole: 'negation', text: { hanzi: '没有', pinyin: 'méi yǒu', translation: 'have not' } },
@@ -155,7 +155,7 @@ export const aspectMarkers: SentenceData[] = [
             id: 's110-n',
             role: 'Sentence',
             children: [
-                { id: 's110-t', role: 'Topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
+                { id: 's110-t', role: 'Topic', semanticRole: 'Agent', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
                 {
                     id: 's110-c',
                     role: 'Comment',
@@ -189,7 +189,7 @@ export const aspectMarkers: SentenceData[] = [
             id: 's111-n',
             role: 'Sentence',
             children: [
-                { id: 's111-t', role: 'Topic', text: { hanzi: '他', pinyin: 'tā', translation: 'he' } },
+                { id: 's111-t', role: 'Topic', semanticRole: 'Agent', text: { hanzi: '他', pinyin: 'tā', translation: 'he' } },
                 {
                     id: 's111-c',
                     role: 'Comment',

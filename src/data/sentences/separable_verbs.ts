@@ -14,7 +14,7 @@ export const separableVerbs: SentenceData[] = [
             children: [
                 {
                     id: 'n12-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '我们', pinyin: 'wǒ men', translation: 'we' }
                 },
                 {
@@ -89,7 +89,7 @@ export const separableVerbs: SentenceData[] = [
             children: [
                 {
                     id: 'n24-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '她', pinyin: 'tā', translation: 'she' }
                 },
                 {
@@ -173,7 +173,7 @@ export const separableVerbs: SentenceData[] = [
             children: [
                 {
                     id: 'n54-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '他们', pinyin: 'tā men', translation: 'they' },
                 },
                 {
@@ -221,7 +221,7 @@ export const separableVerbs: SentenceData[] = [
             children: [
                 {
                     id: 'n55-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '他', pinyin: 'tā', translation: 'he' },
                 },
                 {
@@ -291,7 +291,7 @@ export const separableVerbs: SentenceData[] = [
             id: 's116-n',
             role: 'Sentence',
             children: [
-                { id: 's116-t', role: 'Topic', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } },
+                { id: 's116-t', role: 'Topic', semanticRole: 'Agent', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } },
                 {
                     id: 's116-c',
                     role: 'Comment',
@@ -315,7 +315,7 @@ export const separableVerbs: SentenceData[] = [
             id: 's117-n',
             role: 'Sentence',
             children: [
-                { id: 's117-t', role: 'Topic', text: { hanzi: '我们', pinyin: 'wǒ men', translation: 'we' } },
+                { id: 's117-t', role: 'Topic', semanticRole: 'Agent', text: { hanzi: '我们', pinyin: 'wǒ men', translation: 'we' } },
                 {
                     id: 's117-c',
                     role: 'Comment',

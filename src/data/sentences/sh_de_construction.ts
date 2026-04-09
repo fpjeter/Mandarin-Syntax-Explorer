@@ -14,7 +14,7 @@ export const shDeConstruction: SentenceData[] = [
             children: [
                 {
                     id: 'n8-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Theme',
                     subRole: 'outer topic',
                     text: { hanzi: '我', pinyin: 'wǒ', translation: 'I / as for me' }
                 },
@@ -106,7 +106,7 @@ export const shDeConstruction: SentenceData[] = [
             children: [
                 {
                     id: 'n23-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Theme',
                     text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' }
                 },
                 {
@@ -179,7 +179,7 @@ export const shDeConstruction: SentenceData[] = [
             children: [
                 {
                     id: 'n50-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Theme',
                     subRole: 'outer topic',
                     text: { hanzi: '我', pinyin: 'wǒ', translation: 'I / as for me' },
                 },
@@ -237,7 +237,7 @@ export const shDeConstruction: SentenceData[] = [
             children: [
                 {
                     id: 'n51-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Theme',
                     subRole: 'outer topic',
                     children: [
                         {
@@ -313,7 +313,7 @@ export const shDeConstruction: SentenceData[] = [
         explanation: 'A modern take on 師者所以傳道授業解惑也 (from Han Yu\'s famous essay: "A teacher is one whose purpose is to transmit the Way, teach skills, and resolve doubts"). The classical 者...也 identification becomes modern **是...的**, and the classical 所以 ("the means by which") becomes **用来** ("used for"). The tree shows **老师** ("teacher") as the Topic, with the Comment using 是...的 to define the role: 是用来传授知识、教授技能、解答疑惑的 ("is for transmitting knowledge, teaching skills, and answering questions"). The parallel structure echoes the classical original.',
         tree: {
             id: 's79-root', role: 'Sentence', children: [
-                { id: 's79-t', role: 'Topic', text: { hanzi: '老师', pinyin: 'lǎo shī', translation: 'teacher' } },
+                { id: 's79-t', role: 'Topic', semanticRole: 'Theme', text: { hanzi: '老师', pinyin: 'lǎo shī', translation: 'teacher' } },
                 { id: 's79-c', role: 'Comment', subRole: 'shi-de definition', children: [
                     { id: 's79-shi', role: 'Copula', text: { hanzi: '是', pinyin: 'shì', translation: 'is' } },
                     { id: 's79-vp', role: 'Verb Phrase', children: [
@@ -340,7 +340,7 @@ export const shDeConstruction: SentenceData[] = [
             id: 's104-n',
             role: 'Sentence',
             children: [
-                { id: 's104-t', role: 'Topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
+                { id: 's104-t', role: 'Topic', semanticRole: 'Theme', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
                 {
                     id: 's104-c',
                     role: 'Comment',
@@ -367,7 +367,7 @@ export const shDeConstruction: SentenceData[] = [
             id: 's105-n',
             role: 'Sentence',
             children: [
-                { id: 's105-t', role: 'Topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
+                { id: 's105-t', role: 'Topic', semanticRole: 'Theme', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
                 {
                     id: 's105-c',
                     role: 'Comment',

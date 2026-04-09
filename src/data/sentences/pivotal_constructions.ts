@@ -14,7 +14,7 @@ export const pivotalConstructions: SentenceData[] = [
             children: [
                 {
                     id: 'n32-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Causer',
                     text: { hanzi: '老师', pinyin: 'lǎo shī', translation: 'teacher' },
                 },
                 {
@@ -81,7 +81,7 @@ export const pivotalConstructions: SentenceData[] = [
             children: [
                 {
                     id: 'n33-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Causer',
                     text: { hanzi: '妈妈', pinyin: 'mā ma', translation: 'Mom' },
                 },
                 {
@@ -162,7 +162,7 @@ export const pivotalConstructions: SentenceData[] = [
             children: [
                 {
                     id: 'n52-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Causer',
                     text: { hanzi: '公司', pinyin: 'gōng sī', translation: 'company' },
                 },
                 {
@@ -232,7 +232,7 @@ export const pivotalConstructions: SentenceData[] = [
             children: [
                 {
                     id: 'n53-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Causer',
                     text: { hanzi: '她', pinyin: 'tā', translation: 'she' },
                 },
                 {
@@ -336,7 +336,7 @@ export const pivotalConstructions: SentenceData[] = [
             id: 's118-n',
             role: 'Sentence',
             children: [
-                { id: 's118-t', role: 'Topic', text: { hanzi: '王老板', pinyin: 'Wáng lǎo bǎn', translation: 'Boss Wang' } },
+                { id: 's118-t', role: 'Topic', semanticRole: 'Causer', text: { hanzi: '王老板', pinyin: 'Wáng lǎo bǎn', translation: 'Boss Wang' } },
                 {
                     id: 's118-c',
                     role: 'Comment',
@@ -351,7 +351,7 @@ export const pivotalConstructions: SentenceData[] = [
                                     id: 's118-emb1',
                                     role: 'Embedded Clause',
                                     children: [
-                                        { id: 's118-pivot1', role: 'Topic', subRole: 'pivot', text: { hanzi: '他', pinyin: 'tā', translation: 'him' } },
+                                        { id: 's118-pivot1', role: 'Topic', semanticRole: 'Agent', subRole: 'pivot', text: { hanzi: '他', pinyin: 'tā', translation: 'him' } },
                                         {
                                             id: 's118-c1',
                                             role: 'Comment',
@@ -361,7 +361,7 @@ export const pivotalConstructions: SentenceData[] = [
                                                     id: 's118-emb2',
                                                     role: 'Embedded Clause',
                                                     children: [
-                                                        { id: 's118-pivot2', role: 'Topic', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'person' } },
+                                                        { id: 's118-pivot2', role: 'Topic', semanticRole: 'Agent', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'person' } },
                                                         {
                                                             id: 's118-c2',
                                                             role: 'Comment',
@@ -394,7 +394,7 @@ export const pivotalConstructions: SentenceData[] = [
             id: 's119-n',
             role: 'Sentence',
             children: [
-                { id: 's119-ghost', role: 'Topic', subRole: 'implied topic', text: { hanzi: '[这里]', pinyin: 'zhè lǐ', translation: '(here context)' } },
+                { id: 's119-ghost', role: 'Topic', semanticRole: 'Agent', subRole: 'implied topic', text: { hanzi: '[这里]', pinyin: 'zhè lǐ', translation: '(here context)' } },
                 {
                     id: 's119-c',
                     role: 'Comment',
@@ -409,7 +409,7 @@ export const pivotalConstructions: SentenceData[] = [
                                     id: 's119-emb',
                                     role: 'Embedded Clause',
                                     children: [
-                                        { id: 's119-pivot', role: 'Topic', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'person/someone' } },
+                                        { id: 's119-pivot', role: 'Topic', semanticRole: 'Agent', subRole: 'pivot', text: { hanzi: '人', pinyin: 'rén', translation: 'person/someone' } },
                                         {
                                             id: 's119-c2',
                                             role: 'Comment',

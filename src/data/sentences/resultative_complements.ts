@@ -14,7 +14,7 @@ export const resultativeComplements: SentenceData[] = [
             children: [
                 {
                     id: 'n13-s',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     isDropped: true,
                     impliedText: '我',
                 },
@@ -100,7 +100,7 @@ export const resultativeComplements: SentenceData[] = [
             children: [
                 {
                     id: 'n30-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' },
                 },
                 {
@@ -182,7 +182,7 @@ export const resultativeComplements: SentenceData[] = [
             children: [
                 {
                     id: 'n31-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '她', pinyin: 'tā', translation: 'she' },
                 },
                 {
@@ -237,7 +237,7 @@ export const resultativeComplements: SentenceData[] = [
             children: [
                 {
                     id: 'n40-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' },
                 },
                 {
@@ -290,7 +290,7 @@ export const resultativeComplements: SentenceData[] = [
             children: [
                 {
                     id: 'n41-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '他', pinyin: 'tā', translation: 'he' },
                 },
                 {

@@ -14,7 +14,7 @@ export const doubleTopic: SentenceData[] = [
             children: [
                 {
                     id: 'n25-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     subRole: 'outer topic',
                     children: [
                         {
@@ -36,7 +36,7 @@ export const doubleTopic: SentenceData[] = [
                     children: [
                         {
                             id: 'n25-c-s1',
-                            role: 'Topic',
+                            role: 'Topic', semanticRole: 'Agent',
                             subRole: 'inner topic',
                             text: { hanzi: '菜', pinyin: 'cài', translation: 'food/dishes' }
                         },
@@ -59,7 +59,7 @@ export const doubleTopic: SentenceData[] = [
                         },
                         {
                             id: 'n25-c-s2',
-                            role: 'Topic',
+                            role: 'Topic', semanticRole: 'Agent',
                             subRole: 'inner topic',
                             text: { hanzi: '价钱', pinyin: 'jià qián', translation: 'price' }
                         },
@@ -103,7 +103,7 @@ export const doubleTopic: SentenceData[] = [
             children: [
                 {
                     id: 'n26-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     subRole: 'outer topic',
                     text: { hanzi: '大象', pinyin: 'dà xiàng', translation: 'elephant' }
                 },
@@ -114,7 +114,7 @@ export const doubleTopic: SentenceData[] = [
                     children: [
                         {
                             id: 'n26-c-t1',
-                            role: 'Topic',
+                            role: 'Topic', semanticRole: 'Agent',
                             subRole: 'inner topic',
                             text: { hanzi: '鼻子', pinyin: 'bí zi', translation: 'trunk/nose' }
                         },
@@ -132,7 +132,7 @@ export const doubleTopic: SentenceData[] = [
                         },
                         {
                             id: 'n26-c-t2',
-                            role: 'Topic',
+                            role: 'Topic', semanticRole: 'Experiencer',
                             subRole: 'inner topic',
                             text: { hanzi: '耳朵', pinyin: 'ěr duo', translation: 'ears' }
                         },
@@ -166,7 +166,7 @@ export const doubleTopic: SentenceData[] = [
             children: [
                 {
                     id: 'n27-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Experiencer',
                     subRole: 'outer discourse frame',
                     children: [
                         {
@@ -211,7 +211,7 @@ export const doubleTopic: SentenceData[] = [
                                             children: [
                                                 {
                                                     id: 'n27-c-p-vp-obj-t',
-                                                    role: 'Topic',
+                                                    role: 'Topic', semanticRole: 'Theme',
                                                     subRole: 'inner topic',
                                                     children: [
                                                         {
@@ -263,7 +263,7 @@ export const doubleTopic: SentenceData[] = [
         explanation: 'A modern take on 人之过也，各于其党 (from Confucius). The Topic is a complex noun phrase: **一个人犯的错** ("the mistakes a person makes"), where **犯的** is a relative clause modifying **错** ("mistakes"). The Comment uses a **跟** comparison and a negative potential complement: **跟他的性格是分不开的** ("are inseparable from his character"). The **分不开** is a potential complement: the result of separating *cannot* be achieved. The tree shows the relative clause inside the Topic and the comparison frame inside the Comment.',
         tree: {
             id: 's92-root', role: 'Sentence', children: [
-                { id: 's92-t', role: 'Topic', children: [
+                { id: 's92-t', role: 'Topic', semanticRole: 'Theme', children: [
                     { id: 's92-attr', role: 'Attributive', text: { hanzi: '一个人犯的', pinyin: 'yí gè rén fàn de', translation: 'that a person commits' } },
                     { id: 's92-cuo', role: 'Head Noun', text: { hanzi: '错', pinyin: 'cuò', translation: 'mistakes' } },
                 ]},

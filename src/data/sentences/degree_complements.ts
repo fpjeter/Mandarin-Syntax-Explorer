@@ -14,7 +14,7 @@ export const degreeComplements: SentenceData[] = [
             children: [
                 {
                     id: 'n36-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '她', pinyin: 'tā', translation: 'she' },
                 },
                 {
@@ -88,7 +88,7 @@ export const degreeComplements: SentenceData[] = [
             children: [
                 {
                     id: 'n37-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '她', pinyin: 'tā', translation: 'she' },
                 },
                 {
@@ -154,7 +154,7 @@ export const degreeComplements: SentenceData[] = [
             children: [
                 {
                     id: 'n46-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '他', pinyin: 'tā', translation: 'he' },
                 },
                 {
@@ -239,7 +239,7 @@ export const degreeComplements: SentenceData[] = [
             children: [
                 {
                     id: 'n47-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '她', pinyin: 'tā', translation: 'she' },
                 },
                 {
@@ -307,7 +307,7 @@ export const degreeComplements: SentenceData[] = [
         explanation: 'A modern take on 逝者如斯夫，不舍晝夜 (from Confucius, standing by a river: "What passes is like this, never ceasing day or night"). The modern version uses a degree complement to capture the simile: **时间过得像流水一样快** ("time passes as fast as flowing water"). The verb **过** ("pass") is linked by **得** to the simile **像流水一样快** ("like flowing water, equally fast"). The classical 逝者如斯 ("what passes is like this") becomes the degree complement pattern: V+得+像...一样, one of the most vivid patterns for comparing actions in modern Mandarin.',
         tree: {
             id: 's77-root', role: 'Sentence', children: [
-                { id: 's77-t', role: 'Topic', text: { hanzi: '时间', pinyin: 'shí jiān', translation: 'time' } },
+                { id: 's77-t', role: 'Topic', semanticRole: 'Agent', text: { hanzi: '时间', pinyin: 'shí jiān', translation: 'time' } },
                 { id: 's77-c', role: 'Comment', children: [
                     { id: 's77-vp', role: 'Verb Phrase', children: [
                         { id: 's77-guo', role: 'Head Verb', text: { hanzi: '过', pinyin: 'guò', translation: 'pass' } },
@@ -335,8 +335,8 @@ export const degreeComplements: SentenceData[] = [
             id: 's121-n',
             role: 'Sentence',
             children: [
-                { id: 's121-t', role: 'Topic', subRole: 'outer topic', text: { hanzi: '他', pinyin: 'tā', translation: 'he' } },
-                { id: 's121-st', role: 'Topic', subRole: 'inner topic', text: { hanzi: '中文', pinyin: 'Zhōng wén', translation: 'Chinese (language)' } },
+                { id: 's121-t', role: 'Topic', semanticRole: 'Agent', subRole: 'outer topic', text: { hanzi: '他', pinyin: 'tā', translation: 'he' } },
+                { id: 's121-st', role: 'Topic', semanticRole: 'Agent', subRole: 'inner topic', text: { hanzi: '中文', pinyin: 'Zhōng wén', translation: 'Chinese (language)' } },
                 {
                     id: 's121-c',
                     role: 'Comment',

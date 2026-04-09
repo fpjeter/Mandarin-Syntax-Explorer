@@ -15,7 +15,7 @@ export const comparatives: SentenceData[] = [
             children: [
                 {
                     id: 'n9-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     children: [
                         {
                             id: 'n9-s-attr',
@@ -99,7 +99,7 @@ export const comparatives: SentenceData[] = [
             children: [
                 {
                     id: 'n20-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     children: [
                         {
                             id: 'n20-t-subj',
@@ -207,7 +207,7 @@ export const comparatives: SentenceData[] = [
             children: [
                 {
                     id: 'n21-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '他', pinyin: 'tā', translation: 'he' }
                 },
                 {
@@ -281,7 +281,7 @@ export const comparatives: SentenceData[] = [
         explanation: 'A modern take on 知之者不如好之者 (from Confucius: "One who knows it is not as good as one who loves it"). The classical 者 particle becomes **的人** ("the person who..."), and the classical comparative 不如 becomes **比不上** ("cannot compare to"). The tree shows the 比 comparative used twice in parallel. Each clause follows the same pattern: [verb+的+人] + 比不上 + [verb+的+人]. The 的 particle turns verb phrases into noun phrases, working exactly like the classical 者.',
         tree: {
             id: 's69-root', role: 'Sentence', children: [
-                { id: 's69-t', role: 'Topic', isDropped: true, impliedText: '规律' },
+                { id: 's69-t', role: 'Topic', semanticRole: 'Agent', isDropped: true, impliedText: '规律' },
                 { id: 's69-c', role: 'Comment', subRole: 'comparison', children: [
                     { id: 's69-c1', role: 'Verb Phrase', subRole: 'comparison', children: [
                         { id: 's69-s1', role: 'Subject', children: [
@@ -318,7 +318,7 @@ export const comparatives: SentenceData[] = [
         explanation: 'A modern take on 天時不如地利，地利不如人和 (from Mencius: "Good timing is not as good as good terrain; good terrain is not as good as unity among people"). The classical four-character parallelism is preserved in modern form using **不如** ("not as good as"), one of the few classical comparative structures that survives directly into modern Mandarin. Each clause follows: Topic + 不如 + Object. Modern 的 is added to make descriptive phrases (好的时机, "good timing") where classical Chinese needed no marker. The final comparison uses **人心齐** ("people\'s hearts aligned") to modernize the classical 人和.',
         tree: {
             id: 's87-root', role: 'Sentence', children: [
-                { id: 's87-t', role: 'Topic', isDropped: true, impliedText: '规律' },
+                { id: 's87-t', role: 'Topic', semanticRole: 'Agent', isDropped: true, impliedText: '规律' },
                 { id: 's87-c', role: 'Comment', subRole: 'comparison', children: [
                     { id: 's87-c1', role: 'Verb Phrase', subRole: 'comparison', children: [
                         { id: 's87-s1', role: 'Subject', children: [
@@ -354,7 +354,7 @@ export const comparatives: SentenceData[] = [
             id: 's112-n',
             role: 'Sentence',
             children: [
-                { id: 's112-t', role: 'Topic', subRole: 'item A', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
+                { id: 's112-t', role: 'Topic', semanticRole: 'Agent', subRole: 'item A', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
                 {
                     id: 's112-c',
                     role: 'Comment',
@@ -378,7 +378,7 @@ export const comparatives: SentenceData[] = [
             id: 's113-n',
             role: 'Sentence',
             children: [
-                { id: 's113-t', role: 'Topic', subRole: 'item A', text: { hanzi: '他', pinyin: 'tā', translation: 'he' } },
+                { id: 's113-t', role: 'Topic', semanticRole: 'Agent', subRole: 'item A', text: { hanzi: '他', pinyin: 'tā', translation: 'he' } },
                 {
                     id: 's113-c',
                     role: 'Comment',

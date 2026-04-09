@@ -19,7 +19,7 @@ export const discourseContext: SentenceData[] = [
             children: [
                 {
                     id: 'n17-topic',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     isDropped: true,
                     impliedText: '他',
                     // no refersToId: the referent is established in the preceding sentence,
@@ -104,7 +104,7 @@ export const discourseContext: SentenceData[] = [
             children: [
                 {
                     id: 'n18-topic',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     isDropped: true,
                     impliedText: '它',
                 },
@@ -158,7 +158,7 @@ export const discourseContext: SentenceData[] = [
         },
         tree: {
             id: 'n94-root', role: 'Sentence', children: [
-                { id: 'n94-t', role: 'Topic', isDropped: true, impliedText: '我' },
+                { id: 'n94-t', role: 'Topic', semanticRole: 'Agent', isDropped: true, impliedText: '我' },
                 { id: 'n94-c', role: 'Comment', children: [
                     { id: 'n94-adv', role: 'Adjunct', text: { hanzi: '已经', pinyin: 'yǐ jīng', translation: 'already' } },
                     { id: 'n94-vp', role: 'Verb Phrase', children: [
@@ -184,7 +184,7 @@ export const discourseContext: SentenceData[] = [
         },
         tree: {
             id: 'n95-root', role: 'Sentence', children: [
-                { id: 'n95-t', role: 'Topic', isDropped: true, impliedText: '我' },
+                { id: 'n95-t', role: 'Topic', semanticRole: 'Agent', isDropped: true, impliedText: '我' },
                 { id: 'n95-c', role: 'Comment', children: [
                     { id: 'n95-time', role: 'Adjunct', subRole: 'time', text: { hanzi: '今天', pinyin: 'jīn tiān', translation: 'today' } },
                     { id: 'n95-vp', role: 'Verb Phrase', children: [
@@ -209,7 +209,7 @@ export const discourseContext: SentenceData[] = [
         },
         tree: {
             id: 'n96-root', role: 'Sentence', children: [
-                { id: 'n96-t', role: 'Topic', isDropped: true, impliedText: '他' },
+                { id: 'n96-t', role: 'Topic', semanticRole: 'Agent', isDropped: true, impliedText: '他' },
                 { id: 'n96-c', role: 'Comment', children: [
                     { id: 'n96-adv', role: 'Adjunct', text: { hanzi: '早就', pinyin: 'zǎo jiù', translation: 'long ago' } },
                     { id: 'n96-vp', role: 'Verb Phrase', children: [

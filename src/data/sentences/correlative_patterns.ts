@@ -14,7 +14,7 @@ export const correlativePatterns: SentenceData[] = [
             children: [
                 {
                     id: 'n60-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '中文', pinyin: 'zhōng wén', translation: 'Chinese (language)' },
                 },
                 {
@@ -76,7 +76,7 @@ export const correlativePatterns: SentenceData[] = [
             children: [
                 {
                     id: 'n61-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '他', pinyin: 'tā', translation: 'he' },
                 },
                 {
@@ -256,7 +256,7 @@ export const correlativePatterns: SentenceData[] = [
             id: 's108-n',
             role: 'Sentence',
             children: [
-                { id: 's108-t', role: 'Topic', text: { hanzi: '他', pinyin: 'tā', translation: 'he' } },
+                { id: 's108-t', role: 'Topic', semanticRole: 'Agent', text: { hanzi: '他', pinyin: 'tā', translation: 'he' } },
                 {
                     id: 's108-c',
                     role: 'Comment',
@@ -301,7 +301,7 @@ export const correlativePatterns: SentenceData[] = [
             id: 's109-n',
             role: 'Sentence',
             children: [
-                { id: 's109-ghost', role: 'Topic', subRole: 'implied topic', text: { hanzi: '[我]', pinyin: 'wǒ', translation: 'I(implied)' } },
+                { id: 's109-ghost', role: 'Topic', semanticRole: 'Agent', subRole: 'implied topic', text: { hanzi: '[我]', pinyin: 'wǒ', translation: 'I(implied)' } },
                 {
                     id: 's109-c',
                     role: 'Comment',

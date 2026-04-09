@@ -14,7 +14,7 @@ export const even: SentenceData[] = [
             children: [
                 {
                     id: 'n66-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '他', pinyin: 'tā', translation: 'he' },
                 },
                 {

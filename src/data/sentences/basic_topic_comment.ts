@@ -14,7 +14,7 @@ export const basicTopicComment: SentenceData[] = [
             children: [
                 {
                     id: 'n1-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '他', pinyin: 'tā', translation: 'he' }
                 },
                 {
@@ -78,7 +78,7 @@ export const basicTopicComment: SentenceData[] = [
             children: [
                 {
                     id: 'n2-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Experiencer',
                     text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' }
                 },
                 {
@@ -150,7 +150,7 @@ export const basicTopicComment: SentenceData[] = [
             children: [
                 {
                     id: 'n5-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '他', pinyin: 'tā', translation: 'he' }
                 },
                 {
@@ -229,7 +229,7 @@ export const basicTopicComment: SentenceData[] = [
             children: [
                 {
                     id: 'n7-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' }
                 },
                 {
@@ -339,7 +339,7 @@ export const basicTopicComment: SentenceData[] = [
             children: [
                 {
                     id: 'n15-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     children: [
                         {
                             id: 'n15-t-attr',
@@ -422,7 +422,7 @@ export const basicTopicComment: SentenceData[] = [
             children: [
                 {
                     id: 'n16-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Experiencer',
                     text: { hanzi: '张三', pinyin: 'Zhāng Sān', translation: 'Zhang San (name)' }
                 },
                 {
@@ -488,7 +488,7 @@ export const basicTopicComment: SentenceData[] = [
             children: [
                 {
                     id: 'n19-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '他', pinyin: 'tā', translation: 'he' }
                 },
                 {
@@ -595,7 +595,7 @@ export const basicTopicComment: SentenceData[] = [
         explanation: 'A modern take on 生亦我所欲也 (from Mencius: "Life is also what I desire"). The classical 所欲 ("that which is desired") becomes **想要的东西** ("things I want"), and the classical sentence-final 也 becomes the modern linking verb **是** ("is"). In the tree, **生命** ("life") sits as the Topic. The Comment uses **也** ("also") before 是, followed by a noun phrase built with 的: **我想要的东西** ("the thing I want"). A clean identification sentence.',
         tree: {
             id: 's78-root', role: 'Sentence', children: [
-                { id: 's78-t', role: 'Topic', text: { hanzi: '生命', pinyin: 'shēng mìng', translation: 'life' } },
+                { id: 's78-t', role: 'Topic', semanticRole: 'Theme', text: { hanzi: '生命', pinyin: 'shēng mìng', translation: 'life' } },
                 { id: 's78-c', role: 'Comment', children: [
                     { id: 's78-ye', role: 'Adjunct', text: { hanzi: '也', pinyin: 'yě', translation: 'also' } },
                     { id: 's78-shi', role: 'Copula', text: { hanzi: '是', pinyin: 'shì', translation: 'is' } },
@@ -686,7 +686,7 @@ export const basicTopicComment: SentenceData[] = [
             children: [
                 {
                     id: 'n11-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     subRole: 'sentence topic',
                     children: [
                         {
@@ -777,7 +777,7 @@ export const basicTopicComment: SentenceData[] = [
             children: [
                 {
                     id: 'n57-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     children: [
                         {
                             id: 'n57-t-attr',
@@ -831,7 +831,7 @@ export const basicTopicComment: SentenceData[] = [
             children: [
                 {
                     id: 's124-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     subRole: 'inner topic',
                     text: { hanzi: '苹果', pinyin: 'píng guǒ', translation: 'apple' }
                 },
@@ -878,7 +878,7 @@ export const basicTopicComment: SentenceData[] = [
             children: [
                 {
                     id: 's125-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     subRole: 'Location',
                     children: [
                         { id: 's125-t-hn', role: 'Head Noun', text: { hanzi: '墙', pinyin: 'qiáng', translation: 'wall' } },

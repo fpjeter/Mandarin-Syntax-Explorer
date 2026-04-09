@@ -15,7 +15,7 @@ export const serialVerbConstructions: SentenceData[] = [
             children: [
                 {
                     id: 'n14-s',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     isDropped: true,
                     impliedText: '我们',
                 },
@@ -107,7 +107,7 @@ export const serialVerbConstructions: SentenceData[] = [
             children: [
                 {
                     id: 'n58-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '他', pinyin: 'tā', translation: 'he' },
                 },
                 {
@@ -162,7 +162,7 @@ export const serialVerbConstructions: SentenceData[] = [
             children: [
                 {
                     id: 'n59-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' },
                 },
                 {
@@ -257,7 +257,7 @@ export const serialVerbConstructions: SentenceData[] = [
             id: 's91-root', role: 'Sentence', children: [
                 {
                     id: 's91-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Theme',
                     isDropped: true,
                     impliedText: '你'
                 },

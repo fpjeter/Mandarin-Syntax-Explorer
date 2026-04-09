@@ -14,7 +14,7 @@ export const potentialComplements: SentenceData[] = [
             children: [
                 {
                     id: 'n34-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     subRole: 'outer frame',
                     children: [
                         {
@@ -104,7 +104,7 @@ export const potentialComplements: SentenceData[] = [
             children: [
                 {
                     id: 'n35-addr',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     subRole: 'addressee',
                     text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' },
                 },
@@ -184,7 +184,7 @@ export const potentialComplements: SentenceData[] = [
             children: [
                 {
                     id: 'n44-outer-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     subRole: 'outer topic',
                     children: [
                         {
@@ -205,7 +205,7 @@ export const potentialComplements: SentenceData[] = [
                     children: [
                         {
                             id: 'n44-inner-t',
-                            role: 'Topic',
+                            role: 'Topic', semanticRole: 'Agent',
                             subRole: 'inner topic',
                             text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' },
                         },
@@ -262,7 +262,7 @@ export const potentialComplements: SentenceData[] = [
                 },
                 {
                     id: 'n45-t',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' },
                 },
                 {
@@ -331,7 +331,7 @@ export const potentialComplements: SentenceData[] = [
             id: 's120-n',
             role: 'Sentence',
             children: [
-                { id: 's120-t', role: 'Topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
+                { id: 's120-t', role: 'Topic', semanticRole: 'Agent', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
                 {
                     id: 's120-c',
                     role: 'Comment',

@@ -14,7 +14,7 @@ export const conditionalSentences: SentenceData[] = [
             children: [
                 {
                     id: 'n64-cl1',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     subRole: 'condition clause (如果…)',
                     children: [
                         {
@@ -87,7 +87,7 @@ export const conditionalSentences: SentenceData[] = [
             children: [
                 {
                     id: 'n65-cl1',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     subRole: 'condition clause (只要…)',
                     children: [
                         {
@@ -267,7 +267,7 @@ export const conditionalSentences: SentenceData[] = [
             children: [
                 {
                     id: 's122-cond',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     subRole: 'condition clause',
                     children: [
                         { id: 's122-cond-conj', role: 'Adjunct', subRole: 'conjunction', text: { hanzi: '即使', pinyin: 'jí shǐ', translation: 'even if' } },
@@ -279,7 +279,7 @@ export const conditionalSentences: SentenceData[] = [
                     role: 'Comment',
                     subRole: 'result clause',
                     children: [
-                        { id: 's122-c-t', role: 'Topic', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
+                        { id: 's122-c-t', role: 'Topic', semanticRole: 'Agent', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
                         { id: 's122-c-adv', role: 'Adjunct', subRole: 'correlative', text: { hanzi: '也', pinyin: 'yě', translation: 'still/also' } },
                         { id: 's122-c-mod', role: 'Adjunct', subRole: 'modal', text: { hanzi: '要', pinyin: 'yào', translation: 'want to / will' } },
                         { id: 's122-c-hv', role: 'Head Verb', text: { hanzi: '去', pinyin: 'qù', translation: 'go' } }
@@ -301,11 +301,11 @@ export const conditionalSentences: SentenceData[] = [
             children: [
                 {
                     id: 's123-cond',
-                    role: 'Topic',
+                    role: 'Topic', semanticRole: 'Agent',
                     subRole: 'condition clause',
                     children: [
                         { id: 's123-cond-conj', role: 'Adjunct', subRole: 'conjunction', text: { hanzi: '除非', pinyin: 'chú fēi', translation: 'unless' } },
-                        { id: 's123-cond-t', role: 'Topic', subRole: 'inner topic', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } },
+                        { id: 's123-cond-t', role: 'Topic', semanticRole: 'Agent', subRole: 'inner topic', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } },
                         { id: 's123-cond-hv', role: 'Head Verb', text: { hanzi: '道歉', pinyin: 'dào qiàn', translation: 'apologize' } }
                     ]
                 },
