@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Eye, EyeOff, Maximize2, Minimize2, BookOpen, Shuffle, Printer, ImageDown, Settings, Atom } from 'lucide-react';
 import { useIsClassical } from '../contexts/AppModeContext';
+import { useLanguage } from '../contexts/LanguageContext';
+import { i18n } from '../i18n/strings';
 
 interface TreeToolbarProps {
     onExpandAll: () => void;
@@ -38,6 +40,7 @@ export const TreeToolbar: React.FC<TreeToolbarProps> = ({
     onToggleSemanticMode,
 }) => {
     const isClassical = useIsClassical();
+    const { language } = useLanguage();
     const [isExpanded, setIsExpanded] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
 
@@ -91,13 +94,13 @@ export const TreeToolbar: React.FC<TreeToolbarProps> = ({
                 `}
             >
                 {/* Expand / Collapse */}
-                <button onClick={onExpandAll} className={btnDefault} title="Expand all nodes">
+                <button onClick={onExpandAll} className={btnDefault} title={i18n.TOOLBAR_EXPAND[language]}>
                     <Maximize2 className="w-3.5 h-3.5" />
-                    <span className="hidden xl:inline">Expand</span>
+                    <span className="hidden xl:inline">{i18n.TOOLBAR_EXPAND[language]}</span>
                 </button>
-                <button onClick={onCollapseAll} className={btnDefault} title="Collapse to root">
+                <button onClick={onCollapseAll} className={btnDefault} title={i18n.TOOLBAR_COLLAPSE[language]}>
                     <Minimize2 className="w-3.5 h-3.5" />
-                    <span className="hidden xl:inline">Collapse</span>
+                    <span className="hidden xl:inline">{i18n.TOOLBAR_COLLAPSE[language]}</span>
                 </button>
 
                 {/* Semantic Mode — only for modern Mandarin */}
@@ -109,7 +112,7 @@ export const TreeToolbar: React.FC<TreeToolbarProps> = ({
                                 ? 'bg-cyan-900/60 text-cyan-300 ring-1 ring-cyan-500/30'
                                 : 'bg-slate-800/60 text-slate-400 hover:bg-slate-700/80 hover:text-slate-200'
                         }`}
-                        title={isSemanticMode ? 'Hide semantic roles' : 'Show semantic roles (Agent, Patient, etc.)'}
+                        title={i18n.TOOLBAR_SEMANTIC[language]}
                     >
                         <Atom className={`w-3.5 h-3.5 ${isSemanticMode ? 'text-cyan-400' : ''}`} />
                         <span className="hidden xl:inline">{isSemanticMode ? 'θ On' : 'θ Off'}</span>
@@ -125,10 +128,10 @@ export const TreeToolbar: React.FC<TreeToolbarProps> = ({
                                 ? isClassical ? 'bg-stone-700/80 text-amber-300' : 'bg-slate-700/80 text-purple-300'
                                 : 'bg-slate-800/60 text-slate-400 hover:bg-slate-800/80'
                         }`}
-                        title={showGhost ? 'Hide implied subjects' : 'Show implied subjects'}
+                        title={i18n.TOOLBAR_GHOST[language]}
                     >
                         {showGhost ? <Eye className="w-3.5 h-3.5" /> : <EyeOff className="w-3.5 h-3.5" />}
-                        <span className="hidden xl:inline">{showGhost ? 'Implied' : 'Implied'}</span>
+                        <span className="hidden xl:inline">{i18n.TOOLBAR_GHOST[language]}</span>
                     </button>
                 )}
 
@@ -142,15 +145,15 @@ export const TreeToolbar: React.FC<TreeToolbarProps> = ({
                 </button>
 
                 {/* Print */}
-                <button onClick={onPrint} className={btnDefault} title="Open printable study sheet">
+                <button onClick={onPrint} className={btnDefault} title={i18n.TOOLBAR_PRINT[language]}>
                     <Printer className="w-3.5 h-3.5" />
-                    <span className="hidden xl:inline">Print</span>
+                    <span className="hidden xl:inline">{i18n.TOOLBAR_PRINT[language]}</span>
                 </button>
 
                 {/* Download PNG */}
-                <button onClick={onDownloadPNG} className={btnDefault} title="Download tree as PNG image">
+                <button onClick={onDownloadPNG} className={btnDefault} title={i18n.TOOLBAR_PNG[language]}>
                     <ImageDown className="w-3.5 h-3.5" />
-                    <span className="hidden xl:inline">PNG</span>
+                    <span className="hidden xl:inline">{i18n.TOOLBAR_PNG[language]}</span>
                 </button>
 
                 {/* Divider */}
@@ -160,10 +163,10 @@ export const TreeToolbar: React.FC<TreeToolbarProps> = ({
                 <button
                     onClick={onOpenGlossary}
                     className={`${btnBase} ${isClassical ? 'bg-amber-900/30 text-amber-300 hover:bg-amber-900/50' : 'bg-fuchsia-900/30 text-fuchsia-300 hover:bg-fuchsia-900/50'}`}
-                    title="Open Grammar Glossary"
+                    title={i18n.NAV_GLOSSARY[language]}
                 >
                     <BookOpen className="w-3.5 h-3.5" />
-                    <span className="hidden xl:inline">Glossary</span>
+                    <span className="hidden xl:inline">{i18n.NAV_GLOSSARY[language]}</span>
                 </button>
             </div>
         </div>

@@ -1,5 +1,6 @@
 import { type SentenceCategory } from '../data/categories';
 import { type ClassicalCategory } from '../data/classicalCategories';
+import { type BilingualString } from '../i18n/strings';
 export type { SentenceCategory, ClassicalCategory };
 
 export type GrammarRole =
@@ -59,8 +60,8 @@ export interface SentenceData {
     source?: string;
     /** Attribution author — used by Classical Chinese quotes (e.g. "Confucius") */
     author?: string;
-    /** Plain-English structural analysis of the sentence for non-specialist readers. */
-    explanation?: string;
+    /** Plain-English and Mandarin structural analysis of the sentence for non-specialist readers. */
+    explanation?: string | BilingualString;
     /** Optional preceding sentence that establishes the discourse context (topic), enabling a dropped subject in this sentence. */
     discourseContext?: {
         chinese: string;

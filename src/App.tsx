@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback, useRef, lazy, Suspense, useEffect } from 'react';
-import { BookA, Info, Network, List, PanelLeftClose, PanelLeftOpen, Scroll, Loader2 } from 'lucide-react';
+import { BookA, Info, Network, List, PanelLeftClose, PanelLeftOpen, Scroll, Loader2, Languages } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 import { SENTENCE_CATEGORIES, CATEGORY_DESCRIPTIONS } from './data/categories';
 import { CLASSICAL_CATEGORIES, CLASSICAL_CATEGORY_DESCRIPTIONS } from './data/classicalCategories';
@@ -9,6 +9,8 @@ import { SentenceSidebar } from './components/SentenceSidebar';
 import { SentenceHeader } from './components/SentenceHeader';
 import { ClassicalThemeProvider } from './components/ClassicalThemeProvider';
 import { AppModeProvider } from './contexts/AppModeContext';
+import { useLanguage } from './contexts/LanguageContext';
+import { i18n } from './i18n/strings';
 import { generatePrintSheet, downloadTreePNG } from './utils/generateStudySheet';
 
 // ── Lazy-loaded components (code-split into separate chunks) ──
@@ -48,6 +50,7 @@ function App() {
   const hashProcessed = useRef(false);
 
   const isClassical = appMode === 'classical';
+  const { language, toggleLanguage } = useLanguage();
 
   // ── Load modern data on mount ──
   useEffect(() => {
@@ -253,24 +256,38 @@ function App() {
                 </button>
               </div>
               <p className={`text-xs font-medium ${isClassical ? 'text-stone-400' : 'text-slate-400'}`}>
-                {isClassical ? 'Famous Quotes · Grammar Analysis' : 'Generative Grammar Visualization'}
+                {isClassical ? i18n.NAV_CLASSICAL[language] : i18n.NAV_MODERN[language]}
               </p>
             </div>
           </div>
-          {!isClassical && (
-            <div
-              className="hidden sm:flex items-center text-xs font-semibold tracking-wide text-slate-300 bg-slate-800/80 px-4 py-2 rounded-full border border-slate-600/50 shadow-inner cursor-pointer hover:bg-slate-700/80 hover:border-slate-500/70 transition-colors"
-              onClick={() => {
-                setMobileView('guide');
-                setSidebarTab('guide');
-                setSidebarOpen(true);
-              }}
-              title="View the Topic-Prominent Framework guide"
+          <div className="flex gap-2">
+            <button
+              onClick={toggleLanguage}
+              className={`hidden sm:flex items-center text-xs font-semibold tracking-wide text-white px-4 py-2 rounded-full border shadow-inner cursor-pointer transition-colors ${
+                isClassical 
+                  ? 'bg-amber-900/60 border-amber-600/50 hover:bg-amber-800/80 hover:border-amber-500/70' 
+                  : 'bg-slate-700/60 border-slate-600/50 hover:bg-slate-600/80 hover:border-slate-500/70'
+              }`}
+              title="Toggle Language"
             >
-              <BookA className="w-4 h-4 mr-2 text-purple-400" />
-              Topic-Prominent Framework
-            </div>
-          )}
+              <Languages className={`w-4 h-4 mr-2 ${isClassical ? 'text-amber-400' : 'text-slate-300'}`} />
+              {i18n.TOGGLE_LANGUAGE[language]}
+            </button>
+            {!isClassical && (
+              <div
+                className="hidden sm:flex items-center text-xs font-semibold tracking-wide text-slate-300 bg-slate-800/80 px-4 py-2 rounded-full border border-slate-600/50 shadow-inner cursor-pointer hover:bg-slate-700/80 hover:border-slate-500/70 transition-colors"
+                onClick={() => {
+                  setMobileView('guide');
+                  setSidebarTab('guide');
+                  setSidebarOpen(true);
+                }}
+                title="View the Topic-Prominent Framework guide"
+              >
+                <BookA className="w-4 h-4 mr-2 text-purple-400" />
+                Topic-Prominent Framework
+              </div>
+            )}
+          </div>
         </header>
 
         {/* Mobile tab bar — only visible on < lg screens */}

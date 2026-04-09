@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { RubyText } from './RubyText';
 import type { SentenceData } from '../types/grammar';
 import { useIsClassical } from '../contexts/AppModeContext';
+import { useLanguage } from '../contexts/LanguageContext';
 
 import { renderExplanation } from '../utils/renderExplanation';
 
@@ -36,6 +37,7 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
     hasNext,
 }) => {
     const isClassical = useIsClassical();
+    const { language } = useLanguage();
     // Swipe detection
     const touchStart = useRef<{ x: number; y: number } | null>(null);
 
@@ -153,6 +155,12 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
 
                     {/* Persistent Sentence Notes Drawer */}
                     {sentence.explanation && (
+                        (() => {
+                            const explText = typeof sentence.explanation === 'string' 
+                                ? sentence.explanation 
+                                : sentence.explanation[language] || sentence.explanation.en;
+                            
+                            return explText ? (
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -183,12 +191,14 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
                                         className={`overflow-hidden border-x border-b ${isClassical ? 'border-amber-500/20' : 'border-emerald-500/20'} rounded-b-2xl shadow-xl bg-slate-900/60`}
                                     >
                                         <div className="p-6 text-sm text-slate-300 leading-relaxed font-serif bg-gradient-to-b from-slate-900/40 to-transparent">
-                                            {renderExplanation(sentence.explanation)}
+                                            {renderExplanation(explText)}
                                         </div>
                                     </motion.div>
                                 )}
                             </AnimatePresence>
                         </motion.div>
+                            ) : null;
+                        })()
                     )}
                 </div>
 
