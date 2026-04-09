@@ -73,6 +73,21 @@ Append a new block to `## Pending Requests` using this exact format:
 
 **CRITICAL**: Only modify `explanation` strings and the 1 pinyin value. Do NOT change tree structures, roles, or subRoles.
 
+---
+
+### [2026-04-08] Orchestrator → Data Linguist
+**Status**: 🔴 Active
+**Task**: Fix Pedagogically Misleading Category Label
+**Branch**: `develop`
+
+**Context**: The Educational Publisher noticed that the category label in `correlative_patterns.ts` is currently `Correlative Patterns (越…越…)`. This implies all sentences use that specific pattern, but the file contains 一…就…, 不但…而且…, and 虽然…但是… as well.
+
+**Action Required**:
+1. Check out latest `develop`.
+2. Open `src/data/sentences/correlative_patterns.ts`.
+3. Change all instances of `category: 'Correlative Patterns (越…越…)'` to `category: 'Correlative Patterns (关联句型)'`.
+4. Run `npm run qa && npm run lint` to validate.
+5. Commit and push directly to `develop`. Mark this ticket as ✅ Done.
 
 
 ## Resolved
