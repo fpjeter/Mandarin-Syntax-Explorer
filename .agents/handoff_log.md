@@ -41,7 +41,7 @@ Append a new block to `## Pending Requests` using this exact format:
 **Suggested Fix**: Dispatch the Educational Publisher to review the plain-language translations of the FLS mechanics.
 
 ### [2026-04-08] Linguistics Specialist → Orchestrator
-**Status**: 🟡 Pending
+**Status**: ✅ Done
 **Blocked Task**: Object Placement Audit (out-of-band scan requested by User)
 **Dependency**: Data Linguist must fix a misplaced Object node in `src/data/sentences/sh_de_construction.ts`, sentence s8 (我是昨天晚上在图书馆看到她的。). The Object node `n8-p-vp-obj` (她) currently sits as a sibling of the embedded predicate VP `n8-p-vp-verb`. It must be moved inside that VP as a child, after the Head Verb (看) and Complement (到). This was the only genuine structural bug found across all 123 sentences; s83 and s66 were false positives (correctly modeled fronting/separate governing verbs).
 **Suggested Fix**: Dispatch the Data Linguist to move the Object node inside the VP. Single-line AST edit.

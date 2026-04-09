@@ -72,13 +72,13 @@ export const shDeConstruction: SentenceData[] = [
                                             role: 'Complement',
                                             subRole: 'resultative (arrive at → succeed in seeing)',
                                             text: { hanzi: '到', pinyin: 'dào', translation: '(resultative: managed to see)' }
+                                        },
+                                        {
+                                            id: 'n8-p-vp-obj',
+                                            role: 'Object',
+                                            text: { hanzi: '她', pinyin: 'tā', translation: 'her' }
                                         }
                                     ]
-                                },
-                                {
-                                    id: 'n8-p-vp-obj',
-                                    role: 'Object',
-                                    text: { hanzi: '她', pinyin: 'tā', translation: 'her' }
                                 }
                             ]
                         },
