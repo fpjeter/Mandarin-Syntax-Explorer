@@ -41,8 +41,8 @@ export function loadModernSentences(): Promise<SentenceDataset> {
   if (modernCache) return Promise.resolve(modernCache);
   if (modernPromise) return modernPromise;
 
-  modernPromise = import('./sentences').then(m => {
-    modernCache = buildDataset(m.sampleSentences, SENTENCE_CATEGORIES);
+  modernPromise = import('./modern_sentences.json').then(m => {
+    modernCache = buildDataset(m.default as SentenceData[], SENTENCE_CATEGORIES);
     modernPromise = null;
     return modernCache;
   });
@@ -57,8 +57,8 @@ export function loadClassicalSentences(): Promise<SentenceDataset> {
   if (classicalCache) return Promise.resolve(classicalCache);
   if (classicalPromise) return classicalPromise;
 
-  classicalPromise = import('./classicalSentences').then(m => {
-    classicalCache = buildDataset(m.classicalSentences, CLASSICAL_CATEGORIES);
+  classicalPromise = import('./classical_sentences.json').then(m => {
+    classicalCache = buildDataset(m.default as SentenceData[], CLASSICAL_CATEGORIES);
     classicalPromise = null;
     return classicalCache;
   });

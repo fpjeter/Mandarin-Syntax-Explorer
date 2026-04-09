@@ -1,4 +1,5 @@
-import { sampleSentences } from '../src/data/sentences/index.js';
+import fs from 'fs';
+const sampleSentences = JSON.parse(fs.readFileSync('./src/data/modern_sentences.json', 'utf8'));
 import type { GrammarNodeData } from '../src/types/grammar.js';
 
 let hasErrors = false;
