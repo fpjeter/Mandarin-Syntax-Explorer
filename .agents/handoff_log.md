@@ -35,23 +35,52 @@ Append a new block to `## Pending Requests` using this exact format:
 ## Active Assignments
 
 ### [2026-04-08] Orchestrator → Educational Publisher
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Evaluate Tagging Depth for Phase 4 Semantic Expansion
 **Branch**: `feature/semantic-phase-4`
-**Context**: We are preparing to expand the Semantic Role tagging to 17 remaining categories (1,200 AST nodes). We need your pedagogical guidance.
-**Action Required**:
-1. Review the proposed Phase 4 expansion in `implementation_plan.md`.
-2. Decide whether learners fundamentally need every single modifier and embedded sub-node tagged with semantic roles, or if merely tagging the primary Sentence Topic, Inner Topic, and major Objects is sufficient for TCFL pedagogy. 
-3. Record your recommendation in the logic flow and mark this ticket as Done so the Data Linguist is unblocked.
+
+**Pedagogical Recommendation: "Primary Actors Only" Strategy**
+
+After reviewing the existing tags in `ba_construction.ts` / `bei_passive.ts` and testing the Semantic Toggle UI, here is my recommendation for the Phase 4 expansion:
+
+**1. Tag only the "who did what to whom" layer.** For each sentence, tag at most:
+- The **Agent** (who performs the action): almost always the sentence Topic or inner Subject
+- The **Patient** (what is acted upon): the main Object, or the fronted noun in 把/被 constructions
+- The **Experiencer** (who perceives/feels): for psychological verbs like 觉得, 怕, 喜欢
+- The **Causer** (who causes another to act): in pivotal constructions, the person issuing the command
+
+**2. Do NOT tag these nodes.** Tagging every modifier, particle, and embedded sub-node would create visual clutter and confuse learners:
+- ❌ Time/location/manner adjuncts (learners already see the Adjunct pill)
+- ❌ Aspect markers, particles, degree markers (these are grammatical, not thematic)
+- ❌ Complement nodes (result, direction, degree: these describe the action, not an actor)
+- ❌ Attributive/relative clause internals (one level of nesting is enough)
+- ❌ Copula 是, conjunction nodes
+
+**3. Use only 5 of the 10 available roles.** The full palette (Agent, Patient, Experiencer, Instrument, Location, Goal, Source, Causer, Theme, Stimulus) is overkill for TCFL pedagogy. Restrict to:
+
+| Role | When to use | Example |
+|---|---|---|
+| **Agent** | The doer of the action | 我/他/老师 as Topic doing something |
+| **Patient** | The thing affected by the action | Object of 把, thing changed/moved |
+| **Experiencer** | The feeler/perceiver | Topic of 觉得/怕/喜欢/讨厌 |
+| **Causer** | The one who makes someone else act | Topic of 让/叫/派/请 in pivotal constructions |
+| **Theme** | The thing being described (not acted on) | Topic in copula/adjectival sentences where nothing "happens" |
+
+Reserve Instrument/Location/Goal/Source/Stimulus for future advanced mode.
+
+**4. Estimated tagging volume**: With this constraint, expect ~2-3 tags per sentence across 17 categories ≈ 150-200 total tags (not 1,200). This is manageable and pedagogically focused.
+
+**Rationale**: The semantic toggle is most valuable when it reveals something the syntactic tree does NOT already show. Tagging an Adjunct as "Location" adds nothing because the learner already sees `ADJUNCT (location)` as a badge. But tagging a Topic as "Agent" vs. "Patient" in a 被 passive IS genuinely illuminating: it shows the learner that the grammatical subject is actually the receiver, not the doer. That "aha!" moment is the whole point of semantic mode.
 
 ### [2026-04-08] Orchestrator → Data Linguist
-**Status**: 🟡 Blocked
+**Status**: 🔴 Active
 **Task**: Phase 4 Data Epic - Semantic Expansion
 **Branch**: `feature/semantic-phase-4`
 **Context**: Expand the `semanticRole` data tagging to the 17 remaining categories in the databank to ensure the Semantic Toggle UI works comprehensively across all sentences.
 **Action Required**:
-1. Wait for the Educational Publisher's pedagogical recommendation on tagging depth.
-2. Once the Educational Publisher unlocks this ticket, begin the tagging sweep using their approved constraints.
+1. Implementation Plan is locked in with the Educational Publisher's "Primary Actors Only" strictly limited 5-role palette.
+2. Begin the manual tagging sweep through the 17 files listed in the task checklist.
+3. Validate and mark this ticket as Done.
 
 ---
 
