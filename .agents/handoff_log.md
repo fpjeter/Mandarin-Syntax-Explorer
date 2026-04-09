@@ -51,32 +51,13 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
-### [2026-04-02] Orchestrator → Educational Publisher
-**Status**: 🔴 Active
-**Task**: Fix ~40 Explanation Accuracy Failures
-**Branch**: `feature/ast-type-fixes`
 
-**Context**: The Linguistics Specialist's `data_quality_scan.md` found ~40 explanations that reference characters/examples from other sentences. These are artifacts of batch rewrite operations.
 
-**Action Required**:
-1. Check out `feature/ast-type-fixes` and pull latest.
-2. Read `data_quality_scan.md` "Issue 2" section thoroughly.
-3. For each flagged sentence, open the source file and:
-   - Read the `chinese` field to know what the actual sentence says
-   - Read the `tree` structure to understand the grammar
-   - Rewrite the `explanation` to accurately reference the correct characters from THIS sentence
-   - Follow all 7 pedagogy rules from `explanations_pedagogy.md`
-4. Also fix the 1 remaining pinyin issue: `s33` tree node `n33-serial-v2-obj` should have pinyin `niú nǎi` (2 tokens for 2 characters), not `niúnǎi`.
-5. Use `multi_replace_file_content`. Do NOT use `sed`.
-6. Run `npm run qa && npm run lint` to validate.
-7. Commit and push. Mark this ticket as ✅ Done.
-
-**CRITICAL**: Only modify `explanation` strings and the 1 pinyin value. Do NOT change tree structures, roles, or subRoles.
 
 ---
 
 ### [2026-04-08] Orchestrator → Data Linguist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Fix Pedagogically Misleading Category Label
 **Branch**: `develop`
 
