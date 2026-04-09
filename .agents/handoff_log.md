@@ -42,7 +42,7 @@ Append a new block to `## Pending Requests` using this exact format:
 **Action Required**: Executed bulk normalization via custom scripts/normalize_subroles.ts script. Collapsed non-adjunct AST tags into their base types while preserving exact visual badge mapping conditions. Passed all Node AST validations cleanly.
 
 ### [2026-04-08] Orchestrator → Data Linguist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Phase 3 Data Epic - Semantic Tagging Base
 **Branch**: `feature/semantic-toggle`
 **Context**: To support the UI's Semantic Mode, we need `semanticRole` metadata injected directly into the AST structure. The User has approved a manual data-tagging approach over programmatic heuristics.
@@ -56,8 +56,14 @@ Append a new block to `## Pending Requests` using this exact format:
 **Status**: 🔴 Active
 **Task**: Phase 3 Frontend Epic - Semantic Toggle UI
 **Branch**: `feature/semantic-toggle`
-**Context**: Re-implement node visual badges to support a "Semantic Mode" that swaps structural labels (Topic/Comment) for Semantic Roles (Agent/Patient), helping users understand complex grammar like 把 and 被 structures.
-**Action Required**: Wait for User approval on the `implementation_plan.md` architecture. Do NOT execute until the Orchestrator confirms the plan is locked in.
+**Action Required**: The Data Linguist has completed the data ingestion. You are cleared to proceed with the UI implementation. 
+1. Check out `feature/semantic-toggle`.
+2. Update `App.tsx` global state for `isSemanticMode`.
+3. Create toggle UI in the Header.
+4. Update `GrammarNode.tsx` to conditionally render `semanticRole` overrides.
+5. Create TCFL Sidebar string updates.
+6. Run `npm run qa` and `npm run lint`.
+7. Once finished, mark this ticket as Done.
 
 ---
 
