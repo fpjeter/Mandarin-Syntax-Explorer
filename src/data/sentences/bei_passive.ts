@@ -8,7 +8,7 @@ export const beiPassive: SentenceData[] = [
         pinyin: 'Nà zhī dà xiàng, bí zi bèi xiǎo hái er lā le yī xià.',
         translation: 'As for that elephant, its trunk was pulled by a child.',
 
-        explanation: 'This sentence has a **two-level structure**. The outer Topic **那只大象** ("that elephant") sets the big frame: "as for that elephant..." Then inside the Comment, a narrower topic appears: **鼻子** ("trunk"). The trunk is the thing that actually gets acted upon, using **被** to mark the passive: it was pulled by a child (**小孩儿**). The tree shows this nesting clearly: the elephant contains the trunk, which contains the passive event. English would flatten this into "A child pulled the elephant\'s trunk," but Mandarin works from the outside in.',
+        explanation: 'This sentence has a **two-level structure**. The outer Topic **那只大象** ("that elephant") sets the big frame: "as for that elephant..." Then inside the Comment, a narrower topic appears: **鼻子** ("trunk"). The trunk is the one experiencing the event. The verb **被** is an active verb meaning "to undergo" or "to suffer." The trunk "underwent" an entire nested situation: a child pulling it. The tree shows this nesting clearly: the elephant contains the trunk, which undergoes the embedded event.',
         tree: {
             id: 'n6',
             role: 'Sentence',
@@ -107,7 +107,7 @@ export const beiPassive: SentenceData[] = [
         pinyin: 'Wǒ de qián bāo bèi rén tōu le.',
         translation: 'My wallet was stolen.',
 
-        explanation: 'The Topic is **我的钱包** ("my wallet"), the thing affected. Inside the Comment, **被** introduces who did it: **人** ("someone"). Then comes the verb **偷** ("steal") and the completion marker **了**. This is a simple, everyday form of the 被 passive. Notice that 被 does not always name a specific person; here it just says "by someone." The 被 pattern puts the affected thing first as the Topic, then marks who acted on it.',
+        explanation: 'The Topic is **我的钱包** ("my wallet"), the thing affected. Instead of a passive marker, **被** is an active verb meaning "to undergo/suffer." The wallet "underwent" a full situation: **人偷了** ("someone stole it"). Notice how the Matryoshka Principle creates a nested clause perfectly within the Comment. 被 does not always name a specific person; here the inner subject is just **人** ("someone").',
         tree: {
             id: 'n22',
             role: 'Sentence',
@@ -185,7 +185,7 @@ export const beiPassive: SentenceData[] = [
         chinese: '那封信被他撕掉了。',
         pinyin: 'Nà fēng xìn bèi tā sī diào le.',
         translation: 'That letter was torn up by him.',
-        explanation: '**那封信** ("that letter") is the Topic, the thing being acted upon. **被** marks the passive and **他** ("he/him") is the agent. The verb **撕** ("tear") is followed by the resultative complement **掉** ("off/away," signals destruction or removal). 被 sentences almost always need a complement or 了 after the verb; a bare 被+agent+verb sounds incomplete. The **掉** tells you the letter was not just torn; it was torn away or destroyed. Compare: 撕破 (torn broken), 撕碎 (torn to shreds). Each complement shades the result differently.',
+        explanation: '**那封信** ("that letter") is the Topic. The verb **被** actively means "to undergo." The letter underwent the situation of **他撕掉** ("he tore off/away"). The verb **撕** ("tear") is fused with the resultative complement **掉** ("off/away," signaling destruction). Using the internal logic of Mandarin, 被 sentences usually require a result or completion (like 了) in the nested clause because you can only "undergo" an action if it actually produced a result. A bare action without a result sounds incomplete.',
         tree: {
             id: 'n48',
             role: 'Sentence',
@@ -269,7 +269,7 @@ export const beiPassive: SentenceData[] = [
         chinese: '小偷被警察抓住了。',
         pinyin: 'Xiǎo tōu bèi jǐng chá zhuā zhù le.',
         translation: 'The thief was caught by the police.',
-        explanation: '**小偷** ("thief") is the Topic, the person being acted upon. **被** marks the passive, and **警察** ("police") is the agent. The verb **抓** ("grab/catch") is followed by the resultative complement **住** ("firmly, hold in place"). That **住** is important: it signals the catching stuck. The thief was not just grabbed momentarily; he was held fast. The pattern V+住 is very common for actions that result in a fixed state: 记住 (remember firmly), 站住 (stand still), 拿住 (hold onto). 被 + resultative complement is the most natural 被 pattern in everyday speech.',
+        explanation: '**小偷** ("thief") is the Topic. The thief undergoes (the verb **被**) the nested situation of the police catching him. Inside that embedded clause, the verb **抓** ("grab/catch") is fused with the resultative complement **住** ("firmly, hold in place"). That **住** is important: it signals the catching stuck. He was not just grabbed momentarily; he was held fast. The pattern V+住 is very common for actions resulting in a fixed state. Experiencing an action+result is the most natural workflow for 被.',
         tree: {
             id: 'n49',
             role: 'Sentence',
@@ -368,7 +368,7 @@ export const beiPassive: SentenceData[] = [
         chinese: '钱包被偷了。',
         pinyin: 'Qián bāo bèi tōu le.',
         translation: 'The wallet was stolen.',
-        explanation: '**钱包** ("wallet") is the Topic. The Comment uses **被** to mark a passive, but notice: there is no agent named between 被 and the verb. Nobody is specified as the thief. The sentence simply says the wallet *was stolen*, without caring by whom. This **agentless 被** pattern is extremely common in everyday Mandarin, especially when the agent is unknown or unimportant. Compare with the agent-specified version: 钱包被人偷了 ("the wallet was stolen by someone"). Both are natural, but the agentless form is shorter and more common in casual speech.',
+        explanation: '**钱包** ("wallet") is the Topic. The Comment uses the verb **被** ("undergo"), but notice: there is no inner topic (agent) named inside the nested clause. Nobody is specified as the thief. This relies on the Train Metaphor—if the identity of the person doing the stealing isn\'t known or important, that specific "driver" car is left empty in the nested clause. This **agentless 被** train is extremely common in everyday casual speech.',
         tree: {
             id: 's102-n',
             role: 'Sentence',
@@ -419,7 +419,7 @@ export const beiPassive: SentenceData[] = [
         chinese: '我的自行车让人骑走了。',
         pinyin: 'Wǒ de zì xíng chē ràng rén qí zǒu le.',
         translation: 'My bicycle was ridden away by someone.',
-        explanation: '**我的自行车** ("my bicycle") is the Topic. The Comment uses **让** instead of 被 to mark the passive. In spoken Mandarin, 让 (and its cousin 叫) is far more common than 被 for passives, especially in casual conversation. **人** ("someone") is the agent, and **骑走** ("rode away") is a verb-directional compound: 骑 ("ride") + 走 ("away"). The meaning is identical to 被人骑走了, but 让 sounds more natural and colloquial. Think of 被 as the "formal" passive and 让 as the "casual" one. Both follow the same structure: Topic + passive marker + agent + verb.',
+        explanation: '**我的自行车** ("my bicycle") is the Topic. The Comment uses **让** ("let/allow") instead of 被. This implies the bicycle "allowed" the situation to happen. In spoken Mandarin, treating a situation as something "allowed" rather than "suffered" is far more common for casual passives. The bicycle allowed a full nested event: **人骑走** ("someone riding it away"). Both follow the exact same Matryoshka nesting structure (Topic + Action Verb + Embedded Clause), but **让** creates a more natural, casual tone.',
         tree: {
             id: 's103-n',
             role: 'Sentence',

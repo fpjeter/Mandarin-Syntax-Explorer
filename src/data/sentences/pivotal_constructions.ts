@@ -7,7 +7,7 @@ export const pivotalConstructions: SentenceData[] = [
         chinese: '老师让学生回答问题。',
         pinyin: 'Lǎo shī ràng xué sheng huí dá wèn tí.',
         translation: 'The teacher had the students answer questions.',
-        explanation: 'The Topic is **老师** ("teacher"). The verb **让** ("let/make") creates a **pivotal construction**: it introduces a person who is simultaneously the object of 让 and the actor of the next verb. Here, **学生** ("students") is the pivot: they are the ones being made to do something AND the ones performing the action. The embedded clause is **回答问题** ("answer questions"). The tree shows 学生 sitting at the junction between the two verbs, bridging them.',
+        explanation: 'The Topic is **老师** ("teacher"). The verb **让** ("let/make") is a Situation-Taking Verb. It doesn\'t just act on the students; it acts on the entire situation. This is the **Matryoshka Principle**: the whole **Embedded Clause** (学生回答问题, "students answer questions") is nested perfectly inside the main sentence as the object of 让. Inside that nested mini-sentence, **学生** ("students") is simply the inner topic performing the action.',
         tree: {
             id: 'n32',
             role: 'Sentence',
@@ -74,7 +74,7 @@ export const pivotalConstructions: SentenceData[] = [
         chinese: '妈妈叫我去买牛奶。',
         pinyin: 'Mā ma jiào wǒ qù mǎi niúnǎi.',
         translation: 'Mom told me to go buy milk.',
-        explanation: 'Here **妈妈** ("Mom") is the Topic. The verb **叫** ("tell/ask") creates a pivotal construction: **我** ("me") is the pivot, simultaneously the object of 叫 and the actor of the next action, **去买牛奶** ("go buy milk"). The tree shows 我 sitting right at the hinge between the two verb phrases. Notice how the serial verb chain continues inside the embedded action: 去 ("go") + 买牛奶 ("buy milk"), with the purpose following the motion verb naturally.',
+        explanation: 'Here **妈妈** ("Mom") is the Topic. The verb **叫** ("tell/ask") acts on an entire situation: me going to buy milk. Using the **Matryoshka Principle**, the whole nested event (**我去买牛奶**) acts as the object of 叫. Inside this embedded clause, **我** ("me") is just the inner topic. Notice how the train of connected cars continues inside the embedded action: 去 ("go") + 买牛奶 ("buy milk"), with the purpose following the motion naturally.',
         tree: {
             id: 'n33',
             role: 'Sentence',
@@ -155,7 +155,7 @@ export const pivotalConstructions: SentenceData[] = [
         chinese: '公司派他去谈判。',
         pinyin: 'Gōng sī pài tā qù tán pàn.',
         translation: 'The company sent him to negotiate.',
-        explanation: 'The Topic is **公司** ("company"). The verb **派** ("dispatch/send") creates a pivotal construction: **他** ("him") is the pivot, simultaneously the person being sent and the actor of the next action. The embedded clause is **去谈判** ("go negotiate"), a serial verb chain where going and negotiating happen in sequence. The tree shows 他 at the pivot point, with the serial verbs branching from his action.',
+        explanation: 'The Topic is **公司** ("company"). The verb **派** ("dispatch/send") takes a whole situation as its object using the **Matryoshka Principle**. The company isn\'t just sending "him"; they are initiating the entire nested event of "him going to negotiate" (**他去谈判**). Inside that embedded clause, going and negotiating happen sequentially like connected train cars. The tree shows **他** securely inside the nested boundary.',
         tree: {
             id: 'n52',
             role: 'Sentence',
@@ -225,7 +225,7 @@ export const pivotalConstructions: SentenceData[] = [
         chinese: '她请我吃饭。',
         pinyin: 'Tā qǐng wǒ chī fàn.',
         translation: 'She invited me to eat (out / to dinner).',
-        explanation: 'Here **她** ("she") is the Topic. The verb **请** ("invite/treat") creates a pivotal construction: **我** ("me") is the pivot, simultaneously the person being invited and the one who will eat. The embedded action is **吃饭** ("eat a meal"). The tree shows 我 at the junction between 请 and 吃饭. This is a very common social phrase in Chinese: 请人吃饭 means to treat someone to a meal.',
+        explanation: 'Here **她** ("she") is the Topic. The verb **请** ("invite/treat") takes the entire situation (**我吃饭**, "me eating a meal") as its object under the **Matryoshka Principle**. She is bringing about that nested event. Inside the embedded clause, **我** is simply the inner topic performing the eating. This is a very common social phrase in Chinese: 请人吃饭 means to treat someone to a meal.',
         tree: {
             id: 'n53',
             role: 'Sentence',
@@ -293,7 +293,7 @@ export const pivotalConstructions: SentenceData[] = [
         chinese: '困难让人成长，安逸让人退步。',
         pinyin: 'Kùn nan ràng rén chéng zhǎng, ān yì ràng rén tuì bù.',
         translation: 'Hardship makes people grow; comfort makes people regress.',
-        explanation: 'A **Parallel Sentence** with two matched halves. The first: **困难让人成长** ("hardship makes people grow"), where **让** creates a pivotal construction with **人** as the pivot. The second: **安逸让人退步** ("comfort makes people regress"), with the same structure. Neither half is the Topic of the other; they are equal partners placed side by side for contrast. Both use **让** ("make/let") as the pivotal verb. The tree shows both halves as parallel branches at the top level.',
+        explanation: 'This is a **Parallel Sentence** with two matched halves. Neither half is the Topic of the other; rather, like two trains on parallel tracks, they are equal partners placed side by side for contrast. Both use **让** ("make/let"), which takes a nested situation as its object. In the first half, the object of 让 is the entire **Matryoshka** clause **人成长** ("people grow"). In the second, it is **人退步** ("people regress"). The tree shows both halves as parallel independent branches.',
         tree: {
             id: 's89-root', role: 'Sentence', children: [
                 { id: 's89-parallel', role: 'Parallel Sentence', children: [
@@ -331,7 +331,7 @@ export const pivotalConstructions: SentenceData[] = [
         chinese: '王老板让他派人去处理。',
         pinyin: 'Wáng lǎo bǎn ràng tā pài rén qù chǔ lǐ.',
         translation: 'Boss Wang asked him to send someone to handle it.',
-        explanation: '**王老板** ("Boss Wang") is the initial Topic. This sentence chains **two pivots** together. Pivot 1: **他** ("him"). Boss Wang tells him to do something, and he is the one who sends someone. Pivot 2: **人** ("someone"). He sends someone, and that someone goes to handle it. The verbs line up in a causal chain: 让 (let/ask) → 派 (send) → 去处理 (go handle). This shows how Mandarin can stack pivotal structures indefinitely to build complex commands or delegations without needing words like "to" or "that".',
+        explanation: '**王老板** ("Boss Wang") is the initial Topic. This sentence beautifully demonstrates double nesting using the **Matryoshka Principle**. The verb **让** ("let/ask") contains a nested situation: **他派人去处理** ("he sends someone to handle it"). Inside that, the verb **派** ("send") contains *another* nested situation: **人去处理** ("someone goes to handle it"). Mandarin can stack these embedded clauses indefinitely to build complex delegations without needing messy connectors like "to" or "that".',
         tree: {
             id: 's118-n',
             role: 'Sentence',
@@ -389,7 +389,7 @@ export const pivotalConstructions: SentenceData[] = [
         chinese: '有人找你。',
         pinyin: 'Yǒu rén zhǎo nǐ.',
         translation: 'Someone is looking for you.',
-        explanation: 'In Mandarin, a sentence cannot easily start with an indefinite noun like "a person" or "someone." Instead, Mandarin uses **有** ("to have / there exists") to introduce the indefinite noun first. Here, **有人** means "there exists a person." This person (**人**) serves as the **pivot**: they are the object of 有 (which brings them into existence for the conversation) and the subject of **找你** (looking for you). This existential pivot is how Mandarin translates English sentences that start with "Someone..." or "A guy..."',
+        explanation: 'In Mandarin, a sentence shouldn\'t start with an indefinite topic like "someone." Instead, Mandarin uses **有** ("there exists") to introduce them first. Using the **Matryoshka Principle**, the verb 有 acts on the entire situation: **人找你** ("someone looking for you"). 有 establishes their existence, and inside the nested clause, **人** serves as the proper inner topic completing the action. This nested existential structure is exactly how Mandarin translates English sentences starting with "Someone..."',
         tree: {
             id: 's119-n',
             role: 'Sentence',
