@@ -216,7 +216,7 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                     <p className="text-[10px] text-slate-400 italic mt-0.5">"{selectedSentence.translation}"</p>
                 </div>
                 <p className="text-[11px] text-slate-300 leading-relaxed">
-                    {renderExplanation(selectedSentence.explanation)}
+                    {renderExplanation(typeof selectedSentence.explanation === 'string' ? selectedSentence.explanation : (selectedSentence.explanation?.en ?? ''))}
                 </p>
             </>
         );

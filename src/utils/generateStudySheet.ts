@@ -379,8 +379,11 @@ export function generatePrintSheet(sentence: SentenceData, isClassical: boolean)
     const accentMid = isClassical ? '#92400e' : '#5b21b6';
     const dateStr = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 
-    const explanationHtml = sentence.explanation
+    const explanationText = typeof sentence.explanation === 'string'
         ? sentence.explanation
+        : (sentence.explanation?.en ?? '');
+    const explanationHtml = explanationText
+        ? explanationText
             .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
             .replace(/\("([^"]+)"\)/g, '<span class="literal-trans">("$1")</span>')
             .replace(/\n/g, '<br>')
