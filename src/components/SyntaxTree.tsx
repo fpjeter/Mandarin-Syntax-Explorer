@@ -128,16 +128,16 @@ const NodeInfoBar: React.FC<{
 interface SyntaxTreeProps {
     tree?: AppGrammarNodeData;
     isVisible?: boolean;
-    isSemanticMode?: boolean;
     onRandom?: () => void;
     onPrint?: () => void;
     onDownloadPNG?: () => void;
 }
 
-export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible, isSemanticMode, onRandom, onPrint, onDownloadPNG }) => {
+export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible, onRandom, onPrint, onDownloadPNG }) => {
     const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set());
     const [showGhost, setShowGhost] = useState(true);
     const [isGlossaryOpen, setIsGlossaryOpen] = useState(false);
+    const [isSemanticMode, setIsSemanticMode] = useState(false);
     const isClassical = useIsClassical();
     const activeGlossary = isClassical ? classicalGlossary : glossary;
 
@@ -273,6 +273,8 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible, isSeman
                 onRandom={onRandom ?? (() => {})}
                 onPrint={onPrint ?? (() => {})}
                 onDownloadPNG={onDownloadPNG ?? (() => {})}
+                isSemanticMode={isSemanticMode}
+                onToggleSemanticMode={() => setIsSemanticMode(s => !s)}
             />
 
             <ReactFlow
