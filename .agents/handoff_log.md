@@ -41,6 +41,13 @@ Append a new block to `## Pending Requests` using this exact format:
 **Context**: Re-align the ~300 chaotic AST `subRole` values to the canonical 5-bucket palette defined in the `implementation_plan.md`.
 **Action Required**: Executed bulk normalization via custom scripts/normalize_subroles.ts script. Collapsed non-adjunct AST tags into their base types while preserving exact visual badge mapping conditions. Passed all Node AST validations cleanly.
 
+### [2026-04-08] Orchestrator → Frontend Engineer
+**Status**: 🔴 Active
+**Task**: Phase 3 Frontend Epic - Semantic Toggle UI
+**Branch**: `feature/semantic-toggle`
+**Context**: Re-implement node visual badges to support a "Semantic Mode" that swaps structural labels (Topic/Comment) for Semantic Roles (Agent/Patient), helping users understand complex grammar like 把 and 被 structures.
+**Action Required**: Wait for User approval on the `implementation_plan.md` architecture. Do NOT execute until the Orchestrator confirms the plan is locked in.
+
 ---
 
 ## Pending Requests
