@@ -34,6 +34,17 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
+### [2026-04-08] Orchestrator → Frontend Engineer
+**Status**: 🔴 Active
+**Task**: UI Epic - Collapsible Tree Toolbar (UX Refactor)
+**Branch**: `feature/collapsible-toolbar`
+**Context**: The Semantic Roles button is awkwardly placed in the global App.tsx header. We are moving it down to visually colocate it with tree manipulations in `TreeToolbar.tsx`. To combat button bloat, the toolbar must now be collapsible behind a single floating trigger.
+**Action Required**:
+1. Check out an entirely new branch: `feature/collapsible-toolbar`.
+2. Follow the locked-in architecture in `implementation_plan.md`: horizontal rollout on desktop, vertical drop-down on mobile contexts. 
+3. Verify that the semantic button only mounts for modern Mandarin sentences (`!isClassical`).
+4. Validate changes and mark this ticket as Done.
+
 ### [2026-04-08] Orchestrator → Educational Publisher
 **Status**: ✅ Done
 **Task**: Evaluate Tagging Depth for Phase 4 Semantic Expansion
@@ -73,7 +84,7 @@ Reserve Instrument/Location/Goal/Source/Stimulus for future advanced mode.
 **Rationale**: The semantic toggle is most valuable when it reveals something the syntactic tree does NOT already show. Tagging an Adjunct as "Location" adds nothing because the learner already sees `ADJUNCT (location)` as a badge. But tagging a Topic as "Agent" vs. "Patient" in a 被 passive IS genuinely illuminating: it shows the learner that the grammatical subject is actually the receiver, not the doer. That "aha!" moment is the whole point of semantic mode.
 
 ### [2026-04-08] Orchestrator → Data Linguist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Phase 4 Data Epic - Semantic Expansion
 **Branch**: `feature/semantic-phase-4`
 **Context**: Expand the `semanticRole` data tagging to the 17 remaining categories in the databank to ensure the Semantic Toggle UI works comprehensively across all sentences.
