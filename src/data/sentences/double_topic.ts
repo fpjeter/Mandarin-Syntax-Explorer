@@ -15,7 +15,7 @@ export const doubleTopic: SentenceData[] = [
                 {
                     id: 'n25-t',
                     role: 'Topic',
-                    subRole: 'outer topic (whole)',
+                    subRole: 'outer topic',
                     children: [
                         {
                             id: 'n25-t-attr',
@@ -37,7 +37,7 @@ export const doubleTopic: SentenceData[] = [
                         {
                             id: 'n25-c-s1',
                             role: 'Topic',
-                            subRole: 'inner topic 1 (part)',
+                            subRole: 'inner topic',
                             text: { hanzi: '菜', pinyin: 'cài', translation: 'food/dishes' }
                         },
                         {
@@ -60,7 +60,7 @@ export const doubleTopic: SentenceData[] = [
                         {
                             id: 'n25-c-s2',
                             role: 'Topic',
-                            subRole: 'inner topic 2 (part)',
+                            subRole: 'inner topic',
                             text: { hanzi: '价钱', pinyin: 'jià qián', translation: 'price' }
                         },
                         {
@@ -104,7 +104,7 @@ export const doubleTopic: SentenceData[] = [
                 {
                     id: 'n26-t',
                     role: 'Topic',
-                    subRole: 'outer topic (whole)',
+                    subRole: 'outer topic',
                     text: { hanzi: '大象', pinyin: 'dà xiàng', translation: 'elephant' }
                 },
                 {
@@ -115,7 +115,7 @@ export const doubleTopic: SentenceData[] = [
                         {
                             id: 'n26-c-t1',
                             role: 'Topic',
-                            subRole: 'inner topic 1 (body part)',
+                            subRole: 'inner topic',
                             text: { hanzi: '鼻子', pinyin: 'bí zi', translation: 'trunk/nose' }
                         },
                         {
@@ -133,7 +133,7 @@ export const doubleTopic: SentenceData[] = [
                         {
                             id: 'n26-c-t2',
                             role: 'Topic',
-                            subRole: 'inner topic 2 (body part)',
+                            subRole: 'inner topic',
                             text: { hanzi: '耳朵', pinyin: 'ěr duo', translation: 'ears' }
                         },
                         {
@@ -276,7 +276,7 @@ export const doubleTopic: SentenceData[] = [
                         ]},
                     ]},
                     { id: 's92-shi', role: 'Copula', text: { hanzi: '是', pinyin: 'shì', translation: 'is' } },
-                    { id: 's92-fbk', role: 'Head Verb', subRole: 'potential complement', text: { hanzi: '分不开', pinyin: 'fēn bù kāi', translation: 'inseparable' } },
+                    { id: 's92-fbk', role: 'Head Verb', subRole: 'potential', text: { hanzi: '分不开', pinyin: 'fēn bù kāi', translation: 'inseparable' } },
                     { id: 's92-de', role: 'Particle', text: { hanzi: '的', pinyin: 'de', translation: '(nominalizer)' } },
                 ]},
             ]

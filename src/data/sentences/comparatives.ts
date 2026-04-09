@@ -71,7 +71,7 @@ export const comparatives: SentenceData[] = [
                         {
                             id: 'n9-p-part',
                             role: 'Particle',
-                            subRole: 'degree complement linker',
+                            subRole: 'degree',
                             text: { hanzi: '得', pinyin: 'de', translation: '(links degree)' }
                         },
                         {
@@ -134,12 +134,12 @@ export const comparatives: SentenceData[] = [
                 {
                     id: 'n20-c',
                     role: 'Comment',
-                    subRole: 'equality comparison (跟…一样)',
+                    subRole: 'comparison',
                     children: [
                         {
                             id: 'n20-c-pp',
                             role: 'Preposition',
-                            subRole: 'standard of comparison (跟…)',
+                            subRole: 'comparison',
                             children: [
                                 {
                                     id: 'n20-c-pp-prep',
@@ -213,7 +213,7 @@ export const comparatives: SentenceData[] = [
                 {
                     id: 'n21-c',
                     role: 'Comment',
-                    subRole: 'similarity comparison (像…一样)',
+                    subRole: 'comparison',
                     children: [
                         {
                             id: 'n21-vp',
@@ -227,13 +227,13 @@ export const comparatives: SentenceData[] = [
                                 {
                                     id: 'n21-de',
                                     role: 'Particle',
-                                    subRole: 'degree complement linker',
+                                    subRole: 'degree',
                                     text: { hanzi: '得', pinyin: 'de', translation: '(links verb to degree)' }
                                 },
                                 {
                                     id: 'n21-comp',
                                     role: 'Complement',
-                                    subRole: 'degree complement',
+                                    subRole: 'degree',
                                     children: [
                                         {
                                             id: 'n21-comp-pp',
@@ -282,8 +282,8 @@ export const comparatives: SentenceData[] = [
         tree: {
             id: 's69-root', role: 'Sentence', children: [
                 { id: 's69-t', role: 'Topic', isDropped: true, impliedText: '规律' },
-                { id: 's69-c', role: 'Comment', subRole: 'parallel comparisons', children: [
-                    { id: 's69-c1', role: 'Verb Phrase', subRole: 'first comparison', children: [
+                { id: 's69-c', role: 'Comment', subRole: 'comparison', children: [
+                    { id: 's69-c1', role: 'Verb Phrase', subRole: 'comparison', children: [
                         { id: 's69-s1', role: 'Subject', children: [
                             { id: 's69-zd', role: 'Attributive', text: { hanzi: '知道的', pinyin: 'zhī dào de', translation: 'who know' } },
                             { id: 's69-r1', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
@@ -294,7 +294,7 @@ export const comparatives: SentenceData[] = [
                             { id: 's69-r2', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
                         ]},
                     ]},
-                    { id: 's69-c2', role: 'Verb Phrase', subRole: 'second comparison', children: [
+                    { id: 's69-c2', role: 'Verb Phrase', subRole: 'comparison', children: [
                         { id: 's69-s2', role: 'Subject', children: [
                             { id: 's69-xh2', role: 'Attributive', text: { hanzi: '喜欢的', pinyin: 'xǐ huān de', translation: 'who love' } },
                             { id: 's69-r3', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
@@ -319,8 +319,8 @@ export const comparatives: SentenceData[] = [
         tree: {
             id: 's87-root', role: 'Sentence', children: [
                 { id: 's87-t', role: 'Topic', isDropped: true, impliedText: '规律' },
-                { id: 's87-c', role: 'Comment', subRole: 'parallel comparisons', children: [
-                    { id: 's87-c1', role: 'Verb Phrase', subRole: 'first comparison', children: [
+                { id: 's87-c', role: 'Comment', subRole: 'comparison', children: [
+                    { id: 's87-c1', role: 'Verb Phrase', subRole: 'comparison', children: [
                         { id: 's87-s1', role: 'Subject', children: [
                             { id: 's87-a1', role: 'Attributive', text: { hanzi: '好的', pinyin: 'hǎo de', translation: 'good' } },
                             { id: 's87-sj', role: 'Head Noun', text: { hanzi: '时机', pinyin: 'shí jī', translation: 'timing' } },
@@ -331,7 +331,7 @@ export const comparatives: SentenceData[] = [
                             { id: 's87-dx', role: 'Head Noun', text: { hanzi: '地形', pinyin: 'dì xíng', translation: 'terrain' } },
                         ]},
                     ]},
-                    { id: 's87-c2', role: 'Verb Phrase', subRole: 'second comparison', children: [
+                    { id: 's87-c2', role: 'Verb Phrase', subRole: 'comparison', children: [
                         { id: 's87-s2', role: 'Subject', children: [
                             { id: 's87-a3', role: 'Attributive', text: { hanzi: '好的', pinyin: 'hǎo de', translation: 'good' } },
                             { id: 's87-dx2', role: 'Head Noun', text: { hanzi: '地形', pinyin: 'dì xíng', translation: 'terrain' } },
@@ -386,7 +386,7 @@ export const comparatives: SentenceData[] = [
                         {
                             id: 's113-comp-phrase',
                             role: 'Adjunct',
-                            subRole: 'comparison reference',
+                            subRole: 'comparison',
                             children: [
                                 { id: 's113-bi', role: 'Preposition', text: { hanzi: '比', pinyin: 'bǐ', translation: 'compared to' } },
                                 { id: 's113-bi-obj', role: 'Object', subRole: 'item B', text: { hanzi: '我', pinyin: 'wǒ', translation: 'me' } }

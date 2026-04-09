@@ -15,7 +15,7 @@ export const shDeConstruction: SentenceData[] = [
                 {
                     id: 'n8-t',
                     role: 'Topic',
-                    subRole: 'left-dislocation (as for me)',
+                    subRole: 'outer topic',
                     text: { hanzi: '我', pinyin: 'wǒ', translation: 'I / as for me' }
                 },
                 {
@@ -32,7 +32,7 @@ export const shDeConstruction: SentenceData[] = [
                         {
                             id: 'n8-p-vp',
                             role: 'Verb Phrase',
-                            subRole: 'focused constituents + embedded predicate',
+                            subRole: 'embedded predicate',
                             children: [
                                 {
                                     id: 'n8-p-vp-tp',
@@ -60,7 +60,7 @@ export const shDeConstruction: SentenceData[] = [
                                 {
                                     id: 'n8-p-vp-verb',
                                     role: 'Verb Phrase',
-                                    subRole: 'embedded predicate (null subject = 我)',
+                                    subRole: 'embedded predicate',
                                     children: [
                                         {
                                             id: 'n8-p-vp-verb-hv',
@@ -70,7 +70,7 @@ export const shDeConstruction: SentenceData[] = [
                                         {
                                             id: 'n8-p-vp-verb-comp',
                                             role: 'Complement',
-                                            subRole: 'resultative (arrive at → succeed in seeing)',
+                                            subRole: 'resultative',
                                             text: { hanzi: '到', pinyin: 'dào', translation: '(resultative: managed to see)' }
                                         },
                                         {
@@ -123,7 +123,7 @@ export const shDeConstruction: SentenceData[] = [
                         {
                             id: 'n23-p-vp',
                             role: 'Verb Phrase',
-                            subRole: 'focused constituents + embedded predicate',
+                            subRole: 'embedded predicate',
                             children: [
                                 {
                                     id: 'n23-lp',
@@ -180,7 +180,7 @@ export const shDeConstruction: SentenceData[] = [
                 {
                     id: 'n50-t',
                     role: 'Topic',
-                    subRole: 'left-dislocation (as for me)',
+                    subRole: 'outer topic',
                     text: { hanzi: '我', pinyin: 'wǒ', translation: 'I / as for me' },
                 },
                 {
@@ -197,7 +197,7 @@ export const shDeConstruction: SentenceData[] = [
                         {
                             id: 'n50-p-vp',
                             role: 'Verb Phrase',
-                            subRole: 'focused constituents + embedded predicate',
+                            subRole: 'embedded predicate',
                             children: [
                                 {
                                     id: 'n50-focus',
@@ -208,7 +208,7 @@ export const shDeConstruction: SentenceData[] = [
                                 {
                                     id: 'n50-hv',
                                     role: 'Head Verb',
-                                    subRole: 'embedded predicate (null subject = 我)',
+                                    subRole: 'embedded predicate',
                                     text: { hanzi: '到', pinyin: 'dào', translation: 'arrive' },
                                 }
                             ]
@@ -238,7 +238,7 @@ export const shDeConstruction: SentenceData[] = [
                 {
                     id: 'n51-t',
                     role: 'Topic',
-                    subRole: 'left-dislocation (as for this clothing)',
+                    subRole: 'outer topic',
                     children: [
                         {
                             id: 'n51-t-attr',
@@ -266,7 +266,7 @@ export const shDeConstruction: SentenceData[] = [
                         {
                             id: 'n51-p-vp',
                             role: 'Verb Phrase',
-                            subRole: 'focused constituents + embedded predicate',
+                            subRole: 'embedded predicate',
                             children: [
                                 {
                                     id: 'n51-focus',
@@ -288,7 +288,7 @@ export const shDeConstruction: SentenceData[] = [
                                 {
                                     id: 'n51-hv',
                                     role: 'Head Verb',
-                                    subRole: 'embedded predicate (null subject = contextual)',
+                                    subRole: 'embedded predicate',
                                     text: { hanzi: '买', pinyin: 'mǎi', translation: 'buy' },
                                 }
                             ]

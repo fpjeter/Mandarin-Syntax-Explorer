@@ -54,7 +54,7 @@ export const beiPassive: SentenceData[] = [
                                 {
                                     id: 'n6-c-p-bei-hv',
                                     role: 'Head Verb',
-                                    subRole: 'passive marker (BEI)',
+                                    subRole: 'passive marker',
                                     text: { hanzi: '被', pinyin: 'bèi', translation: 'suffer / undergo' }
                                 },
                                 {
@@ -80,7 +80,7 @@ export const beiPassive: SentenceData[] = [
                                                 {
                                                     id: 'n6-c-p-vp-part',
                                                     role: 'Particle',
-                                                    subRole: 'aspect',
+                                                    subRole: 'aspect marker',
                                                     text: { hanzi: '了', pinyin: 'le', translation: '(completion)' }
                                                 },
                                                 {
@@ -139,7 +139,7 @@ export const beiPassive: SentenceData[] = [
                                 {
                                     id: 'n22-c-bei-hv',
                                     role: 'Head Verb',
-                                    subRole: 'passive marker (BEI)',
+                                    subRole: 'passive marker',
                                     text: { hanzi: '被', pinyin: 'bèi', translation: 'suffer / undergo' }
                                 },
                                 {
@@ -165,7 +165,7 @@ export const beiPassive: SentenceData[] = [
                                                 {
                                                     id: 'n22-c-le',
                                                     role: 'Particle',
-                                                    subRole: 'completion',
+                                                    subRole: 'aspect marker',
                                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' }
                                                 }
                                             ]
@@ -217,7 +217,7 @@ export const beiPassive: SentenceData[] = [
                                 {
                                     id: 'n48-bei-hv',
                                     role: 'Head Verb',
-                                    subRole: 'passive marker (BEI)',
+                                    subRole: 'passive marker',
                                     text: { hanzi: '被', pinyin: 'bèi', translation: 'suffer / undergo' },
                                 },
                                 {
@@ -243,13 +243,13 @@ export const beiPassive: SentenceData[] = [
                                                 {
                                                     id: 'n48-comp',
                                                     role: 'Complement',
-                                                    subRole: 'resultative (removal/destruction)',
+                                                    subRole: 'resultative',
                                                     text: { hanzi: '掉', pinyin: 'diào', translation: 'off / away (destroyed)' },
                                                 },
                                                 {
                                                     id: 'n48-le',
                                                     role: 'Particle',
-                                                    subRole: 'completion',
+                                                    subRole: 'aspect marker',
                                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
                                                 },
                                             ],
@@ -290,7 +290,7 @@ export const beiPassive: SentenceData[] = [
                                 {
                                     id: 'n49-bei-hv',
                                     role: 'Head Verb',
-                                    subRole: 'passive marker (BEI)',
+                                    subRole: 'passive marker',
                                     text: { hanzi: '被', pinyin: 'bèi', translation: 'suffer / undergo' },
                                 },
                                 {
@@ -316,13 +316,13 @@ export const beiPassive: SentenceData[] = [
                                                 {
                                                     id: 'n49-comp',
                                                     role: 'Complement',
-                                                    subRole: 'resultative (firmly held)',
+                                                    subRole: 'resultative',
                                                     text: { hanzi: '住', pinyin: 'zhù', translation: 'firmly / hold in place' },
                                                 },
                                                 {
                                                     id: 'n49-le',
                                                     role: 'Particle',
-                                                    subRole: 'completion',
+                                                    subRole: 'aspect marker',
                                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
                                                 },
                                             ],
@@ -385,7 +385,7 @@ export const beiPassive: SentenceData[] = [
                         {
                             id: 's102-bei',
                             role: 'Head Verb',
-                            subRole: 'passive marker (BEI)',
+                            subRole: 'passive marker',
                             text: { hanzi: '被', pinyin: 'bèi', translation: 'to suffer/undergo' }
                         },
                         {
@@ -395,7 +395,7 @@ export const beiPassive: SentenceData[] = [
                                 {
                                     id: 's102-ghost-agent',
                                     role: 'Topic',
-                                    subRole: 'Ghost Node (Empty Agent)',
+                                    subRole: 'implied topic',
                                     text: { hanzi: '[有人]', pinyin: 'yǒu rén', translation: 'someone' }
                                 },
                                 {
@@ -403,7 +403,7 @@ export const beiPassive: SentenceData[] = [
                                     role: 'Comment',
                                     children: [
                                         { id: 's102-hv', role: 'Head Verb', text: { hanzi: '偷', pinyin: 'tōu', translation: 'steal' } },
-                                        { id: 's102-le', role: 'Particle', subRole: 'completion', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
+                                        { id: 's102-le', role: 'Particle', subRole: 'aspect marker', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
                                     ]
                                 }
                             ]
@@ -439,7 +439,7 @@ export const beiPassive: SentenceData[] = [
                         {
                             id: 's103-rang',
                             role: 'Head Verb',
-                            subRole: 'passive marker (RANG)',
+                            subRole: 'passive marker',
                             text: { hanzi: '让', pinyin: 'ràng', translation: 'to let/allow (passive experience)' }
                         },
                         {
@@ -456,8 +456,8 @@ export const beiPassive: SentenceData[] = [
                                     role: 'Comment',
                                     children: [
                                         { id: 's103-hv', role: 'Head Verb', text: { hanzi: '骑', pinyin: 'qí', translation: 'ride' } },
-                                        { id: 's103-comp', role: 'Complement', subRole: 'directional result', text: { hanzi: '走', pinyin: 'zǒu', translation: 'away' } },
-                                        { id: 's103-le', role: 'Particle', subRole: 'completion', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
+                                        { id: 's103-comp', role: 'Complement', subRole: 'directional', text: { hanzi: '走', pinyin: 'zǒu', translation: 'away' } },
+                                        { id: 's103-le', role: 'Particle', subRole: 'aspect marker', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
                                     ]
                                 }
                             ]

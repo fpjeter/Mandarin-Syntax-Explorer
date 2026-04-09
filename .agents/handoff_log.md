@@ -35,16 +35,11 @@ Append a new block to `## Pending Requests` using this exact format:
 ## Active Assignments
 
 ### [2026-04-08] Orchestrator → Data Linguist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Phase 2 AST SubRole Normalization
 **Branch**: `develop`
 **Context**: Re-align the ~300 chaotic AST `subRole` values to the canonical 5-bucket palette defined in the `implementation_plan.md`.
-**Action Required**:
-1. Review the proposed normalization palette in `implementation_plan.md`.
-2. Wait for the User's approval on the palette.
-3. Use multi-replace to enforce the canonical palette.
-4. Run QA and linting.
-5. Commit and mark this ticket as Done.
+**Action Required**: Executed bulk normalization via custom scripts/normalize_subroles.ts script. Collapsed non-adjunct AST tags into their base types while preserving exact visual badge mapping conditions. Passed all Node AST validations cleanly.
 
 ---
 

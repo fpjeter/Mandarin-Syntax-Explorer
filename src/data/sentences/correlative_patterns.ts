@@ -20,12 +20,12 @@ export const correlativePatterns: SentenceData[] = [
                 {
                     id: 'n60-c',
                     role: 'Comment',
-                    subRole: 'correlative 越…越…',
+                    subRole: 'correlative',
                     children: [
                         {
                             id: 'n60-cl1',
                             role: 'Verb Phrase',
-                            subRole: 'clause A: condition',
+                            subRole: 'serial verb 1',
                             children: [
                                 {
                                     id: 'n60-yue1',
@@ -43,7 +43,7 @@ export const correlativePatterns: SentenceData[] = [
                         {
                             id: 'n60-cl2',
                             role: 'Verb Phrase',
-                            subRole: 'clause B: consequence',
+                            subRole: 'serial verb 2',
                             children: [
                                 {
                                     id: 'n60-yue2',
@@ -82,7 +82,7 @@ export const correlativePatterns: SentenceData[] = [
                 {
                     id: 'n61-c',
                     role: 'Comment',
-                    subRole: 'correlative 一…就…',
+                    subRole: 'correlative',
                     children: [
                         {
                             id: 'n61-cl1',
@@ -105,7 +105,7 @@ export const correlativePatterns: SentenceData[] = [
                         {
                             id: 'n61-cl2',
                             role: 'Verb Phrase',
-                            subRole: 'consequence clause (就 + V)',
+                            subRole: 'consequence',
                             children: [
                                 {
                                     id: 'n61-jiu',
@@ -135,14 +135,14 @@ export const correlativePatterns: SentenceData[] = [
         explanation: 'A modern take on 學而不思則罔，思而不學則殆 (from the Analects: "To study without thinking is wasteful; to think without studying is dangerous"). The classical 而 ("but/and") and 則 ("then") are replaced by modern **如果...就...** ("if...then..."). The tree shows two parallel conditional clauses. Each has the same shape: 如果 + condition, 就 + consequence. The first clause warns 如果只学习不思考 ("if you only study without thinking"), result: 就会迷茫 ("you will be lost"). The second warns 如果只思考不学习 ("if you only think without studying"), result: 就很危险 ("it is very dangerous").',
         tree: {
             id: 's84-root', role: 'Sentence', children: [
-                { id: 's84-c1', role: 'Topic', subRole: 'first correlative', children: [
+                { id: 's84-c1', role: 'Topic', subRole: 'correlative', children: [
                     { id: 's84-premise1', role: 'Adjunct', subRole: 'conditional', text: { hanzi: '只学习不思考', pinyin: 'zhǐ xué xí bù sī kǎo', translation: 'only study, not think' } },
                     { id: 's84-yue1a', role: 'Adjunct', subRole: 'correlative', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
                     { id: 's84-xue', role: 'Head Verb', text: { hanzi: '学', pinyin: 'xué', translation: 'study' } },
                     { id: 's84-yue1b', role: 'Adjunct', subRole: 'correlative', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
                     { id: 's84-hutu', role: 'Head Verb', text: { hanzi: '糊涂', pinyin: 'hú tu', translation: 'confused' } },
                 ]},
-                { id: 's84-c2', role: 'Comment', subRole: 'second correlative', children: [
+                { id: 's84-c2', role: 'Comment', subRole: 'correlative', children: [
                     { id: 's84-premise2', role: 'Adjunct', subRole: 'conditional', text: { hanzi: '只思考不学习', pinyin: 'zhǐ sī kǎo bù xué xí', translation: 'only think, not study' } },
                     { id: 's84-yue2a', role: 'Adjunct', subRole: 'correlative', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
                     { id: 's84-xiang', role: 'Head Verb', text: { hanzi: '想', pinyin: 'xiǎng', translation: 'think' } },
@@ -260,7 +260,7 @@ export const correlativePatterns: SentenceData[] = [
                 {
                     id: 's108-c',
                     role: 'Comment',
-                    subRole: 'correlative frame',
+                    subRole: 'correlative',
                     children: [
                         {
                             id: 's108-clause1',
@@ -301,11 +301,11 @@ export const correlativePatterns: SentenceData[] = [
             id: 's109-n',
             role: 'Sentence',
             children: [
-                { id: 's109-ghost', role: 'Topic', subRole: 'Ghost Node', text: { hanzi: '[我]', pinyin: 'wǒ', translation: 'I(implied)' } },
+                { id: 's109-ghost', role: 'Topic', subRole: 'implied topic', text: { hanzi: '[我]', pinyin: 'wǒ', translation: 'I(implied)' } },
                 {
                     id: 's109-c',
                     role: 'Comment',
-                    subRole: 'correlative frame',
+                    subRole: 'correlative',
                     children: [
                         {
                             id: 's109-clause1',

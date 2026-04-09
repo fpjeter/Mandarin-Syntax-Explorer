@@ -21,7 +21,7 @@ export const baConstruction: SentenceData[] = [
                 {
                     id: 'n3-c',
                     role: 'Comment',
-                    subRole: 'bǎ-construction',
+                    subRole: 'disposal marker',
                     children: [
                         {
                             id: 'n3-p-tp',
@@ -32,12 +32,12 @@ export const baConstruction: SentenceData[] = [
                         {
                             id: 'n3-p-ba',
                             role: 'Adjunct',
-                            subRole: 'ba-construction',
+                            subRole: 'disposal marker',
                             children: [
                                 {
                                     id: 'n3-p-ba-prep',
                                     role: 'Head Verb',
-                                    subRole: 'BA marker',
+                                    subRole: 'disposal marker',
                                     text: { hanzi: '把', pinyin: 'bǎ', translation: '(object fronting)' }
                                 },
                                 {
@@ -93,7 +93,7 @@ export const baConstruction: SentenceData[] = [
                                 {
                                     id: 'n3-p-vp-part',
                                     role: 'Particle',
-                                    subRole: 'aspect',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(completion)' }
                                 }
                             ]
@@ -134,7 +134,7 @@ export const baConstruction: SentenceData[] = [
                 {
                     id: 'n4-c',
                     role: 'Comment',
-                    subRole: 'bǎ + manner + instrument',
+                    subRole: 'disposal marker',
                     children: [
                         {
                             id: 'n4-p-loc',
@@ -179,12 +179,12 @@ export const baConstruction: SentenceData[] = [
                         {
                             id: 'n4-p-ba',
                             role: 'Adjunct',
-                            subRole: 'ba-construction',
+                            subRole: 'disposal marker',
                             children: [
                                 {
                                     id: 'n4-p-ba-prep',
                                     role: 'Head Verb',
-                                    subRole: 'BA marker',
+                                    subRole: 'disposal marker',
                                     text: { hanzi: '把', pinyin: 'bǎ', translation: '(object fronting)' }
                                 },
                                 {
@@ -217,13 +217,13 @@ export const baConstruction: SentenceData[] = [
                                 {
                                     id: 'n4-p-vp-comp',
                                     role: 'Complement',
-                                    subRole: 'directional · result location',
+                                    subRole: 'directional',
                                     text: { hanzi: '到地上', pinyin: 'dào dì shàng', translation: 'to the floor' }
                                 },
                                 {
                                     id: 'n4-p-vp-part',
                                     role: 'Particle',
-                                    subRole: 'aspect',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(completed action)' }
                                 }
                             ]
@@ -263,12 +263,12 @@ export const baConstruction: SentenceData[] = [
                         {
                             id: 'n28-ba',
                             role: 'Adjunct',
-                            subRole: 'ba-construction',
+                            subRole: 'disposal marker',
                             children: [
                                 {
                                     id: 'n28-ba-prep',
                                     role: 'Head Verb',
-                                    subRole: 'BA marker',
+                                    subRole: 'disposal marker',
                                     text: { hanzi: '把', pinyin: 'bǎ', translation: '(object fronting)' },
                                 },
                                 {
@@ -290,7 +290,7 @@ export const baConstruction: SentenceData[] = [
                                 {
                                     id: 'n28-vp-comp',
                                     role: 'Complement',
-                                    subRole: 'directional (sealed/shut)',
+                                    subRole: 'directional',
                                     text: { hanzi: '上', pinyin: 'shàng', translation: 'up / shut' },
                                 },
                             ],
@@ -323,12 +323,12 @@ export const baConstruction: SentenceData[] = [
                         {
                             id: 'n29-ba',
                             role: 'Adjunct',
-                            subRole: 'ba-construction',
+                            subRole: 'disposal marker',
                             children: [
                                 {
                                     id: 'n29-ba-prep',
                                     role: 'Head Verb',
-                                    subRole: 'BA marker',
+                                    subRole: 'disposal marker',
                                     text: { hanzi: '把', pinyin: 'bǎ', translation: '(object fronting)' },
                                 },
                                 {
@@ -384,7 +384,7 @@ export const baConstruction: SentenceData[] = [
                                 {
                                     id: 'n29-vp-le',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
                                 },
                             ],
@@ -414,7 +414,7 @@ export const baConstruction: SentenceData[] = [
                         {
                             id: 's126-ba-phrase',
                             role: 'Head Verb',
-                            subRole: 'BA marker',
+                            subRole: 'disposal marker',
                             text: { hanzi: '把', pinyin: 'bǎ', translation: 'take hold of' }
                         },
                         {
@@ -427,7 +427,7 @@ export const baConstruction: SentenceData[] = [
                                     role: 'Comment',
                                     children: [
                                         { id: 's126-hv', role: 'Head Verb', text: { hanzi: '关', pinyin: 'guān', translation: 'close' } },
-                                        { id: 's126-comp', role: 'Complement', subRole: 'directional result', text: { hanzi: '上', pinyin: 'shàng', translation: 'shut/up' } }
+                                        { id: 's126-comp', role: 'Complement', subRole: 'directional', text: { hanzi: '上', pinyin: 'shàng', translation: 'shut/up' } }
                                     ]
                                 }
                             ]
@@ -448,7 +448,7 @@ export const baConstruction: SentenceData[] = [
             id: 's127-n',
             role: 'Sentence',
             children: [
-                { id: 's127-ghost', role: 'Topic', subRole: 'Ghost Node', text: { hanzi: '[你]', pinyin: 'nǐ', translation: 'you(implied)' } },
+                { id: 's127-ghost', role: 'Topic', subRole: 'implied topic', text: { hanzi: '[你]', pinyin: 'nǐ', translation: 'you(implied)' } },
                 {
                     id: 's127-c',
                     role: 'Comment',
@@ -457,7 +457,7 @@ export const baConstruction: SentenceData[] = [
                         {
                             id: 's127-ba-phrase',
                             role: 'Head Verb',
-                            subRole: 'BA marker',
+                            subRole: 'disposal marker',
                             text: { hanzi: '把', pinyin: 'bǎ', translation: 'take hold of' }
                         },
                         {
@@ -471,7 +471,7 @@ export const baConstruction: SentenceData[] = [
                                     children: [
                                         { id: 's127-hv', role: 'Head Verb', text: { hanzi: '弄', pinyin: 'nòng', translation: 'do/make' } },
                                         { id: 's127-comp', role: 'Complement', subRole: 'result', text: { hanzi: '坏', pinyin: 'huài', translation: 'broken' } },
-                                        { id: 's127-le', role: 'Particle', subRole: 'completion', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
+                                        { id: 's127-le', role: 'Particle', subRole: 'aspect marker', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
                                     ]
                                 }
                             ]

@@ -39,7 +39,7 @@ export const basicTopicComment: SentenceData[] = [
                                 {
                                     id: 'n1-p-vp-part',
                                     role: 'Particle',
-                                    subRole: 'aspect',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(completion)' }
                                 },
                                 {
@@ -250,7 +250,7 @@ export const basicTopicComment: SentenceData[] = [
                                 {
                                     id: 'n7-p-vp1-part',
                                     role: 'Particle',
-                                    subRole: 'aspect',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(completion)' }
                                 },
                                 {
@@ -279,7 +279,7 @@ export const basicTopicComment: SentenceData[] = [
                                 {
                                     id: 'n7-p-vp2-part',
                                     role: 'Particle',
-                                    subRole: 'potential negator',
+                                    subRole: 'potential',
                                     text: { hanzi: '不', pinyin: 'bù', translation: 'cannot' }
                                 },
                                 {
@@ -293,7 +293,7 @@ export const basicTopicComment: SentenceData[] = [
                         {
                             id: 'n7-p-vp3',
                             role: 'Verb Phrase',
-                            subRole: 'clause 3',
+                            subRole: 'serial verb 3',
                             children: [
                                 {
                                     id: 'n7-p-vp3-adv1',
@@ -399,7 +399,7 @@ export const basicTopicComment: SentenceData[] = [
                                 {
                                     id: 'n15-vp-le',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' }
                                 }
                             ]
@@ -452,7 +452,7 @@ export const basicTopicComment: SentenceData[] = [
                                         {
                                             id: 'n16-vp-obj-hv',
                                             role: 'Verb Phrase',
-                                            subRole: 'separable verb (离合词): 唱歌',
+                                            subRole: 'separable verb',
                                             children: [
                                                 {
                                                     id: 'n16-vp-obj-hv-vm',
@@ -527,7 +527,7 @@ export const basicTopicComment: SentenceData[] = [
                                 {
                                     id: 'n19-vp2-asp',
                                     role: 'Particle',
-                                    subRole: 'aspect',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(marks duration)' }
                                 },
                                 {
@@ -616,7 +616,7 @@ export const basicTopicComment: SentenceData[] = [
         explanation: 'A modern take on 知人者智，自知者明 (from the Dao De Jing: "Those who know others are wise; those who know themselves are enlightened"). The classical 者 ("the one who") becomes **的人** in modern Mandarin. The tree shows two parallel clauses with matching structure: each Topic is a noun phrase built with 的 (**了解别人的人**, "people who understand others"), and each Comment uses **算** ("counts as") to assign a quality. The second clause adds **才** ("only then") for emphasis, drawing a distinction between cleverness and true wisdom.',
         tree: {
             id: 's86-root', role: 'Sentence', children: [
-                { id: 's86-c1', role: 'Topic', subRole: 'first clause', children: [
+                { id: 's86-c1', role: 'Topic', subRole: 'serial verb 1', children: [
                     { id: 's86-s1', role: 'Subject', children: [
                         { id: 's86-a1', role: 'Attributive', text: { hanzi: '了解别人的', pinyin: 'liǎo jiě bié rén de', translation: 'who understand others' } },
                         { id: 's86-r1', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
@@ -624,7 +624,7 @@ export const basicTopicComment: SentenceData[] = [
                     { id: 's86-suan1', role: 'Head Verb', text: { hanzi: '算', pinyin: 'suàn', translation: 'count as' } },
                     { id: 's86-cm', role: 'Complement', text: { hanzi: '聪明', pinyin: 'cōng míng', translation: 'clever' } },
                 ]},
-                { id: 's86-c2', role: 'Comment', subRole: 'second clause', children: [
+                { id: 's86-c2', role: 'Comment', subRole: 'serial verb 2', children: [
                     { id: 's86-s2', role: 'Subject', children: [
                         { id: 's86-a2', role: 'Attributive', text: { hanzi: '了解自己的', pinyin: 'liǎo jiě zì jǐ de', translation: 'who understand themselves' } },
                         { id: 's86-r2', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
@@ -645,7 +645,7 @@ export const basicTopicComment: SentenceData[] = [
         explanation: 'A modern take on 得道者多助，失道者寡助 (from Mencius: "The just gain much support; the unjust find little"). The classical 者 becomes **的人**, and the compact classical predicates expand into full modern clauses. The tree shows two parallel Topic-Comment pairs. Each Topic is a noun phrase built with 的: **做事正义的人** ("people who act justly"). Each Comment nests another 的 phrase: **帮助他的人** ("people who help them"), followed by **就** and a quality (**多** "many" or **少** "few"). Notice how 的 phrases stack inside each other to build complex meanings.',
         tree: {
             id: 's90-root', role: 'Sentence', children: [
-                { id: 's90-c1', role: 'Topic', subRole: 'first clause', children: [
+                { id: 's90-c1', role: 'Topic', subRole: 'serial verb 1', children: [
                     { id: 's90-t1', role: 'Subject', children: [
                         { id: 's90-a1', role: 'Attributive', text: { hanzi: '做事正义的', pinyin: 'zuò shì zhèng yì de', translation: 'who act justly' } },
                         { id: 's90-r1', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
@@ -657,7 +657,7 @@ export const basicTopicComment: SentenceData[] = [
                     { id: 's90-jiu1', role: 'Adjunct', text: { hanzi: '就', pinyin: 'jiù', translation: 'then' } },
                     { id: 's90-duo', role: 'Head Verb', text: { hanzi: '多', pinyin: 'duō', translation: 'many' } },
                 ]},
-                { id: 's90-c2', role: 'Comment', subRole: 'second clause', children: [
+                { id: 's90-c2', role: 'Comment', subRole: 'serial verb 2', children: [
                     { id: 's90-t2', role: 'Subject', children: [
                         { id: 's90-a2', role: 'Attributive', text: { hanzi: '做事不正义的', pinyin: 'zuò shì bú zhèng yì de', translation: 'who act unjustly' } },
                         { id: 's90-r3', role: 'Head Noun', text: { hanzi: '人', pinyin: 'rén', translation: 'people' } },
@@ -794,7 +794,7 @@ export const basicTopicComment: SentenceData[] = [
                 {
                     id: 'n57-c',
                     role: 'Comment',
-                    subRole: 'double-negation necessity (非…不可)',
+                    subRole: 'negation',
                     children: [
                         {
                             id: 'n57-fei',
@@ -810,7 +810,7 @@ export const basicTopicComment: SentenceData[] = [
                         {
                             id: 'n57-buke',
                             role: 'Complement',
-                            subRole: 'double-negation closure (不可)',
+                            subRole: 'negation',
                             text: { hanzi: '不可', pinyin: 'bù kě', translation: 'not acceptable (closing negation)' },
                         },
                     ],
@@ -832,7 +832,7 @@ export const basicTopicComment: SentenceData[] = [
                 {
                     id: 's124-t',
                     role: 'Topic',
-                    subRole: 'Patient-Topic',
+                    subRole: 'inner topic',
                     text: { hanzi: '苹果', pinyin: 'píng guǒ', translation: 'apple' }
                 },
                 {
@@ -857,7 +857,7 @@ export const basicTopicComment: SentenceData[] = [
                         {
                             id: 's124-c-le',
                             role: 'Particle',
-                            subRole: 'completion',
+                            subRole: 'aspect marker',
                             text: { hanzi: '了', pinyin: 'le', translation: '(done)' }
                         }
                     ]

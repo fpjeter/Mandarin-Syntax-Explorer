@@ -20,23 +20,23 @@ export const separableVerbs: SentenceData[] = [
                 {
                     id: 'n12-c',
                     role: 'Comment',
-                    subRole: 'separable verb construction (离合词)',
+                    subRole: 'separable verb',
                     children: [
                         {
                             id: 'n12-p-verb-root',
                             role: 'Verb Phrase',
-                            subRole: 'split separable verb (见…面)',
+                            subRole: 'separable verb',
                             children: [
                                 {
                                     id: 'n12-p-verb-v',
                                     role: 'Verb Morpheme',
-                                    subRole: 'separable verb (离合词): verb morpheme of 见面',
+                                    subRole: 'separable verb',
                                     text: { hanzi: '见', pinyin: 'jiàn', translation: 'see / meet' },
                                 },
                                 {
                                     id: 'n12-p-verb-asp',
                                     role: 'Particle',
-                                    subRole: 'experiential aspect (inserted into split verb)',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '过', pinyin: 'guò', translation: '(has-done / experiential)' }
                                 },
                                 {
@@ -105,18 +105,18 @@ export const separableVerbs: SentenceData[] = [
                         {
                             id: 'n24-vp',
                             role: 'Verb Phrase',
-                            subRole: 'split separable verb (散…步)',
+                            subRole: 'separable verb',
                             children: [
                                 {
                                     id: 'n24-vp-v',
                                     role: 'Verb Morpheme',
-                                    subRole: 'separable verb (离合词): verb morpheme of 散步',
+                                    subRole: 'separable verb',
                                     text: { hanzi: '散', pinyin: 'sàn', translation: 'stroll / disperse' },
                                 },
                                 {
                                     id: 'n24-vp-le',
                                     role: 'Particle',
-                                    subRole: 'completion aspect (inserted into split verb)',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(completion)' }
                                 },
                                 {
@@ -183,7 +183,7 @@ export const separableVerbs: SentenceData[] = [
                         {
                             id: 'n54-vp',
                             role: 'Verb Phrase',
-                            subRole: 'separable verb: split by 了',
+                            subRole: 'separable verb',
                             children: [
                                 {
                                     id: 'n54-vm',
@@ -193,7 +193,7 @@ export const separableVerbs: SentenceData[] = [
                                 {
                                     id: 'n54-le',
                                     role: 'Particle',
-                                    subRole: 'completion (inserted)',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
                                 },
                                 {
@@ -232,7 +232,7 @@ export const separableVerbs: SentenceData[] = [
                         {
                             id: 'n55-cl1',
                             role: 'Verb Phrase',
-                            subRole: 'clause 1: separable verb split',
+                            subRole: 'clause 1',
                             children: [
                                 {
                                     id: 'n55-vm',
@@ -242,7 +242,7 @@ export const separableVerbs: SentenceData[] = [
                                 {
                                     id: 'n55-le1',
                                     role: 'Particle',
-                                    subRole: 'completion (inserted)',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
                                 },
                                 {
@@ -255,7 +255,7 @@ export const separableVerbs: SentenceData[] = [
                         {
                             id: 'n55-cl2',
                             role: 'Verb Phrase',
-                            subRole: 'clause 2: sequential result',
+                            subRole: 'clause 2',
                             children: [
                                 {
                                     id: 'n55-adv',
@@ -270,7 +270,7 @@ export const separableVerbs: SentenceData[] = [
                                 {
                                     id: 'n55-le2',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
                                 },
                             ],
@@ -296,7 +296,7 @@ export const separableVerbs: SentenceData[] = [
                     id: 's116-c',
                     role: 'Comment',
                     children: [
-                        { id: 's116-hv', role: 'Verb Morpheme', subRole: 'separable verb half', text: { hanzi: '生', pinyin: 'shēng', translation: 'produce' } },
+                        { id: 's116-hv', role: 'Verb Morpheme', subRole: 'separable verb', text: { hanzi: '生', pinyin: 'shēng', translation: 'produce' } },
                         { id: 's116-q', role: 'Attributive', subRole: 'interrogative', text: { hanzi: '什么', pinyin: 'shén me', translation: 'what' } },
                         { id: 's116-obj', role: 'Object Morpheme', subRole: 'separable noun half', text: { hanzi: '气', pinyin: 'qì', translation: 'anger/air' } }
                     ]

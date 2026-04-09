@@ -33,7 +33,7 @@ export const aspectMarkers: SentenceData[] = [
                                 {
                                     id: 'n62-zhe',
                                     role: 'Particle',
-                                    subRole: 'durative aspect: resulting state (着)',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '着', pinyin: 'zhe', translation: '(ongoing state)' },
                                 },
                                 {
@@ -81,7 +81,7 @@ export const aspectMarkers: SentenceData[] = [
                                 {
                                     id: 'n63-guo',
                                     role: 'Particle',
-                                    subRole: 'experiential aspect (过)',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '过', pinyin: 'guo', translation: '(have ever)' },
                                 },
                                 {
@@ -92,7 +92,7 @@ export const aspectMarkers: SentenceData[] = [
                                 {
                                     id: 'n63-ma',
                                     role: 'Particle',
-                                    subRole: 'question marker',
+                                    subRole: 'question particle',
                                     text: { hanzi: '吗', pinyin: 'ma', translation: '(question)' },
                                 },
                             ],
@@ -135,7 +135,7 @@ export const aspectMarkers: SentenceData[] = [
                 { id: 's81-c', role: 'Comment', children: [
                     { id: 's81-adv', role: 'Adjunct', subRole: 'time', text: { hanzi: '从来', pinyin: 'cóng lái', translation: 'ever/never' } },
                     { id: 's81-neg', role: 'Adjunct', subRole: 'negation', text: { hanzi: '没有', pinyin: 'méi yǒu', translation: 'have not' } },
-                    { id: 's81-guo', role: 'Particle', subRole: 'experiential aspect', text: { hanzi: '过', pinyin: 'guò', translation: '(past experience)' } },
+                    { id: 's81-guo', role: 'Particle', subRole: 'aspect marker', text: { hanzi: '过', pinyin: 'guò', translation: '(past experience)' } },
                     { id: 's81-obj', role: 'Object', children: [
                         { id: 's81-attr', role: 'Attributive', text: { hanzi: '这样的', pinyin: 'zhè yàng de', translation: 'this kind of' } },
                         { id: 's81-shi', role: 'Head Noun', text: { hanzi: '事', pinyin: 'shì', translation: 'thing/matter' } },

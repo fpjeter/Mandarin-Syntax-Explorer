@@ -24,12 +24,12 @@ export const pivotalConstructions: SentenceData[] = [
                         {
                             id: 'n32-vp',
                             role: 'Verb Phrase',
-                            subRole: 'pivotal construction (兼语句)',
+                            subRole: 'pivot',
                             children: [
                                 {
                                     id: 'n32-hv',
                                     role: 'Head Verb',
-                                    subRole: 'causative verb (lets/has)',
+                                    subRole: 'causative',
                                     text: { hanzi: '让', pinyin: 'ràng', translation: 'let / have' },
                                 },
                                 {
@@ -45,7 +45,7 @@ export const pivotalConstructions: SentenceData[] = [
                                         {
                                             id: 'n32-embedded',
                                             role: 'Verb Phrase',
-                                            subRole: 'embedded predicate of pivot',
+                                            subRole: 'embedded predicate',
                                             children: [
                                                 {
                                                     id: 'n32-embedded-hv',
@@ -91,12 +91,12 @@ export const pivotalConstructions: SentenceData[] = [
                         {
                             id: 'n33-vp',
                             role: 'Verb Phrase',
-                            subRole: 'pivotal construction (兼语句)',
+                            subRole: 'pivot',
                             children: [
                                 {
                                     id: 'n33-hv',
                                     role: 'Head Verb',
-                                    subRole: 'causative verb (tells)',
+                                    subRole: 'causative',
                                     text: { hanzi: '叫', pinyin: 'jiào', translation: 'call / tell' },
                                 },
                                 {
@@ -172,12 +172,12 @@ export const pivotalConstructions: SentenceData[] = [
                         {
                             id: 'n52-vp',
                             role: 'Verb Phrase',
-                            subRole: 'pivotal construction (兼语句)',
+                            subRole: 'pivot',
                             children: [
                                 {
                                     id: 'n52-hv',
                                     role: 'Head Verb',
-                                    subRole: 'causative verb (dispatches)',
+                                    subRole: 'causative',
                                     text: { hanzi: '派', pinyin: 'pài', translation: 'send / dispatch' },
                                 },
                                 {
@@ -242,7 +242,7 @@ export const pivotalConstructions: SentenceData[] = [
                         {
                             id: 'n53-vp',
                             role: 'Verb Phrase',
-                            subRole: 'pivotal construction (兼语句)',
+                            subRole: 'pivot',
                             children: [
                                 {
                                     id: 'n53-hv',
@@ -264,7 +264,7 @@ export const pivotalConstructions: SentenceData[] = [
                                         {
                                             id: 'n53-embedded',
                                             role: 'Verb Phrase',
-                                            subRole: 'embedded predicate of pivot',
+                                            subRole: 'embedded predicate',
                                             children: [
                                                 {
                                                     id: 'n53-embedded-hv',
@@ -297,7 +297,7 @@ export const pivotalConstructions: SentenceData[] = [
         tree: {
             id: 's89-root', role: 'Sentence', children: [
                 { id: 's89-parallel', role: 'Parallel Sentence', children: [
-                    { id: 's89-c1', role: 'Embedded Clause', subRole: 'first pivotal', children: [
+                    { id: 's89-c1', role: 'Embedded Clause', subRole: 'pivot', children: [
                         { id: 's89-kn', role: 'Subject', text: { hanzi: '困难', pinyin: 'kùn nan', translation: 'hardship' } },
                         { id: 's89-vp1', role: 'Verb Phrase', children: [
                             { id: 's89-rang1', role: 'Head Verb', subRole: 'causative', text: { hanzi: '让', pinyin: 'ràng', translation: 'makes' } },
@@ -309,7 +309,7 @@ export const pivotalConstructions: SentenceData[] = [
                             ]}
                         ]}
                     ]},
-                    { id: 's89-c2', role: 'Embedded Clause', subRole: 'second pivotal', children: [
+                    { id: 's89-c2', role: 'Embedded Clause', subRole: 'pivot', children: [
                         { id: 's89-ay', role: 'Subject', text: { hanzi: '安逸', pinyin: 'ān yì', translation: 'comfort' } },
                         { id: 's89-vp2', role: 'Verb Phrase', children: [
                             { id: 's89-rang2', role: 'Head Verb', subRole: 'causative', text: { hanzi: '让', pinyin: 'ràng', translation: 'makes' } },
@@ -344,7 +344,7 @@ export const pivotalConstructions: SentenceData[] = [
                         {
                             id: 's118-vp',
                             role: 'Verb Phrase',
-                            subRole: 'pivotal chain',
+                            subRole: 'pivot',
                             children: [
                                 { id: 's118-v1', role: 'Head Verb', subRole: 'causative', text: { hanzi: '让', pinyin: 'ràng', translation: 'ask/let' } },
                                 {
@@ -394,7 +394,7 @@ export const pivotalConstructions: SentenceData[] = [
             id: 's119-n',
             role: 'Sentence',
             children: [
-                { id: 's119-ghost', role: 'Topic', subRole: 'Ghost Node', text: { hanzi: '[这里]', pinyin: 'zhè lǐ', translation: '(here context)' } },
+                { id: 's119-ghost', role: 'Topic', subRole: 'implied topic', text: { hanzi: '[这里]', pinyin: 'zhè lǐ', translation: '(here context)' } },
                 {
                     id: 's119-c',
                     role: 'Comment',
@@ -402,7 +402,7 @@ export const pivotalConstructions: SentenceData[] = [
                         {
                             id: 's119-vp',
                             role: 'Verb Phrase',
-                            subRole: 'existential pivot',
+                            subRole: 'pivot',
                             children: [
                                 { id: 's119-hv', role: 'Head Verb', subRole: 'existential trigger', text: { hanzi: '有', pinyin: 'yǒu', translation: 'there is' } },
                                 {

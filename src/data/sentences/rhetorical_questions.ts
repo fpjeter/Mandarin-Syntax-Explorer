@@ -47,7 +47,7 @@ export const rhetoricalQuestions: SentenceData[] = [
                                 {
                                     id: 'n56-ma',
                                     role: 'Particle',
-                                    subRole: 'question marker',
+                                    subRole: 'question particle',
                                     text: { hanzi: '吗', pinyin: 'ma', translation: '(question)' },
                                 },
                             ],
@@ -68,11 +68,11 @@ export const rhetoricalQuestions: SentenceData[] = [
         tree: {
             id: 's76-root', role: 'Sentence', children: [
                 { id: 's76-t', role: 'Topic', text: { hanzi: '王侯将相', pinyin: 'wáng hóu jiàng xiàng', translation: 'kings, lords, generals' } },
-                { id: 's76-c', role: 'Comment', subRole: 'rhetorical question', children: [
+                { id: 's76-c', role: 'Comment', subRole: 'rhetorical', children: [
                     { id: 's76-nd', role: 'Adjunct', subRole: 'rhetorical', text: { hanzi: '难道', pinyin: 'nán dào', translation: 'don\'t tell me' } },
                     { id: 's76-shi', role: 'Copula', text: { hanzi: '是', pinyin: 'shì', translation: 'is' } },
                     { id: 's76-ts', role: 'Complement', text: { hanzi: '天生的', pinyin: 'tiān shēng de', translation: 'innate/born' } },
-                    { id: 's76-ma', role: 'Particle', subRole: 'question marker', text: { hanzi: '吗', pinyin: 'ma', translation: '(?)' } },
+                    { id: 's76-ma', role: 'Particle', subRole: 'question particle', text: { hanzi: '吗', pinyin: 'ma', translation: '(?)' } },
                 ]},
             ]
         }
@@ -100,8 +100,8 @@ export const rhetoricalQuestions: SentenceData[] = [
                     { id: 'n100-dou', role: 'Adjunct', text: { hanzi: '都', pinyin: 'dōu', translation: 'all / even' } },
                     { id: 'n100-vp', role: 'Verb Phrase', children: [
                         { id: 'n100-hv', role: 'Head Verb', text: { hanzi: '忘', pinyin: 'wàng', translation: 'forget' } },
-                        { id: 'n100-le', role: 'Particle', subRole: 'completion aspect', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } },
-                        { id: 'n100-ma', role: 'Particle', subRole: 'question marker', text: { hanzi: '吗', pinyin: 'ma', translation: '(?)' } }
+                        { id: 'n100-le', role: 'Particle', subRole: 'aspect marker', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } },
+                        { id: 'n100-ma', role: 'Particle', subRole: 'question particle', text: { hanzi: '吗', pinyin: 'ma', translation: '(?)' } }
                     ]}
                 ]}
             ]
@@ -122,17 +122,17 @@ export const rhetoricalQuestions: SentenceData[] = [
                         { id: 'n101-vp1', role: 'Verb Phrase', children: [
                             { id: 'n101-dou', role: 'Adjunct', text: { hanzi: '都', pinyin: 'dōu', translation: 'all' } },
                             { id: 'n101-hv1', role: 'Head Verb', text: { hanzi: '同意', pinyin: 'tóng yì', translation: 'agree' } },
-                            { id: 'n101-le', role: 'Particle', subRole: 'completion', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
+                            { id: 'n101-le', role: 'Particle', subRole: 'aspect marker', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
                         ]}
                     ]},
-                    { id: 'n101-cl2', role: 'Embedded Clause', subRole: 'rhetorical question', children: [
+                    { id: 'n101-cl2', role: 'Embedded Clause', subRole: 'rhetorical', children: [
                         { id: 'n101-vp2', role: 'Verb Phrase', children: [
                             { id: 'n101-nd', role: 'Adjunct', subRole: 'rhetorical', text: { hanzi: '难道', pinyin: 'nán dào', translation: 'could it be' } },
                             { id: 'n101-t2', role: 'Subject', text: { hanzi: '我', pinyin: 'wǒ', translation: 'I' } },
                             { id: 'n101-hai', role: 'Adjunct', text: { hanzi: '还', pinyin: 'hái', translation: 'still' } },
                             { id: 'n101-neng', role: 'Adjunct', text: { hanzi: '能', pinyin: 'néng', translation: 'can' } },
                             { id: 'n101-hv2', role: 'Head Verb', text: { hanzi: '反对', pinyin: 'fǎn duì', translation: 'object / oppose' } },
-                            { id: 'n101-ma', role: 'Particle', subRole: 'question marker', text: { hanzi: '吗', pinyin: 'ma', translation: '(?)' } }
+                            { id: 'n101-ma', role: 'Particle', subRole: 'question particle', text: { hanzi: '吗', pinyin: 'ma', translation: '(?)' } }
                         ]}
                     ]}
                 ]}
@@ -155,12 +155,12 @@ export const rhetoricalQuestions: SentenceData[] = [
                     id: 's114-c',
                     role: 'Comment',
                     children: [
-                        { id: 's114-cop', role: 'Copula', subRole: 'rhetorical opener (negated)', text: { hanzi: '不是', pinyin: 'bú shì', translation: 'is it not that' } },
+                        { id: 's114-cop', role: 'Copula', subRole: 'rhetorical', text: { hanzi: '不是', pinyin: 'bú shì', translation: 'is it not that' } },
                         { id: 's114-adv', role: 'Adjunct', text: { hanzi: '已经', pinyin: 'yǐ jīng', translation: 'already' } },
                         { id: 's114-hv', role: 'Head Verb', text: { hanzi: '吃', pinyin: 'chī', translation: 'eat' } },
                         { id: 's114-guo', role: 'Particle', subRole: 'experiential', text: { hanzi: '过', pinyin: 'guò', translation: '(experienced)' } },
-                        { id: 's114-le', role: 'Particle', subRole: 'completion', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } },
-                        { id: 's114-ma', role: 'Particle', subRole: 'question marker', text: { hanzi: '吗', pinyin: 'ma', translation: '?' } }
+                        { id: 's114-le', role: 'Particle', subRole: 'aspect marker', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } },
+                        { id: 's114-ma', role: 'Particle', subRole: 'question particle', text: { hanzi: '吗', pinyin: 'ma', translation: '?' } }
                     ]
                 }
             ]

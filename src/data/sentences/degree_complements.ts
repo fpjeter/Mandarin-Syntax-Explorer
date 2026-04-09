@@ -34,18 +34,18 @@ export const degreeComplements: SentenceData[] = [
                                 {
                                     id: 'n36-dc',
                                     role: 'Complement',
-                                    subRole: 'degree complement',
+                                    subRole: 'degree',
                                     children: [
                                         {
                                             id: 'n36-de',
                                             role: 'Particle',
-                                            subRole: 'degree complement linker',
+                                            subRole: 'degree',
                                             text: { hanzi: '得', pinyin: 'de', translation: '(links to degree/consequence)' },
                                         },
                                         {
                                             id: 'n36-comp',
                                             role: 'Verb Phrase',
-                                            subRole: 'consequence clause',
+                                            subRole: 'consequence',
                                             children: [
                                                 {
                                                     id: 'n36-comp-hv',
@@ -55,7 +55,7 @@ export const degreeComplements: SentenceData[] = [
                                                 {
                                                     id: 'n36-comp-le',
                                                     role: 'Particle',
-                                                    subRole: 'completion',
+                                                    subRole: 'aspect marker',
                                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
                                                 },
                                                 {
@@ -107,18 +107,18 @@ export const degreeComplements: SentenceData[] = [
                                 {
                                     id: 'n37-dc',
                                     role: 'Complement',
-                                    subRole: 'degree complement',
+                                    subRole: 'degree',
                                     children: [
                                         {
                                             id: 'n37-de',
                                             role: 'Particle',
-                                            subRole: 'degree complement linker',
+                                            subRole: 'degree',
                                             text: { hanzi: '得', pinyin: 'de', translation: '(links to degree)' },
                                         },
                                         {
                                             id: 'n37-comp',
                                             role: 'Adjective',
-                                            subRole: 'degree complement (manner)',
+                                            subRole: 'degree',
                                             children: [
                                                 {
                                                     id: 'n37-comp-adv',
@@ -174,18 +174,18 @@ export const degreeComplements: SentenceData[] = [
                                 {
                                     id: 'n46-dc',
                                     role: 'Complement',
-                                    subRole: 'degree complement',
+                                    subRole: 'degree',
                                     children: [
                                         {
                                             id: 'n46-de',
                                             role: 'Particle',
-                                            subRole: 'degree complement linker',
+                                            subRole: 'degree',
                                             text: { hanzi: '得', pinyin: 'de', translation: '(links to consequence)' },
                                         },
                                         {
                                             id: 'n46-comp',
                                             role: 'Verb Phrase',
-                                            subRole: 'degree: consequence (itself a negative potential complement)',
+                                            subRole: 'potential',
                                             children: [
                                                 {
                                                     id: 'n46-comp-hv',
@@ -195,13 +195,13 @@ export const degreeComplements: SentenceData[] = [
                                                 {
                                                     id: 'n46-comp-neg',
                                                     role: 'Particle',
-                                                    subRole: 'potential negator',
+                                                    subRole: 'potential',
                                                     text: { hanzi: '不', pinyin: 'bù', translation: 'cannot (potential)' },
                                                 },
                                                 {
                                                     id: 'n46-comp-out',
                                                     role: 'Complement',
-                                                    subRole: 'direction morpheme (exit/out)',
+                                                    subRole: 'directional',
                                                     text: { hanzi: '出', pinyin: 'chū', translation: 'out / exit' },
                                                 },
                                                 {
@@ -249,7 +249,7 @@ export const degreeComplements: SentenceData[] = [
                         {
                             id: 'n47-ba',
                             role: 'Preposition',
-                            subRole: 'ba-construction',
+                            subRole: 'disposal marker',
                             children: [
                                 {
                                     id: 'n47-ba-prep',
@@ -275,12 +275,12 @@ export const degreeComplements: SentenceData[] = [
                                 {
                                     id: 'n47-dc',
                                     role: 'Complement',
-                                    subRole: 'degree complement',
+                                    subRole: 'degree',
                                     children: [
                                         {
                                             id: 'n47-de',
                                             role: 'Particle',
-                                            subRole: 'degree complement linker',
+                                            subRole: 'degree',
                                             text: { hanzi: '得', pinyin: 'de', translation: '(links to degree)' },
                                         },
                                         {
@@ -311,8 +311,8 @@ export const degreeComplements: SentenceData[] = [
                 { id: 's77-c', role: 'Comment', children: [
                     { id: 's77-vp', role: 'Verb Phrase', children: [
                         { id: 's77-guo', role: 'Head Verb', text: { hanzi: '过', pinyin: 'guò', translation: 'pass' } },
-                        { id: 's77-dc', role: 'Complement', subRole: 'degree complement', children: [
-                            { id: 's77-de', role: 'Particle', subRole: 'degree complement marker', text: { hanzi: '得', pinyin: 'de', translation: '(how)' } },
+                        { id: 's77-dc', role: 'Complement', subRole: 'degree', children: [
+                            { id: 's77-de', role: 'Particle', subRole: 'degree', text: { hanzi: '得', pinyin: 'de', translation: '(how)' } },
                             { id: 's77-comp', role: 'Adjective', subRole: 'degree (simile)', children: [
                                 { id: 's77-jx', role: 'Adjunct', text: { hanzi: '就像流水一样', pinyin: 'jiù xiàng liú shuǐ yí yàng', translation: 'just like flowing water' } },
                                 { id: 's77-kuai', role: 'Adjective', text: { hanzi: '快', pinyin: 'kuài', translation: 'fast' } },

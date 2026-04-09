@@ -33,12 +33,12 @@ export const directionalComplements: SentenceData[] = [
                                 {
                                     id: 'n38-comp',
                                     role: 'Complement',
-                                    subRole: 'directional compound (V + dir + 来)',
+                                    subRole: 'directional',
                                     children: [
                                         {
                                             id: 'n38-comp-dir',
                                             role: 'Complement',
-                                            subRole: 'direction morpheme (enter)',
+                                            subRole: 'directional',
                                             text: { hanzi: '进', pinyin: 'jìn', translation: 'enter / in' },
                                         },
                                         {
@@ -52,7 +52,7 @@ export const directionalComplements: SentenceData[] = [
                                 {
                                     id: 'n38-le',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
                                 },
                             ],
@@ -85,7 +85,7 @@ export const directionalComplements: SentenceData[] = [
                         {
                             id: 'n39-ba',
                             role: 'Preposition',
-                            subRole: 'ba-construction',
+                            subRole: 'disposal marker',
                             children: [
                                 {
                                     id: 'n39-ba-prep',
@@ -111,12 +111,12 @@ export const directionalComplements: SentenceData[] = [
                                 {
                                     id: 'n39-comp',
                                     role: 'Complement',
-                                    subRole: 'directional compound (V + dir + 去)',
+                                    subRole: 'directional',
                                     children: [
                                         {
                                             id: 'n39-comp-dir',
                                             role: 'Complement',
-                                            subRole: 'direction morpheme (exit)',
+                                            subRole: 'directional',
                                             text: { hanzi: '出', pinyin: 'chū', translation: 'exit / out' },
                                         },
                                         {
@@ -130,7 +130,7 @@ export const directionalComplements: SentenceData[] = [
                                 {
                                     id: 'n39-le',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
                                 },
                             ],
@@ -172,12 +172,12 @@ export const directionalComplements: SentenceData[] = [
                                 {
                                     id: 'n42-comp',
                                     role: 'Complement',
-                                    subRole: 'split directional',
+                                    subRole: 'directional',
                                     children: [
                                         {
                                             id: 'n42-comp-dir',
                                             role: 'Complement',
-                                            subRole: 'direction morpheme (upward)',
+                                            subRole: 'directional',
                                             text: { hanzi: '上', pinyin: 'shàng', translation: 'up' },
                                         },
                                         {
@@ -197,7 +197,7 @@ export const directionalComplements: SentenceData[] = [
                                 {
                                     id: 'n42-le',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
                                 },
                             ],
@@ -262,12 +262,12 @@ export const directionalComplements: SentenceData[] = [
                                 {
                                     id: 'n43-comp',
                                     role: 'Complement',
-                                    subRole: 'directional compound (downward, toward speaker)',
+                                    subRole: 'directional',
                                     children: [
                                         {
                                             id: 'n43-comp-dir',
                                             role: 'Complement',
-                                            subRole: 'direction morpheme (downward)',
+                                            subRole: 'directional',
                                             text: { hanzi: '下', pinyin: 'xià', translation: 'down' },
                                         },
                                         {
@@ -323,13 +323,13 @@ export const directionalComplements: SentenceData[] = [
                         {
                             id: 's106-comp',
                             role: 'Complement',
-                            subRole: 'figurative directional',
+                            subRole: 'directional',
                             children: [
                                 { id: 's106-comp-dir', role: 'Particle', subRole: 'direction', text: { hanzi: '起', pinyin: 'qǐ', translation: 'rise' } },
                                 { id: 's106-comp-pers', role: 'Particle', subRole: 'perspective', text: { hanzi: '来', pinyin: 'lái', translation: 'come' } }
                             ]
                         },
-                        { id: 's106-le', role: 'Particle', subRole: 'completion', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
+                        { id: 's106-le', role: 'Particle', subRole: 'aspect marker', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
                     ]
                 }
             ]
@@ -356,7 +356,7 @@ export const directionalComplements: SentenceData[] = [
                         {
                             id: 's107-comp',
                             role: 'Complement',
-                            subRole: 'figurative directional (continuation)',
+                            subRole: 'directional',
                             children: [
                                 { id: 's107-comp-dir', role: 'Particle', subRole: 'direction', text: { hanzi: '下', pinyin: 'xià', translation: 'down' } },
                                 { id: 's107-comp-pers', role: 'Particle', subRole: 'perspective', text: { hanzi: '去', pinyin: 'qù', translation: 'go' } }

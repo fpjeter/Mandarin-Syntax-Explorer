@@ -164,7 +164,7 @@ export const discourseContext: SentenceData[] = [
                     { id: 'n94-vp', role: 'Verb Phrase', children: [
                         { id: 'n94-hv', role: 'Head Verb', text: { hanzi: '吃', pinyin: 'chī', translation: 'eat' } },
                         { id: 'n94-guo', role: 'Particle', subRole: 'experiential', text: { hanzi: '过', pinyin: 'guò', translation: '(experienced)' } },
-                        { id: 'n94-le', role: 'Particle', subRole: 'completion', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
+                        { id: 'n94-le', role: 'Particle', subRole: 'aspect marker', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
                     ]}
                 ]}
             ]
@@ -214,7 +214,7 @@ export const discourseContext: SentenceData[] = [
                     { id: 'n96-adv', role: 'Adjunct', text: { hanzi: '早就', pinyin: 'zǎo jiù', translation: 'long ago' } },
                     { id: 'n96-vp', role: 'Verb Phrase', children: [
                         { id: 'n96-hv', role: 'Head Verb', text: { hanzi: '回家', pinyin: 'huí jiā', translation: 'return home' } },
-                        { id: 'n96-le', role: 'Particle', subRole: 'completion', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
+                        { id: 'n96-le', role: 'Particle', subRole: 'aspect marker', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
                     ]}
                 ]}
             ]

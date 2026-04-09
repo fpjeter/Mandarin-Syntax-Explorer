@@ -37,7 +37,7 @@ export const potentialComplements: SentenceData[] = [
                         {
                             id: 'n34-cl1',
                             role: 'Verb Phrase',
-                            subRole: 'clause 1: adjectival predicate',
+                            subRole: 'clause 1',
                             children: [
                                 {
                                     id: 'n34-cl1-adv',
@@ -54,7 +54,7 @@ export const potentialComplements: SentenceData[] = [
                         {
                             id: 'n34-cl2',
                             role: 'Verb Phrase',
-                            subRole: 'clause 2: potential complement (negative)',
+                            subRole: 'potential',
                             children: [
                                 {
                                     id: 'n34-cl2-t',
@@ -73,13 +73,13 @@ export const potentialComplements: SentenceData[] = [
                                         {
                                             id: 'n34-cl2-neg',
                                             role: 'Particle',
-                                            subRole: 'potential negator (V + 不 + result)',
+                                            subRole: 'potential',
                                             text: { hanzi: '不', pinyin: 'bù', translation: 'cannot (potential)' },
                                         },
                                         {
                                             id: 'n34-cl2-comp',
                                             role: 'Complement',
-                                            subRole: 'directional (potential)',
+                                            subRole: 'directional',
                                             text: { hanzi: '出来', pinyin: 'chū lái', translation: 'come out / work out' },
                                         },
                                     ],
@@ -116,7 +116,7 @@ export const potentialComplements: SentenceData[] = [
                         {
                             id: 'n35-cl1',
                             role: 'Verb Phrase',
-                            subRole: 'clause 1: fixed expression',
+                            subRole: 'clause 1',
                             children: [
                                 {
                                     id: 'n35-cl1-hv',
@@ -128,7 +128,7 @@ export const potentialComplements: SentenceData[] = [
                         {
                             id: 'n35-cl2',
                             role: 'Verb Phrase',
-                            subRole: 'clause 2: potential complement (affirmative)',
+                            subRole: 'potential',
                             children: [
                                 {
                                     id: 'n35-cl2-tp',
@@ -153,13 +153,13 @@ export const potentialComplements: SentenceData[] = [
                                         {
                                             id: 'n35-cl2-de',
                                             role: 'Particle',
-                                            subRole: 'potential affirmative marker (V + 得 + result)',
+                                            subRole: 'potential',
                                             text: { hanzi: '得', pinyin: 'de', translation: 'can (potential)' },
                                         },
                                         {
                                             id: 'n35-cl2-comp',
                                             role: 'Complement',
-                                            subRole: 'resultative (potential)',
+                                            subRole: 'resultative',
                                             text: { hanzi: '完', pinyin: 'wán', translation: 'finish / complete' },
                                         },
                                     ],
@@ -185,7 +185,7 @@ export const potentialComplements: SentenceData[] = [
                 {
                     id: 'n44-outer-t',
                     role: 'Topic',
-                    subRole: 'outer topic (frame)',
+                    subRole: 'outer topic',
                     children: [
                         {
                             id: 'n44-outer-t-attr',
@@ -206,7 +206,7 @@ export const potentialComplements: SentenceData[] = [
                         {
                             id: 'n44-inner-t',
                             role: 'Topic',
-                            subRole: 'inner topic (subject)',
+                            subRole: 'inner topic',
                             text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' },
                         },
                         {
@@ -221,19 +221,19 @@ export const potentialComplements: SentenceData[] = [
                                 {
                                     id: 'n44-de',
                                     role: 'Particle',
-                                    subRole: 'potential affirmative marker',
+                                    subRole: 'potential',
                                     text: { hanzi: '得', pinyin: 'de', translation: 'can (potential)' },
                                 },
                                 {
                                     id: 'n44-comp',
                                     role: 'Complement',
-                                    subRole: 'resultative (potential)',
+                                    subRole: 'resultative',
                                     text: { hanzi: '懂', pinyin: 'dǒng', translation: 'understand / grasp' },
                                 },
                                 {
                                     id: 'n44-ma',
                                     role: 'Particle',
-                                    subRole: 'question marker',
+                                    subRole: 'question particle',
                                     text: { hanzi: '吗', pinyin: 'ma', translation: '(question)' },
                                 },
                             ],
@@ -272,7 +272,7 @@ export const potentialComplements: SentenceData[] = [
                         {
                             id: 'n45-cl1',
                             role: 'Verb Phrase',
-                            subRole: 'clause 1: potential complement (negative)',
+                            subRole: 'potential',
                             children: [
                                 {
                                     id: 'n45-hv',
@@ -282,13 +282,13 @@ export const potentialComplements: SentenceData[] = [
                                 {
                                     id: 'n45-neg',
                                     role: 'Particle',
-                                    subRole: 'potential negator',
+                                    subRole: 'potential',
                                     text: { hanzi: '不', pinyin: 'bù', translation: 'cannot (potential)' },
                                 },
                                 {
                                     id: 'n45-comp',
                                     role: 'Complement',
-                                    subRole: 'resultative · potential (catch/settle into state)',
+                                    subRole: 'resultative',
                                     text: { hanzi: '着', pinyin: 'zháo', translation: 'catch / latch onto (state of sleep)' },
                                 },
                             ],
@@ -296,7 +296,7 @@ export const potentialComplements: SentenceData[] = [
                         {
                             id: 'n45-cl2',
                             role: 'Verb Phrase',
-                            subRole: 'clause 2: extent',
+                            subRole: 'clause 2',
                             children: [
                                 {
                                     id: 'n45-adv',
@@ -340,10 +340,10 @@ export const potentialComplements: SentenceData[] = [
                         {
                             id: 's120-pot',
                             role: 'Complement',
-                            subRole: 'lexicalized potential phrase',
+                            subRole: 'potential',
                             children: [
                                 { id: 's120-pot-hv', role: 'Head Verb', text: { hanzi: '受', pinyin: 'shòu', translation: 'endure' } },
-                                { id: 's120-pot-bu', role: 'Particle', subRole: 'potential negation', text: { hanzi: '不', pinyin: 'bù', translation: 'cannot' } },
+                                { id: 's120-pot-bu', role: 'Particle', subRole: 'potential', text: { hanzi: '不', pinyin: 'bù', translation: 'cannot' } },
                                 { id: 's120-pot-liao', role: 'Particle', subRole: 'result', text: { hanzi: '了', pinyin: 'liǎo', translation: 'finish/bare' } }
                             ]
                         },

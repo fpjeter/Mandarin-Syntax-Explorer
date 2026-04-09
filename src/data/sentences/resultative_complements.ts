@@ -42,7 +42,7 @@ export const resultativeComplements: SentenceData[] = [
                                 {
                                     id: 'n13-vp1-le',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' }
                                 }
                             ]
@@ -64,7 +64,7 @@ export const resultativeComplements: SentenceData[] = [
                                         {
                                             id: 'n13-vp2-obj-hv',
                                             role: 'Verb Phrase',
-                                            subRole: 'separable verb (离合词): 睡觉',
+                                            subRole: 'separable verb',
                                             children: [
                                                 {
                                                     id: 'n13-vp2-obj-hv-vm',
@@ -125,7 +125,7 @@ export const resultativeComplements: SentenceData[] = [
                                 {
                                     id: 'n30-le',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
                                 },
                                 {
@@ -192,7 +192,7 @@ export const resultativeComplements: SentenceData[] = [
                         {
                             id: 'n31-vp',
                             role: 'Verb Phrase',
-                            subRole: 'causative resultative',
+                            subRole: 'resultative',
                             children: [
                                 {
                                     id: 'n31-hv',
@@ -202,13 +202,13 @@ export const resultativeComplements: SentenceData[] = [
                                 {
                                     id: 'n31-comp',
                                     role: 'Complement',
-                                    subRole: 'resultative (state change)',
+                                    subRole: 'resultative',
                                     text: { hanzi: '红', pinyin: 'hóng', translation: 'red (result state)' },
                                 },
                                 {
                                     id: 'n31-le',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
                                 },
                                 {
@@ -256,7 +256,7 @@ export const resultativeComplements: SentenceData[] = [
                                 {
                                     id: 'n40-comp',
                                     role: 'Complement',
-                                    subRole: 'resultative (reach target)',
+                                    subRole: 'resultative',
                                     text: { hanzi: '到', pinyin: 'dào', translation: 'arrive at / reach' },
                                 },
                                 {
@@ -267,7 +267,7 @@ export const resultativeComplements: SentenceData[] = [
                                 {
                                     id: 'n40-le',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
                                 },
                             ],
@@ -309,7 +309,7 @@ export const resultativeComplements: SentenceData[] = [
                                 {
                                     id: 'n41-comp',
                                     role: 'Complement',
-                                    subRole: 'resultative (error)',
+                                    subRole: 'resultative',
                                     text: { hanzi: '错', pinyin: 'cuò', translation: 'wrong / mistaken' },
                                 },
                                 {
@@ -320,7 +320,7 @@ export const resultativeComplements: SentenceData[] = [
                                 {
                                     id: 'n41-le',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
                                 },
                             ],

@@ -37,7 +37,7 @@ export const serialVerbConstructions: SentenceData[] = [
                                 {
                                     id: 'n14-vp1-le',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' }
                                 }
                             ]
@@ -61,7 +61,7 @@ export const serialVerbConstructions: SentenceData[] = [
                                 {
                                     id: 'n14-vp2-le',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' }
                                 }
                             ]
@@ -69,7 +69,7 @@ export const serialVerbConstructions: SentenceData[] = [
                         {
                             id: 'n14-vp3',
                             role: 'Verb Phrase',
-                            subRole: 'clause 3',
+                            subRole: 'serial verb 3',
                             children: [
                                 {
                                     id: 'n14-vp3-adv',
@@ -118,7 +118,7 @@ export const serialVerbConstructions: SentenceData[] = [
                         {
                             id: 'n58-vp1',
                             role: 'Verb Phrase',
-                            subRole: 'VP1: manner/means',
+                            subRole: 'serial verb 1',
                             children: [
                                 {
                                     id: 'n58-hv1',
@@ -135,13 +135,13 @@ export const serialVerbConstructions: SentenceData[] = [
                         {
                             id: 'n58-vp2',
                             role: 'Verb Phrase',
-                            subRole: 'VP2: motion',
+                            subRole: 'serial verb 2',
                             text: { hanzi: '去', pinyin: 'qù', translation: 'go' },
                         },
                         {
                             id: 'n58-vp3',
                             role: 'Verb Phrase',
-                            subRole: 'VP3: purpose',
+                            subRole: 'serial verb 3',
                             text: { hanzi: '上班', pinyin: 'shàng bān', translation: 'go to work' },
                         },
                     ],
@@ -173,7 +173,7 @@ export const serialVerbConstructions: SentenceData[] = [
                         {
                             id: 'n59-vp1',
                             role: 'Verb Phrase',
-                            subRole: 'VP1: concurrent background action',
+                            subRole: 'serial verb 1',
                             children: [
                                 {
                                     id: 'n59-hv1',
@@ -183,7 +183,7 @@ export const serialVerbConstructions: SentenceData[] = [
                                 {
                                     id: 'n59-zhe',
                                     role: 'Particle',
-                                    subRole: 'durative aspect (ongoing)',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '着', pinyin: 'zhe', translation: '(ongoing)' },
                                 },
                                 {
@@ -196,7 +196,7 @@ export const serialVerbConstructions: SentenceData[] = [
                         {
                             id: 'n59-vp2',
                             role: 'Verb Phrase',
-                            subRole: 'VP2: main action',
+                            subRole: 'serial verb 2',
                             children: [
                                 {
                                     id: 'n59-hv2',
@@ -206,7 +206,7 @@ export const serialVerbConstructions: SentenceData[] = [
                                 {
                                     id: 'n59-le',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
                                 },
                             ],
@@ -228,7 +228,7 @@ export const serialVerbConstructions: SentenceData[] = [
                 { id: 's68-c1', role: 'Topic', subRole: 'clause 1', children: [
                     { id: 's68-v1', role: 'Verb Phrase', children: [
                         { id: 's68-xue', role: 'Head Verb', text: { hanzi: '学', pinyin: 'xué', translation: 'study' } },
-                        { id: 's68-le', role: 'Particle', subRole: 'aspect', text: { hanzi: '了', pinyin: 'le', translation: '(completion)' } },
+                        { id: 's68-le', role: 'Particle', subRole: 'aspect marker', text: { hanzi: '了', pinyin: 'le', translation: '(completion)' } },
                         { id: 's68-yihou', role: 'Adjunct', subRole: 'time', text: { hanzi: '以后', pinyin: 'yǐ hòu', translation: 'after' } },
                     ]},
                     { id: 's68-v2', role: 'Verb Phrase', children: [
