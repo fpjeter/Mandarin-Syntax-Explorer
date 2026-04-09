@@ -40,6 +40,8 @@ export interface GrammarNodeData {
     id: string;
     role: GrammarRole;
     subRole?: string;
+    /** Thematic/semantic role for Semantic Mode display (e.g. Agent, Patient, Experiencer). */
+    semanticRole?: 'Agent' | 'Patient' | 'Experiencer' | 'Instrument' | 'Location' | 'Goal' | 'Source' | 'Causer' | 'Theme' | 'Stimulus';
     isDropped?: boolean;
     impliedText?: string;    // e.g. '我' — the pronoun that was omitted
     refersToId?: string;     // id of the node this dropped pronoun co-refers with (for hover glow)

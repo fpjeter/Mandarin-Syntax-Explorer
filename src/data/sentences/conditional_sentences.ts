@@ -39,7 +39,7 @@ export const conditionalSentences: SentenceData[] = [
                 {
                     id: 'n64-cl2',
                     role: 'Comment',
-                    subRole: 'consequence clause (…就…)',
+                    subRole: 'consequence',
                     children: [
                         {
                             id: 'n64-subj',
@@ -111,7 +111,7 @@ export const conditionalSentences: SentenceData[] = [
                 {
                     id: 'n65-cl2',
                     role: 'Comment',
-                    subRole: 'consequence clause (…就…)',
+                    subRole: 'consequence',
                     children: [
                         {
                             id: 'n65-jiu',
@@ -144,14 +144,14 @@ export const conditionalSentences: SentenceData[] = [
         explanation: 'A complex conditional about the limits of language. **如果一个道理能用语言说清楚** ("if a principle can be explained clearly in language") is the condition, with the potential complement **说清楚** ("speak clearly") showing achievability. The tree nests the potential complement inside the conditional clause, showing how these patterns layer naturally. The **能** ("can") adds the modal dimension: can it be done?',
         tree: {
             id: 's71-root', role: 'Sentence', children: [
-                { id: 's71-cond', role: 'Topic', subRole: 'conditional (如果)', children: [
+                { id: 's71-cond', role: 'Topic', subRole: 'conditional', children: [
                     { id: 's71-rg', role: 'Adjunct', text: { hanzi: '如果', pinyin: 'rú guǒ', translation: 'if' } },
                     { id: 's71-subj', role: 'Subject', text: { hanzi: '一个道理', pinyin: 'yí gè dào lǐ', translation: 'a truth' } },
                     { id: 's71-neng', role: 'Adjunct', text: { hanzi: '能', pinyin: 'néng', translation: 'can' } },
                     { id: 's71-yy', role: 'Adjunct', subRole: 'instrument', text: { hanzi: '用语言', pinyin: 'yòng yǔ yán', translation: 'using language' } },
                     { id: 's71-sqc', role: 'Head Verb', text: { hanzi: '说清楚', pinyin: 'shuō qīng chǔ', translation: 'speak clearly' } },
                 ]},
-                { id: 's71-result', role: 'Comment', subRole: 'consequence (就)', children: [
+                { id: 's71-result', role: 'Comment', subRole: 'consequence', children: [
                     { id: 's71-na', role: 'Adjunct', text: { hanzi: '那', pinyin: 'nà', translation: 'then' } },
                     { id: 's71-ta', role: 'Subject', text: { hanzi: '它', pinyin: 'tā', translation: 'it' } },
                     { id: 's71-jiu', role: 'Adjunct', text: { hanzi: '就', pinyin: 'jiù', translation: '(consequence)' } },
@@ -173,7 +173,7 @@ export const conditionalSentences: SentenceData[] = [
         explanation: 'A modern version of 温故而知新 ("review the old, learn the new"). The conditional frame: **如果你经常复习学过的东西** ("if you often review things you have studied") sets the premise, where **学过的** is a relative clause ("that you have studied," with experiential 过). The consequence follows with the result of this habit. The tree shows the relative clause nested inside the conditional, with the 如果/就 frame organizing the two halves.',
         tree: {
             id: 's73-root', role: 'Sentence', children: [
-                { id: 's73-cond', role: 'Topic', subRole: 'conditional (如果)', children: [
+                { id: 's73-cond', role: 'Topic', subRole: 'conditional', children: [
                     { id: 's73-rg', role: 'Adjunct', text: { hanzi: '如果', pinyin: 'rú guǒ', translation: 'if' } },
                     { id: 's73-ni', role: 'Subject', text: { hanzi: '你', pinyin: 'nǐ', translation: 'you' } },
                     { id: 's73-jc', role: 'Adjunct', text: { hanzi: '经常', pinyin: 'jīng cháng', translation: 'regularly' } },
@@ -183,7 +183,7 @@ export const conditionalSentences: SentenceData[] = [
                         { id: 's73-dx', role: 'Head Noun', text: { hanzi: '东西', pinyin: 'dōng xi', translation: 'things' } },
                     ]},
                 ]},
-                { id: 's73-result', role: 'Comment', subRole: 'consequence (就)', children: [
+                { id: 's73-result', role: 'Comment', subRole: 'consequence', children: [
                     { id: 's73-jn', role: 'Adjunct', text: { hanzi: '就能', pinyin: 'jiù néng', translation: 'then can' } },
                     { id: 's73-faxian', role: 'Head Verb', text: { hanzi: '发现', pinyin: 'fā xiàn', translation: 'discover' } },
                     { id: 's73-obj2', role: 'Object', children: [
@@ -231,7 +231,7 @@ export const conditionalSentences: SentenceData[] = [
         explanation: 'A modern take on 知己知彼百战不殆 ("know yourself, know your enemy, a hundred battles without danger"). The sentence uses parallel verbs: **了解敌人** ("understand the enemy") **又** ("and also") **了解自己** ("understand yourself"). The **又** links two equal verb phrases. The conditional consequence follows: knowing both sides means never losing. The tree shows the two 了解 phrases connected by 又 in a correlative structure.',
         tree: {
             id: 's83-root', role: 'Sentence', children: [
-                { id: 's83-cond', role: 'Topic', subRole: 'conditional premise', children: [
+                { id: 's83-cond', role: 'Topic', subRole: 'conditional', children: [
                     { id: 's83-v1', role: 'Verb Phrase', children: [
                         { id: 's83-lj1', role: 'Head Verb', text: { hanzi: '了解', pinyin: 'liǎo jiě', translation: 'understand' } },
                         { id: 's83-dr', role: 'Object', text: { hanzi: '敌人', pinyin: 'dí rén', translation: 'enemy' } },

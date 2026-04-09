@@ -131,7 +131,7 @@ export const even: SentenceData[] = [
                                 {
                                     id: 'n67-comp',
                                     role: 'Complement',
-                                    subRole: 'resultative (reach target)',
+                                    subRole: 'resultative',
                                     text: { hanzi: '到', pinyin: 'dào', translation: 'reach / accomplish' },
                                 },
                             ],

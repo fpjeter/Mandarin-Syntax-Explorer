@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback, useRef, lazy, Suspense, useEffect } from 'react';
-import { BookA, Info, Network, List, PanelLeftClose, PanelLeftOpen, Scroll, Loader2 } from 'lucide-react';
+import { BookA, Info, Network, List, PanelLeftClose, PanelLeftOpen, Scroll, Loader2, Atom } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 import { SENTENCE_CATEGORIES, CATEGORY_DESCRIPTIONS } from './data/categories';
 import { CLASSICAL_CATEGORIES, CLASSICAL_CATEGORY_DESCRIPTIONS } from './data/classicalCategories';
@@ -32,6 +32,7 @@ function App() {
   const [mobileView, setMobileView] = useState<'list' | 'tree' | 'guide'>('tree');
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [sidebarTab, setSidebarTab] = useState<'sentences' | 'guide'>('sentences');
+  const [isSemanticMode, setIsSemanticMode] = useState(false);
 
   // ── Lazy-loaded sentence datasets ──
   const [modernData, setModernData] = useState<SentenceDataset>(EMPTY_DATASET);
@@ -271,6 +272,20 @@ function App() {
               Topic-Prominent Framework
             </div>
           )}
+          {!isClassical && (
+            <button
+              onClick={() => setIsSemanticMode(s => !s)}
+              className={`hidden sm:flex items-center text-xs font-semibold tracking-wide px-4 py-2 rounded-full border shadow-inner transition-colors cursor-pointer ${
+                isSemanticMode
+                  ? 'text-cyan-200 bg-cyan-900/60 border-cyan-500/60 hover:bg-cyan-800/70 ring-1 ring-cyan-500/30'
+                  : 'text-slate-300 bg-slate-800/80 border-slate-600/50 hover:bg-slate-700/80 hover:border-slate-500/70'
+              }`}
+              title={isSemanticMode ? 'Hide semantic roles' : 'Show semantic roles (Agent, Patient, etc.)'}
+            >
+              <Atom className={`w-4 h-4 mr-2 ${isSemanticMode ? 'text-cyan-400' : 'text-slate-500'}`} />
+              Semantic Roles
+            </button>
+          )}
         </header>
 
         {/* Mobile tab bar — only visible on < lg screens */}
@@ -400,7 +415,7 @@ function App() {
             {/* Canvas */}
             <div className="flex-1 min-h-0 w-full relative z-0">
               {dataLoaded ? (
-                <SyntaxTree tree={selectedSentence?.tree} isVisible={mobileView === 'tree'} onRandom={handleRandom} onPrint={handlePrint} onDownloadPNG={handleDownloadPNG} />
+                <SyntaxTree tree={selectedSentence?.tree} isVisible={mobileView === 'tree'} isSemanticMode={isSemanticMode} onRandom={handleRandom} onPrint={handlePrint} onDownloadPNG={handleDownloadPNG} />
               ) : (
                 <div className="flex items-center justify-center h-full">
                   <Loader2 className={`w-8 h-8 animate-spin ${isClassical ? 'text-amber-400/50' : 'text-purple-400/50'}`} />

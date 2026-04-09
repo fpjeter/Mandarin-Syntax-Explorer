@@ -7,7 +7,7 @@ export const resultativeComplements: SentenceData[] = [
         chinese: '吃饱了，想睡觉。',
         pinyin: 'Chī bǎo le , xiǎng shuì jiào .',
         translation: '(I\'m) full, (I) want to sleep.',
-        explanation: 'The key pattern here is the **resultative complement** **吃饱**: the verb **吃** ("eat") fuses directly with the result **饱** ("full") to mean "eat until full." In Mandarin, the verb and its outcome are welded together as a single compound. There is no word for "until" needed. The **了** after the compound marks completion: the eating happened and the fullness was achieved. The **没有** at the end asks a follow-up question: "or not?" This V-not-V pattern (吃饱了没有) is one of the most common ways to ask about completed results.',
+        explanation: 'The key pattern here is the **resultative complement** **吃饱**: the verb **吃** ("eat") completely seals with the result **饱** ("full") to create a single **Fused Verb Package**. In Mandarin, you don\'t use linking words like "until" or "so that." The action and its outcome are welded together into a single un-splittable package. The **了** after the package seals it, marking completion. The **没有** at the end asks a follow-up question: "or not?" This V-not-V pattern (吃饱了没有) is the standard way to ask about completed results.',
         tree: {
             id: 'n13',
             role: 'Sentence',
@@ -42,7 +42,7 @@ export const resultativeComplements: SentenceData[] = [
                                 {
                                     id: 'n13-vp1-le',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' }
                                 }
                             ]
@@ -64,7 +64,7 @@ export const resultativeComplements: SentenceData[] = [
                                         {
                                             id: 'n13-vp2-obj-hv',
                                             role: 'Verb Phrase',
-                                            subRole: 'separable verb (离合词): 睡觉',
+                                            subRole: 'separable verb',
                                             children: [
                                                 {
                                                     id: 'n13-vp2-obj-hv-vm',
@@ -93,7 +93,7 @@ export const resultativeComplements: SentenceData[] = [
         chinese: '我听懂了他说的话。',
         pinyin: 'Wǒ tīng dǒng le tā shuō de huà.',
         translation: 'I understood what he said.',
-        explanation: 'The Topic is **我** ("I"). The verb **听** ("listen") fuses with the result **懂** ("understand") to form the resultative compound **听懂**: listened and understood. The **了** confirms it happened. After this compound, the object is a relative clause: **他说的话** ("the words he said"), where **的** links the clause **他说** ("he said") to the noun **话** ("words"). The tree shows the verb-result pair 听+懂 fused tightly together, with the complex object branching off to the right.',
+        explanation: 'The Topic is **我** ("I"). The verb **听** ("listen") tightly seals with the result **懂** ("understand") to form the **Fused Verb Package** **听懂**: listened and understood. The **了** confirms it happened. After this package, the object is a relative clause: **他说的话** ("the words he said"), where **的** links the clause **他说** ("he said") to the noun **话** ("words"). The tree shows the package 听+懂 fused tightly together, with the complex object branching off to the right.',
         tree: {
             id: 'n30',
             role: 'Sentence',
@@ -125,7 +125,7 @@ export const resultativeComplements: SentenceData[] = [
                                 {
                                     id: 'n30-le',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
                                 },
                                 {
@@ -175,7 +175,7 @@ export const resultativeComplements: SentenceData[] = [
         chinese: '她哭红了眼睛。',
         pinyin: 'Tā kū hóng le yǎn jing.',
         translation: 'She cried her eyes red.',
-        explanation: 'The Topic is **她** ("she"). The verb **哭** ("cry") fuses with the resultative complement **红** ("red") to form **哭红**: cried until (her eyes turned) red. Then **了** marks completion, and **眼睛** ("eyes") tells you what turned red. Mandarin loves these compact verb-result pairings: cry + red, eat + full, run + tired. Each result describes what *happened* as a consequence of the action. The tree shows 哭 and 红 fused together, with 眼睛 as the affected object.',
+        explanation: 'The Topic is **她** ("she"). The verb **哭** ("cry") bonds with the resultative complement **红** ("red") to form the **Fused Verb Package** **哭红**: cried until (her eyes turned) red. Then **了** seals the package, and **眼睛** ("eyes") acts as the object. Mandarin loves these un-splittable packages: cry+red, eat+full, run+tired. Each result is permanently attached to the action that caused it. The tree shows 哭 and 红 sealed together permanently.',
         tree: {
             id: 'n31',
             role: 'Sentence',
@@ -192,7 +192,7 @@ export const resultativeComplements: SentenceData[] = [
                         {
                             id: 'n31-vp',
                             role: 'Verb Phrase',
-                            subRole: 'causative resultative',
+                            subRole: 'resultative',
                             children: [
                                 {
                                     id: 'n31-hv',
@@ -202,13 +202,13 @@ export const resultativeComplements: SentenceData[] = [
                                 {
                                     id: 'n31-comp',
                                     role: 'Complement',
-                                    subRole: 'resultative (state change)',
+                                    subRole: 'resultative',
                                     text: { hanzi: '红', pinyin: 'hóng', translation: 'red (result state)' },
                                 },
                                 {
                                     id: 'n31-le',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
                                 },
                                 {
@@ -230,7 +230,7 @@ export const resultativeComplements: SentenceData[] = [
         chinese: '我找到钥匙了。',
         pinyin: 'Wǒ zhǎo dào yào shi le.',
         translation: 'I found the key.',
-        explanation: 'The Topic is **我** ("I"). The verb **找** ("search for") fuses with the result **到** ("arrive at, reach") to form **找到**: searched and found. The result 到 tells you the search reached its target. The **了** at the end marks completion: the searching happened and the finding was achieved. Compare with 找不到 ("cannot find") where 不 blocks the result. The tree shows 找 and 到 as a tight verb-result pair, with **钥匙** ("key") as the object.',
+        explanation: 'The Topic is **我** ("I"). The verb **找** ("search for") welds with the result **到** ("arrive at, reach") to form the **Fused Verb Package** **找到**: searched and found. The result 到 tells you the search reached its target. The **了** marks completion: the package is complete. Compare with 找不到 ("cannot find") where 不 toggles the internal switch. The tree shows 找 and 到 sealed inside one package, with **钥匙** ("key") as the object.',
         tree: {
             id: 'n40',
             role: 'Sentence',
@@ -256,7 +256,7 @@ export const resultativeComplements: SentenceData[] = [
                                 {
                                     id: 'n40-comp',
                                     role: 'Complement',
-                                    subRole: 'resultative (reach target)',
+                                    subRole: 'resultative',
                                     text: { hanzi: '到', pinyin: 'dào', translation: 'arrive at / reach' },
                                 },
                                 {
@@ -267,7 +267,7 @@ export const resultativeComplements: SentenceData[] = [
                                 {
                                     id: 'n40-le',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
                                 },
                             ],
@@ -283,7 +283,7 @@ export const resultativeComplements: SentenceData[] = [
         chinese: '他写错字了。',
         pinyin: 'Tā xiě cuò zì le.',
         translation: 'He wrote a character incorrectly.',
-        explanation: 'The Topic is **他** ("he"). The verb **写** ("write") fuses with the resultative complement **错** ("wrong") to form **写错**: wrote incorrectly. The result 错 tells you the outcome of the writing action was an error. The **了** marks completion, and **字** ("character") is the object that was written wrong. This is a classic V+Result compound: the action (writing) produced an unintended outcome (wrongness). Other examples of this pattern: 听错 ("heard wrong"), 看错 ("misread"), 记错 ("misremembered").',
+        explanation: 'The Topic is **他** ("he"). The verb **写** ("write") fuses with the result **错** ("wrong") to form the **Fused Verb Package** **写错**: wrote incorrectly. The result tells you the outcome was an error. The **了** seals the package, and **字** ("character") is the object that was written wrong. This is a classic Fused Package: the action (writing) produced an attached, unintended outcome (wrongness). Other examples: 听错 ("heard wrong"), 看错 ("misread").',
         tree: {
             id: 'n41',
             role: 'Sentence',
@@ -309,7 +309,7 @@ export const resultativeComplements: SentenceData[] = [
                                 {
                                     id: 'n41-comp',
                                     role: 'Complement',
-                                    subRole: 'resultative (error)',
+                                    subRole: 'resultative',
                                     text: { hanzi: '错', pinyin: 'cuò', translation: 'wrong / mistaken' },
                                 },
                                 {
@@ -320,7 +320,7 @@ export const resultativeComplements: SentenceData[] = [
                                 {
                                     id: 'n41-le',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
                                 },
                             ],

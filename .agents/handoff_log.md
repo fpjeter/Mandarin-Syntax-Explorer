@@ -32,40 +32,81 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ---
 
+## Active Assignments
+
+### [2026-04-08] Orchestrator → Data Linguist
+**Status**: ✅ Done
+**Task**: Phase 2 AST SubRole Normalization
+**Branch**: `develop`
+**Context**: Re-align the ~300 chaotic AST `subRole` values to the canonical 5-bucket palette defined in the `implementation_plan.md`.
+**Action Required**: Executed bulk normalization via custom scripts/normalize_subroles.ts script. Collapsed non-adjunct AST tags into their base types while preserving exact visual badge mapping conditions. Passed all Node AST validations cleanly.
+
+### [2026-04-08] Orchestrator → Data Linguist
+**Status**: ✅ Done
+**Task**: Phase 3 Data Epic - Semantic Tagging Base
+**Branch**: `feature/semantic-toggle`
+**Context**: To support the UI's Semantic Mode, we need `semanticRole` metadata injected directly into the AST structure. The User has approved a manual data-tagging approach over programmatic heuristics.
+**Action Required**:
+1. Check out `feature/semantic-toggle`.
+2. Add `semanticRole` to the `GrammarNodeData` interface (types/grammar.ts).
+3. Target `ba_construction.ts` and `bei_passive.ts` and tag the nodes with explicit semantic realities (`Agent`, `Patient`, etc.).
+4. Mark Done so the Frontend Engineer can begin.
+
+### [2026-04-08] Orchestrator → Frontend Engineer
+**Status**: ✅ Done
+**Task**: Phase 3 Frontend Epic - Semantic Toggle UI
+**Branch**: `feature/semantic-toggle`
+**Commit**: `25aeb07` — feat(ui): add Semantic Toggle UI for thematic roles
+**Task**: Phase 3 Frontend Epic - Semantic Toggle UI
+**Branch**: `feature/semantic-toggle`
+**Action Required**: The Data Linguist has completed the data ingestion. You are cleared to proceed with the UI implementation. 
+1. Check out `feature/semantic-toggle`.
+2. Update `App.tsx` global state for `isSemanticMode`.
+3. Create toggle UI in the Header.
+4. Update `GrammarNode.tsx` to conditionally render `semanticRole` overrides.
+5. Create TCFL Sidebar string updates.
+6. Run `npm run qa` and `npm run lint`.
+7. Once finished, mark this ticket as Done.
+
+---
+
 ## Pending Requests
 
-### [DATE] Data Linguist → Orchestrator
-**Status**: ✅ Triaged
-**Blocked Task**: Rewriting Sentence Explanations for FLS Accuracy
-**Dependency**: Educational Publisher approval on the string rewrites.
-**Suggested Fix**: Dispatch the Educational Publisher to review the plain-language translations of the FLS mechanics.
+### [2026-04-08] Orchestrator → Data Linguist
+**Status**: ✅ Done
+**Task**: Rewriting Sentence Explanations for FLS Accuracy
+**Branch**: `develop`
+**Context**: Executed 5 pedagogical metaphors from implementation plan to translate FLS jargon into beginner-friendly UI text across pivotal, BEI, discourse context, serial verbs, and complements. Validation passed.
+
+### [2026-04-08] Linguistics Specialist → Orchestrator
+**Status**: ✅ Done
+**Blocked Task**: Object Placement Audit (out-of-band scan requested by User)
+**Dependency**: Data Linguist must fix a misplaced Object node in `src/data/sentences/sh_de_construction.ts`, sentence s8 (我是昨天晚上在图书馆看到她的。). The Object node `n8-p-vp-obj` (她) currently sits as a sibling of the embedded predicate VP `n8-p-vp-verb`. It must be moved inside that VP as a child, after the Head Verb (看) and Complement (到). This was the only genuine structural bug found across all 123 sentences; s83 and s66 were false positives (correctly modeled fronting/separate governing verbs).
+**Suggested Fix**: Dispatch the Data Linguist to move the Object node inside the VP. Single-line AST edit.
+**Urgency**: LOW
 
 ---
 
 ## Active Assignments
 
-### [2026-04-02] Orchestrator → Educational Publisher
-**Status**: 🔴 Active
-**Task**: Fix ~40 Explanation Accuracy Failures
-**Branch**: `feature/ast-type-fixes`
 
-**Context**: The Linguistics Specialist's `data_quality_scan.md` found ~40 explanations that reference characters/examples from other sentences. These are artifacts of batch rewrite operations.
+
+
+---
+
+### [2026-04-08] Orchestrator → Data Linguist
+**Status**: ✅ Done
+**Task**: Fix Pedagogically Misleading Category Label
+**Branch**: `develop`
+
+**Context**: The Educational Publisher noticed that the category label in `correlative_patterns.ts` is currently `Correlative Patterns (越…越…)`. This implies all sentences use that specific pattern, but the file contains 一…就…, 不但…而且…, and 虽然…但是… as well.
 
 **Action Required**:
-1. Check out `feature/ast-type-fixes` and pull latest.
-2. Read `data_quality_scan.md` "Issue 2" section thoroughly.
-3. For each flagged sentence, open the source file and:
-   - Read the `chinese` field to know what the actual sentence says
-   - Read the `tree` structure to understand the grammar
-   - Rewrite the `explanation` to accurately reference the correct characters from THIS sentence
-   - Follow all 7 pedagogy rules from `explanations_pedagogy.md`
-4. Also fix the 1 remaining pinyin issue: `s33` tree node `n33-serial-v2-obj` should have pinyin `niú nǎi` (2 tokens for 2 characters), not `niúnǎi`.
-5. Use `multi_replace_file_content`. Do NOT use `sed`.
-6. Run `npm run qa && npm run lint` to validate.
-7. Commit and push. Mark this ticket as ✅ Done.
-
-**CRITICAL**: Only modify `explanation` strings and the 1 pinyin value. Do NOT change tree structures, roles, or subRoles.
-
+1. Check out latest `develop`.
+2. Open `src/data/sentences/correlative_patterns.ts`.
+3. Change all instances of `category: 'Correlative Patterns (越…越…)'` to `category: 'Correlative Patterns (关联句型)'`.
+4. Run `npm run qa && npm run lint` to validate.
+5. Commit and push directly to `develop`. Mark this ticket as ✅ Done.
 
 
 ## Resolved

@@ -8,7 +8,7 @@ export const serialVerbConstructions: SentenceData[] = [
         pinyin: 'Dào le , zhǎo dào le , chī wán zài zǒu .',
         translation: '(We\'ve) arrived, (we) found it, (we\'ll) leave after eating.',
 
-        explanation: 'Three mini-clauses flow in sequence with no connecting words: **到了** ("arrived"), **找到了** ("found it"), **吃完再走** ("finish eating, then go"). The Topic is implied. Each clause is a compact action: 到 (arrive) + 了 (done), 找到 (find) + 了 (done), then 吃完 (finish eating) + 再 (then) + 走 (leave). The **再** in the last clause means "and then after that." The tree shows three parallel verb phrases lined up inside the Comment, each standing independently.',
+        explanation: 'Here we see the **Train Metaphor** in action. Three mini-clauses act like connected train cars rolling down the track in sequence: car 1 **到了** ("arrived"), car 2 **找到了** ("found it"), car 3 **吃完再走** ("finish eating, then go"). The Topic is an occupied silence (implied driver). There are no messy connecting words like "and"; Mandarin simply hitches the verb phrases together chronologically. The tree shows three parallel verb cars lined up inside the Comment.',
         tree: {
             id: 'n14',
             role: 'Sentence',
@@ -37,7 +37,7 @@ export const serialVerbConstructions: SentenceData[] = [
                                 {
                                     id: 'n14-vp1-le',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' }
                                 }
                             ]
@@ -61,7 +61,7 @@ export const serialVerbConstructions: SentenceData[] = [
                                 {
                                     id: 'n14-vp2-le',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' }
                                 }
                             ]
@@ -69,7 +69,7 @@ export const serialVerbConstructions: SentenceData[] = [
                         {
                             id: 'n14-vp3',
                             role: 'Verb Phrase',
-                            subRole: 'clause 3',
+                            subRole: 'serial verb 3',
                             children: [
                                 {
                                     id: 'n14-vp3-adv',
@@ -100,7 +100,7 @@ export const serialVerbConstructions: SentenceData[] = [
         pinyin: 'Tā qí zì xíng chē qù shàng bān.',
         translation: 'He rides a bicycle to go to work.',
 
-        explanation: 'The Topic is **他** ("he"). The Comment chains two verb phrases: **骑自行车** ("rides a bicycle") and **去上班** ("to go to work"). The first verb describes the method of transport, and the second states the purpose. No linking word is needed; Mandarin naturally reads method-purpose verb chains left to right. The tree shows the second verb phrase nested inside the first as its object. Compare with English: "He rides his bicycle to go to work" needs "to," but Mandarin just stacks them.',
+        explanation: 'The Topic is **他** ("he"). The Comment uses the **Train Metaphor** to hitch two action cars together chronologically: **骑自行车** ("rides a bicycle") and **去上班** ("to go to work"). The first car is the method, and the second car is the purpose. You don\'t need connecting words like "to" or "in order to"; the sequence of the cars handles the logic. The tree shows these two verb phrases connected smoothly across the physical timeline.',
         tree: {
             id: 'n58',
             role: 'Sentence',
@@ -118,7 +118,7 @@ export const serialVerbConstructions: SentenceData[] = [
                         {
                             id: 'n58-vp1',
                             role: 'Verb Phrase',
-                            subRole: 'VP1: manner/means',
+                            subRole: 'serial verb 1',
                             children: [
                                 {
                                     id: 'n58-hv1',
@@ -135,13 +135,13 @@ export const serialVerbConstructions: SentenceData[] = [
                         {
                             id: 'n58-vp2',
                             role: 'Verb Phrase',
-                            subRole: 'VP2: motion',
+                            subRole: 'serial verb 2',
                             text: { hanzi: '去', pinyin: 'qù', translation: 'go' },
                         },
                         {
                             id: 'n58-vp3',
                             role: 'Verb Phrase',
-                            subRole: 'VP3: purpose',
+                            subRole: 'serial verb 3',
                             text: { hanzi: '上班', pinyin: 'shàng bān', translation: 'go to work' },
                         },
                     ],
@@ -155,7 +155,7 @@ export const serialVerbConstructions: SentenceData[] = [
         chinese: '我拿着伞出门了。',
         pinyin: 'Wǒ ná zhe sǎn chū mén le.',
         translation: 'I took (was holding) an umbrella and went out.',
-        explanation: 'The Topic is **我** ("I"). The verb **拿着** ("holding") uses the aspect marker **着** to indicate an ongoing state: the umbrella is being held during the main action. The second verb **出门** ("go out") is the main event. Together, **拿着伞出门** means "went out while holding an umbrella." The **着** creates a concurrent action: holding is the background, going out is the foreground. The **了** at the end marks the whole event as completed.',
+        explanation: 'The Topic is **我** ("I"). The Train Metaphor connects two action cars: **拿着伞** ("holding an umbrella") and **出门** ("go out"). The first car uses the state dial **着** to lock the "holding" action into the background while the train rolls forward. The second car is the foreground event. Hitched together naturally, the physical sequence of the words maps directly to the physical reality of the event. The **了** marks the entire connected journey as completed.',
         tree: {
             id: 'n59',
             role: 'Sentence',
@@ -173,7 +173,7 @@ export const serialVerbConstructions: SentenceData[] = [
                         {
                             id: 'n59-vp1',
                             role: 'Verb Phrase',
-                            subRole: 'VP1: concurrent background action',
+                            subRole: 'serial verb 1',
                             children: [
                                 {
                                     id: 'n59-hv1',
@@ -183,7 +183,7 @@ export const serialVerbConstructions: SentenceData[] = [
                                 {
                                     id: 'n59-zhe',
                                     role: 'Particle',
-                                    subRole: 'durative aspect (ongoing)',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '着', pinyin: 'zhe', translation: '(ongoing)' },
                                 },
                                 {
@@ -196,7 +196,7 @@ export const serialVerbConstructions: SentenceData[] = [
                         {
                             id: 'n59-vp2',
                             role: 'Verb Phrase',
-                            subRole: 'VP2: main action',
+                            subRole: 'serial verb 2',
                             children: [
                                 {
                                     id: 'n59-hv2',
@@ -206,7 +206,7 @@ export const serialVerbConstructions: SentenceData[] = [
                                 {
                                     id: 'n59-le',
                                     role: 'Particle',
-                                    subRole: 'completion',
+                                    subRole: 'aspect marker',
                                     text: { hanzi: '了', pinyin: 'le', translation: '(done)' },
                                 },
                             ],
@@ -228,7 +228,7 @@ export const serialVerbConstructions: SentenceData[] = [
                 { id: 's68-c1', role: 'Topic', subRole: 'clause 1', children: [
                     { id: 's68-v1', role: 'Verb Phrase', children: [
                         { id: 's68-xue', role: 'Head Verb', text: { hanzi: '学', pinyin: 'xué', translation: 'study' } },
-                        { id: 's68-le', role: 'Particle', subRole: 'aspect', text: { hanzi: '了', pinyin: 'le', translation: '(completion)' } },
+                        { id: 's68-le', role: 'Particle', subRole: 'aspect marker', text: { hanzi: '了', pinyin: 'le', translation: '(completion)' } },
                         { id: 's68-yihou', role: 'Adjunct', subRole: 'time', text: { hanzi: '以后', pinyin: 'yǐ hòu', translation: 'after' } },
                     ]},
                     { id: 's68-v2', role: 'Verb Phrase', children: [

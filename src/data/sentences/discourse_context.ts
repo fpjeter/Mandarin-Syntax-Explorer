@@ -7,7 +7,7 @@ export const discourseContext: SentenceData[] = [
         chinese: '说想学中文。',
         pinyin: 'Shuō xiǎng xué Zhōng wén .',
         translation: '(He) said (he) wants to learn Chinese.',
-        explanation: 'Mandarin rarely repeats information the listener already knows. This pair of dialogue cards sets up a conversation about borrowing a book, and the sentences that follow show how the book gradually disappears from the text while remaining the invisible thread connecting everything. The first speaker asks 你借到那本书了吗 ("Did you manage to borrow that book?"). The reply 借到了 ("Got it") already drops the book. Pay attention to how the tree\'s Ghost Nodes track what is left unspoken.',
+        explanation: 'Mandarin rarely repeats information the listener already knows. This pair of dialogue cards sets up a conversation about borrowing a book. The first speaker asks "Did you manage to borrow that book?" The reply 借到了 ("Got it") simply rolls the conversation forward. Because the topic is established, there\'s no need to explicitly state it again. Pay attention to how the tree\'s Ghost Nodes track the "invisible cars" on this continuing train of thought.',
         discourseContext: {
             chinese: '张三昨天来找我了。',
             pinyin: 'Zhāng Sān zuó tiān lái zhǎo wǒ le .',
@@ -92,7 +92,7 @@ export const discourseContext: SentenceData[] = [
         chinese: '非常有意思。',
         pinyin: 'Fēi cháng yǒu yì si .',
         translation: '(It\'s) really interesting.',
-        explanation: 'Just four words, and the Topic is an invisible **Ghost Node**. This ghost node points back to the **book** mentioned in the previous sentence (shown in the grey card above). Once a Topic has been introduced in conversation, Mandarin avoids repeating it. The listener tracks this invisible thread through context, and the tree makes the connection visible with a reference arc.',
+        explanation: 'Just four words, and the Topic is an invisible **Ghost Node**. The conversation train is already moving, so it simply points back to the **book** mentioned previously. Once a Topic has been established, Mandarin refuses to clutter the track by repeating it. The listener tracks this invisible thread through context, and the tree makes the connection visible with a reference arc.',
         discourseContext: {
             chinese: '我买了一本新书。',
             pinyin: 'Wǒ mǎi le yī běn xīn shū .',
@@ -150,7 +150,7 @@ export const discourseContext: SentenceData[] = [
         chinese: '已经吃过了。',
         pinyin: 'Yǐ jīng chī guò le.',
         translation: '(I) have already eaten.',
-        explanation: 'A common short answer. The Topic (the speaker, "I") is implied from the previous context. The Comment is just the verb phrase: **已经** ("already") + **吃过了** ("have eaten," with the experiential **过** and completion **了**). This stacking of 过 + 了 is natural when confirming a completed experience: "I have already eaten." The ghost node in the tree shows where the dropped Topic would sit.',
+        explanation: 'A common short answer. The Topic (the speaker, "I") is already established in the conversation. The Comment connects seamlessly to it: **已经** ("already") + **吃过了** ("have eaten"). Because the context is clear, the train just continues rolling forward without needing to state the driver\'s identity in this car. The Ghost Node in the tree explicitly shows this "Occupied Silence".',
         discourseContext: {
             chinese: '你吃饭了吗？',
             pinyin: 'Nǐ chī fàn le ma?',
@@ -164,7 +164,7 @@ export const discourseContext: SentenceData[] = [
                     { id: 'n94-vp', role: 'Verb Phrase', children: [
                         { id: 'n94-hv', role: 'Head Verb', text: { hanzi: '吃', pinyin: 'chī', translation: 'eat' } },
                         { id: 'n94-guo', role: 'Particle', subRole: 'experiential', text: { hanzi: '过', pinyin: 'guò', translation: '(experienced)' } },
-                        { id: 'n94-le', role: 'Particle', subRole: 'completion', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
+                        { id: 'n94-le', role: 'Particle', subRole: 'aspect marker', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
                     ]}
                 ]}
             ]
@@ -176,7 +176,7 @@ export const discourseContext: SentenceData[] = [
         chinese: '今天特别累。',
         pinyin: 'Jīn tiān tè bié lèi.',
         translation: '(I am) especially tired today.',
-        explanation: 'The Topic ("I") is dropped because it is obvious from the conversation. The Comment fills the entire sentence: **今天** ("today") is a time adjunct, **特别** ("especially") sets the degree, and **累** ("tired") is the main adjective functioning as the predicate. No verb is needed; Chinese adjectives can serve as the main predicate on their own. The tree shows this flat structure: time + degree + adjective, with a ghost node for the implied speaker.',
+        explanation: 'Because the speaker\'s identity is obvious, the Train just rolls right into the Comment. **今天** ("today") is a time adjunct, **特别** ("especially") sets the degree, and **累** ("tired") is the adjective predicate. Notice there are no "missing words" here—the Ghost Node simply subscribes to the established context without cluttering the tracks. The tree shows this flat structure: time + degree + adjective.',
         discourseContext: {
             chinese: '你今天感觉怎么样？',
             pinyin: 'Nǐ jīn tiān gǎn jué zěn me yàng?',
@@ -201,7 +201,7 @@ export const discourseContext: SentenceData[] = [
         chinese: '早就回家了。',
         pinyin: 'Zǎo jiù huí jiā le.',
         translation: '(He) went home a long time ago.',
-        explanation: 'When someone asks "where is he?", the reply drops the person entirely. The Topic **他** ("he") is implied from the question. The Comment is: **早就** ("long ago already") + **回家了** ("went home," with completion 了). The **早就** emphasizes that the going-home happened well before the question was asked. The tree shows a ghost node for the dropped Topic and the time-emphasis adjunct **早就** before the verb.',
+        explanation: 'When someone asks "where is he?", the reply smoothly rides the existing context track. The Topic **他** ("he") is subscribed to via Occupied Silence. The Comment is: **早就** ("long ago already") + **回家了** ("went home"). The **早就** emphasizes that the going-home happened well before the question was asked. The tree shows a Ghost Node for the context-bound Topic, and the time-emphasis adjunct **早就** before the verb.',
         discourseContext: {
             chinese: '他去哪儿了？',
             pinyin: 'Tā qù nǎ er le?',
@@ -214,7 +214,7 @@ export const discourseContext: SentenceData[] = [
                     { id: 'n96-adv', role: 'Adjunct', text: { hanzi: '早就', pinyin: 'zǎo jiù', translation: 'long ago' } },
                     { id: 'n96-vp', role: 'Verb Phrase', children: [
                         { id: 'n96-hv', role: 'Head Verb', text: { hanzi: '回家', pinyin: 'huí jiā', translation: 'return home' } },
-                        { id: 'n96-le', role: 'Particle', subRole: 'completion', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
+                        { id: 'n96-le', role: 'Particle', subRole: 'aspect marker', text: { hanzi: '了', pinyin: 'le', translation: '(done)' } }
                     ]}
                 ]}
             ]

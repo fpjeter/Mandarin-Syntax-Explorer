@@ -3,7 +3,7 @@ import type { SentenceData } from '../../types/grammar';
 export const correlativePatterns: SentenceData[] = [
     {
         id: 's60',
-        category: 'Correlative Patterns (越…越…)',
+        category: 'Correlative Patterns (关联句型)',
         chinese: '中文越学越有意思。',
         pinyin: 'Zhōng wén yuè xué yuè yǒu yì si.',
         translation: 'The more you study Chinese, the more interesting it gets.',
@@ -20,12 +20,12 @@ export const correlativePatterns: SentenceData[] = [
                 {
                     id: 'n60-c',
                     role: 'Comment',
-                    subRole: 'correlative 越…越…',
+                    subRole: 'correlative',
                     children: [
                         {
                             id: 'n60-cl1',
                             role: 'Verb Phrase',
-                            subRole: 'clause A: condition',
+                            subRole: 'serial verb 1',
                             children: [
                                 {
                                     id: 'n60-yue1',
@@ -43,7 +43,7 @@ export const correlativePatterns: SentenceData[] = [
                         {
                             id: 'n60-cl2',
                             role: 'Verb Phrase',
-                            subRole: 'clause B: consequence',
+                            subRole: 'serial verb 2',
                             children: [
                                 {
                                     id: 'n60-yue2',
@@ -65,7 +65,7 @@ export const correlativePatterns: SentenceData[] = [
     },
     {
         id: 's61',
-        category: 'Correlative Patterns (越…越…)',
+        category: 'Correlative Patterns (关联句型)',
         chinese: '他一说话就脸红。',
         pinyin: 'Tā yī shuō huà jiù liǎn hóng.',
         translation: 'The moment he speaks, he blushes.',
@@ -82,7 +82,7 @@ export const correlativePatterns: SentenceData[] = [
                 {
                     id: 'n61-c',
                     role: 'Comment',
-                    subRole: 'correlative 一…就…',
+                    subRole: 'correlative',
                     children: [
                         {
                             id: 'n61-cl1',
@@ -105,7 +105,7 @@ export const correlativePatterns: SentenceData[] = [
                         {
                             id: 'n61-cl2',
                             role: 'Verb Phrase',
-                            subRole: 'consequence clause (就 + V)',
+                            subRole: 'consequence',
                             children: [
                                 {
                                     id: 'n61-jiu',
@@ -128,21 +128,21 @@ export const correlativePatterns: SentenceData[] = [
     },
     {
         id: 's84',
-        category: 'Correlative Patterns (越…越…)',
+        category: 'Correlative Patterns (关联句型)',
         chinese: '只学习不思考，越学越糊涂；只思考不学习，越想越危险。',
         pinyin: 'Zhǐ xué xí bù sī kǎo, yuè xué yuè hú tu; zhǐ sī kǎo bù xué xí, yuè xiǎng yuè wéi xiǎn.',
         translation: 'If you only study without thinking, the more you study the more confused you get; if you only think without studying, the more you think the more perilous it becomes.',
         explanation: 'A modern take on 學而不思則罔，思而不學則殆 (from the Analects: "To study without thinking is wasteful; to think without studying is dangerous"). The classical 而 ("but/and") and 則 ("then") are replaced by modern **如果...就...** ("if...then..."). The tree shows two parallel conditional clauses. Each has the same shape: 如果 + condition, 就 + consequence. The first clause warns 如果只学习不思考 ("if you only study without thinking"), result: 就会迷茫 ("you will be lost"). The second warns 如果只思考不学习 ("if you only think without studying"), result: 就很危险 ("it is very dangerous").',
         tree: {
             id: 's84-root', role: 'Sentence', children: [
-                { id: 's84-c1', role: 'Topic', subRole: 'first correlative', children: [
+                { id: 's84-c1', role: 'Topic', subRole: 'correlative', children: [
                     { id: 's84-premise1', role: 'Adjunct', subRole: 'conditional', text: { hanzi: '只学习不思考', pinyin: 'zhǐ xué xí bù sī kǎo', translation: 'only study, not think' } },
                     { id: 's84-yue1a', role: 'Adjunct', subRole: 'correlative', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
                     { id: 's84-xue', role: 'Head Verb', text: { hanzi: '学', pinyin: 'xué', translation: 'study' } },
                     { id: 's84-yue1b', role: 'Adjunct', subRole: 'correlative', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
                     { id: 's84-hutu', role: 'Head Verb', text: { hanzi: '糊涂', pinyin: 'hú tu', translation: 'confused' } },
                 ]},
-                { id: 's84-c2', role: 'Comment', subRole: 'second correlative', children: [
+                { id: 's84-c2', role: 'Comment', subRole: 'correlative', children: [
                     { id: 's84-premise2', role: 'Adjunct', subRole: 'conditional', text: { hanzi: '只思考不学习', pinyin: 'zhǐ sī kǎo bù xué xí', translation: 'only think, not study' } },
                     { id: 's84-yue2a', role: 'Adjunct', subRole: 'correlative', text: { hanzi: '越', pinyin: 'yuè', translation: 'the more' } },
                     { id: 's84-xiang', role: 'Head Verb', text: { hanzi: '想', pinyin: 'xiǎng', translation: 'think' } },
@@ -154,7 +154,7 @@ export const correlativePatterns: SentenceData[] = [
     },
     {
         id: 's97',
-        category: 'Correlative Patterns (越…越…)',
+        category: 'Correlative Patterns (关联句型)',
         chinese: '一个人读书越多，他就越能理解世界。',
         pinyin: 'Yī ge rén dú shū yuè duō, tā jiù yuè néng lǐ jiě shì jiè.',
         translation: 'The more a person reads, the more they can understand the world.',
@@ -186,7 +186,7 @@ export const correlativePatterns: SentenceData[] = [
     },
     {
         id: 's98',
-        category: 'Correlative Patterns (越…越…)',
+        category: 'Correlative Patterns (关联句型)',
         chinese: '天气越冷，大家越不想出门。',
         pinyin: 'Tiān qì yuè lěng, dà jiā yuè bù xiǎng chū mén.',
         translation: 'The colder the weather gets, the less people want to go out.',
@@ -216,7 +216,7 @@ export const correlativePatterns: SentenceData[] = [
     },
     {
         id: 's99',
-        category: 'Correlative Patterns (越…越…)',
+        category: 'Correlative Patterns (关联句型)',
         chinese: '期望越高，失望往往也就越大。',
         pinyin: 'Qī wàng yuè gāo, shī wàng wǎng wǎng yě jiù yuè dà.',
         translation: 'The higher the expectations, the greater the disappointment often is.',
@@ -247,7 +247,7 @@ export const correlativePatterns: SentenceData[] = [
     },
     {
         id: 's108',
-        category: 'Correlative Patterns (越…越…)',
+        category: 'Correlative Patterns (关联句型)',
         chinese: '他不但会说英语，而且还会说法语。',
         pinyin: 'Tā bú dàn huì shuō Yīng yǔ, ér qiě hái huì shuō Fǎ yǔ.',
         translation: 'He not only speaks English, but also speaks French.',
@@ -260,7 +260,7 @@ export const correlativePatterns: SentenceData[] = [
                 {
                     id: 's108-c',
                     role: 'Comment',
-                    subRole: 'correlative frame',
+                    subRole: 'correlative',
                     children: [
                         {
                             id: 's108-clause1',
@@ -292,7 +292,7 @@ export const correlativePatterns: SentenceData[] = [
     },
     {
         id: 's109',
-        category: 'Correlative Patterns (越…越…)',
+        category: 'Correlative Patterns (关联句型)',
         chinese: '虽然很累，但是很开心。',
         pinyin: 'Suī rán hěn lèi, dàn shì hěn kāi xīn.',
         translation: 'Although tired, (I\'m) very happy.',
@@ -301,11 +301,11 @@ export const correlativePatterns: SentenceData[] = [
             id: 's109-n',
             role: 'Sentence',
             children: [
-                { id: 's109-ghost', role: 'Topic', subRole: 'Ghost Node', text: { hanzi: '[我]', pinyin: 'wǒ', translation: 'I(implied)' } },
+                { id: 's109-ghost', role: 'Topic', subRole: 'implied topic', text: { hanzi: '[我]', pinyin: 'wǒ', translation: 'I(implied)' } },
                 {
                     id: 's109-c',
                     role: 'Comment',
-                    subRole: 'correlative frame',
+                    subRole: 'correlative',
                     children: [
                         {
                             id: 's109-clause1',

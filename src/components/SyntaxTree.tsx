@@ -128,12 +128,13 @@ const NodeInfoBar: React.FC<{
 interface SyntaxTreeProps {
     tree?: AppGrammarNodeData;
     isVisible?: boolean;
+    isSemanticMode?: boolean;
     onRandom?: () => void;
     onPrint?: () => void;
     onDownloadPNG?: () => void;
 }
 
-export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible, onRandom, onPrint, onDownloadPNG }) => {
+export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible, isSemanticMode, onRandom, onPrint, onDownloadPNG }) => {
     const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set());
     const [showGhost, setShowGhost] = useState(true);
     const [isGlossaryOpen, setIsGlossaryOpen] = useState(false);
@@ -159,23 +160,24 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible, onRando
     // Co-ref hover highlight: when a ghost or its referent is hovered, both glow
     const [corefHoveredId, setCorefHoveredId] = useState<string | null>(null);
 
-    // Patch nodes: coref glow
+    // Patch nodes: coref glow + semantic mode flag
     const nodes = useMemo(() => {
         return rawNodes.map(n => {
             const inPair = corefPairs.has(n.id);
             const partnerId = corefPairs.get(n.id);
             const isGlowing = !!corefHoveredId && (corefHoveredId === n.id || corefHoveredId === partnerId);
-            if (!inPair && !isGlowing) return n;
+            // Always inject isSemanticMode; conditionally add coref flags
             return {
                 ...n,
                 data: {
                     ...n.data,
+                    isSemanticMode: !!isSemanticMode,
                     ...(inPair && { isCorefNode: true }),
                     ...(isGlowing && { corefGlow: true }),
                 },
             };
         });
-    }, [rawNodes, corefHoveredId, corefPairs]);
+    }, [rawNodes, corefHoveredId, corefPairs, isSemanticMode]);
 
     const onNodeClick: NodeMouseHandler = useCallback((_event, node) => {
         if (node.data.hasChildren) {
