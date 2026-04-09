@@ -8,7 +8,7 @@ An interactive visualizer for Mandarin Chinese grammar structures. Select an exa
 - **Nearly 100 curated modern sentences** across 19 grammar categories
 - **30 annotated classical quotes** from Confucius, Laozi, Mencius, Xunzi, and more
 - **Fractal Logic Stream (FLS)** — Custom topic-comment Matryoshka framework replacing Eurocentric SVO parsing (serving as our strict internal AST architecture)
-- **Semantic Roles Toggle** — Flip the visual syntax nodes from structural framing (Topic/Comment) to semantic reality (Agent/Patient) to easily understand tricky passives and BA constructions.
+- **Tree Toolbar & Semantic Roles** — A collapsible workspace toolbar containing all tree manipulations (Expand All, Ghost Node toggling) and the **Semantic Roles** toggle to flip visual nodes from structural framing (Topic/Comment) to semantic reality (Agent/Patient).
 - **Inline Pedagogical Explanations** — Expandable category breakdowns inside the sidebar written in a warm, accessible tutor tone
 - **Badge system** — Construction-specific badges (把字句, 被字句, 是…的, 结果补语, etc.) appear on relevant nodes
 - **Classical badges** — Function word badges (者, 所, 而, 非, 勿, 於, 焉, 之) for classical mode
@@ -21,6 +21,7 @@ An interactive visualizer for Mandarin Chinese grammar structures. Select an exa
 - **Classical Chinese Explorer** — Toggle into 古文 mode to explore famous classical quotes (see below)
 - **Ink wash transition** — Animated mode switches with ink wash effect
 - **Code-split bundles** — Lazy-loaded components and vendor chunking for fast initial loads
+- **Rigid CI Validation** — FLS Architecture and Semantic constraints are strictly mapped and verified via `npm run qa`.
 
 ### Grammar Categories
 
