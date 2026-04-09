@@ -34,11 +34,11 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Pending Requests
 
-### [DATE] Data Linguist → Orchestrator
-**Status**: ✅ Triaged
-**Blocked Task**: Rewriting Sentence Explanations for FLS Accuracy
-**Dependency**: Educational Publisher approval on the string rewrites.
-**Suggested Fix**: Dispatch the Educational Publisher to review the plain-language translations of the FLS mechanics.
+### [2026-04-08] Orchestrator → Data Linguist
+**Status**: ✅ Done
+**Task**: Rewriting Sentence Explanations for FLS Accuracy
+**Branch**: `develop`
+**Context**: Executed 5 pedagogical metaphors from implementation plan to translate FLS jargon into beginner-friendly UI text across pivotal, BEI, discourse context, serial verbs, and complements. Validation passed.
 
 ### [2026-04-08] Linguistics Specialist → Orchestrator
 **Status**: ✅ Done
