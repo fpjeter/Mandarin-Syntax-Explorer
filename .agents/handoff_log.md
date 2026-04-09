@@ -34,15 +34,24 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
-### [2026-04-08] Orchestrator → Data Linguist
+### [2026-04-08] Orchestrator → Educational Publisher
 **Status**: 🔴 Active
+**Task**: Evaluate Tagging Depth for Phase 4 Semantic Expansion
+**Branch**: `feature/semantic-phase-4`
+**Context**: We are preparing to expand the Semantic Role tagging to 17 remaining categories (1,200 AST nodes). We need your pedagogical guidance.
+**Action Required**:
+1. Review the proposed Phase 4 expansion in `implementation_plan.md`.
+2. Decide whether learners fundamentally need every single modifier and embedded sub-node tagged with semantic roles, or if merely tagging the primary Sentence Topic, Inner Topic, and major Objects is sufficient for TCFL pedagogy. 
+3. Record your recommendation in the logic flow and mark this ticket as Done so the Data Linguist is unblocked.
+
+### [2026-04-08] Orchestrator → Data Linguist
+**Status**: 🟡 Blocked
 **Task**: Phase 4 Data Epic - Semantic Expansion
 **Branch**: `feature/semantic-phase-4`
 **Context**: Expand the `semanticRole` data tagging to the 17 remaining categories in the databank to ensure the Semantic Toggle UI works comprehensively across all sentences.
 **Action Required**:
-1. Review the proposed semantic mapping ruleset in `implementation_plan.md`.
-2. Wait for User's approval on the mapping depth (whether to tag every sub-node or just primary subjects/objects).
-3. Do NOT execute until the Orchestrator confirms the plan is locked in.
+1. Wait for the Educational Publisher's pedagogical recommendation on tagging depth.
+2. Once the Educational Publisher unlocks this ticket, begin the tagging sweep using their approved constraints.
 
 ---
 
