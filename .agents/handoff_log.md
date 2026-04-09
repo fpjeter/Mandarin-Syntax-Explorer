@@ -35,6 +35,18 @@ Append a new block to `## Pending Requests` using this exact format:
 ## Active Assignments
 
 ### [2026-04-08] Orchestrator → Data Linguist
+**Status**: 🔴 Active
+**Task**: Phase 4 Data Epic - Semantic Expansion
+**Branch**: `feature/semantic-phase-4`
+**Context**: Expand the `semanticRole` data tagging to the 17 remaining categories in the databank to ensure the Semantic Toggle UI works comprehensively across all sentences.
+**Action Required**:
+1. Review the proposed semantic mapping ruleset in `implementation_plan.md`.
+2. Wait for User's approval on the mapping depth (whether to tag every sub-node or just primary subjects/objects).
+3. Do NOT execute until the Orchestrator confirms the plan is locked in.
+
+---
+
+### [2026-04-08] Orchestrator → Data Linguist
 **Status**: ✅ Done
 **Task**: Phase 2 AST SubRole Normalization
 **Branch**: `develop`
