@@ -41,6 +41,17 @@ Append a new block to `## Pending Requests` using this exact format:
 **Context**: Re-align the ~300 chaotic AST `subRole` values to the canonical 5-bucket palette defined in the `implementation_plan.md`.
 **Action Required**: Executed bulk normalization via custom scripts/normalize_subroles.ts script. Collapsed non-adjunct AST tags into their base types while preserving exact visual badge mapping conditions. Passed all Node AST validations cleanly.
 
+### [2026-04-08] Orchestrator → Data Linguist
+**Status**: 🔴 Active
+**Task**: Phase 3 Data Epic - Semantic Tagging Base
+**Branch**: `feature/semantic-toggle`
+**Context**: To support the UI's Semantic Mode, we need `semanticRole` metadata injected directly into the AST structure. The User has approved a manual data-tagging approach over programmatic heuristics.
+**Action Required**:
+1. Check out `feature/semantic-toggle`.
+2. Add `semanticRole` to the `GrammarNodeData` interface (types/grammar.ts).
+3. Target `ba_construction.ts` and `bei_passive.ts` and tag the nodes with explicit semantic realities (`Agent`, `Patient`, etc.).
+4. Mark Done so the Frontend Engineer can begin.
+
 ### [2026-04-08] Orchestrator → Frontend Engineer
 **Status**: 🔴 Active
 **Task**: Phase 3 Frontend Epic - Semantic Toggle UI
