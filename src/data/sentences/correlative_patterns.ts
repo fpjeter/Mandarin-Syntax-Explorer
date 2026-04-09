@@ -3,7 +3,7 @@ import type { SentenceData } from '../../types/grammar';
 export const correlativePatterns: SentenceData[] = [
     {
         id: 's60',
-        category: 'Correlative Patterns (越…越…)',
+        category: 'Correlative Patterns (关联句型)',
         chinese: '中文越学越有意思。',
         pinyin: 'Zhōng wén yuè xué yuè yǒu yì si.',
         translation: 'The more you study Chinese, the more interesting it gets.',
@@ -65,7 +65,7 @@ export const correlativePatterns: SentenceData[] = [
     },
     {
         id: 's61',
-        category: 'Correlative Patterns (越…越…)',
+        category: 'Correlative Patterns (关联句型)',
         chinese: '他一说话就脸红。',
         pinyin: 'Tā yī shuō huà jiù liǎn hóng.',
         translation: 'The moment he speaks, he blushes.',
@@ -128,7 +128,7 @@ export const correlativePatterns: SentenceData[] = [
     },
     {
         id: 's84',
-        category: 'Correlative Patterns (越…越…)',
+        category: 'Correlative Patterns (关联句型)',
         chinese: '只学习不思考，越学越糊涂；只思考不学习，越想越危险。',
         pinyin: 'Zhǐ xué xí bù sī kǎo, yuè xué yuè hú tu; zhǐ sī kǎo bù xué xí, yuè xiǎng yuè wéi xiǎn.',
         translation: 'If you only study without thinking, the more you study the more confused you get; if you only think without studying, the more you think the more perilous it becomes.',
@@ -154,7 +154,7 @@ export const correlativePatterns: SentenceData[] = [
     },
     {
         id: 's97',
-        category: 'Correlative Patterns (越…越…)',
+        category: 'Correlative Patterns (关联句型)',
         chinese: '一个人读书越多，他就越能理解世界。',
         pinyin: 'Yī ge rén dú shū yuè duō, tā jiù yuè néng lǐ jiě shì jiè.',
         translation: 'The more a person reads, the more they can understand the world.',
@@ -186,7 +186,7 @@ export const correlativePatterns: SentenceData[] = [
     },
     {
         id: 's98',
-        category: 'Correlative Patterns (越…越…)',
+        category: 'Correlative Patterns (关联句型)',
         chinese: '天气越冷，大家越不想出门。',
         pinyin: 'Tiān qì yuè lěng, dà jiā yuè bù xiǎng chū mén.',
         translation: 'The colder the weather gets, the less people want to go out.',
@@ -216,7 +216,7 @@ export const correlativePatterns: SentenceData[] = [
     },
     {
         id: 's99',
-        category: 'Correlative Patterns (越…越…)',
+        category: 'Correlative Patterns (关联句型)',
         chinese: '期望越高，失望往往也就越大。',
         pinyin: 'Qī wàng yuè gāo, shī wàng wǎng wǎng yě jiù yuè dà.',
         translation: 'The higher the expectations, the greater the disappointment often is.',
@@ -247,7 +247,7 @@ export const correlativePatterns: SentenceData[] = [
     },
     {
         id: 's108',
-        category: 'Correlative Patterns (越…越…)',
+        category: 'Correlative Patterns (关联句型)',
         chinese: '他不但会说英语，而且还会说法语。',
         pinyin: 'Tā bú dàn huì shuō Yīng yǔ, ér qiě hái huì shuō Fǎ yǔ.',
         translation: 'He not only speaks English, but also speaks French.',
@@ -292,7 +292,7 @@ export const correlativePatterns: SentenceData[] = [
     },
     {
         id: 's109',
-        category: 'Correlative Patterns (越…越…)',
+        category: 'Correlative Patterns (关联句型)',
         chinese: '虽然很累，但是很开心。',
         pinyin: 'Suī rán hěn lèi, dàn shì hěn kāi xīn.',
         translation: 'Although tired, (I\'m) very happy.',
