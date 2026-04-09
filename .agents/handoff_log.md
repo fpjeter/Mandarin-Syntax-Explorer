@@ -53,7 +53,10 @@ Append a new block to `## Pending Requests` using this exact format:
 4. Mark Done so the Frontend Engineer can begin.
 
 ### [2026-04-08] Orchestrator → Frontend Engineer
-**Status**: 🔴 Active
+**Status**: ✅ Done
+**Task**: Phase 3 Frontend Epic - Semantic Toggle UI
+**Branch**: `feature/semantic-toggle`
+**Commit**: `25aeb07` — feat(ui): add Semantic Toggle UI for thematic roles
 **Task**: Phase 3 Frontend Epic - Semantic Toggle UI
 **Branch**: `feature/semantic-toggle`
 **Action Required**: The Data Linguist has completed the data ingestion. You are cleared to proceed with the UI implementation. 
