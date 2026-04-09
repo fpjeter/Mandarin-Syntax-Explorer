@@ -41,6 +41,10 @@ for (const s of sampleSentences) {
     if (s.tree) collectNodeIds(s.tree);
 }
 
+const VALID_SEMANTIC_ROLES = new Set([
+    'Agent', 'Patient', 'Experiencer', 'Causer', 'Theme'
+]);
+
 // 2. Second pass to validate thoroughly
 function validateNode(node: GrammarNodeData, sentenceId: string) {
     if (!node.id) {
@@ -51,6 +55,15 @@ function validateNode(node: GrammarNodeData, sentenceId: string) {
         logError(sentenceId, node.id || 'UNKNOWN', 'Node is missing a grammar role');
     } else if (!VALID_ROLES.has(node.role)) {
         logError(sentenceId, node.id || 'UNKNOWN', `Invalid grammar role: "${node.role}"`);
+    }
+
+    if (node.semanticRole) {
+        if (!VALID_SEMANTIC_ROLES.has(node.semanticRole)) {
+            logError(sentenceId, node.id || 'UNKNOWN', `Invalid semanticRole: "${node.semanticRole}". Must be one of: ${Array.from(VALID_SEMANTIC_ROLES).join(', ')}`);
+        }
+        if (node.role === 'Adjunct') {
+            logError(sentenceId, node.id || 'UNKNOWN', `Pedagogical constraint violation: Adjunct node cannot have a semanticRole. Found: "${node.semanticRole}"`);
+        }
     }
 
     if (node.isDropped === true && node.refersToId) {
@@ -119,6 +132,25 @@ for (const s of sampleSentences) {
 
     if (s.tree) {
         validateNode(s.tree, sId);
+
+        // FLS Architecture Verification
+        if (s.tree.children && s.tree.children.length > 0) {
+            let hasValidFLSNode = false;
+            for (const child of s.tree.children) {
+                if (['Topic', 'Comment', 'Parallel Sentence', 'Sentence', 'Double Topic'].includes(child.role)) {
+                    hasValidFLSNode = true;
+                    break;
+                }
+            }
+            if (!hasValidFLSNode) {
+                // To allow single-word conversational sentences (like "走。"), we only crash if there are structural children breaking FLS.
+                const childRoles = s.tree.children.map(c => c.role);
+                // If it's a Subject/Predicate branch, that's illegal SVO!
+                if (childRoles.includes('Subject') || childRoles.includes('Predicate')) {
+                    logError(sId, s.tree.id || 'UNKNOWN', `FLS Architecture Violation: Root sentence regressed to SVO parsing. Must branch into Topic/Comment framework. (Found: ${childRoles.join(', ')})`);
+                }
+            }
+        }
     } else {
         logError(sId, 'ROOT', 'Missing grammar tree');
     }

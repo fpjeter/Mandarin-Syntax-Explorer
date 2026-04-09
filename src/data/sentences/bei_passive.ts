@@ -357,7 +357,7 @@ export const beiPassive: SentenceData[] = [
                 { id: 's80-t', role: 'Topic', semanticRole: 'Theme', text: { hanzi: '青色', pinyin: 'qīng sè', translation: 'blue dye' } },
                 { id: 's80-c1', role: 'Comment', subRole: 'extraction clause', children: [
                     { id: 's80-shi', role: 'Copula', text: { hanzi: '是', pinyin: 'shì', translation: 'is' } },
-                    { id: 's80-pp', role: 'Adjunct', subRole: 'location', semanticRole: 'Source', text: { hanzi: '从蓝草里', pinyin: 'cóng lán cǎo lǐ', translation: 'from the indigo plant' } },
+                    { id: 's80-pp', role: 'Adjunct', subRole: 'location', text: { hanzi: '从蓝草里', pinyin: 'cóng lán cǎo lǐ', translation: 'from the indigo plant' } },
                     { id: 's80-tq', role: 'Head Verb', text: { hanzi: '提取', pinyin: 'tí qǔ', translation: 'extract' } },
                     { id: 's80-cl', role: 'Complement', subRole: 'directional', text: { hanzi: '出来', pinyin: 'chū lái', translation: 'out' } },
                     { id: 's80-de', role: 'Particle', text: { hanzi: '的', pinyin: 'de', translation: '(nominalizer)' } },

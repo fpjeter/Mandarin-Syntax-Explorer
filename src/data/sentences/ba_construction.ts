@@ -166,7 +166,6 @@ export const baConstruction: SentenceData[] = [
                             id: 'n4-p-adv2',
                             role: 'Adjunct',
                             subRole: 'instrument',
-                            semanticRole: 'Instrument',
                             children: [
                                 {
                                     id: 'n4-p-adv2-prep',

@@ -35,7 +35,8 @@ Append a new block to `## Pending Requests` using this exact format:
 ## Active Assignments
 
 ### [2026-04-08] Orchestrator → Frontend Engineer
-**Status**: 🔴 Active
+**Status**: ✅ Done
+**Commit**: `138c89c` — feat(ui): collapsible tree toolbar with semantic toggle migration
 **Task**: UI Epic - Collapsible Tree Toolbar (UX Refactor)
 **Branch**: `feature/collapsible-toolbar`
 **Context**: The Semantic Roles button is awkwardly placed in the global App.tsx header. We are moving it down to visually colocate it with tree manipulations in `TreeToolbar.tsx`. To combat button bloat, the toolbar must now be collapsible behind a single floating trigger.
