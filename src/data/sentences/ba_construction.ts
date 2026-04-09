@@ -16,7 +16,8 @@ export const baConstruction: SentenceData[] = [
                 {
                     id: 'n3-t',
                     role: 'Topic',
-                    text: { hanzi: '她', pinyin: 'tā', translation: 'she' }
+                    text: { hanzi: '她', pinyin: 'tā', translation: 'she' },
+                    semanticRole: 'Agent'
                 },
                 {
                     id: 'n3-c',
@@ -43,6 +44,7 @@ export const baConstruction: SentenceData[] = [
                                 {
                                     id: 'n3-p-ba-obj',
                                     role: 'Object',
+                                    semanticRole: 'Patient',
                                     children: [
                                         {
                                             id: 'n3-p-ba-obj-attr',
@@ -118,6 +120,7 @@ export const baConstruction: SentenceData[] = [
                 {
                     id: 'n4-t',
                     role: 'Topic',
+                    semanticRole: 'Agent',
                     children: [
                         {
                             id: 'n4-s-attr',
@@ -163,6 +166,7 @@ export const baConstruction: SentenceData[] = [
                             id: 'n4-p-adv2',
                             role: 'Adjunct',
                             subRole: 'instrument',
+                            semanticRole: 'Instrument',
                             children: [
                                 {
                                     id: 'n4-p-adv2-prep',
@@ -190,6 +194,7 @@ export const baConstruction: SentenceData[] = [
                                 {
                                     id: 'n4-p-ba-obj',
                                     role: 'Object',
+                                    semanticRole: 'Patient',
                                     children: [
                                         {
                                             id: 'n4-p-ba-obj-attr',
@@ -249,6 +254,7 @@ export const baConstruction: SentenceData[] = [
                     role: 'Topic',
                     isDropped: true,
                     impliedText: '你',
+                    semanticRole: 'Agent',
                 },
                 {
                     id: 'n28-c',
@@ -275,6 +281,7 @@ export const baConstruction: SentenceData[] = [
                                     id: 'n28-ba-obj',
                                     role: 'Object',
                                     text: { hanzi: '窗户', pinyin: 'chuāng hu', translation: 'window' },
+                                    semanticRole: 'Patient',
                                 },
                             ],
                         },
@@ -315,6 +322,7 @@ export const baConstruction: SentenceData[] = [
                     id: 'n29-t',
                     role: 'Topic',
                     text: { hanzi: '她', pinyin: 'tā', translation: 'she' },
+                    semanticRole: 'Agent',
                 },
                 {
                     id: 'n29-c',
@@ -334,6 +342,7 @@ export const baConstruction: SentenceData[] = [
                                 {
                                     id: 'n29-ba-obj',
                                     role: 'Object',
+                                    semanticRole: 'Patient',
                                     children: [
                                         {
                                             id: 'n29-ba-obj-attr',
@@ -405,7 +414,7 @@ export const baConstruction: SentenceData[] = [
             id: 's126-n',
             role: 'Sentence',
             children: [
-                { id: 's126-t', role: 'Topic', text: { hanzi: '他', pinyin: 'tā', translation: 'he' } },
+                { id: 's126-t', role: 'Topic', semanticRole: 'Agent', text: { hanzi: '他', pinyin: 'tā', translation: 'he' } },
                 {
                     id: 's126-c',
                     role: 'Comment',
@@ -421,7 +430,7 @@ export const baConstruction: SentenceData[] = [
                             id: 's126-nested',
                             role: 'Embedded Clause',
                             children: [
-                                { id: 's126-inner-t', role: 'Topic', text: { hanzi: '门', pinyin: 'mén', translation: 'door' } },
+                                { id: 's126-inner-t', role: 'Topic', semanticRole: 'Patient', text: { hanzi: '门', pinyin: 'mén', translation: 'door' } },
                                 {
                                     id: 's126-inner-c',
                                     role: 'Comment',
@@ -448,7 +457,7 @@ export const baConstruction: SentenceData[] = [
             id: 's127-n',
             role: 'Sentence',
             children: [
-                { id: 's127-ghost', role: 'Topic', subRole: 'implied topic', text: { hanzi: '[你]', pinyin: 'nǐ', translation: 'you(implied)' } },
+                { id: 's127-ghost', role: 'Topic', subRole: 'implied topic', semanticRole: 'Agent', text: { hanzi: '[你]', pinyin: 'nǐ', translation: 'you(implied)' } },
                 {
                     id: 's127-c',
                     role: 'Comment',
@@ -464,7 +473,7 @@ export const baConstruction: SentenceData[] = [
                             id: 's127-nested',
                             role: 'Embedded Clause',
                             children: [
-                                { id: 's127-inner-t', role: 'Topic', text: { hanzi: '它', pinyin: 'tā', translation: 'it' } },
+                                { id: 's127-inner-t', role: 'Topic', semanticRole: 'Patient', text: { hanzi: '它', pinyin: 'tā', translation: 'it' } },
                                 {
                                     id: 's127-inner-c',
                                     role: 'Comment',

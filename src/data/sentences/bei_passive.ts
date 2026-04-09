@@ -17,6 +17,7 @@ export const beiPassive: SentenceData[] = [
                     id: 'n6-t',
                     role: 'Topic',
                     subRole: 'possessor / context',
+                    semanticRole: 'Theme',
                     children: [
                         {
                             id: 'n6-t-np',
@@ -44,6 +45,7 @@ export const beiPassive: SentenceData[] = [
                             id: 'n6-c-s',
                             role: 'Subject',
                             subRole: 'patient',
+                            semanticRole: 'Patient',
                             text: { hanzi: '鼻子', pinyin: 'bí zi', translation: 'trunk/nose' }
                         },
                         {
@@ -66,6 +68,7 @@ export const beiPassive: SentenceData[] = [
                                             id: 'n6-c-p-bei-agent',
                                             role: 'Subject',
                                             subRole: 'agent',
+                                            semanticRole: 'Agent',
                                             text: { hanzi: '小孩儿', pinyin: 'xiǎo hái er', translation: 'child' }
                                         },
                                         {
@@ -115,6 +118,7 @@ export const beiPassive: SentenceData[] = [
                 {
                     id: 'n22-t',
                     role: 'Topic',
+                    semanticRole: 'Patient',
                     children: [
                         {
                             id: 'n22-t-attr',
@@ -151,6 +155,7 @@ export const beiPassive: SentenceData[] = [
                                             id: 'n22-c-bei-agent',
                                             role: 'Subject',
                                             subRole: 'agent',
+                                            semanticRole: 'Agent',
                                             text: { hanzi: '人', pinyin: 'rén', translation: 'someone / a person' }
                                         },
                                         {
@@ -193,6 +198,7 @@ export const beiPassive: SentenceData[] = [
                 {
                     id: 'n48-t',
                     role: 'Topic',
+                    semanticRole: 'Patient',
                     children: [
                         {
                             id: 'n48-t-attr',
@@ -229,6 +235,7 @@ export const beiPassive: SentenceData[] = [
                                             id: 'n48-agent',
                                             role: 'Subject',
                                             subRole: 'agent (doer)',
+                                            semanticRole: 'Agent',
                                             text: { hanzi: '他', pinyin: 'tā', translation: 'he / him' },
                                         },
                                         {
@@ -278,6 +285,7 @@ export const beiPassive: SentenceData[] = [
                     id: 'n49-t',
                     role: 'Topic',
                     text: { hanzi: '小偷', pinyin: 'xiǎo tōu', translation: 'thief' },
+                    semanticRole: 'Patient',
                 },
                 {
                     id: 'n49-c',
@@ -302,6 +310,7 @@ export const beiPassive: SentenceData[] = [
                                             id: 'n49-agent',
                                             role: 'Subject',
                                             subRole: 'agent (doer)',
+                                            semanticRole: 'Agent',
                                             text: { hanzi: '警察', pinyin: 'jǐng chá', translation: 'police' },
                                         },
                                         {
@@ -345,10 +354,10 @@ export const beiPassive: SentenceData[] = [
         explanation: 'A modern take on 青取之於藍而青於藍 (from Xunzi: "Blue dye comes from the indigo plant, yet surpasses it in color"). Modern Mandarin uses 是...的 plus a directional complement for the extraction, and 比...还要 for the comparison. In the tree, **青色** ("blue color") is the Topic. The first Comment uses **是从...里提取出来的** ("is extracted from..."), where 提取出来 uses a directional complement (出来, "out"). The second clause uses the comparative pattern **比...还要** ("even more than") + **蓝** ("blue").',
         tree: {
             id: 's80-root', role: 'Sentence', children: [
-                { id: 's80-t', role: 'Topic', text: { hanzi: '青色', pinyin: 'qīng sè', translation: 'blue dye' } },
+                { id: 's80-t', role: 'Topic', semanticRole: 'Theme', text: { hanzi: '青色', pinyin: 'qīng sè', translation: 'blue dye' } },
                 { id: 's80-c1', role: 'Comment', subRole: 'extraction clause', children: [
                     { id: 's80-shi', role: 'Copula', text: { hanzi: '是', pinyin: 'shì', translation: 'is' } },
-                    { id: 's80-pp', role: 'Adjunct', subRole: 'location', text: { hanzi: '从蓝草里', pinyin: 'cóng lán cǎo lǐ', translation: 'from the indigo plant' } },
+                    { id: 's80-pp', role: 'Adjunct', subRole: 'location', semanticRole: 'Source', text: { hanzi: '从蓝草里', pinyin: 'cóng lán cǎo lǐ', translation: 'from the indigo plant' } },
                     { id: 's80-tq', role: 'Head Verb', text: { hanzi: '提取', pinyin: 'tí qǔ', translation: 'extract' } },
                     { id: 's80-cl', role: 'Complement', subRole: 'directional', text: { hanzi: '出来', pinyin: 'chū lái', translation: 'out' } },
                     { id: 's80-de', role: 'Particle', text: { hanzi: '的', pinyin: 'de', translation: '(nominalizer)' } },
@@ -376,7 +385,8 @@ export const beiPassive: SentenceData[] = [
                 {
                     id: 's102-t',
                     role: 'Topic',
-                    text: { hanzi: '钱包', pinyin: 'qián bāo', translation: 'wallet' }
+                    text: { hanzi: '钱包', pinyin: 'qián bāo', translation: 'wallet' },
+                    semanticRole: 'Patient',
                 },
                 {
                     id: 's102-c',
@@ -396,6 +406,7 @@ export const beiPassive: SentenceData[] = [
                                     id: 's102-ghost-agent',
                                     role: 'Topic',
                                     subRole: 'implied topic',
+                                    semanticRole: 'Agent',
                                     text: { hanzi: '[有人]', pinyin: 'yǒu rén', translation: 'someone' }
                                 },
                                 {
@@ -427,6 +438,7 @@ export const beiPassive: SentenceData[] = [
                 {
                     id: 's103-t',
                     role: 'Topic',
+                    semanticRole: 'Patient',
                     children: [
                         { id: 's103-t-attr', role: 'Attributive', text: { hanzi: '我的', pinyin: 'wǒ de', translation: 'my' } },
                         { id: 's103-t-hn', role: 'Head Noun', text: { hanzi: '自行车', pinyin: 'zì xíng chē', translation: 'bicycle' } }
@@ -449,6 +461,7 @@ export const beiPassive: SentenceData[] = [
                                 {
                                     id: 's103-inner-t',
                                     role: 'Topic',
+                                    semanticRole: 'Agent',
                                     text: { hanzi: '人', pinyin: 'rén', translation: 'someone/people' }
                                 },
                                 {
