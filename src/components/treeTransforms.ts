@@ -73,6 +73,7 @@ export const parseTreeToFlow = (root: AppGrammarNodeData | undefined, expandedId
             data: {
                 role: node.role,
                 subRole: node.subRole,
+                semanticRole: node.semanticRole,
                 isDropped: node.isDropped,
                 impliedText: node.impliedText,
                 refersToId: node.refersToId,

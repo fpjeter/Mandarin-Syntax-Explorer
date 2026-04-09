@@ -11,6 +11,10 @@ import { useIsClassical } from '../contexts/AppModeContext';
 export type GrammarNodeViewData = {
     role: GrammarRole;
     subRole?: string;
+    /** Thematic/semantic role when tagged (e.g. Agent, Patient) */
+    semanticRole?: string;
+    /** When true, semantic role overlay is displayed */
+    isSemanticMode?: boolean;
     isDropped?: boolean;
     impliedText?: string;
     refersToId?: string;
@@ -202,6 +206,17 @@ const GrammarNodeInner = ({ id, data, isConnectable }: NodeProps<GrammarNodeType
                         </div>
                     );
                 })()}
+
+                {/* Semantic role overlay pill — only visible in Semantic Mode */}
+                {data.isSemanticMode && data.semanticRole && !isGhost && (
+                    <div className={`text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border mb-1 text-center whitespace-nowrap ${
+                        isClassical
+                            ? 'text-amber-200 bg-amber-800/50 border-amber-500/50 shadow-[0_0_8px_rgba(245,158,11,0.2)]'
+                            : 'text-cyan-200 bg-cyan-800/50 border-cyan-500/50 shadow-[0_0_8px_rgba(6,182,212,0.2)]'
+                    }`}>
+                        θ {data.semanticRole}
+                    </div>
+                )}
 
                 {/* Ghost placeholder: bracketed implied pronoun */}
                 {isGhost && data.impliedText && (
