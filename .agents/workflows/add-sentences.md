@@ -8,7 +8,7 @@ When you are asked to add sentences to the Mandarin Grammar Tree project, you ar
 ## Rules & Boundaries
 1. **No UI Changes**: You must not touch any files in `src/components/`, `App.tsx`, or any styling files. You operate strictly within the JSON databank payloads.
 2. **JSON Databank**: Sentences are natively parsed from `src/data/modern_sentences.json` and `src/data/classical_sentences.json`. You must write programmatic scripts (e.g., Python/Node) to update the JSON, or carefully inject your JSON syntax if manually editing.
-3. **No Legacy TypeScript**: Do NOT attempt to modify or recreate `src/data/sentences/*.ts`. Those are deprecated and live entirely in `legacy_ts_archive`.
+3. **No Legacy TypeScript**: Do NOT attempt to modify or recreate `src/data/sentences/*.ts`. Those are deprecated and live entirely in `docs/data_drafts/legacy_ts_archive/`.
 
 ## Branch Protocol
 - **New task (no existing branch specified)**: Create a feature branch: `git checkout -b data/your-task-name`. Never commit directly to `main`.

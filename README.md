@@ -145,7 +145,6 @@ src/
 ├── contexts/
 │   └── AppModeContext.tsx          # Modern/classical mode context provider
 ├── data/
-│   ├── legacy_ts_archive/          # Read-only archive of pre-migration TS format
 │   ├── modern_sentences.json       # 123 curated Modern Mandarin JSON sentences
 │   ├── classical_sentences.json    # 30 curated Classical Chinese JSON quotes
 │   ├── categories.ts               # Modern category list and descriptions
