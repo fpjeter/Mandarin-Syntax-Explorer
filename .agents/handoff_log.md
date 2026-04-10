@@ -56,6 +56,24 @@ Append a new block to `## Pending Requests` using this exact format:
 
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 
+### [2026-04-09] Orchestrator → Frontend Engineer
+**Status**: ✅ Done
+**Task**: Swap Zoom Controls and Badge Legend Corners
+**Branch**: `ui/swap-controls`
+
+**Context**: The user requested that we switch the `BadgeLegend` and `ZoomControls` back to their original sides.
+
+**Action Required**:
+1. Checkout: `git checkout -b ui/swap-controls`
+2. Update the positioning of `ZoomControls` in `src/components/SyntaxTree.tsx` so it anchors to the `bottom-right` instead of `bottom-left`.
+3. Update the positioning of `BadgeLegend` in `src/components/BadgeLegend.tsx` (or `SyntaxTree.tsx`) to anchor to `bottom-left`.
+4. Ensure they don't overlap with any other floating toolbars, and test mobile responsiveness (`sm:` variants).
+5. Run: `npm run build`
+6. Mark this ticket ✅ Done. Do NOT commit — Orchestrator handles git.
+
+**Urgency**: HIGH
+
+
 ### [2026-04-09] Orchestrator → Data Linguist
 **Status**: ✅ Done
 **Task**: Reassign Category for Sentences s80 and s103

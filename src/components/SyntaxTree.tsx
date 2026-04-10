@@ -47,7 +47,7 @@ const ZoomControls: React.FC<{ onExpandAll: () => void; onCollapseAll: () => voi
     const btn = 'flex items-center justify-center rounded-xl transition-all duration-200 bg-slate-800/60 text-slate-400 hover:bg-slate-700/80 hover:text-slate-100 w-8 h-8 lg:w-10 lg:h-10';
     const iconCls = 'w-4 h-4 lg:w-5 lg:h-5';
     return (
-        <div className="absolute bottom-2 left-2 lg:bottom-6 lg:left-4 z-20 pointer-events-auto">
+        <div className="absolute bottom-2 right-2 lg:bottom-6 lg:right-4 z-20 pointer-events-auto">
             <div className="glass-panel rounded-2xl border border-slate-700/60 p-1 lg:p-1.5 flex flex-row lg:flex-col gap-1 shadow-2xl">
                 <button onClick={() => zoomIn({ duration: 250 })} className={btn} title="Zoom in">
                     <ZoomIn className={iconCls} />
