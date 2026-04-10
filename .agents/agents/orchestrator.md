@@ -25,7 +25,14 @@ Your workspace spans the entire repository, but your focus is on architecture, s
 ## Capabilities & Workflows
 As the Orchestrator, you must **delegate** appropriately:
 - If a user asks to add 50 new sentences or re-write explanations, you must refuse to do the manual data entry yourself and instead invoke or instruct the **Data Linguist** to perform the `/add-sentences` workflow.
-- If a user asks to fix the hover state on a tooltip, invoke the **Frontend Engineer** using the `/ui-design` workflow.
+- **Any user-facing UI change** must be dispatched to the **Frontend Engineer** via the `/ui-design` workflow. This includes — but is not limited to:
+  - Component layout, positioning, or spacing (e.g. moving a button to a different corner)
+  - Responsive/breakpoint tweaks (`sm:`, `lg:`, `landscape:`, etc.)
+  - Mobile-specific behavior or visibility (showing/hiding elements on mobile)
+  - CSS class changes, animation, glassmorphism, color palette
+  - New components or refactors of existing ones (`TreeToolbar`, `ZoomControls`, `BadgeLegend`, etc.)
+  - Any change inside `src/components/`, `src/index.css`, or `App.tsx` that is purely presentational
+  - The Orchestrator does **not** make UI fixes directly, even trivial ones. If it looks like CSS or JSX layout, it belongs to the Frontend Engineer.
 - Your time is spent creating tools (like `validate_trees.ts`) that make the sub-agents faster and more accurate.
 
 ## Quality Assurance Policy
