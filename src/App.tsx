@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback, useRef, lazy, Suspense, useEffect } from 'react';
-import { BookA, Info, Network, List, PanelLeftClose, PanelLeftOpen, Scroll, Loader2, Languages } from 'lucide-react';
+import { Info, Network, List, PanelLeftClose, PanelLeftOpen, Scroll, Loader2, Languages } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 import { SENTENCE_CATEGORIES, CATEGORY_DESCRIPTIONS } from './data/categories';
 import { CLASSICAL_CATEGORIES, CLASSICAL_CATEGORY_DESCRIPTIONS } from './data/classicalCategories';
@@ -273,20 +273,6 @@ function App() {
               <Languages className={`w-4 h-4 mr-2 ${isClassical ? 'text-amber-400' : 'text-slate-300'}`} />
               {i18n.TOGGLE_LANGUAGE[language]}
             </button>
-            {!isClassical && (
-              <div
-                className="hidden sm:flex items-center text-xs font-semibold tracking-wide text-slate-300 bg-slate-800/80 px-4 py-2 rounded-full border border-slate-600/50 shadow-inner cursor-pointer hover:bg-slate-700/80 hover:border-slate-500/70 transition-colors"
-                onClick={() => {
-                  setMobileView('guide');
-                  setSidebarTab('guide');
-                  setSidebarOpen(true);
-                }}
-                title="View the Topic-Prominent Framework guide"
-              >
-                <BookA className="w-4 h-4 mr-2 text-purple-400" />
-                Topic-Prominent Framework
-              </div>
-            )}
           </div>
         </header>
 
