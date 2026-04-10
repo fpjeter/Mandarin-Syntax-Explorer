@@ -35,7 +35,7 @@ Append a new block to `## Pending Requests` using this exact format:
 ## Pending Requests
 
 ### [2026-04-09] Linguistics Specialist → Orchestrator
-**Status**: 🟡 Pending
+**Status**: ✅ Resolved (Dispatched to Data Linguist)
 **Blocked Task**: BEI Passive Category Audit (out-of-band scan requested by User)
 **Dependency**: Two sentences in the BEI Passive (被字句) category are misclassified. Data Linguist must reassign them:
 
@@ -55,6 +55,23 @@ Append a new block to `## Pending Requests` using this exact format:
 ## Active Assignments
 
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
+
+### [2026-04-09] Orchestrator → Data Linguist
+**Status**: ✅ Done
+**Task**: Reassign Category for Sentences s80 and s103
+**Branch**: `data/audit-bei-passives`
+
+**Context**: A Linguistics Specialist audit caught two sentences in `modern_sentences.json` miscategorized under `BEI Passive (被字句)`.
+
+**Action Required**:
+1. Checkout: `git checkout -b data/audit-bei-passives`
+2. Open `src/data/modern_sentences.json`.
+3. Locate `s80` ("青色是从蓝草里提取出来的..."). Change its `category` from `BEI Passive (被字句)` to `Shì–de Construction (是…的)`. Update the `categoryZh` appropriately if it exists, or just ensure the string exactly matches `Shì–de Construction (是…的)`.
+4. Locate `s103` ("我的自行车让人骑走了。"). Change its `category` from `BEI Passive (被字句)` to `Pivotal Constructions (兼语句)`. Update its explanation (`explanation.en` or `explanation.zh` if you see it, specifically explaining that `让` operates as a pivot here where the recipient of `让` is also the doer of `骑走`).
+5. Run: `npm run qa`
+6. Mark this ticket ✅ Done. Do NOT commit.
+
+**Urgency**: MEDIUM
 
 ### [2026-04-09] Orchestrator → Educational Publisher
 **Status**: 🔴 Active

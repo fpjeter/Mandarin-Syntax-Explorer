@@ -2850,7 +2850,7 @@
   },
   {
     "id": "s80",
-    "category": "BEI Passive (被字句)",
+    "category": "Shì–de Construction (是…的)",
     "chinese": "青色是从蓝草里提取出来的，但是比蓝草还要蓝。",
     "pinyin": "Qīng sè shì cóng lán cǎo lǐ tí qǔ chū lái de, dàn shì bǐ lán cǎo hái yào lán.",
     "translation": "Blue dye is extracted from the indigo plant, yet it is even bluer than indigo.",
@@ -3060,13 +3060,13 @@
   },
   {
     "id": "s103",
-    "category": "BEI Passive (被字句)",
+    "category": "Pivotal Constructions (兼语句)",
     "chinese": "我的自行车让人骑走了。",
     "pinyin": "Wǒ de zì xíng chē ràng rén qí zǒu le.",
     "translation": "My bicycle was ridden away by someone.",
     "explanation": {
-      "en": "**我的自行车** (\"my bicycle\") is the Topic. The Comment uses **让** (\"let/allow\") instead of 被. This implies the bicycle \"allowed\" the situation to happen. In spoken Mandarin, treating a situation as something \"allowed\" rather than \"suffered\" is far more common for casual passives. The bicycle allowed a full nested event: **人骑走** (\"someone riding it away\"). Both follow the exact same Matryoshka nesting structure (Topic + Action Verb + Embedded Clause), but **让** creates a more natural, casual tone.",
-      "zh": "这是对\"事实胜于雄辩\"的现代改写。**是...的**强调结构用来聚焦判断的确定性：**需要时间来验证的**聚焦于\"验证需要时间\"这个事实。**是**和**的**不是简单的系动词和助词，而是共同构成一个聚焦框架。"
+      "en": "**我的自行车** (\"my bicycle\") is the Topic. The Comment uses **让** (\"let/allow\") instead of 被. This creates a Pivotal Construction where **让** operates as a pivot: the bicycle \"allows\" the situation, and the recipient of that allowance (**人**, \"someone\") becomes the doer of the next action (**骑走**, \"ride away\"). While often translated as a casual passive, structurally the sentence says the bicycle \"let\" someone ride it away.",
+      "zh": "[PENDING PUBLISHER]"
     },
     "tree": {
       "id": "s103-n",
