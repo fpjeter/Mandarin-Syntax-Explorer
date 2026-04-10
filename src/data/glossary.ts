@@ -9,130 +9,182 @@ export const glossary: Record<GrammarRole, GlossaryEntry> = {
     Sentence: {
         headline: 'The whole sentence',
         detail: 'The complete statement. Every other part in the tree lives inside here.',
+        headlineZh: '完整句子',
+        detailZh: '一个完整的表述。树中所有其他部分都包含在这个最外层的框架里。',
     },
     Topic: {
         headline: 'What the sentence is about',
         detail:
             'Mandarin almost always starts by naming what you\'re talking about: the topic. It\'s like saying "As for the elephant…" before you say anything else.',
+        headlineZh: '话题',
+        detailZh: '中文几乎总是先点明要谈论的对象。就像先说"说到那只大象……"再说其他内容一样。',
     },
     Comment: {
         headline: 'What is said about the topic',
         detail:
             'After the topic is set, the comment says something about it. The comment is the "punchline," the real information the speaker wants to give.',
+        headlineZh: '评论',
+        detailZh: '话题确定之后，评论就是对它的描述。评论是句子的"重点"，是说话人真正要传达的信息。',
     },
     Subject: {
         headline: 'Who does the action',
         detail:
             'The person or thing performing the verb, inside a comment clause. Often the same as the topic, but not always.',
+        headlineZh: '主语',
+        detailZh: '评论内部执行动作的人或事物。通常和话题相同，但并非总是如此。',
     },
     Predicate: {
         headline: 'The action or description',
         detail:
             'Everything that is said about the subject: the verb, its object, and any extras like time, place, or result.',
+        headlineZh: '谓语',
+        detailZh: '关于主语的全部描述：动词、宾语，以及时间、地点、结果等附加成分。',
     },
     'Verb Phrase': {
         headline: 'A verb and its extras',
         detail:
             'A group of words built around a verb, including any object, direction, result, or length it comes with.',
+        headlineZh: '动词短语',
+        detailZh: '以动词为核心组建的一组词，包括宾语、趋向、结果或时量等附属成分。',
     },
     'Noun Phrase': {
         headline: 'A noun and its description',
         detail:
             'A group of words built around a noun. For example, 那只大象 ("that elephant") is a noun phrase: 那只 describes 大象.',
+        headlineZh: '名词短语',
+        detailZh: '以名词为核心组建的一组词。比如"那只大象"就是一个名词短语：那只是修饰大象的。',
     },
     Verb: {
         headline: 'The action or state word',
         detail:
             'The core word expressing what happens: 打 (hit), 看 (look), 喜欢 (like), etc.',
+        headlineZh: '动词',
+        detailZh: '表达动作或状态的核心词：打（击打）、看（看）、喜欢（喜欢）等。',
     },
     Object: {
         headline: 'What receives the action',
         detail:
             'The thing the verb acts on. In "她看书", 书 (book) is the object.',
+        headlineZh: '宾语',
+        detailZh: '动词作用的对象。比如"她看书"中，书就是宾语。',
     },
     Adjunct: {
         headline: 'Pre-verbal modifier (状语 zhuàngyǔ)',
         detail:
             'Anything that appears before the verb to set the scene: how, when, where, how often, or to what degree. Chinese grammar calls this position 状语 (zhuàngyǔ). It covers not just classic adverbs like 都 (all) or 很 (very), but also location phrases like 在厨房里 ("in the kitchen") and manner phrases like 生气地 ("angrily").',
+        headlineZh: '状语',
+        detailZh: '出现在动词前面、用来铺设场景的成分：方式、时间、地点、频率或程度。不仅包括都、很这样的副词，还包括"在厨房里"等方位短语和"生气地"等方式短语。',
     },
     Preposition: {
         headline: 'A linking word that shows relationship',
         detail:
             'Comes before a noun to show direction, location, comparison, or accompaniment. Common examples: 比 (compared to), 跟 (with/and), 像 (like/resembling), 在 (at/in).',
+        headlineZh: '介词',
+        detailZh: '放在名词前面、表示方向、位置、比较或伴随关系的连接词。常见的有：比、跟、像、在。',
     },
     Particle: {
         headline: 'A small grammatical word',
         detail:
             'Short words added to sentences or verbs to show tense, mood, or grammatical role. Examples include 了 (completion) and 吗 (question mark). In Potential Complements (可能补语), the **得** or **不** are just small particles inserted to show possibility: "can" or "cannot" do it.',
+        headlineZh: '助词',
+        detailZh: '附着在句子或动词上、表示时态、语气或语法关系的小词。比如了（完成）和吗（疑问）。在可能补语中，得或不就是插在中间表示"能"或"不能"的助词。',
     },
     Adjective: {
         headline: 'A describing word',
         detail:
             'Describes a quality of a noun, like 大 (big), 简单 (simple), 高 (tall).',
+        headlineZh: '形容词',
+        detailZh: '描述名词性质的词，如大、简单、高。',
     },
     Noun: {
         headline: 'A person, place, or thing',
         detail:
             'The name of something. E.g. 书 (book), 图书馆 (library), 大象 (elephant).',
+        headlineZh: '名词',
+        detailZh: '事物的名称。如书、图书馆、大象。',
     },
     Pronoun: {
         headline: 'A stand-in for a noun',
         detail:
             'Words like 我 (I/me), 你 (you), 她 (she/her), 我们 (we/us) that refer to people without naming them.',
+        headlineZh: '代词',
+        detailZh: '代替名词的词，如我、你、她、我们，用来指代人而不直接说出名字。',
     },
     Attributive: {
         headline: 'A word or phrase modifying a noun',
         detail:
             'In Mandarin, descriptors always come BEFORE the noun and are usually followed by 的. E.g. 那只 ("that [measure word]") before 大象.',
+        headlineZh: '定语',
+        detailZh: '修饰名词的词或短语。中文里定语总是放在名词前面，通常后面跟"的"。比如"那只"放在"大象"前面。',
     },
     Complement: {
         headline: 'Extra info completing a verb',
         detail:
             'Comes after the verb to add info about the result, direction, possibility, or degree of the action. The particle **得** plays two different roles depending on the complement type: in a Degree Complement (程度补语), 得 links the verb to a full description of *how* the action was done (e.g. 跑得快). In a Potential Complement (可能补语), 得/不 are small internal switches that signal whether the result *can* or *cannot* be achieved.',
+        headlineZh: '补语',
+        detailZh: '跟在动词后面、补充说明结果、趋向、可能性或程度的成分。得在不同补语中有不同作用：在程度补语中，得连接动词和对动作方式的描述（如跑得快）；在可能补语中，得/不是表示"能"或"不能"达到结果的标记。',
     },
     'Head Noun': {
         headline: 'The main noun in a noun phrase',
         detail:
             'The core noun that all the other descriptive words in the phrase are modifying.',
+        headlineZh: '核心名词',
+        detailZh: '名词短语中的核心名词，短语里其他所有描述性词语都是在修饰它。',
     },
     'Head Verb': {
         headline: 'The main verb in a verb phrase',
         detail:
             'The core verb around which complements, objects, and particles are grouped.',
+        headlineZh: '核心动词',
+        detailZh: '动词短语中的核心动词，补语、宾语和助词都围绕它组织。',
     },
     'Measure Word': {
         headline: 'A counting or classifying word',
         detail:
             'Mandarin requires a special word between a number/demonstrative and a noun. E.g. 只 for animals (那只猫), 个 for general things, 座 for mountains.',
+        headlineZh: '量词',
+        detailZh: '中文在数词/指示词和名词之间必须加一个专门的量词。如动物用"只"（那只猫），通用的用"个"，山用"座"。',
     },
     'Verb Morpheme': {
         headline: 'The verb half of a separable verb (离合词)',
         detail:
             'The action half of a separable verb (离合词). E.g. 见 in 见面, 睡 in 睡觉, 散 in 散步. When the verb splits, particles and other words insert between this half and the object half.',
+        headlineZh: '离合词动词部分',
+        detailZh: '离合词的动作部分。如见面的"见"、睡觉的"睡"、散步的"散"。当离合词拆开时，助词和其他词会插入动词和宾语之间。',
     },
     'Object Morpheme': {
         headline: 'The object half of a separable verb (离合词)',
         detail:
             'The noun half of a separable verb (离合词), the "thing" the verb acts on internally. E.g. 面 in 见面, 觉 in 睡觉, 步 in 散步. When the verb splits, this half moves to the end.',
+        headlineZh: '离合词宾语部分',
+        detailZh: '离合词的名词部分，即动词内部作用的"对象"。如见面的"面"、睡觉的"觉"、散步的"步"。当动词拆开时，这一半移到末尾。',
     },
     Pivot: {
         headline: 'A noun that plays two grammatical roles at once',
         detail:
             'In a pivotal construction (兼语句), one noun is simultaneously the object of the first verb and the subject of the second. E.g. in 老师让学生回答 (the teacher had the students answer), 学生 is the object of 让 and the subject of 回答.',
+        headlineZh: '兼语',
+        detailZh: '在兼语句中，一个名词同时充当前一个动词的宾语和后一个动词的主语。比如"老师让学生回答"中，学生既是"让"的宾语，又是"回答"的主语。',
     },
     Copula: {
         headline: 'The linking verb "to be"',
         detail:
             'The linking verb 是 ("to be"). In the 是…的 pattern, 是 opens the focus and 的 closes it, like saying "it WAS [yesterday] that…"',
+        headlineZh: '系动词',
+        detailZh: '连接词"是"。在"是……的"句式中，"是"开启聚焦、"的"收束聚焦，类似于强调"就是（昨天）……的"。',
     },
     'Parallel Sentence': {
         headline: 'Side-by-side independent statements',
         detail:
             'A compound sentence where two or more independent clauses are placed neatly side-by-side to compare or contrast, often without needing an "and" or a "but".',
+        headlineZh: '并列句',
+        detailZh: '两个或以上独立分句整齐地并排放在一起、形成对比或对照的复合句，通常不需要"和"或"但是"。',
     },
     'Embedded Clause': {
         headline: 'A sentence hiding inside a sentence',
         detail:
             'A fully-formed mini-sentence (complete with its own topic and comment) that is nested inside a larger structure. You will see these inside pivotal constructions, degree complements, and many other patterns.',
+        headlineZh: '嵌套从句',
+        detailZh: '一个完整的小句子（有自己的话题和评论），嵌套在更大的结构内部。你会在兼语句、程度补语等多种句型中看到它。',
     },
 };
