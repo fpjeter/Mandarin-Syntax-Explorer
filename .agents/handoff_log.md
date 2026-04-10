@@ -37,6 +37,40 @@ Append a new block to `## Pending Requests` using this exact format:
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 
 ### [2026-04-09] Orchestrator → Educational Publisher
+**Status**: 🔴 Active
+**Task**: Phase 10 — Translate Category Descriptions and Full Explanations
+**Branch**: `data/i18n-categories`
+
+**Context**: The i18n infrastructure for Phase 10 is wired. `CATEGORY_DESCRIPTIONS`, `FULL_CATEGORY_EXPLANATIONS` (both in `src/data/categories.ts`), and `CLASSICAL_CATEGORY_DESCRIPTIONS` (in `src/data/classicalCategories.ts`) are now `Record<K, BilingualString>`. All values currently have only an `en` field. Your job is to add `zh` fields.
+
+**Files to edit**:
+- `src/data/categories.ts` — 19 short descriptions + 19 long explanations
+- `src/data/classicalCategories.ts` — 6 short descriptions
+
+**Format**: Add a `zh` field to each existing `{ en: '...' }` object:
+```ts
+'BA Construction (把字句)': {
+    en: 'Use 把 to move a specific object before the verb...',
+    zh: '用"把"字把宾语前置，突出动作对它产生的影响。',
+},
+```
+
+**Tone**:
+- Short descriptions (`CATEGORY_DESCRIPTIONS`): one friendly sentence, 15-25 characters.
+- Long explanations (`FULL_CATEGORY_EXPLANATIONS`): match the English paragraph's warmth and examples. Preserve `**bold**` markdown. Keep hanzi examples (e.g. 那家餐厅, 菜很好吃) in place.
+- Classical descriptions: scholarly but approachable, similar to the classical sentence explanation voice.
+
+**Strict Boundary**: Only add `zh` fields. Never edit `en` strings, category keys, or any AST/tree data.
+
+**Action Required**:
+1. Already on branch: `git checkout data/i18n-categories`
+2. Add `zh` to every entry in both files.
+3. Run: `npx tsc --noEmit`
+4. Mark this ticket ✅ Done. Do NOT commit — Orchestrator handles git.
+
+**Urgency**: MEDIUM
+
+### [2026-04-09] Orchestrator → Educational Publisher
 **Status**: 🔴 Done
 **Task**: Phase 9d — Translate Modern and Classical Glossary Entries
 **Branch**: `data/i18n-glossary`
