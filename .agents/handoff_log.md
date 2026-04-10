@@ -395,3 +395,25 @@ Reserve Instrument/Location/Goal/Source/Stimulus for future advanced mode.
 3. Run `npx eslint src/utils/generateStudySheet.ts` and confirm 0 errors
 4. Run `git add . && git commit -m "fix(utils): remove useless escape sequences"`
 5. Run `git push origin chore/agent-integration`
+
+---
+
+### [2026-04-09] Orchestrator -> Educational Publisher
+**Status**: ACTIVE
+**Task**: Phase 9b -- Translate All 30 Classical Sentence Explanations
+**Branch**: data/i18n-classical-zh
+
+Convert each explanation field in classical_sentences.json from a plain string to a BilingualString { en, zh }. Tone: classical Chinese lit teacher voice. Only edit explanation fields, never tree AST. Run npm run qa. Mark Done -- Orchestrator commits.
+
+**Urgency**: MEDIUM
+
+---
+
+### [2026-04-09] Orchestrator -> Educational Publisher
+**Status**: ACTIVE
+**Task**: Phase 9c -- Translate Grammar Guides to Chinese
+**Branch**: data/i18n-grammar-guides
+
+Wire useLanguage() from ../contexts/LanguageContext into GrammarGuide.tsx and ClassicalGrammarGuide.tsx. Wrap every English prose block with {language === 'zh' ? <ChineseVersion /> : <EnglishVersion />}. Translate all user-visible prose (headers, paragraphs, example labels). Do NOT translate className strings or Hanzi examples. Run npx tsc --noEmit. Mark Done -- Orchestrator commits.
+
+**Urgency**: LOW
