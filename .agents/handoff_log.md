@@ -37,7 +37,7 @@ Append a new block to `## Pending Requests` using this exact format:
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 
 ### [2026-04-09] Orchestrator → Educational Publisher
-**Status**: 🔴 Active
+**Status**: 🔴 Done
 **Task**: Phase 9d — Translate Modern and Classical Glossary Entries
 **Branch**: `data/i18n-glossary`
 
@@ -65,7 +65,11 @@ Sentence: {
 3. Run: `npx tsc --noEmit`
 4. Mark this ticket ✅ Done. Do NOT commit — Orchestrator handles git.
 
-**Urgency**: LOW
+> [!NOTE]
+> Added `headlineZh` and `detailZh` to all 24 entries in both `glossary.ts` (modern) and `classicalGlossary.ts` (classical). Modern entries use a friendly grammar instructor voice; classical entries use a scholarly classical Chinese voice. `npx tsc --noEmit` passes clean. Files modified but NOT committed per ticket instructions.
+
+**Issues Encountered:**
+1. No issues encountered during this task. Both files accepted the new fields cleanly and the types matched as expected.
 
 ---
 
