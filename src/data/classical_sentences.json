@@ -7,7 +7,10 @@
     "chinese": "學而時習之，不亦說乎？",
     "pinyin": "Xué ér shí xí zhī, bù yì yuè hū?",
     "translation": "To study and regularly practice it, is that not a joy?",
-    "explanation": "The very first line of the **Analects** proclaims that the deepest satisfaction comes from putting learning into practice. Knowledge is not passive but something to be lived and revisited. Confucius frames this as a rhetorical question, gently insisting that the listener already knows the answer: of course it is a joy. *Grammatically,* **而** (ér) links two actions sequentially: study, *then* practice. It works exactly like a serial-verb connector. The **不亦…乎** frame is a rhetorical question pattern meaning \"is it not…?\" that *asserts* rather than asks. In modern Mandarin, you would need explicit connectors and question particles; here, 而 and 乎 handle everything elegantly in just ten characters. The **之** (zhī) pronoun (\"it\") refers back to what was studied, a very common classical anaphoric device.",
+    "explanation": {
+      "en": "The very first line of the **Analects** proclaims that the deepest satisfaction comes from putting learning into practice. Knowledge is not passive but something to be lived and revisited. Confucius frames this as a rhetorical question, gently insisting that the listener already knows the answer: of course it is a joy. *Grammatically,* **而** (ér) links two actions sequentially: study, *then* practice. It works exactly like a serial-verb connector. The **不亦…乎** frame is a rhetorical question pattern meaning \"is it not…?\" that *asserts* rather than asks. In modern Mandarin, you would need explicit connectors and question particles; here, 而 and 乎 handle everything elegantly in just ten characters. The **之** (zhī) pronoun (\"it\") refers back to what was studied, a very common classical anaphoric device.",
+      "zh": "《论语》开篇第一句就宣告：最深的满足来自将所学付诸实践。**学**是获取知识，**习**是反复练习和实践。**而**连接两个动作，**时**（\"按时\"）修饰习的频率。**不亦...乎**是文言反问句式，意为\"难道不是...吗？\"——以反问传达深切的肯定。**說**（悦）通\"悦\"，表示由内而发的喜悦。整句用一个反问句把\"学以致用\"的理念升华为一种精神享受。"
+    },
     "tree": {
       "id": "cc1-root",
       "role": "Sentence",
@@ -125,7 +128,10 @@
     "chinese": "知之者不如好之者，好之者不如樂之者。",
     "pinyin": "Zhī zhī zhě bù rú hào zhī zhě, hào zhī zhě bù rú lè zhī zhě.",
     "translation": "One who knows it is not as good as one who loves it; one who loves it is not as good as one who delights in it.",
-    "explanation": "Confucius argues that **genuine engagement** surpasses mere knowledge: loving what you study is better than simply knowing it, and finding joy in it is the highest form of mastery. The progression from knowing → loving → delighting maps out a hierarchy of learning that remains influential in Chinese pedagogy today. *Grammatically,* the sentence showcases the classical **者** (zhě) nominalizer, which turns a verb phrase into \"the one who [verb]s.\" The **不如** comparative pattern (\"is not as good as\") builds a rising chain, and each clause follows the same template: **[verb] 之 者 不如 [verb] 之 者**. The **之** (zhī) in each phrase is an object pronoun (\"it\"), placed between the verb and 者. This repetitive parallel structure is a hallmark of classical rhetoric: it builds rhythm and emphasis while making the grammar crystal clear.",
+    "explanation": {
+      "en": "Confucius argues that **genuine engagement** surpasses mere knowledge: loving what you study is better than simply knowing it, and finding joy in it is the highest form of mastery. The progression from knowing → loving → delighting maps out a hierarchy of learning that remains influential in Chinese pedagogy today. *Grammatically,* the sentence showcases the classical **者** (zhě) nominalizer, which turns a verb phrase into \"the one who [verb]s.\" The **不如** comparative pattern (\"is not as good as\") builds a rising chain, and each clause follows the same template: **[verb] 之 者 不如 [verb] 之 者**. The **之** (zhī) in each phrase is an object pronoun (\"it\"), placed between the verb and 者. This repetitive parallel structure is a hallmark of classical rhetoric: it builds rhythm and emphasis while making the grammar crystal clear.",
+      "zh": "孔子论述了三个层次的递进：**知之者**（知道它的人）不如**好之者**（爱好它的人），好之者不如**乐之者**（以之为乐的人）。**者**是文言代词，相当于\"……的人\"。**不如**表示\"比不上\"。三个**之**字都指前文提到的某种学问或技艺。孔子用递进式排比说明：真正的精通不在于头脑里知道多少，而在于内心是否真正热爱。"
+    },
     "tree": {
       "id": "cc2-root",
       "role": "Sentence",
@@ -335,7 +341,10 @@
     "chinese": "三人行，必有我師焉。",
     "pinyin": "Sān rén xíng, bì yǒu wǒ shī yān.",
     "translation": "When three people walk together, there is certainly my teacher among them.",
-    "explanation": "Confucius teaches radical intellectual humility: **everyone you encounter has something to teach you**. Even in a group as small as three, there is always someone whose strengths you can learn from (and whose faults you can learn to avoid). This attitude of perpetual openness to learning remains a core Confucian value. *Grammatically,* the proverb illustrates the classical coverb **焉** (yān), a fusional word that packs \"in/among them\" into a single character , combining a preposition (\"among\") with its pronoun object (\"them\"). The sentence opens with a conditional clause: **三人行** (\"three people walk\") sets the scene, then the Comment asserts **必有** (\"certainly there exists\") **我師** (\"my teacher\"). In modern Mandarin, you would need a full phrase like 在其中 (\"among them\"); classical Chinese compresses this into one elegant syllable.",
+    "explanation": {
+      "en": "Confucius teaches radical intellectual humility: **everyone you encounter has something to teach you**. Even in a group as small as three, there is always someone whose strengths you can learn from (and whose faults you can learn to avoid). This attitude of perpetual openness to learning remains a core Confucian value. *Grammatically,* the proverb illustrates the classical coverb **焉** (yān), a fusional word that packs \"in/among them\" into a single character , combining a preposition (\"among\") with its pronoun object (\"them\"). The sentence opens with a conditional clause: **三人行** (\"three people walk\") sets the scene, then the Comment asserts **必有** (\"certainly there exists\") **我師** (\"my teacher\"). In modern Mandarin, you would need a full phrase like 在其中 (\"among them\"); classical Chinese compresses this into one elegant syllable.",
+      "zh": "孔子教导一种极致的求学谦逊：你遇到的每一个人都有值得你学习的地方。**三人**不是字面上的\"三个人\"，而是泛指\"几个人\"。**行**是\"同行、一起走\"。**必**表示绝对肯定：一定有。**我师**是\"我的老师\"。**焉**是文言语气词，表示\"在其中\"。整句结构是一个条件句：几人同行（条件）→ 其中必有我师（结果）。"
+    },
     "tree": {
       "id": "cc3-root",
       "role": "Sentence",
@@ -451,7 +460,10 @@
     "chinese": "道可道，非常道。",
     "pinyin": "Dào kě dào, fēi cháng dào.",
     "translation": "The Way that can be spoken of is not the constant Way.",
-    "explanation": "The famous opening of the **Tao Te Ching** announces that ultimate reality, the Dao, **transcends language**. Any \"Way\" that can be captured in words is, by definition, not the eternal, unchanging Way. Laozi is warning the reader at the outset that his entire text is a paradox: words pointing toward something beyond words. *Grammatically,* the same character **道** (dào) appears three times with three different roles: first as a noun (\"the Way\"), then as a verb (\"to speak/articulate\"), and finally as a noun again (\"the [true] Way\"). **可** (kě) before the verb means \"can be,\" similar to the modern potential complement pattern. **非** (fēi) is the classical copula negator, meaning \"is not,\" negating the entire identity of the subject. **常** (cháng) means \"constant/eternal.\"",
+    "explanation": {
+      "en": "The famous opening of the **Tao Te Ching** announces that ultimate reality, the Dao, **transcends language**. Any \"Way\" that can be captured in words is, by definition, not the eternal, unchanging Way. Laozi is warning the reader at the outset that his entire text is a paradox: words pointing toward something beyond words. *Grammatically,* the same character **道** (dào) appears three times with three different roles: first as a noun (\"the Way\"), then as a verb (\"to speak/articulate\"), and finally as a noun again (\"the [true] Way\"). **可** (kě) before the verb means \"can be,\" similar to the modern potential complement pattern. **非** (fēi) is the classical copula negator, meaning \"is not,\" negating the entire identity of the subject. **常** (cháng) means \"constant/eternal.\"",
+      "zh": "《道德经》最著名的开头宣告：终极真理无法被语言捕捉。第一个**道**是名词（\"道理、真理\"），**可道**中的第二个\"道\"是动词（\"说出来\"）。**非常道**：**非**是否定，**常**是\"恒久的\"，**常道**即\"永恒不变的道\"。语法核心是一个条件—否定结构：如果能说出来→那就不是永恒之道。老子用三个完全相同的字构成了一个自我否定的哲学命题。"
+    },
     "tree": {
       "id": "cc4-root",
       "role": "Sentence",
@@ -550,7 +562,10 @@
     "chinese": "千里之行，始於足下。",
     "pinyin": "Qiān lǐ zhī xíng, shǐ yú zú xià.",
     "translation": "A journey of a thousand miles begins beneath one's feet.",
-    "explanation": "Laozi reminds us that **every great endeavor starts with a single, humble step**. No matter how daunting the goal, the journey begins right where you stand. This is one of the most universally quoted pieces of Chinese wisdom, used to encourage perseverance and to demystify large ambitions. *Grammatically,* the proverb demonstrates the two most important classical function words in a single line. **之** (zhī) serves as a genitive marker: \"千里之行\" literally reads \"a thousand lǐ *'s* journey.\" Then **於** (yú) acts as a locative preposition meaning \"at/from.\" \"始於足下\" reads \"begins at foot-below,\" i.e., \"begins beneath one's feet.\" In modern Mandarin, 之 has been replaced by 的, and 於 by 在 or 从.",
+    "explanation": {
+      "en": "Laozi reminds us that **every great endeavor starts with a single, humble step**. No matter how daunting the goal, the journey begins right where you stand. This is one of the most universally quoted pieces of Chinese wisdom, used to encourage perseverance and to demystify large ambitions. *Grammatically,* the proverb demonstrates the two most important classical function words in a single line. **之** (zhī) serves as a genitive marker: \"千里之行\" literally reads \"a thousand lǐ *'s* journey.\" Then **於** (yú) acts as a locative preposition meaning \"at/from.\" \"始於足下\" reads \"begins at foot-below,\" i.e., \"begins beneath one's feet.\" In modern Mandarin, 之 has been replaced by 的, and 於 by 在 or 从.",
+      "zh": "老子提醒我们：再远大的目标也从脚下第一步开始。**千里之行**中**之**是结构助词（\"的\"）。**始**是\"开始\"，**於**是介词\"从\"。**足下**是\"脚下\"，即第一步。整句用一个简洁的隐喻把抽象的哲理具象化：千里路程，起点就在你此刻站立的地方。"
+    },
     "tree": {
       "id": "cc5-root",
       "role": "Sentence",
@@ -662,7 +677,10 @@
     "chinese": "溫故而知新，可以為師矣。",
     "pinyin": "Wēn gù ér zhī xīn, kě yǐ wéi shī yǐ.",
     "translation": "To review the old and understand the new, with this one can be a teacher.",
-    "explanation": "Confucius defines the essence of good teaching: a true teacher does not merely memorize the past but **gains fresh insight from revisiting old material**. The ability to draw new understanding from familiar knowledge is what qualifies someone to guide others. This idea shaped the Chinese educational tradition of repeated, reflective study. *Grammatically,* **而** (ér) chains two actions: **溫故** (\"review the old\") and **知新** (\"understand the new\"), implying the second *arises from* the first. The verbs **溫** and **知** take adjective-turned-nouns as objects: **故** (old things) and **新** (new things); classical Chinese freely converts adjectives to nouns without morphological change. The second clause introduces **可以** (kě yǐ, \"can thereby\") and **為** (wéi, \"serve as\"), followed by **矣** (yǐ), a sentence-final particle expressing a settled conclusion.",
+    "explanation": {
+      "en": "Confucius defines the essence of good teaching: a true teacher does not merely memorize the past but **gains fresh insight from revisiting old material**. The ability to draw new understanding from familiar knowledge is what qualifies someone to guide others. This idea shaped the Chinese educational tradition of repeated, reflective study. *Grammatically,* **而** (ér) chains two actions: **溫故** (\"review the old\") and **知新** (\"understand the new\"), implying the second *arises from* the first. The verbs **溫** and **知** take adjective-turned-nouns as objects: **故** (old things) and **新** (new things); classical Chinese freely converts adjectives to nouns without morphological change. The second clause introduces **可以** (kě yǐ, \"can thereby\") and **為** (wéi, \"serve as\"), followed by **矣** (yǐ), a sentence-final particle expressing a settled conclusion.",
+      "zh": "孔子定义好老师的本质：真正的老师能从旧知识中发现新道理。**温**是\"温习\"，**故**是\"旧的知识\"。**而**连接因果：因为温习旧知→所以获得新知。**知新**是\"获得新的理解\"。**可以为师矣**：**可以**表示\"够资格\"，**为**是\"成为\"，**师**是\"老师\"，**矣**是语气词表确认。整句是一个条件→资格判断的结构。"
+    },
     "tree": {
       "id": "cc6-root",
       "role": "Sentence",
@@ -790,7 +808,10 @@
     "chinese": "己所不欲，勿施於人。",
     "pinyin": "Jǐ suǒ bù yù, wù shī yú rén.",
     "translation": "What you yourself do not desire, do not impose upon others.",
-    "explanation": "This is the Confucian **\"Golden Rule\"**, a universal ethical principle stated in the negative: **do not do to others what you would not want done to yourself**. It remains one of the most quoted moral maxims in Chinese culture and bears striking similarity to formulations in other world traditions. *Grammatically,* **所** (suǒ) is a nominalizer that works from the *object* side: \"所不欲\" means \"that which (one) does not desire.\" Combined with **己** (jǐ, \"oneself\"), the Topic becomes \"what oneself does not desire.\" The Comment uses **勿** (wù), the classical prohibitive negator meaning \"do not!\", stronger and more formal than 不. The verb **施** (shī, \"impose/inflict\") takes a **於** (yú) prepositional phrase: \"upon others.\" Eight characters encode an entire ethical system.",
+    "explanation": {
+      "en": "This is the Confucian **\"Golden Rule\"**, a universal ethical principle stated in the negative: **do not do to others what you would not want done to yourself**. It remains one of the most quoted moral maxims in Chinese culture and bears striking similarity to formulations in other world traditions. *Grammatically,* **所** (suǒ) is a nominalizer that works from the *object* side: \"所不欲\" means \"that which (one) does not desire.\" Combined with **己** (jǐ, \"oneself\"), the Topic becomes \"what oneself does not desire.\" The Comment uses **勿** (wù), the classical prohibitive negator meaning \"do not!\", stronger and more formal than 不. The verb **施** (shī, \"impose/inflict\") takes a **於** (yú) prepositional phrase: \"upon others.\" Eight characters encode an entire ethical system.",
+      "zh": "这是孔子的\"己所不欲勿施于人\"——儒家版\"黄金法则\"。**己**是\"自己\"，**所不欲**是\"不想要的东西\"（**所**+动词构成名词短语）。**勿**是否定祈使词\"不要\"。**施**是\"施加\"，**於**是介词\"给\"，**人**是\"他人\"。整句用一个否定祈使包裹着一个换位思考的逻辑：先检验自己的感受→再决定是否对别人做同样的事。"
+    },
     "tree": {
       "id": "cc7-root",
       "role": "Sentence",
@@ -902,7 +923,10 @@
     "chinese": "吾日三省吾身。",
     "pinyin": "Wú rì sān xǐng wú shēn.",
     "translation": "Each day I examine myself on three points.",
-    "explanation": "**Zengzi** (曾子), a disciple of Confucius, describes his daily practice of rigorous **self-examination**: reflecting on whether he has been loyal to others, trustworthy with friends, and diligent in study. It captures the Confucian emphasis on constant moral self-cultivation rather than outward judgment. *Grammatically,* this compact sentence demonstrates several signature classical features in just six characters. **吾** (wú) is the archaic first-person pronoun, more literary than 我. **日** (rì, \"daily\") functions as a time adverb directly before the predicate without any preposition; classical Chinese freely repurposes nouns as modifiers. **三** (sān, \"three / three times\") acts as a frequency adverb modifying the verb **省** (xǐng, \"examine/reflect\"). The object **吾身** (\"my person/self\") is a reflexive construction.",
+    "explanation": {
+      "en": "**Zengzi** (曾子), a disciple of Confucius, describes his daily practice of rigorous **self-examination**: reflecting on whether he has been loyal to others, trustworthy with friends, and diligent in study. It captures the Confucian emphasis on constant moral self-cultivation rather than outward judgment. *Grammatically,* this compact sentence demonstrates several signature classical features in just six characters. **吾** (wú) is the archaic first-person pronoun, more literary than 我. **日** (rì, \"daily\") functions as a time adverb directly before the predicate without any preposition; classical Chinese freely repurposes nouns as modifiers. **三** (sān, \"three / three times\") acts as a frequency adverb modifying the verb **省** (xǐng, \"examine/reflect\"). The object **吾身** (\"my person/self\") is a reflexive construction.",
+      "zh": "曾子（孔子弟子）描述他每日自省的修养功夫。**吾**是文言第一人称\"我\"。**日**做副词\"每天\"。**三**不是字面的\"三次\"，而是\"多次\"。**省**（xǐng）是\"反省、检查\"。**吾身**是\"我自身\"。整句结构极为紧凑：主语（吾）+ 时间副词（日）+ 频率（三）+ 动词（省）+ 宾语（吾身）。"
+    },
     "tree": {
       "id": "cc8-root",
       "role": "Sentence",
@@ -987,7 +1011,10 @@
     "chinese": "王侯將相，寧有種乎？",
     "pinyin": "Wáng hóu jiàng xiàng, nìng yǒu zhǒng hū?",
     "translation": "Are kings, lords, generals, and ministers such by birth?",
-    "explanation": "This is the battle cry of **Chen Sheng** (陳勝), leader of the first peasant uprising against the Qin dynasty in 209 BC. He challenges the very idea of hereditary nobility: **greatness is not determined by bloodline**. The line became a symbol of egalitarian rebellion throughout Chinese history. *Grammatically,* the rhetorical frame **寧…乎** (nìng…hū) means \"could it really be that…?\" **寧** (nìng) is a rhetorical adverb that challenges probability and expects the answer \"no.\" The compound subject **王侯將相** (kings, lords, generals, ministers) is a four-character coordination without any connecting particles; classical Chinese relies on juxtaposition where modern Chinese would need 和. The verb **有種** means \"have seed/lineage,\" questioning whether noble status is hereditary. The final **乎** (hū) seals the rhetorical force.",
+    "explanation": {
+      "en": "This is the battle cry of **Chen Sheng** (陳勝), leader of the first peasant uprising against the Qin dynasty in 209 BC. He challenges the very idea of hereditary nobility: **greatness is not determined by bloodline**. The line became a symbol of egalitarian rebellion throughout Chinese history. *Grammatically,* the rhetorical frame **寧…乎** (nìng…hū) means \"could it really be that…?\" **寧** (nìng) is a rhetorical adverb that challenges probability and expects the answer \"no.\" The compound subject **王侯將相** (kings, lords, generals, ministers) is a four-character coordination without any connecting particles; classical Chinese relies on juxtaposition where modern Chinese would need 和. The verb **有種** means \"have seed/lineage,\" questioning whether noble status is hereditary. The final **乎** (hū) seals the rhetorical force.",
+      "zh": "这是陈胜起义时的战斗口号——中国历史上第一次大规模农民起义。**王侯将相**列举四种权贵身份：\"王、诸侯、将军、宰相\"。**宁**是反问副词\"难道\"。**有种**是\"天生注定的、世袭的\"。**乎**是反问语气词。整句用反问打碎了贵族血统论：\"难道这些地位是天生的吗？\"——言下之意是：当然不是！"
+    },
     "tree": {
       "id": "cc9-root",
       "role": "Sentence",
@@ -1074,7 +1101,10 @@
     "chinese": "逝者如斯夫，不舍晝夜。",
     "pinyin": "Shì zhě rú sī fú, bù shě zhòu yè.",
     "translation": "That which passes is like this; it does not cease day or night.",
-    "explanation": "Standing beside a river, Confucius reflects on the **relentless passage of time**: everything flows on ceaselessly, day and night, like the water before him. It is a moment of profound melancholy and philosophical wonder, an early meditation on impermanence that resonates across cultures. *Grammatically,* the sentence opens with a **者**-nominalization: **逝者** means \"that which passes.\" The nominalizer 者 turns the verb 逝 (pass away) into a noun. **如** (rú) means \"is like,\" and **斯** (sī) is a demonstrative pronoun meaning \"this\" (referring to the flowing river). **夫** (fú) is an exclamatory particle conveying the speaker's emotion. The second clause uses **不舍** (does not cease) with **晝夜** (day and night) as a time adverbial.",
+    "explanation": {
+      "en": "Standing beside a river, Confucius reflects on the **relentless passage of time**: everything flows on ceaselessly, day and night, like the water before him. It is a moment of profound melancholy and philosophical wonder, an early meditation on impermanence that resonates across cultures. *Grammatically,* the sentence opens with a **者**-nominalization: **逝者** means \"that which passes.\" The nominalizer 者 turns the verb 逝 (pass away) into a noun. **如** (rú) means \"is like,\" and **斯** (sī) is a demonstrative pronoun meaning \"this\" (referring to the flowing river). **夫** (fú) is an exclamatory particle conveying the speaker's emotion. The second clause uses **不舍** (does not cease) with **晝夜** (day and night) as a time adverbial.",
+      "zh": "孔子站在河边，感叹时间的一去不返。**逝者**是\"流逝的东西\"（时间/河水）。**如**是\"像\"。**斯**是指示代词\"此、这\"，指眼前的河水。**夫**（fú）是感叹语气词。**不舍昼夜**：**舍**是\"停止\"，**昼夜**是\"白天黑夜\"。孔子用河水的意象把抽象的时间感变成了一个可见可感的场景。"
+    },
     "tree": {
       "id": "cc10-root",
       "role": "Sentence",
@@ -1209,7 +1239,10 @@
     "chinese": "生，亦我所欲也。",
     "pinyin": "Shēng, yì wǒ suǒ yù yě.",
     "translation": "Life is also what I desire.",
-    "explanation": "Mencius declares that **life itself is something deeply desired**; but, as the passage continues, he argues that righteousness (義) is desired even more. When people must choose between survival and moral principle, the truly virtuous choose principle. This sentence sets up one of the most famous ethical dilemmas in Chinese philosophy. *Grammatically,* the sentence demonstrates the **所**-nominalization in a predicate context. **生** (shēng, \"life\") is the Topic. The Comment uses **所欲** (suǒ yù), where **所** turns the verb **欲** (desire) into a noun: \"that which is desired.\" With the subject **我** (wǒ, \"I\"), it reads \"what I desire.\" **亦** (yì) means \"also,\" and **也** (yě) is a sentence-final assertive particle confirming identity. The **[Topic], [Subject] 所 [Verb] 也** pattern is one of the most common classical templates for identity statements.",
+    "explanation": {
+      "en": "Mencius declares that **life itself is something deeply desired**; but, as the passage continues, he argues that righteousness (義) is desired even more. When people must choose between survival and moral principle, the truly virtuous choose principle. This sentence sets up one of the most famous ethical dilemmas in Chinese philosophy. *Grammatically,* the sentence demonstrates the **所**-nominalization in a predicate context. **生** (shēng, \"life\") is the Topic. The Comment uses **所欲** (suǒ yù), where **所** turns the verb **欲** (desire) into a noun: \"that which is desired.\" With the subject **我** (wǒ, \"I\"), it reads \"what I desire.\" **亦** (yì) means \"also,\" and **也** (yě) is a sentence-final assertive particle confirming identity. The **[Topic], [Subject] 所 [Verb] 也** pattern is one of the most common classical templates for identity statements.",
+      "zh": "孟子宣告：**生命本身是我深切渴望的东西**。**生**是\"生命/活着\"。**亦**是\"也\"。**我**是\"我\"。**所欲**是\"所渴望的\"（**所**+动词构成名词短语）。**也**是判断语气词。这是孟子\"鱼与熊掌\"寓言的开头：接下来他会说，义理比生命更重要——但首先他要承认生命的珍贵。"
+    },
     "tree": {
       "id": "cc11-root",
       "role": "Sentence",
@@ -1295,7 +1328,10 @@
     "chinese": "師者，所以傳道授業解惑也。",
     "pinyin": "Shī zhě, suǒ yǐ chuán dào shòu yè jiě huò yě.",
     "translation": "A teacher is the means by which the Way is transmitted, knowledge imparted, and confusion resolved.",
-    "explanation": "Han Yu's famous essay defends the dignity of the teaching profession, arguing that **a teacher's purpose is threefold: to transmit moral truth, to impart practical knowledge, and to clear up confusion**. Written in 802 AD when seeking a teacher was stigmatized, this sentence became a cornerstone of Chinese educational philosophy. *Grammatically,* it showcases the most powerful nominalization in classical Chinese: **所以** (suǒ yǐ). While modern 所以 means \"therefore,\" in classical Chinese it means \"the means by which\" or \"the reason why.\" **師者** (shī zhě, \"a teacher,\" where 者 marks the definition) is the Topic, and the Comment lists three purposes using a triple-verb series: **傳道** (transmit the Way), **授業** (impart knowledge), **解惑** (resolve confusion). The final **也** asserts identity. This is the classic **X 者, Y 也** definitional pattern: \"X *is* Y.\"",
+    "explanation": {
+      "en": "Han Yu's famous essay defends the dignity of the teaching profession, arguing that **a teacher's purpose is threefold: to transmit moral truth, to impart practical knowledge, and to clear up confusion**. Written in 802 AD when seeking a teacher was stigmatized, this sentence became a cornerstone of Chinese educational philosophy. *Grammatically,* it showcases the most powerful nominalization in classical Chinese: **所以** (suǒ yǐ). While modern 所以 means \"therefore,\" in classical Chinese it means \"the means by which\" or \"the reason why.\" **師者** (shī zhě, \"a teacher,\" where 者 marks the definition) is the Topic, and the Comment lists three purposes using a triple-verb series: **傳道** (transmit the Way), **授業** (impart knowledge), **解惑** (resolve confusion). The final **也** asserts identity. This is the classic **X 者, Y 也** definitional pattern: \"X *is* Y.\"",
+      "zh": "韩愈著名的《师说》为教师的尊严辩护。**师者**是\"所谓老师\"（**者**标记话题）。逗号后面是评论。**所以**不是现代汉语的\"因此\"，而是古文的\"用来……的方式\"。**传道**是\"传授道理\"，**授业**是\"教授学业\"，**解惑**是\"解答疑惑\"。**也**收束整个判断。韩愈用三个并列的职责定义了教师的本质。"
+    },
     "tree": {
       "id": "cc12-root",
       "role": "Sentence",
@@ -1436,7 +1472,10 @@
     "chinese": "青，取之於藍，而青於藍。",
     "pinyin": "Qīng, qǔ zhī yú lán, ér qīng yú lán.",
     "translation": "Blue dye comes from the indigo plant, yet it is bluer than indigo.",
-    "explanation": "Xunzi uses this vivid metaphor to argue that **students can surpass their teachers**: just as blue dye, extracted from the indigo plant, is ultimately more intense than the plant itself. The proverb (青出於藍) became one of the most beloved Chinese idioms for someone who outstrips their mentor. *Grammatically,* **青** (qīng, \"blue\") is the Topic. The first clause uses **取之於藍** where **之** is an object pronoun (\"it\") and **於** is a source coverb (\"from\"), meaning \"takes it from indigo.\" **而** (ér) then creates a *contrastive* link: \"yet/but.\" The second clause **青於藍** shows **於** in its comparative function: \"bluer *than* indigo.\" Notice how 於 carries two different meanings (source vs. comparison) in the same sentence.",
+    "explanation": {
+      "en": "Xunzi uses this vivid metaphor to argue that **students can surpass their teachers**: just as blue dye, extracted from the indigo plant, is ultimately more intense than the plant itself. The proverb (青出於藍) became one of the most beloved Chinese idioms for someone who outstrips their mentor. *Grammatically,* **青** (qīng, \"blue\") is the Topic. The first clause uses **取之於藍** where **之** is an object pronoun (\"it\") and **於** is a source coverb (\"from\"), meaning \"takes it from indigo.\" **而** (ér) then creates a *contrastive* link: \"yet/but.\" The second clause **青於藍** shows **於** in its comparative function: \"bluer *than* indigo.\" Notice how 於 carries two different meanings (source vs. comparison) in the same sentence.",
+      "zh": "荀子用一个生动的比喻论证学生可以超越老师。**青**是蓝色染料。**取之於蓝**：\"取\"是\"提取\"，\"之\"指代青色，\"於\"是\"从\"，\"蓝\"是蓝草（靛蓝植物）。**而**是转折连词\"但是\"。**青於蓝**是\"比蓝草更蓝\"（**於**在这里表比较\"比\"）。整句先叙述来源（从蓝草中提取），再翻转给出超越的结论。"
+    },
     "tree": {
       "id": "cc13-root",
       "role": "Sentence",
@@ -1570,7 +1609,10 @@
     "chinese": "未之有也。",
     "pinyin": "Wèi zhī yǒu yě.",
     "translation": "There has never been such a thing.",
-    "explanation": "This extremely terse expression conveys emphatic denial: **such a thing has never happened, and it simply does not exist**. It is typically used as the conclusion of an argument, asserting that the scenario just described is without precedent. *Grammatically,* **未** (wèi) is the \"not yet / never\" negator, different from 不 (general negation) and 非 (identity negation). 未 negates *temporal* completion: something has *not yet* happened or has *never* occurred. The word order is **inverted**: the object **之** (zhī, \"it/such a thing\") is placed *before* the verb **有** (yǒu, \"exist\"). This **object fronting** triggered by negation is a hallmark of classical Chinese: in negated clauses with pronominal objects, the pronoun moves ahead of the verb. Modern Mandarin has completely lost this inversion.",
+    "explanation": {
+      "en": "This extremely terse expression conveys emphatic denial: **such a thing has never happened, and it simply does not exist**. It is typically used as the conclusion of an argument, asserting that the scenario just described is without precedent. *Grammatically,* **未** (wèi) is the \"not yet / never\" negator, different from 不 (general negation) and 非 (identity negation). 未 negates *temporal* completion: something has *not yet* happened or has *never* occurred. The word order is **inverted**: the object **之** (zhī, \"it/such a thing\") is placed *before* the verb **有** (yǒu, \"exist\"). This **object fronting** triggered by negation is a hallmark of classical Chinese: in negated clauses with pronominal objects, the pronoun moves ahead of the verb. Modern Mandarin has completely lost this inversion.",
+      "zh": "这是一个极端简洁的文言否定句。**未**是\"从未\"。**之**是前置宾语（指前文提到的某事）。**有**是\"存在、发生过\"。**也**是语气词。文言语序的关键规则在此体现：否定句中代词宾语前置→正常语序应为\"未有之\"，但文言写成\"未之有\"。这四个字传达了斩钉截铁的否认：\"这种事从来没有过。\""
+    },
     "tree": {
       "id": "cc14-root",
       "role": "Sentence",
@@ -1626,7 +1668,10 @@
     "chinese": "朝聞道，夕死可矣。",
     "pinyin": "Zhāo wén dào, xī sǐ kě yǐ.",
     "translation": "If in the morning one hears the Way, one could die that evening without regret.",
-    "explanation": "Confucius expresses the **supreme value of truth**: understanding the Dao is so important that even death the same day would be worthwhile. It speaks to the urgency of moral and philosophical clarity; a life without understanding the Way is not truly lived. *Grammatically,* **朝** (zhāo, \"morning\") and **夕** (xī, \"evening\") are bare time adverbs, with no preposition needed. Classical Chinese freely repurposes nouns as temporal modifiers by placing them before the verb. The first clause **朝聞道** follows a simple S-V-O pattern with the subject dropped (implied): \"(if one) hears the Way in the morning.\" The second clause uses **可** (kě, \"acceptable/permissible\") as a predicate, and **矣** (yǐ) is a sentence-final particle expressing a settled, satisfied conclusion.",
+    "explanation": {
+      "en": "Confucius expresses the **supreme value of truth**: understanding the Dao is so important that even death the same day would be worthwhile. It speaks to the urgency of moral and philosophical clarity; a life without understanding the Way is not truly lived. *Grammatically,* **朝** (zhāo, \"morning\") and **夕** (xī, \"evening\") are bare time adverbs, with no preposition needed. Classical Chinese freely repurposes nouns as temporal modifiers by placing them before the verb. The first clause **朝聞道** follows a simple S-V-O pattern with the subject dropped (implied): \"(if one) hears the Way in the morning.\" The second clause uses **可** (kě, \"acceptable/permissible\") as a predicate, and **矣** (yǐ) is a sentence-final particle expressing a settled, satisfied conclusion.",
+      "zh": "孔子表达了对真理的至高追求：理解了大道，即使当晚就死也心甘情愿。**朝**是\"早上\"，**闻**是\"听闻/领悟\"，**道**是\"大道、真理\"。**夕**是\"傍晚\"。**死可矣**：**可**是\"可以接受\"，**矣**是确认语气词。整句是一个时间对比框架：朝（条件）→ 夕（后果），用极端的时间压缩表达无条件的精神渴望。"
+    },
     "tree": {
       "id": "cc15-root",
       "role": "Sentence",
@@ -1722,7 +1767,10 @@
     "chinese": "知彼知己，百戰不殆。",
     "pinyin": "Zhī bǐ zhī jǐ, bǎi zhàn bù dài.",
     "translation": "Know the enemy, know yourself, a hundred battles, no peril.",
-    "explanation": "Sun Tzu's most famous maxim distills an entire military philosophy into eight characters: **victory comes from understanding both your opponent and yourself**. The parallel structure emphasizes that self-knowledge is equally as important as intelligence-gathering. This principle has been applied far beyond warfare, extending into business, diplomacy, and personal growth. *Grammatically,* the sentence demonstrates classical **parallel structure** and **omitted subjects**. The first clause pairs two verb-object phrases: **知彼** (\"know the other/enemy\") and **知己** (\"know oneself\"), with the same verb **知** repeated for rhetorical balance and no conjunction; classical Chinese relies on juxtaposition. The second clause **百戰不殆** is equally compressed: **百戰** (\"a hundred battles\") acts as a topic-like conditional, and **不殆** (\"not perilous\") is the predicate.",
+    "explanation": {
+      "en": "Sun Tzu's most famous maxim distills an entire military philosophy into eight characters: **victory comes from understanding both your opponent and yourself**. The parallel structure emphasizes that self-knowledge is equally as important as intelligence-gathering. This principle has been applied far beyond warfare, extending into business, diplomacy, and personal growth. *Grammatically,* the sentence demonstrates classical **parallel structure** and **omitted subjects**. The first clause pairs two verb-object phrases: **知彼** (\"know the other/enemy\") and **知己** (\"know oneself\"), with the same verb **知** repeated for rhetorical balance and no conjunction; classical Chinese relies on juxtaposition. The second clause **百戰不殆** is equally compressed: **百戰** (\"a hundred battles\") acts as a topic-like conditional, and **不殆** (\"not perilous\") is the predicate.",
+      "zh": "孙子最著名的格言将整套军事哲学浓缩为十个字。**知彼**是\"了解对方\"。**知己**是\"了解自己\"。**百战**是\"一百场战斗\"（泛指所有战斗）。**不殆**：**殆**是\"危险\"，**不殆**=\"不会有危险\"。语法结构是一个省略了连词的条件句：知彼知己（条件）→ 百战不殆（结果）。孙子把复杂的战略学说压缩为一个因果公式。"
+    },
     "tree": {
       "id": "cc16-root",
       "role": "Sentence",
@@ -1844,7 +1892,10 @@
     "chinese": "學而不思則罔，思而不學則殆。",
     "pinyin": "Xué ér bù sī zé wǎng, sī ér bù xué zé dài.",
     "translation": "To study without thinking leads to confusion; to think without studying leads to peril.",
-    "explanation": "Confucius warns that **study and reflection must go hand in hand**: learning without critical thinking produces shallow confusion, while pure speculation without grounding in knowledge leads to dangerous error. This became a foundational principle of Chinese education, balancing book learning with independent thought. *Grammatically,* **而** appears in its *contrastive* role, meaning \"but/without,\" and **則** (zé) is the classical conditional marker meaning \"then/leads to.\" Each half follows the same template: **[Verb] 而 不 [Verb] 則 [Result]**. In the first clause, 學而不思 means \"study *but* not think,\" and 則罔 means \"then (one is) confused.\" The parallel second clause swaps the verbs. **則** marks inevitable consequence, stronger than modern 就.",
+    "explanation": {
+      "en": "Confucius warns that **study and reflection must go hand in hand**: learning without critical thinking produces shallow confusion, while pure speculation without grounding in knowledge leads to dangerous error. This became a foundational principle of Chinese education, balancing book learning with independent thought. *Grammatically,* **而** appears in its *contrastive* role, meaning \"but/without,\" and **則** (zé) is the classical conditional marker meaning \"then/leads to.\" Each half follows the same template: **[Verb] 而 不 [Verb] 則 [Result]**. In the first clause, 學而不思 means \"study *but* not think,\" and 則罔 means \"then (one is) confused.\" The parallel second clause swaps the verbs. **則** marks inevitable consequence, stronger than modern 就.",
+      "zh": "孔子警告：学习和思考必须齐头并进。**学而不思**：\"学\"是学习，\"而\"连接，\"不思\"是不思考。**则**是\"就会\"（条件→后果标记）。**罔**是\"迷惘、困惑\"。第二句对称排列：**思而不学则殆**——只思考不学习就会陷入危险的空想。两句用完全对称的结构互相映照，缺一不可。"
+    },
     "tree": {
       "id": "cc17-root",
       "role": "Sentence",
@@ -2018,7 +2069,10 @@
     "chinese": "人不知而不慍，不亦君子乎？",
     "pinyin": "Rén bù zhī ér bù yùn, bù yì jūnzǐ hū?",
     "translation": "If others do not recognize you, yet you are not resentful, is that not the mark of a noble person?",
-    "explanation": "The third and final line of the Analects' famous opening passage defines the **jūnzǐ (君子, noble person)**: someone who remains serene even when their merits go unrecognized by others. True virtue, Confucius implies, is **its own reward**: it does not depend on external validation. *Grammatically,* the sentence combines **而** in its *concessive* sense (\"yet/even so\") with the **不亦…乎** rhetorical question pattern. The first clause **人不知** means \"others do not know/recognize (you),\" with an implied object. **而** then introduces a surprising contrast: **不慍** (\"not resentful\"). The second half uses the same 不亦…乎 frame from the passage's first line (cc1), creating a structural bookend. **君子** (jūnzǐ) is a noun acting as a predicate: \"is a noble person.\"",
+    "explanation": {
+      "en": "The third and final line of the Analects' famous opening passage defines the **jūnzǐ (君子, noble person)**: someone who remains serene even when their merits go unrecognized by others. True virtue, Confucius implies, is **its own reward**: it does not depend on external validation. *Grammatically,* the sentence combines **而** in its *concessive* sense (\"yet/even so\") with the **不亦…乎** rhetorical question pattern. The first clause **人不知** means \"others do not know/recognize (you),\" with an implied object. **而** then introduces a surprising contrast: **不慍** (\"not resentful\"). The second half uses the same 不亦…乎 frame from the passage's first line (cc1), creating a structural bookend. **君子** (jūnzǐ) is a noun acting as a predicate: \"is a noble person.\"",
+      "zh": "《论语》开篇三句的最后一句。**人不知**是\"别人不了解（你）\"。**而**是转折\"但是\"。**不愠**：**愠**是\"恼怒\"，**不愠**=\"不生气\"。**不亦君子乎**用反问确认：\"这难道不正是君子吗？\"孔子用这个反问定义了君子的精神境界：不依赖外界认可来确认自身价值。"
+    },
     "tree": {
       "id": "cc18-root",
       "role": "Sentence",
@@ -2158,7 +2212,10 @@
     "chinese": "知人者智，自知者明。",
     "pinyin": "Zhī rén zhě zhì, zì zhī zhě míng.",
     "translation": "One who knows others is wise; one who knows himself is enlightened.",
-    "explanation": "Laozi draws a powerful distinction between **outward intelligence and inner wisdom**: knowing others requires cleverness, but knowing yourself requires the deeper courage of honest self-examination. True enlightenment (明) is not about the external world but about seeing oneself clearly. *Grammatically,* the sentence uses the **者** nominalizer twice to create balanced definitions. **知人者** means \"one who knows others\": **知** (know) takes **人** (others) as its object, and **者** turns the clause into a noun. The predicates are bare adjectives: **智** (wise) and **明** (enlightened/clear-sighted). The second clause introduces **自** (zì, \"self\") as a reflexive object: **自知** means \"know oneself.\" The parallel structure **X 者 Y** (one who X, is Y) is one of the most common definitional patterns in classical prose.",
+    "explanation": {
+      "en": "Laozi draws a powerful distinction between **outward intelligence and inner wisdom**: knowing others requires cleverness, but knowing yourself requires the deeper courage of honest self-examination. True enlightenment (明) is not about the external world but about seeing oneself clearly. *Grammatically,* the sentence uses the **者** nominalizer twice to create balanced definitions. **知人者** means \"one who knows others\": **知** (know) takes **人** (others) as its object, and **者** turns the clause into a noun. The predicates are bare adjectives: **智** (wise) and **明** (enlightened/clear-sighted). The second clause introduces **自** (zì, \"self\") as a reflexive object: **自知** means \"know oneself.\" The parallel structure **X 者 Y** (one who X, is Y) is one of the most common definitional patterns in classical prose.",
+      "zh": "老子区分了两种智慧。**知人者**是\"能看透别人的人\"——**智**（聪明）。**自知者**是\"能认识自己的人\"——**明**（明澈）。**者**是\"……的人\"。老子认为**明**比**智**更高：看透别人只是聪明，看透自己才是真正的通达。两个半句用完美的对称结构呈现了由外向内的认知升级。"
+    },
     "tree": {
       "id": "cc19-root",
       "role": "Sentence",
@@ -2278,7 +2335,10 @@
     "chinese": "天時不如地利，地利不如人和。",
     "pinyin": "Tiān shí bù rú dì lì, dì lì bù rú rén hé.",
     "translation": "Favorable weather is not as good as advantageous terrain; advantageous terrain is not as good as harmony among people.",
-    "explanation": "Mencius builds a hierarchy of strategic advantage: **favorable weather matters less than good terrain, and good terrain matters less than unity among people**. The ultimate message is that human cooperation and social harmony are the most decisive factors in any endeavor. This is a deeply Confucian prioritization of human bonds over material circumstances. *Grammatically,* the sentence uses the classical comparative pattern **A 不如 B** (\"A is not as good as B\") in a rising chain. Each element is a compound noun: **天時** (heaven + time = favorable timing), **地利** (earth + advantage = geographical advantage), and **人和** (people + harmony = human unity). **不如** (bù rú) is the standard classical comparative, literally \"not equal to.\" The repetition creates the same rhythmic, escalating effect as the 知之者 sentence (cc2), a signature classical rhetorical device.",
+    "explanation": {
+      "en": "Mencius builds a hierarchy of strategic advantage: **favorable weather matters less than good terrain, and good terrain matters less than unity among people**. The ultimate message is that human cooperation and social harmony are the most decisive factors in any endeavor. This is a deeply Confucian prioritization of human bonds over material circumstances. *Grammatically,* the sentence uses the classical comparative pattern **A 不如 B** (\"A is not as good as B\") in a rising chain. Each element is a compound noun: **天時** (heaven + time = favorable timing), **地利** (earth + advantage = geographical advantage), and **人和** (people + harmony = human unity). **不如** (bù rú) is the standard classical comparative, literally \"not equal to.\" The repetition creates the same rhythmic, escalating effect as the 知之者 sentence (cc2), a signature classical rhetorical device.",
+      "zh": "孟子构建了一个战略优势的递进等级。**天时**是\"天时（气候、时机）\"。**不如**是\"比不上\"。**地利**是\"地利（地形优势）\"。再递进：**地利不如人和**——**人和**是\"人心的团结\"。两个**不如**叠加构成三级递进：天时 < 地利 < 人和。孟子的结论是：在所有战略要素中，人心的凝聚力是最重要的。"
+    },
     "tree": {
       "id": "cc20-root",
       "role": "Sentence",
@@ -2438,7 +2498,10 @@
     "chinese": "以德報怨。",
     "pinyin": "Yǐ dé bào yuàn.",
     "translation": "Repay resentment with virtue.",
-    "explanation": "This phrase captures a Confucian ideal of **moral generosity**: rather than retaliating against those who wrong you, respond with kindness. It is often contrasted with the follow-up question in the same passage, where Confucius actually recommends repaying resentment with *justice* (直) and reserving virtue (德) for virtue. The phrase has become proverbial in Chinese culture for turning the other cheek. *Grammatically,* **以** (yǐ) is the instrumental coverb meaning \"using\" or \"with.\" It takes **德** (dé, \"virtue\") as its object, forming a prepositional phrase that precedes the main verb. The main verb **報** (bào, \"repay/reciprocate\") takes **怨** (yuàn, \"resentment/grudge\") as its direct object. The word order is: [以 + instrument] + [verb] + [object]. The subject is dropped (implied); the instruction is general, addressed to anyone.",
+    "explanation": {
+      "en": "This phrase captures a Confucian ideal of **moral generosity**: rather than retaliating against those who wrong you, respond with kindness. It is often contrasted with the follow-up question in the same passage, where Confucius actually recommends repaying resentment with *justice* (直) and reserving virtue (德) for virtue. The phrase has become proverbial in Chinese culture for turning the other cheek. *Grammatically,* **以** (yǐ) is the instrumental coverb meaning \"using\" or \"with.\" It takes **德** (dé, \"virtue\") as its object, forming a prepositional phrase that precedes the main verb. The main verb **報** (bào, \"repay/reciprocate\") takes **怨** (yuàn, \"resentment/grudge\") as its direct object. The word order is: [以 + instrument] + [verb] + [object]. The subject is dropped (implied); the instruction is general, addressed to anyone.",
+      "zh": "这个短语承载着儒家的道德理想主义。**以**是介词\"用\"。**德**是\"美德、恩德\"。**报**是\"回报、应对\"。**怨**是\"怨恨、伤害\"。四个字的结构是：以（用）+ 德（善意）+ 报（回应）+ 怨（恶意）。用善意回应伤害——这不仅是一种策略，更是一种精神境界。"
+    },
     "tree": {
       "id": "cc21-root",
       "role": "Sentence",
@@ -2504,7 +2567,10 @@
     "chinese": "生於憂患，死於安樂。",
     "pinyin": "Shēng yú yōu huàn, sǐ yú ān lè.",
     "translation": "Life springs from adversity; death comes from complacency.",
-    "explanation": "Mencius argues that **hardship and struggle are the crucibles of greatness**, while comfort and ease lead to decline. This aphorism concludes a famous passage listing historical figures who rose to power from humble or difficult origins. It has become one of the most quoted lines in Chinese literature on the value of resilience. *Grammatically,* the sentence uses **於** (yú) twice as a source/cause coverb meaning \"from\" or \"out of.\" In the first clause, **生** (shēng, \"to live/be born\") is the verb and **於憂患** (\"from worry and hardship\") is the prepositional phrase indicating the source. The second clause mirrors this structure exactly: **死** (sǐ, \"to die\") + **於安樂** (\"from comfort and ease\"). The parallel construction creates a tight antithesis: 生 vs 死, 憂患 vs 安樂. Both subjects are dropped, making these general truths rather than statements about specific people.",
+    "explanation": {
+      "en": "Mencius argues that **hardship and struggle are the crucibles of greatness**, while comfort and ease lead to decline. This aphorism concludes a famous passage listing historical figures who rose to power from humble or difficult origins. It has become one of the most quoted lines in Chinese literature on the value of resilience. *Grammatically,* the sentence uses **於** (yú) twice as a source/cause coverb meaning \"from\" or \"out of.\" In the first clause, **生** (shēng, \"to live/be born\") is the verb and **於憂患** (\"from worry and hardship\") is the prepositional phrase indicating the source. The second clause mirrors this structure exactly: **死** (sǐ, \"to die\") + **於安樂** (\"from comfort and ease\"). The parallel construction creates a tight antithesis: 生 vs 死, 憂患 vs 安樂. Both subjects are dropped, making these general truths rather than statements about specific people.",
+      "zh": "孟子论证苦难是生存的熔炉，安逸是衰亡的温床。**生**是\"兴盛/存活\"，**於**是介词\"在/由于\"，**忧患**是\"忧虑和困苦\"。**死**是\"衰亡\"，**安乐**是\"安逸享乐\"。两个半句形成完美的正反对比：忧患→生存，安乐→衰亡。**於**在两句中都标记因果来源。"
+    },
     "tree": {
       "id": "cc22-root",
       "role": "Sentence",
@@ -2604,7 +2670,10 @@
     "chinese": "得道者多助，失道者寡助。",
     "pinyin": "Dé dào zhě duō zhù, shī dào zhě guǎ zhù.",
     "translation": "One who follows the Way gains much support; one who abandons it finds little.",
-    "explanation": "Mencius makes a political argument: **a ruler who governs justly will attract allies, while a tyrant will be abandoned**. The \"Way\" (道) here refers to moral governance, not abstract philosophy. This line follows directly from the 天時不如地利 passage (cc20), building toward the conclusion that human unity is the decisive factor in statecraft. *Grammatically,* **者** (zhě) nominalizes each clause: **得道者** means \"one who attains the Way\" (得 = attain, 道 = the Way, 者 = one who). The predicate for each nominalized subject is an adjective-noun compound: **多助** (much help) and **寡助** (little help). The parallel structure **X 者 Y, Z 者 W** creates a balanced couplet. Notice that 助 (\"help/support\") functions as a noun here, not a verb, a flexibility that classical Chinese exploits frequently.",
+    "explanation": {
+      "en": "Mencius makes a political argument: **a ruler who governs justly will attract allies, while a tyrant will be abandoned**. The \"Way\" (道) here refers to moral governance, not abstract philosophy. This line follows directly from the 天時不如地利 passage (cc20), building toward the conclusion that human unity is the decisive factor in statecraft. *Grammatically,* **者** (zhě) nominalizes each clause: **得道者** means \"one who attains the Way\" (得 = attain, 道 = the Way, 者 = one who). The predicate for each nominalized subject is an adjective-noun compound: **多助** (much help) and **寡助** (little help). The parallel structure **X 者 Y, Z 者 W** creates a balanced couplet. Notice that 助 (\"help/support\") functions as a noun here, not a verb, a flexibility that classical Chinese exploits frequently.",
+      "zh": "孟子提出一个政治论点：行正道的君主得到广泛支持，失道的君主众叛亲离。**得道者**是\"得到道义的人/行正道者\"。**多助**是\"得到很多帮助\"。**失道者**是\"失去道义的人\"。**寡助**是\"得到很少帮助\"。两句用对比结构呈现因果：得道→多助，失道→寡助。**者**标记话题，评论紧随其后。"
+    },
     "tree": {
       "id": "cc23-root",
       "role": "Sentence",
@@ -2756,7 +2825,10 @@
     "chinese": "勿以善小而不為。",
     "pinyin": "Wù yǐ shàn xiǎo ér bù wéi.",
     "translation": "Do not fail to do good just because it is small.",
-    "explanation": "Attributed to Liu Bei as a deathbed instruction to his son, this maxim teaches that **no act of kindness is too small to matter**. It is one of the most beloved moral aphorisms in Chinese culture, often paired with its complement: \"Do not commit an evil just because it is small\" (勿以惡小而為之). Together they define a life of moral attention to every moment. *Grammatically,* **勿** (wù) is the classical prohibitive negator meaning \"do not!\" (stronger and more direct than 不). **以** (yǐ) here means \"because of\" or \"on account of,\" forming a causal phrase: 以善小 = \"because the good deed is small.\" **而** (ér) acts as a concessive connector (\"and yet/and thereby\"), linking the reason clause to the main prohibition. **不為** (bù wéi, \"not act/not do\") completes the sentence. The double negation (勿 + 不) creates the positive force: \"you must still do it.\"",
+    "explanation": {
+      "en": "Attributed to Liu Bei as a deathbed instruction to his son, this maxim teaches that **no act of kindness is too small to matter**. It is one of the most beloved moral aphorisms in Chinese culture, often paired with its complement: \"Do not commit an evil just because it is small\" (勿以惡小而為之). Together they define a life of moral attention to every moment. *Grammatically,* **勿** (wù) is the classical prohibitive negator meaning \"do not!\" (stronger and more direct than 不). **以** (yǐ) here means \"because of\" or \"on account of,\" forming a causal phrase: 以善小 = \"because the good deed is small.\" **而** (ér) acts as a concessive connector (\"and yet/and thereby\"), linking the reason clause to the main prohibition. **不為** (bù wéi, \"not act/not do\") completes the sentence. The double negation (勿 + 不) creates the positive force: \"you must still do it.\"",
+      "zh": "相传刘备临终遗训其子的名句。**勿**是\"不要\"（否定祈使词）。**以**是\"因为\"。**善小**是\"好事（太）小\"。**而**是连词\"就\"。**不为**是\"不去做\"。整句是一个否定祈使包裹因果关系：不要→因为善事太小→就不做。刘备告诫：善行不分大小，再微小的好事也值得去做。"
+    },
     "tree": {
       "id": "cc24-root",
       "role": "Sentence",
@@ -2859,7 +2931,10 @@
     "chinese": "人之過也，各於其黨。",
     "pinyin": "Rén zhī guò yě, gè yú qí dǎng.",
     "translation": "The faults of a person each belong to the type of person they are.",
-    "explanation": "Confucius observes that **a person's mistakes reveal their character**: the errors of a compassionate person differ in nature from those of a selfish one. Faults are not random; they cluster according to the kind of person you are. By studying someone's mistakes, you can understand their deeper nature. This passage is often cited in discussions of character assessment. *Grammatically,* **之** (zhī) appears in its genitive function, linking **人** (rén, \"person\") to **過** (guò, \"faults/errors\") to form \"a person's faults.\" **也** (yě) marks the end of the topic phrase, creating a pause: \"As for a person's faults...\" The comment clause uses **各** (gè, \"each\") as an adverb, **於** (yú) as a locative coverb meaning \"to/at,\" and **其黨** (qí dǎng, \"their type/group\") as the complement. The structure is a classic Topic-Comment frame: [noun 之 noun 也], [comment].",
+    "explanation": {
+      "en": "Confucius observes that **a person's mistakes reveal their character**: the errors of a compassionate person differ in nature from those of a selfish one. Faults are not random; they cluster according to the kind of person you are. By studying someone's mistakes, you can understand their deeper nature. This passage is often cited in discussions of character assessment. *Grammatically,* **之** (zhī) appears in its genitive function, linking **人** (rén, \"person\") to **過** (guò, \"faults/errors\") to form \"a person's faults.\" **也** (yě) marks the end of the topic phrase, creating a pause: \"As for a person's faults...\" The comment clause uses **各** (gè, \"each\") as an adverb, **於** (yú) as a locative coverb meaning \"to/at,\" and **其黨** (qí dǎng, \"their type/group\") as the complement. The structure is a classic Topic-Comment frame: [noun 之 noun 也], [comment].",
+      "zh": "孔子观察到：一个人犯什么样的错误，能透露出他的本性和圈子。**人之过**是\"人的过错\"（**之**是结构助词\"的\"）。**也**标记话题。**各**是\"各自、分别\"。**於**是\"属于/取决于\"。**其党**是\"他的同类/圈子\"。整句的逻辑是：看一个人犯什么错→就知道他是什么人。"
+    },
     "tree": {
       "id": "cc25-root",
       "role": "Sentence",
@@ -2978,7 +3053,10 @@
     "chinese": "歲寒，然後知松柏之後凋也。",
     "pinyin": "Suì hán, rán hòu zhī sōng bǎi zhī hòu diāo yě.",
     "translation": "Only in the cold of winter do we see that pine and cypress are the last to wither.",
-    "explanation": "Confucius uses a seasonal metaphor to teach that **true character is revealed in adversity**. When fair-weather trees shed their leaves, the evergreens stand firm. So too are virtuous people recognized only when times are hard. This proverb has become one of the most famous metaphors in Chinese culture for steadfastness and integrity. *Grammatically,* **寒** (hán, \"cold\") is a standalone **adjective predicate**: in classical Chinese, adjectives can directly predicate without a copula — 歲寒 means \"the year [is] cold.\" The **之** (zhī) between 松柏 and 後凋 is a structural particle that nominalizes the subordinate clause: \"pine and cypress's being-last-to-wither.\" **然後** (rán hòu, \"only then\") introduces the consequent realization. The **也** (yě) at the end is an assertive sentence-final particle that affirms the truth of the whole statement.",
+    "explanation": {
+      "en": "Confucius uses a seasonal metaphor to teach that **true character is revealed in adversity**. When fair-weather trees shed their leaves, the evergreens stand firm. So too are virtuous people recognized only when times are hard. This proverb has become one of the most famous metaphors in Chinese culture for steadfastness and integrity. *Grammatically,* **寒** (hán, \"cold\") is a standalone **adjective predicate**: in classical Chinese, adjectives can directly predicate without a copula — 歲寒 means \"the year [is] cold.\" The **之** (zhī) between 松柏 and 後凋 is a structural particle that nominalizes the subordinate clause: \"pine and cypress's being-last-to-wither.\" **然後** (rán hòu, \"only then\") introduces the consequent realization. The **也** (yě) at the end is an assertive sentence-final particle that affirms the truth of the whole statement.",
+      "zh": "孔子用四季的隐喻教导我们：真正的品格在逆境中才能显现。**岁寒**是\"年末严寒\"（条件/时间背景）。**然后**是\"这之后才\"。**知**是\"知道/发现\"。**松柏之后凋**是\"松柏最后才凋零\"（**之**是主谓之间的结构助词）。**也**收束判断。天气暖和时所有树都绿，只有在严寒中才能看出谁是松柏——比喻人在顺境中看不出高下，逆境才显品格。"
+    },
     "tree": {
       "id": "cc26-root",
       "role": "Sentence",
@@ -3100,7 +3178,10 @@
     "chinese": "吾誰欺？欺天乎？",
     "pinyin": "Wú shuí qī? Qī tiān hū?",
     "translation": "Whom am I deceiving? Am I deceiving Heaven?",
-    "explanation": "Confucius is ill and his disciples have been pretending to be his ministers to dignify his household — a deception. He rebukes them with two sharp rhetorical questions: first asking *whom* he would be fooling, then escalating to the ultimate audience — Heaven itself. The implication is clear: **you cannot deceive the moral order**. *Grammatically,* this sentence showcases classical **interrogative pronoun fronting**. In classical Chinese, when the object of a verb is a question word, it moves *before* the verb. So instead of 欺誰 (deceive whom?), we get **誰欺** — the **pronoun** 誰 (shuí, \"whom\") is placed before the verb 欺 (qī, \"deceive\"). This is a strict rule in classical grammar that modern Mandarin has entirely lost. **吾** (wú) is the first-person pronoun \"I.\" The second question 欺天乎 uses **乎** (hū) as a rhetorical question particle, with **天** (tiān, \"Heaven\") as the object in normal post-verbal position (no fronting, because 天 is not an interrogative).",
+    "explanation": {
+      "en": "Confucius is ill and his disciples have been pretending to be his ministers to dignify his household — a deception. He rebukes them with two sharp rhetorical questions: first asking *whom* he would be fooling, then escalating to the ultimate audience — Heaven itself. The implication is clear: **you cannot deceive the moral order**. *Grammatically,* this sentence showcases classical **interrogative pronoun fronting**. In classical Chinese, when the object of a verb is a question word, it moves *before* the verb. So instead of 欺誰 (deceive whom?), we get **誰欺** — the **pronoun** 誰 (shuí, \"whom\") is placed before the verb 欺 (qī, \"deceive\"). This is a strict rule in classical grammar that modern Mandarin has entirely lost. **吾** (wú) is the first-person pronoun \"I.\" The second question 欺天乎 uses **乎** (hū) as a rhetorical question particle, with **天** (tiān, \"Heaven\") as the object in normal post-verbal position (no fronting, because 天 is not an interrogative).",
+      "zh": "孔子生病时，弟子们假装有大臣在服侍他（给他一个不配享受的体面葬礼排场）。孔子发现后愤怒地质问。**吾**是\"我\"。**谁欺**是宾语前置的反问：\"我在欺骗谁？\"（正常语序：欺谁）。**欺天乎**是更激烈的反问：\"难道要欺骗上天吗？\"**乎**是反问语气词。两个连续的反问层层递进，从\"骗谁\"升级到\"骗天\"。"
+    },
     "tree": {
       "id": "cc27-root",
       "role": "Sentence",
@@ -3186,7 +3267,10 @@
     "chinese": "使民以時。",
     "pinyin": "Shǐ mín yǐ shí.",
     "translation": "Employ the people only at the proper time.",
-    "explanation": "Confucius advises rulers to be mindful of **agricultural seasons** when conscripting laborers for public works. Demanding corvée labor during planting or harvest would devastate farming families. This seemingly simple maxim encodes a deep Confucian principle: **governance must respect the natural rhythms of ordinary life**. *Grammatically,* **使** (shǐ) is the classical causative verb meaning \"cause / employ / make.\" It creates a **pivotal construction** (兼語句): **民** (mín, \"the people\") is simultaneously the *object* of 使 and the *implied subject* of the action being constrained. This double role is the defining feature of pivotal constructions, identical in structure to the modern 让/叫/派 pattern. **以** (yǐ) is the instrumental coverb meaning \"according to / with,\" and **時** (shí) means \"the [proper] time / season.\" The subject (the ruler) is dropped — classical Chinese freely omits known agents.",
+    "explanation": {
+      "en": "Confucius advises rulers to be mindful of **agricultural seasons** when conscripting laborers for public works. Demanding corvée labor during planting or harvest would devastate farming families. This seemingly simple maxim encodes a deep Confucian principle: **governance must respect the natural rhythms of ordinary life**. *Grammatically,* **使** (shǐ) is the classical causative verb meaning \"cause / employ / make.\" It creates a **pivotal construction** (兼語句): **民** (mín, \"the people\") is simultaneously the *object* of 使 and the *implied subject* of the action being constrained. This double role is the defining feature of pivotal constructions, identical in structure to the modern 让/叫/派 pattern. **以** (yǐ) is the instrumental coverb meaning \"according to / with,\" and **時** (shí) means \"the [proper] time / season.\" The subject (the ruler) is dropped — classical Chinese freely omits known agents.",
+      "zh": "孔子向统治者进言：要尊重农时。**使**是\"使用/役使\"，**民**是\"百姓\"。**以**是\"按照\"。**时**是\"农时/时令\"。四个字的结构是：使（役使）+ 民（百姓）+ 以（按照）+ 时（时节）。孔子的政治智慧在于：统治者若无视农时强征劳役，百姓就无法耕种→导致饥荒→引发动乱。"
+    },
     "tree": {
       "id": "cc28-root",
       "role": "Sentence",
@@ -3255,7 +3339,10 @@
     "chinese": "非學無以廣才。",
     "pinyin": "Fēi xué wú yǐ guǎng cái.",
     "translation": "Without learning, there is no way to broaden one's talent.",
-    "explanation": "Xunzi argues that **talent is made, not born** — only through deliberate study can one's abilities grow. This double-negation structure (非 + 無以) creates a powerful affirmative: \"it is not the case that without study one has a means to broaden talent\" → \"study is the *only* way to broaden talent.\" *Grammatically,* **非** (fēi) is the negative copula negating the entire proposition. **學** (xué, \"study\") is nominalized as the condition being negated. **無以** (wú yǐ) is a classical idiom meaning \"have no means to / no way to.\" **廣** (guǎng) functions as a verb meaning \"broaden / expand,\" and **才** (cái) means \"talent / ability.\"",
+    "explanation": {
+      "en": "Xunzi argues that **talent is made, not born** — only through deliberate study can one's abilities grow. This double-negation structure (非 + 無以) creates a powerful affirmative: \"it is not the case that without study one has a means to broaden talent\" → \"study is the *only* way to broaden talent.\" *Grammatically,* **非** (fēi) is the negative copula negating the entire proposition. **學** (xué, \"study\") is nominalized as the condition being negated. **無以** (wú yǐ) is a classical idiom meaning \"have no means to / no way to.\" **廣** (guǎng) functions as a verb meaning \"broaden / expand,\" and **才** (cái) means \"talent / ability.\"",
+      "zh": "荀子论证：才能不是天生的，唯有通过学习才能拓展。**非**是文言否定词\"若不是/没有\"。**学**是\"学习\"。**无以**是\"没有办法\"。**广**是\"拓展/增长\"。**才**是\"才能\"。结构是一个双重否定→肯定的逻辑：非A→无以B，意为\"只有通过A才能达到B\"。荀子用极简的五个字否定了天才论。"
+    },
     "tree": {
       "id": "cc29-root",
       "role": "Sentence",
@@ -3338,7 +3425,10 @@
     "chinese": "焉用亡鄭以陪鄰？",
     "pinyin": "Yān yòng wáng Zhèng yǐ péi lín?",
     "translation": "Why destroy Zheng only to strengthen a neighbor?",
-    "explanation": "The diplomat Zhu Zhiwu asks Duke Mu of Qin a devastating rhetorical question: **what purpose is served by destroying the state of Zheng, when the only beneficiary would be a rival?** This argument — that your ally's gain is your loss — is a masterpiece of wartime persuasion. *Grammatically,* **焉** (yān) here functions as an interrogative coverb meaning \"why / how\" (= 於何, \"for what purpose\"), distinct from its fusional coverb use. However, it demonstrates the same fusional principle: packing a preposition and pronoun into one character. **用** (yòng) means \"use / is there a use for.\" **亡** (wáng) is \"destroy,\" with **鄭** (Zhèng, the state) as its object. **以** (yǐ) links purpose: \"in order to.\" **陪** (péi) means \"increase / strengthen,\" and **鄰** (lín) is \"a neighbor [state].\"",
+    "explanation": {
+      "en": "The diplomat Zhu Zhiwu asks Duke Mu of Qin a devastating rhetorical question: **what purpose is served by destroying the state of Zheng, when the only beneficiary would be a rival?** This argument — that your ally's gain is your loss — is a masterpiece of wartime persuasion. *Grammatically,* **焉** (yān) here functions as an interrogative coverb meaning \"why / how\" (= 於何, \"for what purpose\"), distinct from its fusional coverb use. However, it demonstrates the same fusional principle: packing a preposition and pronoun into one character. **用** (yòng) means \"use / is there a use for.\" **亡** (wáng) is \"destroy,\" with **鄭** (Zhèng, the state) as its object. **以** (yǐ) links purpose: \"in order to.\" **陪** (péi) means \"increase / strengthen,\" and **鄰** (lín) is \"a neighbor [state].\"",
+      "zh": "外交官烛之武向秦穆公提出了一个致命的反问。**焉**是反问副词\"何/为什么\"。**用**是\"需要\"。**亡**是\"灭亡\"。**郑**是\"郑国\"。**以**是\"来/用来\"。**陪**是\"增加\"。**邻**是\"邻国（晋国）\"。整句的修辞逻辑是：灭掉郑国只会让你的竞争对手（晋国）变强——这对秦国有什么好处？**焉**字开头的反问把一个外交论点包装成了一个无法回答的质问。"
+    },
     "tree": {
       "id": "cc30-root",
       "role": "Sentence",

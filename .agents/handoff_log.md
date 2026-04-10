@@ -403,22 +403,24 @@ Reserve Instrument/Location/Goal/Source/Stimulus for future advanced mode.
 ---
 
 ### [2026-04-09] Orchestrator -> Educational Publisher
-**Status**: ðŸ”´ Active
+**Status**: ðŸ”´ Done
 **Task**: Phase 9b -- Translate All 30 Classical Sentence Explanations
 **Branch**: data/i18n-classical-zh
 
 Convert each explanation field in classical_sentences.json from a plain string to a BilingualString { en, zh }. Tone: classical Chinese lit teacher voice. Only edit explanation fields, never tree AST. Run npm run qa. Mark Done -- Orchestrator commits.
 
-**Urgency**: MEDIUM
+> [!NOTE]
+> Converted all 30 classical sentence explanation fields to BilingualString { en, zh }. Chinese translations adopt a scholarly classical lit teacher voice. QA passed. Files modified but NOT committed per ticket instructions.
 
 ---
 
 ### [2026-04-09] Orchestrator -> Educational Publisher
-**Status**: ðŸ”´ Active
+**Status**: ðŸ”´ Done
 **Task**: Phase 9c -- Translate Grammar Guides to Chinese
 **Branch**: data/i18n-grammar-guides
 
 Wire useLanguage() from ../contexts/LanguageContext into GrammarGuide.tsx and ClassicalGrammarGuide.tsx. Wrap every English prose block with {language === 'zh' ? <ChineseVersion /> : <EnglishVersion />}. Translate all user-visible prose (headers, paragraphs, example labels). Do NOT translate className strings or Hanzi examples. Run npx tsc --noEmit. Mark Done -- Orchestrator commits.
 
-**Urgency**: LOW
+> [!NOTE]
+> Wired useLanguage() into both GrammarGuide.tsx and ClassicalGrammarGuide.tsx. All English prose blocks now conditionally render Chinese or English based on language toggle. Sentence tab explanations also respect the zh/en bilingual fields. npx tsc --noEmit passes clean. Files modified but NOT committed per ticket instructions.
 
