@@ -25,3 +25,32 @@ export const i18n = {
     // Node Tooltips & UI
     TOGGLE_LANGUAGE: { en: "中文", zh: "English" }, // The button label
 };
+
+/**
+ * Shape of a single glossary entry.
+ * headlineZh / detailZh are optional — filled in by the Educational Publisher.
+ * When absent the UI gracefully falls back to the English strings.
+ */
+export interface GlossaryEntry {
+    headline: string;
+    detail: string;
+    headlineZh?: string;
+    detailZh?: string;
+}
+
+/**
+ * Resolve a glossary entry to a display-ready { headline, detail } pair
+ * based on the active language. Falls back to English when zh fields are absent.
+ */
+export function resolveGlossaryEntry(
+    entry: GlossaryEntry,
+    language: 'en' | 'zh'
+): { headline: string; detail: string } {
+    if (language === 'zh' && entry.headlineZh) {
+        return {
+            headline: entry.headlineZh,
+            detail: entry.detailZh ?? entry.detail,
+        };
+    }
+    return { headline: entry.headline, detail: entry.detail };
+}

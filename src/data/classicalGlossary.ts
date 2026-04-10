@@ -1,11 +1,12 @@
 import type { GrammarRole } from '../types/grammar';
+import type { GlossaryEntry } from '../i18n/strings';
 
 /**
  * Plain-English definitions for grammar roles, written for
  * Classical Chinese (文言文) learners. Same keys as the modern
  * glossary but with classical examples and descriptions.
  */
-export const classicalGlossary: Record<GrammarRole, { headline: string; detail: string }> = {
+export const classicalGlossary: Record<GrammarRole, GlossaryEntry> = {
     Sentence: {
         headline: 'The whole sentence',
         detail: 'The complete classical statement. Every other part in the tree lives inside here.',

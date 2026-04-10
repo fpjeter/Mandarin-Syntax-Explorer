@@ -4,6 +4,8 @@ import type { GrammarRole } from '../types/grammar';
 import { glossary } from '../data/glossary';
 import { classicalGlossary } from '../data/classicalGlossary';
 import { useIsClassical } from '../contexts/AppModeContext';
+import { useLanguage } from '../contexts/LanguageContext';
+import { resolveGlossaryEntry } from '../i18n/strings';
 
 // ── Shared mousemove listener ────────────────────────────────────────────────
 // A single document-level listener checks all registered tooltips. When
@@ -272,11 +274,13 @@ interface RoleTooltipProps {
 
 export const RoleTooltip: React.FC<RoleTooltipProps> = ({ role, children }) => {
     const isClassical = useIsClassical();
+    const { language } = useLanguage();
     const entry = (isClassical ? classicalGlossary : glossary)[role];
     if (!entry) return <>{children}</>;
+    const resolved = resolveGlossaryEntry(entry, language);
 
     return (
-        <HoverTooltip headline={entry.headline} detail={entry.detail}>
+        <HoverTooltip headline={resolved.headline} detail={resolved.detail}>
             {children}
         </HoverTooltip>
     );

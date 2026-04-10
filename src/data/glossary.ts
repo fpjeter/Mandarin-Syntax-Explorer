@@ -1,10 +1,11 @@
 import type { GrammarRole } from '../types/grammar';
+import type { GlossaryEntry } from '../i18n/strings';
 
 /**
  * Plain-English definitions for every grammar role, written for
  * Mandarin learners with no linguistics background.
  */
-export const glossary: Record<GrammarRole, { headline: string; detail: string }> = {
+export const glossary: Record<GrammarRole, GlossaryEntry> = {
     Sentence: {
         headline: 'The whole sentence',
         detail: 'The complete statement. Every other part in the tree lives inside here.',

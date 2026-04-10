@@ -5,6 +5,8 @@ import { glossary } from '../data/glossary';
 import { classicalGlossary } from '../data/classicalGlossary';
 import { RoleTooltip } from './RoleTooltip';
 import { useIsClassical } from '../contexts/AppModeContext';
+import { useLanguage } from '../contexts/LanguageContext';
+import { resolveGlossaryEntry } from '../i18n/strings';
 import type { GrammarRole } from '../types/grammar';
 
 // Sort once at module level — glossaries are static
@@ -18,6 +20,7 @@ interface GlossaryPanelProps {
 
 export const GlossaryPanel: React.FC<GlossaryPanelProps> = ({ isOpen, onClose }) => {
     const isClassical = useIsClassical();
+    const { language } = useLanguage();
     const activeGlossary = isClassical ? classicalGlossary : glossary;
     const sortedTerms = isClassical ? CLASSICAL_SORTED : MODERN_SORTED;
 
@@ -65,16 +68,17 @@ export const GlossaryPanel: React.FC<GlossaryPanelProps> = ({ isOpen, onClose })
                         <div className="flex-1 overflow-y-auto custom-scrollbar p-6 space-y-6">
                             {sortedTerms.map((term) => {
                                 const entry = activeGlossary[term];
-                                return (
+                                    const resolved = resolveGlossaryEntry(entry, language);
+                                    return (
                                     <div key={term} className="group">
                                         <div className="flex items-baseline gap-2 mb-1.5">
                                             <h3 className="text-sm font-bold text-slate-200">
                                                 <RoleTooltip role={term}>{term}</RoleTooltip>
                                             </h3>
-                                            <span className="text-[10px] uppercase tracking-wide text-fuchsia-400 font-semibold">— {entry.headline}</span>
+                                            <span className="text-[10px] uppercase tracking-wide text-fuchsia-400 font-semibold">— {resolved.headline}</span>
                                         </div>
                                         <p className="text-[11px] text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">
-                                            {entry.detail}
+                                            {resolved.detail}
                                         </p>
                                     </div>
                                 );
