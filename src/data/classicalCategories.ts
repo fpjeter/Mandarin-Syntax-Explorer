@@ -20,10 +20,28 @@ export type ClassicalCategory = (typeof CLASSICAL_CATEGORIES)[number];
  * Values are BilingualString — zh fields are filled in by the Educational Publisher.
  */
 export const CLASSICAL_CATEGORY_DESCRIPTIONS: Record<ClassicalCategory, BilingualString> = {
-    'Rhetorical Patterns (反問)': { en: 'Classical questions that assert rather than ask, using particles like 乎 and frames like 不亦…乎.' },
-    'Nominalizers (者/所)': { en: 'Turn verbs into nouns: 者 creates "the one who..." and 所 creates "that which..."' },
-    'Classical Negation (非/勿/莫)': { en: 'Three flavors of negation: 非 ("is not"), 勿 ("do not!"), and 莫 ("nobody / nothing").' },
-    'Coverbs & Prepositions (於/以/焉)': { en: 'Classical words for location, instrument, and direction. 焉 is especially fun: it packs a preposition and pronoun into one character.' },
-    'Sequential Actions (而)': { en: 'The classical connective 而 chains actions ("and then"), marks contrast ("but"), or signals consequence ("and so").' },
-    'Genitive & Modification (之)': { en: 'The classical equivalent of 的: 之 links nouns ("X 之 Y" = "X\'s Y") and creates modifier structures.' },
+    'Rhetorical Patterns (反問)': {
+        en: 'Classical questions that assert rather than ask, using particles like 乎 and frames like 不亦…乎.',
+        zh: '用"乎""不亦……乎"等虚词构成的反问，重在断言而非提问。',
+    },
+    'Nominalizers (者/所)': {
+        en: 'Turn verbs into nouns: 者 creates "the one who..." and 所 creates "that which..."',
+        zh: '把动词变成名词："者"="……的人"，"所"="所……的事物"。',
+    },
+    'Classical Negation (非/勿/莫)': {
+        en: 'Three flavors of negation: 非 ("is not"), 勿 ("do not!"), and 莫 ("nobody / nothing").',
+        zh: '三种否定色彩：非（"不是"）、勿（"不要！"）、莫（"没有人/没有什么"）。',
+    },
+    'Coverbs & Prepositions (於/以/焉)': {
+        en: 'Classical words for location, instrument, and direction. 焉 is especially fun: it packs a preposition and pronoun into one character.',
+        zh: '表示地点、工具和方向的文言词。"焉"尤其有趣：一个字包含了介词和代词。',
+    },
+    'Sequential Actions (而)': {
+        en: 'The classical connective 而 chains actions ("and then"), marks contrast ("but"), or signals consequence ("and so").',
+        zh: '"而"是万能连词：顺承（"然后"）、转折（"但是"）或因果（"于是"）。',
+    },
+    'Genitive & Modification (之)': {
+        en: 'The classical equivalent of 的: 之 links nouns ("X 之 Y" = "X\'s Y") and creates modifier structures.',
+        zh: '"之"是文言版的"的"：连接名词（"X之Y"="X的Y"），构建修饰结构。',
+    },
 };

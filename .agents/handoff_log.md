@@ -74,7 +74,7 @@ Append a new block to `## Pending Requests` using this exact format:
 **Urgency**: MEDIUM
 
 ### [2026-04-09] Orchestrator → Educational Publisher
-**Status**: 🔴 Active
+**Status**: 🔴 Done
 **Task**: Phase 10 — Translate Category Descriptions and Full Explanations
 **Branch**: `data/i18n-categories`
 
@@ -105,7 +105,11 @@ Append a new block to `## Pending Requests` using this exact format:
 3. Run: `npx tsc --noEmit`
 4. Mark this ticket ✅ Done. Do NOT commit — Orchestrator handles git.
 
-**Urgency**: MEDIUM
+> [!NOTE]
+> Added `zh` fields to all 19 `CATEGORY_DESCRIPTIONS`, all 19 `FULL_CATEGORY_EXPLANATIONS` (in `categories.ts`), and all 6 `CLASSICAL_CATEGORY_DESCRIPTIONS` (in `classicalCategories.ts`). Total: 44 translations. Short descriptions: 15-25 characters, friendly tone. Long explanations: warm tutor voice with **bold** markdown and hanzi examples preserved. `npx tsc --noEmit` passes clean. Files modified but NOT committed.
+
+**Issues Encountered:**
+1. No issues. The BilingualString type was already wired and both files accepted the new `zh` fields cleanly.
 
 ### [2026-04-09] Orchestrator → Educational Publisher
 **Status**: 🔴 Done
