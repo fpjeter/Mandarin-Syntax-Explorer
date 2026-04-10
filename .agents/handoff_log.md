@@ -32,6 +32,26 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ---
 
+## Pending Requests
+
+### [2026-04-09] Linguistics Specialist → Orchestrator
+**Status**: 🟡 Pending
+**Blocked Task**: BEI Passive Category Audit (out-of-band scan requested by User)
+**Dependency**: Two sentences in the BEI Passive (被字句) category are misclassified. Data Linguist must reassign them:
+
+1. **s80** — 青色是从蓝草里提取出来的，但是比蓝草还要蓝。
+   - **Problem:** This sentence does not contain 被 at all. It uses 是…的 + 比 comparative. The English "is extracted" sounds passive but the Chinese structure is 是从…提取出来的 (a 是…的 focus frame).
+   - **Recommended category:** 是…的 Construction (是…的句) or Comparatives (比较句).
+
+2. **s103** — 我的自行车让人骑走了。
+   - **Problem:** Uses 让 (not 被) as the passive marker. While 让 can function as a colloquial passive and is structurally identical to 被 in our FLS model, the category name "被字句" explicitly references 被. Learners browsing by category will expect to see 被 in every sentence.
+   - **Recommended category:** Pivotal Constructions (兼语句) with a note on passive usage, or create a sub-label like "被/让 Passive" if we want to keep 让-passives grouped with 被-passives.
+
+**Suggested Fix**: Dispatch the Data Linguist to update the `category` field in `modern_sentences.json` for both sentences.
+**Urgency**: MEDIUM
+
+---
+
 ## Active Assignments
 
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
