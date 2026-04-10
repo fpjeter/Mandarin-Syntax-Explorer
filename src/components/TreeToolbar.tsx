@@ -1,12 +1,10 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { Eye, EyeOff, Maximize2, Minimize2, BookOpen, Shuffle, Printer, ImageDown, Settings, Atom } from 'lucide-react';
+import { Eye, EyeOff, BookOpen, Shuffle, Printer, ImageDown, Settings, Atom } from 'lucide-react';
 import { useIsClassical } from '../contexts/AppModeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import { i18n } from '../i18n/strings';
 
 interface TreeToolbarProps {
-    onExpandAll: () => void;
-    onCollapseAll: () => void;
     showGhost: boolean;
     onToggleGhost: () => void;
     treeHasProDrop: boolean;
@@ -27,8 +25,6 @@ interface TreeToolbarProps {
  *   or drops down vertically (mobile < 640px).
  */
 export const TreeToolbar: React.FC<TreeToolbarProps> = ({
-    onExpandAll,
-    onCollapseAll,
     showGhost,
     onToggleGhost,
     treeHasProDrop,
@@ -93,16 +89,6 @@ export const TreeToolbar: React.FC<TreeToolbarProps> = ({
                     p-1.5 gap-1
                 `}
             >
-                {/* Expand / Collapse */}
-                <button onClick={onExpandAll} className={btnDefault} title={i18n.TOOLBAR_EXPAND[language]}>
-                    <Maximize2 className="w-3.5 h-3.5" />
-                    <span className="hidden xl:inline">{i18n.TOOLBAR_EXPAND[language]}</span>
-                </button>
-                <button onClick={onCollapseAll} className={btnDefault} title={i18n.TOOLBAR_COLLAPSE[language]}>
-                    <Minimize2 className="w-3.5 h-3.5" />
-                    <span className="hidden xl:inline">{i18n.TOOLBAR_COLLAPSE[language]}</span>
-                </button>
-
                 {/* Semantic Mode — only for modern Mandarin */}
                 {!isClassical && onToggleSemanticMode && (
                     <button

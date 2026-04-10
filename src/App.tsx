@@ -263,7 +263,7 @@ function App() {
           <div className="flex gap-2">
             <button
               onClick={toggleLanguage}
-              className={`hidden sm:flex items-center text-xs font-semibold tracking-wide text-white px-4 py-2 rounded-full border shadow-inner cursor-pointer transition-colors ${
+              className={`flex items-center text-xs font-semibold tracking-wide text-white px-4 py-2 rounded-full border shadow-inner cursor-pointer transition-colors ${
                 isClassical 
                   ? 'bg-amber-900/60 border-amber-600/50 hover:bg-amber-800/80 hover:border-amber-500/70' 
                   : 'bg-slate-700/60 border-slate-600/50 hover:bg-slate-600/80 hover:border-slate-500/70'

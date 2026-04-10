@@ -1,7 +1,7 @@
 import React, { useMemo, useState, useEffect, useCallback, useRef } from 'react';
 import { ReactFlow, Background, useReactFlow, type Node, type NodeMouseHandler } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
-import { ZoomIn, ZoomOut, Scan } from 'lucide-react';
+import { ZoomIn, ZoomOut, Scan, Maximize2, Minimize2 } from 'lucide-react';
 import { X } from 'lucide-react';
 
 import type { GrammarNodeData as AppGrammarNodeData, GrammarRole } from '../types/grammar';
@@ -42,7 +42,7 @@ const FitViewOnChange: React.FC<{ nodes: Node[]; isVisible?: boolean }> = ({ nod
 };
 
 /** Custom zoom controls that match the app's glassmorphism aesthetic. */
-const ZoomControls: React.FC = () => {
+const ZoomControls: React.FC<{ onExpandAll: () => void; onCollapseAll: () => void }> = ({ onExpandAll, onCollapseAll }) => {
     const { zoomIn, zoomOut, fitView } = useReactFlow();
     const btn = 'flex items-center justify-center rounded-xl transition-all duration-200 bg-slate-800/60 text-slate-400 hover:bg-slate-700/80 hover:text-slate-100 w-8 h-8 lg:w-10 lg:h-10';
     const iconCls = 'w-4 h-4 lg:w-5 lg:h-5';
@@ -58,6 +58,13 @@ const ZoomControls: React.FC = () => {
                 <div className="w-px h-full lg:w-full lg:h-px bg-slate-700/60" />
                 <button onClick={() => fitView({ padding: getFitViewPadding(), duration: 350 })} className={btn} title="Fit to view">
                     <Scan className={iconCls} />
+                </button>
+                <div className="w-px h-full lg:w-full lg:h-px bg-slate-700/60" />
+                <button onClick={onExpandAll} className={btn} title="Expand all">
+                    <Maximize2 className={iconCls} />
+                </button>
+                <button onClick={onCollapseAll} className={btn} title="Collapse all">
+                    <Minimize2 className={iconCls} />
                 </button>
             </div>
         </div>
@@ -264,8 +271,6 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible, onRando
         <div className="w-full h-full border border-slate-700/50 rounded-2xl overflow-hidden glass-panel shadow-2xl relative">
 
             <TreeToolbar
-                onExpandAll={handleExpandAll}
-                onCollapseAll={handleCollapseAll}
                 showGhost={showGhost}
                 onToggleGhost={() => setShowGhost(g => !g)}
                 treeHasProDrop={treeHasProDrop}
@@ -292,7 +297,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible, onRando
                 nodesConnectable={false}
             >
                 <Background color="#1e293b" gap={24} size={1} />
-                <ZoomControls />
+                <ZoomControls onExpandAll={handleExpandAll} onCollapseAll={handleCollapseAll} />
                 <PinchHint />
                 <FitViewOnChange nodes={nodes} isVisible={isVisible} />
             </ReactFlow>
