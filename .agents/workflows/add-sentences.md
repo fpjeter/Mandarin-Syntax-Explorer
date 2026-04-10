@@ -20,7 +20,7 @@ When you are asked to add sentences to the Mandarin Grammar Tree project, you ar
 3. **Format the Object**:
    - `id`: Must be universally unique (e.g., `s93`).
    - `category`: The full string name of the category (e.g., `'BA Construction (把字句)'`).
-   - `explanation`: A rough placeholder or `[PENDING PUBLISHER]` string. Use `\n` escaping for multi-line formatting since the payload format is strict JSON.
+   - `explanation`: Use `{ "en": "[PENDING PUBLISHER]", "zh": "[PENDING PUBLISHER]" }` as a placeholder BilingualString. Do NOT write a plain string — the app expects the bilingual object shape for all new sentences going forward.
    - `tree`: Follow the strict UMSM topic-comment split. Every text node must include `hanzi`, `pinyin`, and `translation`.
 4. **Append the Sentence**: Inject your formatted JSON object into the master JSON array.
 
@@ -37,5 +37,5 @@ If either command throws an error, you must fix the data before continuing.
 Once testing passes, you are NOT done. You must pass the baton so the explanations can be written.
 1. Run `git add`, `git commit -m "feat(data): build AST structure for [category]"`, and `git push` to `origin` so your work is safe on the remote.
 2. Open `.agents/handoff_log.md`.
-3. Manually edit the file to append a `🟡 Pending` request instructing the **Orchestrator** to deploy the **Educational Publisher** to review your branch and author the final `explanation` strings.
+3. Open `.agents/handoff_log.md`. Add your `🟡 Pending` request **inside the `## Active Assignments` section**, above the `<!-- INSERT NEW TICKETS ABOVE THIS LINE -->` sentinel comment. Do NOT append to the bottom of the file — tickets placed outside the Active Assignments section will not be found by agents.
 4. Report completion to the user.

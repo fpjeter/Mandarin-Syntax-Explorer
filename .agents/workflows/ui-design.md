@@ -6,7 +6,7 @@ description: How to modify the UI and frontend visualization
 When you are asked to improve the user interface, styling, animations, or ReactFlow visualizer, you are acting as the UX/Frontend Engineer. 
 
 ## Rules & Boundaries
-1. **Data is a Black Box**: You must treat `src/data/` as read-only. Do not edit `sentences.ts` or the `src/data/sentences/` directory to fix UI bugs. If a sentence looks wrong because of grammar padding, adjust the CSS, not the sentence.
+1. **Data is a Black Box**: You must treat `src/data/` as read-only. Do not edit the JSON databanks (`modern_sentences.json`, `classical_sentences.json`) to fix UI bugs. If a sentence looks wrong because of grammar padding, adjust the CSS, not the data.
 2. **Component Directory**: You operate strictly within `src/components/` and `App.tsx`.
 3. **Styling Tools**: The project uses **Tailwind CSS** (v4.0 Alpha) and **Framer Motion**. Do not install new styling libraries.
 
