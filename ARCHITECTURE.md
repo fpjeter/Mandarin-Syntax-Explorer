@@ -9,7 +9,7 @@ This document maps the application architecture, data flow, and custom rendering
 The application operates as a purely front-end, static React Single Page Application (SPA). 
 
 1. **Static Data Layer**: Sentences are deeply nested objects natively parsed from static arrays (`src/data/modern_sentences.json` and `src/data/classical_sentences.json`). This JSON data layer tracks both syntactic structure (`role`) and "who did what to whom" thematic tags (`semanticRole`).
-2. **Global State**: Managed primarily via React Context (`AppModeContext.tsx`) for the Classical vs Modern toggle, and top-level `useState` in `App.tsx` for the currently selected `selectedId`.
+2. **Global State**: Managed via React Contexts. `AppModeContext.tsx` handles the Classical vs. Modern corpus toggle. `LanguageContext.tsx` (Phase 9) handles the `'en'` / `'zh'` bilingual UI toggle. Top-level `useState` in `App.tsx` tracks the active `selectedId`.
 3. **AST Transformation**: When a sentence is selected, its recursive JSON tree is sent to `src/components/treeTransforms.ts` to be flattened into an array of Nodes and Edges. Node data is injected with active contextual states (like semantic highlighting flags).
 4. **Algorithmic Layout**: The flat array is sent to `src/components/treeLayout.ts`, which calculates `X, Y` coordinates for every node based on textual width and structural depth.
 5. **Render Layer**: Coordinate mapping is passed into `ReactFlow` (`@xyflow/react`) inside `src/components/SyntaxTree.tsx` which handles the canvas rendering, panning, and zooming.
@@ -69,7 +69,7 @@ This mathematical approach guarantees that sibling branches never overlap, and p
 The Classical Mode acts as an entirely parallel "Mirror Universe" to the standard app.
 - Triggered by `useIsClassical()` context hook.
 - Component styling relies heavily on Tailwind ternary operations (`isClassical ? 'bg-amber-900' : 'bg-slate-900'`).
-- Bypasses the standard JSON databanks, directly lazy-loading `classicalSentences.ts` and `classicalBadges.ts`.
+- Bypasses the modern JSON databank, directly lazy-loading `src/data/classical_sentences.json` and `classicalBadges.ts`.
 - Node edge connections (`treeLayout.ts`) recalculate their stroke colors to match the amber/stone sepia palette dynamically.
 
 ---

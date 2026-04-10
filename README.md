@@ -16,6 +16,7 @@ An interactive visualizer for Mandarin Chinese grammar structures. Select an exa
 - **Hover tooltips** — Contextual explanations for every node and badge
 - **Pinyin & translations** on every node, with ZCOOL XiaoWei display font for Chinese text
 - **Rich grammar notes** — Expandable per-sentence explanations written for learners, not linguists
+- **Bilingual UI toggle** — Switch the entire interface and all 123 grammar explanations between English and Mandarin Chinese (中文) via the globe button in the header
 - **Responsive layout** with mobile tab navigation and touch-friendly zoom controls
 - **Grammar guide** — Built-in article explaining the topic-prominent framework
 - **Classical Chinese Explorer** — Toggle into 古文 mode to explore famous classical quotes (see below)
