@@ -230,7 +230,7 @@ function App() {
         )}
 
         {/* Header */}
-        <header className={`glass-panel z-10 border-b px-6 py-4 flex items-center justify-between sticky top-0 ${isClassical ? 'border-stone-700/50 bg-stone-900/40' : 'border-slate-700/50 bg-slate-900/40'}`}>
+        <header className={`glass-panel z-10 border-b px-4 py-2 sm:px-6 sm:py-4 flex items-center justify-between sticky top-0 ${isClassical ? 'border-stone-700/50 bg-stone-900/40' : 'border-slate-700/50 bg-slate-900/40'}`}>
           <div className="flex items-center space-x-4">
             <div className={`p-2.5 rounded-xl shadow-lg ring-1 ring-white/20 ${isClassical ? 'bg-gradient-to-br from-amber-500 to-orange-600' : 'bg-gradient-to-br from-purple-500 to-blue-600'}`}>
               {isClassical ? (
@@ -255,7 +255,7 @@ function App() {
                   <Scroll className="w-4 h-4" />
                 </button>
               </div>
-              <p className={`text-xs font-medium ${isClassical ? 'text-stone-400' : 'text-slate-400'}`}>
+              <p className={`text-xs font-medium hidden sm:block landscape:hidden ${isClassical ? 'text-stone-400' : 'text-slate-400'}`}>
                 {isClassical ? i18n.NAV_CLASSICAL[language] : i18n.NAV_MODERN[language]}
               </p>
             </div>
@@ -280,7 +280,7 @@ function App() {
         <div className="lg:hidden flex border-b border-slate-700/50 bg-slate-900/60 z-10">
           <button
             onClick={() => setMobileView('tree')}
-            className={`flex-1 flex items-center justify-center gap-2 py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors border-b-2 ${mobileView === 'tree'
+            className={`flex-1 flex items-center justify-center gap-2 py-1.5 sm:py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors border-b-2 ${mobileView === 'tree'
               ? isClassical ? 'text-amber-300 border-amber-500 bg-amber-500/10' : 'text-purple-300 border-purple-500 bg-purple-500/10'
               : 'text-slate-400 border-transparent hover:text-slate-200'
               }`}
@@ -290,7 +290,7 @@ function App() {
           </button>
           <button
             onClick={() => setMobileView('list')}
-            className={`flex-1 flex items-center justify-center gap-2 py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors border-b-2 ${mobileView === 'list'
+            className={`flex-1 flex items-center justify-center gap-2 py-1.5 sm:py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors border-b-2 ${mobileView === 'list'
               ? isClassical ? 'text-amber-300 border-amber-500 bg-amber-500/10' : 'text-purple-300 border-purple-500 bg-purple-500/10'
               : 'text-slate-400 border-transparent hover:text-slate-200'
               }`}
@@ -300,7 +300,7 @@ function App() {
           </button>
           <button
             onClick={() => setMobileView('guide')}
-            className={`flex-1 flex items-center justify-center gap-2 py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors border-b-2 ${mobileView === 'guide'
+            className={`flex-1 flex items-center justify-center gap-2 py-1.5 sm:py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors border-b-2 ${mobileView === 'guide'
               ? isClassical ? 'text-amber-300 border-amber-500 bg-amber-500/10' : 'text-blue-300 border-blue-500 bg-blue-500/10'
               : 'text-slate-400 border-transparent hover:text-slate-200'
               }`}
@@ -311,7 +311,7 @@ function App() {
         </div>
 
         {/* Main Layout */}
-        <main className="flex-1 min-h-0 flex flex-col lg:flex-row p-4 sm:p-6 pb-8 gap-6 z-10 overflow-hidden">
+        <main className="flex-1 min-h-0 flex flex-col lg:flex-row p-2 sm:p-4 landscape:p-2 lg:p-6 pb-4 lg:pb-8 gap-3 sm:gap-6 z-10 overflow-hidden">
 
           {/* Sidebar — hidden on mobile when tree or guide is active */}
           <div
