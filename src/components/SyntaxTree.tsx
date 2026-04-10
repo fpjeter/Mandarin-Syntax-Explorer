@@ -208,7 +208,7 @@ export const SyntaxTree: React.FC<SyntaxTreeProps> = ({ tree, isVisible, onRando
                 infoDismissTimer.current = setTimeout(() => setTappedNodeInfo(null), 4000);
             }
         }
-    }, [activeGlossary, expandedIds]);
+    }, [activeGlossary]);
 
     const onNodeMouseEnter: NodeMouseHandler = useCallback((_event, node) => {
         const partnerId = corefPairs.get(node.id);

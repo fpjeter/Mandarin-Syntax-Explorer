@@ -54,3 +54,15 @@ export function resolveGlossaryEntry(
     }
     return { headline: entry.headline, detail: entry.detail };
 }
+
+/**
+ * Resolve a single BilingualString to the appropriate language.
+ * Falls back to English when the zh field is absent.
+ */
+export function resolveBilingual(
+    entry: BilingualString,
+    language: 'en' | 'zh'
+): string {
+    if (language === 'zh' && entry.zh) return entry.zh;
+    return entry.en;
+}

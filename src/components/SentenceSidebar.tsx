@@ -4,6 +4,8 @@ import { LibraryBig, ChevronDown, Search, X, BookOpen } from 'lucide-react';
 import { SENTENCE_CATEGORIES, CATEGORY_DESCRIPTIONS, FULL_CATEGORY_EXPLANATIONS } from '../data/categories';
 import type { SentenceData } from '../types/grammar';
 import { useIsClassical } from '../contexts/AppModeContext';
+import { useLanguage } from '../contexts/LanguageContext';
+import { resolveBilingual, type BilingualString } from '../i18n/strings';
 
 const parseMarkdownBold = (text: string) => {
     if (!text) return null;
@@ -30,9 +32,9 @@ interface SentenceSidebarProps {
     /** Override the category order (for classical mode). Falls back to SENTENCE_CATEGORIES. */
     categories?: readonly string[];
     /** Override the category descriptions (for classical mode). Falls back to CATEGORY_DESCRIPTIONS. */
-    categoryDescriptions?: Record<string, string>;
+    categoryDescriptions?: Record<string, BilingualString>;
     /** Override the full category descriptions. Falls back to FULL_CATEGORY_EXPLANATIONS. */
-    fullCategoryDescriptions?: Record<string, string>;
+    fullCategoryDescriptions?: Record<string, BilingualString>;
 }
 
 export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
@@ -47,6 +49,7 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
     const descriptions = descriptionsProp ?? CATEGORY_DESCRIPTIONS;
     const fullDescriptions = fullCategoryDescriptions ?? FULL_CATEGORY_EXPLANATIONS;
     const isClassical = useIsClassical();
+    const { language } = useLanguage();
 
     const [openGroup, setOpenGroup] = useState<string | null>(null);
     const [expandedCategoryDesc, setExpandedCategoryDesc] = useState<string | null>(null);
@@ -234,10 +237,10 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
                                     >
                                         <div className="px-4 pt-2 pb-2">
                                             <p className="text-[10px] text-slate-400 italic leading-relaxed">
-                                            {(descriptions as Record<string, string>)[category]}
+                                            {resolveBilingual((descriptions as Record<string, BilingualString>)[category], language)}
                                             </p>
                                             
-                                            {(fullDescriptions as Record<string, string>)[category] && (
+                                            {(fullDescriptions as Record<string, BilingualString>)[category]?.en && (
                                                 <button
                                                     onClick={(e) => {
                                                         e.stopPropagation();
@@ -260,7 +263,7 @@ export const SentenceSidebar: React.FC<SentenceSidebarProps> = ({
                                                         className="overflow-hidden mt-2"
                                                     >
                                                         <div className="p-3 mb-1 rounded-xl bg-slate-800/80 border border-slate-700/60 shadow-inner text-[11px] leading-relaxed text-slate-300 font-medium">
-                                                            {parseMarkdownBold((fullDescriptions as Record<string, string>)[category])}
+                                                            {parseMarkdownBold(resolveBilingual((fullDescriptions as Record<string, BilingualString>)[category], language))}
                                                         </div>
                                                     </motion.div>
                                                 )}
