@@ -399,7 +399,7 @@ Reserve Instrument/Location/Goal/Source/Stimulus for future advanced mode.
 ---
 
 ### [2026-04-09] Orchestrator -> Educational Publisher
-**Status**: ACTIVE
+**Status**: 🔴 Active
 **Task**: Phase 9b -- Translate All 30 Classical Sentence Explanations
 **Branch**: data/i18n-classical-zh
 
@@ -410,7 +410,7 @@ Convert each explanation field in classical_sentences.json from a plain string t
 ---
 
 ### [2026-04-09] Orchestrator -> Educational Publisher
-**Status**: ACTIVE
+**Status**: 🔴 Active
 **Task**: Phase 9c -- Translate Grammar Guides to Chinese
 **Branch**: data/i18n-grammar-guides
 
