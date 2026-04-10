@@ -5,7 +5,10 @@
     "chinese": "他打碎了那个花瓶。",
     "pinyin": "Tā dǎ suì le nà ge huā píng.",
     "translation": "He broke that vase.",
-    "explanation": "The tree shows the most fundamental pattern in Mandarin. At the very top, **他** (\"he\") sits as the **Topic**: the thing the sentence is about. Everything underneath is the **Comment**: what actually happened. Look inside the Comment and you will see **打碎**, a tight verb-result pair where 打 (\"hit\") and 碎 (\"shatter\") fuse together to mean \"smash to pieces.\" The **了** right after it marks the action as completed. Finally, the object **那个花瓶** (\"that vase\") tells us what got smashed. This Topic-Comment split is the backbone of every Mandarin sentence.",
+    "explanation": {
+      "en": "The tree shows the most fundamental pattern in Mandarin. At the very top, **他** (\"he\") sits as the **Topic**: the thing the sentence is about. Everything underneath is the **Comment**: what actually happened. Look inside the Comment and you will see **打碎**, a tight verb-result pair where 打 (\"hit\") and 碎 (\"shatter\") fuse together to mean \"smash to pieces.\" The **了** right after it marks the action as completed. Finally, the object **那个花瓶** (\"that vase\") tells us what got smashed. This Topic-Comment split is the backbone of every Mandarin sentence.",
+      "zh": "这棵语法树展示了中文最基本的句型。最上方的**他**是**话题**（即这句话要谈论的对象），下面所有内容都是**评论**（即对话题的描述）。在评论内部，你会看到**打碎**这个动补结构：**打**（\"击打\"）和**碎**（\"破碎\"）紧密融合，表示\"打成碎片\"。紧跟其后的**了**标志着动作已经完成。最后，宾语**那个花瓶**告诉我们被打碎的是什么。这种\"话题—评论\"的结构是每个中文句子的骨架。"
+    },
     "tree": {
       "id": "n1",
       "role": "Sentence",
@@ -94,7 +97,10 @@
     "chinese": "我喜欢在图书馆看书。",
     "pinyin": "Wǒ xǐ huān zài tú shū guǎn kàn shū.",
     "translation": "I like reading books in the library.",
-    "explanation": "Here, **我** (\"I\") opens the sentence as the Topic. The Comment chains two verb phrases without repeating who is doing them: first **喜欢** (\"like\"), and then the activity being liked, **在图书馆看书** (\"reading books in the library\"). Notice where the location lands in the tree: **在图书馆** (\"in the library\") comes *before* the verb **看** (\"read\"), not after. Mandarin sets the scene first, then names the action. This \"scene before action\" ordering is one of the clearest differences from English.",
+    "explanation": {
+      "en": "Here, **我** (\"I\") opens the sentence as the Topic. The Comment chains two verb phrases without repeating who is doing them: first **喜欢** (\"like\"), and then the activity being liked, **在图书馆看书** (\"reading books in the library\"). Notice where the location lands in the tree: **在图书馆** (\"in the library\") comes *before* the verb **看** (\"read\"), not after. Mandarin sets the scene first, then names the action. This \"scene before action\" ordering is one of the clearest differences from English.",
+      "zh": "**我**作为话题开头，评论部分串联了两个动词短语，不需要重复主语：先是**喜欢**，然后是被喜欢的活动——**在图书馆看书**。注意地点出现的位置：**在图书馆**放在动词**看**的*前面*，而不是后面。中文的语序是\"先交代场景，再说动作\"，这是与英文最明显的区别之一。"
+    },
     "tree": {
       "id": "n2",
       "role": "Sentence",
@@ -191,7 +197,10 @@
     "chinese": "他决定开始学开车。",
     "pinyin": "Tā jué dìng kāi shǐ xué kāi chē.",
     "translation": "He decided to start learning to drive a car.",
-    "explanation": "The Topic **他** (\"he\") anchors the top of the tree. Then look at the Comment: it stacks **four verb phrases** one inside the other with no connecting word between them. decided → start → learn → drive a car. There is no word for \"to\" the way English needs one. Each verb takes the next verb phrase as its object, and the tree expands outward to show all four nested layers. This kind of serial verb chaining is completely natural in Mandarin and very common in everyday speech.",
+    "explanation": {
+      "en": "The Topic **他** (\"he\") anchors the top of the tree. Then look at the Comment: it stacks **four verb phrases** one inside the other with no connecting word between them. decided → start → learn → drive a car. There is no word for \"to\" the way English needs one. Each verb takes the next verb phrase as its object, and the tree expands outward to show all four nested layers. This kind of serial verb chaining is completely natural in Mandarin and very common in everyday speech.",
+      "zh": "话题**他**位于树的最上方，评论部分一口气叠了**四个动词短语**，中间没有任何连接词：决定→开始→学→开车。中文不需要像英文那样用\"to\"来连接。每个动词都拿下一个动词短语做宾语，树也随之层层展开，清晰地呈现出四层嵌套。这种连动式在中文口语中极为自然且常见。"
+    },
     "tree": {
       "id": "n5",
       "role": "Sentence",
@@ -295,7 +304,10 @@
     "chinese": "我看了半天，还是看不了，就不看了。",
     "pinyin": "Wǒ kàn le bàn tiān, hái shì kàn bù liǎo, jiù bù kàn le.",
     "translation": "I looked at it for a long time, still couldn't finish, so I gave up looking.",
-    "explanation": "**我** (\"I\") appears once as the Topic, then becomes the implied actor for **three separate clauses** in a row. Mandarin does not repeat who is acting between clauses. The Comment chains three events: tried for a long time, still could not finish, so gave up. The middle clause **看不了** is especially interesting: sandwiching **不** between the verb and its result means \"unable to achieve the outcome.\" Here, unable to finish reading. This is called a **potential complement**, and it is one of Mandarin's most common patterns.",
+    "explanation": {
+      "en": "**我** (\"I\") appears once as the Topic, then becomes the implied actor for **three separate clauses** in a row. Mandarin does not repeat who is acting between clauses. The Comment chains three events: tried for a long time, still could not finish, so gave up. The middle clause **看不了** is especially interesting: sandwiching **不** between the verb and its result means \"unable to achieve the outcome.\" Here, unable to finish reading. This is called a **potential complement**, and it is one of Mandarin's most common patterns.",
+      "zh": "**我**出现一次作为话题，之后成为**三个并列小句**的隐含施事者——中文在分句之间不重复主语。评论依次串联三件事：看了半天、还是看不了、就不看了。其中**看不了**特别有意思：在动词和结果补语之间插入**不**，表示\"无法达到那个结果\"。这就是**可能补语**，是中文最常用的句型之一。"
+    },
     "tree": {
       "id": "n7",
       "role": "Sentence",
@@ -453,7 +465,10 @@
     "chinese": "那本书，放在桌子上了。",
     "pinyin": "Nà běn shū , fàng zài zhuō zi shàng le .",
     "translation": "That book, (it's been) put on the table.",
-    "explanation": "Notice the comma in the Chinese text. **那本书** (\"that book\") is set apart as the Topic. Inside the Comment, the real actor (whoever placed the book) is never stated, and the dropped **[它]** (\"it\") clearly refers back to the book just named. The **red arc** in the tree draws a visible line from the ghost node back to the Topic, showing this invisible link. This is one of the most natural patterns in Mandarin: name a topic, then talk about it without repeating it.",
+    "explanation": {
+      "en": "Notice the comma in the Chinese text. **那本书** (\"that book\") is set apart as the Topic. Inside the Comment, the real actor (whoever placed the book) is never stated, and the dropped **[它]** (\"it\") clearly refers back to the book just named. The **red arc** in the tree draws a visible line from the ghost node back to the Topic, showing this invisible link. This is one of the most natural patterns in Mandarin: name a topic, then talk about it without repeating it.",
+      "zh": "注意中文里的逗号。**那本书**被单独提出作为话题。在评论内部，真正的施事者（放书的人）根本没有说明，而省略的**[它]**显然指回前面提到的那本书。树中的**红色弧线**从幽灵节点指回话题，把这条隐形联系显现出来。这是中文最自然的句式之一：先点明话题，然后围绕它展开评论，不再重复。"
+    },
     "tree": {
       "id": "n15",
       "role": "Sentence",
@@ -561,7 +576,10 @@
     "chinese": "张三，爱唱歌。",
     "pinyin": "Zhāng Sān , ài chàng gē .",
     "translation": "Zhang San, (he) loves singing.",
-    "explanation": "The sentence names **张三** (\"Zhang San\") as the Topic, then the Comment says what he does: loves singing. But look at who the actor of **爱唱歌** (\"loves singing\") is. It is never stated explicitly. The listener just knows it is the same Zhang San from a moment ago. The **red arc** in the tree runs from the invisible ghost node **[他]** back to 张三 at the top, making this connection visible. Dropping the actor when it matches the Topic is one of the most natural moves in everyday Mandarin conversation.",
+    "explanation": {
+      "en": "The sentence names **张三** (\"Zhang San\") as the Topic, then the Comment says what he does: loves singing. But look at who the actor of **爱唱歌** (\"loves singing\") is. It is never stated explicitly. The listener just knows it is the same Zhang San from a moment ago. The **red arc** in the tree runs from the invisible ghost node **[他]** back to 张三 at the top, making this connection visible. Dropping the actor when it matches the Topic is one of the most natural moves in everyday Mandarin conversation.",
+      "zh": "句子先点名**张三**作为话题，评论部分说他做什么：爱唱歌。但看看**爱唱歌**的施事者是谁——句中根本没说。听话人自然知道就是刚提到的张三。树中的**红色弧线**从幽灵节点**[他]**指回顶端的张三，让这条关联清晰可见。当施事者和话题一致时省略它，是日常中文对话里最自然的操作。"
+    },
     "tree": {
       "id": "n16",
       "role": "Sentence",
@@ -644,7 +662,10 @@
     "chinese": "他学中文学了五年了。",
     "pinyin": "Tā xué Zhōng wén xué le wǔ nián le.",
     "translation": "He has been studying Chinese for five years now.",
-    "explanation": "When a Mandarin verb has both an **object** (the thing acted on) and a **duration** (how long), they cannot sit side by side. The verb must be **repeated**. The tree shows this clearly: first **学中文** (\"study Chinese,\" verb + object), then **学了五年** (\"studied for five years,\" same verb again, now paired with the duration). English just says \"studied Chinese for five years\" with one verb. Mandarin splits the information into two verb phrases, connected by repeating 学. The final **了** signals that the studying continues up to this moment.",
+    "explanation": {
+      "en": "When a Mandarin verb has both an **object** (the thing acted on) and a **duration** (how long), they cannot sit side by side. The verb must be **repeated**. The tree shows this clearly: first **学中文** (\"study Chinese,\" verb + object), then **学了五年** (\"studied for five years,\" same verb again, now paired with the duration). English just says \"studied Chinese for five years\" with one verb. Mandarin splits the information into two verb phrases, connected by repeating 学. The final **了** signals that the studying continues up to this moment.",
+      "zh": "当一个中文动词既带**宾语**又带**时量补语**时，它们不能并排出现，动词必须**重复**一次。树清楚地展示了这一点：先是**学中文**（动词+宾语），再是**学了五年**（同一动词再次出现，搭配时量补语）。英文只需一个动词就能说\"studied Chinese for five years\"，中文则把信息拆分到两个动词短语里，靠重复\"学\"来衔接。句末的**了**表示学习一直持续到现在。"
+    },
     "tree": {
       "id": "n19",
       "role": "Sentence",
@@ -762,7 +783,10 @@
     "chinese": "几个人一起走，里面肯定有值得我学习的人。",
     "pinyin": "Jǐ gè rén yì qǐ zǒu, lǐ miàn kěn dìng yǒu zhí de wǒ xué xí de rén.",
     "translation": "When a few people walk together, there is surely someone worth learning from among them.",
-    "explanation": "A modern take on 三人行必有我師焉 (from the Analects of Confucius: \"Among three people walking, there is surely my teacher\"). Classical Chinese packed the whole idea into eight characters. Modern Mandarin spells it out in a clear Topic-Comment frame. The Topic (**几个人一起走**, \"a few people walk together\") sets the situation. The Comment then declares: **里面** (\"among them\") + **肯定有** (\"surely there is\") + a noun phrase built with 的: **值得我学习的人** (\"a person worth learning from\").",
+    "explanation": {
+      "en": "A modern take on 三人行必有我師焉 (from the Analects of Confucius: \"Among three people walking, there is surely my teacher\"). Classical Chinese packed the whole idea into eight characters. Modern Mandarin spells it out in a clear Topic-Comment frame. The Topic (**几个人一起走**, \"a few people walk together\") sets the situation. The Comment then declares: **里面** (\"among them\") + **肯定有** (\"surely there is\") + a noun phrase built with 的: **值得我学习的人** (\"a person worth learning from\").",
+      "zh": "这是对\"三人行必有我师焉\"（出自《论语》）的现代改写。文言用八个字就表达了全部意思，现代中文则用清晰的话题—评论结构展开。话题（**几个人一起走**，\"几个人一起出行\"）设定情境。评论随后宣告：**里面**（\"其中\"）+ **肯定有**（\"一定有\"）+ 一个用\"的\"构建的名词短语：**值得我学习的人**（\"值得我去学的人\"）。"
+    },
     "tree": {
       "id": "s70-root",
       "role": "Sentence",
@@ -868,7 +892,10 @@
     "chinese": "生命也是我想要的东西。",
     "pinyin": "Shēng mìng yě shì wǒ xiǎng yào de dōng xi.",
     "translation": "Life is also something I desire.",
-    "explanation": "A modern take on 生亦我所欲也 (from Mencius: \"Life is also what I desire\"). The classical 所欲 (\"that which is desired\") becomes **想要的东西** (\"things I want\"), and the classical sentence-final 也 becomes the modern linking verb **是** (\"is\"). In the tree, **生命** (\"life\") sits as the Topic. The Comment uses **也** (\"also\") before 是, followed by a noun phrase built with 的: **我想要的东西** (\"the thing I want\"). A clean identification sentence.",
+    "explanation": {
+      "en": "A modern take on 生亦我所欲也 (from Mencius: \"Life is also what I desire\"). The classical 所欲 (\"that which is desired\") becomes **想要的东西** (\"things I want\"), and the classical sentence-final 也 becomes the modern linking verb **是** (\"is\"). In the tree, **生命** (\"life\") sits as the Topic. The Comment uses **也** (\"also\") before 是, followed by a noun phrase built with 的: **我想要的东西** (\"the thing I want\"). A clean identification sentence.",
+      "zh": "这是对\"学而不思则罔，思而不学则殆\"（出自《论语》）的现代改写。原文用并行的\"而/则\"结构表达因果。现代版用**如果...就**条件句重新包装：**如果只学习不思考**（条件）→ **就不会真正理解**（后果）。树展示了条件句和后果句如何作为语法框架的两个对称部分排列。"
+    },
     "tree": {
       "id": "s78-root",
       "role": "Sentence",
@@ -940,7 +967,10 @@
     "chinese": "了解别人的人算聪明，了解自己的人才算高明。",
     "pinyin": "Liǎo jiě bié rén de rén suàn cōng míng, liǎo jiě zì jǐ de rén cái suàn gāo míng.",
     "translation": "Those who understand others are clever; those who understand themselves are truly wise.",
-    "explanation": "A modern take on 知人者智，自知者明 (from the Dao De Jing: \"Those who know others are wise; those who know themselves are enlightened\"). The classical 者 (\"the one who\") becomes **的人** in modern Mandarin. The tree shows two parallel clauses with matching structure: each Topic is a noun phrase built with 的 (**了解别人的人**, \"people who understand others\"), and each Comment uses **算** (\"counts as\") to assign a quality. The second clause adds **才** (\"only then\") for emphasis, drawing a distinction between cleverness and true wisdom.",
+    "explanation": {
+      "en": "A modern take on 知人者智，自知者明 (from the Dao De Jing: \"Those who know others are wise; those who know themselves are enlightened\"). The classical 者 (\"the one who\") becomes **的人** in modern Mandarin. The tree shows two parallel clauses with matching structure: each Topic is a noun phrase built with 的 (**了解别人的人**, \"people who understand others\"), and each Comment uses **算** (\"counts as\") to assign a quality. The second clause adds **才** (\"only then\") for emphasis, drawing a distinction between cleverness and true wisdom.",
+      "zh": "这是一种现代说法，源自\"己所不欲勿施于人\"（出自《论语》）。原文用文言否定词\"勿\"和介词\"于\"。现代版用**如果...就不应该**的条件句：**如果你自己不愿意做的事**（条件，含\"的\"关系从句）→ **就不应该要求别人做**（后果）。树展示了\"的\"关系从句嵌套在条件分句内部。"
+    },
     "tree": {
       "id": "s86-root",
       "role": "Sentence",
@@ -1061,7 +1091,10 @@
     "chinese": "做事正义的人，帮助他的人就多；做事不正义的人，帮助他的人就少。",
     "pinyin": "Zuò shì zhèng yì de rén, bāng zhù tā de rén jiù duō; zuò shì bú zhèng yì de rén, bāng zhù tā de rén jiù shǎo.",
     "translation": "Those who act justly gain much support; those who act unjustly find little.",
-    "explanation": "A modern take on 得道者多助，失道者寡助 (from Mencius: \"The just gain much support; the unjust find little\"). The classical 者 becomes **的人**, and the compact classical predicates expand into full modern clauses. The tree shows two parallel Topic-Comment pairs. Each Topic is a noun phrase built with 的: **做事正义的人** (\"people who act justly\"). Each Comment nests another 的 phrase: **帮助他的人** (\"people who help them\"), followed by **就** and a quality (**多** \"many\" or **少** \"few\"). Notice how 的 phrases stack inside each other to build complex meanings.",
+    "explanation": {
+      "en": "A modern take on 得道者多助，失道者寡助 (from Mencius: \"The just gain much support; the unjust find little\"). The classical 者 becomes **的人**, and the compact classical predicates expand into full modern clauses. The tree shows two parallel Topic-Comment pairs. Each Topic is a noun phrase built with 的: **做事正义的人** (\"people who act justly\"). Each Comment nests another 的 phrase: **帮助他的人** (\"people who help them\"), followed by **就** and a quality (**多** \"many\" or **少** \"few\"). Notice how 的 phrases stack inside each other to build complex meanings.",
+      "zh": "这是对\"温故而知新\"（出自《论语》）的现代改写。原文用\"而\"连接两个动作。现代版用**如果...就能**的条件框架：**如果你经常复习学过的东西**（含\"过\"表示经验的关系从句）→ **就能发现新的道理**。树展示了关系从句嵌套在条件分句内部，用\"如果/就\"框架组织两个部分。"
+    },
     "tree": {
       "id": "s90-root",
       "role": "Sentence",
@@ -1221,7 +1254,10 @@
     "chinese": "这件事非你亲自去办不可。",
     "pinyin": "Zhè jiàn shì fēi nǐ qīn zì qù bàn bù kě.",
     "translation": "This matter absolutely must be handled by you yourself; there is no way around it.",
-    "explanation": "The outer Topic **这件事** (\"this matter\") sets the frame. The Comment uses a paired structure: **非** at the start and **不可** at the end lock together to express absolute necessity, literally \"it is not the case that it can be avoided.\" Between them: who must act (you, **你**), how (personally, **亲自**), and the action itself (go handle it, **去办**). This double negative is a fixed expression: 非...不可 roughly means \"must, without exception.\" You will encounter the same pattern in Chinese proverbs and formal writing.",
+    "explanation": {
+      "en": "The outer Topic **这件事** (\"this matter\") sets the frame. The Comment uses a paired structure: **非** at the start and **不可** at the end lock together to express absolute necessity, literally \"it is not the case that it can be avoided.\" Between them: who must act (you, **你**), how (personally, **亲自**), and the action itself (go handle it, **去办**). This double negative is a fixed expression: 非...不可 roughly means \"must, without exception.\" You will encounter the same pattern in Chinese proverbs and formal writing.",
+      "zh": "话题**他**出现在最上方。评论部分包含一个表示持续的体标记**着**，附着在动词**穿**上：**穿着**意味着\"正穿着\"而非\"穿上\"。这个**着**冻结了动词的动态，变成一种静态描述。然后**一件红色的大衣**是宾语，告诉我们穿的是什么。树展示了**着**紧贴动词后面的位置——它是体标记，不是独立的词。"
+    },
     "tree": {
       "id": "n11",
       "role": "Sentence",
@@ -1345,7 +1381,10 @@
     "chinese": "这件事非解决不可。",
     "pinyin": "Zhè jiàn shì fēi jiě jué bù kě.",
     "translation": "This matter absolutely must be resolved.",
-    "explanation": "**这件事** (\"this matter\"; 件 is a measure word for affairs) is the Topic. The Comment uses the double-negative pattern **非…不可**: 非 (\"must/unless\") + verb + 不可 (\"not acceptable\"). The two negatives produce a strong affirmative: \"it is not acceptable NOT to resolve it,\" meaning \"it must be resolved.\" This is one of Mandarin's most emphatic ways to express necessity. The pattern is formulaic: 非 + verb phrase + 不可. You can slot any action inside: 非去不可 (\"must go\"), 非说清楚不可 (\"must explain clearly\").",
+    "explanation": {
+      "en": "**这件事** (\"this matter\"; 件 is a measure word for affairs) is the Topic. The Comment uses the double-negative pattern **非…不可**: 非 (\"must/unless\") + verb + 不可 (\"not acceptable\"). The two negatives produce a strong affirmative: \"it is not acceptable NOT to resolve it,\" meaning \"it must be resolved.\" This is one of Mandarin's most emphatic ways to express necessity. The pattern is formulaic: 非 + verb phrase + 不可. You can slot any action inside: 非去不可 (\"must go\"), 非说清楚不可 (\"must explain clearly\").",
+      "zh": "话题**他**位于顶端。评论串联了两个动词短语，形成**目的链**：**骑着自行车**（骑车的状态，用**着**表示持续）加上**去上班**（去上班）。第一个动作是第二个的方式和背景。树展示了两个动词短语如何并列：骑车是背景动作（进行中），上班是目的。"
+    },
     "tree": {
       "id": "n57",
       "role": "Sentence",
@@ -1420,7 +1459,10 @@
     "chinese": "苹果我已经吃了。",
     "pinyin": "Píng guǒ wǒ yǐ jīng chī le.",
     "translation": "The apple, I've already eaten it.",
-    "explanation": "Here, **苹果** (\"apple\") sits as the Topic, but notice something different: the apple is not the one doing anything. It is the thing being acted upon. Inside the Comment, **我** (\"I\") is the actual actor, followed by **已经吃了** (\"already ate\"). This is a **patient-topic** sentence: the Topic is not the doer but the thing being discussed. English signals this with word order (\"I ate the apple\"), but Mandarin can freely place the patient first as a frame: \"As for the apple, I already ate it.\" This flexibility is one of the most distinctive features of Mandarin's Topic-Comment system.",
+    "explanation": {
+      "en": "Here, **苹果** (\"apple\") sits as the Topic, but notice something different: the apple is not the one doing anything. It is the thing being acted upon. Inside the Comment, **我** (\"I\") is the actual actor, followed by **已经吃了** (\"already ate\"). This is a **patient-topic** sentence: the Topic is not the doer but the thing being discussed. English signals this with word order (\"I ate the apple\"), but Mandarin can freely place the patient first as a frame: \"As for the apple, I already ate it.\" This flexibility is one of the most distinctive features of Mandarin's Topic-Comment system.",
+      "zh": "句末的**呢**在这里表示\"正在进行\"的语气。**他**是话题，评论说他**打电话呢**——打电话这个动作正在发生。**呢**不同于**着**（附着在动词上表示状态持续），它是句末语气词，给整个句子染上\"此刻正在\"的色彩。树展示了**呢**独立地挂在句末位置。"
+    },
     "tree": {
       "id": "s124-n",
       "role": "Sentence",
@@ -1488,7 +1530,10 @@
     "chinese": "墙上挂着一幅画。",
     "pinyin": "Qiáng shàng guà zhe yī fú huà.",
     "translation": "On the wall hangs a painting.",
-    "explanation": "**墙上** (\"on the wall\") is the Topic. It is not a person or thing but a *location* serving as the frame for what follows. The Comment uses **挂着** (\"is hanging\"), with the durative aspect marker **着** indicating an ongoing state: something is currently hanging there. The painting (**一幅画**, where 幅 is the measure word for paintings and posters) is the thing existing in that location. This sentence type is called an \"existential\" or \"presentative\" pattern: it introduces something by first naming where it exists. English uses inverted word order for the same effect: \"On the wall hangs a painting.\"",
+    "explanation": {
+      "en": "**墙上** (\"on the wall\") is the Topic. It is not a person or thing but a *location* serving as the frame for what follows. The Comment uses **挂着** (\"is hanging\"), with the durative aspect marker **着** indicating an ongoing state: something is currently hanging there. The painting (**一幅画**, where 幅 is the measure word for paintings and posters) is the thing existing in that location. This sentence type is called an \"existential\" or \"presentative\" pattern: it introduces something by first naming where it exists. English uses inverted word order for the same effect: \"On the wall hangs a painting.\"",
+      "zh": "这是一个用**没(有)**否定已完成动作的典型句式。**我**是话题，评论用**还没吃饭**否定了\"吃饭\"这件事的发生。**没**否定的是完成状态——不是说\"不想吃\"，而是说\"这件事还没发生\"。**还**加在前面增添\"仍然尚未\"的语气。树展示了否定词**没**和动词之间的位置关系。"
+    },
     "tree": {
       "id": "s125-n",
       "role": "Sentence",
@@ -1589,7 +1634,10 @@
     "chinese": "她昨天把我的钱包忘在出租车上了。",
     "pinyin": "Tā zuó tiān bǎ wǒ de qián bāo wàng zài chū zū chē shàng le.",
     "translation": "She forgot my wallet in the taxi yesterday.",
-    "explanation": "**她** (\"she\") opens the sentence as the Topic. The Comment starts with a time word, **昨天** (\"yesterday\"), placed before the verb because Mandarin always sets the scene before the action. Then comes the **把 construction**: 把 pulls the object **我的钱包** (\"my wallet\") in front of the verb to signal that something is about to happen to it. The verb **忘** (\"forget\") follows, with location phrase **在出租车上** (\"in the taxi\") showing where the wallet ended up. 把 works like a spotlight on the object: \"as for the wallet, she forgot it in the taxi.\" The tree groups 把 and the wallet together before the verb, making this front-loading visible.",
+    "explanation": {
+      "en": "**她** (\"she\") opens the sentence as the Topic. The Comment starts with a time word, **昨天** (\"yesterday\"), placed before the verb because Mandarin always sets the scene before the action. Then comes the **把 construction**: 把 pulls the object **我的钱包** (\"my wallet\") in front of the verb to signal that something is about to happen to it. The verb **忘** (\"forget\") follows, with location phrase **在出租车上** (\"in the taxi\") showing where the wallet ended up. 把 works like a spotlight on the object: \"as for the wallet, she forgot it in the taxi.\" The tree groups 把 and the wallet together before the verb, making this front-loading visible.",
+      "zh": "**她**是话题。评论部分用**把**字句把宾语**衣服**提到动词前面，聚焦于\"衣服怎么了\"。动词**洗**搭配结果补语**干净**：洗+干净=洗到干净为止。**了**标志着这一切已完成。**把**字句的核心思路是：把某个东西拎出来，告诉听话人它发生了什么变化。树展示了**把**短语和动补结构各占其位。"
+    },
     "tree": {
       "id": "n3",
       "role": "Sentence",
@@ -1732,7 +1780,10 @@
     "chinese": "那只猫在厨房里生气地用爪子把我的杯子弄倒地上了。",
     "pinyin": "Nà zhī māo zài chú fáng lǐ shēng qì de yòng zhuǎ zi bǎ wǒ de bēi zi nòng dào dì shàng le.",
     "translation": "That cat angrily knocked my cup to the floor with its claws.",
-    "explanation": "The Topic is **那只猫** (\"that cat\"), where 只 is the **measure word** for cats and certain animals. Before the main action appears, Mandarin layers up the scene inside the Comment: first **where** (在厨房里, \"in the kitchen\"), then **how** (生气地, \"angrily\"), then **with what** (用爪子, \"with its claws\"), and finally **把** spotlights the cup as the thing being affected. Only after all that does the verb **弄** (\"knock/move\") arrive. English would lead with the verb much earlier. The tree makes this rich layering visible: every modifier stacks above the verb in strict order.",
+    "explanation": {
+      "en": "The Topic is **那只猫** (\"that cat\"), where 只 is the **measure word** for cats and certain animals. Before the main action appears, Mandarin layers up the scene inside the Comment: first **where** (在厨房里, \"in the kitchen\"), then **how** (生气地, \"angrily\"), then **with what** (用爪子, \"with its claws\"), and finally **把** spotlights the cup as the thing being affected. Only after all that does the verb **弄** (\"knock/move\") arrive. English would lead with the verb much earlier. The tree makes this rich layering visible: every modifier stacks above the verb in strict order.",
+      "zh": "**他**是话题。**把**字句将**书**提前，然后展开一个串联：动词**拿**（拿起）跟着趋向补语**回来**（回来），再接**了**（完成）。**拿回来**三个成分紧密融合：拿+回+来。**把**把宾语从\"被影响的东西\"变成了注意力的焦点。树展示了趋向补语嵌套在把字句里的清晰结构。"
+    },
     "tree": {
       "id": "n4",
       "role": "Sentence",
@@ -1915,7 +1966,10 @@
     "chinese": "请把窗户关上。",
     "pinyin": "Qǐng bǎ chuāng hu guān shàng.",
     "translation": "Please close the window.",
-    "explanation": "A short, everyday 把 sentence. **请** (\"please\") sits at the front as a politeness word. Then **把** spotlights **窗户** (\"the window\") before the verb, signaling it is about to be affected. The verb **关** (\"close\") comes next, followed by the directional complement **上** (\"shut,\" literally \"up/onto\"). This **把 [thing] [verb]+[result]** template is the standard way to give instructions or describe a deliberate act with a clear outcome. Notice that the implied topic **[你]** (\"you\") appears as a ghost node in the tree; in commands like this, Mandarin typically drops it.",
+    "explanation": {
+      "en": "A short, everyday 把 sentence. **请** (\"please\") sits at the front as a politeness word. Then **把** spotlights **窗户** (\"the window\") before the verb, signaling it is about to be affected. The verb **关** (\"close\") comes next, followed by the directional complement **上** (\"shut,\" literally \"up/onto\"). This **把 [thing] [verb]+[result]** template is the standard way to give instructions or describe a deliberate act with a clear outcome. Notice that the implied topic **[你]** (\"you\") appears as a ghost node in the tree; in commands like this, Mandarin typically drops it.",
+      "zh": "话题**妈妈**出现在句首。**把**字句将**蛋糕**提前聚焦，然后动词**切**搭配结果补语**成**（变成），再跟宾语**八块**（八块）。整个结构是：把蛋糕+切成+八块。**把**告诉我们蛋糕受到了处置，**成**告诉我们处置的结果。树展示了结果补语如何嵌套在把字句的动词短语内部。"
+    },
     "tree": {
       "id": "n28",
       "role": "Sentence",
@@ -2004,7 +2058,10 @@
     "chinese": "她把那封信藏在枕头下面了。",
     "pinyin": "Tā bǎ nà fēng xìn cáng zài zhěn tou xià miàn le.",
     "translation": "She hid that letter under the pillow.",
-    "explanation": "**她** (\"she\") is the Topic. The Comment uses **把** to pull **那封信** (\"that letter\"; 封 is the measure word for letters and envelopes) in front of the verb. The verb **藏** (\"hide\") is then followed by a location phrase: **在枕头下面** (\"under the pillow\"). This location tells you where the object ended up as a result of the action. That is the core job of 把: once the object has been fronted, the verb naturally attaches a result, destination, or outcome. The final **了** confirms the action is complete.",
+    "explanation": {
+      "en": "**她** (\"she\") is the Topic. The Comment uses **把** to pull **那封信** (\"that letter\"; 封 is the measure word for letters and envelopes) in front of the verb. The verb **藏** (\"hide\") is then followed by a location phrase: **在枕头下面** (\"under the pillow\"). This location tells you where the object ended up as a result of the action. That is the core job of 把: once the object has been fronted, the verb naturally attaches a result, destination, or outcome. The final **了** confirms the action is complete.",
+      "zh": "**她**是话题。**把**字句将**房间**提前为焦点。动词**打扫**（清扫）后面跟**得**引出程度补语：**干干净净**（干干净净，叠词强调）。这里同时出现了两个结构：**把**告诉我们*什么*被处理了，**得**告诉我们处理得*怎么样*。树展示了把字短语和程度补语各自占据的位置。"
+    },
     "tree": {
       "id": "n29",
       "role": "Sentence",
@@ -2136,7 +2193,10 @@
     "chinese": "他没把门关上。",
     "pinyin": "Tā méi bǎ mén guān shàng.",
     "translation": "He didn't close the door.",
-    "explanation": "**他** (\"he\") is the Topic. The Comment introduces a critical rule about 把 sentences: the negation word **没** (\"didn't\") must come *before* 把, never after it. The pattern is 没 + 把 + object + verb + result. Here, **没把门关上** means \"didn't close the door,\" where 关 (\"close\") + 上 (\"shut\") form the verb-result pair. If you tried to put 没 after 把 (把门没关上), native speakers would find it unnatural. This ordering rule also applies to 别 (\"don't\") and 不: they always precede 把.",
+    "explanation": {
+      "en": "**他** (\"he\") is the Topic. The Comment introduces a critical rule about 把 sentences: the negation word **没** (\"didn't\") must come *before* 把, never after it. The pattern is 没 + 把 + object + verb + result. Here, **没把门关上** means \"didn't close the door,\" where 关 (\"close\") + 上 (\"shut\") form the verb-result pair. If you tried to put 没 after 把 (把门没关上), native speakers would find it unnatural. This ordering rule also applies to 别 (\"don't\") and 不: they always precede 把.",
+      "zh": "**他**是话题。**把**字句将**门**提前聚焦。动词**关**（关闭）搭配结果补语**上**（关到位），**了**标志完成。**关上**是一个紧密的动补复合词：关+上=关到合上为止。树展示了把字结构中的动词—补语融合。"
+    },
     "tree": {
       "id": "s126-n",
       "role": "Sentence",
@@ -2227,7 +2287,10 @@
     "chinese": "别把它弄坏了。",
     "pinyin": "Bié bǎ tā nòng huài le.",
     "translation": "Don't break it.",
-    "explanation": "This is a prohibition using 把. **别** (\"don't\") opens the sentence as a command marker, placed before 把 just like 没 in negative statements. The implied topic ([你], \"you\") is dropped because commands naturally omit the listener. Inside the 把 phrase, **它** (\"it\") is the spotlighted object, and **弄坏** (nòng huài, \"mess up, break\") is the verb-result compound: 弄 (\"do/make\") + 坏 (\"broken\"). The **了** signals that the breaking would result in a completed change of state. The pattern 别把...弄坏了 is one of the most common warnings in everyday Mandarin.",
+    "explanation": {
+      "en": "This is a prohibition using 把. **别** (\"don't\") opens the sentence as a command marker, placed before 把 just like 没 in negative statements. The implied topic ([你], \"you\") is dropped because commands naturally omit the listener. Inside the 把 phrase, **它** (\"it\") is the spotlighted object, and **弄坏** (nòng huài, \"mess up, break\") is the verb-result compound: 弄 (\"do/make\") + 坏 (\"broken\"). The **了** signals that the breaking would result in a completed change of state. The pattern 别把...弄坏了 is one of the most common warnings in everyday Mandarin.",
+      "zh": "这是一个祈使句（命令句），话题**[你]**是隐含的。**别**表示\"不要\"，是否定性祈使标记。**把**字句将**它**提前，动词**弄**搭配结果补语**坏**（坏掉），**了**标志完成。整句的意思是：不要让这个东西变坏了。树展示了否定祈使+把字结构+动补结构三层叠加。"
+    },
     "tree": {
       "id": "s127-n",
       "role": "Sentence",
@@ -2329,7 +2392,10 @@
     "chinese": "那只大象，鼻子被小孩儿拉了一下。",
     "pinyin": "Nà zhī dà xiàng, bí zi bèi xiǎo hái er lā le yī xià.",
     "translation": "As for that elephant, its trunk was pulled by a child.",
-    "explanation": "This sentence has a **two-level structure**. The outer Topic **那只大象** (\"that elephant\") sets the big frame: \"as for that elephant...\" Then inside the Comment, a narrower topic appears: **鼻子** (\"trunk\"). The trunk is the one experiencing the event. The verb **被** is an active verb meaning \"to undergo\" or \"to suffer.\" The trunk \"underwent\" an entire nested situation: a child pulling it. The tree shows this nesting clearly: the elephant contains the trunk, which undergoes the embedded event.",
+    "explanation": {
+      "en": "This sentence has a **two-level structure**. The outer Topic **那只大象** (\"that elephant\") sets the big frame: \"as for that elephant...\" Then inside the Comment, a narrower topic appears: **鼻子** (\"trunk\"). The trunk is the one experiencing the event. The verb **被** is an active verb meaning \"to undergo\" or \"to suffer.\" The trunk \"underwent\" an entire nested situation: a child pulling it. The tree shows this nesting clearly: the elephant contains the trunk, which undergoes the embedded event.",
+      "zh": "**小猫**是话题，而**被**引出了施事**大狗**：是大狗对小猫做了某事。动词**吓到**（吓+到）是一个动补结构：吓=惊吓，到=达成结果。在英文中你会说\"The kitten was scared by the big dog\"，但中文用**被**而不是\"was\"来标记被动。树展示了被动标记**被**如何把施事者嵌入评论结构中，与一般话题—评论结构的信息流方向相反。"
+    },
     "tree": {
       "id": "n6",
       "role": "Sentence",
@@ -2462,7 +2528,10 @@
     "chinese": "我的钱包被人偷了。",
     "pinyin": "Wǒ de qián bāo bèi rén tōu le.",
     "translation": "My wallet was stolen.",
-    "explanation": "The Topic is **我的钱包** (\"my wallet\"), the thing affected. Instead of a passive marker, **被** is an active verb meaning \"to undergo/suffer.\" The wallet \"underwent\" a full situation: **人偷了** (\"someone stole it\"). Notice how the Matryoshka Principle creates a nested clause perfectly within the Comment. 被 does not always name a specific person; here the inner subject is just **人** (\"someone\").",
+    "explanation": {
+      "en": "The Topic is **我的钱包** (\"my wallet\"), the thing affected. Instead of a passive marker, **被** is an active verb meaning \"to undergo/suffer.\" The wallet \"underwent\" a full situation: **人偷了** (\"someone stole it\"). Notice how the Matryoshka Principle creates a nested clause perfectly within the Comment. 被 does not always name a specific person; here the inner subject is just **人** (\"someone\").",
+      "zh": "**他的手机**是话题。**被**引出施事**小偷**。这里有一个棘手的对比：话题是手机（被偷的东西），施事者是小偷（做动作的人）——语法上的\"主语\"是受事，不是施事。动词**偷走**是动补结构：偷+走=偷到拿走为止。**了**标志完成。树展示了被字句如何翻转正常的\"谁做了什么\"信息流。"
+    },
     "tree": {
       "id": "n22",
       "role": "Sentence",
@@ -2566,7 +2635,10 @@
     "chinese": "那封信被他撕掉了。",
     "pinyin": "Nà fēng xìn bèi tā sī diào le.",
     "translation": "That letter was torn up by him.",
-    "explanation": "**那封信** (\"that letter\") is the Topic. The verb **被** actively means \"to undergo.\" The letter underwent the situation of **他撕掉** (\"he tore off/away\"). The verb **撕** (\"tear\") is fused with the resultative complement **掉** (\"off/away,\" signaling destruction). Using the internal logic of Mandarin, 被 sentences usually require a result or completion (like 了) in the nested clause because you can only \"undergo\" an action if it actually produced a result. A bare action without a result sounds incomplete.",
+    "explanation": {
+      "en": "**那封信** (\"that letter\") is the Topic. The verb **被** actively means \"to undergo.\" The letter underwent the situation of **他撕掉** (\"he tore off/away\"). The verb **撕** (\"tear\") is fused with the resultative complement **掉** (\"off/away,\" signaling destruction). Using the internal logic of Mandarin, 被 sentences usually require a result or completion (like 了) in the nested clause because you can only \"undergo\" an action if it actually produced a result. A bare action without a result sounds incomplete.",
+      "zh": "**那辆车**是话题。**被**引出施事**他**。动词**撞坏**是动补结构：撞+坏=撞到坏掉。**了**标志完成。在这句里，话题（车）是受害者，被字引入的**他**是肇事者。树展示了被字句中施事者如何以介词短语的形式嵌套在评论内部。"
+    },
     "tree": {
       "id": "n48",
       "role": "Sentence",
@@ -2680,7 +2752,10 @@
     "chinese": "小偷被警察抓住了。",
     "pinyin": "Xiǎo tōu bèi jǐng chá zhuā zhù le.",
     "translation": "The thief was caught by the police.",
-    "explanation": "**小偷** (\"thief\") is the Topic. The thief undergoes (the verb **被**) the nested situation of the police catching him. Inside that embedded clause, the verb **抓** (\"grab/catch\") is fused with the resultative complement **住** (\"firmly, hold in place\"). That **住** is important: it signals the catching stuck. He was not just grabbed momentarily; he was held fast. The pattern V+住 is very common for actions resulting in a fixed state. Experiencing an action+result is the most natural workflow for 被.",
+    "explanation": {
+      "en": "**小偷** (\"thief\") is the Topic. The thief undergoes (the verb **被**) the nested situation of the police catching him. Inside that embedded clause, the verb **抓** (\"grab/catch\") is fused with the resultative complement **住** (\"firmly, hold in place\"). That **住** is important: it signals the catching stuck. He was not just grabbed momentarily; he was held fast. The pattern V+住 is very common for actions resulting in a fixed state. Experiencing an action+result is the most natural workflow for 被.",
+      "zh": "**他**是话题——但注意，这次话题是施事者感受到了结果。**被雨淋湿**：**被**引出\"雨\"作为原因/施事，**淋湿**（淋+湿）是动补结构。**了**标志完成。**被**字句不一定要有人作为施事，自然力（雨）也可以。树展示了这种\"被自然力影响\"的结构。"
+    },
     "tree": {
       "id": "n49",
       "role": "Sentence",
@@ -2779,7 +2854,10 @@
     "chinese": "青色是从蓝草里提取出来的，但是比蓝草还要蓝。",
     "pinyin": "Qīng sè shì cóng lán cǎo lǐ tí qǔ chū lái de, dàn shì bǐ lán cǎo hái yào lán.",
     "translation": "Blue dye is extracted from the indigo plant, yet it is even bluer than indigo.",
-    "explanation": "A modern take on 青取之於藍而青於藍 (from Xunzi: \"Blue dye comes from the indigo plant, yet surpasses it in color\"). Modern Mandarin uses 是...的 plus a directional complement for the extraction, and 比...还要 for the comparison. In the tree, **青色** (\"blue color\") is the Topic. The first Comment uses **是从...里提取出来的** (\"is extracted from...\"), where 提取出来 uses a directional complement (出来, \"out\"). The second clause uses the comparative pattern **比...还要** (\"even more than\") + **蓝** (\"blue\").",
+    "explanation": {
+      "en": "A modern take on 青取之於藍而青於藍 (from Xunzi: \"Blue dye comes from the indigo plant, yet surpasses it in color\"). Modern Mandarin uses 是...的 plus a directional complement for the extraction, and 比...还要 for the comparison. In the tree, **青色** (\"blue color\") is the Topic. The first Comment uses **是从...里提取出来的** (\"is extracted from...\"), where 提取出来 uses a directional complement (出来, \"out\"). The second clause uses the comparative pattern **比...还要** (\"even more than\") + **蓝** (\"blue\").",
+      "zh": "这是对\"青出于蓝而胜于蓝\"（出自《荀子》）的现代改写。现代版用**被**字句重构：**青色**（蓝色染料）是话题/受事，**从蓝草里提炼出来**用方位短语设定来源。原文的介词\"于\"在现代中文中由\"从...里\"替代。树展示了方位短语和被字结构的嵌套。"
+    },
     "tree": {
       "id": "s80-root",
       "role": "Sentence",
@@ -2901,7 +2979,10 @@
     "chinese": "钱包被偷了。",
     "pinyin": "Qián bāo bèi tōu le.",
     "translation": "The wallet was stolen.",
-    "explanation": "**钱包** (\"wallet\") is the Topic. The Comment uses the verb **被** (\"undergo\"), but notice: there is no inner topic (agent) named inside the nested clause. Nobody is specified as the thief. This relies on the Train Metaphor—if the identity of the person doing the stealing isn't known or important, that specific \"driver\" car is left empty in the nested clause. This **agentless 被** train is extremely common in everyday casual speech.",
+    "explanation": {
+      "en": "**钱包** (\"wallet\") is the Topic. The Comment uses the verb **被** (\"undergo\"), but notice: there is no inner topic (agent) named inside the nested clause. Nobody is specified as the thief. This relies on the Train Metaphor—if the identity of the person doing the stealing isn't known or important, that specific \"driver\" car is left empty in the nested clause. This **agentless 被** train is extremely common in everyday casual speech.",
+      "zh": "这是对\"有朋自远方来不亦乐乎\"（出自《论语》）的现代改写。现代版用**是...的**聚焦结构：**朋友**是话题，**是从远方来的**强调来源。**是...的**不是表判断，而是聚焦某个已知信息的特定方面。树展示了**是**和**的**如何框住中间的内容。"
+    },
     "tree": {
       "id": "s102-n",
       "role": "Sentence",
@@ -2983,7 +3064,10 @@
     "chinese": "我的自行车让人骑走了。",
     "pinyin": "Wǒ de zì xíng chē ràng rén qí zǒu le.",
     "translation": "My bicycle was ridden away by someone.",
-    "explanation": "**我的自行车** (\"my bicycle\") is the Topic. The Comment uses **让** (\"let/allow\") instead of 被. This implies the bicycle \"allowed\" the situation to happen. In spoken Mandarin, treating a situation as something \"allowed\" rather than \"suffered\" is far more common for casual passives. The bicycle allowed a full nested event: **人骑走** (\"someone riding it away\"). Both follow the exact same Matryoshka nesting structure (Topic + Action Verb + Embedded Clause), but **让** creates a more natural, casual tone.",
+    "explanation": {
+      "en": "**我的自行车** (\"my bicycle\") is the Topic. The Comment uses **让** (\"let/allow\") instead of 被. This implies the bicycle \"allowed\" the situation to happen. In spoken Mandarin, treating a situation as something \"allowed\" rather than \"suffered\" is far more common for casual passives. The bicycle allowed a full nested event: **人骑走** (\"someone riding it away\"). Both follow the exact same Matryoshka nesting structure (Topic + Action Verb + Embedded Clause), but **让** creates a more natural, casual tone.",
+      "zh": "这是对\"事实胜于雄辩\"的现代改写。**是...的**强调结构用来聚焦判断的确定性：**需要时间来验证的**聚焦于\"验证需要时间\"这个事实。**是**和**的**不是简单的系动词和助词，而是共同构成一个聚焦框架。"
+    },
     "tree": {
       "id": "s103-n",
       "role": "Sentence",
@@ -3089,7 +3173,10 @@
     "chinese": "我是昨天晚上在图书馆看到她的。",
     "pinyin": "Wǒ shì zuó tiān wǎn shang zài tú shū guǎn kàn dào tā de.",
     "translation": "It was last night in the library that I saw her.",
-    "explanation": "**我** (\"I\") is the Topic. The **是…的** frame wraps the entire Comment to spotlight *when* the action happened. 是 marks the start of the focused information, and 的 closes it. Here, **是去年来的** highlights **去年** (\"last year\") as the key detail. Without 是...的, the sentence would be 我去年来了 (\"I came last year\"), which simply reports the event. With 是...的, the sentence says: \"It was *last year* that I came.\" The tree shows 是 and 的 bracketing the focused clause.",
+    "explanation": {
+      "en": "**我** (\"I\") is the Topic. The **是…的** frame wraps the entire Comment to spotlight *when* the action happened. 是 marks the start of the focused information, and 的 closes it. Here, **是去年来的** highlights **去年** (\"last year\") as the key detail. Without 是...的, the sentence would be 我去年来了 (\"I came last year\"), which simply reports the event. With 是...的, the sentence says: \"It was *last year* that I came.\" The tree shows 是 and 的 bracketing the focused clause.",
+      "zh": "**我**是话题。**是...的**聚焦结构把注意力集中在已知事件的某个细节上——不是在问\"你看到她了吗？\"（已知），而是在强调\"在哪里\"和\"什么时候\"。**是昨天晚上在图书馆看到她的**：**是**开启聚焦，**的**收束。中间嵌套了时间（昨天晚上）和地点（在图书馆）两个状语。树展示了这些状语如何在是...的框架内部层层排列。"
+    },
     "tree": {
       "id": "n8",
       "role": "Sentence",
@@ -3218,7 +3305,10 @@
     "chinese": "我是在上海长大的。",
     "pinyin": "Wǒ shì zài Shàng hǎi zhǎng dà de.",
     "translation": "It was in Shanghai that I grew up.",
-    "explanation": "This is another **是…的** sentence, this time spotlighting *where* something happened. **她是在北京出生的** highlights **在北京** (\"in Beijing\") as the focused detail. Again, without 是...的, it would be a neutral report: 她在北京出生了. With 是...的, it answers a specific question: \"Where was she born?\" The 是...的 frame can focus on time, place, manner, or means. The tree shows 是 and 的 wrapping the location phrase and the verb.",
+    "explanation": {
+      "en": "This is another **是…的** sentence, this time spotlighting *where* something happened. **她是在北京出生的** highlights **在北京** (\"in Beijing\") as the focused detail. Again, without 是...的, it would be a neutral report: 她在北京出生了. With 是...的, it answers a specific question: \"Where was she born?\" The 是...的 frame can focus on time, place, manner, or means. The tree shows 是 and 的 wrapping the location phrase and the verb.",
+      "zh": "**她**是话题。**是...的**聚焦结构强调\"怎么来的\"而非\"来了没有\"。**是坐火车来的**：坐火车是方式，来是动作。**是...的**框住了焦点信息。树展示了方式状语（坐火车）嵌套在是...的结构内部。"
+    },
     "tree": {
       "id": "n23",
       "role": "Sentence",
@@ -3316,7 +3406,10 @@
     "chinese": "我是昨天到的。",
     "pinyin": "Wǒ shì zuó tiān dào de.",
     "translation": "It was yesterday that I arrived.",
-    "explanation": "**我** (\"I\") is the Topic. This 是…的 sentence spotlights *how* the action was done. **是坐飞机来的** highlights **坐飞机** (\"by plane\") as the focused detail. The question being answered is \"How did you come?\" not \"Did you come?\" The tree shows the manner phrase 坐飞机 inside the 是...的 bracket. Notice that the 的 goes at the very end, after the verb 来. This fixed position is a defining feature of the construction: 是 opens, the focused detail comes next, the verb follows, and 的 closes.",
+    "explanation": {
+      "en": "**我** (\"I\") is the Topic. This 是…的 sentence spotlights *how* the action was done. **是坐飞机来的** highlights **坐飞机** (\"by plane\") as the focused detail. The question being answered is \"How did you come?\" not \"Did you come?\" The tree shows the manner phrase 坐飞机 inside the 是...的 bracket. Notice that the 的 goes at the very end, after the verb 来. This fixed position is a defining feature of the construction: 是 opens, the focused detail comes next, the verb follows, and 的 closes.",
+      "zh": "**这本书**是话题。**是...的**聚焦结构将注意力引向\"这本书是谁写的\"——答案嵌在框架里：**他写的**。注意在是...的结构中，**的**有时会吞掉后面的名词（这里省略了\"书\"）。树展示了这种省略和聚焦的互动。"
+    },
     "tree": {
       "id": "n50",
       "role": "Sentence",
@@ -3395,7 +3488,10 @@
     "chinese": "这件衣服是在北京买的。",
     "pinyin": "Zhè jiàn yī fu shì zài Běi jīng mǎi de.",
     "translation": "This item of clothing was bought in Beijing.",
-    "explanation": "**这件衣服** (\"this item of clothing\"; 件 is the measure word for garments) is the Topic. The **是…的** frame here spotlights *what material* something is made of: **是纯棉的** (\"is pure cotton\"). This is a slightly different use: instead of focusing on a past action, it identifies a property. The 的 at the end nominalizes the phrase: \"is [a] pure-cotton [one].\" The tree shows 是 as the copula (linking verb) and 纯棉的 as the identification. This property-identification pattern is very common in shopping and product descriptions.",
+    "explanation": {
+      "en": "**这件衣服** (\"this item of clothing\"; 件 is the measure word for garments) is the Topic. The **是…的** frame here spotlights *what material* something is made of: **是纯棉的** (\"is pure cotton\"). This is a slightly different use: instead of focusing on a past action, it identifies a property. The 的 at the end nominalizes the phrase: \"is [a] pure-cotton [one].\" The tree shows 是 as the copula (linking verb) and 纯棉的 as the identification. This property-identification pattern is very common in shopping and product descriptions.",
+      "zh": "**我们**是话题。**是...的**聚焦结构强调\"什么时候结婚的\"，将时间信息**去年**放在焦点位置。这个结构回答的不是\"你们结婚了吗？\"而是\"你们是什么时候结婚的？\"。树展示了时间状语在是...的框架中的位置。"
+    },
     "tree": {
       "id": "n51",
       "role": "Sentence",
@@ -3504,7 +3600,10 @@
     "chinese": "老师是用来传授知识和解答疑惑的。",
     "pinyin": "Lǎo shī shì yòng lái chuán shòu zhī shi hé jiě dá yí huò de.",
     "translation": "A teacher is someone used to transmit knowledge and resolve doubts.",
-    "explanation": "A modern take on 師者所以傳道授業解惑也 (from Han Yu's famous essay: \"A teacher is one whose purpose is to transmit the Way, teach skills, and resolve doubts\"). The classical 者...也 identification becomes modern **是...的**, and the classical 所以 (\"the means by which\") becomes **用来** (\"used for\"). The tree shows **老师** (\"teacher\") as the Topic, with the Comment using 是...的 to define the role: 是用来传授知识、教授技能、解答疑惑的 (\"is for transmitting knowledge, teaching skills, and answering questions\"). The parallel structure echoes the classical original.",
+    "explanation": {
+      "en": "A modern take on 師者所以傳道授業解惑也 (from Han Yu's famous essay: \"A teacher is one whose purpose is to transmit the Way, teach skills, and resolve doubts\"). The classical 者...也 identification becomes modern **是...的**, and the classical 所以 (\"the means by which\") becomes **用来** (\"used for\"). The tree shows **老师** (\"teacher\") as the Topic, with the Comment using 是...的 to define the role: 是用来传授知识、教授技能、解答疑惑的 (\"is for transmitting knowledge, teaching skills, and answering questions\"). The parallel structure echoes the classical original.",
+      "zh": "这是对\"工欲善其事必先利其器\"（出自《论语》）的现代改写。现代版使用条件+是...的结构：**如果你想做好一件事**（条件分句，含\"好\"做结果补语）→ **工具是最重要的**（用是...的强调判断）。树展示了条件句与是...的结构的嵌套组合。"
+    },
     "tree": {
       "id": "s79-root",
       "role": "Sentence",
@@ -3614,7 +3713,10 @@
     "chinese": "我不是故意打碎的。",
     "pinyin": "Wǒ bú shì gù yì dǎ suì de.",
     "translation": "I didn't break it on purpose.",
-    "explanation": "**我** (\"I\") is the Topic. The **是…的** frame here spotlights the *manner* of the action, but in negative form. **不是** negates the focus: it was not *on purpose* that I broke it. The focused detail **故意** (\"on purpose\") sits between 是 and the verb. The verb-result compound **打碎** (\"hit-shatter,\" meaning \"broke\") and the closing 的 complete the frame. Without 是...的, the sentence would be 我不是故意的 (\"it wasn't on purpose\"), which is vaguer. With the full frame, the sentence specifies *what* was not on purpose: the breaking. The negation 不 always goes before 是, never after it.",
+    "explanation": {
+      "en": "**我** (\"I\") is the Topic. The **是…的** frame here spotlights the *manner* of the action, but in negative form. **不是** negates the focus: it was not *on purpose* that I broke it. The focused detail **故意** (\"on purpose\") sits between 是 and the verb. The verb-result compound **打碎** (\"hit-shatter,\" meaning \"broke\") and the closing 的 complete the frame. Without 是...的, the sentence would be 我不是故意的 (\"it wasn't on purpose\"), which is vaguer. With the full frame, the sentence specifies *what* was not on purpose: the breaking. The negation 不 always goes before 是, never after it.",
+      "zh": "聚焦结构**是...的**在否定中同样有效。**这件事**是话题，**不是我做的**否定了施事关系：不是我做的（言下之意：是别人做的）。**不**否定的是**是**，整个是...的框架保持完整。树展示了否定词在聚焦结构中的位置。"
+    },
     "tree": {
       "id": "s104-n",
       "role": "Sentence",
@@ -3703,7 +3805,10 @@
     "chinese": "我是坐火车来的。",
     "pinyin": "Wǒ shì zuò huǒ chē lái de.",
     "translation": "I came by train.",
-    "explanation": "**我** (\"I\") is the Topic. The **是…的** frame spotlights *how* the speaker came: **坐火车** (\"by train,\" literally \"sit-train\"). The 是 opens the focused information, and the 的 at the end closes it. The question being answered is \"How did you come?\" not \"Did you come?\" Without 是...的, the sentence would simply be 我坐火车来了 (\"I took the train here\"), which reports the event. With 是...的, the emphasis shifts to the method of travel. This is one of the most practical uses of the construction: answering how, when, or where questions about past events.",
+    "explanation": {
+      "en": "**我** (\"I\") is the Topic. The **是…的** frame spotlights *how* the speaker came: **坐火车** (\"by train,\" literally \"sit-train\"). The 是 opens the focused information, and the 的 at the end closes it. The question being answered is \"How did you come?\" not \"Did you come?\" Without 是...的, the sentence would simply be 我坐火车来了 (\"I took the train here\"), which reports the event. With 是...的, the emphasis shifts to the method of travel. This is one of the most practical uses of the construction: answering how, when, or where questions about past events.",
+      "zh": "双重**是...的**：先肯定**是他告诉我的**，再展开细节。这展示了是...的结构的嵌套能力——一层聚焦套着另一层聚焦。树展示了两层是...的框架如何共享同一个话题。"
+    },
     "tree": {
       "id": "s105-n",
       "role": "Sentence",
@@ -3787,7 +3892,10 @@
     "chinese": "那座山比这座山高得多。",
     "pinyin": "Nà zuò shān bǐ zhè zuò shān gāo de duō.",
     "translation": "That mountain is much taller than this mountain.",
-    "explanation": "**那座山** (\"that mountain\") is the Topic, where 座 is the measure word for mountains and large structures. The Comment makes a comparison using **比** (\"compared to\"), which always comes before the reference point. The pattern is: Topic, 比, reference, quality, degree. Here: that mountain, compared to this mountain, tall, by a lot. The **得多** at the end means \"by a great amount\" and always follows the quality word, never precedes it. This fixed word order is one of the clearest differences from English comparisons.",
+    "explanation": {
+      "en": "**那座山** (\"that mountain\") is the Topic, where 座 is the measure word for mountains and large structures. The Comment makes a comparison using **比** (\"compared to\"), which always comes before the reference point. The pattern is: Topic, 比, reference, quality, degree. Here: that mountain, compared to this mountain, tall, by a lot. The **得多** at the end means \"by a great amount\" and always follows the quality word, never precedes it. This fixed word order is one of the clearest differences from English comparisons.",
+      "zh": "**大象**是话题。评论用**比**字句设定比较的参照物：**比马**（\"跟马相比\"）。然后形容词**大**（大）加上**多了**（\"多得多\"）表达程度差异。**比**的核心结构是：A + 比 + B + 形容词。树展示了**比**短语作为状语修饰形容词的位置。"
+    },
     "tree": {
       "id": "n9",
       "role": "Sentence",
@@ -3903,7 +4011,10 @@
     "chinese": "她写的汉字跟老师写的一样漂亮。",
     "pinyin": "Tā xiě de hàn zì gēn lǎo shī xiě de yī yàng piāo liang.",
     "translation": "The hanzi she writes is just as beautiful as the teacher's.",
-    "explanation": "The equality comparison in Mandarin uses a specific frame: **A 跟 B 一样 [adjective]**, meaning \"A is equally [adjective] as B.\" **跟** (\"compared with\") marks the reference, and **一样** (\"the same\") confirms equality. Both sides of this sentence describe full noun phrases: **她写的汉字** (\"the Chinese characters she writes\") versus **老师写的** (\"what the teacher writes\"). This construction never uses 比 (which signals one side surpasses the other). 跟...一样 means they are equal.",
+    "explanation": {
+      "en": "The equality comparison in Mandarin uses a specific frame: **A 跟 B 一样 [adjective]**, meaning \"A is equally [adjective] as B.\" **跟** (\"compared with\") marks the reference, and **一样** (\"the same\") confirms equality. Both sides of this sentence describe full noun phrases: **她写的汉字** (\"the Chinese characters she writes\") versus **老师写的** (\"what the teacher writes\"). This construction never uses 比 (which signals one side surpasses the other). 跟...一样 means they are equal.",
+      "zh": "**苹果**是话题，自然地引出\"我们在谈论苹果\"这个框架。**比**字句跟上来：**比橘子**（\"跟橘子比\"），然后形容词**贵**（贵）后面跟**一点**（\"一点点\"），精确描述差距大小。树展示了**比**短语和程度补语如何各占其位。"
+    },
     "tree": {
       "id": "n20",
       "role": "Sentence",
@@ -4052,7 +4163,10 @@
     "chinese": "他跑得像风一样快。",
     "pinyin": "Tā pǎo de xiàng fēng yī yàng kuài.",
     "translation": "He runs as fast as the wind.",
-    "explanation": "**他** (\"he\") is the Topic. The verb **跑** (\"run\") is linked by **得** to a **degree complement** that describes how he runs. Inside that complement, **像风一样快** uses a simile: 像 (\"like\") + 风 (\"the wind\") + 一样 (\"equally\") + 快 (\"fast\"). English says \"as fast as the wind.\" Unlike 跟...一样, which compares two real things, **像...一样** introduces a figurative or poetic reference: the wind, a tiger, a machine. The tree shows the simile nested inside the degree complement.",
+    "explanation": {
+      "en": "**他** (\"he\") is the Topic. The verb **跑** (\"run\") is linked by **得** to a **degree complement** that describes how he runs. Inside that complement, **像风一样快** uses a simile: 像 (\"like\") + 风 (\"the wind\") + 一样 (\"equally\") + 快 (\"fast\"). English says \"as fast as the wind.\" Unlike 跟...一样, which compares two real things, **像...一样** introduces a figurative or poetic reference: the wind, a tiger, a machine. The tree shows the simile nested inside the degree complement.",
+      "zh": "**他**是话题。**比**字句用**比我**设定参照，然后是一个更复杂的评论：**高很多**（\"高很多\"）。注意\"很多\"是放在形容词的后面做补语，不是前面做状语。这和英文\"much taller\"的语序相反。树展示了这种后置程度补语的结构。"
+    },
     "tree": {
       "id": "n21",
       "role": "Sentence",
@@ -4159,7 +4273,10 @@
     "chinese": "知道的人比不上喜欢的人，喜欢的人比不上乐在其中的人。",
     "pinyin": "Zhī dào de rén bǐ bù shàng xǐ huān de rén, xǐ huān de rén bǐ bù shàng lè zài qí zhōng de rén.",
     "translation": "Those who merely know cannot compare to those who love it; those who love it cannot compare to those who delight in it.",
-    "explanation": "A modern take on 知之者不如好之者 (from Confucius: \"One who knows it is not as good as one who loves it\"). The classical 者 particle becomes **的人** (\"the person who...\"), and the classical comparative 不如 becomes **比不上** (\"cannot compare to\"). The tree shows the 比 comparative used twice in parallel. Each clause follows the same pattern: [verb+的+人] + 比不上 + [verb+的+人]. The 的 particle turns verb phrases into noun phrases, working exactly like the classical 者.",
+    "explanation": {
+      "en": "A modern take on 知之者不如好之者 (from Confucius: \"One who knows it is not as good as one who loves it\"). The classical 者 particle becomes **的人** (\"the person who...\"), and the classical comparative 不如 becomes **比不上** (\"cannot compare to\"). The tree shows the 比 comparative used twice in parallel. Each clause follows the same pattern: [verb+的+人] + 比不上 + [verb+的+人]. The 的 particle turns verb phrases into noun phrases, working exactly like the classical 者.",
+      "zh": "这是对\"知之为知之不知为不知是知也\"（出自《论语》）的现代改写。现代版用两个并列的条件句：**知道就说知道**、**不知道就说不知道**，最后用**这才是**做判断。**才**强调\"这才是真正的...\"。树展示了两个并行条件句加一个总结判断句的三层结构。"
+    },
     "tree": {
       "id": "s69-root",
       "role": "Sentence",
@@ -4315,7 +4432,10 @@
     "chinese": "好的时机不如好的地形，好的地形不如人心齐。",
     "pinyin": "Hǎo de shí jī bù rú hǎo de dì xíng, hǎo de dì xíng bù rú rén xīn qí.",
     "translation": "Favorable timing is not as good as advantageous terrain; advantageous terrain is not as good as unity among people.",
-    "explanation": "A modern take on 天時不如地利，地利不如人和 (from Mencius: \"Good timing is not as good as good terrain; good terrain is not as good as unity among people\"). The classical four-character parallelism is preserved in modern form using **不如** (\"not as good as\"), one of the few classical comparative structures that survives directly into modern Mandarin. Each clause follows: Topic + 不如 + Object. Modern 的 is added to make descriptive phrases (好的时机, \"good timing\") where classical Chinese needed no marker. The final comparison uses **人心齐** (\"people's hearts aligned\") to modernize the classical 人和.",
+    "explanation": {
+      "en": "A modern take on 天時不如地利，地利不如人和 (from Mencius: \"Good timing is not as good as good terrain; good terrain is not as good as unity among people\"). The classical four-character parallelism is preserved in modern form using **不如** (\"not as good as\"), one of the few classical comparative structures that survives directly into modern Mandarin. Each clause follows: Topic + 不如 + Object. Modern 的 is added to make descriptive phrases (好的时机, \"good timing\") where classical Chinese needed no marker. The final comparison uses **人心齐** (\"people's hearts aligned\") to modernize the classical 人和.",
+      "zh": "这是对\"学而时习之不亦说乎\"（出自《论语》）的现代改写。现代版用一个**比**字句重构：**经常复习学过的东西**（含\"过\"和\"的\"关系从句）→ **比学新东西更重要**。**更**在这里加强比较程度。树展示了\"的\"关系从句嵌套在比较结构内部。"
+    },
     "tree": {
       "id": "s87-root",
       "role": "Sentence",
@@ -4456,7 +4576,10 @@
     "chinese": "我没有他高。",
     "pinyin": "Wǒ méi yǒu tā gāo.",
     "translation": "I am not as tall as him.",
-    "explanation": "**我** (\"I\") is the Topic. The Comment uses the **没有** comparison frame, which is Mandarin's way of saying \"A is not as [adjective] as B.\" The pattern is: A + 没有 + B + adjective. Here: I + 没有 + him + tall. This is the counterpart to the 比 comparison (which says \"more than\"). You cannot say 我不比他高 for this meaning; 没有 is the standard frame for \"less than\" or \"not as much as.\" The tree shows 没有 linking the two people being compared, with the adjective 高 (\"tall\") as the quality being measured.",
+    "explanation": {
+      "en": "**我** (\"I\") is the Topic. The Comment uses the **没有** comparison frame, which is Mandarin's way of saying \"A is not as [adjective] as B.\" The pattern is: A + 没有 + B + adjective. Here: I + 没有 + him + tall. This is the counterpart to the 比 comparison (which says \"more than\"). You cannot say 我不比他高 for this meaning; 没有 is the standard frame for \"less than\" or \"not as much as.\" The tree shows 没有 linking the two people being compared, with the adjective 高 (\"tall\") as the quality being measured.",
+      "zh": "**这双鞋**是话题。**跟**字句设定等同比较的参照物：**跟那双一样**（\"和那双一样\"）。然后形容词**贵**描述它们共享的属性。**跟...一样**表达的不是\"更\"或\"不如\"，而是\"等同\"。树展示了**跟**短语和形容词的位置关系。"
+    },
     "tree": {
       "id": "s112-n",
       "role": "Sentence",
@@ -4517,7 +4640,10 @@
     "chinese": "他比我大三岁。",
     "pinyin": "Tā bǐ wǒ dà sān suì.",
     "translation": "He is three years older than me.",
-    "explanation": "**他** (\"he\") is the Topic. The Comment uses the **比** comparison with a specific number: **大三岁** (\"older by three years\"). The pattern is: Topic + 比 + reference + adjective + quantity. Here: he + compared to me + older + by three years. The number slips in right after the adjective, specifying the exact gap. This is how Mandarin expresses precise differences: 高两厘米 (\"taller by two centimeters\"), 贵十块钱 (\"more expensive by ten yuan\"), 早一个小时 (\"earlier by one hour\"). The quantity always follows the adjective, never precedes it.",
+    "explanation": {
+      "en": "**他** (\"he\") is the Topic. The Comment uses the **比** comparison with a specific number: **大三岁** (\"older by three years\"). The pattern is: Topic + 比 + reference + adjective + quantity. Here: he + compared to me + older + by three years. The number slips in right after the adjective, specifying the exact gap. This is how Mandarin expresses precise differences: 高两厘米 (\"taller by two centimeters\"), 贵十块钱 (\"more expensive by ten yuan\"), 早一个小时 (\"earlier by one hour\"). The quantity always follows the adjective, never precedes it.",
+      "zh": "**他**是话题。**没有**引出否定比较：**没有你高**（\"没你高\"）。**没有...这么/那么**是最常见的否定比较结构，表示\"不如\"。这比**不比**更强——**不比**只是\"不见得比\"，而**没有**是确定地\"不如\"。树展示了**没有**如何替代**比**来表达反向比较。"
+    },
     "tree": {
       "id": "s113-n",
       "role": "Sentence",
@@ -4609,7 +4735,10 @@
     "chinese": "你难道不知道吗？",
     "pinyin": "Nǐ nán dào bù zhī dào ma?",
     "translation": "Don't you know? (Surely you must know!)",
-    "explanation": "**你** (\"you\") is the Topic. **难道** (\"could it be that / don't tell me\") opens the Comment and signals a rhetorical question: the speaker already knows the answer and is challenging the listener. The expected response is denial: \"Of course not.\" The **吗** at the end confirms this is a question, but 难道 makes it rhetorical rather than genuine. The tree shows 难道 as a mood marker wrapping the entire Comment. This pattern is extremely common in arguments and emotional speech: 难道你不知道吗 (\"Don't you know?\"), 难道这不对吗 (\"Isn't this right?\").",
+    "explanation": {
+      "en": "**你** (\"you\") is the Topic. **难道** (\"could it be that / don't tell me\") opens the Comment and signals a rhetorical question: the speaker already knows the answer and is challenging the listener. The expected response is denial: \"Of course not.\" The **吗** at the end confirms this is a question, but 难道 makes it rhetorical rather than genuine. The tree shows 难道 as a mood marker wrapping the entire Comment. This pattern is extremely common in arguments and emotional speech: 难道你不知道吗 (\"Don't you know?\"), 难道这不对吗 (\"Isn't this right?\").",
+      "zh": "话题**她**位于顶端。评论串联了两个动词短语形成**连动式**（目的链）：**去图书馆**（去图书馆）加上**借书**（借书）。第一个动作说明方向，第二个说明目的。中文不需要\"to\"或\"in order to\"这样的连接词——两个动词短语直接拼在一起。树展示了连动式中两个动词短语如何并列排开。"
+    },
     "tree": {
       "id": "n56",
       "role": "Sentence",
@@ -4684,7 +4813,10 @@
     "chinese": "王侯将相难道是天生的吗？",
     "pinyin": "Wáng hóu jiàng xiàng nán dào shì tiān shēng de ma?",
     "translation": "Are kings and generals really born into their roles?",
-    "explanation": "A modern take on 王侯將相寧有種乎 (from the Shiji: \"Are kings and generals born to their station?\"). The classical rhetorical marker 寧...乎 becomes modern **难道...吗**. The tree shows 难道 at the start of the Comment, framing the entire clause as a challenge. The modern version spells out: **难道当官的人就天生比别人强吗** (\"Could it be that those in power are inherently stronger than others?\"). The expected answer is \"no,\" just as in the original. This is one of the most famous lines in Chinese history, used to justify rebellion.",
+    "explanation": {
+      "en": "A modern take on 王侯將相寧有種乎 (from the Shiji: \"Are kings and generals born to their station?\"). The classical rhetorical marker 寧...乎 becomes modern **难道...吗**. The tree shows 难道 at the start of the Comment, framing the entire clause as a challenge. The modern version spells out: **难道当官的人就天生比别人强吗** (\"Could it be that those in power are inherently stronger than others?\"). The expected answer is \"no,\" just as in the original. This is one of the most famous lines in Chinese history, used to justify rebellion.",
+      "zh": "这是对\"千里之行始于足下\"（出自《道德经》）的现代改写。现代版用连动式重构：**一千里的路**（话题）→ **也要从第一步开始走**（评论）。树展示了\"从...开始\"这个介词短语如何嵌套在连动式内部。**也**在这里有\"即便如此也\"的让步语气。"
+    },
     "tree": {
       "id": "s76-root",
       "role": "Sentence",
@@ -4753,7 +4885,10 @@
     "chinese": "难道你连这么重要的事都忘了吗？",
     "pinyin": "Nán dào nǐ lián zhè me zhòng yào de shì dōu wàng le ma?",
     "translation": "Could it be that you forgot even such an important thing?",
-    "explanation": "The sentence opens with **难道** (\"could it be that\"), immediately signaling a rhetorical question. The **不** inside the clause creates a double negative effect with the rhetorical frame: 难道不知道 = \"don't tell me you don't know\" = \"surely you know.\" The expected answer is \"yes, you do know.\" The tree shows 难道 wrapping the Comment, with the negation 不 inside the verb phrase. Rhetorical questions with 难道 are one of Mandarin's strongest tools for expressing disbelief or mild accusation.",
+    "explanation": {
+      "en": "The sentence opens with **难道** (\"could it be that\"), immediately signaling a rhetorical question. The **不** inside the clause creates a double negative effect with the rhetorical frame: 难道不知道 = \"don't tell me you don't know\" = \"surely you know.\" The expected answer is \"yes, you do know.\" The tree shows 难道 wrapping the Comment, with the negation 不 inside the verb phrase. Rhetorical questions with 难道 are one of Mandarin's strongest tools for expressing disbelief or mild accusation.",
+      "zh": "这是对\"吾日三省吾身\"（出自《论语》）的现代改写。现代版用建议式：**我们每天都应该反省自己**。**都**（\"都\"）强调\"每天无一例外\"，**应该**表达道义上的必要。树展示了时间状语**每天**和副词**都**在动词前面的位置关系。"
+    },
     "tree": {
       "id": "n100-root",
       "role": "Sentence",
@@ -4883,7 +5018,10 @@
     "chinese": "大家都同意了，难道我还能反对吗？",
     "pinyin": "Dà jiā dōu tóng yì le, nán dào wǒ hái néng fǎn duì ma?",
     "translation": "Everyone has agreed, how could I still object?",
-    "explanation": "A classic defensive rhetorical question. The **难道** signals the speaker is pushing back: \"Could it be that this is my fault?\" The expected answer is \"no, of course not.\" The tree shows the rhetorical frame wrapping the entire Comment. The **是** links the topic to the blame (是我的错), and 吗 confirms it as a question. Notice that without 难道, the sentence would be a genuine question (\"Is this my fault?\"). With 难道, it becomes a challenge: the speaker already believes the answer is no.",
+    "explanation": {
+      "en": "A classic defensive rhetorical question. The **难道** signals the speaker is pushing back: \"Could it be that this is my fault?\" The expected answer is \"no, of course not.\" The tree shows the rhetorical frame wrapping the entire Comment. The **是** links the topic to the blame (是我的错), and 吗 confirms it as a question. Notice that without 难道, the sentence would be a genuine question (\"Is this my fault?\"). With 难道, it becomes a challenge: the speaker already believes the answer is no.",
+      "zh": "这是对\"不耻下问\"（出自《论语》）的现代改写。**向不如自己的人请教**是一个含\"的\"关系从句的连动结构：**不如自己的人**（\"不如自己的人\"，比较句做定语）→ **请教**（请教）。**并不丢人**否定了\"丢人\"这个判断。树展示了关系从句和否定判断的嵌套。"
+    },
     "tree": {
       "id": "n101-root",
       "role": "Sentence",
@@ -5021,7 +5159,10 @@
     "chinese": "你不是已经吃过了吗？",
     "pinyin": "Nǐ bú shì yǐ jīng chī guò le ma?",
     "translation": "Didn't you already eat?",
-    "explanation": "**你** (\"you\") is the Topic. The Comment uses the **不是…吗** rhetorical frame, which is far more common in casual conversation than the intense 难道 pattern. **不是** (\"isn't it that\") opens the challenge, and **吗** closes the question. The expected answer is \"yes, you did eat.\" The speaker is not genuinely asking; they are pushing back, perhaps because the listener is reaching for more food. The verb phrase **已经吃过了** (\"already ate,\" with 过 marking past experience and 了 marking completion) sits inside the frame. This 不是...吗 pattern is one of the most natural ways to express mild surprise or gentle challenge in everyday speech.",
+    "explanation": {
+      "en": "**你** (\"you\") is the Topic. The Comment uses the **不是…吗** rhetorical frame, which is far more common in casual conversation than the intense 难道 pattern. **不是** (\"isn't it that\") opens the challenge, and **吗** closes the question. The expected answer is \"yes, you did eat.\" The speaker is not genuinely asking; they are pushing back, perhaps because the listener is reaching for more food. The verb phrase **已经吃过了** (\"already ate,\" with 过 marking past experience and 了 marking completion) sits inside the frame. This 不是...吗 pattern is one of the most natural ways to express mild surprise or gentle challenge in everyday speech.",
+      "zh": "**他们俩**是话题。**连**字句引出极端案例：**连一句话都没说**（\"连一句话都没说\"）。**连...都**的逻辑是：如果连最基本的一句话都没有说，更不用提其他交流了。**就**（\"就\"）表示紧随其后的结果：**走了**（\"走了\"）。树展示了**连...都**结构和连锁后果的排列。"
+    },
     "tree": {
       "id": "s114-n",
       "role": "Sentence",
@@ -5109,7 +5250,10 @@
     "chinese": "我怎么知道？",
     "pinyin": "Wǒ zěn me zhī dào?",
     "translation": "How would I know?",
-    "explanation": "**我** (\"I\") is the Topic. The Comment uses **怎么** (\"how\") before the verb **知道** (\"know\") to form a rhetorical question. The speaker is not genuinely asking \"by what method would I know?\" They are pushing back: \"There is no way I would know.\" Rhetorical 怎么 is one of the most common ways to express frustration or deflect responsibility in spoken Mandarin. It is much lighter than 难道 and much more natural in casual speech. The tree shows a simple structure: just Topic + 怎么 + verb. Other examples: 我怎么会忘 (\"How could I forget?\"), 你怎么能这样 (\"How can you be like this?\").",
+    "explanation": {
+      "en": "**我** (\"I\") is the Topic. The Comment uses **怎么** (\"how\") before the verb **知道** (\"know\") to form a rhetorical question. The speaker is not genuinely asking \"by what method would I know?\" They are pushing back: \"There is no way I would know.\" Rhetorical 怎么 is one of the most common ways to express frustration or deflect responsibility in spoken Mandarin. It is much lighter than 难道 and much more natural in casual speech. The tree shows a simple structure: just Topic + 怎么 + verb. Other examples: 我怎么会忘 (\"How could I forget?\"), 你怎么能这样 (\"How can you be like this?\").",
+      "zh": "**他**是话题。**不但...而且**关联句式把两件事从低到高递进排列：**不但会说中文**（\"不仅会说中文\"）→ **而且说得非常好**（\"而且说得非常好\"，含程度补语）。这种递进式的发展是中文说服性表达的基本工具之一。树展示了两个分句如何被**不但/而且**框架平行组织。"
+    },
     "tree": {
       "id": "s115-n",
       "role": "Sentence",
@@ -5158,7 +5302,10 @@
     "chinese": "我们见过好几次面了。",
     "pinyin": "Wǒ men jiàn guo hǎo jǐ cì miàn le.",
     "translation": "We have met quite a few times already.",
-    "explanation": "**我们** (\"we\") is the Topic. The Comment uses a **separable verb**: **见面** (\"meet\") is normally one word, but Mandarin can split it apart when something needs to go in between. Here, **见了一次面** separates 见 and 面, inserting **了一次** (\"once,\" a frequency complement) in the middle. Think of separable verbs as having a built-in gap that opens up when modifiers need to slip in. Other separable verbs that work the same way: 吃饭 (eat a meal), 睡觉 (sleep), 游泳 (swim). Each can split to insert duration, frequency, or other details.",
+    "explanation": {
+      "en": "**我们** (\"we\") is the Topic. The Comment uses a **separable verb**: **见面** (\"meet\") is normally one word, but Mandarin can split it apart when something needs to go in between. Here, **见了一次面** separates 见 and 面, inserting **了一次** (\"once,\" a frequency complement) in the middle. Think of separable verbs as having a built-in gap that opens up when modifiers need to slip in. Other separable verbs that work the same way: 吃饭 (eat a meal), 睡觉 (sleep), 游泳 (swim). Each can split to insert duration, frequency, or other details.",
+      "zh": "**他**是话题，**一直**（一直）是时间副词，**在**标记正在进行的动作状态，跟英文的\"is doing\"类似但位于动词前面。**等你**（等你）是动词+宾语。整句呈现一个持续进行的状态：\"他一直在那里等着你。\"树展示了**一直**和**在**叠加在动词前面形成持续进行的标记。"
+    },
     "tree": {
       "id": "n12",
       "role": "Sentence",
@@ -5262,7 +5409,10 @@
     "chinese": "她早上散了一个小时的步。",
     "pinyin": "Tā zǎo shàng sàn le yī gè xiǎo shí de bù.",
     "translation": "She took a one-hour walk this morning.",
-    "explanation": "**散步** (\"take a walk\") is another separable verb: 散 (\"scatter/relax\") + 步 (\"steps\"). Like 见面, Mandarin splits this verb when a modifier goes inside. Here, **散了三次步** inserts **了三次** (\"three times\") between the two halves. The Topic is implied (an \"I\" or \"we\" dropped from context). The tree shows the verb split clearly: the first half 散 acts as the Head Verb, and the second half 步 appears as the Object separated by the frequency complement. This splitting pattern is unique to Mandarin and has no English equivalent.",
+    "explanation": {
+      "en": "**散步** (\"take a walk\") is another separable verb: 散 (\"scatter/relax\") + 步 (\"steps\"). Like 见面, Mandarin splits this verb when a modifier goes inside. Here, **散了三次步** inserts **了三次** (\"three times\") between the two halves. The Topic is implied (an \"I\" or \"we\" dropped from context). The tree shows the verb split clearly: the first half 散 acts as the Head Verb, and the second half 步 appears as the Object separated by the frequency complement. This splitting pattern is unique to Mandarin and has no English equivalent.",
+      "zh": "**你**是话题。**有没有**构成正反疑问式：\"去过还是没去过？\"**去过中国**中的**过**是经验体标记，表示\"曾经有过这个经历\"。正反疑问不需要疑问词（什么、哪里），只需要把动词的肯定和否定形式并列。树展示了正反疑问结构中\"有没有\"的位置。"
+    },
     "tree": {
       "id": "n24",
       "role": "Sentence",
@@ -5383,7 +5533,10 @@
     "chinese": "他们分了手。",
     "pinyin": "Tā men fēn le shǒu.",
     "translation": "They broke up.",
-    "explanation": "**他们** (\"they\") is the Topic. **分手** (\"break up\") is a separable verb: 分 (\"divide\") + 手 (\"hands\"). The sentence inserts **了** between the two halves: **分了手**. The 了 marks that the breaking up actually happened. The tree splits the verb to show this insertion. What makes separable verbs interesting is that they look like regular two-character words until you need to add aspect markers, frequency, or duration. Then they reveal their internal structure by splitting apart.",
+    "explanation": {
+      "en": "**他们** (\"they\") is the Topic. **分手** (\"break up\") is a separable verb: 分 (\"divide\") + 手 (\"hands\"). The sentence inserts **了** between the two halves: **分了手**. The 了 marks that the breaking up actually happened. The tree splits the verb to show this insertion. What makes separable verbs interesting is that they look like regular two-character words until you need to add aspect markers, frequency, or duration. Then they reveal their internal structure by splitting apart.",
+      "zh": "**天气**是话题。**越来越**构成递进式：**越来越冷了**表示寒冷程度在持续加深。**了**标志新情况的出现（\"变了\"）。**越来越**+形容词是中文表达渐变趋势最常用的模式。树展示了**越来越**作为程度副词修饰形容词的位置。"
+    },
     "tree": {
       "id": "n54",
       "role": "Sentence",
@@ -5448,7 +5601,10 @@
     "chinese": "他毕了业就出国了。",
     "pinyin": "Tā bì le yè jiù chū guó le.",
     "translation": "As soon as he graduated, he went abroad.",
-    "explanation": "**他** (\"he\") is the Topic. The separable verb **毕业** (\"graduate\") is split to insert a duration: **毕了三年的业** (\"graduated over three years,\" where 三年的 specifies the duration). The 的 links the duration to the second half of the verb. The tree shows 毕 (\"complete\") as the Head Verb and 业 (\"studies/profession\") as the Object, with the duration and 的 inserted between them. This is one of the most complex separable verb patterns, where both a duration and the possessive 的 fill the gap.",
+    "explanation": {
+      "en": "**他** (\"he\") is the Topic. The separable verb **毕业** (\"graduate\") is split to insert a duration: **毕了三年的业** (\"graduated over three years,\" where 三年的 specifies the duration). The 的 links the duration to the second half of the verb. The tree shows 毕 (\"complete\") as the Head Verb and 业 (\"studies/profession\") as the Object, with the duration and 的 inserted between them. This is one of the most complex separable verb patterns, where both a duration and the possessive 的 fill the gap.",
+      "zh": "**他**是话题。**刚才还在这里**（\"刚才还在这里\"，用**还**和**在**表示刚过去的状态），**怎么突然不见了**（\"怎么突然不见了\"，用**怎么**表示惊讶/疑问）。**不见**是动补结构。句末的**了**表示状态变化。这里的**怎么**不是真正的疑问，而是表达惊讶。树展示了两个并列分句的对比结构。"
+    },
     "tree": {
       "id": "n55",
       "role": "Sentence",
@@ -5549,7 +5705,10 @@
     "chinese": "你生什么气？",
     "pinyin": "Nǐ shēng shén me qì?",
     "translation": "What are you angry about?",
-    "explanation": "**你** (\"you\") is the Topic. The separable verb **生气** (\"be angry\") splits to insert the question word **什么** (\"what\"). The verb half 生 stays in position, and the noun half 气 (\"anger/temper\") moves after the question word: 生什么气 = \"produce what anger?\" This proves that the noun half of a separable verb is a real, functioning object, not just a syllable glued to the verb. You can modify it, question it, or quantify it. Other examples: 你跳什么舞 (\"What dance are you doing?\"), 他帮什么忙 (\"What help is he providing?\"). The tree splits 生 and 气 with 什么 inserted between them.",
+    "explanation": {
+      "en": "**你** (\"you\") is the Topic. The separable verb **生气** (\"be angry\") splits to insert the question word **什么** (\"what\"). The verb half 生 stays in position, and the noun half 气 (\"anger/temper\") moves after the question word: 生什么气 = \"produce what anger?\" This proves that the noun half of a separable verb is a real, functioning object, not just a syllable glued to the verb. You can modify it, question it, or quantify it. Other examples: 你跳什么舞 (\"What dance are you doing?\"), 他帮什么忙 (\"What help is he providing?\"). The tree splits 生 and 气 with 什么 inserted between them.",
+      "zh": "话题**我**省略了（从对话语境可以推知）。**以前从来没见过这种东西**：**从来**（\"从来\"）加**没**（否定）加**过**（经验体标记）构成\"从未有过这种经历\"。**这种东西**是宾语。树展示了\"从来没...过\"这个固定否定经验框架的内部结构。"
+    },
     "tree": {
       "id": "s116-n",
       "role": "Sentence",
@@ -5609,7 +5768,10 @@
     "chinese": "我们去散散步吧。",
     "pinyin": "Wǒ men qù sàn san bù ba.",
     "translation": "Let's go take a stroll.",
-    "explanation": "**我们** (\"we\") is the Topic. The Comment chains two verb phrases: **去** (\"go\") followed by **散散步** (\"take a stroll\"). The interesting part is **散散步**: the verb half 散 is *reduplicated* (散散) while the noun half 步 stays single. This **AAB pattern** is unique to separable verbs and signals a casual, brief, or easy action. You cannot reduplicate the noun half. Compare: 见见面 (\"meet up briefly\"), 聊聊天 (\"have a little chat\"), 跑跑步 (\"go for a quick jog\"). The sentence-final **吧** makes this a suggestion. The tree shows the serial verb chain (去 + 散散步) with the reduplication visible in the verb node.",
+    "explanation": {
+      "en": "**我们** (\"we\") is the Topic. The Comment chains two verb phrases: **去** (\"go\") followed by **散散步** (\"take a stroll\"). The interesting part is **散散步**: the verb half 散 is *reduplicated* (散散) while the noun half 步 stays single. This **AAB pattern** is unique to separable verbs and signals a casual, brief, or easy action. You cannot reduplicate the noun half. Compare: 见见面 (\"meet up briefly\"), 聊聊天 (\"have a little chat\"), 跑跑步 (\"go for a quick jog\"). The sentence-final **吧** makes this a suggestion. The tree shows the serial verb chain (去 + 散散步) with the reduplication visible in the verb node.",
+      "zh": "**地上**是方位话题，设定空间框架。**积了厚厚的雪**：**积**（积累）+**了**（完成）+**厚厚的雪**（厚厚的雪，叠词强调程度）。整句描述一个已完成的状态变化。树展示了方位话题如何引出存在句结构。"
+    },
     "tree": {
       "id": "s117-n",
       "role": "Sentence",
@@ -5680,7 +5842,10 @@
     "chinese": "吃饱了，想睡觉。",
     "pinyin": "Chī bǎo le , xiǎng shuì jiào .",
     "translation": "(I'm) full, (I) want to sleep.",
-    "explanation": "The key pattern here is the **resultative complement** **吃饱**: the verb **吃** (\"eat\") completely seals with the result **饱** (\"full\") to create a single **Fused Verb Package**. In Mandarin, you don't use linking words like \"until\" or \"so that.\" The action and its outcome are welded together into a single un-splittable package. The **了** after the package seals it, marking completion. The **没有** at the end asks a follow-up question: \"or not?\" This V-not-V pattern (吃饱了没有) is the standard way to ask about completed results.",
+    "explanation": {
+      "en": "The key pattern here is the **resultative complement** **吃饱**: the verb **吃** (\"eat\") completely seals with the result **饱** (\"full\") to create a single **Fused Verb Package**. In Mandarin, you don't use linking words like \"until\" or \"so that.\" The action and its outcome are welded together into a single un-splittable package. The **了** after the package seals it, marking completion. The **没有** at the end asks a follow-up question: \"or not?\" This V-not-V pattern (吃饱了没有) is the standard way to ask about completed results.",
+      "zh": "核心句型是**结果补语**——**吃饱**：动词**吃**（吃）和结果**饱**（饱了）融合在一起，表示\"吃到饱为止\"。中文不需要\"until\"这样的词，动词和结果直接焊接成一个复合词。后面的**了**标记完成。第二个小句**想睡觉**串联其后，表示饱了之后的自然反应。树展示了\"吃饱了\"和\"想睡觉\"两个小句如何在评论中依序排列。"
+    },
     "tree": {
       "id": "n13",
       "role": "Sentence",
@@ -5791,7 +5956,10 @@
     "chinese": "我听懂了他说的话。",
     "pinyin": "Wǒ tīng dǒng le tā shuō de huà.",
     "translation": "I understood what he said.",
-    "explanation": "The Topic is **我** (\"I\"). The verb **听** (\"listen\") tightly seals with the result **懂** (\"understand\") to form the **Fused Verb Package** **听懂**: listened and understood. The **了** confirms it happened. After this package, the object is a relative clause: **他说的话** (\"the words he said\"), where **的** links the clause **他说** (\"he said\") to the noun **话** (\"words\"). The tree shows the package 听+懂 fused tightly together, with the complex object branching off to the right.",
+    "explanation": {
+      "en": "The Topic is **我** (\"I\"). The verb **听** (\"listen\") tightly seals with the result **懂** (\"understand\") to form the **Fused Verb Package** **听懂**: listened and understood. The **了** confirms it happened. After this package, the object is a relative clause: **他说的话** (\"the words he said\"), where **的** links the clause **他说** (\"he said\") to the noun **话** (\"words\"). The tree shows the package 听+懂 fused tightly together, with the complex object branching off to the right.",
+      "zh": "话题是**我**。动词**听**（听）和结果**懂**（理解）融合成结果补语**听懂**：听到并且理解了。**了**确认动作已完成。宾语是一个关系从句：**他说的话**（\"他说的话\"），其中**的**把**他说**这个从句连接到名词**话**。树展示了动补结构紧密融合，复杂宾语向右展开的结构。"
+    },
     "tree": {
       "id": "n30",
       "role": "Sentence",
@@ -5906,7 +6074,10 @@
     "chinese": "她哭红了眼睛。",
     "pinyin": "Tā kū hóng le yǎn jing.",
     "translation": "She cried her eyes red.",
-    "explanation": "The Topic is **她** (\"she\"). The verb **哭** (\"cry\") bonds with the resultative complement **红** (\"red\") to form the **Fused Verb Package** **哭红**: cried until (her eyes turned) red. Then **了** seals the package, and **眼睛** (\"eyes\") acts as the object. Mandarin loves these un-splittable packages: cry+red, eat+full, run+tired. Each result is permanently attached to the action that caused it. The tree shows 哭 and 红 sealed together permanently.",
+    "explanation": {
+      "en": "The Topic is **她** (\"she\"). The verb **哭** (\"cry\") bonds with the resultative complement **红** (\"red\") to form the **Fused Verb Package** **哭红**: cried until (her eyes turned) red. Then **了** seals the package, and **眼睛** (\"eyes\") acts as the object. Mandarin loves these un-splittable packages: cry+red, eat+full, run+tired. Each result is permanently attached to the action that caused it. The tree shows 哭 and 红 sealed together permanently.",
+      "zh": "话题是**她**。动词**哭**（哭）和结果**红**（红）融合成**哭红**：哭到（眼睛变）红。**了**标记完成，**眼睛**告诉我们变红的是什么。中文特别擅长这种紧凑的动补搭配：哭+红、吃+饱、跑+累。每个结果描述动作带来的*后果*。树展示了哭和红的融合，以及眼睛作为受影响宾语的位置。"
+    },
     "tree": {
       "id": "n31",
       "role": "Sentence",
@@ -5982,7 +6153,10 @@
     "chinese": "我找到钥匙了。",
     "pinyin": "Wǒ zhǎo dào yào shi le.",
     "translation": "I found the key.",
-    "explanation": "The Topic is **我** (\"I\"). The verb **找** (\"search for\") welds with the result **到** (\"arrive at, reach\") to form the **Fused Verb Package** **找到**: searched and found. The result 到 tells you the search reached its target. The **了** marks completion: the package is complete. Compare with 找不到 (\"cannot find\") where 不 toggles the internal switch. The tree shows 找 and 到 sealed inside one package, with **钥匙** (\"key\") as the object.",
+    "explanation": {
+      "en": "The Topic is **我** (\"I\"). The verb **找** (\"search for\") welds with the result **到** (\"arrive at, reach\") to form the **Fused Verb Package** **找到**: searched and found. The result 到 tells you the search reached its target. The **了** marks completion: the package is complete. Compare with 找不到 (\"cannot find\") where 不 toggles the internal switch. The tree shows 找 and 到 sealed inside one package, with **钥匙** (\"key\") as the object.",
+      "zh": "话题是**我**。动词**找**（找/搜索）和结果**到**（到达、达到目标）融合成**找到**：找到了。结果\"到\"说明搜索到达了目标。**了**标记完成。可以对比：找不到（\"找不到\"）——\"不\"阻断了结果的达成。树展示了找和到作为紧密动补对的结构。"
+    },
     "tree": {
       "id": "n40",
       "role": "Sentence",
@@ -6056,7 +6230,10 @@
     "chinese": "他写错字了。",
     "pinyin": "Tā xiě cuò zì le.",
     "translation": "He wrote a character incorrectly.",
-    "explanation": "The Topic is **他** (\"he\"). The verb **写** (\"write\") fuses with the result **错** (\"wrong\") to form the **Fused Verb Package** **写错**: wrote incorrectly. The result tells you the outcome was an error. The **了** seals the package, and **字** (\"character\") is the object that was written wrong. This is a classic Fused Package: the action (writing) produced an attached, unintended outcome (wrongness). Other examples: 听错 (\"heard wrong\"), 看错 (\"misread\").",
+    "explanation": {
+      "en": "The Topic is **他** (\"he\"). The verb **写** (\"write\") fuses with the result **错** (\"wrong\") to form the **Fused Verb Package** **写错**: wrote incorrectly. The result tells you the outcome was an error. The **了** seals the package, and **字** (\"character\") is the object that was written wrong. This is a classic Fused Package: the action (writing) produced an attached, unintended outcome (wrongness). Other examples: 听错 (\"heard wrong\"), 看错 (\"misread\").",
+      "zh": "话题是**他**。动词**写**（写）和结果补语**错**（错）融合成**写错**：写坏了。结果\"错\"告诉你写的结果是错误。**了**标记完成，**字**（字）是写错的宾语。典型的动+结果复合词：动作（写）产生了意外的结果（错误）。类似模式：听错、看错、记错。"
+    },
     "tree": {
       "id": "n41",
       "role": "Sentence",
@@ -6130,7 +6307,10 @@
     "chinese": "到了，找到了，吃完再走。",
     "pinyin": "Dào le , zhǎo dào le , chī wán zài zǒu .",
     "translation": "(We've) arrived, (we) found it, (we'll) leave after eating.",
-    "explanation": "Here we see the **Train Metaphor** in action. Three mini-clauses act like connected train cars rolling down the track in sequence: car 1 **到了** (\"arrived\"), car 2 **找到了** (\"found it\"), car 3 **吃完再走** (\"finish eating, then go\"). The Topic is an occupied silence (implied driver). There are no messy connecting words like \"and\"; Mandarin simply hitches the verb phrases together chronologically. The tree shows three parallel verb cars lined up inside the Comment.",
+    "explanation": {
+      "en": "Here we see the **Train Metaphor** in action. Three mini-clauses act like connected train cars rolling down the track in sequence: car 1 **到了** (\"arrived\"), car 2 **找到了** (\"found it\"), car 3 **吃完再走** (\"finish eating, then go\"). The Topic is an occupied silence (implied driver). There are no messy connecting words like \"and\"; Mandarin simply hitches the verb phrases together chronologically. The tree shows three parallel verb cars lined up inside the Comment.",
+      "zh": "三个小句依序流过，之间没有连接词：**到了**（\"到了\"）、**找到了**（\"找到了\"）、**吃完再走**（\"吃完再走\"）。话题省略了。每个小句都是一个紧凑的动作：到+了、找到+了、吃完+再+走。最后的**再**表示\"接着再\"。树展示了三个并列动词短语在评论中依次排开，各自独立。"
+    },
     "tree": {
       "id": "n14",
       "role": "Sentence",
@@ -6254,7 +6434,10 @@
     "chinese": "他骑自行车去上班。",
     "pinyin": "Tā qí zì xíng chē qù shàng bān.",
     "translation": "He rides a bicycle to go to work.",
-    "explanation": "The Topic is **他** (\"he\"). The Comment uses the **Train Metaphor** to hitch two action cars together chronologically: **骑自行车** (\"rides a bicycle\") and **去上班** (\"to go to work\"). The first car is the method, and the second car is the purpose. You don't need connecting words like \"to\" or \"in order to\"; the sequence of the cars handles the logic. The tree shows these two verb phrases connected smoothly across the physical timeline.",
+    "explanation": {
+      "en": "The Topic is **他** (\"he\"). The Comment uses the **Train Metaphor** to hitch two action cars together chronologically: **骑自行车** (\"rides a bicycle\") and **去上班** (\"to go to work\"). The first car is the method, and the second car is the purpose. You don't need connecting words like \"to\" or \"in order to\"; the sequence of the cars handles the logic. The tree shows these two verb phrases connected smoothly across the physical timeline.",
+      "zh": "话题是**我**。评论串联了两个动词短语：**去超市**（去超市）加**买东西**（买东西）。第一个说方向，第二个说目的。中文不需要\"to go to the supermarket in order to buy things\"那样的连接词，直接拼在一起就行。树展示了连动式中的去向+目的结构。"
+    },
     "tree": {
       "id": "n58",
       "role": "Sentence",
@@ -6330,7 +6513,10 @@
     "chinese": "我拿着伞出门了。",
     "pinyin": "Wǒ ná zhe sǎn chū mén le.",
     "translation": "I took (was holding) an umbrella and went out.",
-    "explanation": "The Topic is **我** (\"I\"). The Train Metaphor connects two action cars: **拿着伞** (\"holding an umbrella\") and **出门** (\"go out\"). The first car uses the state dial **着** to lock the \"holding\" action into the background while the train rolls forward. The second car is the foreground event. Hitched together naturally, the physical sequence of the words maps directly to the physical reality of the event. The **了** marks the entire connected journey as completed.",
+    "explanation": {
+      "en": "The Topic is **我** (\"I\"). The Train Metaphor connects two action cars: **拿着伞** (\"holding an umbrella\") and **出门** (\"go out\"). The first car uses the state dial **着** to lock the \"holding\" action into the background while the train rolls forward. The second car is the foreground event. Hitched together naturally, the physical sequence of the words maps directly to the physical reality of the event. The **了** marks the entire connected journey as completed.",
+      "zh": "话题是**我**。动词**拿着**（拿+着）用体标记**着**表示持续状态：伞一直被拿着。第二个动词**出门**（出门）是主要事件。合在一起，**拿着伞出门**表示\"拿着伞出了门\"。**着**创造了一个并发动作：拿着是背景，出门是前景。句末**了**标记整个事件的完成。"
+    },
     "tree": {
       "id": "n59",
       "role": "Sentence",
@@ -6422,7 +6608,10 @@
     "chinese": "学了以后要经常练习，这样才会有收获。",
     "pinyin": "Xué le yǐ hòu yào jīng cháng liàn xí, zhè yàng cái huì yǒu shōu huò.",
     "translation": "After studying, you should practice regularly; only then will you gain something.",
-    "explanation": "A modern take on the classical 學而時習之 (from the Analects of Confucius: \"Study and regularly practice what you have studied\"). Instead of the terse classical connective 而, modern Chinese uses **以后** (\"after\") to sequence the two actions. The sentence opens with an implied topic (\"you\") and chains two ideas: first **学了以后** (\"after studying\"), then **要经常练习** (\"should regularly practice\"). The second clause introduces a new frame with **这样** (\"this way\"), followed by **才会** (\"only then will\") and the result **有收获** (\"have gains\"). The 才 emphasizes that the result only comes if you follow through.",
+    "explanation": {
+      "en": "A modern take on the classical 學而時習之 (from the Analects of Confucius: \"Study and regularly practice what you have studied\"). Instead of the terse classical connective 而, modern Chinese uses **以后** (\"after\") to sequence the two actions. The sentence opens with an implied topic (\"you\") and chains two ideas: first **学了以后** (\"after studying\"), then **要经常练习** (\"should regularly practice\"). The second clause introduces a new frame with **这样** (\"this way\"), followed by **才会** (\"only then will\") and the result **有收获** (\"have gains\"). The 才 emphasizes that the result only comes if you follow through.",
+      "zh": "这是对\"勿以善小而不为\"的现代改写。句子用因果框架重构：**不要**（\"不要\"）+ **因为**（\"因为\"）+ **好事太小**（\"好事太小\"）+ **就不去做**（\"就不去做\"）。**因为...就**把原因（太小）和结果（不做）连接起来。树展示了否定包裹因果框架、产生双重否定效果的结构。"
+    },
     "tree": {
       "id": "s68-root",
       "role": "Sentence",
@@ -6554,7 +6743,10 @@
     "chinese": "不要因为好事太小就不去做。",
     "pinyin": "Bú yào yīn wèi hǎo shì tài xiǎo jiù bú qù zuò.",
     "translation": "Do not refrain from doing good just because it is small.",
-    "explanation": "A modern Chinese take on the idiom 勿以善小而不为 (\"do not refrain from doing good because it is small\"). The sentence uses a causal frame: **不要** (\"do not\") + **因为** (\"because\") + **好事太小** (\"good deeds are too small\") + **就不去做** (\"then not go do them\"). The **因为...就** pattern links the cause (smallness) to the action (not doing). The tree shows the negation wrapping around the causal frame, creating a double negative that urges action.",
+    "explanation": {
+      "en": "A modern Chinese take on the idiom 勿以善小而不为 (\"do not refrain from doing good because it is small\"). The sentence uses a causal frame: **不要** (\"do not\") + **因为** (\"because\") + **好事太小** (\"good deeds are too small\") + **就不去做** (\"then not go do them\"). The **因为...就** pattern links the cause (smallness) to the action (not doing). The tree shows the negation wrapping around the causal frame, creating a double negative that urges action.",
+      "zh": "这也是对\"勿以善小而不为\"的现代改写。用**不要因为...就**的因果否定框架：**不要因为好事太小就不去做**。**因为**引出原因，**就**标记结果，**不要**否定整个因果链。树展示了否定祈使如何包裹因果结构。"
+    },
     "tree": {
       "id": "s91-root",
       "role": "Sentence",
@@ -6689,7 +6881,10 @@
     "chinese": "说想学中文。",
     "pinyin": "Shuō xiǎng xué Zhōng wén .",
     "translation": "(He) said (he) wants to learn Chinese.",
-    "explanation": "Mandarin rarely repeats information the listener already knows. This pair of dialogue cards sets up a conversation about borrowing a book. The first speaker asks \"Did you manage to borrow that book?\" The reply 借到了 (\"Got it\") simply rolls the conversation forward. Because the topic is established, there's no need to explicitly state it again. Pay attention to how the tree's Ghost Nodes track the \"invisible cars\" on this continuing train of thought.",
+    "explanation": {
+      "en": "Mandarin rarely repeats information the listener already knows. This pair of dialogue cards sets up a conversation about borrowing a book. The first speaker asks \"Did you manage to borrow that book?\" The reply 借到了 (\"Got it\") simply rolls the conversation forward. Because the topic is established, there's no need to explicitly state it again. Pay attention to how the tree's Ghost Nodes track the \"invisible cars\" on this continuing train of thought.",
+      "zh": "话题省略了（说话者\"我\"从对话语境中推知）。评论是一个简短的回应：**已经**（\"已经\"）+ **吃过了**（\"吃过了\"，经验体标记**过**加完成标记**了**叠加）。过+了的叠加在确认一个已完成的经历时很自然：\"我已经吃过了。\"树中的幽灵节点展示了省略话题的位置。"
+    },
     "discourseContext": {
       "chinese": "张三昨天来找我了。",
       "pinyin": "Zhāng Sān zuó tiān lái zhǎo wǒ le .",
@@ -6789,7 +6984,10 @@
     "chinese": "非常有意思。",
     "pinyin": "Fēi cháng yǒu yì si .",
     "translation": "(It's) really interesting.",
-    "explanation": "Just four words, and the Topic is an invisible **Ghost Node**. The conversation train is already moving, so it simply points back to the **book** mentioned previously. Once a Topic has been established, Mandarin refuses to clutter the track by repeating it. The listener tracks this invisible thread through context, and the tree makes the connection visible with a reference arc.",
+    "explanation": {
+      "en": "Just four words, and the Topic is an invisible **Ghost Node**. The conversation train is already moving, so it simply points back to the **book** mentioned previously. Once a Topic has been established, Mandarin refuses to clutter the track by repeating it. The listener tracks this invisible thread through context, and the tree makes the connection visible with a reference arc.",
+      "zh": "话题（\"我\"）从对话中省略。评论填满整个句子：**今天**（今天）是时间状语，**特别**（特别）设定程度，**累**（累）是主要谓语。不需要动词\"是\"——中文的形容词可以直接充当谓语。树展示了这种扁平结构：时间+程度+形容词，加一个幽灵节点代表省略的说话者。"
+    },
     "discourseContext": {
       "chinese": "我买了一本新书。",
       "pinyin": "Wǒ mǎi le yī běn xīn shū .",
@@ -6860,7 +7058,10 @@
     "chinese": "已经吃过了。",
     "pinyin": "Yǐ jīng chī guò le.",
     "translation": "(I) have already eaten.",
-    "explanation": "A common short answer. The Topic (the speaker, \"I\") is already established in the conversation. The Comment connects seamlessly to it: **已经** (\"already\") + **吃过了** (\"have eaten\"). Because the context is clear, the train just continues rolling forward without needing to state the driver's identity in this car. The Ghost Node in the tree explicitly shows this \"Occupied Silence\".",
+    "explanation": {
+      "en": "A common short answer. The Topic (the speaker, \"I\") is already established in the conversation. The Comment connects seamlessly to it: **已经** (\"already\") + **吃过了** (\"have eaten\"). Because the context is clear, the train just continues rolling forward without needing to state the driver's identity in this car. The Ghost Node in the tree explicitly shows this \"Occupied Silence\".",
+      "zh": "常见的简短回答。话题（说话者\"我\"）从前文语境中推知并省略。评论只有动词短语：**已经**（\"已经\"）+ **吃过了**（\"吃过了\"，带经验体标记**过**和完成标记**了**）。过+了叠加在确认一个已完成经历时非常自然。树中的幽灵节点展示了省略话题的位置。"
+    },
     "discourseContext": {
       "chinese": "你吃饭了吗？",
       "pinyin": "Nǐ chī fàn le ma?",
@@ -6936,7 +7137,10 @@
     "chinese": "今天特别累。",
     "pinyin": "Jīn tiān tè bié lèi.",
     "translation": "(I am) especially tired today.",
-    "explanation": "Because the speaker's identity is obvious, the Train just rolls right into the Comment. **今天** (\"today\") is a time adjunct, **特别** (\"especially\") sets the degree, and **累** (\"tired\") is the adjective predicate. Notice there are no \"missing words\" here—the Ghost Node simply subscribes to the established context without cluttering the tracks. The tree shows this flat structure: time + degree + adjective.",
+    "explanation": {
+      "en": "Because the speaker's identity is obvious, the Train just rolls right into the Comment. **今天** (\"today\") is a time adjunct, **特别** (\"especially\") sets the degree, and **累** (\"tired\") is the adjective predicate. Notice there are no \"missing words\" here—the Ghost Node simply subscribes to the established context without cluttering the tracks. The tree shows this flat structure: time + degree + adjective.",
+      "zh": "话题（\"我\"）因为在对话中很明显而省略了。评论部分占据整个句子：**今天**是时间状语，**特别**设定程度，**累**是作为谓语的形容词。中文的形容词可以独立充当谓语，不需要动词\"是\"。树展示了时间+程度+形容词的扁平结构，加一个幽灵节点代表省略的说话者。"
+    },
     "discourseContext": {
       "chinese": "你今天感觉怎么样？",
       "pinyin": "Nǐ jīn tiān gǎn jué zěn me yàng?",
@@ -7003,7 +7207,10 @@
     "chinese": "早就回家了。",
     "pinyin": "Zǎo jiù huí jiā le.",
     "translation": "(He) went home a long time ago.",
-    "explanation": "When someone asks \"where is he?\", the reply smoothly rides the existing context track. The Topic **他** (\"he\") is subscribed to via Occupied Silence. The Comment is: **早就** (\"long ago already\") + **回家了** (\"went home\"). The **早就** emphasizes that the going-home happened well before the question was asked. The tree shows a Ghost Node for the context-bound Topic, and the time-emphasis adjunct **早就** before the verb.",
+    "explanation": {
+      "en": "When someone asks \"where is he?\", the reply smoothly rides the existing context track. The Topic **他** (\"he\") is subscribed to via Occupied Silence. The Comment is: **早就** (\"long ago already\") + **回家了** (\"went home\"). The **早就** emphasizes that the going-home happened well before the question was asked. The tree shows a Ghost Node for the context-bound Topic, and the time-emphasis adjunct **早就** before the verb.",
+      "zh": "当别人问\"他在哪里\"时，回答直接省略了人称。话题**他**从问题中推知。评论是：**早就**（\"早就\"）+ **回家了**（\"回家了\"，带完成**了**）。**早就**强调回家这件事发生在问话之前很久。树展示了省略话题的幽灵节点和时间强调副词**早就**在动词前的位置。"
+    },
     "discourseContext": {
       "chinese": "他去哪儿了？",
       "pinyin": "Tā qù nǎ er le?",
@@ -7069,7 +7276,10 @@
     "chinese": "那家饭馆，菜很好吃，价钱也不贵。",
     "pinyin": "Nà jiā fàn guǎn, cài hěn hǎo chī, jià qián yě bù guì.",
     "translation": "That restaurant, the food is delicious and the price is not expensive either.",
-    "explanation": "This sentence has **two layers of Topic**. The outer Topic, **那家饭馆** (\"that restaurant\"), sets the general frame: \"as for that restaurant...\" Inside the Comment, two parallel sub-comments share this frame: **菜很好吃** (\"the food is delicious\") and **价钱也不贵** (\"the price is also not expensive\"). The **也** (\"also\") links the two points. The tree shows the restaurant as the outer Topic, with the two parallel evaluations branching from the Comment.",
+    "explanation": {
+      "en": "This sentence has **two layers of Topic**. The outer Topic, **那家饭馆** (\"that restaurant\"), sets the general frame: \"as for that restaurant...\" Inside the Comment, two parallel sub-comments share this frame: **菜很好吃** (\"the food is delicious\") and **价钱也不贵** (\"the price is also not expensive\"). The **也** (\"also\") links the two points. The tree shows the restaurant as the outer Topic, with the two parallel evaluations branching from the Comment.",
+      "zh": "这句话有**两层话题**。外层话题**那家饭馆**设定总体框架：\"说到那家饭馆...\" 在评论内部，两个并列评述共享这个框架：**菜很好吃**（\"菜很好吃\"）和**价钱也不贵**（\"价格也不贵\"）。**也**（\"也\"）连接两个要点。树展示了饭馆作为外层话题，两个并列评价从评论中分支展开。"
+    },
     "tree": {
       "id": "n25",
       "role": "Sentence",
@@ -7197,7 +7407,10 @@
     "chinese": "大象，鼻子长，耳朵大。",
     "pinyin": "Dà xiàng, bí zi cháng, ěr duo dà.",
     "translation": "Elephants, their trunk is long and their ears are big.",
-    "explanation": "The classic whole-part double Topic pattern. **大象** (\"elephant\") is the outer Topic, setting the frame: \"as for elephants...\" Inside, two body parts serve as inner Topics with their own Comments: **鼻子长** (\"trunk is long\") and **耳朵大** (\"ears are big\"). No verb \"is\" is needed; the adjectives **长** and **大** serve directly as predicates. The tree shows the elephant as the outer frame, with the two body-part descriptions as parallel branches underneath.",
+    "explanation": {
+      "en": "The classic whole-part double Topic pattern. **大象** (\"elephant\") is the outer Topic, setting the frame: \"as for elephants...\" Inside, two body parts serve as inner Topics with their own Comments: **鼻子长** (\"trunk is long\") and **耳朵大** (\"ears are big\"). No verb \"is\" is needed; the adjectives **长** and **大** serve directly as predicates. The tree shows the elephant as the outer frame, with the two body-part descriptions as parallel branches underneath.",
+      "zh": "经典的整体—部分双话题句型。**大象**是外层话题，设定框架：\"说到大象...\"。内部有两个身体部位做内层话题并各带评论：**鼻子长**（\"鼻子长\"）和**耳朵大**（\"耳朵大\"）。不需要动词\"是\"——形容词**长**和**大**直接做谓语。树展示了大象作为外层框架，两个身体部位描述作为平行分支。"
+    },
     "tree": {
       "id": "n26",
       "role": "Sentence",
@@ -7283,7 +7496,10 @@
     "chinese": "这件事，我觉得你的想法很有道理。",
     "pinyin": "Zhè jiàn shì, wǒ jué de nǐ de xiǎng fǎ hěn yǒu dào lǐ.",
     "translation": "As for this matter, I think your idea makes a lot of sense.",
-    "explanation": "This sentence has **three layers of nesting**. The outermost Topic, **这件事** (\"this matter\"), sets the frame. Inside the Comment, **我** (\"I\") appears, and then **觉得** (\"think/feel\") opens an embedded clause: **你的想法很有道理** (\"your idea makes a lot of sense\"). The tree shows 这件事 as the outer Topic, with 我觉得 introducing the inner clause as an Embedded Clause, and 你的想法 as yet another Topic inside that clause.",
+    "explanation": {
+      "en": "This sentence has **three layers of nesting**. The outermost Topic, **这件事** (\"this matter\"), sets the frame. Inside the Comment, **我** (\"I\") appears, and then **觉得** (\"think/feel\") opens an embedded clause: **你的想法很有道理** (\"your idea makes a lot of sense\"). The tree shows 这件事 as the outer Topic, with 我觉得 introducing the inner clause as an Embedded Clause, and 你的想法 as yet another Topic inside that clause.",
+      "zh": "这句话有**三层嵌套**。最外层话题**这件事**设定框架。评论内部出现**我**，然后**觉得**（\"觉得\"）引出一个嵌套从句：**你的想法很有道理**（\"你的想法很有道理\"）。树展示了\"这件事\"作为外层话题，\"我觉得\"引入内层从句，\"你的想法\"又是从句内部的话题。"
+    },
     "tree": {
       "id": "n27",
       "role": "Sentence",
@@ -7418,7 +7634,10 @@
     "chinese": "一个人犯的错，跟他的性格是分不开的。",
     "pinyin": "Yí gè rén fàn de cuò, gēn tā de xìng gé shì fēn bù kāi de.",
     "translation": "The mistakes a person makes are inseparable from their character.",
-    "explanation": "A modern take on 人之过也，各于其党 (from Confucius). The Topic is a complex noun phrase: **一个人犯的错** (\"the mistakes a person makes\"), where **犯的** is a relative clause modifying **错** (\"mistakes\"). The Comment uses a **跟** comparison and a negative potential complement: **跟他的性格是分不开的** (\"are inseparable from his character\"). The **分不开** is a potential complement: the result of separating *cannot* be achieved. The tree shows the relative clause inside the Topic and the comparison frame inside the Comment.",
+    "explanation": {
+      "en": "A modern take on 人之过也，各于其党 (from Confucius). The Topic is a complex noun phrase: **一个人犯的错** (\"the mistakes a person makes\"), where **犯的** is a relative clause modifying **错** (\"mistakes\"). The Comment uses a **跟** comparison and a negative potential complement: **跟他的性格是分不开的** (\"are inseparable from his character\"). The **分不开** is a potential complement: the result of separating *cannot* be achieved. The tree shows the relative clause inside the Topic and the comparison frame inside the Comment.",
+      "zh": "这是对\"人之过也各于其党\"（出自《论语》）的现代改写。话题是一个复杂名词短语：**一个人犯的错**（\"一个人犯的错\"），其中**犯的**是修饰**错**的关系从句。评论使用**跟**比较和否定可能补语：**跟他的性格是分不开的**（\"跟他的性格分不开\"）。**分不开**是可能补语：分离的结果*无法*实现。树展示了关系从句嵌套在话题中、比较框架嵌套在评论中的结构。"
+    },
     "tree": {
       "id": "s92-root",
       "role": "Sentence",
@@ -7531,7 +7750,10 @@
     "chinese": "老师让学生回答问题。",
     "pinyin": "Lǎo shī ràng xué sheng huí dá wèn tí.",
     "translation": "The teacher had the students answer questions.",
-    "explanation": "The Topic is **老师** (\"teacher\"). The verb **让** (\"let/make\") is a Situation-Taking Verb. It doesn't just act on the students; it acts on the entire situation. This is the **Matryoshka Principle**: the whole **Embedded Clause** (学生回答问题, \"students answer questions\") is nested perfectly inside the main sentence as the object of 让. Inside that nested mini-sentence, **学生** (\"students\") is simply the inner topic performing the action.",
+    "explanation": {
+      "en": "The Topic is **老师** (\"teacher\"). The verb **让** (\"let/make\") is a Situation-Taking Verb. It doesn't just act on the students; it acts on the entire situation. This is the **Matryoshka Principle**: the whole **Embedded Clause** (学生回答问题, \"students answer questions\") is nested perfectly inside the main sentence as the object of 让. Inside that nested mini-sentence, **学生** (\"students\") is simply the inner topic performing the action.",
+      "zh": "话题是**老师**。动词**让**（让/叫）构成**兼语句**：它引入一个人，这个人同时是\"让\"的宾语和下一个动词的施事者。**学生**是枢纽：他们既是被要求的对象，*又是*执行动作的人。嵌套动作是**回答问题**。树展示了\"学生\"坐在两个动词的交汇处，起到桥梁作用。"
+    },
     "tree": {
       "id": "n32",
       "role": "Sentence",
@@ -7619,7 +7841,10 @@
     "chinese": "妈妈叫我去买牛奶。",
     "pinyin": "Mā ma jiào wǒ qù mǎi niúnǎi.",
     "translation": "Mom told me to go buy milk.",
-    "explanation": "Here **妈妈** (\"Mom\") is the Topic. The verb **叫** (\"tell/ask\") acts on an entire situation: me going to buy milk. Using the **Matryoshka Principle**, the whole nested event (**我去买牛奶**) acts as the object of 叫. Inside this embedded clause, **我** (\"me\") is just the inner topic. Notice how the train of connected cars continues inside the embedded action: 去 (\"go\") + 买牛奶 (\"buy milk\"), with the purpose following the motion naturally.",
+    "explanation": {
+      "en": "Here **妈妈** (\"Mom\") is the Topic. The verb **叫** (\"tell/ask\") acts on an entire situation: me going to buy milk. Using the **Matryoshka Principle**, the whole nested event (**我去买牛奶**) acts as the object of 叫. Inside this embedded clause, **我** (\"me\") is just the inner topic. Notice how the train of connected cars continues inside the embedded action: 去 (\"go\") + 买牛奶 (\"buy milk\"), with the purpose following the motion naturally.",
+      "zh": "话题是**我**。评论部分串联了两个动词短语形成一个事件序列：**下了课**（\"下课之后\"，**了**标记完成）加**去买牛奶**（\"去买牛奶\"，目的链）。第一个事件完成后，第二个事件紧随其后。树展示了两个动词短语在评论中按时间顺序排列。"
+    },
     "tree": {
       "id": "n33",
       "role": "Sentence",
@@ -7725,7 +7950,10 @@
     "chinese": "公司派他去谈判。",
     "pinyin": "Gōng sī pài tā qù tán pàn.",
     "translation": "The company sent him to negotiate.",
-    "explanation": "The Topic is **公司** (\"company\"). The verb **派** (\"dispatch/send\") takes a whole situation as its object using the **Matryoshka Principle**. The company isn't just sending \"him\"; they are initiating the entire nested event of \"him going to negotiate\" (**他去谈判**). Inside that embedded clause, going and negotiating happen sequentially like connected train cars. The tree shows **他** securely inside the nested boundary.",
+    "explanation": {
+      "en": "The Topic is **公司** (\"company\"). The verb **派** (\"dispatch/send\") takes a whole situation as its object using the **Matryoshka Principle**. The company isn't just sending \"him\"; they are initiating the entire nested event of \"him going to negotiate\" (**他去谈判**). Inside that embedded clause, going and negotiating happen sequentially like connected train cars. The tree shows **他** securely inside the nested boundary.",
+      "zh": "话题是**公司**。动词**派**（\"派遣\"）构成兼语句：**他**是枢纽，既是被派遣的人，又是下一个动作的施事者。嵌套动作是**去谈判**（\"去谈判\"），一个连动式中\"去\"和\"谈判\"依次发生。树展示了**他**在枢纽位置，连动式从他的动作分支展开。"
+    },
     "tree": {
       "id": "n52",
       "role": "Sentence",
@@ -7816,7 +8044,10 @@
     "chinese": "她请我吃饭。",
     "pinyin": "Tā qǐng wǒ chī fàn.",
     "translation": "She invited me to eat (out / to dinner).",
-    "explanation": "Here **她** (\"she\") is the Topic. The verb **请** (\"invite/treat\") takes the entire situation (**我吃饭**, \"me eating a meal\") as its object under the **Matryoshka Principle**. She is bringing about that nested event. Inside the embedded clause, **我** is simply the inner topic performing the eating. This is a very common social phrase in Chinese: 请人吃饭 means to treat someone to a meal.",
+    "explanation": {
+      "en": "Here **她** (\"she\") is the Topic. The verb **请** (\"invite/treat\") takes the entire situation (**我吃饭**, \"me eating a meal\") as its object under the **Matryoshka Principle**. She is bringing about that nested event. Inside the embedded clause, **我** is simply the inner topic performing the eating. This is a very common social phrase in Chinese: 请人吃饭 means to treat someone to a meal.",
+      "zh": "**她**是话题。动词**请**（\"邀请/请客\"）构成兼语句：**我**是枢纽，既是被请的对象，又是将要吃饭的人。嵌套动作是**吃饭**。树展示了**我**在\"请\"和\"吃饭\"的交汇处。这是中文里非常常见的社交用语：请人吃饭=请某人吃一顿。"
+    },
     "tree": {
       "id": "n53",
       "role": "Sentence",
@@ -7905,7 +8136,10 @@
     "chinese": "困难让人成长，安逸让人退步。",
     "pinyin": "Kùn nan ràng rén chéng zhǎng, ān yì ràng rén tuì bù.",
     "translation": "Hardship makes people grow; comfort makes people regress.",
-    "explanation": "This is a **Parallel Sentence** with two matched halves. Neither half is the Topic of the other; rather, like two trains on parallel tracks, they are equal partners placed side by side for contrast. Both use **让** (\"make/let\"), which takes a nested situation as its object. In the first half, the object of 让 is the entire **Matryoshka** clause **人成长** (\"people grow\"). In the second, it is **人退步** (\"people regress\"). The tree shows both halves as parallel independent branches.",
+    "explanation": {
+      "en": "This is a **Parallel Sentence** with two matched halves. Neither half is the Topic of the other; rather, like two trains on parallel tracks, they are equal partners placed side by side for contrast. Both use **让** (\"make/let\"), which takes a nested situation as its object. In the first half, the object of 让 is the entire **Matryoshka** clause **人成长** (\"people grow\"). In the second, it is **人退步** (\"people regress\"). The tree shows both halves as parallel independent branches.",
+      "zh": "一个**并列句**，由两个对称的半句构成。前半句：**困难让人成长**，**让**构成兼语句，以**人**为枢纽。后半句：**安逸让人退步**，结构完全相同。两半句不是谁的话题，而是平等并列、形成对比。两个都用**让**做兼语动词。树展示了两半句作为顶层的平行分支。"
+    },
     "tree": {
       "id": "s89-root",
       "role": "Sentence",
@@ -8053,7 +8287,10 @@
     "chinese": "王老板让他派人去处理。",
     "pinyin": "Wáng lǎo bǎn ràng tā pài rén qù chǔ lǐ.",
     "translation": "Boss Wang asked him to send someone to handle it.",
-    "explanation": "**王老板** (\"Boss Wang\") is the initial Topic. This sentence beautifully demonstrates double nesting using the **Matryoshka Principle**. The verb **让** (\"let/ask\") contains a nested situation: **他派人去处理** (\"he sends someone to handle it\"). Inside that, the verb **派** (\"send\") contains *another* nested situation: **人去处理** (\"someone goes to handle it\"). Mandarin can stack these embedded clauses indefinitely to build complex delegations without needing messy connectors like \"to\" or \"that\".",
+    "explanation": {
+      "en": "**王老板** (\"Boss Wang\") is the initial Topic. This sentence beautifully demonstrates double nesting using the **Matryoshka Principle**. The verb **让** (\"let/ask\") contains a nested situation: **他派人去处理** (\"he sends someone to handle it\"). Inside that, the verb **派** (\"send\") contains *another* nested situation: **人去处理** (\"someone goes to handle it\"). Mandarin can stack these embedded clauses indefinitely to build complex delegations without needing messy connectors like \"to\" or \"that\".",
+      "zh": "话题是**老师**。动词**叫**（\"叫/让\"）构成兼语句：**我们**是枢纽。嵌套动作是**再想想**（\"再想想\"），动词**想**的重叠形式表示\"想一想/再想想\"。**再**表示\"再一次\"。树展示了兼语结构中**我们**作为枢纽的位置。"
+    },
     "tree": {
       "id": "s118-n",
       "role": "Sentence",
@@ -8175,7 +8412,10 @@
     "chinese": "有人找你。",
     "pinyin": "Yǒu rén zhǎo nǐ.",
     "translation": "Someone is looking for you.",
-    "explanation": "In Mandarin, a sentence shouldn't start with an indefinite topic like \"someone.\" Instead, Mandarin uses **有** (\"there exists\") to introduce them first. Using the **Matryoshka Principle**, the verb 有 acts on the entire situation: **人找你** (\"someone looking for you\"). 有 establishes their existence, and inside the nested clause, **人** serves as the proper inner topic completing the action. This nested existential structure is exactly how Mandarin translates English sentences starting with \"Someone...\"",
+    "explanation": {
+      "en": "In Mandarin, a sentence shouldn't start with an indefinite topic like \"someone.\" Instead, Mandarin uses **有** (\"there exists\") to introduce them first. Using the **Matryoshka Principle**, the verb 有 acts on the entire situation: **人找你** (\"someone looking for you\"). 有 establishes their existence, and inside the nested clause, **人** serves as the proper inner topic completing the action. This nested existential structure is exactly how Mandarin translates English sentences starting with \"Someone...\"",
+      "zh": "话题是**妈妈**。动词**让**构成兼语句：**我**是枢纽。嵌套动作是**先吃饭再写作业**——一个用**先...再**框架组织的连动式：先做A再做B。树展示了兼语结构内部嵌套的连动式。"
+    },
     "tree": {
       "id": "s119-n",
       "role": "Sentence",
@@ -8264,7 +8504,10 @@
     "chinese": "这道题太难，我做不出来。",
     "pinyin": "Zhè dào tí tài nán, wǒ zuò bù chū lái.",
     "translation": "This question is too hard; I can't work it out.",
-    "explanation": "This sentence has two clauses. First, **这道题太难** (\"this question is too hard\") sets the context. Then a second clause follows: **我做不出来** (\"I cannot work it out\"). The verb **做** (\"do\") + **不** + **出来** (\"come out\") relies on the **Internal Switch Metaphor**. The Fused Verb Package (做出来) has been split open, and the internal switch has been toggled to **不** (off). This means the result (coming out with an answer) *cannot* be achieved. Flipping the switch inside the package is how Mandarin expresses \"can\" or \"cannot.\"",
+    "explanation": {
+      "en": "This sentence has two clauses. First, **这道题太难** (\"this question is too hard\") sets the context. Then a second clause follows: **我做不出来** (\"I cannot work it out\"). The verb **做** (\"do\") + **不** + **出来** (\"come out\") relies on the **Internal Switch Metaphor**. The Fused Verb Package (做出来) has been split open, and the internal switch has been toggled to **不** (off). This means the result (coming out with an answer) *cannot* be achieved. Flipping the switch inside the package is how Mandarin expresses \"can\" or \"cannot.\"",
+      "zh": "两个小句。第一句**这道题太难**（\"这道题太难\"）交代背景：**这道题**是话题，**太难**是评论。第二句展开：**我做不出来**（\"我做不出来\"）。动词**做** + **不** + **出来**构成否定可能补语：做出答案这个结果*做不到*。**不**插在动词和结果之间，就是\"可能补语\"的标志：它说的是结果能否实现。"
+    },
     "tree": {
       "id": "n34",
       "role": "Sentence",
@@ -8387,7 +8630,10 @@
     "chinese": "你放心，一个小时就写得完。",
     "pinyin": "Nǐ fàng xīn, yī gè xiǎo shí jiù xiě de wán.",
     "translation": "Don't worry, (you) can finish writing it in an hour.",
-    "explanation": "**你放心** (\"don't worry\") is a reassurance opener. The main clause is **一个小时就写得完**: within one hour, the writing *can* be finished. The verb **写** (\"write\") + **得** + **完** (\"finish\") relies on the **Internal Switch Metaphor**. Inside the Fused Verb Package (写完), the switch is flipped to **得** (on): the result (finishing) *can* be achieved! The **得** inserted into the package acts as a toggle: compare 写得完 (\"can finish writing\") with 写不完 (\"cannot finish writing/switch off\"). The **就** (\"just\") emphasizes how quickly it can be done.",
+    "explanation": {
+      "en": "**你放心** (\"don't worry\") is a reassurance opener. The main clause is **一个小时就写得完**: within one hour, the writing *can* be finished. The verb **写** (\"write\") + **得** + **完** (\"finish\") relies on the **Internal Switch Metaphor**. Inside the Fused Verb Package (写完), the switch is flipped to **得** (on): the result (finishing) *can* be achieved! The **得** inserted into the package acts as a toggle: compare 写得完 (\"can finish writing\") with 写不完 (\"cannot finish writing/switch off\"). The **就** (\"just\") emphasizes how quickly it can be done.",
+      "zh": "**你放心**（\"别担心\"）是安慰性开场。主句是**一个小时就写得完**：一小时内，写*能*完成。动词**写** + **得** + **完**构成肯定可能补语：完成这个结果*能够*实现。**得**插在动词和结果之间标志可能性：对比\"写得完\"（写得完）和\"写不完\"（写不完）。**就**强调速度之快。"
+    },
     "tree": {
       "id": "n35",
       "role": "Sentence",
@@ -8496,7 +8742,10 @@
     "chinese": "这本书你看得懂吗？",
     "pinyin": "Zhè běn shū nǐ kàn de dǒng ma？",
     "translation": "Can you understand this book?",
-    "explanation": "A **double-Topic** structure with a potential complement question. The outer Topic **这本书** (\"this book\") sets the frame: \"as for this book...\" Inside, **你** (\"you\") is the actor. The verb **看** (\"read\") and result **懂** (\"understand\") are a Fused Verb Package with its internal switch flipped to **得** (on): can the understanding be achieved? The **吗** at the end asks the listener about the state of this switch. Compare 看得懂 (switch on: \"can understand\") with 看不懂 (switch off: \"cannot understand\"). The tree shows the book as the Topic and the potential package nested inside.",
+    "explanation": {
+      "en": "A **double-Topic** structure with a potential complement question. The outer Topic **这本书** (\"this book\") sets the frame: \"as for this book...\" Inside, **你** (\"you\") is the actor. The verb **看** (\"read\") and result **懂** (\"understand\") are a Fused Verb Package with its internal switch flipped to **得** (on): can the understanding be achieved? The **吗** at the end asks the listener about the state of this switch. Compare 看得懂 (switch on: \"can understand\") with 看不懂 (switch off: \"cannot understand\"). The tree shows the book as the Topic and the potential package nested inside.",
+      "zh": "**双话题**结构配可能补语疑问。外层话题**这本书**设定框架：\"说到这本书...\"。内层话题**你**是施事者。动词**看** + **得** + **懂**构成肯定可能补语：理解这个结果能否实现？句末**吗**使之成为是非疑问句。对比\"看得懂\"（看得懂）和\"看不懂\"（看不懂）。树展示了书作为外层话题、可能补语嵌套在内部的结构。"
+    },
     "tree": {
       "id": "n44",
       "role": "Sentence",
@@ -8598,7 +8847,10 @@
     "chinese": "昨晚我睡不着，一直到天亮。",
     "pinyin": "Zuó wǎn wǒ shuì bu zháo, yī zhí dào tiān liàng.",
     "translation": "Last night I couldn't fall asleep, right up until dawn.",
-    "explanation": "Framed by **昨晚** (\"last night\"), the Topic is **我** (\"I\"). The verb **睡** (\"sleep\") and result **着** (\"settle into\") form a package where the internal switch is toggled to **不** (off). **睡不着** means the internal capability of falling asleep *cannot* be achieved. The continuation **一直到天亮** (\"all the way until dawn\") extends the scene. This is one of the most common toggled packages in daily life.",
+    "explanation": {
+      "en": "Framed by **昨晚** (\"last night\"), the Topic is **我** (\"I\"). The verb **睡** (\"sleep\") and result **着** (\"settle into\") form a package where the internal switch is toggled to **不** (off). **睡不着** means the internal capability of falling asleep *cannot* be achieved. The continuation **一直到天亮** (\"all the way until dawn\") extends the scene. This is one of the most common toggled packages in daily life.",
+      "zh": "**昨晚**（\"昨晚\"）框定时间，话题是**我**。动词**睡** + **不** + **着**构成否定可能补语：**睡不着**=入睡这个结果*做不到*，即\"睡不着\"。后续**一直到天亮**（\"一直到天亮\"）延伸场景。树展示了时间状语在最上层、可能补语在中间、时段短语在最后的排列。这是日常生活中最常用的可能补语之一。"
+    },
     "tree": {
       "id": "n45",
       "role": "Sentence",
@@ -8708,7 +8960,10 @@
     "chinese": "我实在受不了了。",
     "pinyin": "Wǒ shí zài shòu bù liǎo le.",
     "translation": "I really can't stand it anymore.",
-    "explanation": "**我** (\"I\") is the Topic. The **不了** (bù liǎo) acts almost like a fixed phrase. It uses the **Internal Switch Metaphor**. The verb **受** (\"endure\") and result **了** (finish/happen) have their internal capability dial turned to **不** (off). It doesn't literally mean \"cannot finish\"; it means \"unable to bear.\" Notice how the potential toggle (不) is trapped *inside* the verb package, fully integrating them. The final change-of-state **了** (le) concludes the sentence outside the package.",
+    "explanation": {
+      "en": "**我** (\"I\") is the Topic. The **不了** (bù liǎo) acts almost like a fixed phrase. It uses the **Internal Switch Metaphor**. The verb **受** (\"endure\") and result **了** (finish/happen) have their internal capability dial turned to **不** (off). It doesn't literally mean \"cannot finish\"; it means \"unable to bear.\" Notice how the potential toggle (不) is trapped *inside* the verb package, fully integrating them. The final change-of-state **了** (le) concludes the sentence outside the package.",
+      "zh": "**我**是话题。动词**受** + **不** + **了**是一个高度固化的可能补语。**受不了**的意思不是\"受不完\"，而是\"忍受不了/承受不住\"。注意可能标记**不**夹在动词和补语中间。句末的**了**是语气词，表示\"到了忍不住的地步了\"——状态变化标记。树展示了**实在**作为程度副词修饰这个固化可能补语。"
+    },
     "tree": {
       "id": "s120-n",
       "role": "Sentence",
@@ -8794,7 +9049,10 @@
     "chinese": "她高兴得跳了起来。",
     "pinyin": "Tā gāo xìng de tiào le qǐ lái.",
     "translation": "She was so happy she jumped up.",
-    "explanation": "**她** (\"she\") is the Topic. The Comment uses a **degree complement** to show how intensely an emotion led to a physical reaction. The adjective **高兴** (\"happy\") is linked by **得** to a consequence clause: **跳了起来** (\"jumped up\"). Everything after 得 describes *how happy* she was, by showing what it made her do. The **了** inside the complement marks the jump as completed, and **起来** (\"up\") is a directional complement showing the upward motion. This is different from saying she simply jumped; it says her happiness was so extreme that jumping was the result.",
+    "explanation": {
+      "en": "**她** (\"she\") is the Topic. The Comment uses a **degree complement** to show how intensely an emotion led to a physical reaction. The adjective **高兴** (\"happy\") is linked by **得** to a consequence clause: **跳了起来** (\"jumped up\"). Everything after 得 describes *how happy* she was, by showing what it made her do. The **了** inside the complement marks the jump as completed, and **起来** (\"up\") is a directional complement showing the upward motion. This is different from saying she simply jumped; it says her happiness was so extreme that jumping was the result.",
+      "zh": "**她**是话题。评论用**程度补语**展示一种情感如何导致身体反应。形容词**高兴**（高兴）通过**得**连接到后果分句：**跳了起来**（\"跳了起来\"）。**得**后面的一切都在描述*她有多高兴*——通过展示高兴导致了什么。补语内部的**了**标记跳跃已完成，**起来**是趋向补语表示向上运动。"
+    },
     "tree": {
       "id": "n36",
       "role": "Sentence",
@@ -8893,7 +9151,10 @@
     "chinese": "她跑得非常快。",
     "pinyin": "Tā pǎo de fēi cháng kuài.",
     "translation": "She runs very fast.",
-    "explanation": "**她** (\"she\") is the Topic. After the verb **跑** (\"run\"), the particle **得** opens a degree complement: **非常快** (\"extremely fast\"). This tells you *how* the running was performed. The complement here is a simple adjective phrase: the adverb **非常** (\"extremely\") intensifies **快** (\"fast\"). Compare this with s36, where 得 introduced a whole consequence clause. Here, 得 just introduces a straightforward description. The tree shows 得 as the bridge between the verb and its quality description.",
+    "explanation": {
+      "en": "**她** (\"she\") is the Topic. After the verb **跑** (\"run\"), the particle **得** opens a degree complement: **非常快** (\"extremely fast\"). This tells you *how* the running was performed. The complement here is a simple adjective phrase: the adverb **非常** (\"extremely\") intensifies **快** (\"fast\"). Compare this with s36, where 得 introduced a whole consequence clause. Here, 得 just introduces a straightforward description. The tree shows 得 as the bridge between the verb and its quality description.",
+      "zh": "**她**是话题。动词**跑**（跑）之后，**得**引出程度补语：**非常快**（\"非常快\"）。这告诉你跑步的*方式*。这里的补语是一个简单的形容词短语：副词**非常**加强**快**的程度。跟s36中得引出整个后果分句相比，这里得只引出一个直接描述。树展示了得作为动词和质量描述之间桥梁的位置。"
+    },
     "tree": {
       "id": "n37",
       "role": "Sentence",
@@ -8980,7 +9241,10 @@
     "chinese": "他气得说不出话来。",
     "pinyin": "Tā qì de shuō bu chū huà lái.",
     "translation": "He was so angry he couldn't get a word out.",
-    "explanation": "**他** (\"he\") is the Topic. This sentence stacks two constructions together beautifully. The adjective **气** (\"angry\") is linked by **得** to a consequence: **说不出话来** (\"cannot get words out\"). The consequence itself is a negative potential complement: **说** (\"speak\") + **不** (\"cannot\") + **出** (\"exit\") + **来** (\"toward speaker\"). So the degree complement tells you how angry he was, and the answer is: so angry that his words could not come out. The tree nests the potential complement inside the degree complement, showing how these constructions layer naturally.",
+    "explanation": {
+      "en": "**他** (\"he\") is the Topic. This sentence stacks two constructions together beautifully. The adjective **气** (\"angry\") is linked by **得** to a consequence: **说不出话来** (\"cannot get words out\"). The consequence itself is a negative potential complement: **说** (\"speak\") + **不** (\"cannot\") + **出** (\"exit\") + **来** (\"toward speaker\"). So the degree complement tells you how angry he was, and the answer is: so angry that his words could not come out. The tree nests the potential complement inside the degree complement, showing how these constructions layer naturally.",
+      "zh": "**他**是话题。形容词**气**（气/愤怒）通过**得**连接到后果：**说不出话来**（\"说不出话来\"）。这个后果本身是一个否定可能补语：**说** + **不** + **出** + **来**。所以程度补语告诉你他有多生气，答案是：气到话说不出来了。树展示了可能补语嵌套在程度补语内部，展现了这些结构如何自然叠加。"
+    },
     "tree": {
       "id": "n46",
       "role": "Sentence",
@@ -9098,7 +9362,10 @@
     "chinese": "她把房间打扫得干干净净。",
     "pinyin": "Tā bǎ fáng jiān dǎ sǎo de gān gān jìng jìng.",
     "translation": "She cleaned the room spotlessly.",
-    "explanation": "**她** (\"she\") is the Topic. This sentence combines two constructions: a **把** construction and a **degree complement**. First, **把房间** (\"the room\") is spotlighted as the thing affected. Then the verb **打扫** (\"clean\") is linked by **得** to the description **干干净净** (\"spotlessly clean\"), a reduplicated adjective that adds emphasis. The tree shows the 把 phrase and the degree complement occupying their separate slots. This combination is very natural: 把 says *what* was acted on, and 得 says *how well* it was done.",
+    "explanation": {
+      "en": "**她** (\"she\") is the Topic. This sentence combines two constructions: a **把** construction and a **degree complement**. First, **把房间** (\"the room\") is spotlighted as the thing affected. Then the verb **打扫** (\"clean\") is linked by **得** to the description **干干净净** (\"spotlessly clean\"), a reduplicated adjective that adds emphasis. The tree shows the 把 phrase and the degree complement occupying their separate slots. This combination is very natural: 把 says *what* was acted on, and 得 says *how well* it was done.",
+      "zh": "**她**是话题。这句话组合了两个结构：**把**字句和**程度补语**。先是**把房间**将处理对象提前聚焦。然后动词**打扫**（清扫）通过**得**连接到描述**干干净净**（\"干干净净\"，叠词强调）。树展示了把字短语和程度补语各占其位。这个组合很自然：把说明*什么*被处理了，得说明处理得*怎么样*。"
+    },
     "tree": {
       "id": "n47",
       "role": "Sentence",
@@ -9195,7 +9462,10 @@
     "chinese": "时间过得就像流水一样快，日夜不停。",
     "pinyin": "Shí jiān guò de jiù xiàng liú shuǐ yí yàng kuài, rì yè bù tíng.",
     "translation": "Time passes as swiftly as flowing water, never ceasing day or night.",
-    "explanation": "A modern take on 逝者如斯夫，不舍晝夜 (from Confucius, standing by a river: \"What passes is like this, never ceasing day or night\"). The modern version uses a degree complement to capture the simile: **时间过得像流水一样快** (\"time passes as fast as flowing water\"). The verb **过** (\"pass\") is linked by **得** to the simile **像流水一样快** (\"like flowing water, equally fast\"). The classical 逝者如斯 (\"what passes is like this\") becomes the degree complement pattern: V+得+像...一样, one of the most vivid patterns for comparing actions in modern Mandarin.",
+    "explanation": {
+      "en": "A modern take on 逝者如斯夫，不舍晝夜 (from Confucius, standing by a river: \"What passes is like this, never ceasing day or night\"). The modern version uses a degree complement to capture the simile: **时间过得像流水一样快** (\"time passes as fast as flowing water\"). The verb **过** (\"pass\") is linked by **得** to the simile **像流水一样快** (\"like flowing water, equally fast\"). The classical 逝者如斯 (\"what passes is like this\") becomes the degree complement pattern: V+得+像...一样, one of the most vivid patterns for comparing actions in modern Mandarin.",
+      "zh": "这是对\"逝者如斯夫，不舍昼夜\"（孔子站在河边所言）的现代改写。现代版用程度补语捕捉比喻：**时间过得像流水一样快**。动词**过**通过**得**连接到比喻**像流水一样快**。古文的\"逝者如斯\"变成了现代的V+得+像...一样的程度补语模式。"
+    },
     "tree": {
       "id": "s77-root",
       "role": "Sentence",
@@ -9292,7 +9562,10 @@
     "chinese": "他中文说得不太好。",
     "pinyin": "Tā Zhōng wén shuō de bú tài hǎo.",
     "translation": "He doesn't speak Chinese very well.",
-    "explanation": "There is a **Double Topic** here: **他** (\"he\") is the main topic, and **中文** (\"Chinese language\") is the sub-topic. The Comment describes how well he speaks it. A critical rule of Chinese word order is demonstrated here: **if you want to negate a degree complement, the 不 goes AFTER the 得, not before the verb**. You cannot say 他不说得太好. The action (说) happens; it is the *degree* (太好) that is being negated. So the phrase is: 说 + 得 + 不太好. This applies to all degree descriptions.",
+    "explanation": {
+      "en": "There is a **Double Topic** here: **他** (\"he\") is the main topic, and **中文** (\"Chinese language\") is the sub-topic. The Comment describes how well he speaks it. A critical rule of Chinese word order is demonstrated here: **if you want to negate a degree complement, the 不 goes AFTER the 得, not before the verb**. You cannot say 他不说得太好. The action (说) happens; it is the *degree* (太好) that is being negated. So the phrase is: 说 + 得 + 不太好. This applies to all degree descriptions.",
+      "zh": "这里有**双话题**：**他**是外层话题，**中文**是内层话题。评论描述他说中文的水平。一个关键语法规则在这里体现：**如果要否定程度补语，\"不\"放在\"得\"后面，不是动词前面**。不能说\"他不说得太好\"。动作（说）是发生的，被否定的是*程度*（太好）。所以说：说+得+不太好。"
+    },
     "tree": {
       "id": "s121-n",
       "role": "Sentence",
@@ -9389,7 +9662,10 @@
     "chinese": "他走进来了。",
     "pinyin": "Tā zǒu jìn lái le.",
     "translation": "He walked in.",
-    "explanation": "The Topic is **他** (\"he\"). The verb **走** (\"walk\") pairs with the directional complement **进来** (\"enter toward the speaker\"): **进** indicates inward movement, and **来** signals direction toward the speaker. Together, **走进来** means \"walked in (toward where I am).\" The **了** at the end marks completion. The tree shows the verb and its directional complement as siblings inside the verb phrase. Compare with 走出去 (\"walked out, away from speaker\"), where the direction reverses.",
+    "explanation": {
+      "en": "The Topic is **他** (\"he\"). The verb **走** (\"walk\") pairs with the directional complement **进来** (\"enter toward the speaker\"): **进** indicates inward movement, and **来** signals direction toward the speaker. Together, **走进来** means \"walked in (toward where I am).\" The **了** at the end marks completion. The tree shows the verb and its directional complement as siblings inside the verb phrase. Compare with 走出去 (\"walked out, away from speaker\"), where the direction reverses.",
+      "zh": "话题是**他**。动词**走**（走）搭配趋向补语**进来**（\"进来\"）：**进**表示向内运动，**来**表示朝说话者方向。合在一起，**走进来**=\"走了进来（朝我这边）\"。句末**了**标记完成。树展示了动词和趋向补语在动词短语内部的并列关系。对比\"走出去\"（走出去，远离说话者），方向正好相反。"
+    },
     "tree": {
       "id": "n38",
       "role": "Sentence",
@@ -9471,7 +9747,10 @@
     "chinese": "她把书拿出去了。",
     "pinyin": "Tā bǎ shū ná chū qù le.",
     "translation": "She took the book out (and away).",
-    "explanation": "**她** (\"she\") is the Topic. This sentence uses a **把** construction combined with a directional complement. **把书** (\"the book\") moves the object before the verb to emphasize what happened to it. The verb **拿** (\"take/hold\") combines with **出去** (\"exit away from speaker\"): **出** indicates outward movement, **去** signals direction away from the speaker. The **了** marks completion. The tree shows the 把 phrase spotlighting the book, followed by the verb-plus-direction compound.",
+    "explanation": {
+      "en": "**她** (\"she\") is the Topic. This sentence uses a **把** construction combined with a directional complement. **把书** (\"the book\") moves the object before the verb to emphasize what happened to it. The verb **拿** (\"take/hold\") combines with **出去** (\"exit away from speaker\"): **出** indicates outward movement, **去** signals direction away from the speaker. The **了** marks completion. The tree shows the 把 phrase spotlighting the book, followed by the verb-plus-direction compound.",
+      "zh": "**她**是话题。这句话用了**把**字句加趋向补语。**把书**把宾语提到动词前面，强调书发生了什么。动词**拿**（拿）搭配**出去**（\"出去\"）：**出**表示向外运动，**去**表示远离说话者方向。**了**标记完成。树展示了把字短语聚焦宾语，后面跟着动词+趋向复合词。"
+    },
     "tree": {
       "id": "n39",
       "role": "Sentence",
@@ -9578,7 +9857,10 @@
     "chinese": "她跑上楼去了。",
     "pinyin": "Tā pǎo shàng lóu qù le.",
     "translation": "She ran upstairs (away from the speaker).",
-    "explanation": "**她** (\"she\") is the Topic. The verb **跑** (\"run\") combines with the complex directional complement **上楼去**: **上** (\"up\") + **楼** (\"stairs/floor\") + **去** (\"away from speaker\"). She ran upstairs and away from the speaker. The **了** marks completion. The tree shows the directional complement layered in three parts: the direction (上), the location (楼), and the orientation (去). This pattern lets Mandarin pack a lot of spatial information into a compact phrase.",
+    "explanation": {
+      "en": "**她** (\"she\") is the Topic. The verb **跑** (\"run\") combines with the complex directional complement **上楼去**: **上** (\"up\") + **楼** (\"stairs/floor\") + **去** (\"away from speaker\"). She ran upstairs and away from the speaker. The **了** marks completion. The tree shows the directional complement layered in three parts: the direction (上), the location (楼), and the orientation (去). This pattern lets Mandarin pack a lot of spatial information into a compact phrase.",
+      "zh": "**她**是话题。动词**跑**（跑）搭配复杂趋向补语**上楼去**：**上**（上）+**楼**（楼）+**去**（远离说话者）。她跑上楼、远离说话者。**了**标记完成。树展示了趋向补语分三层：方向（上）、处所（楼）、朝向（去）。这种模式让中文能把很多空间信息压缩在一个紧凑短语里。"
+    },
     "tree": {
       "id": "n42",
       "role": "Sentence",
@@ -9670,7 +9952,10 @@
     "chinese": "他从树上摘下来一个苹果。",
     "pinyin": "Tā cóng shù shàng zhāi xià lái yī gè píng guǒ.",
     "translation": "He plucked an apple down from the tree.",
-    "explanation": "**他** (\"he\") is the Topic. A location phrase **从树上** (\"from the tree\") sets the starting point. The verb **摘** (\"pluck/pick\") combines with the directional complement **下来** (\"down toward the speaker\"): **下** indicates downward motion, and **来** signals movement toward the speaker. The object **一个苹果** (\"an apple\") comes after the directional complement, which is the normal position when the object is indefinite. The tree shows the location adjunct, the verb-direction compound, and the post-verbal object in sequence.",
+    "explanation": {
+      "en": "**他** (\"he\") is the Topic. A location phrase **从树上** (\"from the tree\") sets the starting point. The verb **摘** (\"pluck/pick\") combines with the directional complement **下来** (\"down toward the speaker\"): **下** indicates downward motion, and **来** signals movement toward the speaker. The object **一个苹果** (\"an apple\") comes after the directional complement, which is the normal position when the object is indefinite. The tree shows the location adjunct, the verb-direction compound, and the post-verbal object in sequence.",
+      "zh": "**他**是话题。方位短语**从树上**（\"从树上\"）设定起点。动词**摘**（摘/采）搭配趋向补语**下来**（\"下来\"）：**下**表示向下运动，**来**表示朝说话者方向。宾语**一个苹果**出现在趋向补语之后，这是不定宾语的正常位置。树展示了方位状语、动词+趋向复合词、后置宾语的依次排列。"
+    },
     "tree": {
       "id": "n43",
       "role": "Sentence",
@@ -9802,7 +10087,10 @@
     "chinese": "我突然想起来了。",
     "pinyin": "Wǒ tū rán xiǎng qǐ lái le.",
     "translation": "I suddenly remembered.",
-    "explanation": "**我** (\"I\") is the Topic. The adverb **突然** (\"suddenly\") sets the timing. The verb **想** (\"think\") combines with the directional complement **起来** (\"up, come out\") to form **想起来** (\"recall, remember\"). But nobody is physically moving upward here. The directional complement has shifted from a literal physical direction to a figurative meaning: a memory \"rises up\" into consciousness. This metaphorical use of directional complements is extremely common: 看出来 (\"figure out,\" literally \"see-out\"), 坚持下去 (\"keep going,\" literally \"persist-down-go\"), 醒过来 (\"wake up,\" literally \"awake-cross-come\"). The **了** marks the moment of remembering as completed.",
+    "explanation": {
+      "en": "**我** (\"I\") is the Topic. The adverb **突然** (\"suddenly\") sets the timing. The verb **想** (\"think\") combines with the directional complement **起来** (\"up, come out\") to form **想起来** (\"recall, remember\"). But nobody is physically moving upward here. The directional complement has shifted from a literal physical direction to a figurative meaning: a memory \"rises up\" into consciousness. This metaphorical use of directional complements is extremely common: 看出来 (\"figure out,\" literally \"see-out\"), 坚持下去 (\"keep going,\" literally \"persist-down-go\"), 醒过来 (\"wake up,\" literally \"awake-cross-come\"). The **了** marks the moment of remembering as completed.",
+      "zh": "**她**是话题。动词**搬**（搬/移动）搭配复杂趋向补语**出去**（出+去=向外远离说话者），然后**了**标记完成。宾语**一些旧衣服**出现在趋向补语之后。树展示了不定宾语在趋向补语之后的典型位置。"
+    },
     "tree": {
       "id": "s106-n",
       "role": "Sentence",
@@ -9887,7 +10175,10 @@
     "chinese": "你要坚持下去。",
     "pinyin": "Nǐ yào jiān chí xià qù.",
     "translation": "You need to keep going.",
-    "explanation": "**你** (\"you\") is the Topic. The Comment uses **要** (\"need to, should\") followed by **坚持** (\"persist, hold firm\") and the directional complement **下去** (\"down-go,\" meaning \"onward, continuing\"). Nobody is physically going downward. The complement 下去 has shifted to an abstract meaning: keep something going into the future. This is one of the most common figurative directionals: 说下去 (\"keep talking\"), 活下去 (\"keep living\"), 学下去 (\"keep studying\"). The direction word 下 (\"down\") maps to the idea of extending forward through time, and 去 (\"go, away from speaker\") reinforces that the action stretches into the future.",
+    "explanation": {
+      "en": "**你** (\"you\") is the Topic. The Comment uses **要** (\"need to, should\") followed by **坚持** (\"persist, hold firm\") and the directional complement **下去** (\"down-go,\" meaning \"onward, continuing\"). Nobody is physically going downward. The complement 下去 has shifted to an abstract meaning: keep something going into the future. This is one of the most common figurative directionals: 说下去 (\"keep talking\"), 活下去 (\"keep living\"), 学下去 (\"keep studying\"). The direction word 下 (\"down\") maps to the idea of extending forward through time, and 去 (\"go, away from speaker\") reinforces that the action stretches into the future.",
+      "zh": "**他**是话题。动词**跳**（跳）搭配趋向补语**进**（进入）+**了**（完成）+**河里**（河里）。整个结构是\"跳进了河里\"。趋向补语**进**表示从外到内的运动，宾语**河里**是运动的终点。树展示了趋向补语和处所宾语的位置关系。"
+    },
     "tree": {
       "id": "s107-n",
       "role": "Sentence",
@@ -9963,7 +10254,10 @@
     "chinese": "中文越学越有意思。",
     "pinyin": "Zhōng wén yuè xué yuè yǒu yì si.",
     "translation": "The more you study Chinese, the more interesting it gets.",
-    "explanation": "**中文** (\"Chinese\") is the Topic, sitting at the top of the tree. The **越…越…** (yuè…yuè…) frame pairs two clauses: **越学** (\"the more you study\") and **越有意思** (\"the more interesting it gets\"). The pattern works like this: 越 A 越 B means \"as A increases, B increases.\" The actor of 学 is left out here (an implied general \"you\"). This correlative frame is one of the most elegant in Mandarin: no conjunction, no relative clause, just the repeated 越 linking cause and effect. Other examples: 越吃越胖 (\"the more you eat, the fatter you get\"), 越想越难过 (\"the more you think, the sadder you feel\").",
+    "explanation": {
+      "en": "**中文** (\"Chinese\") is the Topic, sitting at the top of the tree. The **越…越…** (yuè…yuè…) frame pairs two clauses: **越学** (\"the more you study\") and **越有意思** (\"the more interesting it gets\"). The pattern works like this: 越 A 越 B means \"as A increases, B increases.\" The actor of 学 is left out here (an implied general \"you\"). This correlative frame is one of the most elegant in Mandarin: no conjunction, no relative clause, just the repeated 越 linking cause and effect. Other examples: 越吃越胖 (\"the more you eat, the fatter you get\"), 越想越难过 (\"the more you think, the sadder you feel\").",
+      "zh": "**他**是话题。**连…都…**结构挑出最极端的案例来说明观点。**连最简单的问题**被**连**标记为极端案例，**都不会回答**用**都**传递强调。逻辑是：如果连最简单的问题都不会回答，其他更难的更不用说了。树展示了**连**短语聚焦意外之处，**都**在评论中强化重点。"
+    },
     "tree": {
       "id": "n60",
       "role": "Sentence",
@@ -10046,7 +10340,10 @@
     "chinese": "他一说话就脸红。",
     "pinyin": "Tā yī shuō huà jiù liǎn hóng.",
     "translation": "The moment he speaks, he blushes.",
-    "explanation": "**他** (\"he\") is the Topic. The **一…就…** (yī…jiù…) frame expresses \"as soon as A, immediately B.\" **一说话** (\"as soon as he speaks\") is the trigger; **就脸红** (\"immediately blushes\") is the consequence. The 一 + verb signals the trigger event, and 就 signals the instant result. 脸红 is itself a compact compound: 脸 (\"face\") + 红 (\"turns red\"). This pattern is extremely common in everyday speech: 一下雨就堵车 (\"as soon as it rains, traffic jams up\"), 一看见她就笑 (\"the moment he sees her, he smiles\"). The two clauses are anchored by the same Topic here, but they do not have to be.",
+    "explanation": {
+      "en": "**他** (\"he\") is the Topic. The **一…就…** (yī…jiù…) frame expresses \"as soon as A, immediately B.\" **一说话** (\"as soon as he speaks\") is the trigger; **就脸红** (\"immediately blushes\") is the consequence. The 一 + verb signals the trigger event, and 就 signals the instant result. 脸红 is itself a compact compound: 脸 (\"face\") + 红 (\"turns red\"). This pattern is extremely common in everyday speech: 一下雨就堵车 (\"as soon as it rains, traffic jams up\"), 一看见她就笑 (\"the moment he sees her, he smiles\"). The two clauses are anchored by the same Topic here, but they do not have to be.",
+      "zh": "**连**字句的另一种形式：**连…也…**，用**也**代替**都**。**连我也不知道**：**我**被**连**标记为意外的极端案例（\"连我都不知道\"），**也**在评论中强化。逻辑是：如果连我都不知道，别人更不可能知道了。跟**都**相比，**也**语气更柔和、更包容。"
+    },
     "tree": {
       "id": "n61",
       "role": "Sentence",
@@ -10130,7 +10427,10 @@
     "chinese": "只学习不思考，越学越糊涂；只思考不学习，越想越危险。",
     "pinyin": "Zhǐ xué xí bù sī kǎo, yuè xué yuè hú tu; zhǐ sī kǎo bù xué xí, yuè xiǎng yuè wéi xiǎn.",
     "translation": "If you only study without thinking, the more you study the more confused you get; if you only think without studying, the more you think the more perilous it becomes.",
-    "explanation": "A modern take on 學而不思則罔，思而不學則殆 (from the Analects: \"To study without thinking is wasteful; to think without studying is dangerous\"). The classical 而 (\"but/and\") and 則 (\"then\") are replaced by modern **如果...就...** (\"if...then...\"). The tree shows two parallel conditional clauses. Each has the same shape: 如果 + condition, 就 + consequence. The first clause warns 如果只学习不思考 (\"if you only study without thinking\"), result: 就会迷茫 (\"you will be lost\"). The second warns 如果只思考不学习 (\"if you only think without studying\"), result: 就很危险 (\"it is very dangerous\").",
+    "explanation": {
+      "en": "A modern take on 學而不思則罔，思而不學則殆 (from the Analects: \"To study without thinking is wasteful; to think without studying is dangerous\"). The classical 而 (\"but/and\") and 則 (\"then\") are replaced by modern **如果...就...** (\"if...then...\"). The tree shows two parallel conditional clauses. Each has the same shape: 如果 + condition, 就 + consequence. The first clause warns 如果只学习不思考 (\"if you only study without thinking\"), result: 就会迷茫 (\"you will be lost\"). The second warns 如果只思考不学习 (\"if you only think without studying\"), result: 就很危险 (\"it is very dangerous\").",
+      "zh": "这是对\"道可道非常道\"（出自《道德经》）的现代改写。用**连…都**框架：**连用语言都说不清楚的道理**是极端案例（含\"说不清楚\"这个否定可能补语做定语），**才是最深刻的道理**是判断。树展示了**连**短语内嵌定语从句、**才**引出判断的结构。"
+    },
     "tree": {
       "id": "s84-root",
       "role": "Sentence",
@@ -10254,7 +10554,10 @@
     "chinese": "一个人读书越多，他就越能理解世界。",
     "pinyin": "Yī ge rén dú shū yuè duō, tā jiù yuè néng lǐ jiě shì jiè.",
     "translation": "The more a person reads, the more they can understand the world.",
-    "explanation": "The **越...越** correlative frame: the more X, the more Y. The first half: **一个人读书越多** (\"the more a person reads\"). The second half: **他就越能理解世界** (\"the more he can understand the world\"). The **越** markers bracket each half, and **就** in the consequence reinforces the link. The tree shows the two halves as parallel branches connected by the correlative frame. This pattern is one of the most elegant ways to express proportional change in Mandarin.",
+    "explanation": {
+      "en": "The **越...越** correlative frame: the more X, the more Y. The first half: **一个人读书越多** (\"the more a person reads\"). The second half: **他就越能理解世界** (\"the more he can understand the world\"). The **越** markers bracket each half, and **就** in the consequence reinforces the link. The tree shows the two halves as parallel branches connected by the correlative frame. This pattern is one of the most elegant ways to express proportional change in Mandarin.",
+      "zh": "**越…越**关联框架：越X越Y。前半句：**一个人读书越多**（\"一个人读书越多\"）。后半句：**他就越能理解世界**（\"他就越能理解世界\"）。两个**越**分别标记两半，**就**在后果中强化关联。树展示了两半句作为平行分支被关联框架连接。这是中文表达比例变化最优美的方式之一。"
+    },
     "tree": {
       "id": "n97-root",
       "role": "Sentence",
@@ -10390,7 +10693,10 @@
     "chinese": "天气越冷，大家越不想出门。",
     "pinyin": "Tiān qì yuè lěng, dà jiā yuè bù xiǎng chū mén.",
     "translation": "The colder the weather gets, the less people want to go out.",
-    "explanation": "Another **越...越** correlative, this time with a cause-and-effect feel. The first half: **天气越冷** (\"the colder the weather gets\"). The second half: **大家越不想出门** (\"the less everyone wants to go out\"). The **越** markers link the two: as coldness increases, willingness decreases. Notice the negation **不想** sits inside the second 越 clause. The tree shows the two balanced halves, each with its own 越 marker.",
+    "explanation": {
+      "en": "Another **越...越** correlative, this time with a cause-and-effect feel. The first half: **天气越冷** (\"the colder the weather gets\"). The second half: **大家越不想出门** (\"the less everyone wants to go out\"). The **越** markers link the two: as coldness increases, willingness decreases. Notice the negation **不想** sits inside the second 越 clause. The tree shows the two balanced halves, each with its own 越 marker.",
+      "zh": "又一个**越…越**关联句，带有因果色彩。前半句：**天气越冷**（\"天气越冷\"）。后半句：**大家越不想出门**（\"大家越不想出门\"）。两个**越**连接两半：寒冷程度增加，外出意愿下降。注意否定**不想**出现在第二个**越**分句内部。树展示了两个平衡的半句，各带一个**越**标记。"
+    },
     "tree": {
       "id": "n98-root",
       "role": "Sentence",
@@ -10507,7 +10813,10 @@
     "chinese": "期望越高，失望往往也就越大。",
     "pinyin": "Qī wàng yuè gāo, shī wàng wǎng wǎng yě jiù yuè dà.",
     "translation": "The higher the expectations, the greater the disappointment often is.",
-    "explanation": "The classic \"the higher something goes, the harder it falls\" idea. The first half: **期望越高** (\"the higher the expectations\"). The second half: **失望往往也就越大** (\"the greater the disappointment tends to be\"). The **往往** (\"often/tend to\") and **也** (\"also\") add softening nuance. The tree shows the two halves of the 越...越 frame as balanced branches, with the adverbs 往往 and 也 layered inside the consequence clause.",
+    "explanation": {
+      "en": "The classic \"the higher something goes, the harder it falls\" idea. The first half: **期望越高** (\"the higher the expectations\"). The second half: **失望往往也就越大** (\"the greater the disappointment tends to be\"). The **往往** (\"often/tend to\") and **也** (\"also\") add softening nuance. The tree shows the two halves of the 越...越 frame as balanced branches, with the adverbs 往往 and 也 layered inside the consequence clause.",
+      "zh": "经典的\"期望越高失望越大\"式句型。前半句：**期望越高**。后半句：**失望往往也就越大**。**往往**（\"往往\"）和**也**（\"也\"）增添了委婉语气。树展示了越…越框架的两半句作为平衡分支，副词**往往**和**也**层叠在后果分句内部。"
+    },
     "tree": {
       "id": "n99-root",
       "role": "Sentence",
@@ -10634,7 +10943,10 @@
     "chinese": "他不但会说英语，而且还会说法语。",
     "pinyin": "Tā bú dàn huì shuō Yīng yǔ, ér qiě hái huì shuō Fǎ yǔ.",
     "translation": "He not only speaks English, but also speaks French.",
-    "explanation": "**他** (\"he\") is the Topic. The **不但…而且…** frame builds an escalating pair: the first clause states something already impressive (speaks English), and the second clause tops it (also speaks French). **不但** (\"not only\") opens the first half, and **而且** (\"but also\") opens the second. The **还** (\"additionally, still\") inside the second clause reinforces the escalation. Both clauses share the same Topic, so 他 appears only once. This correlative pattern is one of the most useful in Mandarin for building emphasis and expressing that something exceeds expectations.",
+    "explanation": {
+      "en": "**他** (\"he\") is the Topic. The **不但…而且…** frame builds an escalating pair: the first clause states something already impressive (speaks English), and the second clause tops it (also speaks French). **不但** (\"not only\") opens the first half, and **而且** (\"but also\") opens the second. The **还** (\"additionally, still\") inside the second clause reinforces the escalation. Both clauses share the same Topic, so 他 appears only once. This correlative pattern is one of the most useful in Mandarin for building emphasis and expressing that something exceeds expectations.",
+      "zh": "**一…就**关联框架：一A就B，表示\"A一发生，B立刻跟上\"。**他一回到家**（条件/触发）→ **就开始看书**（即时后果）。**一**标记触发条件，**就**标记紧随的结果。树展示了两个分句被一/就框架组织成条件—结果的结构。"
+    },
     "tree": {
       "id": "s108-n",
       "role": "Sentence",
@@ -10765,7 +11077,10 @@
     "chinese": "虽然很累，但是很开心。",
     "pinyin": "Suī rán hěn lèi, dàn shì hěn kāi xīn.",
     "translation": "Although tired, (I'm) very happy.",
-    "explanation": "The Topic is an implied general actor (dropped \"I\" or \"one\"), which is very natural in Mandarin. The **虽然…但是…** frame expresses concession: \"although A, but B.\" The first clause concedes: 虽然很累 (\"although very tired\"). The second clause counters: 但是很开心 (\"but very happy\"). In Mandarin, both markers are typically required. English uses \"although\" alone, but Mandarin pairs 虽然 with 但是 (or 可是, 不过). The tree shows two parallel Comment clauses joined by this concessive frame. This is one of the most essential structures for expressing contrast.",
+    "explanation": {
+      "en": "The Topic is an implied general actor (dropped \"I\" or \"one\"), which is very natural in Mandarin. The **虽然…但是…** frame expresses concession: \"although A, but B.\" The first clause concedes: 虽然很累 (\"although very tired\"). The second clause counters: 但是很开心 (\"but very happy\"). In Mandarin, both markers are typically required. English uses \"although\" alone, but Mandarin pairs 虽然 with 但是 (or 可是, 不过). The tree shows two parallel Comment clauses joined by this concessive frame. This is one of the most essential structures for expressing contrast.",
+      "zh": "**虽然…但是**让步关联框架。**虽然很累**（\"虽然很累\"）承认一个事实，**但是他还是坚持了下来**（\"但他还是坚持了\"）转折。**还是**在转折中强调\"尽管如此仍然\"。树展示了让步分句和转折分句被虽然/但是框架平行组织。"
+    },
     "tree": {
       "id": "s109-n",
       "role": "Sentence",
@@ -10869,7 +11184,10 @@
     "chinese": "门开着呢。",
     "pinyin": "Mén kāi zhe ne.",
     "translation": "The door is open (right now).",
-    "explanation": "Notice **门** (\"door\") at the top of the tree as the Topic. The verb **开** (\"open\") carries the aspect marker **着** (zhe), which here marks an ongoing *state*, not an action in progress. The door opened at some point and remains open now. The sentence-final **呢** (ne) reinforces this: it is still the case. This stative use of 着 is one of its two main functions. The other is the concurrent-action sense (doing something *while* in a position). Distinguishing these two is key: 坐着 can mean \"is seated\" (state) or \"while sitting\" (concurrent).",
+    "explanation": {
+      "en": "Notice **门** (\"door\") at the top of the tree as the Topic. The verb **开** (\"open\") carries the aspect marker **着** (zhe), which here marks an ongoing *state*, not an action in progress. The door opened at some point and remains open now. The sentence-final **呢** (ne) reinforces this: it is still the case. This stative use of 着 is one of its two main functions. The other is the concurrent-action sense (doing something *while* in a position). Distinguishing these two is key: 坐着 can mean \"is seated\" (state) or \"while sitting\" (concurrent).",
+      "zh": "反问句——不期望真正的回答，而是以问题的形式做强调。**难道你不知道吗**：**难道**标记反问（\"难道\"=暗示答案显而易见），**不知道**是否定，**吗**是疑问。三者叠加后的修辞效果是：\"你当然知道！\"树展示了**难道**作为反问标记、**不**作为否定、**吗**作为句末疑问的各自位置。"
+    },
     "tree": {
       "id": "n62",
       "role": "Sentence",
@@ -10934,7 +11252,10 @@
     "chinese": "你去过长城吗？",
     "pinyin": "Nǐ qù guo Cháng Chéng ma?",
     "translation": "Have you been to the Great Wall?",
-    "explanation": "**你** (\"you\") is the Topic. The verb **去** (\"go\") is followed by the experiential aspect marker **过** (guo). This does not ask \"Did you go?\" (a specific past event); it asks \"Have you *ever* gone?\" (life experience). The difference between 了 and 过 is crucial: 我去了长城 means \"I went to the Great Wall (at a specific time)\"; 我去过长城 means \"I have been there at some point in my life.\" The **吗** at the end makes it a yes-or-no question. To answer: 去过 (\"yes, I have\") or 没去过 (\"no, never\"). Notice the negation uses 没, not 不.",
+    "explanation": {
+      "en": "**你** (\"you\") is the Topic. The verb **去** (\"go\") is followed by the experiential aspect marker **过** (guo). This does not ask \"Did you go?\" (a specific past event); it asks \"Have you *ever* gone?\" (life experience). The difference between 了 and 过 is crucial: 我去了长城 means \"I went to the Great Wall (at a specific time)\"; 我去过长城 means \"I have been there at some point in my life.\" The **吗** at the end makes it a yes-or-no question. To answer: 去过 (\"yes, I have\") or 没去过 (\"no, never\"). Notice the negation uses 没, not 不.",
+      "zh": "反问句用来表达强烈肯定。**这不是很好吗**：言下之意是\"这显然很好！\"反问标记在这里是**不是...**+**吗**构成的结构。没有显式的**难道**，但反问语气同样明确。树展示了否定疑问框架如何传递肯定含义。"
+    },
     "tree": {
       "id": "n63",
       "role": "Sentence",
@@ -11008,7 +11329,10 @@
     "chinese": "我每天都会反省自己三次。",
     "pinyin": "Wǒ měi tiān dōu huì fǎn xǐng zì jǐ sān cì.",
     "translation": "Every day I reflect on myself three times.",
-    "explanation": "A modern take on 吾日三省吾身 (from Zengzi, in the Analects: \"Each day I examine myself on three points\"). Modern Mandarin makes the frequency explicit with **每天** (\"every day\") and the habitual marker **都会** (\"always will\"), while classical Chinese compressed it into the single character 日 (\"daily\"). The Topic is **我** (\"I\"). The Comment lines up: 每天 + 都会 + **反省** (\"reflect on\") + **自己** (\"oneself\") + **三次** (\"three times,\" a frequency complement). The classical 吾身 (\"my person\") becomes the modern reflexive 自己.",
+    "explanation": {
+      "en": "A modern take on 吾日三省吾身 (from Zengzi, in the Analects: \"Each day I examine myself on three points\"). Modern Mandarin makes the frequency explicit with **每天** (\"every day\") and the habitual marker **都会** (\"always will\"), while classical Chinese compressed it into the single character 日 (\"daily\"). The Topic is **我** (\"I\"). The Comment lines up: 每天 + 都会 + **反省** (\"reflect on\") + **自己** (\"oneself\") + **三次** (\"three times,\" a frequency complement). The classical 吾身 (\"my person\") becomes the modern reflexive 自己.",
+      "zh": "这是对\"学而时习之不亦说乎\"（出自《论语》）的现代改写。原文用**不亦…乎**这个文言反问框架。现代版用**不是…吗**反问结构：**按时复习学过的东西**（条件/事实）→ **不是一件很快乐的事吗**（反问式肯定）。树展示了反问标记**不是...吗**如何框住判断内容。"
+    },
     "tree": {
       "id": "s75-root",
       "role": "Sentence",
@@ -11086,7 +11410,10 @@
     "chinese": "从来没有过这样的事。",
     "pinyin": "Cóng lái méi yǒu guò zhè yàng de shì.",
     "translation": "There has never been such a thing.",
-    "explanation": "A modern take on 未之有也 (a classical expression meaning \"such a thing has never existed\"). The classical object-fronting pattern (之 placed before the verb 有) becomes standard modern word order. The key combination is **从来** (\"ever\") + **没有** (\"have not\") + **过** (experiential aspect marker): together they mean \"have never experienced.\" The 过 signals that this negation covers all of past experience, not just a single event. The object **这样的事** (\"this kind of thing\") uses 的 to turn the description into a noun phrase.",
+    "explanation": {
+      "en": "A modern take on 未之有也 (a classical expression meaning \"such a thing has never existed\"). The classical object-fronting pattern (之 placed before the verb 有) becomes standard modern word order. The key combination is **从来** (\"ever\") + **没有** (\"have not\") + **过** (experiential aspect marker): together they mean \"have never experienced.\" The 过 signals that this negation covers all of past experience, not just a single event. The object **这样的事** (\"this kind of thing\") uses 的 to turn the description into a noun phrase.",
+      "zh": "这是对\"四海之内皆兄弟也\"（出自《论语》）的现代改写。现代版用**不都是…吗**反问结构：**全世界的人**做话题，**不都是一家人吗**传递\"当然都是一家人\"的肯定含义。**都**加强普遍性，**不...吗**反问框架将其锁定为修辞性断言。"
+    },
     "tree": {
       "id": "s81-root",
       "role": "Sentence",
@@ -11167,7 +11494,10 @@
     "chinese": "我学了三年中文了。",
     "pinyin": "Wǒ xué le sān nián Zhōng wén le.",
     "translation": "I've been studying Chinese for three years (and still am).",
-    "explanation": "**我** (\"I\") is the Topic. This sentence uses **two separate 了**, and the difference between them matters. The first **了** (after the verb 学) marks that the action of studying has accumulated. The second **了** (at the end of the sentence) signals that this situation continues up to the present moment. Together, they mean: \"I have studied for three years *and I'm still studying*.\" If you removed the final 了, the sentence would mean \"I studied for three years (and then stopped).\" This double-了 pattern is one of the trickiest but most important aspect distinctions in Mandarin.",
+    "explanation": {
+      "en": "**我** (\"I\") is the Topic. This sentence uses **two separate 了**, and the difference between them matters. The first **了** (after the verb 学) marks that the action of studying has accumulated. The second **了** (at the end of the sentence) signals that this situation continues up to the present moment. Together, they mean: \"I have studied for three years *and I'm still studying*.\" If you removed the final 了, the sentence would mean \"I studied for three years (and then stopped).\" This double-了 pattern is one of the trickiest but most important aspect distinctions in Mandarin.",
+      "zh": "**谁不想过好日子呢**——用**谁**构成反问。这不是在问\"谁\"，而是在说\"每个人都想\"。**呢**在这里是反问语气词，代替**吗**。**谁不…呢**是中文反问的经典框架之一。树展示了**谁**在主语位置、**呢**在句末的反问结构。"
+    },
     "tree": {
       "id": "s110-n",
       "role": "Sentence",
@@ -11260,7 +11590,10 @@
     "chinese": "他笑着说：\"没关系。\"",
     "pinyin": "Tā xiào zhe shuō: \"Méi guān xi.\"",
     "translation": "He said with a smile: \"It's fine.\"",
-    "explanation": "**他** (\"he\") is the Topic. The Comment chains two actions happening at the same time: **笑着** (\"smiling\") and **说** (\"said\"). The **着** after 笑 is the concurrent-action marker: it tells you that the smiling was happening while the speaking occurred. This is the *other* major use of 着, different from the stative use (门开着, \"the door is open\"). Stative 着 describes a lasting state; concurrent 着 describes a manner or background action. Think of it as: [verb1 + 着] sets the backdrop, then [verb2] is the main event. Other examples: 站着吃 (\"eat while standing\"), 哭着跑 (\"run while crying\").",
+    "explanation": {
+      "en": "**他** (\"he\") is the Topic. The Comment chains two actions happening at the same time: **笑着** (\"smiling\") and **说** (\"said\"). The **着** after 笑 is the concurrent-action marker: it tells you that the smiling was happening while the speaking occurred. This is the *other* major use of 着, different from the stative use (门开着, \"the door is open\"). Stative 着 describes a lasting state; concurrent 着 describes a manner or background action. Think of it as: [verb1 + 着] sets the backdrop, then [verb2] is the main event. Other examples: 站着吃 (\"eat while standing\"), 哭着跑 (\"run while crying\").",
+      "zh": "**难道…还不够吗**——双重强化的反问。**难道**标记反问，**还不够**在否定中加入**还**增添\"竟然还\"的递进语气，**吗**收束疑问。修辞效果：这显然已经足够了！树展示了**难道**、**还**、**不**、**吗**四重标记叠加的反问结构。"
+    },
     "tree": {
       "id": "s111-n",
       "role": "Sentence",
@@ -11335,7 +11668,10 @@
     "chinese": "如果明天下雨，我们就不去了。",
     "pinyin": "Rú guǒ míng tiān xià yǔ, wǒ men jiù bù qù le.",
     "translation": "If it rains tomorrow, we won't go.",
-    "explanation": "A classic **如果...就** conditional. The condition clause **如果明天下雨** (\"if it rains tomorrow\") sets the premise: **如果** opens the condition, **明天** is the time, **下雨** (\"rain\") is the action. The consequence clause: **我们就不去了** (\"we then won't go\"). The **就** marks the consequence, **不** negates the verb, and **了** signals the change of plans. The tree shows the 如果 clause and the 就 clause as two halves of the conditional frame.",
+    "explanation": {
+      "en": "A classic **如果...就** conditional. The condition clause **如果明天下雨** (\"if it rains tomorrow\") sets the premise: **如果** opens the condition, **明天** is the time, **下雨** (\"rain\") is the action. The consequence clause: **我们就不去了** (\"we then won't go\"). The **就** marks the consequence, **不** negates the verb, and **了** signals the change of plans. The tree shows the 如果 clause and the 就 clause as two halves of the conditional frame.",
+      "zh": "经典**如果...就**条件句。条件分句**如果明天下雨**设定前提：**如果**开启条件，**明天**是时间，**下雨**是事件。后果分句：**我们就不去了**。**就**标记后果，**不**否定动词，**了**标志计划变更。树展示了如果分句和就分句作为条件框架的两个对称半部分。"
+    },
     "tree": {
       "id": "n64",
       "role": "Sentence",
@@ -11441,7 +11777,10 @@
     "chinese": "只要你努力，就能成功。",
     "pinyin": "Zhǐ yào nǐ nǔ lì, jiù néng chéng gōng.",
     "translation": "As long as you work hard, you can succeed.",
-    "explanation": "A **只要...就** conditional: \"as long as\" + consequence. The condition **只要你努力** (\"as long as you work hard\") uses **只要** to set a minimal condition. The consequence **就能成功** (\"then you can succeed\") uses **就** to mark the result and **能** for ability. This pattern is more optimistic than 如果: it says the condition is *sufficient*, not just possible. The tree shows the two halves balanced around the 只要/就 frame.",
+    "explanation": {
+      "en": "A **只要...就** conditional: \"as long as\" + consequence. The condition **只要你努力** (\"as long as you work hard\") uses **只要** to set a minimal condition. The consequence **就能成功** (\"then you can succeed\") uses **就** to mark the result and **能** for ability. This pattern is more optimistic than 如果: it says the condition is *sufficient*, not just possible. The tree shows the two halves balanced around the 只要/就 frame.",
+      "zh": "**只要...就**条件句：\"只要\"+后果。条件**只要你努力**用**只要**设定最低条件。后果**就能成功**用**就**标记结果、**能**表示能力。这个句型比\"如果\"更乐观：它表示条件是*充分的*，不只是可能的。树展示了两半句围绕只要/就框架的平衡结构。"
+    },
     "tree": {
       "id": "n65",
       "role": "Sentence",
@@ -11527,7 +11866,10 @@
     "chinese": "如果一个道理能用语言说清楚，那它就不是永恒的道理。",
     "pinyin": "Rú guǒ yí gè dào lǐ néng yòng yǔ yán shuō qīng chǔ, nà tā jiù bú shì yǒng héng de dào lǐ.",
     "translation": "If a truth can be expressed clearly in words, then it is not an eternal truth.",
-    "explanation": "A complex conditional about the limits of language. **如果一个道理能用语言说清楚** (\"if a principle can be explained clearly in language\") is the condition, with the potential complement **说清楚** (\"speak clearly\") showing achievability. The tree nests the potential complement inside the conditional clause, showing how these patterns layer naturally. The **能** (\"can\") adds the modal dimension: can it be done?",
+    "explanation": {
+      "en": "A complex conditional about the limits of language. **如果一个道理能用语言说清楚** (\"if a principle can be explained clearly in language\") is the condition, with the potential complement **说清楚** (\"speak clearly\") showing achievability. The tree nests the potential complement inside the conditional clause, showing how these patterns layer naturally. The **能** (\"can\") adds the modal dimension: can it be done?",
+      "zh": "一个关于语言局限性的复杂条件句。**如果一个道理能用语言说清楚**是条件，其中可能补语**说清楚**表示\"说得清楚\"。树展示了可能补语如何嵌套在条件分句内部。**能**增添情态维度：这件事做得到吗？"
+    },
     "tree": {
       "id": "s71-root",
       "role": "Sentence",
@@ -11661,7 +12003,10 @@
     "chinese": "如果你经常复习学过的东西，就能发现新的道理。",
     "pinyin": "Rú guǒ nǐ jīng cháng fù xí xué guò de dōng xi, jiù néng fā xiàn xīn de dào lǐ.",
     "translation": "If you regularly review what you have learned, you can discover new insights.",
-    "explanation": "A modern version of 温故而知新 (\"review the old, learn the new\"). The conditional frame: **如果你经常复习学过的东西** (\"if you often review things you have studied\") sets the premise, where **学过的** is a relative clause (\"that you have studied,\" with experiential 过). The consequence follows with the result of this habit. The tree shows the relative clause nested inside the conditional, with the 如果/就 frame organizing the two halves.",
+    "explanation": {
+      "en": "A modern version of 温故而知新 (\"review the old, learn the new\"). The conditional frame: **如果你经常复习学过的东西** (\"if you often review things you have studied\") sets the premise, where **学过的** is a relative clause (\"that you have studied,\" with experiential 过). The consequence follows with the result of this habit. The tree shows the relative clause nested inside the conditional, with the 如果/就 frame organizing the two halves.",
+      "zh": "条件框架：**如果你经常复习学过的东西**设定前提，其中**学过的**是关系从句（\"学过的\"，带经验体标记\"过\"）。后果部分跟随这个习惯的结果。树展示了关系从句嵌套在条件分句内部，如果/就框架组织两个半部分。"
+    },
     "tree": {
       "id": "s73-root",
       "role": "Sentence",
@@ -11791,7 +12136,10 @@
     "chinese": "如果早上能明白人生的道理，晚上死了也值得。",
     "pinyin": "Rú guǒ zǎo shang néng míng bai rén shēng de dào lǐ, wǎn shang sǐ le yě zhí de.",
     "translation": "If in the morning you grasp the truths of life, dying that evening would still be worthwhile.",
-    "explanation": "A modern rendering of 朝闻道夕死可矣 (\"Hear the Way in the morning, die content in the evening\"). The conditional: **如果早上能明白人生的道理** (\"if in the morning you can understand the principles of life\"). The **能** gives modal possibility, **明白** (\"understand\") is the verb, and **人生的道理** (\"the principles of life\") is the object with a possessive 的 phrase. The tree shows the time adjunct 早上 and the modal 能 layered inside the conditional clause.",
+    "explanation": {
+      "en": "A modern rendering of 朝闻道夕死可矣 (\"Hear the Way in the morning, die content in the evening\"). The conditional: **如果早上能明白人生的道理** (\"if in the morning you can understand the principles of life\"). The **能** gives modal possibility, **明白** (\"understand\") is the verb, and **人生的道理** (\"the principles of life\") is the object with a possessive 的 phrase. The tree shows the time adjunct 早上 and the modal 能 layered inside the conditional clause.",
+      "zh": "这是对\"朝闻道夕死可矣\"（\"早上听闻道理，晚上死也可以\"）的现代改写。条件句：**如果早上能明白人生的道理**。**能**给出情态可能性，**明白**是动词，**人生的道理**是带\"的\"修饰的宾语。树展示了时间状语\"早上\"和情态词\"能\"如何层叠在条件分句内部。"
+    },
     "tree": {
       "id": "s82-root",
       "role": "Sentence",
@@ -11916,7 +12264,10 @@
     "chinese": "了解敌人又了解自己，打一百场仗也不会有危险。",
     "pinyin": "Liǎo jiě dí rén yòu liǎo jiě zì jǐ, dǎ yì bǎi chǎng zhàng yě bú huì yǒu wéi xiǎn.",
     "translation": "If you understand the enemy and understand yourself, a hundred battles will bring no peril.",
-    "explanation": "A modern take on 知己知彼百战不殆 (\"know yourself, know your enemy, a hundred battles without danger\"). The sentence uses parallel verbs: **了解敌人** (\"understand the enemy\") **又** (\"and also\") **了解自己** (\"understand yourself\"). The **又** links two equal verb phrases. The conditional consequence follows: knowing both sides means never losing. The tree shows the two 了解 phrases connected by 又 in a correlative structure.",
+    "explanation": {
+      "en": "A modern take on 知己知彼百战不殆 (\"know yourself, know your enemy, a hundred battles without danger\"). The sentence uses parallel verbs: **了解敌人** (\"understand the enemy\") **又** (\"and also\") **了解自己** (\"understand yourself\"). The **又** links two equal verb phrases. The conditional consequence follows: knowing both sides means never losing. The tree shows the two 了解 phrases connected by 又 in a correlative structure.",
+      "zh": "这是对\"知己知彼百战不殆\"的现代改写。句子使用并列动词：**了解敌人**+**又**（\"又\"）+**了解自己**。**又**连接两个对等的动词短语。条件性的后果随后展开：知己知彼就永远不会输。树展示了两个\"了解\"短语被**又**连接成关联结构。"
+    },
     "tree": {
       "id": "s83-root",
       "role": "Sentence",
@@ -12051,7 +12402,10 @@
     "chinese": "即使下雨，我也要去。",
     "pinyin": "Jí shǐ xià yǔ, wǒ yě yào qù.",
     "translation": "Even if it rains, I'm still going to go.",
-    "explanation": "This is a concessive conditional pattern: \"Even if A, still B.\" The first clause introduces the hypothetical extreme case using **即使** (\"even if\"). The second clause delivers the unwavering result, linked by **也** (\"also / still\"). The 也 is mandatory in Mandarin for this pattern. It anchors the second half, showing that despite the condition set by 即使, the outcome remains the same. The Topic of the first clause is implied (the weather context), while **我** (\"I\") is the Topic of the second.",
+    "explanation": {
+      "en": "This is a concessive conditional pattern: \"Even if A, still B.\" The first clause introduces the hypothetical extreme case using **即使** (\"even if\"). The second clause delivers the unwavering result, linked by **也** (\"also / still\"). The 也 is mandatory in Mandarin for this pattern. It anchors the second half, showing that despite the condition set by 即使, the outcome remains the same. The Topic of the first clause is implied (the weather context), while **我** (\"I\") is the Topic of the second.",
+      "zh": "**只有...才**条件句——这是最强的条件框架，表示\"唯有...才能\"。**只有**设定唯一条件，**才**标记唯一可能的结果。比\"如果/就\"更严格：如果没有这个条件，结果绝对不会发生。树展示了只有/才框架的两个对称部分。"
+    },
     "tree": {
       "id": "s122-n",
       "role": "Sentence",
@@ -12138,7 +12492,10 @@
     "chinese": "除非你道歉，否则我不会原谅你。",
     "pinyin": "Chú fēi nǐ dào qiàn, fǒu zé wǒ bú huì yuán liàng nǐ.",
     "translation": "Unless you apologize, (otherwise) I won't forgive you.",
-    "explanation": "This is the \"unless\" pattern. The first clause uses **除非** (\"unless\") to state the only condition that will change the outcome. The second clause uses **否则** (\"otherwise\") to show what happens if that condition isn't met. English just says \"unless A, B\", but Mandarin explicitly balances it: \"unless A, *otherwise* B.\" As always with conditionals, the condition clause (除非你道歉) acts as the broad Topic, setting the stage, while the outcome (否则我不会原谅你) acts as the Comment.",
+    "explanation": {
+      "en": "This is the \"unless\" pattern. The first clause uses **除非** (\"unless\") to state the only condition that will change the outcome. The second clause uses **否则** (\"otherwise\") to show what happens if that condition isn't met. English just says \"unless A, B\", but Mandarin explicitly balances it: \"unless A, *otherwise* B.\" As always with conditionals, the condition clause (除非你道歉) acts as the broad Topic, setting the stage, while the outcome (否则我不会原谅你) acts as the Comment.",
+      "zh": "**即使...也**让步条件句：\"即使...也还是...\"。**即使**承认一个极端假设，**也**表示即便如此结果也不变。这是最强的让步框架：条件再极端也改变不了结论。树展示了即使分句和也分句的平行排列。"
+    },
     "tree": {
       "id": "s123-n",
       "role": "Sentence",
@@ -12255,7 +12612,10 @@
     "chinese": "他连自己的名字都不会写。",
     "pinyin": "Tā lián zì jǐ de míng zi dōu bù huì xiě.",
     "translation": "He can't even write his own name.",
-    "explanation": "**他** (\"he\") is the Topic. The **连…都…** frame singles out the most extreme or surprising case to make a point. Here, **连自己的名字** (\"even his own name\") is marked by 连 as the extreme example, and **都不会写** (\"cannot even write\") delivers the emphasis with 都. The logic: if he cannot write even his own name, imagine what else he cannot write. The tree shows the 连 phrase spotlighting what is surprising, with 都 in the Comment reinforcing the emphasis.",
+    "explanation": {
+      "en": "**他** (\"he\") is the Topic. The **连…都…** frame singles out the most extreme or surprising case to make a point. Here, **连自己的名字** (\"even his own name\") is marked by 连 as the extreme example, and **都不会写** (\"cannot even write\") delivers the emphasis with 都. The logic: if he cannot write even his own name, imagine what else he cannot write. The tree shows the 连 phrase spotlighting what is surprising, with 都 in the Comment reinforcing the emphasis.",
+      "zh": "**他**是话题。**连…都…**框架挑出最极端的案例来说明观点。**连自己的名字**被**连**标记为极端例子，**都不会写**用**都**传递强调。逻辑是：连自己的名字都不会写，别的更不用说了。树展示了**连**短语聚焦意外之处，**都**在评论中强化重点。"
+    },
     "tree": {
       "id": "n66",
       "role": "Sentence",
@@ -12366,7 +12726,10 @@
     "chinese": "连小孩子也能做到。",
     "pinyin": "Lián xiǎo hái zi yě néng zuò dào.",
     "translation": "Even children can do it.",
-    "explanation": "This sentence uses **连…也…**, the 也 variant of the \"even\" construction. **连小孩子** (\"even children\") is marked by 连 as the surprising case, and **也能做到** (\"can also do it\") delivers the point with 也. The logic: if even children can do it, then surely anyone can. Unlike the 都 variant, 也 carries a softer, more inclusive tone. The tree shows 连 marking the extreme example and 也 reinforcing the emphasis in the comment.",
+    "explanation": {
+      "en": "This sentence uses **连…也…**, the 也 variant of the \"even\" construction. **连小孩子** (\"even children\") is marked by 连 as the surprising case, and **也能做到** (\"can also do it\") delivers the point with 也. The logic: if even children can do it, then surely anyone can. Unlike the 都 variant, 也 carries a softer, more inclusive tone. The tree shows 连 marking the extreme example and 也 reinforcing the emphasis in the comment.",
+      "zh": "**连…也…**框架，**也**是\"都\"的柔和变体。**连小孩子**被**连**标记为出人意料的案例，**也能做到**用**也**传递。逻辑是：连小孩子也能做到，大人更不在话下了。跟**都**相比，**也**的语气更柔和、更包容。树展示了**连**标记极端案例、**也**在评论中强化的结构。"
+    },
     "tree": {
       "id": "n67",
       "role": "Sentence",
@@ -12452,7 +12815,10 @@
     "chinese": "连一千里的路，也要从第一步开始走。",
     "pinyin": "Lián yī qiān lǐ de lù, yě yào cóng dì yī bù kāi shǐ zǒu.",
     "translation": "Even a journey of a thousand miles must begin with the first step.",
-    "explanation": "A modern take on 千里之行始於足下 (from the Dao De Jing: \"A journey of a thousand miles begins beneath your feet\"). The **连…也** frame wraps the classical idea: **连一千里的路** (\"even a road of a thousand miles\") is the extreme case marked by 连, and **也要从第一步开始走** (\"must also start from the first step\") is the Comment reinforced by 也. The tree shows the 连 phrase as the emphatic Topic and the 也 clause as the Comment.",
+    "explanation": {
+      "en": "A modern take on 千里之行始於足下 (from the Dao De Jing: \"A journey of a thousand miles begins beneath your feet\"). The **连…也** frame wraps the classical idea: **连一千里的路** (\"even a road of a thousand miles\") is the extreme case marked by 连, and **也要从第一步开始走** (\"must also start from the first step\") is the Comment reinforced by 也. The tree shows the 连 phrase as the emphatic Topic and the 也 clause as the Comment.",
+      "zh": "这是对\"千里之行始于足下\"（出自《道德经》）的现代改写。**连…也**框架包裹了古典思想：**连一千里的路**被**连**标记为极端案例，**也要从第一步开始走**用**也**强化。树展示了**连**短语作为强调性话题、**也**分句作为评论的结构。"
+    },
     "tree": {
       "id": "s72-root",
       "role": "Sentence",
@@ -12559,7 +12925,10 @@
     "chinese": "连别人不了解你，你都不生气，这才是有修养的人。",
     "pinyin": "Lián bié rén bù liǎo jiě nǐ, nǐ dōu bù shēng qì, zhè cái shì yǒu xiū yǎng de rén.",
     "translation": "Even when others do not understand you, you are not resentful; this is truly the mark of a cultivated person.",
-    "explanation": "A modern rendering of 人不知而不愠，不亦君子乎 (\"If others do not know you and you are not vexed, is that not the mark of a gentleman?\"). The sentence uses the **连…都** frame: **连别人不了解你** (\"even when others don't understand you\") is the extreme case. The consequence: **你都不生气** (\"you still don't get angry\"). Then a judgment follows: **这才是有修养的人** (\"this is truly a cultivated person\"). The tree nests the 连 clause as the emphatic condition, with the judgment as a separate clause.",
+    "explanation": {
+      "en": "A modern rendering of 人不知而不愠，不亦君子乎 (\"If others do not know you and you are not vexed, is that not the mark of a gentleman?\"). The sentence uses the **连…都** frame: **连别人不了解你** (\"even when others don't understand you\") is the extreme case. The consequence: **你都不生气** (\"you still don't get angry\"). Then a judgment follows: **这才是有修养的人** (\"this is truly a cultivated person\"). The tree nests the 连 clause as the emphatic condition, with the judgment as a separate clause.",
+      "zh": "这是对\"人不知而不愠不亦君子乎\"的现代改写。**连…都**框架：**连别人不了解你**是极端案例。后果：**你都不生气**。然后是判断：**这才是有修养的人**。树展示了**连**分句作为强调性条件、判断句作为独立分句的结构。"
+    },
     "tree": {
       "id": "s85-root",
       "role": "Sentence",

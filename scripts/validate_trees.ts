@@ -127,8 +127,20 @@ for (const s of sampleSentences) {
         }
     }
     
-    if (s.explanation !== undefined && typeof s.explanation !== 'string') {
-        logError(sId, 'ROOT', 'explanation must be a string');
+    if (s.explanation !== undefined) {
+        if (typeof s.explanation === 'string') {
+            // plain string — OK
+        } else if (typeof s.explanation === 'object' && s.explanation !== null) {
+            // BilingualString: { en: string; zh?: string }
+            if (typeof s.explanation.en !== 'string') {
+                logError(sId, 'ROOT', 'BilingualString explanation must have an "en" string property');
+            }
+            if (s.explanation.zh !== undefined && typeof s.explanation.zh !== 'string') {
+                logError(sId, 'ROOT', 'BilingualString explanation.zh must be a string if present');
+            }
+        } else {
+            logError(sId, 'ROOT', 'explanation must be a string or a BilingualString object { en, zh? }');
+        }
     }
 
     if (s.tree) {

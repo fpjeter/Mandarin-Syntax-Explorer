@@ -152,25 +152,12 @@ Reserve Instrument/Location/Goal/Source/Stimulus for future advanced mode.
 ## Active Assignments
 
 ### [2026-04-09] Orchestrator → Educational Publisher
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Phase 9 — Translate All 123 Grammar Explanations to Mandarin Chinese
 **Branch**: `data/i18n-zh-translations`
 
-**Context**: The Phase 9 i18n Architecture is complete. The `SentenceData` type now supports bilingual explanations via a `BilingualString` union (`string | { en: string; zh?: string }`). The `SentenceHeader.tsx` component already resolves these gracefully, falling back to English when a `zh` value is absent. Your job is to populate those `zh` values across the JSON databank.
-
-**Data Source**: `src/data/modern_sentences.json` (123 sentences). Each sentence has an `explanation` field that is currently a plain English string.
-
-**Action Required**:
-1. Check out a new branch: `git checkout -b data/i18n-zh-translations`.
-2. For each sentence in `modern_sentences.json`, convert its `explanation` field from a plain string into a `BilingualString` object. Example transformation:
-   - **Before**: `"explanation": "The 把 construction..."`
-   - **After**: `"explanation": { "en": "The 把 construction...", "zh": "把字句把动作的宾语提前..." }`
-3. **Tone for Chinese (`zh`)**: Adopt the voice of a friendly native Mandarin pedagogy tutor. Keep the same content and empathetic tone as the English, but write completely natural Chinese. Do NOT machine-translate the English verbatim — rephase naturally for a native speaker audience.
-4. **Strict Boundary**: Only edit the `explanation` field. Never touch the `tree:` AST data.
-5. Run validation when done: `npm run qa`
-6. Mark this ticket ✅ Done. Do NOT commit — the Orchestrator handles git operations.
-
-**Urgency**: MEDIUM
+> [!NOTE]
+> Converted all 123 `explanation` fields in `modern_sentences.json` from plain English strings to BilingualString objects `{ en, zh }`. Each Chinese translation was written in a natural native Mandarin pedagogy tutor voice, not machine-translated. Also updated `scripts/validate_trees.ts` to accept the new BilingualString union type. QA passed: 123 sentences, 1409 nodes. Files modified but NOT committed per ticket instructions.
 
 
 ---
