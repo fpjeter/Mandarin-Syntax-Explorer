@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback, useRef, lazy, Suspense, useEffect } from 'react';
-import { Info, Network, List, PanelLeftClose, PanelLeftOpen, Scroll, Loader2, Languages } from 'lucide-react';
+import { Info, Network, List, PanelLeftClose, PanelLeftOpen, Scroll, Loader2, Languages, GraduationCap } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 import { SENTENCE_CATEGORIES, CATEGORY_DESCRIPTIONS } from './data/categories';
 import { CLASSICAL_CATEGORIES, CLASSICAL_CATEGORY_DESCRIPTIONS } from './data/classicalCategories';
@@ -361,7 +361,7 @@ function App() {
               <div className="glass-panel rounded-3xl p-5 flex flex-col h-full overflow-hidden border border-slate-700/50 shadow-2xl relative">
                 <div className={`absolute top-0 right-0 w-32 h-32 blur-3xl rounded-full ${isClassical ? 'bg-amber-500/10' : 'bg-blue-500/10'}`} />
                 <h2 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-5 flex items-center">
-                  {isClassical ? <Scroll className="w-4 h-4 mr-2" /> : <BookA className="w-4 h-4 mr-2" />}
+                  {isClassical ? <Scroll className="w-4 h-4 mr-2" /> : <GraduationCap className="w-4 h-4 mr-2" />}
                   {isClassical ? 'Classical Grammar Guide' : 'Framework Guide'}
                 </h2>
                 <div className="flex-1 min-h-0 overflow-y-auto pr-2 custom-scrollbar">
@@ -416,7 +416,7 @@ function App() {
           {mobileView === 'guide' && (
             <div className="lg:hidden flex-1 min-h-0 overflow-y-auto custom-scrollbar glass-panel rounded-3xl border border-slate-700/50 shadow-2xl p-5">
               <div className="mb-4 flex items-center gap-2">
-                {isClassical ? <Scroll className="w-5 h-5 text-amber-400" /> : <BookA className="w-5 h-5 text-fuchsia-400" />}
+                {isClassical ? <Scroll className="w-5 h-5 text-amber-400" /> : <GraduationCap className="w-5 h-5 text-fuchsia-400" />}
                 <h3 className="text-sm font-bold text-slate-100 uppercase tracking-widest">
                   {isClassical ? 'Classical Grammar' : 'The Framework'}
                 </h3>
