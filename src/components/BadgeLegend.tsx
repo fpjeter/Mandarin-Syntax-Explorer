@@ -10,7 +10,7 @@ export const BadgeLegend = () => {
     const activeBadges = isClassical ? CLASSICAL_BADGES : BADGES;
 
     return (
-        <div className="absolute bottom-4 left-4 z-20 flex flex-col items-start gap-0">
+        <div className="absolute bottom-4 right-4 z-20 flex flex-col items-end gap-0">
             {open && (
                 <div className="mb-2 glass-panel border border-slate-700/60 rounded-xl shadow-2xl p-3 w-60 lg:w-72 max-h-[50vh] overflow-y-auto custom-scrollbar flex flex-col gap-2 animate-in fade-in slide-in-from-bottom-2 duration-150">
                     <p className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold mb-1 sticky top-0 bg-slate-900/90 -mt-1 pt-1 pb-1 -mx-1 px-1 z-10">{isClassical ? 'Classical badge glossary' : 'Badge glossary'}</p>
