@@ -1,8 +1,8 @@
 /**
- * Automated Semantic Role Tagger
+ * Automated Semantic Role Tagger (JSON AST Version)
  * 
- * Applies the "Primary Actors Only" 5-role palette to all untagged Topic nodes.
- * Uses Head Verb detection to determine Agent vs Experiencer vs Theme vs Causer.
+ * Applies the "Primary Actors Only" 5-role palette to all untagged Topic/Subject nodes.
+ * Uses AST traversal to find the corresponding Head Verb and determine Agent/Experiencer/Theme/Causer.
  */
 import fs from 'fs';
 import path from 'path';
@@ -10,115 +10,130 @@ import path from 'path';
 const EXPERIENCER_VERBS = ['觉得', '喜欢', '讨厌', '怕', '知道', '想', '爱', '希望',
     '感到', '认为', '担心', '害怕', '高兴', '心疼', '着急', '看见', '听到',
     '以为', '明白', '了解', '忘', '记得', '羡慕', '佩服', '恨', '介意',
-    '后悔', '嫌', '满意'];
+    '后悔', '嫌', '满意', '懂', '希望'];
 
 const CAUSER_VERBS = ['让', '叫', '请', '派', '使', '要求', '命令'];
 
-const dir = 'src/data/sentences';
-const skipFiles = new Set(['index.ts', 'ba_construction.ts', 'bei_passive.ts']);
-const files = fs.readdirSync(dir)
-    .filter(f => f.endsWith('.ts') && !skipFiles.has(f))
-    .sort();
+const filesToProcess = [
+    'src/data/modern_sentences.json',
+    'src/data/classical_sentences.json'
+];
 
 let totalEdits = 0;
 
-for (const file of files) {
-    const filePath = path.join(dir, file);
-    const content = fs.readFileSync(filePath, 'utf8');
-    let fileEdits = 0;
+// Helper to find the first Head Verb or Copula within a node and its descendants
+function findFirstVerb(node: any): { verbText: string, isCopula: boolean } | null {
+    if (!node) return null;
+    
+    if (node.role === 'Head Verb' && node.text?.hanzi) {
+        return { verbText: node.text.hanzi, isCopula: false };
+    }
+    if (node.role === 'Copula' && node.text?.hanzi) {
+        return { verbText: node.text.hanzi, isCopula: true };
+    }
 
-    const isPivotal = file === 'pivotal_constructions.ts';
+    if (node.children && Array.isArray(node.children)) {
+        for (const child of node.children) {
+            const found = findFirstVerb(child);
+            if (found) return found;
+        }
+    }
+    return null;
+}
 
-    // Strategy: Find each sentence block, determine head verb, then tag topics
-    // We split by sentence ID to process sentences individually
-    const lines = content.split('\n');
-    const result = [];
+// Recursive AST traversal to tag nodes
+function traverseAndTag(node: any, parent: any | null, isPivotalCategory: boolean): number {
+    let edits = 0;
 
-    for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
+    // Process children first (bottom-up can sometimes be safer, but top-down is fine here)
+    if (node.children && Array.isArray(node.children)) {
+        for (const child of node.children) {
+            edits += traverseAndTag(child, node, isPivotalCategory);
+        }
+    }
 
-        // Check if this line has an untagged Topic
-        if (line.includes("role: 'Topic'") && !line.includes('semanticRole')) {
-            // Look ahead to find the head verb in the Comment block
-            // Search forward up to 80 lines for a Head Verb or Copula
-            let headVerb = '';
-            let hasCopula = false;
-            const isConditionalTopic = line.includes("subRole: 'conditional'");
-            const isCorrelativeTopic = line.includes("subRole: 'correlative'") || line.includes("subRole: 'first correlative'");
-            const isPivotTopic = line.includes("subRole: 'pivot'");
-            const isSerialVerbTopic = line.includes("subRole: 'serial verb") || line.includes("subRole: 'clause 1'");
-            const isLianTopic = line.includes("subRole: 'lian-construction'") || line.includes("subRole: '连-construction");
-            const isSituationalFrame = line.includes("subRole: 'situational frame'");
+    if ((node.role === 'Topic' || node.role === 'Subject') && !node.semanticRole) {
+        const subRole = node.subRole || '';
+        
+        // Skip structural topics
+        const isConditional = subRole.includes('conditional');
+        const isCorrelative = subRole.includes('correlative');
+        const isSerialVerb = subRole.includes('serial verb') || subRole.includes('clause 1');
+        const isLian = subRole.includes('lian') || subRole.includes('连');
+        const isSituational = subRole.includes('situational frame');
+        const isTimeLocation = subRole === 'time' || subRole === 'location';
 
-            for (let j = i + 1; j < Math.min(i + 80, lines.length); j++) {
-                const fwd = lines[j];
-                if (fwd.includes("role: 'Head Verb'") || fwd.includes("role: 'Copula'")) {
-                    // Extract the hanzi from the next few lines
-                    for (let k = j; k < Math.min(j + 3, lines.length); k++) {
-                        const hanzMatch = lines[k].match(/hanzi:\s*'([^']+)'/);
-                        if (hanzMatch) {
-                            headVerb = hanzMatch[1];
-                            break;
-                        }
-                    }
-                    if (fwd.includes("role: 'Copula'")) hasCopula = true;
+        if (isConditional || isCorrelative || isSerialVerb || isLian || isSituational || isTimeLocation) {
+            return edits;
+        }
+
+        // Find the verb in subsequent siblings
+        let headVerb = '';
+        let hasCopula = false;
+
+        if (parent && parent.children) {
+            const myIndex = parent.children.indexOf(node);
+            for (let i = myIndex + 1; i < parent.children.length; i++) {
+                const sibling = parent.children[i];
+                const verbInfo = findFirstVerb(sibling);
+                if (verbInfo) {
+                    headVerb = verbInfo.verbText;
+                    hasCopula = verbInfo.isCopula;
                     break;
                 }
-                // Stop if we hit the next sentence
-                if (fwd.includes("id: 's") && fwd.includes("category:")) break;
             }
+        }
 
-            // Determine semantic role
-            let role = 'Agent'; // default
+        let role = 'Agent'; // default
 
-            // Conditional/correlative Topics are structural, not actors — skip them
-            if (isConditionalTopic || isCorrelativeTopic || isSerialVerbTopic || isLianTopic || isSituationalFrame) {
-                result.push(line);
-                continue;
-            }
+        const isPivot = subRole.includes('pivot');
 
-            // Pivot topics in pivotal constructions are Agents (they do the next action)
-            if (isPivotTopic) {
-                role = 'Agent';
-            }
-            // Pivotal outer topics are Causers
-            else if (isPivotal && !isPivotTopic && headVerb && CAUSER_VERBS.some(v => headVerb.includes(v))) {
-                role = 'Causer';
-            }
-            // Experiencer verbs
-            else if (headVerb && EXPERIENCER_VERBS.some(v => headVerb.includes(v))) {
-                role = 'Experiencer';
-            }
-            // Copula/adjectival = Theme (thing being described)
-            else if (hasCopula) {
-                role = 'Theme';
-            }
-            // Stative adjectives with no Object = Theme
-            else if (['很', '太', '非常', '真', '挺'].some(w => headVerb.includes(w))) {
-                role = 'Theme';
-            }
-            // Default to Agent for action verbs
-            else {
-                role = 'Agent';
-            }
+        if (isPivot) {
+            role = 'Agent'; // Pivots usually do the next action
+        } else if (isPivotalCategory && !isPivot && headVerb && CAUSER_VERBS.some(v => headVerb.includes(v))) {
+            role = 'Causer'; // Outer topic in pivotal is Causer
+        } else if (headVerb && EXPERIENCER_VERBS.some(v => headVerb.includes(v))) {
+            role = 'Experiencer';
+        } else if (hasCopula) {
+            role = 'Theme'; // Copula describes Theme
+        } else if (['很', '太', '非常', '真', '挺', '不'].some(w => headVerb.includes(w))) {
+            // Very rudimentary check for stative adjectival verbs
+            role = 'Theme';
+        }
 
-            // Inject semanticRole into the line
-            const modified = line.replace(
-                "role: 'Topic'",
-                "role: 'Topic', semanticRole: '" + role + "'"
-            );
-            result.push(modified);
-            fileEdits++;
-        } else {
-            result.push(line);
+        node.semanticRole = role;
+        edits++;
+    }
+
+    return edits;
+}
+
+for (const file of filesToProcess) {
+    const filePath = path.resolve(file);
+    if (!fs.existsSync(filePath)) {
+        console.warn(`File not found: ${file}`);
+        continue;
+    }
+
+    const content = fs.readFileSync(filePath, 'utf8');
+    const sentences = JSON.parse(content);
+    let fileEdits = 0;
+
+    for (const sentence of sentences) {
+        const isPivotal = sentence.category && sentence.category.includes('Pivotal');
+        if (sentence.tree) {
+            fileEdits += traverseAndTag(sentence.tree, null, isPivotal);
         }
     }
 
     if (fileEdits > 0) {
-        fs.writeFileSync(filePath, result.join('\n'));
-        console.log(`${file}: ${fileEdits} topics tagged`);
+        // Write back with exact 2-space indentation
+        fs.writeFileSync(filePath, JSON.stringify(sentences, null, 2) + '\n');
+        console.log(`${file}: ${fileEdits} nodes tagged`);
         totalEdits += fileEdits;
+    } else {
+        console.log(`${file}: 0 nodes tagged (already fully tagged or no matches)`);
     }
 }
 
-console.log(`\nTotal: ${totalEdits} topics tagged across ${files.length} files`);
+console.log(`\nTotal: ${totalEdits} nodes newly tagged with semantic roles.`);

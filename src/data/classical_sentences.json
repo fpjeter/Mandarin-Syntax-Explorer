@@ -178,7 +178,8 @@
                         "translation": "(the one who…)"
                       }
                     }
-                  ]
+                  ],
+                  "semanticRole": "Agent"
                 },
                 {
                   "id": "cc2-c1-pred",
@@ -272,7 +273,8 @@
                         "translation": "(the one who…)"
                       }
                     }
-                  ]
+                  ],
+                  "semanticRole": "Agent"
                 },
                 {
                   "id": "cc2-c2-pred",
@@ -376,7 +378,8 @@
                     "translation": "people"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Agent"
             },
             {
               "id": "cc3-t-v",
@@ -508,7 +511,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "semanticRole": "Theme"
         },
         {
           "id": "cc4-comment",
@@ -608,7 +612,8 @@
                 "translation": "journey"
               }
             }
-          ]
+          ],
+          "semanticRole": "Agent"
         },
         {
           "id": "cc5-comment",
@@ -750,7 +755,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "semanticRole": "Agent"
         },
         {
           "id": "cc6-comment",
@@ -828,7 +834,8 @@
                 "hanzi": "己",
                 "pinyin": "jǐ",
                 "translation": "oneself"
-              }
+              },
+              "semanticRole": "Agent"
             },
             {
               "id": "cc7-t-suo",
@@ -859,7 +866,8 @@
                 "translation": "desire"
               }
             }
-          ]
+          ],
+          "semanticRole": "Agent"
         },
         {
           "id": "cc7-comment",
@@ -938,7 +946,8 @@
             "hanzi": "吾",
             "pinyin": "wú",
             "translation": "I"
-          }
+          },
+          "semanticRole": "Agent"
         },
         {
           "id": "cc8-comment",
@@ -1042,7 +1051,8 @@
                 "translation": "generals and ministers"
               }
             }
-          ]
+          ],
+          "semanticRole": "Agent"
         },
         {
           "id": "cc9-comment",
@@ -1138,7 +1148,8 @@
                     "translation": "(that which…)"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Agent"
             },
             {
               "id": "cc10-c1-pred",
@@ -1175,7 +1186,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "semanticRole": "Agent"
         },
         {
           "id": "cc10-clause2",
@@ -1254,7 +1266,8 @@
             "hanzi": "生",
             "pinyin": "shēng",
             "translation": "life"
-          }
+          },
+          "semanticRole": "Agent"
         },
         {
           "id": "cc11-comment",
@@ -1277,7 +1290,8 @@
                 "hanzi": "我",
                 "pinyin": "wǒ",
                 "translation": "I / my"
-              }
+              },
+              "semanticRole": "Agent"
             },
             {
               "id": "cc11-c-pred",
@@ -1360,7 +1374,8 @@
                 "translation": "(one who is… / as for…)"
               }
             }
-          ]
+          ],
+          "semanticRole": "Agent"
         },
         {
           "id": "cc12-comment",
@@ -1487,7 +1502,8 @@
             "hanzi": "青",
             "pinyin": "qīng",
             "translation": "blue (dye)"
-          }
+          },
+          "semanticRole": "Agent"
         },
         {
           "id": "cc13-comment",
@@ -1828,7 +1844,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "semanticRole": "Agent"
         },
         {
           "id": "cc16-comment",
@@ -1857,7 +1874,8 @@
                     "translation": "battles"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Agent"
             },
             {
               "id": "cc16-c-neg",
@@ -2093,7 +2111,8 @@
                     "hanzi": "人",
                     "pinyin": "rén",
                     "translation": "others / people"
-                  }
+                  },
+                  "semanticRole": "Agent"
                 },
                 {
                   "id": "cc18-t-c1-neg",
@@ -2152,7 +2171,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "semanticRole": "Agent"
         },
         {
           "id": "cc18-comment",
@@ -2257,7 +2277,8 @@
                     "translation": "(one who…)"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Agent"
             },
             {
               "id": "cc19-c1-pred",
@@ -2269,7 +2290,8 @@
                 "translation": "wise"
               }
             }
-          ]
+          ],
+          "semanticRole": "Agent"
         },
         {
           "id": "cc19-clause2",
@@ -2310,7 +2332,8 @@
                     "translation": "(one who…)"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Agent"
             },
             {
               "id": "cc19-c2-pred",
@@ -2370,7 +2393,8 @@
                     "translation": "timing / season"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Agent"
             },
             {
               "id": "cc20-c1-pred",
@@ -2413,7 +2437,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "semanticRole": "Agent"
         },
         {
           "id": "cc20-clause2",
@@ -2442,7 +2467,8 @@
                     "translation": "advantage"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Agent"
             },
             {
               "id": "cc20-c2-pred",
@@ -2615,7 +2641,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "semanticRole": "Agent"
         },
         {
           "id": "cc22-c2",
@@ -2716,7 +2743,8 @@
                     "translation": "(one who…)"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Agent"
             },
             {
               "id": "cc23-c1-pred",
@@ -2744,7 +2772,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "semanticRole": "Agent"
         },
         {
           "id": "cc23-c2",
@@ -2784,7 +2813,8 @@
                     "translation": "(one who…)"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Agent"
             },
             {
               "id": "cc23-c2-pred",
@@ -2983,7 +3013,8 @@
                 "translation": "(as for…)"
               }
             }
-          ]
+          ],
+          "semanticRole": "Agent"
         },
         {
           "id": "cc25-comment",
@@ -3073,7 +3104,8 @@
                 "hanzi": "歲",
                 "pinyin": "suì",
                 "translation": "the year / season"
-              }
+              },
+              "semanticRole": "Agent"
             },
             {
               "id": "cc26-han",
@@ -3123,7 +3155,8 @@
                     "hanzi": "松柏",
                     "pinyin": "sōng bǎi",
                     "translation": "pine and cypress"
-                  }
+                  },
+                  "semanticRole": "Agent"
                 },
                 {
                   "id": "cc26-zhi-p",
@@ -3198,7 +3231,8 @@
                 "hanzi": "吾",
                 "pinyin": "wú",
                 "translation": "I"
-              }
+              },
+              "semanticRole": "Agent"
             },
             {
               "id": "cc27-shui",
@@ -3219,7 +3253,8 @@
                 "translation": "deceive"
               }
             }
-          ]
+          ],
+          "semanticRole": "Agent"
         },
         {
           "id": "cc27-q2",
@@ -3371,7 +3406,8 @@
                 "translation": "learning / study"
               }
             }
-          ]
+          ],
+          "semanticRole": "Agent"
         },
         {
           "id": "cc29-comment",

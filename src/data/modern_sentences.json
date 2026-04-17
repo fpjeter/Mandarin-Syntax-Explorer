@@ -507,7 +507,8 @@
               "role": "Subject",
               "isDropped": true,
               "impliedText": "它",
-              "refersToId": "n15-t"
+              "refersToId": "n15-t",
+              "semanticRole": "Agent"
             },
             {
               "id": "n15-vp",
@@ -603,7 +604,8 @@
               "role": "Subject",
               "isDropped": true,
               "impliedText": "他",
-              "refersToId": "n16-t"
+              "refersToId": "n16-t",
+              "semanticRole": "Experiencer"
             },
             {
               "id": "n16-vp",
@@ -803,7 +805,8 @@
                 "hanzi": "几个人",
                 "pinyin": "jǐ gè rén",
                 "translation": "a few people"
-              }
+              },
+              "semanticRole": "Agent"
             },
             {
               "id": "s70-yq",
@@ -1002,7 +1005,8 @@
                     "translation": "people"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Agent"
             },
             {
               "id": "s86-suan1",
@@ -1051,7 +1055,8 @@
                     "translation": "people"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Agent"
             },
             {
               "id": "s86-cai",
@@ -1126,7 +1131,8 @@
                     "translation": "people"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Agent"
             },
             {
               "id": "s90-s1",
@@ -1150,7 +1156,8 @@
                     "translation": "people"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Agent"
             },
             {
               "id": "s90-jiu1",
@@ -1199,7 +1206,8 @@
                     "translation": "people"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Agent"
             },
             {
               "id": "s90-s2",
@@ -1223,7 +1231,8 @@
                     "translation": "people"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Agent"
             },
             {
               "id": "s90-jiu2",
@@ -1309,7 +1318,8 @@
                 "hanzi": "你",
                 "pinyin": "nǐ",
                 "translation": "you"
-              }
+              },
+              "semanticRole": "Agent"
             },
             {
               "id": "n11-c-p",
@@ -1489,7 +1499,8 @@
                 "hanzi": "我",
                 "pinyin": "wǒ",
                 "translation": "I"
-              }
+              },
+              "semanticRole": "Agent"
             },
             {
               "id": "s124-c-adj",
@@ -1621,7 +1632,8 @@
                     "translation": "painting"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Agent"
             }
           ]
         }
@@ -4320,7 +4332,8 @@
                         "translation": "people"
                       }
                     }
-                  ]
+                  ],
+                  "semanticRole": "Theme"
                 },
                 {
                   "id": "s69-bbs1",
@@ -4384,7 +4397,8 @@
                         "translation": "people"
                       }
                     }
-                  ]
+                  ],
+                  "semanticRole": "Theme"
                 },
                 {
                   "id": "s69-bbs2",
@@ -4479,7 +4493,8 @@
                         "translation": "timing"
                       }
                     }
-                  ]
+                  ],
+                  "semanticRole": "Theme"
                 },
                 {
                   "id": "s87-br1",
@@ -4543,7 +4558,8 @@
                         "translation": "terrain"
                       }
                     }
-                  ]
+                  ],
+                  "semanticRole": "Theme"
                 },
                 {
                   "id": "s87-br2",
@@ -4921,7 +4937,8 @@
                 "hanzi": "你",
                 "pinyin": "nǐ",
                 "translation": "you"
-              }
+              },
+              "semanticRole": "Experiencer"
             },
             {
               "id": "n100-lian-phrase",
@@ -5041,7 +5058,8 @@
                     "hanzi": "大家",
                     "pinyin": "dà jiā",
                     "translation": "everyone"
-                  }
+                  },
+                  "semanticRole": "Agent"
                 },
                 {
                   "id": "n101-vp1",
@@ -5105,7 +5123,8 @@
                         "hanzi": "我",
                         "pinyin": "wǒ",
                         "translation": "I"
-                      }
+                      },
+                      "semanticRole": "Agent"
                     },
                     {
                       "id": "n101-hai",
@@ -6797,7 +6816,8 @@
                         "hanzi": "好事",
                         "pinyin": "hǎo shì",
                         "translation": "good deed"
-                      }
+                      },
+                      "semanticRole": "Theme"
                     },
                     {
                       "id": "s91-tx",
@@ -6928,7 +6948,8 @@
                       "id": "n17-comp-subj",
                       "role": "Subject",
                       "isDropped": true,
-                      "impliedText": "他"
+                      "impliedText": "他",
+                      "semanticRole": "Agent"
                     },
                     {
                       "id": "n17-comp-vp",
@@ -7542,7 +7563,8 @@
                 "hanzi": "我",
                 "pinyin": "wǒ",
                 "translation": "I"
-              }
+              },
+              "semanticRole": "Experiencer"
             },
             {
               "id": "n27-c-p",
@@ -8160,7 +8182,8 @@
                     "hanzi": "困难",
                     "pinyin": "kùn nan",
                     "translation": "hardship"
-                  }
+                  },
+                  "semanticRole": "Causer"
                 },
                 {
                   "id": "s89-vp1",
@@ -8224,7 +8247,8 @@
                     "hanzi": "安逸",
                     "pinyin": "ān yì",
                     "translation": "comfort"
-                  }
+                  },
+                  "semanticRole": "Causer"
                 },
                 {
                   "id": "s89-vp2",
@@ -8580,7 +8604,8 @@
                     "hanzi": "我",
                     "pinyin": "wǒ",
                     "translation": "I"
-                  }
+                  },
+                  "semanticRole": "Agent"
                 },
                 {
                   "id": "n34-cl2-vp",
@@ -10578,7 +10603,8 @@
                     "hanzi": "一个人",
                     "pinyin": "yī ge rén",
                     "translation": "a person"
-                  }
+                  },
+                  "semanticRole": "Agent"
                 },
                 {
                   "id": "n97-vp1",
@@ -10627,7 +10653,8 @@
                     "hanzi": "他",
                     "pinyin": "tā",
                     "translation": "he / they"
-                  }
+                  },
+                  "semanticRole": "Agent"
                 },
                 {
                   "id": "n97-vp2",
@@ -10716,7 +10743,8 @@
                     "hanzi": "天气",
                     "pinyin": "tiān qì",
                     "translation": "weather"
-                  }
+                  },
+                  "semanticRole": "Agent"
                 },
                 {
                   "id": "n98-vp1",
@@ -10756,7 +10784,8 @@
                     "hanzi": "大家",
                     "pinyin": "dà jiā",
                     "translation": "everyone"
-                  }
+                  },
+                  "semanticRole": "Agent"
                 },
                 {
                   "id": "n98-vp2",
@@ -10836,7 +10865,8 @@
                     "hanzi": "期望",
                     "pinyin": "qī wàng",
                     "translation": "expectation"
-                  }
+                  },
+                  "semanticRole": "Agent"
                 },
                 {
                   "id": "n99-vp1",
@@ -10876,7 +10906,8 @@
                     "hanzi": "失望",
                     "pinyin": "shī wàng",
                     "translation": "disappointment"
-                  }
+                  },
+                  "semanticRole": "Agent"
                 },
                 {
                   "id": "n99-vp2",
@@ -11725,7 +11756,8 @@
                 "hanzi": "我们",
                 "pinyin": "wǒ men",
                 "translation": "we"
-              }
+              },
+              "semanticRole": "Agent"
             },
             {
               "id": "n64-jiu",
@@ -11808,7 +11840,8 @@
                 "hanzi": "你",
                 "pinyin": "nǐ",
                 "translation": "you"
-              }
+              },
+              "semanticRole": "Agent"
             },
             {
               "id": "n65-hv1",
@@ -11895,7 +11928,8 @@
                 "hanzi": "一个道理",
                 "pinyin": "yí gè dào lǐ",
                 "translation": "a truth"
-              }
+              },
+              "semanticRole": "Agent"
             },
             {
               "id": "s71-neng",
@@ -11948,7 +11982,8 @@
                 "hanzi": "它",
                 "pinyin": "tā",
                 "translation": "it"
-              }
+              },
+              "semanticRole": "Theme"
             },
             {
               "id": "s71-jiu",
@@ -12032,7 +12067,8 @@
                 "hanzi": "你",
                 "pinyin": "nǐ",
                 "translation": "you"
-              }
+              },
+              "semanticRole": "Agent"
             },
             {
               "id": "s73-jc",
@@ -12561,7 +12597,8 @@
                 "hanzi": "我",
                 "pinyin": "wǒ",
                 "translation": "I"
-              }
+              },
+              "semanticRole": "Agent"
             },
             {
               "id": "s123-c-neg",
@@ -12757,7 +12794,8 @@
                 "hanzi": "小孩子",
                 "pinyin": "xiǎo hái zi",
                 "translation": "children / little kids"
-              }
+              },
+              "semanticRole": "Agent"
             },
             {
               "id": "n67-ye",
@@ -12969,7 +13007,8 @@
                 "hanzi": "你",
                 "pinyin": "nǐ",
                 "translation": "you"
-              }
+              },
+              "semanticRole": "Theme"
             },
             {
               "id": "s85-dou",
@@ -13003,7 +13042,8 @@
                 "hanzi": "这",
                 "pinyin": "zhè",
                 "translation": "this"
-              }
+              },
+              "semanticRole": "Theme"
             },
             {
               "id": "s85-cai",
