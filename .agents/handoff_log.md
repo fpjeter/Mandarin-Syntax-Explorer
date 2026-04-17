@@ -56,6 +56,23 @@ Append a new block to `## Pending Requests` using this exact format:
 
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 
+### [2026-04-16] Orchestrator → Linguistics Specialist
+**Status**: 🔴 Active
+**Task**: Semantic Tagging Audit (Phase 4 & 4.5)
+
+**Context**: The Orchestrator ran an automated script to inject `semanticRole` tags (Agent, Patient, Experiencer, Causer, Theme) into 282 untagged Topic, Subject, and Object nodes across `modern_sentences.json` and `classical_sentences.json`. Because this was done via heuristic algorithms (verb dictionaries and AST lookaheads), we need a human-in-the-loop linguistic review.
+
+**Action Required**:
+1. Review the distribution of `semanticRole` tags in `modern_sentences.json` and `classical_sentences.json`.
+2. Pay special attention to edge cases:
+   - Are `Patient` roles correctly assigned to direct objects?
+   - Did the `Experiencer` verb dictionary correctly categorize psychological verbs?
+   - Are there any `Theme` nodes that should actually be `Agent` (or vice versa)?
+3. Produce a markdown report (`semantic_tagging_audit.md`) summarizing your findings. If there are misclassifications, list the specific sentence IDs and the proposed corrections.
+4. If fixes are required, write a follow-up ticket for the **Data Linguist** to manually patch the JSON files.
+5. Mark this ticket ✅ Done.
+
+**Urgency**: HIGH
 ### [2026-04-16] Orchestrator → Frontend Engineer
 **Status**: ✅ Done
 **Task**: UI/UX Audit Fixes (Part 1: Mobile App State & Layout)
