@@ -13,6 +13,8 @@ import { OnboardingHint } from './OnboardingHint';
 import { glossary } from '../data/glossary';
 import { classicalGlossary } from '../data/classicalGlossary';
 import { useIsClassical } from '../contexts/AppModeContext';
+import { useLanguage } from '../contexts/LanguageContext';
+import { i18n } from '../i18n/strings';
 import { hasProDrop, parseTreeToFlow, getFitViewPadding } from './treeTransforms';
 
 const nodeTypes = {
@@ -44,26 +46,27 @@ const FitViewOnChange: React.FC<{ nodes: Node[]; isVisible?: boolean }> = ({ nod
 /** Custom zoom controls that match the app's glassmorphism aesthetic. */
 const ZoomControls: React.FC<{ onExpandAll: () => void; onCollapseAll: () => void }> = ({ onExpandAll, onCollapseAll }) => {
     const { zoomIn, zoomOut, fitView } = useReactFlow();
+    const { language } = useLanguage();
     const btn = 'flex items-center justify-center rounded-xl transition-all duration-200 bg-slate-800/60 text-slate-400 hover:bg-slate-700/80 hover:text-slate-100 w-8 h-8 lg:w-10 lg:h-10';
     const iconCls = 'w-4 h-4 lg:w-5 lg:h-5';
     return (
         <div className="absolute bottom-2 right-2 lg:bottom-6 lg:right-4 z-20 pointer-events-auto">
             <div className="glass-panel rounded-2xl border border-slate-700/60 p-1 lg:p-1.5 flex flex-row lg:flex-col gap-1 shadow-2xl">
-                <button onClick={() => zoomIn({ duration: 250 })} className={btn} title="Zoom in">
+                <button onClick={() => zoomIn({ duration: 250 })} className={btn} title={i18n.ZOOM_IN[language]}>
                     <ZoomIn className={iconCls} />
                 </button>
-                <button onClick={() => zoomOut({ duration: 250 })} className={btn} title="Zoom out">
+                <button onClick={() => zoomOut({ duration: 250 })} className={btn} title={i18n.ZOOM_OUT[language]}>
                     <ZoomOut className={iconCls} />
                 </button>
                 <div className="w-px h-full lg:w-full lg:h-px bg-slate-700/60" />
-                <button onClick={() => fitView({ padding: getFitViewPadding(), duration: 350 })} className={btn} title="Fit to view">
+                <button onClick={() => fitView({ padding: getFitViewPadding(), duration: 350 })} className={btn} title={i18n.FIT_VIEW[language]}>
                     <Scan className={iconCls} />
                 </button>
                 <div className="w-px h-full lg:w-full lg:h-px bg-slate-700/60" />
-                <button onClick={onExpandAll} className={btn} title="Expand all">
+                <button onClick={onExpandAll} className={btn} title={i18n.TOOLBAR_EXPAND[language]}>
                     <Maximize2 className={iconCls} />
                 </button>
-                <button onClick={onCollapseAll} className={btn} title="Collapse all">
+                <button onClick={onCollapseAll} className={btn} title={i18n.TOOLBAR_COLLAPSE[language]}>
                     <Minimize2 className={iconCls} />
                 </button>
             </div>

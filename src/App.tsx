@@ -242,7 +242,7 @@ function App() {
             <div>
               <div className="flex items-center gap-2">
                 <h1 className={`text-xl font-extrabold bg-clip-text text-transparent tracking-tight ${isClassical ? 'bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400 font-chinese-display' : 'bg-gradient-to-r from-purple-400 via-blue-400 to-emerald-400'}`}>
-                  {isClassical ? '古文探秘 · Classical Texts' : 'Mandarin Syntax Explorer'}
+                  {isClassical ? i18n.APP_TITLE_CLASSICAL[language] : i18n.APP_TITLE_MODERN[language]}
                 </h1>
                 <button
                   onClick={toggleMode}
@@ -250,7 +250,7 @@ function App() {
                     ? 'text-amber-400/60 hover:text-amber-300 hover:bg-amber-500/10'
                     : 'text-slate-500/40 hover:text-amber-400 hover:bg-amber-500/10'
                     }`}
-                  title={isClassical ? 'Return to Modern Mandarin' : 'Explore Classical Chinese'}
+                  title={isClassical ? i18n.NAV_SWITCH_MODERN[language] : i18n.NAV_SWITCH_CLASSICAL[language]}
                 >
                   <Scroll className="w-4 h-4" />
                 </button>
@@ -286,17 +286,17 @@ function App() {
               }`}
           >
             <Network className="w-3.5 h-3.5" />
-            Tree
+            {i18n.TAB_TREE[language]}
           </button>
           <button
-            onClick={() => setMobileView('list')}
+            onClick={() => { setMobileView('list'); setSidebarTab('sentences'); }}
             className={`flex-1 flex items-center justify-center gap-2 py-1.5 sm:py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors border-b-2 ${mobileView === 'list'
               ? isClassical ? 'text-amber-300 border-amber-500 bg-amber-500/10' : 'text-purple-300 border-purple-500 bg-purple-500/10'
               : 'text-slate-400 border-transparent hover:text-slate-200'
               }`}
           >
             <List className="w-3.5 h-3.5" />
-            Sentences
+            {i18n.TAB_SENTENCES[language]}
           </button>
           <button
             onClick={() => setMobileView('guide')}
@@ -306,7 +306,7 @@ function App() {
               }`}
           >
             <Info className="w-3.5 h-3.5" />
-            Guide
+            {i18n.TAB_GUIDE[language]}
           </button>
         </div>
 
@@ -327,7 +327,7 @@ function App() {
                   }`}
               >
                 <List className="w-3.5 h-3.5" />
-                {isClassical ? 'Quotes' : 'Sentences'}
+                {isClassical ? i18n.TAB_QUOTES[language] : i18n.TAB_SENTENCES[language]}
               </button>
               <button
                 onClick={() => setSidebarTab('guide')}
@@ -337,7 +337,7 @@ function App() {
                   }`}
               >
                 <Info className="w-3.5 h-3.5" />
-                Guide
+                {i18n.TAB_GUIDE[language]}
               </button>
             </div>
 
@@ -377,7 +377,7 @@ function App() {
           <button
             onClick={() => setSidebarOpen(o => !o)}
             className="hidden lg:flex items-center justify-center w-6 h-12 self-center -ml-4 rounded-r-xl bg-slate-800/80 border border-l-0 border-slate-700/60 text-slate-400 hover:text-slate-200 hover:bg-slate-700/80 transition-all duration-200 z-10 flex-shrink-0"
-            title={sidebarOpen ? 'Collapse sidebar' : 'Expand sidebar'}
+            title={sidebarOpen ? i18n.SIDEBAR_COLLAPSE[language] : i18n.SIDEBAR_EXPAND[language]}
           >
             {sidebarOpen ? <PanelLeftClose className="w-3.5 h-3.5" /> : <PanelLeftOpen className="w-3.5 h-3.5" />}
           </button>

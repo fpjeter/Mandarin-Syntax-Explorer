@@ -12,7 +12,7 @@ export const BadgeLegend = () => {
     return (
         <div className="absolute bottom-4 left-4 z-20 flex flex-col items-start gap-0">
             {open && (
-                <div className="mb-2 glass-panel border border-slate-700/60 rounded-xl shadow-2xl p-3 w-60 lg:w-72 max-h-[50vh] overflow-y-auto custom-scrollbar flex flex-col gap-2 animate-in fade-in slide-in-from-bottom-2 duration-150">
+                <div className="mb-2 glass-panel border border-slate-700/60 rounded-xl shadow-2xl p-3 w-48 sm:w-60 lg:w-72 max-h-[40vh] sm:max-h-[50vh] overflow-y-auto custom-scrollbar flex flex-col gap-2 animate-in fade-in slide-in-from-bottom-2 duration-150">
                     <p className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold mb-1 sticky top-0 bg-slate-900/90 -mt-1 pt-1 pb-1 -mx-1 px-1 z-10">{isClassical ? 'Classical badge glossary' : 'Badge glossary'}</p>
                     {activeBadges.map((b) => (
                         <div key={b.label} className="flex items-start gap-2">
@@ -40,7 +40,7 @@ export const BadgeLegend = () => {
                 title="Toggle badge legend"
             >
                 <Tag className="w-3 h-3" />
-                Legend
+                <span className="hidden sm:inline">Legend</span>
                 {open ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
             </button>
         </div>
