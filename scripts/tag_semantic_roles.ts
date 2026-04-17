@@ -103,6 +103,9 @@ function traverseAndTag(node: any, parent: any | null, isPivotalCategory: boolea
 
         node.semanticRole = role;
         edits++;
+    } else if (node.role === 'Object' && !node.semanticRole) {
+        node.semanticRole = 'Patient';
+        edits++;
     }
 
     return edits;

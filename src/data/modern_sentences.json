@@ -82,7 +82,8 @@
                         "translation": "vase"
                       }
                     }
-                  ]
+                  ],
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -182,7 +183,8 @@
                     "hanzi": "书",
                     "pinyin": "shū",
                     "translation": "book"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -289,7 +291,8 @@
                     "hanzi": "车",
                     "pinyin": "chē",
                     "translation": "car"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -649,7 +652,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -708,7 +712,8 @@
                     "hanzi": "中文",
                     "pinyin": "Zhōng wén",
                     "translation": "Chinese (language)"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -882,7 +887,8 @@
                     "translation": "person"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Patient"
             }
           ]
         }
@@ -957,7 +963,8 @@
                     "translation": "thing"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Patient"
             }
           ]
         }
@@ -3290,7 +3297,8 @@
                         "hanzi": "她",
                         "pinyin": "tā",
                         "translation": "her"
-                      }
+                      },
+                      "semanticRole": "Patient"
                     }
                   ]
                 }
@@ -3673,7 +3681,8 @@
                     "hanzi": "知识",
                     "pinyin": "zhī shi",
                     "translation": "knowledge"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 },
                 {
                   "id": "s79-he",
@@ -3700,7 +3709,8 @@
                     "hanzi": "疑惑",
                     "pinyin": "yí huò",
                     "translation": "doubts"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -3870,7 +3880,8 @@
                     "hanzi": "火车",
                     "pinyin": "huǒ chē",
                     "translation": "train"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -3979,7 +3990,8 @@
                         "translation": "mountain"
                       }
                     }
-                  ]
+                  ],
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -4366,7 +4378,8 @@
                         "translation": "people"
                       }
                     }
-                  ]
+                  ],
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -4431,7 +4444,8 @@
                         "translation": "people"
                       }
                     }
-                  ]
+                  ],
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -4527,7 +4541,8 @@
                         "translation": "terrain"
                       }
                     }
-                  ]
+                  ],
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -4577,7 +4592,8 @@
                     "hanzi": "人心齐",
                     "pinyin": "rén xīn qí",
                     "translation": "unity among people"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -4633,7 +4649,8 @@
                 "hanzi": "他",
                 "pinyin": "tā",
                 "translation": "he"
-              }
+              },
+              "semanticRole": "Patient"
             },
             {
               "id": "s112-comp",
@@ -4701,7 +4718,8 @@
                     "hanzi": "我",
                     "pinyin": "wǒ",
                     "translation": "me"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -4976,7 +4994,8 @@
                         "translation": "thing"
                       }
                     }
-                  ]
+                  ],
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -5960,7 +5979,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -6078,7 +6098,8 @@
                         "translation": "words / speech"
                       }
                     }
-                  ]
+                  ],
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -6157,7 +6178,8 @@
                     "hanzi": "眼睛",
                     "pinyin": "yǎn jing",
                     "translation": "eyes"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -6224,7 +6246,8 @@
                     "hanzi": "钥匙",
                     "pinyin": "yào shi",
                     "translation": "key"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 },
                 {
                   "id": "n40-le",
@@ -6301,7 +6324,8 @@
                     "hanzi": "字",
                     "pinyin": "zì",
                     "translation": "character / word"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 },
                 {
                   "id": "n41-le",
@@ -6497,7 +6521,8 @@
                     "hanzi": "自行车",
                     "pinyin": "zì xíng chē",
                     "translation": "bicycle"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -6586,7 +6611,8 @@
                     "hanzi": "伞",
                     "pinyin": "sǎn",
                     "translation": "umbrella"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -6749,7 +6775,8 @@
                 "hanzi": "收获",
                 "pinyin": "shōu huò",
                 "translation": "gains"
-              }
+              },
+              "semanticRole": "Patient"
             }
           ]
         }
@@ -6828,7 +6855,8 @@
                         "translation": "too small"
                       }
                     }
-                  ]
+                  ],
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -6986,11 +7014,13 @@
                                 "translation": "Chinese (language)"
                               }
                             }
-                          ]
+                          ],
+                          "semanticRole": "Patient"
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -7064,7 +7094,8 @@
                         "translation": "meaning / interest"
                       }
                     }
-                  ]
+                  ],
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -7639,7 +7670,8 @@
                             }
                           ]
                         }
-                      ]
+                      ],
+                      "semanticRole": "Patient"
                     }
                   ]
                 }
@@ -7729,7 +7761,8 @@
                         "translation": "character"
                       }
                     }
-                  ]
+                  ],
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -7844,7 +7877,8 @@
                             "hanzi": "问题",
                             "pinyin": "wèn tí",
                             "translation": "questions"
-                          }
+                          },
+                          "semanticRole": "Patient"
                         }
                       ]
                     }
@@ -7951,7 +7985,8 @@
                                 "hanzi": "牛奶",
                                 "pinyin": "niú nǎi",
                                 "translation": "milk"
-                              }
+                              },
+                              "semanticRole": "Patient"
                             }
                           ]
                         }
@@ -8139,7 +8174,8 @@
                             "hanzi": "饭",
                             "pinyin": "fàn",
                             "translation": "meal / rice"
-                          }
+                          },
+                          "semanticRole": "Patient"
                         }
                       ]
                     }
@@ -8509,7 +8545,8 @@
                             "hanzi": "你",
                             "pinyin": "nǐ",
                             "translation": "you"
-                          }
+                          },
+                          "semanticRole": "Patient"
                         }
                       ]
                     }
@@ -9358,7 +9395,8 @@
                             "hanzi": "话",
                             "pinyin": "huà",
                             "translation": "words / speech"
-                          }
+                          },
+                          "semanticRole": "Patient"
                         },
                         {
                           "id": "n46-comp-lai",
@@ -9430,7 +9468,8 @@
                     "hanzi": "房间",
                     "pinyin": "fáng jiān",
                     "translation": "room"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -9815,7 +9854,8 @@
                     "hanzi": "书",
                     "pinyin": "shū",
                     "translation": "book"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -9940,7 +9980,8 @@
                         "hanzi": "楼",
                         "pinyin": "lóu",
                         "translation": "stairs / floor"
-                      }
+                      },
+                      "semanticRole": "Patient"
                     },
                     {
                       "id": "n42-comp-qu",
@@ -10097,7 +10138,8 @@
                         "translation": "apple"
                       }
                     }
-                  ]
+                  ],
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -10703,7 +10745,8 @@
                         "hanzi": "世界",
                         "pinyin": "shì jiè",
                         "translation": "world"
-                      }
+                      },
+                      "semanticRole": "Patient"
                     }
                   ]
                 }
@@ -11038,7 +11081,8 @@
                     "hanzi": "英语",
                     "pinyin": "Yīng yǔ",
                     "translation": "English"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -11093,7 +11137,8 @@
                     "hanzi": "法语",
                     "pinyin": "Fǎ yǔ",
                     "translation": "French"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -11335,7 +11380,8 @@
                     "hanzi": "长城",
                     "pinyin": "Cháng Chéng",
                     "translation": "Great Wall"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 },
                 {
                   "id": "n63-ma",
@@ -11418,7 +11464,8 @@
                 "hanzi": "自己",
                 "pinyin": "zì jǐ",
                 "translation": "oneself"
-              }
+              },
+              "semanticRole": "Patient"
             },
             {
               "id": "s75-sc",
@@ -11512,7 +11559,8 @@
                     "translation": "thing/matter"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Patient"
             }
           ]
         }
@@ -11598,7 +11646,8 @@
                 "hanzi": "中文",
                 "pinyin": "Zhōng wén",
                 "translation": "Chinese (language)"
-              }
+              },
+              "semanticRole": "Patient"
             },
             {
               "id": "s110-le2",
@@ -11686,7 +11735,8 @@
                 "hanzi": "没关系",
                 "pinyin": "méi guān xi",
                 "translation": "it's fine"
-              }
+              },
+              "semanticRole": "Patient"
             }
           ]
         }
@@ -12025,7 +12075,8 @@
                     "translation": "truth"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Patient"
             }
           ]
         }
@@ -12110,7 +12161,8 @@
                     "translation": "things"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Patient"
             }
           ]
         },
@@ -12159,7 +12211,8 @@
                     "translation": "insights"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Patient"
             }
           ]
         }
@@ -12244,7 +12297,8 @@
                     "translation": "truths"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Patient"
             }
           ]
         },
@@ -12333,7 +12387,8 @@
                     "hanzi": "敌人",
                     "pinyin": "dí rén",
                     "translation": "enemy"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -12366,7 +12421,8 @@
                     "hanzi": "自己",
                     "pinyin": "zì jǐ",
                     "translation": "yourself"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -12396,7 +12452,8 @@
                     "hanzi": "一百场仗",
                     "pinyin": "yì bǎi chǎng zhàng",
                     "translation": "a hundred battles"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -12425,7 +12482,8 @@
                 "hanzi": "危险",
                 "pinyin": "wéi xiǎn",
                 "translation": "danger"
-              }
+              },
+              "semanticRole": "Patient"
             }
           ]
         }
@@ -12636,7 +12694,8 @@
                 "hanzi": "你",
                 "pinyin": "nǐ",
                 "translation": "you"
-              }
+              },
+              "semanticRole": "Patient"
             }
           ]
         }
@@ -12705,7 +12764,8 @@
                     "translation": "name"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Patient"
             },
             {
               "id": "n66-dou",
@@ -12898,7 +12958,8 @@
                     "translation": "road/journey"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Patient"
             }
           ]
         },
@@ -12992,7 +13053,8 @@
                 "hanzi": "别人不了解你",
                 "pinyin": "bié rén bù liǎo jiě nǐ",
                 "translation": "others don't understand you"
-              }
+              },
+              "semanticRole": "Patient"
             }
           ]
         },
@@ -13085,7 +13147,8 @@
                     "translation": "person"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Patient"
             }
           ]
         }

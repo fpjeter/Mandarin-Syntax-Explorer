@@ -66,7 +66,8 @@
                 "hanzi": "之",
                 "pinyin": "zhī",
                 "translation": "it"
-              }
+              },
+              "semanticRole": "Patient"
             }
           ]
         },
@@ -166,7 +167,8 @@
                         "hanzi": "之",
                         "pinyin": "zhī",
                         "translation": "it"
-                      }
+                      },
+                      "semanticRole": "Patient"
                     },
                     {
                       "id": "cc2-c1-subj-zhe",
@@ -217,7 +219,8 @@
                             "hanzi": "之",
                             "pinyin": "zhī",
                             "translation": "it"
-                          }
+                          },
+                          "semanticRole": "Patient"
                         },
                         {
                           "id": "cc2-c1-pred-obj-zhe",
@@ -229,7 +232,8 @@
                             "translation": "(the one who…)"
                           }
                         }
-                      ]
+                      ],
+                      "semanticRole": "Patient"
                     }
                   ]
                 }
@@ -261,7 +265,8 @@
                         "hanzi": "之",
                         "pinyin": "zhī",
                         "translation": "it"
-                      }
+                      },
+                      "semanticRole": "Patient"
                     },
                     {
                       "id": "cc2-c2-subj-zhe",
@@ -312,7 +317,8 @@
                             "hanzi": "之",
                             "pinyin": "zhī",
                             "translation": "it"
-                          }
+                          },
+                          "semanticRole": "Patient"
                         },
                         {
                           "id": "cc2-c2-pred-obj-zhe",
@@ -324,7 +330,8 @@
                             "translation": "(the one who…)"
                           }
                         }
-                      ]
+                      ],
+                      "semanticRole": "Patient"
                     }
                   ]
                 }
@@ -438,7 +445,8 @@
                     "translation": "teacher"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Patient"
             },
             {
               "id": "cc3-c-yan",
@@ -716,7 +724,8 @@
                     "hanzi": "故",
                     "pinyin": "gù",
                     "translation": "the old / past learning"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -751,7 +760,8 @@
                     "hanzi": "新",
                     "pinyin": "xīn",
                     "translation": "the new / new insight"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -789,7 +799,8 @@
                 "hanzi": "師",
                 "pinyin": "shī",
                 "translation": "teacher"
-              }
+              },
+              "semanticRole": "Patient"
             },
             {
               "id": "cc6-c-yi",
@@ -1005,7 +1016,8 @@
                     "translation": "person / self"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Patient"
             }
           ]
         }
@@ -1086,7 +1098,8 @@
                 "hanzi": "種",
                 "pinyin": "zhǒng",
                 "translation": "seed / lineage"
-              }
+              },
+              "semanticRole": "Patient"
             },
             {
               "id": "cc9-c-hu",
@@ -1172,7 +1185,8 @@
                     "hanzi": "斯",
                     "pinyin": "sī",
                     "translation": "this (the river)"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 },
                 {
                   "id": "cc10-c1-pred-fu",
@@ -1412,7 +1426,8 @@
                     "hanzi": "道",
                     "pinyin": "dào",
                     "translation": "the Way"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -1436,7 +1451,8 @@
                     "hanzi": "業",
                     "pinyin": "yè",
                     "translation": "knowledge / craft"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -1460,7 +1476,8 @@
                     "hanzi": "惑",
                     "pinyin": "huò",
                     "translation": "confusion / doubt"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -1531,7 +1548,8 @@
                     "hanzi": "之",
                     "pinyin": "zhī",
                     "translation": "it"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 },
                 {
                   "id": "cc13-c-c1-pp",
@@ -1651,7 +1669,8 @@
             "hanzi": "之",
             "pinyin": "zhī",
             "translation": "such a thing"
-          }
+          },
+          "semanticRole": "Patient"
         },
         {
           "id": "cc14-v",
@@ -1723,7 +1742,8 @@
                 "hanzi": "道",
                 "pinyin": "dào",
                 "translation": "the Way"
-              }
+              },
+              "semanticRole": "Patient"
             }
           ]
         },
@@ -1816,7 +1836,8 @@
                     "hanzi": "彼",
                     "pinyin": "bǐ",
                     "translation": "the other / enemy"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             },
@@ -1840,7 +1861,8 @@
                     "hanzi": "己",
                     "pinyin": "jǐ",
                     "translation": "oneself"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -2265,7 +2287,8 @@
                     "hanzi": "人",
                     "pinyin": "rén",
                     "translation": "others"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 },
                 {
                   "id": "cc19-c1-subj-zhe",
@@ -2433,7 +2456,8 @@
                         "translation": "advantage"
                       }
                     }
-                  ]
+                  ],
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -2507,7 +2531,8 @@
                         "translation": "harmony / unity"
                       }
                     }
-                  ]
+                  ],
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -2554,7 +2579,8 @@
                 "hanzi": "德",
                 "pinyin": "dé",
                 "translation": "virtue"
-              }
+              },
+              "semanticRole": "Patient"
             }
           ]
         },
@@ -2578,7 +2604,8 @@
                 "hanzi": "怨",
                 "pinyin": "yuàn",
                 "translation": "resentment"
-              }
+              },
+              "semanticRole": "Patient"
             }
           ]
         }
@@ -2637,7 +2664,8 @@
                     "hanzi": "憂患",
                     "pinyin": "yōu huàn",
                     "translation": "worry and hardship"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -2680,7 +2708,8 @@
                     "hanzi": "安樂",
                     "pinyin": "ān lè",
                     "translation": "comfort and ease"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -2731,7 +2760,8 @@
                     "hanzi": "道",
                     "pinyin": "dào",
                     "translation": "the Way"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 },
                 {
                   "id": "cc23-c1-zhe",
@@ -2801,7 +2831,8 @@
                     "hanzi": "道",
                     "pinyin": "dào",
                     "translation": "the Way"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 },
                 {
                   "id": "cc23-c2-zhe",
@@ -3067,7 +3098,8 @@
                         "translation": "type / group"
                       }
                     }
-                  ]
+                  ],
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -3196,7 +3228,8 @@
                     "translation": "(assertion)"
                   }
                 }
-              ]
+              ],
+              "semanticRole": "Patient"
             }
           ]
         }
@@ -3277,7 +3310,8 @@
                 "hanzi": "天",
                 "pinyin": "tiān",
                 "translation": "Heaven"
-              }
+              },
+              "semanticRole": "Patient"
             },
             {
               "id": "cc27-hu",
@@ -3357,7 +3391,8 @@
                     "hanzi": "時",
                     "pinyin": "shí",
                     "translation": "the [proper] time"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -3404,7 +3439,8 @@
                 "hanzi": "學",
                 "pinyin": "xué",
                 "translation": "learning / study"
-              }
+              },
+              "semanticRole": "Patient"
             }
           ],
           "semanticRole": "Agent"
@@ -3444,7 +3480,8 @@
                     "hanzi": "才",
                     "pinyin": "cái",
                     "translation": "talent / ability"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
               ]
             }
@@ -3513,9 +3550,11 @@
                     "hanzi": "鄭",
                     "pinyin": "Zhèng",
                     "translation": "Zheng (a state)"
-                  }
+                  },
+                  "semanticRole": "Patient"
                 }
-              ]
+              ],
+              "semanticRole": "Patient"
             },
             {
               "id": "cc30-purpose",
@@ -3552,7 +3591,8 @@
                         "hanzi": "鄰",
                         "pinyin": "lín",
                         "translation": "a neighbor [state]"
-                      }
+                      },
+                      "semanticRole": "Patient"
                     }
                   ]
                 }
