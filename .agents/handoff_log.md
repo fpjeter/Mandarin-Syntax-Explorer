@@ -56,6 +56,40 @@ Append a new block to `## Pending Requests` using this exact format:
 
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 
+### [2026-04-16] Orchestrator → Frontend Engineer
+**Status**: ✅ Done
+**Task**: UI/UX Audit Fixes (Part 1: Mobile App State & Layout)
+**Branch**: `ui/audit-fixes-layout`
+
+**Context**: A UI/UX audit revealed a critical bug on mobile where the "Sentences" tab gets stuck, plus occlusion issues with the `BadgeLegend` and legibility issues with `RubyText`.
+
+**Action Required**:
+1. Checkout: `git checkout -b ui/audit-fixes-layout`
+2. **App.tsx State**: Fix the `activeMobileTab` logic. Ensure that when `activeMobileTab === 'sidebar'`, the `<SentenceSidebar />` explicitly renders instead of being stuck on the `<GlossaryPanel />`.
+3. **RubyText.tsx**: Scale up the base font size of the `<rt>` (pinyin) element from `text-[10px]` to `text-[12px]`, applying this change **only on mobile viewports** (e.g., using `max-sm:text-[12px]`).
+4. **BadgeLegend.tsx**: Make the legend collapsible/compact on mobile viewports so it doesn't overlap the tree canvas.
+5. Run: `npm run build`
+6. Mark this ticket ✅ Done. Do NOT commit — Orchestrator handles git.
+
+**Urgency**: HIGH
+
+### [2026-04-16] Orchestrator → Frontend Engineer
+**Status**: ✅ Done
+**Task**: UI/UX Audit Fixes (Part 2: Accessibility & i18n)
+**Branch**: `ui/audit-fixes-a11y-i18n`
+
+**Context**: The app lacks focus indicators for keyboard navigation, and several static UI strings (like the title and tab names) are not localized.
+
+**Action Required**:
+1. Checkout: `git checkout -b ui/audit-fixes-a11y-i18n` (Branch off `main` or merge Part 1 first)
+2. **index.css**: Add a global focus ring for `:focus-visible` (e.g., `outline: 2px solid theme('colors.blue.500'); outline-offset: 2px;`) to fix keyboard accessibility.
+3. **i18n Context**: Create a dictionary and hook in `src/i18n/strings.ts` (e.g., `useTranslation()`) to serve localized static strings based on the `LanguageContext`.
+4. **UI Strings**: Update `App.tsx` (App Title, Tab names) and `SyntaxTree.tsx` (Zoom button titles) to use the new i18n hook.
+5. Run: `npm run build`
+6. Mark this ticket ✅ Done. Do NOT commit — Orchestrator handles git.
+
+**Urgency**: HIGH
+
 ### [2026-04-09] Orchestrator → Frontend Engineer
 **Status**: ✅ Done
 **Task**: Swap Zoom Controls and Badge Legend Corners

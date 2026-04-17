@@ -47,7 +47,7 @@ export const RubyText: React.FC<RubyTextProps> = ({ hanzi, pinyin, className = '
             {pairs.map(({ char, syllable }, i) => (
                 <ruby key={i} className="inline-flex flex-col items-center" style={{ rubyAlign: 'center' }}>
                     <span className={`font-semibold text-slate-50 tracking-widest ${displayFont ? 'font-chinese-display' : 'font-chinese-ui'}`}>{char}</span>
-                    <rt className="text-[0.42em] text-[var(--color-mandarin-gold)] font-medium not-italic mb-0.5 whitespace-nowrap">
+                    <rt className="text-[0.42em] max-sm:text-[0.52em] text-[var(--color-mandarin-gold)] font-medium not-italic mb-0.5 whitespace-nowrap">
                         {syllable}
                     </rt>
                 </ruby>
