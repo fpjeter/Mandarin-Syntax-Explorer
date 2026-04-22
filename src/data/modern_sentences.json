@@ -3203,7 +3203,7 @@
         {
           "id": "n8-t",
           "role": "Topic",
-          "semanticRole": "Theme",
+          "semanticRole": "Agent",
           "subRole": "outer topic",
           "text": {
             "hanzi": "我",
@@ -3336,7 +3336,7 @@
         {
           "id": "n23-t",
           "role": "Topic",
-          "semanticRole": "Theme",
+          "semanticRole": "Agent",
           "text": {
             "hanzi": "我",
             "pinyin": "wǒ",
@@ -3437,7 +3437,7 @@
         {
           "id": "n50-t",
           "role": "Topic",
-          "semanticRole": "Theme",
+          "semanticRole": "Agent",
           "subRole": "outer topic",
           "text": {
             "hanzi": "我",
@@ -3746,7 +3746,7 @@
         {
           "id": "s104-t",
           "role": "Topic",
-          "semanticRole": "Theme",
+          "semanticRole": "Agent",
           "text": {
             "hanzi": "我",
             "pinyin": "wǒ",
@@ -3838,7 +3838,7 @@
         {
           "id": "s105-t",
           "role": "Topic",
-          "semanticRole": "Theme",
+          "semanticRole": "Agent",
           "text": {
             "hanzi": "我",
             "pinyin": "wǒ",
@@ -4345,7 +4345,7 @@
                       }
                     }
                   ],
-                  "semanticRole": "Theme"
+                  "semanticRole": "Agent"
                 },
                 {
                   "id": "s69-bbs1",
@@ -4411,7 +4411,7 @@
                       }
                     }
                   ],
-                  "semanticRole": "Theme"
+                  "semanticRole": "Agent"
                 },
                 {
                   "id": "s69-bbs2",
@@ -4956,7 +4956,7 @@
                 "pinyin": "nǐ",
                 "translation": "you"
               },
-              "semanticRole": "Experiencer"
+              "semanticRole": "Agent"
             },
             {
               "id": "n100-lian-phrase",
@@ -7513,7 +7513,7 @@
             {
               "id": "n26-c-t2",
               "role": "Topic",
-              "semanticRole": "Experiencer",
+              "semanticRole": "Theme",
               "subRole": "inner topic",
               "text": {
                 "hanzi": "耳朵",
@@ -13070,7 +13070,7 @@
                 "pinyin": "nǐ",
                 "translation": "you"
               },
-              "semanticRole": "Theme"
+              "semanticRole": "Agent"
             },
             {
               "id": "s85-dou",
