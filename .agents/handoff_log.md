@@ -57,7 +57,7 @@ Append a new block to `## Pending Requests` using this exact format:
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 
 ### [2026-04-16] Orchestrator → Linguistics Specialist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Semantic Tagging Audit (Phase 4 & 4.5)
 
 **Context**: The Orchestrator ran an automated script to inject `semanticRole` tags (Agent, Patient, Experiencer, Causer, Theme) into 282 untagged Topic, Subject, and Object nodes across `modern_sentences.json` and `classical_sentences.json`. Because this was done via heuristic algorithms (verb dictionaries and AST lookaheads), we need a human-in-the-loop linguistic review.
