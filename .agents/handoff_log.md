@@ -56,6 +56,30 @@ Append a new block to `## Pending Requests` using this exact format:
 
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 
+### [2026-04-22] Orchestrator → Data Linguist
+**Status**: ✅ Done
+**Task**: Semantic Tagging Manual Corrections
+**Branch**: `data/audit-semantic-tags`
+
+**Context**: The Linguistics Specialist audited the automated Phase 4 semantic tags and flagged 10 specific nodes across 8 modern sentences that were misclassified (mostly due to the algorithm assuming "Theme" for 是…的 structures, and treating 忘 as a pure Experiencer verb). 
+
+**Action Required**:
+1. Checkout: `git checkout -b data/audit-semantic-tags`
+2. Open `src/data/modern_sentences.json`.
+3. Apply the following `semanticRole` corrections (detailed in `semantic_tagging_audit.md`):
+   - `s69`: Change `s69-s1` and `s69-s2` from Theme to **Agent**.
+   - `s100`: Change `s100-subj` from Experiencer to **Agent**.
+   - `s85`: Change `s85-ni` from Theme to **Agent**.
+   - `s8`: Change `n8-t` from Theme to **Agent**.
+   - `s23`: Change `n23-t` from Theme to **Agent**.
+   - `s50`: Change `n50-t` from Theme to **Agent**.
+   - `s104`: Change `s104-t` from Theme to **Agent**.
+   - `s105`: Change `s105-t` from Theme to **Agent**.
+   - `s26`: Change `n26-c-t2` from Experiencer to **Theme**.
+4. Run `npm run qa` to validate JSON syntax.
+5. Mark this ticket ✅ Done. Do NOT commit — Orchestrator handles git.
+
+**Urgency**: HIGH
 ### [2026-04-16] Orchestrator → Linguistics Specialist
 **Status**: ✅ Done
 **Task**: Semantic Tagging Audit (Phase 4 & 4.5)
