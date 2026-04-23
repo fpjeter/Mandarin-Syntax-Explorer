@@ -69,6 +69,48 @@ Append a new block to `## Pending Requests` using this exact format:
 
 **Urgency**: MEDIUM
 
+### [2026-04-23] Orchestrator → Educational Publisher
+**Status**: 🔴 Active
+**Task**: Dataset Expansion - Sentence Drafting (Phase 2, Batch A)
+**Branch**: `main`
+
+**Context**: The strategic meta-review is complete. We have an aligned ranking of the top structural gaps that provide maximum pedagogical and AST tree value (see `pedagogical_expansion_strategy.md`). 
+
+**Action Required**:
+1. Draft 5 new sentences that explicitly target Ranks 1 through 5 from the `pedagogical_expansion_strategy.md` list:
+   - Rank 1: BEI + Resultative
+   - Rank 2: 连 with clausal scope
+   - Rank 3: Double topic + 是…的
+   - Rank 4: Compound directional potential
+   - Rank 5: Agentless retained object
+2. Ensure the vocabulary is intermediate-friendly (HSK 3-5).
+3. For each sentence, provide the `chinese`, `pinyin`, `translation`, and the pedagogical `explanation` in Markdown.
+4. Save your output to `pedagogical_sentence_proposals.md`.
+5. Mark this ticket ✅ Done. Do NOT commit code.
+
+**Urgency**: HIGH
+
+### [2026-04-23] Orchestrator → Linguistics Specialist
+**Status**: 🔴 Active
+**Task**: Dataset Expansion - Sentence Drafting (Phase 2, Batch B)
+**Branch**: `main`
+
+**Context**: The strategic meta-review is complete. We have an aligned ranking of the top structural gaps that provide maximum pedagogical and AST tree value. 
+
+**Action Required**:
+1. Draft 5 new sentences that explicitly target Ranks 6 through 10 from the `pedagogical_expansion_strategy.md` list:
+   - Rank 6: Resultative + 把
+   - Rank 7: Chained V-R series
+   - Rank 8: Contrastive 倒是
+   - Rank 9: Subjectless potential (no BEI)
+   - Rank 10: BEI + 给
+2. Ensure the grammatical structure perfectly reflects the theoretical edge case intended, while keeping vocabulary reasonable.
+3. For each sentence, provide the `chinese`, `pinyin`, `translation`, and the structural `explanation` detailing how the JSON AST tree should be built.
+4. Save your output to `theoretical_sentence_proposals.md`.
+5. Mark this ticket ✅ Done. Do NOT commit code.
+
+**Urgency**: HIGH
+
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 
 ### [2026-04-23] Orchestrator → Linguistics Specialist
