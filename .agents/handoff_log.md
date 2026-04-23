@@ -54,10 +54,17 @@ Append a new block to `## Pending Requests` using this exact format:
 
 ## Active Assignments
 
+### [2026-04-23] Linguistics Specialist → Orchestrator (follow-up ticket)
+**Status**: 🟡 Pending
+**Task**: Educational Publisher Pedagogical Counter-Review of Expansion Strategy
+**Dependency**: The Linguistics Specialist has produced `theoretical_expansion_strategy.md` outlining 12 structural gaps ranked by AST tree explanatory value. Before the Data Linguist begins drafting sentences, the Educational Publisher should review the strategy and provide a pedagogical counter-recommendation: Are there any gaps that *learners* would prioritize differently than a linguist? Are any proposed structures too advanced for the target audience? Should any be deprioritized in favor of more immediately useful patterns?
+**Suggested Fix**: Dispatch the Educational Publisher to review `theoretical_expansion_strategy.md` and produce `pedagogical_expansion_counter.md`.
+**Urgency**: MEDIUM
+
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 
 ### [2026-04-23] Orchestrator → Linguistics Specialist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Dataset Expansion - Strategic Meta-Review (Part 1)
 **Branch**: `main`
 
