@@ -56,35 +56,20 @@ Append a new block to `## Pending Requests` using this exact format:
 
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 
-### [2026-04-23] Orchestrator → Educational Publisher
-**Status**: 🔴 Active
-**Task**: Dataset Expansion - Pedagogical Review Pass
-**Branch**: `main`
-
-**Context**: We are expanding our `modern_sentences.json` dataset to cover tricky and exceptional cases. A gap analysis showed that Double Topic, Even (连…都/也), BEI Passives, and Complements (Resultative/Potential/Directional/Degree) have the lowest sentence counts (4-6 sentences each).
-
-**Action Required**:
-1. Review the existing sentences in the lowest count categories inside `src/data/modern_sentences.json`.
-2. Propose **5 new sentences** that address common learner misconceptions or idiomatic exceptions in these categories. Ensure the vocabulary is reasonably accessible but the grammar structure pushes boundaries. **Crucial Constraint: Prioritize sentences where our visual AST tree model is particularly useful for explaining the grammar** (e.g., heavily nested clauses, separable verbs splitting apart with modifiers, or co-reference arcs to reveal hidden subjects).
-3. For each proposed sentence, draft the `chinese`, `pinyin`, `translation`, and the pedagogical `explanation` (in Markdown format).
-4. Save your proposals to a new artifact `pedagogical_sentence_proposals.md` in the root directory.
-5. Mark this ticket ✅ Done. Do NOT commit code.
-
-**Urgency**: MEDIUM
-
 ### [2026-04-23] Orchestrator → Linguistics Specialist
 **Status**: 🔴 Active
-**Task**: Dataset Expansion - Theoretical Review Pass
+**Task**: Dataset Expansion - Strategic Meta-Review (Part 1)
 **Branch**: `main`
 
-**Context**: We are expanding our `modern_sentences.json` dataset. A gap analysis showed that Double Topic, Even (连…都/也), BEI Passives, and Complements (Resultative/Potential) have the lowest sentence counts (4-5 sentences each). We want to test our AST parser with sentences that break standard rules.
+**Context**: We are expanding our `modern_sentences.json` dataset. A gap analysis showed that Double Topic, Even (连…都/也), BEI Passives, and Complements (Resultative/Potential) have the lowest sentence counts (4-5 sentences each). Before we draft any new sentences, we need a strategic plan.
 
 **Action Required**:
 1. Review the existing sentences in the lowest count categories.
-2. Propose **5 new sentences** that feature theoretical edge cases. For example: BA/BEI structures with "retained objects", double topics featuring abstract class-member relationships, stative verbs acting as agents, or complex serial verb chains. **Crucial Constraint: Prioritize sentences where our visual AST tree model is particularly useful for explaining the grammar** (e.g., demonstrating complex syntactic nesting or explicitly revealing invisible dropped subjects via co-reference arcs).
-3. For each proposed sentence, draft the `chinese`, `pinyin`, and `translation`. Briefly explain the *structural challenge* it poses for our JSON AST.
-4. Save your proposals to a new artifact `theoretical_sentence_proposals.md` in the root directory.
-5. Mark this ticket ✅ Done. Do NOT commit code.
+2. Produce a strategic recommendation (`theoretical_expansion_strategy.md`) outlining which grammatical edge cases pose the most valuable structural challenges for our AST parser (e.g., retained objects, stative verbs acting as agents).
+3. **Crucial Constraint**: You must prioritize grammar structures where our visual AST tree model is *particularly useful* for explaining the concept (e.g., heavily nested clauses, separable verbs splitting apart, or co-reference arcs to reveal hidden subjects).
+4. Do NOT propose specific sentences yet. Just outline the theoretical priorities.
+5. Create a follow-up ticket in this log for the **Educational Publisher** to review your strategy and provide a pedagogical counter-recommendation.
+6. Mark this ticket ✅ Done. Do NOT commit code.
 
 **Urgency**: MEDIUM
 ### [2026-04-22] Orchestrator → Data Linguist
