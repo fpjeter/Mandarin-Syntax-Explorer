@@ -56,6 +56,37 @@ Append a new block to `## Pending Requests` using this exact format:
 
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 
+### [2026-04-23] Orchestrator → Educational Publisher
+**Status**: 🔴 Active
+**Task**: Dataset Expansion - Pedagogical Review Pass
+**Branch**: `main`
+
+**Context**: We are expanding our `modern_sentences.json` dataset to cover tricky and exceptional cases. A gap analysis showed that Double Topic, Even (连…都/也), BEI Passives, and Complements (Resultative/Potential/Directional/Degree) have the lowest sentence counts (4-6 sentences each).
+
+**Action Required**:
+1. Review the existing sentences in the lowest count categories inside `src/data/modern_sentences.json`.
+2. Propose **5 new sentences** that address common learner misconceptions or idiomatic exceptions in these categories. Ensure the vocabulary is reasonably accessible but the grammar structure pushes boundaries.
+3. For each proposed sentence, draft the `chinese`, `pinyin`, `translation`, and the pedagogical `explanation` (in Markdown format).
+4. Save your proposals to a new artifact `pedagogical_sentence_proposals.md` in the root directory.
+5. Mark this ticket ✅ Done. Do NOT commit code.
+
+**Urgency**: MEDIUM
+
+### [2026-04-23] Orchestrator → Linguistics Specialist
+**Status**: 🔴 Active
+**Task**: Dataset Expansion - Theoretical Review Pass
+**Branch**: `main`
+
+**Context**: We are expanding our `modern_sentences.json` dataset. A gap analysis showed that Double Topic, Even (连…都/也), BEI Passives, and Complements (Resultative/Potential) have the lowest sentence counts (4-5 sentences each). We want to test our AST parser with sentences that break standard rules.
+
+**Action Required**:
+1. Review the existing sentences in the lowest count categories.
+2. Propose **5 new sentences** that feature theoretical edge cases. For example: BA/BEI structures with "retained objects", double topics featuring abstract class-member relationships, stative verbs acting as agents, or complex serial verb chains.
+3. For each proposed sentence, draft the `chinese`, `pinyin`, and `translation`. Briefly explain the *structural challenge* it poses for our JSON AST.
+4. Save your proposals to a new artifact `theoretical_sentence_proposals.md` in the root directory.
+5. Mark this ticket ✅ Done. Do NOT commit code.
+
+**Urgency**: MEDIUM
 ### [2026-04-22] Orchestrator → Data Linguist
 **Status**: ✅ Done
 **Task**: Semantic Tagging Manual Corrections
