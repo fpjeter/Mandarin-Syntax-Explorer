@@ -65,7 +65,7 @@ Append a new block to `## Pending Requests` using this exact format:
 
 **Action Required**:
 1. Review the existing sentences in the lowest count categories inside `src/data/modern_sentences.json`.
-2. Propose **5 new sentences** that address common learner misconceptions or idiomatic exceptions in these categories. Ensure the vocabulary is reasonably accessible but the grammar structure pushes boundaries.
+2. Propose **5 new sentences** that address common learner misconceptions or idiomatic exceptions in these categories. Ensure the vocabulary is reasonably accessible but the grammar structure pushes boundaries. **Crucial Constraint: Prioritize sentences where our visual AST tree model is particularly useful for explaining the grammar** (e.g., heavily nested clauses, separable verbs splitting apart with modifiers, or co-reference arcs to reveal hidden subjects).
 3. For each proposed sentence, draft the `chinese`, `pinyin`, `translation`, and the pedagogical `explanation` (in Markdown format).
 4. Save your proposals to a new artifact `pedagogical_sentence_proposals.md` in the root directory.
 5. Mark this ticket ✅ Done. Do NOT commit code.
@@ -81,7 +81,7 @@ Append a new block to `## Pending Requests` using this exact format:
 
 **Action Required**:
 1. Review the existing sentences in the lowest count categories.
-2. Propose **5 new sentences** that feature theoretical edge cases. For example: BA/BEI structures with "retained objects", double topics featuring abstract class-member relationships, stative verbs acting as agents, or complex serial verb chains.
+2. Propose **5 new sentences** that feature theoretical edge cases. For example: BA/BEI structures with "retained objects", double topics featuring abstract class-member relationships, stative verbs acting as agents, or complex serial verb chains. **Crucial Constraint: Prioritize sentences where our visual AST tree model is particularly useful for explaining the grammar** (e.g., demonstrating complex syntactic nesting or explicitly revealing invisible dropped subjects via co-reference arcs).
 3. For each proposed sentence, draft the `chinese`, `pinyin`, and `translation`. Briefly explain the *structural challenge* it poses for our JSON AST.
 4. Save your proposals to a new artifact `theoretical_sentence_proposals.md` in the root directory.
 5. Mark this ticket ✅ Done. Do NOT commit code.
