@@ -55,7 +55,7 @@ Append a new block to `## Pending Requests` using this exact format:
 ## Active Assignments
 
 ### [2026-04-23] Orchestrator → Educational Publisher
-**Status**: 🔴 Active
+**Status**: 🔴 Done
 **Task**: Dataset Expansion - Strategic Meta-Review (Part 2)
 **Branch**: `main`
 
@@ -70,7 +70,7 @@ Append a new block to `## Pending Requests` using this exact format:
 **Urgency**: MEDIUM
 
 ### [2026-04-23] Orchestrator → Educational Publisher
-**Status**: 🔴 Active
+**Status**: 🔴 Done
 **Task**: Dataset Expansion - Sentence Drafting (Phase 2, Batch A)
 **Branch**: `main`
 
@@ -152,7 +152,7 @@ Append a new block to `## Pending Requests` using this exact format:
 **Urgency**: HIGH
 
 ### [2026-04-24] Orchestrator → Educational Publisher
-**Status**: 🔴 Active
+**Status**: 🔴 Done
 **Task**: Dataset Expansion - Final Pedagogical Review (Phase 4)
 **Branch**: `main`
 
@@ -165,9 +165,36 @@ Append a new block to `## Pending Requests` using this exact format:
 4. Run `npm run qa` after any patches.
 5. Mark this ticket ✅ Done. Leave an "Issues Encountered" note if you had to patch anything.
 
-**Urgency**: HIGH
+> [!NOTE]
+> Reviewed all 10 new sentences (s124-s133). Found 2 mismatched zh explanations:
+> - **s124** (苹果我已经吃了) had zh about 呢/打电话 (wrong sentence) → patched with correct patient-topic explanation
+> - **s125** (墙上挂着一幅画) had zh about 没/吃饭 (wrong sentence) → patched with correct existential pattern explanation
+> s126-s133 all had correctly matched en/zh pairs. `npm run qa` passes: 133 sentences, 1532 nodes.
+
+**Issues Encountered:**
+1. **Two zh explanations were swapped during ingestion.** s124 and s125 received zh translations from unrelated sentences (likely from the original Phase 9 batch). Both were manually patched with correct translations. The Data Linguist's ingestion pipeline may have an off-by-one or index-mapping bug when splicing new sentences into an existing bilingual dataset.
 
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
+### [2026-04-24] Orchestrator ? Linguistics Specialist
+**Status**: ?? Active
+**Task**: Classical Expansion - Strategic Meta-Review (Part 1)
+**Branch**: `main`
+
+**Context**: We are expanding our `classical_sentences.json` dataset, currently at 30 sentences across 6 categories. A gap analysis has revealed two improvement dimensions:
+1. **Structural gaps** � Nominalizers (?/?) is the weakest category at only 4 sentences. No category currently exists for Classical Conditional patterns (?�?) or Causative constructions (?/?).
+2. **Source diversity** � 14 of 30 sentences are from �??�. Texts like �??�, �???�, �???�, and Tang/Song prose are entirely unrepresented.
+
+**Action Required**:
+1. Review the existing 30 sentences in `src/data/classical_sentences.json`.
+2. Review the 6 category definitions in `src/data/classicalCategories.ts`.
+3. Produce a strategic recommendation (`classical_expansion_strategy.md`) addressing both dimensions.
+4. **Crucial Constraint**: Prioritize structures where our visual AST tree is *particularly useful* for making Classical Chinese grammar visible to modern learners.
+5. Do NOT propose specific sentences yet. Just outline the theoretical priorities.
+6. Once complete, write a follow-up ticket for the **Educational Publisher** to review your strategy.
+7. Mark this ticket ? Done. Do NOT commit code.
+
+**Urgency**: MEDIUM
+
 
 ### [2026-04-23] Orchestrator → Linguistics Specialist
 **Status**: ✅ Done
