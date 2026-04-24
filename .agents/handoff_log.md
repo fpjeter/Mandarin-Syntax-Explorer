@@ -1,5 +1,9 @@
 # Agent Handoff Log
 
+> [!IMPORTANT]
+> **This is a live, shared document.** The Orchestrator updates it between agent sessions. Before checking your assignments, you MUST re-read this file in full from the top — do not rely on a cached or previously read version. If you believe the board is clear but the Orchestrator says there is a new ticket, re-read this file immediately. New tickets are always inserted just above the `<!-- INSERT NEW TICKETS ABOVE THIS LINE -->` sentinel in the `## Active Assignments` section.
+
+
 This is the shared communication channel for all specialist agents. It serves two purposes:
 
 1. **Requesting help**: When you encounter a dependency outside your permitted files, append a new entry to `## Pending Requests`.
