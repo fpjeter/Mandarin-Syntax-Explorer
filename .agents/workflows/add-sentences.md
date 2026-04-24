@@ -11,11 +11,10 @@ When you are asked to add sentences to the Mandarin Grammar Tree project, you ar
 3. **No Legacy TypeScript**: Do NOT attempt to modify or recreate `src/data/sentences/*.ts`. Those are deprecated and live entirely in `docs/data_drafts/legacy_ts_archive/`.
 
 ## Branch Protocol
-- **New task (no existing branch specified)**: Create a feature branch: `git checkout -b data/your-task-name`. Never commit directly to `main`.
-- **Handoff assignment (branch specified in delegation token)**: Checkout the specified branch: `git checkout <branch-name>` then `git pull origin <branch-name>`.
+- **Trunk-Based Development**: All agent operations must be performed directly on the `main` branch. This ensures that the `.agents/handoff_log.md` remains synchronized across all agent roles. Never create feature branches unless explicitly directed by the user.
 
 ## Step-by-Step Data Entry
-1. **Follow the Branch Protocol above.**
+1. **Verify Branch**: Ensure you are on `main` (`git checkout main`).
 2. **Identify the Databank**: Decide if the sentence goes into `modern_sentences.json` or `classical_sentences.json`.
 3. **Format the Object**:
    - `id`: Must be universally unique (e.g., `s93`).

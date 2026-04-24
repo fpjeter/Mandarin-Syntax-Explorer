@@ -11,11 +11,10 @@ When you are asked to improve the user interface, styling, animations, or ReactF
 3. **Styling Tools**: The project uses **Tailwind CSS** (v4.0 Alpha) and **Framer Motion**. Do not install new styling libraries.
 
 ## Branch Protocol
-- **New task (no existing branch specified)**: Create a feature branch: `git checkout -b ui/your-task-name`. Never commit directly to `main`.
-- **Handoff assignment (branch specified in delegation token)**: Checkout the specified branch: `git checkout <branch-name>` then `git pull origin <branch-name>`.
+- **Trunk-Based Development**: All agent operations must be performed directly on the `main` branch. This ensures that the `.agents/handoff_log.md` remains synchronized across all agent roles. Never create feature branches unless explicitly directed by the user.
 
 ## Step-by-Step Development
-1. **Follow the Branch Protocol above.**
+1. **Verify Branch**: Ensure you are on `main` (`git checkout main`).
 2. **Study the Architecture**: You MUST open and read `ARCHITECTURE.md` before attempting any visual changes. It explains exactly how `SyntaxTree.tsx` mathematically maps coordinates via `treeLayout.ts`.
 3. **Mock Data Inspection**: If you need to understand the shape of the grammar trees to build a new view, check `src/types/grammar.ts`. It holds the absolute source of truth for the `GrammarNodeData` schema.
 4. **UI Implementation**: Modify component files (e.g., `SyntaxTree.tsx`, `NestedBoxView.tsx`) to alter how the trees are rendered.
