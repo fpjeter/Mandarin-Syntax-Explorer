@@ -1,15 +1,7 @@
 # Agent Handoff Log
 
 > [!IMPORTANT]
-> **This is a live, shared document.** The Orchestrator updates it between agent sessions. Before checking your assignments, you MUST re-read this file in full from the top � do not rely on a cached or previously read version. If you believe the board is clear but the Orchestrator says there is a new ticket, re-read this file immediately. New tickets are always inserted just above the `
-### [2026-04-24] Linguistics Specialist → Orchestrator (follow-up)
-**Status**: 🟡 Pending
-**Task**: Educational Publisher Pedagogical Counter-Review of Classical Expansion Strategy
-**Dependency**: Linguistics Specialist produced classical_expansion_strategy.md with 6 structural gaps and source diversity priorities.
-**Suggested Fix**: Dispatch Educational Publisher to review and produce classical_pedagogical_counter.md.
-**Urgency**: MEDIUM
-<!-- INSERT NEW TICKETS ABOVE THIS LINE -->` sentinel in the `## Active Assignments` section.
-
+> **This is a live, shared document.** The Orchestrator updates it between agent sessions. Before checking your assignments, you MUST re-read this file in full from the top - do not rely on a cached or previously read version. If you believe the board is clear but the Orchestrator says there is a new ticket, re-read this file immediately. New tickets are always inserted just above the `<!-- INSERT NEW TICKETS ABOVE THIS LINE -->` sentinel in the `## Active Assignments` section.
 
 This is the shared communication channel for all specialist agents. It serves two purposes:
 
@@ -184,6 +176,25 @@ Append a new block to `## Pending Requests` using this exact format:
 
 **Issues Encountered:**
 1. **Two zh explanations were swapped during ingestion.** s124 and s125 received zh translations from unrelated sentences (likely from the original Phase 9 batch). Both were manually patched with correct translations. The Data Linguist's ingestion pipeline may have an off-by-one or index-mapping bug when splicing new sentences into an existing bilingual dataset.
+
+### [2026-04-24] Orchestrator -> Educational Publisher
+**Status**: ?? Active
+**Task**: Classical Expansion - Strategic Meta-Review (Part 2)
+**Branch**: `main`
+
+**Context**: The Linguistics Specialist has completed their classical expansion strategy (`classical_expansion_strategy.md`). They identified 6 structural gaps and 3 source diversity priorities, proposing 13 new sentences that would bring the classical dataset to 43 total. Before we begin drafting sentences, we need a pedagogical counter-recommendation.
+
+**Action Required**:
+1. Read `classical_expansion_strategy.md` carefully.
+2. Evaluate the 6 structural gaps from a learner's perspective. Specifically:
+   - Are the 3 proposed NEW categories (Causative, Conditional, Passive) appropriate for the target audience?
+   - Is the total scope of 13 new sentences manageable, or should we phase the rollout?
+   - Are there any patterns that are too archaic or obscure for our HSK-adjacent learner profile?
+3. Evaluate the source diversity plan � do you agree with the proposed source selections?
+4. Produce your counter-recommendation in `classical_pedagogical_strategy.md`.
+5. Mark this ticket ? Done. Do NOT commit code.
+
+**Urgency**: MEDIUM
 
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 ### [2026-04-24] Orchestrator ? Linguistics Specialist
