@@ -1,7 +1,14 @@
 # Agent Handoff Log
 
 > [!IMPORTANT]
-> **This is a live, shared document.** The Orchestrator updates it between agent sessions. Before checking your assignments, you MUST re-read this file in full from the top — do not rely on a cached or previously read version. If you believe the board is clear but the Orchestrator says there is a new ticket, re-read this file immediately. New tickets are always inserted just above the `<!-- INSERT NEW TICKETS ABOVE THIS LINE -->` sentinel in the `## Active Assignments` section.
+> **This is a live, shared document.** The Orchestrator updates it between agent sessions. Before checking your assignments, you MUST re-read this file in full from the top ï¿½ do not rely on a cached or previously read version. If you believe the board is clear but the Orchestrator says there is a new ticket, re-read this file immediately. New tickets are always inserted just above the `
+### [2026-04-24] Linguistics Specialist â†’ Orchestrator (follow-up)
+**Status**: ðŸŸ¡ Pending
+**Task**: Educational Publisher Pedagogical Counter-Review of Classical Expansion Strategy
+**Dependency**: Linguistics Specialist produced classical_expansion_strategy.md with 6 structural gaps and source diversity priorities.
+**Suggested Fix**: Dispatch Educational Publisher to review and produce classical_pedagogical_counter.md.
+**Urgency**: MEDIUM
+<!-- INSERT NEW TICKETS ABOVE THIS LINE -->` sentinel in the `## Active Assignments` section.
 
 
 This is the shared communication channel for all specialist agents. It serves two purposes:
@@ -180,13 +187,13 @@ Append a new block to `## Pending Requests` using this exact format:
 
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 ### [2026-04-24] Orchestrator ? Linguistics Specialist
-**Status**: ?? Active
+**Status**: âœ… Done
 **Task**: Classical Expansion - Strategic Meta-Review (Part 1)
 **Branch**: `main`
 
 **Context**: We are expanding our `classical_sentences.json` dataset, currently at 30 sentences across 6 categories. A gap analysis has revealed two improvement dimensions:
-1. **Structural gaps** — Nominalizers (?/?) is the weakest category at only 4 sentences. No category currently exists for Classical Conditional patterns (?…?) or Causative constructions (?/?).
-2. **Source diversity** — 14 of 30 sentences are from «??». Texts like «??», «???», «???», and Tang/Song prose are entirely unrepresented.
+1. **Structural gaps** ï¿½ Nominalizers (?/?) is the weakest category at only 4 sentences. No category currently exists for Classical Conditional patterns (?ï¿½?) or Causative constructions (?/?).
+2. **Source diversity** ï¿½ 14 of 30 sentences are from ï¿½??ï¿½. Texts like ï¿½??ï¿½, ï¿½???ï¿½, ï¿½???ï¿½, and Tang/Song prose are entirely unrepresented.
 
 **Action Required**:
 1. Review the existing 30 sentences in `src/data/classical_sentences.json`.
