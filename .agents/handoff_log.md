@@ -178,7 +178,7 @@ Append a new block to `## Pending Requests` using this exact format:
 1. **Two zh explanations were swapped during ingestion.** s124 and s125 received zh translations from unrelated sentences (likely from the original Phase 9 batch). Both were manually patched with correct translations. The Data Linguist's ingestion pipeline may have an off-by-one or index-mapping bug when splicing new sentences into an existing bilingual dataset.
 
 ### [2026-04-24] Orchestrator -> Educational Publisher
-**Status**: ?? Active
+**Status**: ?? Done
 **Task**: Classical Expansion - Strategic Meta-Review (Part 2)
 **Branch**: `main`
 
@@ -190,11 +190,15 @@ Append a new block to `## Pending Requests` using this exact format:
    - Are the 3 proposed NEW categories (Causative, Conditional, Passive) appropriate for the target audience?
    - Is the total scope of 13 new sentences manageable, or should we phase the rollout?
    - Are there any patterns that are too archaic or obscure for our HSK-adjacent learner profile?
-3. Evaluate the source diversity plan � do you agree with the proposed source selections?
+3. Evaluate the source diversity plan � do you agree with the proposed source selections?
 4. Produce your counter-recommendation in `classical_pedagogical_strategy.md`.
 5. Mark this ticket ? Done. Do NOT commit code.
 
-**Urgency**: MEDIUM
+> [!NOTE]
+> Produced `classical_pedagogical_strategy.md`. Key adjustments: (1) Phased rollout: Phase A = 8 sentences (Conditionals, Causatives, Object Fronting, Nominalizers), Phase B = 5 sentences (Topic-Comment, Passive, expansions). (2) Upgraded Conditionals to Rank 1 (most frequent pattern learners encounter). (3) Deferred Passive category to Phase B (three competing passive frameworks would confuse intermediate learners). (4) Sequenced Nominalizers before Passive (所 understanding is prerequisite for 為…所… passive). (5) Agreed with source diversity plan; recommended reducing 《史記》 to 1 new sentence in Phase A. No issues encountered.
+
+**Issues Encountered:**
+1. No issues. The linguistic strategy was well-structured and thorough.
 
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 ### [2026-04-24] Orchestrator ? Linguistics Specialist
