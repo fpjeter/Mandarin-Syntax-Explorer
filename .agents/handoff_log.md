@@ -130,6 +130,38 @@ Append a new block to `## Pending Requests` using this exact format:
 
 **Urgency**: HIGH
 
+### [2026-04-24] Orchestrator → Linguistics Specialist
+**Status**: 🔴 Active
+**Task**: Dataset Expansion - Final Structural Review (Phase 4)
+**Branch**: `main`
+
+**Context**: The Data Linguist has finished ingesting the 10 new dataset expansion sentences (`s124` through `s133`) into `src/data/modern_sentences.json`. I have run `npm run qa` and the auto-tagger, so the nodes are technically valid and semantically tagged.
+
+**Action Required**:
+1. Review the JSON ASTs for sentences `s124` through `s133` in `modern_sentences.json`.
+2. Verify that the Data Linguist successfully implemented the complex structural blueprints (e.g., the nested BEI+给 frame, the chained resultatives, the notional passive semantic tag).
+3. If you find any structural flaws, manually patch the JSON directly or write a script to fix it. 
+4. Run `npm run qa` after any patches.
+5. Mark this ticket ✅ Done. Leave an "Issues Encountered" note if you had to patch anything.
+
+**Urgency**: HIGH
+
+### [2026-04-24] Orchestrator → Educational Publisher
+**Status**: 🔴 Active
+**Task**: Dataset Expansion - Final Pedagogical Review (Phase 4)
+**Branch**: `main`
+
+**Context**: The Data Linguist has ingested the 10 new sentences (`s124` through `s133`) into `modern_sentences.json`.
+
+**Action Required**:
+1. Review the `explanation` nodes for sentences `s124` through `s133` in `modern_sentences.json`.
+2. Ensure the bilingual object formatting (`"en"` and `"zh"`) was correctly preserved and that the formatting looks good.
+3. If any explanations were mangled during ingestion, manually patch the JSON directly.
+4. Run `npm run qa` after any patches.
+5. Mark this ticket ✅ Done. Leave an "Issues Encountered" note if you had to patch anything.
+
+**Urgency**: HIGH
+
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 
 ### [2026-04-23] Orchestrator → Linguistics Specialist
