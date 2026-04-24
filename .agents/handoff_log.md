@@ -112,7 +112,7 @@ Append a new block to `## Pending Requests` using this exact format:
 **Urgency**: HIGH
 
 ### [2026-04-24] Orchestrator → Data Linguist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Dataset Expansion - JSON AST Ingestion (Phase 3)
 **Branch**: `main`
 
