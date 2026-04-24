@@ -131,7 +131,7 @@ Append a new block to `## Pending Requests` using this exact format:
 **Urgency**: HIGH
 
 ### [2026-04-24] Orchestrator → Linguistics Specialist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Dataset Expansion - Final Structural Review (Phase 4)
 **Branch**: `main`
 
@@ -143,6 +143,11 @@ Append a new block to `## Pending Requests` using this exact format:
 3. If you find any structural flaws, manually patch the JSON directly or write a script to fix it. 
 4. Run `npm run qa` after any patches.
 5. Mark this ticket ✅ Done. Leave an "Issues Encountered" note if you had to patch anything.
+
+**Issues Encountered:**
+1. **s132 semantic role fix**: Topic 我 was tagged `Experiencer` by the auto-tagger, but in an agentless BEI passive with retained object, the person is a `Patient` (victim of theft). Patched to `Patient`.
+2. **s137 给 subRole fix**: The 给 Adjunct was tagged `scope` (matching 都/连 scope markers), but 给 in BEI+给 constructions is an emphatic particle. Patched to `emphatic`.
+3. **Note: Actual sentence count is s124-s137 (14 sentences), not s124-s133 (10).** The Data Linguist ingested both Batch A and Batch B as s124-s137. All 14 trees are structurally correct after patches. `npm run qa` passes: 133 sentences, 1532 nodes.
 
 **Urgency**: HIGH
 

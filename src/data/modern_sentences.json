@@ -13705,7 +13705,7 @@
         {
           "id": "s132-t",
           "role": "Topic",
-          "semanticRole": "Experiencer",
+          "semanticRole": "Patient",
           "text": {
             "hanzi": "我",
             "pinyin": "wǒ",
@@ -14254,7 +14254,7 @@
                 {
                   "id": "s137-gei",
                   "role": "Adjunct",
-                  "subRole": "scope",
+                  "subRole": "emphatic",
                   "text": {
                     "hanzi": "给",
                     "pinyin": "gěi",
