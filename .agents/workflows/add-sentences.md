@@ -35,7 +35,6 @@ If either command throws an error, you must fix the data before continuing.
 
 ## 🤝 Multi-Agent Pipeline Handoff
 Once testing passes, you are NOT done. You must pass the baton so the explanations can be written.
-1. Run `git add`, `git commit -m "feat(data): build AST structure for [category]"`, and `git push` to `origin` so your work is safe on the remote.
-2. Open `.agents/handoff_log.md`.
-3. Open `.agents/handoff_log.md`. Add your `🟡 Pending` request **inside the `## Active Assignments` section**, above the `<!-- INSERT NEW TICKETS ABOVE THIS LINE -->` sentinel comment. Do NOT append to the bottom of the file — tickets placed outside the Active Assignments section will not be found by agents.
-4. Report completion to the user.
+1. Open `.agents/handoff_log.md`.
+2. Add your `🟡 Pending` request **inside the `## Active Assignments` section**, above the `<!-- INSERT NEW TICKETS ABOVE THIS LINE -->` sentinel comment. Do NOT append to the bottom of the file — tickets placed outside the Active Assignments section will not be found by agents.
+3. Report completion to the user. The **Orchestrator** will handle all git operations (commit, push, PR).
