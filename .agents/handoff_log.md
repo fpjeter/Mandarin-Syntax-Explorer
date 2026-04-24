@@ -111,6 +111,25 @@ Append a new block to `## Pending Requests` using this exact format:
 
 **Urgency**: HIGH
 
+### [2026-04-24] Orchestrator → Data Linguist
+**Status**: 🔴 Active
+**Task**: Dataset Expansion - JSON AST Ingestion (Phase 3)
+**Branch**: `main`
+
+**Context**: Phase 2 drafting is complete. We now have 10 new sentences specifically designed to target our top structural edge cases. The Educational Publisher has provided 5 sentences in `pedagogical_sentence_proposals.md` (Batch A), and the Linguistics Specialist has provided 5 sentences with structural blueprints in `theoretical_sentence_proposals.md` (Batch B).
+
+**Action Required**:
+1. Read both proposal artifacts.
+2. Ingest all 10 sentences into `src/data/modern_sentences.json`.
+3. Construct the nested JSON AST for each sentence according to the `GrammarNodeData` schema.
+4. Pay *extremely close attention* to the AST Structure Notes provided in the theoretical proposals (especially for "Subjectless potential" and "BEI + 给" constructions).
+5. Ensure the `category` property for each new entry strictly matches an existing category key from `categories.ts`.
+6. Use the `id` format `"s" + number` (e.g., if the last sentence is `"s123"`, the new ones should be `"s124"` through `"s133"`).
+7. Validate your JSON by running `npm run qa`. Fix any structural errors.
+8. Mark this ticket ✅ Done. Do NOT commit code.
+
+**Urgency**: HIGH
+
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 
 ### [2026-04-23] Orchestrator → Linguistics Specialist
