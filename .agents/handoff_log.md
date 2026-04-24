@@ -91,7 +91,7 @@ Append a new block to `## Pending Requests` using this exact format:
 **Urgency**: HIGH
 
 ### [2026-04-23] Orchestrator → Linguistics Specialist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Dataset Expansion - Sentence Drafting (Phase 2, Batch B)
 **Branch**: `main`
 
