@@ -17,11 +17,11 @@ When you are asked to add sentences to the Mandarin Grammar Tree project, you ar
 1. **Verify Branch**: Ensure you are on `main` (`git checkout main`).
 2. **Identify the Databank**: Decide if the sentence goes into `modern_sentences.json` or `classical_sentences.json`.
 3. **Format the Object**:
-   - `id`: Must be universally unique (e.g., `s93`).
+   - `id`: Must be universally unique. **Always determine the next ID by finding the highest existing numeric ID in the file and adding 1.** Do NOT rely on the apparent sequence — there are intentional gaps in the numbering (e.g., `s10`, `s74`, `s88`, `s93` are missing) from historical deletions. To find the correct next ID, run: `node -e "const d=require('./src/data/modern_sentences.json'); console.log('Next ID: s' + (Math.max(...d.map(s=>parseInt(s.id.replace('s','')))) + 1))"`
    - `category`: The full string name of the category (e.g., `'BA Construction (把字句)'`).
    - `explanation`: Use `{ "en": "[PENDING PUBLISHER]", "zh": "[PENDING PUBLISHER]" }` as a placeholder BilingualString. Do NOT write a plain string — the app expects the bilingual object shape for all new sentences going forward.
    - `tree`: Follow the strict UMSM topic-comment split. Every text node must include `hanzi`, `pinyin`, and `translation`.
-4. **Append the Sentence**: Inject your formatted JSON object into the master JSON array.
+4. **Append the Sentence**: Inject your formatted JSON object at the **end** of the master JSON array.
 
 ## Mandatory QA Validation
 After adding or modifying any sentences, **you are required** to run:
