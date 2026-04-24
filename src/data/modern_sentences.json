@@ -1478,7 +1478,7 @@
     "translation": "The apple, I've already eaten it.",
     "explanation": {
       "en": "Here, **苹果** (\"apple\") sits as the Topic, but notice something different: the apple is not the one doing anything. It is the thing being acted upon. Inside the Comment, **我** (\"I\") is the actual actor, followed by **已经吃了** (\"already ate\"). This is a **patient-topic** sentence: the Topic is not the doer but the thing being discussed. English signals this with word order (\"I ate the apple\"), but Mandarin can freely place the patient first as a frame: \"As for the apple, I already ate it.\" This flexibility is one of the most distinctive features of Mandarin's Topic-Comment system.",
-      "zh": "句末的**呢**在这里表示\"正在进行\"的语气。**他**是话题，评论说他**打电话呢**——打电话这个动作正在发生。**呢**不同于**着**（附着在动词上表示状态持续），它是句末语气词，给整个句子染上\"此刻正在\"的色彩。树展示了**呢**独立地挂在句末位置。"
+      "zh": "**苹果**是话题，但注意它并不是动作的执行者，而是被作用的对象。评论内部，**我**才是真正的施事者，后面跟着**已经吃了**。这是一个**受事话题句**：话题不是做动作的人，而是被讨论的事物。英语用语序来表达（I ate the apple），但中文可以自由地将受事放在前面作为框架：\"说到那个苹果，我已经吃了。\"这种灵活性是中文话题—评论体系最显著的特征之一。"
     },
     "tree": {
       "id": "s124-n",
@@ -1550,7 +1550,7 @@
     "translation": "On the wall hangs a painting.",
     "explanation": {
       "en": "**墙上** (\"on the wall\") is the Topic. It is not a person or thing but a *location* serving as the frame for what follows. The Comment uses **挂着** (\"is hanging\"), with the durative aspect marker **着** indicating an ongoing state: something is currently hanging there. The painting (**一幅画**, where 幅 is the measure word for paintings and posters) is the thing existing in that location. This sentence type is called an \"existential\" or \"presentative\" pattern: it introduces something by first naming where it exists. English uses inverted word order for the same effect: \"On the wall hangs a painting.\"",
-      "zh": "这是一个用**没(有)**否定已完成动作的典型句式。**我**是话题，评论用**还没吃饭**否定了\"吃饭\"这件事的发生。**没**否定的是完成状态——不是说\"不想吃\"，而是说\"这件事还没发生\"。**还**加在前面增添\"仍然尚未\"的语气。树展示了否定词**没**和动词之间的位置关系。"
+      "zh": "**墙上**是话题。它不是一个人或物体，而是一个*方位短语*充当后续内容的框架。评论用**挂着**表达，其中持续体标记**着**表示一种正在进行的状态：有什么东西正挂在那里。画（**一幅画**，其中\"幅\"是画作和海报的量词）是存在于该位置的事物。这种句型叫做\"存现句\"：它通过先指出存在的地点来引入事物。英语用倒装语序达到同样的效果：On the wall hangs a painting。"
     },
     "tree": {
       "id": "s125-n",
