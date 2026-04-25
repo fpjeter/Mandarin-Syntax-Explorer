@@ -228,6 +228,30 @@ Append a new block to `## Pending Requests` using this exact format:
 **Issues Encountered:**
 1. No issues. The linguistic strategy was well-structured and thorough.
 
+### [2026-04-25] Orchestrator -> Data Linguist
+**Status**: ?? Active
+**Task**: BA Fix — Refactor s126, s127, s133 from Embedded Clause to Adjunct model
+**Branch**: `main`
+
+**Context**: The Linguistics Specialist discovered that the 3 newly ingested ? sentences (s126, s127, s133) use an Embedded Clause structure, contradicting the Adjunct model used by all original ? sentences (s3, s4, s28, s29). Per FLS §2.7 amendment, ? does NOT introduce a new actor and must NOT open an Embedded Clause.
+
+**The structural error:** The new sentences model ? as a `Head Verb` followed by an `Embedded Clause` containing `Topic (Patient)` + `Comment`. This is wrong.
+
+**The correct Adjunct model (use s3 as template):** ? + NP forms a single `Adjunct` node (subRole: `ba-construction`) that is a sibling to the `Verb Phrase`. The object NP is a child of the Adjunct, NOT promoted to a Topic.
+
+**Action Required**:
+1. Open `src/data/modern_sentences.json`.
+2. For each of `s126`, `s127`, and `s133`, refactor the tree structure:
+   - Remove the `Head Verb` node for ? and the `Embedded Clause` node entirely.
+   - Replace with a single `Adjunct` node (subRole: `ba-construction`) containing two children: `role: Preposition` for ? itself, and `role: Noun` (or appropriate NP role) for the object.
+   - The main verb phrase (??, ???, ???) becomes a sibling `Verb Phrase` node at the same level as the Adjunct.
+   - The Patient NP (?, ?, ??) should have `semanticRole: Patient` on the Noun node inside the Adjunct — NOT as a promoted Topic.
+3. Use s3 (???????????) as your exact structural template.
+4. Run `npm run qa` to validate. Fix any errors.
+5. Mark this ticket ? Done. Do NOT commit code.
+
+**Urgency**: HIGH
+
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 ### [2026-04-24] Orchestrator ? Linguistics Specialist
 **Status**: âœ… Done
