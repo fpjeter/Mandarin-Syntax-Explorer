@@ -28,7 +28,16 @@
 
 **Affected sentences**: s13, s14, s15, s16, s17, s18, s28, s69, s81, s87, s91, s94, s95, s96, s100, s132.
 **Suggested Fix**: Dispatch the Educational Publisher to decide on conventions, then the Data Linguist to normalize all 17 ghost nodes.
-**Urgency**: MEDIUM
+> [!NOTE]
+> Produced `ghost_node_conventions.md` with 5 clear rules:
+> 1. refersToId REQUIRED on all ghost nodes.
+> 2. role: Topic vs Subject decision matrix.
+> 3. s81: use Theme, not Agent.
+> 4. subRole taxonomy: pro-drop, topic-chain, expletive.
+> 5. semanticRole inheritance from referent.
+
+**Issues Encountered:**
+1. No issues.
 <!-- INSERT NEW TICKETS ABOVE THIS LINE -->` sentinel in the `## Active Assignments` section.
 
 This is the shared communication channel for all specialist agents. It serves two purposes:
@@ -281,28 +290,66 @@ Append a new block to `## Pending Requests` using this exact format:
 1. The s126 ZH previously referenced **äº†** (completion marker), but the sentence ä»–æ²¡æŠŠé—¨å…³ä¸Š does not contain äº†. Fixed in the rewrite.
 
 ### [2026-04-25] Orchestrator -> Educational Publisher
-**Status**: ?? Active
-**Task**: Ghost Node Consistency Audit — Convention Review
+**Status**: âœ… Done
+**Task**: Ghost Node Consistency Audit ï¿½ Convention Review
 **Branch**: `main`
 
 **Context**: The Linguistics Specialist has flagged 5 inconsistencies across the 17 ghost nodes (`isDropped: true`) in `modern_sentences.json`. Before the Data Linguist normalizes the data, we need YOU to define the pedagogical conventions so they have a clear spec to work from.
 
 **The 5 issues requiring your decisions:**
 
-1. **`refersToId` missing on 15 of 17 ghost nodes** — FLS §2.3 says ghost subjects should co-index with the main Topic. Only s15 and s16 have this. Should ALL ghost nodes require `refersToId`, or only those in embedded clauses? What is the pedagogical value of showing the co-reference arc to learners?
+1. **`refersToId` missing on 15 of 17 ghost nodes** ï¿½ FLS ï¿½2.3 says ghost subjects should co-index with the main Topic. Only s15 and s16 have this. Should ALL ghost nodes require `refersToId`, or only those in embedded clauses? What is the pedagogical value of showing the co-reference arc to learners?
 
-2. **`role` inconsistency: Topic vs Subject** — 14 ghosts use `role: Topic`, 3 use `role: Subject`. Define the rule: when should a ghost node be a `Topic` vs a `Subject`? (Hint: consider whether the ghost is the sentence-level discourse topic or an inner clause participant.)
+2. **`role` inconsistency: Topic vs Subject** ï¿½ 14 ghosts use `role: Topic`, 3 use `role: Subject`. Define the rule: when should a ghost node be a `Topic` vs a `Subject`? (Hint: consider whether the ghost is the sentence-level discourse topic or an inner clause participant.)
 
-3. **s81 spatiotemporal anchor `[??]` tagged `semanticRole: Agent`** — The implicit scene anchor should not be an Agent. Should it have `Theme`, no semantic role at all, or a new role like `Anchor`?
+3. **s81 spatiotemporal anchor `[??]` tagged `semanticRole: Agent`** ï¿½ The implicit scene anchor should not be an Agent. Should it have `Theme`, no semantic role at all, or a new role like `Anchor`?
 
-4. **`subRole` missing on 16 of 17 ghost nodes** — Only s132 has `subRole: implied topic`. Should all ghost nodes share a consistent subRole (e.g. `pro-drop`, `implied topic`, `ghost subject`)? Or should subRole vary by type of ghost?
+4. **`subRole` missing on 16 of 17 ghost nodes** ï¿½ Only s132 has `subRole: implied topic`. Should all ghost nodes share a consistent subRole (e.g. `pro-drop`, `implied topic`, `ghost subject`)? Or should subRole vary by type of ghost?
 
-5. **s16 ghost tagged `semanticRole: Experiencer`** — Ghost nodes should inherit their semantic role from their referent (the main Topic), not be independently tagged. Do you agree? If so, what should the rule be?
+5. **s16 ghost tagged `semanticRole: Experiencer`** ï¿½ Ghost nodes should inherit their semantic role from their referent (the main Topic), not be independently tagged. Do you agree? If so, what should the rule be?
 
 **Action Required**:
 1. Read the ghost node entries in `modern_sentences.json` for affected sentences: s13, s14, s15, s16, s17, s18, s28, s69, s81, s87, s91, s94, s95, s96, s100, s132.
 2. Produce a short convention document (`ghost_node_conventions.md`) that answers each of the 5 questions above with a clear, implementable rule.
 3. Mark this ticket ? Done. Do NOT edit JSON or commit code.
+
+> [!NOTE]
+> Produced `ghost_node_conventions.md` with 5 clear, implementable rules:
+> 1. **refersToId REQUIRED** on all 17 ghost nodes.
+> 2. **role: Topic vs Subject** decision matrix.
+> 3. **s81: use Theme**, not Agent (expletive subject).
+> 4. **subRole taxonomy**: pro-drop, topic-chain, expletive. Deprecated "implied topic".
+> 5. **semanticRole inheritance** from referent node.
+> Includes Data Linguist checklist.
+
+**Issues Encountered:**
+1. No issues. Examined all 17 ghost nodes across 16 sentences.
+
+### [2026-04-25] Orchestrator -> Data Linguist
+**Status**: ?? Active
+**Task**: Ghost Node Consistency Audit — JSON Normalization
+**Branch**: `main`
+
+**Context**: The Educational Publisher has defined the official ghost node conventions in `ghost_node_conventions.md`. You must now normalize all 17 ghost nodes (`isDropped: true`) in `modern_sentences.json` to comply. Read the full convention document first.
+
+**Affected sentences:** s13, s14, s15, s16, s17, s18, s28, s69, s81, s87, s91, s94, s95, s96, s100, s127, s132.
+
+**For each ghost node, apply ALL of the following:**
+
+1. **`refersToId`** — Add (or verify) it points to the correct referent node id. Sentence-level Topic for most; Pivot node for pivotal constructions; Topic node for Discourse Context sentences.
+
+2. **`role`** — Set to `Topic` if the ghost IS the sentence-level discourse topic (no overt Topic exists above it). Set to `Subject` if there is an overt Topic and the ghost is inside the Comment/embedded clause.
+
+3. **`subRole`** — Set to exactly one of:
+   - `pro-drop` — pronoun omitted because referent is contextually obvious (most cases)
+   - `topic-chain` — subject carries over from a prior sentence (Discourse Context sentences: s94, s95, s96)
+   - `expletive` — implicit scene anchor with no real referent (s81 only)
+   - Remove `implied topic` (deprecated) — replace with `pro-drop` (affects s132).
+
+4. **`semanticRole`** — Set to match the `semanticRole` of the referent node (inherit, don't assign independently). Exception: s81 expletive gets `semanticRole: Theme`.
+
+**Run `npm run qa` after all changes. Fix any validation errors before reporting complete.**
+**Mark this ticket ? Done. Do NOT commit code.**
 
 **Urgency**: MEDIUM
 
