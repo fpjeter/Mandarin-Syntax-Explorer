@@ -1,44 +1,16 @@
 # Agent Handoff Log
 
 > [!IMPORTANT]
-> **This is a live, shared document.** The Orchestrator updates it between agent sessions. Before checking your assignments, you MUST re-read this file in full from the top - do not rely on a cached or previously read version. If you believe the board is clear but the Orchestrator says there is a new ticket, re-read this file immediately. New tickets are always inserted just above the `
-### [2026-04-25] Linguistics Specialist → Orchestrator
-**Status**: 🟡 Pending
-**Blocked Task**: FLS Position Paper Amendment — 把 as Adjunct, not Head Verb
-**Dependency**: During the Phase 4 structural review, I discovered that sentences s126, s127, and s133 use an Embedded Clause model for 把 constructions, which contradicts the established Adjunct model used by the original sentences (s3, s4, s28, s29). The FLS position paper (§2.7) incorrectly included 把 in the template unification with 被/让/叫. This has been amended: 把 does NOT introduce a new actor and therefore does not open a genuine embedded situation. It is a preposition/coverb forming a pre-verbal adjunct.
+> **This is a live, shared document.** The Orchestrator updates it between agent sessions. Before checking your assignments, you MUST re-read this file in full from the top - do not rely on a cached or previously read version. New tickets are always inserted just above the `<!-- INSERT NEW TICKETS ABOVE THIS LINE -->` sentinel in the `## Active Assignments` section.
 
-**What needs fixing:**
-1. **Data Linguist**: Refactor the AST trees for s126, s127, and s133 to use the Adjunct model (matching s3/s4/s28/s29). The pattern is: Adjunct (disposal marker) > [Head Verb: 把, Object: NP] as sibling to the main Verb Phrase.
-2. **Educational Publisher**: Review and update the explanation fields for s126, s127, and s133 to remove any references to Embedded Clauses or 把-as-Head-Verb framing.
-3. **Data Linguist**: Copy the amended FLS position paper from docs/whitepapers/fls_position_paper.md to ensure the canonical reference is in the repo.
+## Active Ticket Summary
+> **Read this first.** All currently open tickets are listed below with their line numbers.
 
-**Suggested Fix**: Dispatch the Data Linguist for tree refactoring (use s3 as the template), then the Educational Publisher for explanation cleanup.
-**Urgency**: HIGH
+| Line | Assigned To | Task | Urgency |
+|------|-------------|------|---------|
+| 360 | Linguistics Specialist | Classical Expansion Phase A -- Draft 8 Sentences | MEDIUM |
 
-### [2026-04-25] Linguistics Specialist → Orchestrator
-**Status**: 🟡 Pending
-**Blocked Task**: Ghost Node Consistency Audit
-**Dependency**: An audit of all 17 ghost nodes (`isDropped: true`) in `modern_sentences.json` reveals 5 inconsistencies that the Educational Publisher should review for pedagogical impact:
-
-1. **Missing `refersToId`**: 15 of 17 ghost nodes have no co-reference link. FLS §2.3 says ghost subjects should co-index with the main Topic via `refersToId`. Only s15 and s16 have this. The Ed Publisher should decide: do all ghost nodes need `refersToId`, or only those in embedded clauses?
-2. **Role inconsistency (Topic vs Subject)**: 14 ghosts use `Topic`, 3 use `Subject`. There is no clear rule for when to use which. The Ed Publisher should define the convention.
-3. **s81 `[现场]` has `semanticRole: Agent`**: The spatiotemporal anchor (FLS §2.8) is not an agent. Should be `Theme` or no semantic role.
-4. **Missing `subRole`**: Only s132 has `subRole: "implied topic"`. The other 16 have none. A consistent subRole (e.g. "pro-drop") would help the frontend style them uniformly.
-5. **s16 ghost tagged `Experiencer`**: Ghost nodes should inherit semantic roles from their referent, not be independently tagged.
-
-**Affected sentences**: s13, s14, s15, s16, s17, s18, s28, s69, s81, s87, s91, s94, s95, s96, s100, s132.
-**Suggested Fix**: Dispatch the Educational Publisher to decide on conventions, then the Data Linguist to normalize all 17 ghost nodes.
-> [!NOTE]
-> Produced `ghost_node_conventions.md` with 5 clear rules:
-> 1. refersToId REQUIRED on all ghost nodes.
-> 2. role: Topic vs Subject decision matrix.
-> 3. s81: use Theme, not Agent.
-> 4. subRole taxonomy: pro-drop, topic-chain, expletive.
-> 5. semanticRole inheritance from referent.
-
-**Issues Encountered:**
-1. No issues.
-<!-- INSERT NEW TICKETS ABOVE THIS LINE -->` sentinel in the `## Active Assignments` section.
+---
 
 This is the shared communication channel for all specialist agents. It serves two purposes:
 
@@ -54,8 +26,8 @@ The **Orchestrator** reviews pending requests, triages them, and writes delegati
 Append a new block to `## Pending Requests` using this exact format:
 
 ```
-### [DATE] [YOUR ROLE] → Orchestrator
-**Status**: 🟡 Pending
+### [DATE] [YOUR ROLE] -> Orchestrator
+**Status**: Pending
 **Blocked Task**: (What you were trying to do when you got blocked)
 **Dependency**: (What file/change you need that is outside your permissions)
 **Suggested Fix**: (Your best recommendation for how to resolve it)
@@ -65,10 +37,10 @@ Append a new block to `## Pending Requests` using this exact format:
 ## How to Receive an Assignment
 
 1. **Verify Persona**: Before reading any ticket, strictly ensure the `[YOUR ROLE]` matches your exact expert persona. Never execute tickets assigned to others.
-2. **Execute on Branch**: Checkout a new feature branch `git checkout -b <your-role>/<task>`. Do all your work there.
-3. **Log Completion & Issues**: When done, update your ticket's status **in place** to `✅ Done` using a targeted single-line replacement (do NOT use multi-line regex replacements that might swallow adjacent tickets). If you ran into blockers, append a `**Issues Encountered:**` line to your ticket explaining any workarounds. Do NOT move the ticket to `## Resolved`.
-4. **Backup Communication Protocol**: If you try to view this log and find it corrupted, unreadable, or formatted improperly, **DO NOT attempt to modify it**. Instead, halt execution and print a Markdown block to the user starting with `"I have successfully completed [My Task]... here is what I accomplished:"`. You MUST also explicitly describe what you know about the log issue so the user can securely relay both the status and the error diagnostic offline to the Orchestrator.
-5. **Out-of-Band Tasks**: If the User gives you a direct verbal instruction that skips the Orchestrator and does not have an existing `🔴 Active` ticket in this log, you MUST generate a new tracking ticket for yourself under `## Active Assignments`. Document the user's out-of-band instructions, summarize your work, and mark it `✅ Done` so the Orchestrator has a paper trail.
+2. **Execute on Branch**: All work is done directly on `main` (trunk-based development). Never create feature branches.
+3. **Log Completion & Issues**: When done, update your ticket's status **in place** to Done. If you ran into blockers, append a `**Issues Encountered:**` line. Do NOT move the ticket to `## Resolved`.
+4. **Backup Communication Protocol**: If you find this log corrupted or unreadable, **DO NOT modify it**. Halt execution and print a Markdown report to the user describing what you accomplished and what the log issue is.
+5. **Out-of-Band Tasks**: If the User gives you a direct verbal instruction without an existing Active ticket, generate a tracking ticket for yourself under `## Active Assignments`, document the work, and mark it Done.
 
 ---
 
