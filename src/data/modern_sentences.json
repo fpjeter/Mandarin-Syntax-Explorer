@@ -511,7 +511,8 @@
               "isDropped": true,
               "impliedText": "它",
               "refersToId": "n15-t",
-              "semanticRole": "Agent"
+              "semanticRole": "Agent",
+              "subRole": "pro-drop"
             },
             {
               "id": "n15-vp",
@@ -608,7 +609,8 @@
               "isDropped": true,
               "impliedText": "他",
               "refersToId": "n16-t",
-              "semanticRole": "Experiencer"
+              "semanticRole": "Experiencer",
+              "subRole": "pro-drop"
             },
             {
               "id": "n16-vp",
@@ -1998,7 +2000,8 @@
           "role": "Topic",
           "isDropped": true,
           "impliedText": "你",
-          "semanticRole": "Agent"
+          "semanticRole": "Agent",
+          "subRole": "pro-drop"
         },
         {
           "id": "n28-c",
@@ -2318,13 +2321,14 @@
         {
           "id": "s127-ghost",
           "role": "Topic",
-          "subRole": "implied topic",
+          "subRole": "pro-drop",
           "semanticRole": "Agent",
           "text": {
             "hanzi": "[你]",
             "pinyin": "nǐ",
             "translation": "you(implied)"
-          }
+          },
+          "isDropped": true
         },
         {
           "id": "s127-c",
@@ -4312,7 +4316,8 @@
           "role": "Topic",
           "semanticRole": "Agent",
           "isDropped": true,
-          "impliedText": "规律"
+          "impliedText": "规律",
+          "subRole": "pro-drop"
         },
         {
           "id": "s69-c",
@@ -4475,7 +4480,8 @@
           "role": "Topic",
           "semanticRole": "Agent",
           "isDropped": true,
-          "impliedText": "规律"
+          "impliedText": "规律",
+          "subRole": "pro-drop"
         },
         {
           "id": "s87-c",
@@ -4934,7 +4940,8 @@
           "role": "Topic",
           "semanticRole": "Experiencer",
           "isDropped": true,
-          "impliedText": "这"
+          "impliedText": "这",
+          "subRole": "pro-drop"
         },
         {
           "id": "n100-c",
@@ -5895,7 +5902,8 @@
           "role": "Topic",
           "semanticRole": "Agent",
           "isDropped": true,
-          "impliedText": "我"
+          "impliedText": "我",
+          "subRole": "pro-drop"
         },
         {
           "id": "n13-c",
@@ -6365,7 +6373,8 @@
           "role": "Topic",
           "semanticRole": "Agent",
           "isDropped": true,
-          "impliedText": "我们"
+          "impliedText": "我们",
+          "subRole": "pro-drop"
         },
         {
           "id": "n14-c",
@@ -6804,7 +6813,8 @@
           "role": "Topic",
           "semanticRole": "Theme",
           "isDropped": true,
-          "impliedText": "你"
+          "impliedText": "你",
+          "subRole": "pro-drop"
         },
         {
           "id": "s91-c",
@@ -6949,7 +6959,8 @@
           "role": "Topic",
           "semanticRole": "Agent",
           "isDropped": true,
-          "impliedText": "他"
+          "impliedText": "他",
+          "subRole": "pro-drop"
         },
         {
           "id": "n17-c",
@@ -6979,7 +6990,9 @@
                       "role": "Subject",
                       "isDropped": true,
                       "impliedText": "他",
-                      "semanticRole": "Agent"
+                      "semanticRole": "Agent",
+                      "subRole": "pro-drop",
+                      "refersToId": "n17-topic"
                     },
                     {
                       "id": "n17-comp-vp",
@@ -7055,7 +7068,8 @@
           "role": "Topic",
           "semanticRole": "Agent",
           "isDropped": true,
-          "impliedText": "它"
+          "impliedText": "它",
+          "subRole": "pro-drop"
         },
         {
           "id": "n18-c",
@@ -7130,7 +7144,8 @@
           "role": "Topic",
           "semanticRole": "Agent",
           "isDropped": true,
-          "impliedText": "我"
+          "impliedText": "我",
+          "subRole": "topic-chain"
         },
         {
           "id": "n94-c",
@@ -7209,7 +7224,8 @@
           "role": "Topic",
           "semanticRole": "Agent",
           "isDropped": true,
-          "impliedText": "我"
+          "impliedText": "我",
+          "subRole": "topic-chain"
         },
         {
           "id": "n95-c",
@@ -7279,7 +7295,8 @@
           "role": "Topic",
           "semanticRole": "Agent",
           "isDropped": true,
-          "impliedText": "他"
+          "impliedText": "他",
+          "subRole": "topic-chain"
         },
         {
           "id": "n96-c",
@@ -11501,9 +11518,10 @@
         {
           "id": "s81-t",
           "role": "Topic",
-          "semanticRole": "Agent",
+          "semanticRole": "Theme",
           "isDropped": true,
-          "impliedText": "[现场]"
+          "impliedText": "[现场]",
+          "subRole": "expletive"
         },
         {
           "id": "s81-c",
@@ -13745,10 +13763,11 @@
                 {
                   "id": "s132-ghost",
                   "role": "Topic",
-                  "subRole": "implied topic",
+                  "subRole": "pro-drop",
                   "semanticRole": "Agent",
                   "isDropped": true,
-                  "impliedText": "[有人]"
+                  "impliedText": "[有人]",
+                  "refersToId": "s132-t"
                 },
                 {
                   "id": "s132-vp",

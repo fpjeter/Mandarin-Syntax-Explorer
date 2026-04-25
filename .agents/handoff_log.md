@@ -326,8 +326,8 @@ Append a new block to `## Pending Requests` using this exact format:
 1. No issues. Examined all 17 ghost nodes across 16 sentences.
 
 ### [2026-04-25] Orchestrator -> Data Linguist
-**Status**: ?? Active
-**Task**: Ghost Node Consistency Audit — JSON Normalization
+**Status**: ?? Done
+**Task**: Ghost Node Consistency Audit ï¿½ JSON Normalization
 **Branch**: `main`
 
 **Context**: The Educational Publisher has defined the official ghost node conventions in `ghost_node_conventions.md`. You must now normalize all 17 ghost nodes (`isDropped: true`) in `modern_sentences.json` to comply. Read the full convention document first.
@@ -336,17 +336,17 @@ Append a new block to `## Pending Requests` using this exact format:
 
 **For each ghost node, apply ALL of the following:**
 
-1. **`refersToId`** — Add (or verify) it points to the correct referent node id. Sentence-level Topic for most; Pivot node for pivotal constructions; Topic node for Discourse Context sentences.
+1. **`refersToId`** ï¿½ Add (or verify) it points to the correct referent node id. Sentence-level Topic for most; Pivot node for pivotal constructions; Topic node for Discourse Context sentences.
 
-2. **`role`** — Set to `Topic` if the ghost IS the sentence-level discourse topic (no overt Topic exists above it). Set to `Subject` if there is an overt Topic and the ghost is inside the Comment/embedded clause.
+2. **`role`** ï¿½ Set to `Topic` if the ghost IS the sentence-level discourse topic (no overt Topic exists above it). Set to `Subject` if there is an overt Topic and the ghost is inside the Comment/embedded clause.
 
-3. **`subRole`** — Set to exactly one of:
-   - `pro-drop` — pronoun omitted because referent is contextually obvious (most cases)
-   - `topic-chain` — subject carries over from a prior sentence (Discourse Context sentences: s94, s95, s96)
-   - `expletive` — implicit scene anchor with no real referent (s81 only)
-   - Remove `implied topic` (deprecated) — replace with `pro-drop` (affects s132).
+3. **`subRole`** ï¿½ Set to exactly one of:
+   - `pro-drop` ï¿½ pronoun omitted because referent is contextually obvious (most cases)
+   - `topic-chain` ï¿½ subject carries over from a prior sentence (Discourse Context sentences: s94, s95, s96)
+   - `expletive` ï¿½ implicit scene anchor with no real referent (s81 only)
+   - Remove `implied topic` (deprecated) ï¿½ replace with `pro-drop` (affects s132).
 
-4. **`semanticRole`** — Set to match the `semanticRole` of the referent node (inherit, don't assign independently). Exception: s81 expletive gets `semanticRole: Theme`.
+4. **`semanticRole`** ï¿½ Set to match the `semanticRole` of the referent node (inherit, don't assign independently). Exception: s81 expletive gets `semanticRole: Theme`.
 
 **Run `npm run qa` after all changes. Fix any validation errors before reporting complete.**
 **Mark this ticket ? Done. Do NOT commit code.**
