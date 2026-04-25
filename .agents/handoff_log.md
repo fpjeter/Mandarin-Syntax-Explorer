@@ -32,7 +32,7 @@
 
 | Line | Assigned To | Task | Urgency |
 |------|-------------|------|---------|
-| 493 | Linguistics Specialist | Classical Expansion Phase B -- Draft 5 Sentences | MEDIUM |
+| 548 | Educational Publisher | Classical Expansion Phase B -- Pedagogical Review | MEDIUM |
 
 ---
 
@@ -540,6 +540,30 @@ Add subRole: implicit conditional to its primary Adjunct node to distinguish it 
 
 **Do NOT ingest into JSON -- drafting only. Do NOT commit code.**
 **Mark this ticket done.**
+
+**Urgency**: MEDIUM
+
+### [2026-04-25] Orchestrator -> Educational Publisher
+**Status**: ?? Active
+**Task**: Classical Expansion Phase B -- Pedagogical Review of 5 Proposed Sentences
+**Branch**: main
+
+**Context**: The Linguistics Specialist has completed the Phase B sentence drafts in docs/data_drafts/classical_sentence_proposals_phaseB.md. Note that the Specialist self-corrected twice (cc41 and cc43) before settling on the final examples -- the final selections are the ones WITHOUT the strikethrough text.
+
+**Your review should address:**
+
+1. **cc39 (?? triple parallel -- ???):** The Specialist uses ? as a quasi-copula (counts as/is valued as). DECISION: Should the explanation strongly flag that this ? is NOT modern ? (for/because/as a result of)? This is a major disambiguation point for learners.
+
+2. **cc40 (?? -- ????):** The Specialist proposes this as a zero-copula adjectival predication. The key insight is that classical Chinese can predicate with a bare adjective (?? = the comment, no verb needed). Is this lesson clear enough, and is the sentence accessible enough for our learner profile?
+
+3. **cc41 (?? -- ?????):** The passive construction. The AST notes describe a Head Verb(?) opening an Embedded Clause. DECISION: Does this conflict with the FLS position paper's treatment of passives? Compare with how modern BEI sentences are structured in modern_sentences.json before approving.
+
+4. **cc42 (?? -- ????????):** The Specialist calls this a synthesis sentence combining conditional + ? + ?-coverb. Is three-pattern synthesis too complex for a single sentence, or is the educational payoff of pattern composition worth it?
+
+5. **cc43 (??? -- ??????):** Like cc34, this is an IMPLICIT causative with no ?/? marker. The Specialist argues the implicit pattern is actually MORE frequent than the explicit one. DECISION: Approve in Classical Causatives, or should it be flagged as implicit-causative the same way cc34 was flagged as implicit-conditional?
+
+**Produce:** docs/data_drafts/classical_phaseB_pedagogical_review.md with a verdict (Approve / Revise / Defer) for each sentence.
+**Mark this ticket done. Do NOT edit JSON or commit code.**
 
 **Urgency**: MEDIUM
 
