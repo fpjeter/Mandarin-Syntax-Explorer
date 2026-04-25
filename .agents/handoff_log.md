@@ -20,7 +20,7 @@
 
 | Line | Assigned To | Task | Urgency |
 |------|-------------|------|---------|
-| 457 | Data Linguist | Classical Expansion Phase A -- Ingest cc31-cc38 | MEDIUM |
+| 493 | Linguistics Specialist | Classical Expansion Phase B -- Draft 5 Sentences | MEDIUM |
 
 ---
 
@@ -485,6 +485,49 @@ Add subRole: implicit conditional to its primary Adjunct node to distinguish it 
 
 **After ingestion:** Run npm run qa. All tests must pass before reporting complete.
 **Mark this ticket done. Do NOT commit code.**
+
+**Urgency**: MEDIUM
+
+### [2026-04-25] Orchestrator -> Linguistics Specialist
+**Status**: ?? Active
+**Task**: Classical Expansion Phase B -- Draft 5 New Sentences
+**Branch**: main
+
+**Context**: Phase A is complete (38 sentences, 8 categories). Read docs/whitepapers/classical_pedagogical_strategy.md for the Phase B rationale. Key note: cc34 (??) was moved from Causatives to Conditionals during Phase A review, so Classical Conditionals now has 3 sentences and Classical Causatives has only 1. Phase B adds the 2nd causative and a 4th conditional.
+
+**Phase B Scope -- 5 sentences (cc39-cc43):**
+
+1. EXPAND: Topic-Comment in Classical Chinese -- 2 sentences
+   - cc39: Zero-copula pattern (X?,Y?) or contrastive topic pair -- from «??»
+   - cc40: Parallel/formulaic structure -- from «??». Use a widely-anthologized verse with accessible vocabulary (e.g. ???? or ????). Vocabulary must be manageable for learners.
+   - Category key: use the closest existing category or propose a new one if Topic-Comment is not represented
+
+2. NEW CATEGORY: Classical Passive (?…?…) -- 1 sentence
+   - cc41: ?…?… passive construction from «??»
+   - This was deferred from Phase A because learners need nominalizer (?) grounding first -- that groundwork is now done via cc37.
+   - Category key: Classical Passive (?…?…)
+
+3. EXPAND: Classical Conditionals (?/?/?) -- 1 sentence
+   - cc42: A conditional from «??» to add a 4th example and the historiographical register
+   - Category key: Classical Conditionals (?/?/?)
+
+4. EXPAND: Classical Causatives (?/?) -- 1 sentence
+   - cc43: ?-causative from ??? or ??? (Tang/Song prose -- more accessible vocabulary than classical causatives)
+   - Category key: Classical Causatives (?/?)
+
+**Output format:** Produce docs/data_drafts/classical_sentence_proposals_phaseB.md. For each sentence provide:
+- Classical Chinese text (traditional characters)
+- Pinyin romanization
+- Modern Chinese translation
+- English translation
+- Source citation
+- AST Structure Notes (key nodes, structural features, nesting depth)
+- Cross-dataset echo (modern sentence category parallel)
+
+**ID range:** cc39 through cc43 (verify: node -e "const d=require('./src/data/classical_sentences.json'); console.log(Math.max(...d.map(s=>parseInt(s.id.replace('cc','')))))")
+
+**Do NOT ingest into JSON -- drafting only. Do NOT commit code.**
+**Mark this ticket done.**
 
 **Urgency**: MEDIUM
 
