@@ -20,7 +20,7 @@
 
 | Line | Assigned To | Task | Urgency |
 |------|-------------|------|---------|
-| 360 | Linguistics Specialist | Classical Expansion Phase A -- Draft 8 Sentences | MEDIUM |
+| 420 | Educational Publisher | Classical Expansion Phase A -- Pedagogical Review | MEDIUM |
 
 ---
 
@@ -412,6 +412,36 @@ For Discourse Context sentences (s94, s95, s96), this sentinel could allow the f
 **Do NOT ingest into JSON -- drafting only. Do NOT commit code.**
 **Once complete, write a follow-up ticket for the Educational Publisher to review.**
 **Mark this ticket done.**
+
+**Urgency**: MEDIUM
+
+### [2026-04-25] Orchestrator -> Educational Publisher
+**Status**: ?? Active
+**Task**: Classical Expansion Phase A -- Pedagogical Review of 8 Proposed Sentences
+**Branch**: main
+
+**Context**: The Linguistics Specialist has completed the Phase A sentence drafts in docs/data_drafts/classical_sentence_proposals_phaseA.md. Read it carefully alongside docs/whitepapers/classical_pedagogical_strategy.md (your own phasing plan) before reviewing.
+
+**Your review should address:**
+
+1. **cc31 (?/? conditional, ??):** The sentence is from ??? (the great boat passage). Is the complexity appropriate for Phase A, or is it too heavy for a first conditional example?
+
+2. **cc32 (? conditional, ???):** The Specialist flags this as a double showcase -- conditional frame PLUS object fronting (??). Do you agree this is a feature, not a bug? Or does double-tagging dilute both lessons?
+
+3. **cc33 (? causative, ???):** Clean pivotal construction. Flag any issues with the AST description.
+
+4. **cc34 (?? -- classified as causative):** The Specialist acknowledges this sentence has NO explicit ?/? marker -- it demonstrates causative *implication* via parallel clause structure. DECISION REQUIRED: Should cc34 stay in the Classical Causatives category (as an advanced implicit example), be moved to Classical Conditionals (it is structurally a conditional), or be deferred to Phase B?
+
+5. **cc35 (? fronting, ??):** The Specialist self-corrected from an initial wrong sentence. The revised cc35 teaches classical ? as a demonstrative pronoun, not the modern copula. Is this distinction clearly flagged for learners?
+
+6. **cc36 (? interrogative, ??):** Approve/flag.
+
+7. **cc37 (? nominalizer wrapping full clause, ??):** The Specialist calls this the FLS Matryoshka Principle. Confirm the pedagogical framing is accessible.
+
+8. **cc38 (? conditional/generic, ??):** The Specialist notes the subRole should be conditional nominalizer. Confirm and add any notes for the Data Linguist.
+
+**Produce:** A review document (classical_phaseA_pedagogical_review.md) in docs/data_drafts/ with a verdict (Approve / Revise / Defer) for each sentence and any rewrite notes for the Data Linguist.
+**Mark this ticket done. Do NOT edit JSON or commit code.**
 
 **Urgency**: MEDIUM
 
