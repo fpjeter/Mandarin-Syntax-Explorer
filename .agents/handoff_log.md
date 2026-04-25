@@ -578,7 +578,7 @@ Add subRole: implicit conditional to its primary Adjunct node to distinguish it 
 1. No issues.
 
 ### [2026-04-25] Orchestrator -> Data Linguist
-**Status**: ?? Active
+**Status**: ?? Done
 **Task**: Classical Expansion Phase B -- Ingest cc39-cc43 into classical_sentences.json
 **Branch**: main
 
@@ -600,7 +600,7 @@ Add subRole: implicit conditional to its primary Adjunct node to distinguish it 
 
 **Category keys to add to classicalCategories.ts:**
 1. Topic-Comment (??) -- for cc39 and cc40
-2. Classical Passive (?…?…) -- for cc41
+2. Classical Passive (?ï¿½?ï¿½) -- for cc41
 
 **ID range:** cc39 through cc43.
 **Verify next ID with:** node -e "const d=require('./src/data/classical_sentences.json'); console.log(Math.max(...d.map(s=>parseInt(s.id.replace('cc','')))))"
