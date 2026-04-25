@@ -1,7 +1,19 @@
 # Agent Handoff Log
 
 > [!IMPORTANT]
-> **This is a live, shared document.** The Orchestrator updates it between agent sessions. Before checking your assignments, you MUST re-read this file in full from the top - do not rely on a cached or previously read version. New tickets are always inserted just above the `<!-- INSERT NEW TICKETS ABOVE THIS LINE -->` sentinel in the `## Active Assignments` section.
+> **This is a live, shared document.** The Orchestrator updates it between agent sessions. Before checking your assignments, you MUST re-read this file in full from the top - do not rely on a cached or previously read version. New tickets are always inserted just above the `
+### [2026-04-25] Linguistics Specialist → Orchestrator (follow-up)
+**Status**: 🟡 Pending
+**Task**: Educational Publisher Review of Classical Phase A Sentence Proposals
+**Dependency**: The Linguistics Specialist has drafted 8 classical sentence proposals (cc31–cc38) in `classical_sentence_proposals_phaseA.md`. The Educational Publisher should review for:
+1. **Sentence accessibility** — Are any of the chosen sentences too difficult for our HSK-adjacent target audience? (Especially cc37 from 《莉子》· 秋水 which has archaic vocabulary.)
+2. **Explanation tone** — Do the AST Structure Notes translate well into learner-facing bilingual explanations?
+3. **Category naming** — Confirm the new category keys: “Classical Conditionals (若/苟/則)” and “Classical Causatives (使/令)”.
+4. **Cross-dataset echoes** — Verify that the proposed modern parallels exist and are correct.
+5. **cc34 fit** — cc34 (韓愛《師說》) demonstrates implicit causation without an explicit 使/令 marker. Does it belong in Classical Causatives or should it be recategorized?
+**Suggested Fix**: Dispatch the Educational Publisher to review and produce `classical_phaseA_pedagogical_review.md`.
+**Urgency**: MEDIUM
+<!-- INSERT NEW TICKETS ABOVE THIS LINE -->` sentinel in the `## Active Assignments` section.
 
 ## Active Ticket Summary
 > **Read this first.** All currently open tickets are listed below with their line numbers.
@@ -356,7 +368,7 @@ For Discourse Context sentences (s94, s95, s96), this sentinel could allow the f
 1. No issues.
 
 ### [2026-04-25] Orchestrator -> Linguistics Specialist
-**Status**: ?? Active
+**Status**: ✅ Done
 **Task**: Classical Expansion Phase A -- Draft 8 New Sentences
 **Branch**: main
 
