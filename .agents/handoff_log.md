@@ -32,7 +32,7 @@
 
 | Line | Assigned To | Task | Urgency |
 |------|-------------|------|---------|
-| 548 | Educational Publisher | Classical Expansion Phase B -- Pedagogical Review | MEDIUM |
+| 582 | Data Linguist | Classical Expansion Phase B -- Ingest cc39-cc43 | MEDIUM |
 
 ---
 
@@ -544,7 +544,7 @@ Add subRole: implicit conditional to its primary Adjunct node to distinguish it 
 **Urgency**: MEDIUM
 
 ### [2026-04-25] Orchestrator -> Educational Publisher
-**Status**: ?? Active
+**Status**: Done
 **Task**: Classical Expansion Phase B -- Pedagogical Review of 5 Proposed Sentences
 **Branch**: main
 
@@ -564,6 +564,49 @@ Add subRole: implicit conditional to its primary Adjunct node to distinguish it 
 
 **Produce:** docs/data_drafts/classical_phaseB_pedagogical_review.md with a verdict (Approve / Revise / Defer) for each sentence.
 **Mark this ticket done. Do NOT edit JSON or commit code.**
+
+> [!NOTE]
+> Produced docs/data_drafts/classical_phaseB_pedagogical_review.md. All 5 sentences approved:
+> - **cc39**: Flag 為 as quasi-copula (≠ modern 为). Tag 之 with refersToId.
+> - **cc40**: Zero-copula predication is the core lesson. Do NOT insert hidden copula.
+> - **cc41**: Head Verb framing for 為-passive is correct (differs from 把 Adjunct model). Cross-ref cc37 and modern BEI.
+> - **cc42**: Three-pattern synthesis is the Phase B pedagogical payoff, not overload.
+> - **cc43**: Approve in Causatives with subRole: implicit causative (consistent with cc34 precedent).
+> Two new categories needed: Topic-Comment (主題), Classical Passive (為…所…).
+
+**Issues Encountered:**
+1. No issues.
+
+### [2026-04-25] Orchestrator -> Data Linguist
+**Status**: ?? Active
+**Task**: Classical Expansion Phase B -- Ingest cc39-cc43 into classical_sentences.json
+**Branch**: main
+
+**Context**: All 5 Phase B sentences approved with no revisions. Read BOTH before starting:
+- docs/data_drafts/classical_sentence_proposals_phaseB.md (source sentences + AST notes)
+- docs/data_drafts/classical_phaseB_pedagogical_review.md (verdicts and per-sentence Data Linguist notes)
+
+**Per-sentence Data Linguist notes (from pedagogical review):**
+
+- cc39 (???): Tag ? with subRole: quasi-copula. Tag ? in ?? with subRole: anaphoric pronoun and refersToId pointing to the ? Topic node.
+
+- cc40 (????): Tag ?? with role: Predicate, subRole: reduplicated stative. Clause 1 Comment has NO Head Verb -- this is intentional. Do NOT add a hidden copula node.
+
+- cc41 (?????): ? gets role: Head Verb (this is different from the ? Adjunct model -- the passive ? genuinely governs an embedded clause). Explanation must cross-reference cc37 (?-nominalization) and the modern BEI sentences (s128, s132).
+
+- cc42 (????????): The implicit ghost Topic (?) in clause 2 follows Convention 1 Addendum: refersToId: null, subRole: pro-drop, role: Topic.
+
+- cc43 (??????): Tag with subRole: implicit causative (parallel to cc34 subRole: implicit conditional). Tag ? and ? with semanticRole: Patient. Tag ? and ? as Head Verb with subRole: causative intransitive.
+
+**Category keys to add to classicalCategories.ts:**
+1. Topic-Comment (??) -- for cc39 and cc40
+2. Classical Passive (?�?�) -- for cc41
+
+**ID range:** cc39 through cc43.
+**Verify next ID with:** node -e "const d=require('./src/data/classical_sentences.json'); console.log(Math.max(...d.map(s=>parseInt(s.id.replace('cc','')))))"
+
+**After ingestion:** Run npm run qa. All tests must pass before reporting complete.
+**Mark this ticket done. Do NOT commit code.**
 
 **Urgency**: MEDIUM
 
