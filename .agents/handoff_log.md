@@ -13,6 +13,18 @@
 5. **cc34 fit** — cc34 (韓愛《師說》) demonstrates implicit causation without an explicit 使/令 marker. Does it belong in Classical Causatives or should it be recategorized?
 **Suggested Fix**: Dispatch the Educational Publisher to review and produce `classical_phaseA_pedagogical_review.md`.
 **Urgency**: MEDIUM
+
+### [2026-04-25] Linguistics Specialist → Orchestrator (follow-up)
+**Status**: 🟡 Pending
+**Task**: Educational Publisher Review of Classical Phase B Sentence Proposals
+**Dependency**: The Linguistics Specialist has drafted 5 classical sentence proposals (cc39–cc43) in `docs/data_drafts/classical_sentence_proposals_phaseB.md`. The Educational Publisher should review for:
+1. **Category placement for cc39/cc40**: The draft proposes a new "Topic-Comment" category, but this may be too generic since ALL sentences are topic-comment. Should cc39 go under Rhetorical Patterns and cc40 under an existing category? Or is a narrower label like "Classical Predication (無繫詞謂語)" more appropriate?
+2. **cc41 passive clarity**: Is 信為人所笑 (5 characters) too terse for an accessible teaching example, or is brevity an advantage?
+3. **cc43 implicit causative**: This uses transitivity shift (興國/亡身) without an explicit 使/令 marker. Does it belong in Classical Causatives or should it get a different label?
+4. **《詩經》 vocabulary**: cc40 uses 蒹葵蒼蒼 -- widely anthologized but archaic. Confirm it meets the accessibility bar.
+5. **Source citation accuracy**: Verify all source attributions.
+**Suggested Fix**: Dispatch the Educational Publisher to review and produce `classical_phaseB_pedagogical_review.md`.
+**Urgency**: MEDIUM
 <!-- INSERT NEW TICKETS ABOVE THIS LINE -->` sentinel in the `## Active Assignments` section.
 
 ## Active Ticket Summary
@@ -489,7 +501,7 @@ Add subRole: implicit conditional to its primary Adjunct node to distinguish it 
 **Urgency**: MEDIUM
 
 ### [2026-04-25] Orchestrator -> Linguistics Specialist
-**Status**: ?? Active
+**Status**: ✅ Done
 **Task**: Classical Expansion Phase B -- Draft 5 New Sentences
 **Branch**: main
 
@@ -498,17 +510,17 @@ Add subRole: implicit conditional to its primary Adjunct node to distinguish it 
 **Phase B Scope -- 5 sentences (cc39-cc43):**
 
 1. EXPAND: Topic-Comment in Classical Chinese -- 2 sentences
-   - cc39: Zero-copula pattern (X?,Y?) or contrastive topic pair -- from �??�
-   - cc40: Parallel/formulaic structure -- from �??�. Use a widely-anthologized verse with accessible vocabulary (e.g. ???? or ????). Vocabulary must be manageable for learners.
+   - cc39: Zero-copula pattern (X?,Y?) or contrastive topic pair -- from �??�
+   - cc40: Parallel/formulaic structure -- from �??�. Use a widely-anthologized verse with accessible vocabulary (e.g. ???? or ????). Vocabulary must be manageable for learners.
    - Category key: use the closest existing category or propose a new one if Topic-Comment is not represented
 
-2. NEW CATEGORY: Classical Passive (?�?�) -- 1 sentence
-   - cc41: ?�?� passive construction from �??�
+2. NEW CATEGORY: Classical Passive (?�?�) -- 1 sentence
+   - cc41: ?�?� passive construction from �??�
    - This was deferred from Phase A because learners need nominalizer (?) grounding first -- that groundwork is now done via cc37.
-   - Category key: Classical Passive (?�?�)
+   - Category key: Classical Passive (?�?�)
 
 3. EXPAND: Classical Conditionals (?/?/?) -- 1 sentence
-   - cc42: A conditional from �??� to add a 4th example and the historiographical register
+   - cc42: A conditional from �??� to add a 4th example and the historiographical register
    - Category key: Classical Conditionals (?/?/?)
 
 4. EXPAND: Classical Causatives (?/?) -- 1 sentence
