@@ -252,6 +252,26 @@ Append a new block to `## Pending Requests` using this exact format:
 
 **Urgency**: HIGH
 
+### [2026-04-25] Orchestrator -> Educational Publisher
+**Status**: ?? Active
+**Task**: BA Fix — Update explanations for s126, s127, s133
+**Branch**: `main`
+
+**Context**: The Data Linguist has refactored the AST trees for s126, s127, and s133 to use the correct Adjunct model (? + NP as a pre-verbal adjunct, NOT an Embedded Clause). The structural trees are now correct, but the `explanation` fields still describe ? using the old Embedded Clause framing.
+
+**Action Required**:
+1. Open `src/data/modern_sentences.json` and find sentences s126, s127, and s133.
+2. Read the `explanation.en` and `explanation.zh` for each.
+3. Rewrite any language that describes ? as a 'Head Verb', as 'opening an embedded clause', or as 'taking an object that becomes a Topic'. Replace with language consistent with the Adjunct model:
+   - ? is a **disposal marker** that forms a pre-verbal adjunct with its object.
+   - The object (?, ?, ??) is the **Patient** — the thing being disposed of.
+   - The main verb (??, ??, ??) is a separate Verb Phrase that operates on that patient.
+   - Reference s3 or s4 explanations for tone and phrasing guidance.
+4. Run `npm run qa` after edits.
+5. Mark this ticket ? Done. Do NOT commit code.
+
+**Urgency**: HIGH
+
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 ### [2026-04-24] Orchestrator ? Linguistics Specialist
 **Status**: âœ… Done
