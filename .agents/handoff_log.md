@@ -32,7 +32,7 @@
 
 | Line | Assigned To | Task | Urgency |
 |------|-------------|------|---------|
-| 582 | Data Linguist | Classical Expansion Phase B -- Ingest cc39-cc43 | MEDIUM |
+| 615 | Linguistics Specialist | Classical Dataset Structural Review -- cc31-cc43 | MEDIUM |
 
 ---
 
@@ -607,6 +607,38 @@ Add subRole: implicit conditional to its primary Adjunct node to distinguish it 
 
 **After ingestion:** Run npm run qa. All tests must pass before reporting complete.
 **Mark this ticket done. Do NOT commit code.**
+
+**Urgency**: MEDIUM
+
+### [2026-04-25] Orchestrator -> Linguistics Specialist
+**Status**: ?? Active
+**Task**: Classical Dataset Structural Review -- cc31-cc43
+**Branch**: main
+
+**Context**: Classical Expansion Phases A and B are fully ingested (cc31-cc43, 13 new sentences, 5 new categories). Before we close the expansion epic, you must perform a structural review of all 13 new sentences in src/data/classical_sentences.json.
+
+**Review Scope:**
+For each sentence cc31-cc43, verify:
+1. **Tree structure accuracy** -- does the AST correctly represent the grammatical structure of the classical Chinese?
+2. **Role assignments** -- are role and subRole values correct at every node?
+3. **FLS compliance** -- are the conventions from docs/whitepapers/fls_position_paper.md respected?
+4. **Cross-sentence consistency** -- are parallel structures (e.g. implicit causative in cc34 and cc43) tagged identically?
+5. **New category integrity** -- review cc31/cc32/cc34/cc42 (Classical Conditionals), cc33/cc43 (Classical Causatives), cc41 (Classical Passive), cc39/cc40 (Topic-Comment) as coherent pedagogical sets
+
+**Pay special attention to:**
+- cc34 vs cc43: both are implicit pattern examples -- confirm subRole consistency (implicit conditional vs implicit causative)
+- cc40: the Comment of clause 1 has NO Head Verb (bare adjective predication) -- confirm this is correctly represented
+- cc41: ? is tagged as Head Verb (NOT Adjunct) -- confirm this is structurally justified vs the ? Adjunct precedent
+- cc42: ghost node for implicit ? -- confirm refersToId: null and subRole: pro-drop per ghost node conventions
+
+**Output:** Produce a review document (docs/audits/classical_batch_review.md) listing any issues found. For each issue specify:
+- Sentence ID
+- Node ID
+- The problem
+- Your recommended fix
+
+If no issues are found, state that explicitly.
+**Mark this ticket done. Do NOT edit JSON or commit code.**
 
 **Urgency**: MEDIUM
 
