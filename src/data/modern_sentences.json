@@ -2245,53 +2245,54 @@
               }
             },
             {
-              "id": "s126-ba-phrase",
-              "role": "Head Verb",
+              "id": "s126-ba",
+              "role": "Adjunct",
               "subRole": "disposal marker",
-              "text": {
-                "hanzi": "把",
-                "pinyin": "bǎ",
-                "translation": "take hold of"
-              }
-            },
-            {
-              "id": "s126-nested",
-              "role": "Embedded Clause",
               "children": [
                 {
-                  "id": "s126-inner-t",
-                  "role": "Topic",
+                  "id": "s126-ba-prep",
+                  "role": "Head Verb",
+                  "subRole": "disposal marker",
+                  "text": {
+                    "hanzi": "把",
+                    "pinyin": "bǎ",
+                    "translation": "(object fronting)"
+                  }
+                },
+                {
+                  "id": "s126-ba-obj",
+                  "role": "Object",
                   "semanticRole": "Patient",
                   "text": {
                     "hanzi": "门",
                     "pinyin": "mén",
                     "translation": "door"
                   }
+                }
+              ]
+            },
+            {
+              "id": "s126-vp",
+              "role": "Verb Phrase",
+              "children": [
+                {
+                  "id": "s126-hv",
+                  "role": "Head Verb",
+                  "text": {
+                    "hanzi": "关",
+                    "pinyin": "guān",
+                    "translation": "close"
+                  }
                 },
                 {
-                  "id": "s126-inner-c",
-                  "role": "Comment",
-                  "children": [
-                    {
-                      "id": "s126-hv",
-                      "role": "Head Verb",
-                      "text": {
-                        "hanzi": "关",
-                        "pinyin": "guān",
-                        "translation": "close"
-                      }
-                    },
-                    {
-                      "id": "s126-comp",
-                      "role": "Complement",
-                      "subRole": "directional",
-                      "text": {
-                        "hanzi": "上",
-                        "pinyin": "shàng",
-                        "translation": "shut/up"
-                      }
-                    }
-                  ]
+                  "id": "s126-comp",
+                  "role": "Complement",
+                  "subRole": "directional",
+                  "text": {
+                    "hanzi": "上",
+                    "pinyin": "shàng",
+                    "translation": "shut/up"
+                  }
                 }
               ]
             }
@@ -2340,63 +2341,64 @@
               }
             },
             {
-              "id": "s127-ba-phrase",
-              "role": "Head Verb",
+              "id": "s127-ba",
+              "role": "Adjunct",
               "subRole": "disposal marker",
-              "text": {
-                "hanzi": "把",
-                "pinyin": "bǎ",
-                "translation": "take hold of"
-              }
-            },
-            {
-              "id": "s127-nested",
-              "role": "Embedded Clause",
               "children": [
                 {
-                  "id": "s127-inner-t",
-                  "role": "Topic",
+                  "id": "s127-ba-prep",
+                  "role": "Head Verb",
+                  "subRole": "disposal marker",
+                  "text": {
+                    "hanzi": "把",
+                    "pinyin": "bǎ",
+                    "translation": "(object fronting)"
+                  }
+                },
+                {
+                  "id": "s127-ba-obj",
+                  "role": "Object",
                   "semanticRole": "Patient",
                   "text": {
                     "hanzi": "它",
                     "pinyin": "tā",
                     "translation": "it"
                   }
+                }
+              ]
+            },
+            {
+              "id": "s127-vp",
+              "role": "Verb Phrase",
+              "children": [
+                {
+                  "id": "s127-hv",
+                  "role": "Head Verb",
+                  "text": {
+                    "hanzi": "弄",
+                    "pinyin": "nòng",
+                    "translation": "do/make"
+                  }
                 },
                 {
-                  "id": "s127-inner-c",
-                  "role": "Comment",
-                  "children": [
-                    {
-                      "id": "s127-hv",
-                      "role": "Head Verb",
-                      "text": {
-                        "hanzi": "弄",
-                        "pinyin": "nòng",
-                        "translation": "do/make"
-                      }
-                    },
-                    {
-                      "id": "s127-comp",
-                      "role": "Complement",
-                      "subRole": "result",
-                      "text": {
-                        "hanzi": "坏",
-                        "pinyin": "huài",
-                        "translation": "broken"
-                      }
-                    },
-                    {
-                      "id": "s127-le",
-                      "role": "Particle",
-                      "subRole": "aspect marker",
-                      "text": {
-                        "hanzi": "了",
-                        "pinyin": "le",
-                        "translation": "(done)"
-                      }
-                    }
-                  ]
+                  "id": "s127-comp",
+                  "role": "Complement",
+                  "subRole": "result",
+                  "text": {
+                    "hanzi": "坏",
+                    "pinyin": "huài",
+                    "translation": "broken"
+                  }
+                },
+                {
+                  "id": "s127-le",
+                  "role": "Particle",
+                  "subRole": "aspect marker",
+                  "text": {
+                    "hanzi": "了",
+                    "pinyin": "le",
+                    "translation": "(done)"
+                  }
                 }
               ]
             }
@@ -13846,62 +13848,63 @@
             },
             {
               "id": "s133-ba",
-              "role": "Head Verb",
+              "role": "Adjunct",
               "subRole": "disposal marker",
-              "text": {
-                "hanzi": "把",
-                "pinyin": "bǎ",
-                "translation": "take hold of"
-              }
-            },
-            {
-              "id": "s133-embed",
-              "role": "Embedded Clause",
               "children": [
                 {
-                  "id": "s133-inner-t",
-                  "role": "Topic",
+                  "id": "s133-ba-prep",
+                  "role": "Head Verb",
+                  "subRole": "disposal marker",
+                  "text": {
+                    "hanzi": "把",
+                    "pinyin": "bǎ",
+                    "translation": "(object fronting)"
+                  }
+                },
+                {
+                  "id": "s133-ba-obj",
+                  "role": "Object",
                   "semanticRole": "Patient",
                   "text": {
                     "hanzi": "杯子",
                     "pinyin": "bēi zi",
                     "translation": "glass/cup"
                   }
+                }
+              ]
+            },
+            {
+              "id": "s133-vp",
+              "role": "Verb Phrase",
+              "children": [
+                {
+                  "id": "s133-hv",
+                  "role": "Head Verb",
+                  "text": {
+                    "hanzi": "打",
+                    "pinyin": "dǎ",
+                    "translation": "hit"
+                  }
                 },
                 {
-                  "id": "s133-inner-c",
-                  "role": "Comment",
-                  "children": [
-                    {
-                      "id": "s133-hv",
-                      "role": "Head Verb",
-                      "text": {
-                        "hanzi": "打",
-                        "pinyin": "dǎ",
-                        "translation": "hit"
-                      }
-                    },
-                    {
-                      "id": "s133-comp",
-                      "role": "Complement",
-                      "subRole": "resultative",
-                      "text": {
-                        "hanzi": "碎",
-                        "pinyin": "suì",
-                        "translation": "shattered"
-                      }
-                    },
-                    {
-                      "id": "s133-le",
-                      "role": "Particle",
-                      "subRole": "aspect marker",
-                      "text": {
-                        "hanzi": "了",
-                        "pinyin": "le",
-                        "translation": "(completion)"
-                      }
-                    }
-                  ]
+                  "id": "s133-comp",
+                  "role": "Complement",
+                  "subRole": "resultative",
+                  "text": {
+                    "hanzi": "碎",
+                    "pinyin": "suì",
+                    "translation": "shattered"
+                  }
+                },
+                {
+                  "id": "s133-le",
+                  "role": "Particle",
+                  "subRole": "aspect marker",
+                  "text": {
+                    "hanzi": "了",
+                    "pinyin": "le",
+                    "translation": "(completion)"
+                  }
                 }
               ]
             }
