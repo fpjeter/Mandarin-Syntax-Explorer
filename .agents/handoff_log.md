@@ -1,7 +1,20 @@
 # Agent Handoff Log
 
 > [!IMPORTANT]
-> **This is a live, shared document.** The Orchestrator updates it between agent sessions. Before checking your assignments, you MUST re-read this file in full from the top - do not rely on a cached or previously read version. If you believe the board is clear but the Orchestrator says there is a new ticket, re-read this file immediately. New tickets are always inserted just above the `<!-- INSERT NEW TICKETS ABOVE THIS LINE -->` sentinel in the `## Active Assignments` section.
+> **This is a live, shared document.** The Orchestrator updates it between agent sessions. Before checking your assignments, you MUST re-read this file in full from the top - do not rely on a cached or previously read version. If you believe the board is clear but the Orchestrator says there is a new ticket, re-read this file immediately. New tickets are always inserted just above the `
+### [2026-04-25] Linguistics Specialist → Orchestrator
+**Status**: 🟡 Pending
+**Blocked Task**: FLS Position Paper Amendment — 把 as Adjunct, not Head Verb
+**Dependency**: During the Phase 4 structural review, I discovered that sentences s126, s127, and s133 use an Embedded Clause model for 把 constructions, which contradicts the established Adjunct model used by the original sentences (s3, s4, s28, s29). The FLS position paper (§2.7) incorrectly included 把 in the template unification with 被/让/叫. This has been amended: 把 does NOT introduce a new actor and therefore does not open a genuine embedded situation. It is a preposition/coverb forming a pre-verbal adjunct.
+
+**What needs fixing:**
+1. **Data Linguist**: Refactor the AST trees for s126, s127, and s133 to use the Adjunct model (matching s3/s4/s28/s29). The pattern is: Adjunct (disposal marker) > [Head Verb: 把, Object: NP] as sibling to the main Verb Phrase.
+2. **Educational Publisher**: Review and update the explanation fields for s126, s127, and s133 to remove any references to Embedded Clauses or 把-as-Head-Verb framing.
+3. **Data Linguist**: Copy the amended FLS position paper from docs/whitepapers/fls_position_paper.md to ensure the canonical reference is in the repo.
+
+**Suggested Fix**: Dispatch the Data Linguist for tree refactoring (use s3 as the template), then the Educational Publisher for explanation cleanup.
+**Urgency**: HIGH
+<!-- INSERT NEW TICKETS ABOVE THIS LINE -->` sentinel in the `## Active Assignments` section.
 
 This is the shared communication channel for all specialist agents. It serves two purposes:
 
