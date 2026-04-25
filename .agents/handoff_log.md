@@ -20,7 +20,7 @@
 
 | Line | Assigned To | Task | Urgency |
 |------|-------------|------|---------|
-| 420 | Educational Publisher | Classical Expansion Phase A -- Pedagogical Review | MEDIUM |
+| 457 | Data Linguist | Classical Expansion Phase A -- Ingest cc31-cc38 | MEDIUM |
 
 ---
 
@@ -416,7 +416,7 @@ For Discourse Context sentences (s94, s95, s96), this sentinel could allow the f
 **Urgency**: MEDIUM
 
 ### [2026-04-25] Orchestrator -> Educational Publisher
-**Status**: ?? Active
+**Status**: Done
 **Task**: Classical Expansion Phase A -- Pedagogical Review of 8 Proposed Sentences
 **Branch**: main
 
@@ -442,6 +442,49 @@ For Discourse Context sentences (s94, s95, s96), this sentinel could allow the f
 
 **Produce:** A review document (classical_phaseA_pedagogical_review.md) in docs/data_drafts/ with a verdict (Approve / Revise / Defer) for each sentence and any rewrite notes for the Data Linguist.
 **Mark this ticket done. Do NOT edit JSON or commit code.**
+
+> [!NOTE]
+> Produced docs/data_drafts/classical_phaseA_pedagogical_review.md. Verdicts: 7 Approved, 1 Revised.
+> - **cc34** (韓愈《師說》): Moved from Classical Causatives → Classical Conditionals with subRole: implicit conditional. It has no explicit 使/令 marker; structurally it is a conditional.
+> - All 7 approved sentences received detailed Data Linguist instructions (tagging notes, cross-references, explanation guidance).
+> - Classical Conditionals now has 3 examples showing a gradient: explicit 則 → question-form 苟 → juxtaposed implicit.
+
+**Issues Encountered:**
+1. No issues.
+
+### [2026-04-25] Orchestrator -> Data Linguist
+**Status**: ?? Active
+**Task**: Classical Expansion Phase A -- Ingest cc31-cc38 into classical_sentences.json
+**Branch**: main
+
+**Context**: Phase A has been approved by the Educational Publisher with one revision. Read BOTH of these before starting:
+- docs/data_drafts/classical_sentence_proposals_phaseA.md (source sentences + AST notes)
+- docs/data_drafts/classical_phaseA_pedagogical_review.md (per-sentence verdicts and Data Linguist notes)
+
+**CRITICAL REVISION -- cc34:**
+cc34 is moved from Classical Causatives to Classical Conditionals.
+Add subRole: implicit conditional to its primary Adjunct node to distinguish it from marked conditionals (cc31: ?, cc32: ?).
+
+**Per-sentence Data Linguist notes (from pedagogical review):**
+- cc31: Tag ? as role: Particle, subRole: topic pause (NOT assertion marker) in both clause-internal positions
+- cc32: Keep category = Classical Conditionals. Cross-reference Object Fronting in explanation text only.
+- cc33: Explanation must name the modern pivotal parallel (e.g. s77). Gloss both ? (say to/address) and ? (say/spoke thus).
+- cc34: Category = Classical Conditionals. Primary Adjunct gets subRole: implicit conditional.
+- cc35: Tag ? with subRole: demonstrative pronoun. Explanation must strongly flag ? != modern copula.
+- cc36: Explanation must mention ? = ancestor of modern ??.
+- cc37: Explanation must distinguish cc37-? (fact/reason nominalization) from cc38-? (conditional/generic).
+- cc38: subRole for ? = conditional nominalizer. Both ? pronouns need refersToId pointing to the Topic node.
+
+**Category keys to use (must match classicalCategories.ts exactly):**
+- Classical Conditionals (?/?/?) -- NEW: you must add this category key to classicalCategories.ts first
+- Classical Causatives (?/?) -- NEW: you must add this category key to classicalCategories.ts first
+- Object Fronting (????) -- verify this key exists
+- Nominalizers (?/?) -- already exists
+
+**ID assignment:** cc31 through cc38. Verify with: node -e "const d=require('./src/data/classical_sentences.json'); console.log('Max ID:', Math.max(...d.map(s=>parseInt(s.id.replace('cc','')))))"
+
+**After ingestion:** Run npm run qa. All tests must pass before reporting complete.
+**Mark this ticket done. Do NOT commit code.**
 
 **Urgency**: MEDIUM
 
