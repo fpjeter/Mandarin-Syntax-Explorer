@@ -2213,8 +2213,8 @@
     "pinyin": "Tā méi bǎ mén guān shàng.",
     "translation": "He didn't close the door.",
     "explanation": {
-      "en": "**他** (\"he\") is the Topic. The Comment introduces a critical rule about 把 sentences: the negation word **没** (\"didn't\") must come *before* 把, never after it. The pattern is 没 + 把 + object + verb + result. Here, **没把门关上** means \"didn't close the door,\" where 关 (\"close\") + 上 (\"shut\") form the verb-result pair. If you tried to put 没 after 把 (把门没关上), native speakers would find it unnatural. This ordering rule also applies to 别 (\"don't\") and 不: they always precede 把.",
-      "zh": "**他**是话题。**把**字句将**门**提前聚焦。动词**关**（关闭）搭配结果补语**上**（关到位），**了**标志完成。**关上**是一个紧密的动补复合词：关+上=关到合上为止。树展示了把字结构中的动词—补语融合。"
+      "en": "**他** (\"he\") is the Topic. The Comment teaches a critical word-order rule: negation words like **没** (\"didn't\") must come *before* 把, never after it. In the tree, 没 sits as a negation Adjunct, and then **把 + 门** form a second Adjunct — the **disposal marker** 把 pairs with its object 门 (\"door\") to spotlight it as the patient: \"as for the door, it didn't get closed.\" After the 把-adjunct, the main Verb Phrase **关上** delivers the action: 关 (\"close\") + 上 (\"shut\") is a verb-result compound meaning \"close all the way shut.\" This ordering — negation, then 把-adjunct, then verb — is fixed. If you tried 把门没关上, native speakers would find it unnatural.",
+      "zh": "**他**是话题。评论部分展示了一条关键语序规则：否定词**没**必须出现在把的*前面*，不能在后面。在树中，**没**是一个否定状语，然后**把+门**构成另一个状语——处置标记**把**和宾语**门**配对，把门聚焦为受事：\"门没有被关上\"。把字状语之后，主动词短语**关上**传递动作：关（关闭）+上（合上）是一个动补复合词，意思是\"关到位\"。否定词→把字状语→动词的顺序是固定的，不能调换。"
     },
     "tree": {
       "id": "s126-n",
@@ -2308,8 +2308,8 @@
     "pinyin": "Bié bǎ tā nòng huài le.",
     "translation": "Don't break it.",
     "explanation": {
-      "en": "This is a prohibition using 把. **别** (\"don't\") opens the sentence as a command marker, placed before 把 just like 没 in negative statements. The implied topic ([你], \"you\") is dropped because commands naturally omit the listener. Inside the 把 phrase, **它** (\"it\") is the spotlighted object, and **弄坏** (nòng huài, \"mess up, break\") is the verb-result compound: 弄 (\"do/make\") + 坏 (\"broken\"). The **了** signals that the breaking would result in a completed change of state. The pattern 别把...弄坏了 is one of the most common warnings in everyday Mandarin.",
-      "zh": "这是一个祈使句（命令句），话题**[你]**是隐含的。**别**表示\"不要\"，是否定性祈使标记。**把**字句将**它**提前，动词**弄**搭配结果补语**坏**（坏掉），**了**标志完成。整句的意思是：不要让这个东西变坏了。树展示了否定祈使+把字结构+动补结构三层叠加。"
+      "en": "This is a prohibition using 把. **别** (\"don't\") opens the sentence as a command marker, sitting before 把 as a negation Adjunct — just like 没 in s126. The implied topic ([你], \"you\") is dropped because commands naturally omit the listener. Then **把 + 它** form the **disposal adjunct**: the marker 把 pairs with 它 (\"it\") to spotlight it as the patient — the thing at risk of being broken. After the disposal adjunct, the main Verb Phrase **弄坏** delivers the action: 弄 (\"do/make\") + 坏 (\"broken\") is a verb-result compound. The **了** signals a completed change of state. In the tree, you can see the three layers clearly: negation (别), disposal (把+它), and action (弄坏了) — each sitting as a separate branch under the Comment.",
+      "zh": "这是一个用**把**的祈使句。**别**（不要）作为否定祈使标记出现在**把**前面，和s126中**没**的位置规则一样。话题**[你]**是隐含的，因为命令句通常省略听话者。然后**把+它**构成**处置状语**：把和它（它）配对，把它聚焦为受事——可能被弄坏的东西。处置状语之后，主动词短语**弄坏**传递动作：弄（做/搞）+坏（坏掉）是一个动补复合词。**了**标志着完成的状态变化。在树中可以清楚看到三层结构：否定（别）、处置（把+它）、动作（弄坏了）——各自作为评论下的独立分支。"
     },
     "tree": {
       "id": "s127-n",
@@ -13815,8 +13815,8 @@
     "pinyin": "Tā bù xiǎo xīn bǎ bēi zi dǎ suì le.",
     "translation": "She accidentally broke the glass (into pieces).",
     "explanation": {
-      "en": "This sentence combines the **把** disposal construction and a **resultative complement**. The verb phrase **打碎** is a verb-result compound: **打** (\"hit\") is the action, and **碎** (\"shattered\") is the result. The adverb **不小心** (\"carelessly\") sits before 把 as an Adjunct.",
-      "zh": "这句话结合了**把字句**和**结果补语**。动词短语**打碎**是动补结构：**打**是动作，**碎**是结果。副词**不小心**作为状语放在**把**前面。"
+      "en": "**她** (\"she\") is the Topic. Before anything else, the manner adverb **不小心** (\"carelessly/accidentally\") sets the scene as an Adjunct — telling you *how* the action happened. Then **把 + 杯子** form the **disposal adjunct**: the marker 把 pairs with 杯子 (\"cup/glass\") to spotlight it as the patient, the thing about to be affected. After the disposal adjunct, the main Verb Phrase **打碎** delivers the action: 打 (\"hit/strike\") + 碎 (\"shattered\") is a verb-result compound — one word for the action, one for the outcome. The **了** marks completion: the shattering is done. In the tree, you can see three clear layers under the Comment: manner adjunct (不小心), disposal adjunct (把+杯子), and the verb-result action (打碎了). This sentence is a perfect example of how 把 works with resultative complements: spotlight the object, then tell the listener exactly what happened to it.",
+      "zh": "**她**是话题。首先，方式状语**不小心**（无意中）铺设场景——说明动作是怎么发生的。然后**把+杯子**构成**处置状语**：把和杯子配对，把杯子聚焦为受事——即将被影响的东西。处置状语之后，主动词短语**打碎**传递动作：打（击打）+碎（碎裂）是一个动补复合词——一个字表示动作，一个字表示结果。**了**标志着完成：碎了就是碎了。在树中，评论下面有三个清晰的层次：方式状语（不小心）、处置状语（把+杯子）、动补动作（打碎了）。这句话完美展示了把字句和结果补语的配合：先聚焦宾语，再告诉听话人它发生了什么。"
     },
     "tree": {
       "id": "s133-root",

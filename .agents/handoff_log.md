@@ -253,24 +253,32 @@ Append a new block to `## Pending Requests` using this exact format:
 **Urgency**: HIGH
 
 ### [2026-04-25] Orchestrator -> Educational Publisher
-**Status**: ?? Active
-**Task**: BA Fix � Update explanations for s126, s127, s133
+**Status**: ✅ Done
+**Task**: BA Fix — Update explanations for s126, s127, s133
 **Branch**: `main`
 
-**Context**: The Data Linguist has refactored the AST trees for s126, s127, and s133 to use the correct Adjunct model (? + NP as a pre-verbal adjunct, NOT an Embedded Clause). The structural trees are now correct, but the `explanation` fields still describe ? using the old Embedded Clause framing.
+**Context**: The Data Linguist has refactored the AST trees for s126, s127, and s133 to use the correct Adjunct model (把 + NP as a pre-verbal adjunct, NOT an Embedded Clause). The structural trees are now correct, but the `explanation` fields still describe 把 using the old Embedded Clause framing.
 
 **Action Required**:
 1. Open `src/data/modern_sentences.json` and find sentences s126, s127, and s133.
 2. Read the `explanation.en` and `explanation.zh` for each.
-3. Rewrite any language that describes ? as a 'Head Verb', as 'opening an embedded clause', or as 'taking an object that becomes a Topic'. Replace with language consistent with the Adjunct model:
-   - ? is a **disposal marker** that forms a pre-verbal adjunct with its object.
-   - The object (?, ?, ??) is the **Patient** � the thing being disposed of.
-   - The main verb (??, ??, ??) is a separate Verb Phrase that operates on that patient.
+3. Rewrite any language that describes 把 as a 'Head Verb', as 'opening an embedded clause', or as 'taking an object that becomes a Topic'. Replace with language consistent with the Adjunct model:
+   - 把 is a **disposal marker** that forms a pre-verbal adjunct with its object.
+   - The object (门, 它, 杯子) is the **Patient** — the thing being disposed of.
+   - The main verb (关上, 弄坏, 打碎) is a separate Verb Phrase that operates on that patient.
    - Reference s3 or s4 explanations for tone and phrasing guidance.
 4. Run `npm run qa` after edits.
-5. Mark this ticket ? Done. Do NOT commit code.
+5. Mark this ticket ✅ Done. Do NOT commit code.
 
-**Urgency**: HIGH
+> [!NOTE]
+> Rewrote `explanation.en` and `explanation.zh` for all 3 sentences (s126, s127, s133) to use the Adjunct/disposal-marker model:
+> - **s126**: EN now describes 没 as negation Adjunct + 把+门 as disposal adjunct + 关上 as separate VP. ZH fixed: removed incorrect 了 reference, aligned with Adjunct framing.
+> - **s127**: EN now frames 别 as negation Adjunct + 把+它 as disposal adjunct + 弄坏 as separate VP. ZH fully rewritten to match.
+> - **s133**: EN/ZH expanded from 2 brief sentences to full pedagogical depth matching s3/s4. Now describes three clear layers: manner adjunct (不小心), disposal adjunct (把+杯子), verb-result action (打碎了).
+> `npm run qa` passes: 133 sentences, 1532 nodes.
+
+**Issues Encountered:**
+1. The s126 ZH previously referenced **了** (completion marker), but the sentence 他没把门关上 does not contain 了. Fixed in the rewrite.
 
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 ### [2026-04-24] Orchestrator ? Linguistics Specialist
