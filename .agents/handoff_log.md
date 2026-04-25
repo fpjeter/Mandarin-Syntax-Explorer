@@ -353,6 +353,32 @@ Append a new block to `## Pending Requests` using this exact format:
 
 **Urgency**: MEDIUM
 
+### [2026-04-25] Orchestrator -> Educational Publisher
+**Status**: ?? Active
+**Task**: Ghost Node Convention 1 -- Clarify refersToId for top-level ghost Topics
+**Branch**: main
+
+**Context**: Convention 1 of ghost_node_conventions.md states all ghost nodes must have refersToId. The Data Linguist completed normalization, but 14 of the 18 ghost nodes cannot comply because they are top-level ghost Topics -- the ghost itself IS the sentence's Topic, so there is no intra-sentence node to point refersToId at.
+
+**The 14 affected sentences:** s13, s14, s17, s18, s28, s69, s81, s87, s91, s94, s95, s96, s100, s127.
+
+**Option A -- Omit refersToId entirely for top-level ghost Topics.**
+These ghosts have no intra-sentence referent. The field is simply absent. The co-reference arc in Ghost Mode does not render. Learners see the ghost box but no arc -- which honestly reflects reality: the referent is outside this sentence.
+
+**Option B -- Add refersToId: null (explicit absence).**
+Same outcome as A, but the explicit null signals to the frontend the omission was intentional. The arc still does not render. Slightly better for future tooling.
+
+**Option C -- Introduce a sentinel value like refersToId: DISCOURSE_CONTEXT.**
+For Discourse Context sentences (s94, s95, s96), this sentinel could allow the frontend to eventually render a special arc style (e.g. a dotted line to the Discourse Context panel). For pro-drop sentences (s13, s14, etc.) it would signal referent is in the speakers mind, not the tree. Most future-friendly, but requires frontend changes to handle the sentinel.
+
+**Action Required**:
+1. Read ghost_node_conventions.md to refresh context.
+2. Choose Option A, B, or C (or propose a modification).
+3. Update ghost_node_conventions.md with an explicit addendum to Convention 1 covering this edge case.
+4. Mark this ticket done. Do NOT edit JSON or commit code.
+
+**Urgency**: LOW
+
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 ### [2026-04-24] Orchestrator ? Linguistics Specialist
 **Status**: ✅ Done
