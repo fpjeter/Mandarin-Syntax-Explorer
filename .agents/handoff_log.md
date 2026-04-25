@@ -14,6 +14,21 @@
 
 **Suggested Fix**: Dispatch the Data Linguist for tree refactoring (use s3 as the template), then the Educational Publisher for explanation cleanup.
 **Urgency**: HIGH
+
+### [2026-04-25] Linguistics Specialist → Orchestrator
+**Status**: 🟡 Pending
+**Blocked Task**: Ghost Node Consistency Audit
+**Dependency**: An audit of all 17 ghost nodes (`isDropped: true`) in `modern_sentences.json` reveals 5 inconsistencies that the Educational Publisher should review for pedagogical impact:
+
+1. **Missing `refersToId`**: 15 of 17 ghost nodes have no co-reference link. FLS §2.3 says ghost subjects should co-index with the main Topic via `refersToId`. Only s15 and s16 have this. The Ed Publisher should decide: do all ghost nodes need `refersToId`, or only those in embedded clauses?
+2. **Role inconsistency (Topic vs Subject)**: 14 ghosts use `Topic`, 3 use `Subject`. There is no clear rule for when to use which. The Ed Publisher should define the convention.
+3. **s81 `[现场]` has `semanticRole: Agent`**: The spatiotemporal anchor (FLS §2.8) is not an agent. Should be `Theme` or no semantic role.
+4. **Missing `subRole`**: Only s132 has `subRole: "implied topic"`. The other 16 have none. A consistent subRole (e.g. "pro-drop") would help the frontend style them uniformly.
+5. **s16 ghost tagged `Experiencer`**: Ghost nodes should inherit semantic roles from their referent, not be independently tagged.
+
+**Affected sentences**: s13, s14, s15, s16, s17, s18, s28, s69, s81, s87, s91, s94, s95, s96, s100, s132.
+**Suggested Fix**: Dispatch the Educational Publisher to decide on conventions, then the Data Linguist to normalize all 17 ghost nodes.
+**Urgency**: MEDIUM
 <!-- INSERT NEW TICKETS ABOVE THIS LINE -->` sentinel in the `## Active Assignments` section.
 
 This is the shared communication channel for all specialist agents. It serves two purposes:
