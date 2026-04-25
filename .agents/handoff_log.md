@@ -354,7 +354,7 @@ Append a new block to `## Pending Requests` using this exact format:
 **Urgency**: MEDIUM
 
 ### [2026-04-25] Orchestrator -> Educational Publisher
-**Status**: ?? Active
+**Status**: Done
 **Task**: Ghost Node Convention 1 -- Clarify refersToId for top-level ghost Topics
 **Branch**: main
 
@@ -377,7 +377,11 @@ For Discourse Context sentences (s94, s95, s96), this sentinel could allow the f
 3. Update ghost_node_conventions.md with an explicit addendum to Convention 1 covering this edge case.
 4. Mark this ticket done. Do NOT edit JSON or commit code.
 
-**Urgency**: LOW
+> [!NOTE]
+> Chose **Option B** (refersToId: null for top-level ghost Topics). Updated ghost_node_conventions.md with a full addendum including decision rationale, comparison table of all 3 options, revised implementation rules with per-ghost-type guidance, and a future upgrade path for Discourse Context arcs.
+
+**Issues Encountered:**
+1. No issues.
 
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 ### [2026-04-24] Orchestrator ? Linguistics Specialist
