@@ -383,6 +383,54 @@ For Discourse Context sentences (s94, s95, s96), this sentinel could allow the f
 **Issues Encountered:**
 1. No issues.
 
+### [2026-04-25] Orchestrator -> Linguistics Specialist
+**Status**: ?? Active
+**Task**: Classical Expansion Phase A -- Draft 8 New Sentences
+**Branch**: main
+
+**Context**: Phase 1 meta-review is complete. Read both strategy documents before drafting:
+- classical_expansion_strategy.md (your own theoretical analysis)
+- classical_pedagogical_strategy.md (Educational Publisher's counter-recommendations and phasing rationale)
+
+**Phase A Scope -- 8 sentences across 4 categories:**
+
+1. NEW CATEGORY: Classical Conditionals (?/?/?) -- 2 sentences
+   - Sentence A: ?/? conditional from ?? (philosophical parable register)
+   - Sentence B: ? conditional from ??? or ?? (political rhetoric register)
+   - Category key to use: Classical Conditionals (?/?/?)
+
+2. NEW CATEGORY: Classical Causatives (?/?) -- 2 sentences
+   - Sentence C: ?-causative from ??? (military/political register)
+   - Sentence D: ?-causative from Tang prose (??? or ??)
+   - Category key to use: Classical Causatives (?/?)
+
+3. EXPAND: Object Fronting (????) -- 2 sentences
+   - Sentence E: ?-marked object fronting in affirmative context, from ??
+   - Sentence F: Interrogative fronting with ?/?, from ??
+   - Category key to use: Object Fronting (????) -- verify this key exists in src/data/classicalCategories.ts
+
+4. EXPAND: Nominalizers (?/?) -- 2 sentences
+   - Sentence G: ??? construction from ??
+   - Sentence H: ? in conditional/generic sense from ??
+   - Category key to use: Nominalizers (?/?)
+
+**Output format:** Produce classical_sentence_proposals_phaseA.md with all 8 sentences. For each provide:
+- The classical Chinese text (traditional characters)
+- Pinyin romanization
+- Modern Chinese translation
+- English translation
+- Source citation (text, chapter/section)
+- AST Structure Notes: describe the key structural nodes (Topic, Adjunct, Verb Phrase, Complement, etc.) with particular attention to the pivot/frame structures in causatives and the displaced object in fronting constructions
+- Cross-dataset echo: name the modern sentence category this most closely parallels
+
+**ID range:** cc31 through cc38 (next available is cc31).
+
+**Do NOT ingest into JSON -- drafting only. Do NOT commit code.**
+**Once complete, write a follow-up ticket for the Educational Publisher to review.**
+**Mark this ticket done.**
+
+**Urgency**: MEDIUM
+
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 ### [2026-04-24] Orchestrator ? Linguistics Specialist
 **Status**: ✅ Done
