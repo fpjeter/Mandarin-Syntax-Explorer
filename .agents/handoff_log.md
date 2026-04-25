@@ -453,7 +453,7 @@ For Discourse Context sentences (s94, s95, s96), this sentinel could allow the f
 1. No issues.
 
 ### [2026-04-25] Orchestrator -> Data Linguist
-**Status**: ?? Active
+**Status**: ?? Done
 **Task**: Classical Expansion Phase A -- Ingest cc31-cc38 into classical_sentences.json
 **Branch**: main
 
