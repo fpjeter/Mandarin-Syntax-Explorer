@@ -667,7 +667,7 @@ If no issues are found, state that explicitly.
 **Urgency**: MEDIUM
 
 ### [2026-04-25] Orchestrator -> Educational Publisher
-**Status**: ?? Active
+**Status**: Done
 **Task**: Add 4 missing grammar role entries to classicalGlossary.ts
 **Branch**: main
 
@@ -675,7 +675,7 @@ If no issues are found, state that explicitly.
 
 **Missing roles (add all 4):**
 1. Head Verb -- the main lexical verb of a clause. Adapt the modern definition; classical example: ? in cc33 (causative), ? in cc41 (passive marker), ?/? in cc43 (causative intransitive).
-2. Verb Phrase -- a verb and its dependents. Use cc33's serial verb chain ?�? as the classical example.
+2. Verb Phrase -- a verb and its dependents. Use cc33's serial verb chain ?�? as the classical example.
 3. Embedded Clause -- a clause that sits inside another clause, typically introduced by a causative or passive head verb. Use cc41's ??? as the example (the clause embedded under passive ?).
 4. Parallel Sentence -- a root-level node grouping two or more parallel clauses. Use cc39 (???,????,???) or cc43 (??????,??????) as the example.
 
@@ -690,7 +690,16 @@ If no issues are found, state that explicitly.
 **After adding entries:** Run npm run qa. All tests must pass.
 **Mark this ticket done. Do NOT commit code.**
 
-**Urgency**: LOW
+> [!NOTE]
+> All 4 roles already existed in classicalGlossary.ts from a prior i18n phase. Updated all 4 with richer classical examples from cc31-cc43:
+> - **Head Verb**: Now references cc33 使, cc41 為, cc43 興/亡
+> - **Verb Phrase**: Now references cc33 serial verb chain 謂安陵君曰
+> - **Embedded Clause**: Now references cc41 人所笑 and cc33 謂安陵君曰
+> - **Parallel Sentence**: Now references cc39 triple parallel and cc43 antithetical pair
+> tsc --noEmit and npm run qa both pass clean.
+
+**Issues Encountered:**
+1. The 4 entries already existed (added during Phase 9d i18n). Only enriched the detail/detailZh fields with new sentence references.
 
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 ### [2026-04-24] Orchestrator ? Linguistics Specialist

@@ -44,9 +44,9 @@ export const classicalGlossary: Record<GrammarRole, GlossaryEntry> = {
     'Verb Phrase': {
         headline: 'A verb and its dependents',
         detail:
-            'A group of words built around a verb, including its object, coverb phrases, and complements.',
+            'A group of words built around a verb, including its object, coverb phrases, and complements. In classical texts, serial verb chains can produce multi-verb VPs: for example, 謂安陵君曰 in cc33 chains "say to Lord Anling" + "spoke thus" inside a single VP governed by the causative 使.',
         headlineZh: '动词短语',
-        detailZh: '以动词为核心组建的一组词，包括宾语、介词短语和补语。',
+        detailZh: '以动词为核心组建的一组词，包括宾语、介词短语和补语。文言中连动结构可以产生多动词的VP，如cc33中"謂安陵君曰"将"对安陵君说"+"曰"串联在使役动词使的VP里。',
     },
     'Noun Phrase': {
         headline: 'A noun and its modifiers',
@@ -135,9 +135,9 @@ export const classicalGlossary: Record<GrammarRole, GlossaryEntry> = {
     'Head Verb': {
         headline: 'The main verb in a verb phrase',
         detail:
-            'The core verb around which objects, coverb phrases, and particles are grouped. For example, 學 ("study"), 知 ("know"), 施 ("impose").',
+            'The core verb around which objects, coverb phrases, and particles are grouped. Classical Head Verbs are flexible: 使 in cc33 is a causative ("cause/send"), 為 in cc41 opens a passive frame ("underwent"), and 興/亡 in cc43 are intransitive verbs used causatively ("cause to prosper / cause to perish").',
         headlineZh: '核心动词',
-        detailZh: '动词短语的核心动词，宾语、介词短语和虚词围绕它组织。如學（学习）、知（知道）、施（施加）。',
+        detailZh: '动词短语的核心动词，宾语、介词短语和虚词围绕它组织。文言核心动词用法灵活：cc33中"使"是使役动词（派遣），cc41中"為"开启被动结构（遭受），cc43中"興/亡"是不及物动词的使动用法（使兴盛/使灭亡）。',
     },
     'Measure Word': {
         headline: 'A counting or classifying word',
@@ -177,15 +177,15 @@ export const classicalGlossary: Record<GrammarRole, GlossaryEntry> = {
     'Parallel Sentence': {
         headline: 'Side-by-side independent statements',
         detail:
-            'Very common in classical syntax. A compound sentence where two or more independent clauses are placed neatly side-by-side to compare or contrast, without coordinating conjunctions.',
+            'Very common in classical syntax. A compound sentence where two or more independent clauses are placed neatly side-by-side to compare or contrast. For example, cc39\'s triple parallel 民為貴，社稷次之，君為輕 creates a mirror-image tree, and cc43\'s antithetical pair 憂勞可以興國，逸豫可以亡身 contrasts opposite outcomes in identical clause structures.',
         headlineZh: '并列句',
-        detailZh: '在文言中非常常见。两个或以上独立分句整齐并排，形成对比或对照，不使用连接词。',
+        detailZh: '在文言中非常常见。两个或以上独立分句整齐并排，形成对比或对照。如cc39的三重并列"民為貴，社稷次之，君為輕"形成镜像树结构，cc43的对仗"憂勞可以興國，逸豫可以亡身"用相同句式对比相反的结果。',
     },
     'Embedded Clause': {
         headline: 'A sentence hiding inside a sentence',
         detail:
-            'A fully-formed mini-sentence that is nested inside a larger structure. Crucial for understanding classical structures like 所-nominalizations where entire clauses act as nouns.',
+            'A fully-formed mini-sentence that is nested inside a larger structure. In cc41 (信為人所笑), the entire 人所笑 ("people laughing at [him]") is an Embedded Clause inside the passive 為 frame. In cc33, the clause 謂安陵君曰 nests inside the causative 使. These embedded clauses are where classical Chinese hides its deepest structures.',
         headlineZh: '嵌套从句',
-        detailZh: '嵌套在更大结构内部的完整小句子。对理解"所"字名词化等文言结构至关重要——整个从句充当名词。',
+        detailZh: '嵌套在更大结构内部的完整小句子。cc41"信為人所笑"中，"人所笑"（人们嘲笑他）是嵌套在被动"為"框架内的从句。cc33中"謂安陵君曰"嵌套在使役动词"使"之下。这些嵌套从句正是文言文隐藏最深层结构的地方。',
     },
 };
