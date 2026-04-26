@@ -4008,7 +4008,8 @@
                         "hanzi": "曰",
                         "pinyin": "yuē",
                         "translation": "say/spoke thus"
-                      }
+                      },
+                      "subRole": "quotative"
                     }
                   ]
                 }
@@ -4110,16 +4111,6 @@
           ]
         },
         {
-          "id": "cc34-adj",
-          "role": "Adjunct",
-          "subRole": "implicit conditional",
-          "text": {
-            "hanzi": "",
-            "pinyin": "",
-            "translation": "(implicit: then)"
-          }
-        },
-        {
           "id": "cc34-cons",
           "role": "Comment",
           "children": [
@@ -4140,12 +4131,13 @@
                 },
                 {
                   "id": "cc34-wei",
-                  "role": "Copula",
+                  "role": "Head Verb",
                   "text": {
                     "hanzi": "為",
                     "pinyin": "wéi",
                     "translation": "being"
-                  }
+                  },
+                  "subRole": "copulative"
                 },
                 {
                   "id": "cc34-huo2",
@@ -4671,7 +4663,7 @@
     },
     "tree": {
       "id": "cc39-root",
-      "role": "Sentence",
+      "role": "Parallel Sentence",
       "children": [
         {
           "id": "cc39-c1",

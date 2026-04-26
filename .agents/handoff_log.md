@@ -653,6 +653,19 @@ If no issues are found, state that explicitly.
 
 **Urgency**: MEDIUM
 
+### [2026-04-25] User (out-of-band) -> Data Linguist
+**Status**: Done
+**Task**: Classical Batch Review Fixes (4 issues from classical_batch_review.md)
+**Branch**: main
+
+**Fixes Applied:**
+1. cc34-wei: role Copula -> Head Verb, added subRole: copulative
+2. cc39: root role Sentence -> Parallel Sentence
+3. cc34: Removed empty cc34-adj Adjunct node (Option B)
+4. cc33-yue: added subRole: quotative
+
+**Urgency**: MEDIUM
+
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 ### [2026-04-24] Orchestrator ? Linguistics Specialist
 **Status**: ✅ Done
