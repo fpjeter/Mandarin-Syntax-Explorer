@@ -702,7 +702,7 @@ If no issues are found, state that explicitly.
 1. The 4 entries already existed (added during Phase 9d i18n). Only enriched the detail/detailZh fields with new sentence references.
 
 ### [2026-04-26] Orchestrator -> Educational Publisher
-**Status**: ?? Active
+**Status**: Done
 **Task**: Add 5 new category sections to ClassicalGrammarGuide.tsx
 **Branch**: main
 
@@ -716,7 +716,7 @@ If no issues are found, state that explicitly.
    - Explain the if-then pattern: ?/?/? opens the condition, ? marks the consequence
    - Show the formula: ?/? + [condition], ? + [consequence]
    - Mention the three registers in the dataset: philosophical (cc31 ??), political (cc32 ???), and implicit/juxtaposed (cc34 ?? -- no explicit marker)
-   - Cross-reference: parallels modern ??�?�
+   - Cross-reference: parallels modern ??�?�
 
 2. Classical Causatives (?/?)
    - Header color: text-cyan-400
@@ -740,7 +740,7 @@ If no issues are found, state that explicitly.
    - CRITICAL: flag that ? here is NOT modern ? (for/because). It means 'counts as / is valued as'
    - This is the most fundamental structural difference between classical and modern Chinese
 
-5. Classical Passive (?�?�)
+5. Classical Passive (?�?�)
    - Header color: text-indigo-400
    - Explain the three-layer architecture: ? (introduces agent) + Agent NP + ? (nominalizes verb) + Verb
    - Show the formula: Patient + ? + Agent + ? + Verb
@@ -764,7 +764,18 @@ All text must be bilingual -- both isZh and English branches required for every 
 **After editing:** Run npm run qa and npx tsc -b --noEmit to confirm no build errors.
 **Mark this ticket done. Do NOT commit.**
 
-**Urgency**: MEDIUM
+> [!NOTE]
+> Added 5 new bilingual category sections to ClassicalGrammarGuide.tsx (sections 9-13):
+> - **9. Classical Conditionals** (sky-400): 若/苟/則 formula, three registers, 則 as Adjunct
+> - **10. Classical Causatives** (cyan-400): 使/令 pivotal formula + implicit transitivity shift
+> - **11. Object Fronting** (fuchsia-400): interrogative fronting + 是 demonstrative disambiguation
+> - **12. Topic-Comment** (amber-400): bare-adjective predication + 為 quasi-copula disambiguation
+> - **13. Classical Passive** (indigo-400): three-layer 為…所… architecture + 所-nominalization
+> Renumbered existing sections (Tree Labels → 14, Reading the tree → 15).
+> tsc --noEmit and npm run qa both pass clean (133 modern + 43 classical sentences).
+
+**Issues Encountered:**
+1. No issues.
 
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 ### [2026-04-24] Orchestrator ? Linguistics Specialist

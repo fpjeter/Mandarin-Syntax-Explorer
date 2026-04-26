@@ -345,7 +345,90 @@ export const ClassicalGrammarGuide: React.FC = () => {
                 </div>
             </section>
 
-            {/* ── 9. Tree Labels (same visual as modern) ── */}
+            {/* ── 9. Classical Conditionals (若/苟/則) ── */}
+            <section>
+                <h3 className="text-[10px] font-bold uppercase tracking-widest text-sky-400 mb-1.5">
+                    {isZh ? '条件句（若/苟/則）' : 'Classical Conditionals (若/苟/則)'}
+                </h3>
+                <p className="text-[11px] text-slate-300 leading-relaxed">
+                    {isZh
+                        ? <>文言文用<strong>若</strong>、<strong>苟</strong>或<strong>如</strong>开启条件（"如果"），用<strong>則</strong>标记结果（"那么"）。公式：<strong>若/苟 + [条件]，則 + [结果]</strong>。在树中，則是一个状语（结果标记），修饰第二个分句的评论——它不像英语"then"那样连接两个分句，而是标记后者为结果域。数据集展示三种风格：哲理式（cc31《庄子》），政论式（cc32《战国策》），以及隐含式（cc34韩愈《师说》——没有显式标记，条件通过并列暗示）。这和现代"如果…就…"完全平行。</>
+                        : <>Classical Chinese uses <strong>若</strong>, <strong>苟</strong>, or <strong>如</strong> to open a condition (&quot;if&quot;), and <strong>則</strong> to mark the consequence (&quot;then&quot;). The formula is: <strong>若/苟 + [condition], 則 + [consequence]</strong>. In the tree, 則 is an Adjunct (consequence marker) that modifies the second clause&apos;s Comment — it does not &quot;join&quot; clauses the way English &quot;then&quot; does; it marks the second clause as the result scope. The dataset shows three registers: philosophical (cc31, 《莊子》), political (cc32, 《戰國策》), and implicit/juxtaposed (cc34, 韓愈 — no explicit marker; the conditional is implied by parallel structure). This directly parallels modern 如果…就….</>
+                    }
+                </p>
+            </section>
+
+            {/* ── 10. Classical Causatives (使/令) ── */}
+            <section>
+                <h3 className="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1.5">
+                    {isZh ? '使役句（使/令）' : 'Classical Causatives (使/令)'}
+                </h3>
+                <p className="text-[11px] text-slate-300 leading-relaxed">
+                    {isZh
+                        ? <>使役句表达"某人让另一人做某事"。公式：<strong>施事 + 使/令 + [兼语名词] + [动词短语]</strong>。兼语名词同时充当"使"的宾语和嵌套动词短语的主语——树清楚地揭示了这种双重角色。但文言文更常见的是<strong>隐含使役</strong>：不及物动词被及物化使用。如cc43中<strong>興國</strong>（使国兴盛）和<strong>亡身</strong>（使自身灭亡）——興和亡本是不及物动词，却直接带了宾语，这种结构错配就是教学要点。这和现代让/叫兼语句（兼語句）平行。</>
+                        : <>Causatives express &quot;one person causes another to act.&quot; The formula is: <strong>Agent + 使/令 + [Pivot NP] + [VP]</strong>. The Pivot noun simultaneously serves as the object of 使 and the subject of the embedded VP — the tree reveals this dual role clearly. But classical Chinese more commonly expresses causation <strong>implicitly</strong>, through transitivity shift: intransitive verbs used transitively. In cc43, <strong>興國</strong> means &quot;cause the state to prosper&quot; and <strong>亡身</strong> means &quot;cause oneself to perish&quot; — 興 and 亡 are intransitive verbs taking direct objects, and that structural mismatch IS the teaching point. This parallels modern 让/叫 pivotal constructions (兼語句).</>
+                    }
+                </p>
+            </section>
+
+            {/* ── 11. Object Fronting (賓語前置) ── */}
+            <section>
+                <h3 className="text-[10px] font-bold uppercase tracking-widest text-fuchsia-400 mb-1.5">
+                    {isZh ? '宾语前置（賓語前置）' : 'Object Fronting (賓語前置)'}
+                </h3>
+                <p className="text-[11px] text-slate-300 leading-relaxed">
+                    {isZh
+                        ? <>文言文可以把宾语放在动词<strong>前面</strong>——和现代汉语的语序相反。两种主要类型：<strong>(a) 疑问前置</strong>：何/安 + 动词（如cc32"何以有君"、cc36"安能食人"），以及<strong>(b) 指示代词是</strong>回指话题从句（如cc35"是謂天"）。</>
+                        : <>Classical Chinese can move the object <strong>before</strong> the verb — opposite of modern SVO word order. Two main patterns: <strong>(a) interrogative fronting</strong>: 何/安 + Verb (e.g. cc32 &quot;何以有君&quot;, cc36 &quot;安能食人&quot;), and <strong>(b) demonstrative 是</strong> resuming a clause-topic (e.g. cc35 &quot;是謂天&quot;).</>
+                    }
+                </p>
+                <p className="text-[11px] text-amber-200/80 leading-relaxed mt-1.5">
+                    {isZh
+                        ? <>⚠️ <strong>重要区分</strong>：cc35中的<strong>是</strong>是<strong>指示代词</strong>（意为"这/此"），<strong>不是</strong>现代系动词"是"（意为"是"）。树中是占据动词前的宾语位置，指向前面整个话题命题。</>
+                        : <>⚠️ <strong>Critical distinction</strong>: <strong>是</strong> in cc35 is a <strong>demonstrative pronoun</strong> meaning &quot;this,&quot; <strong>NOT</strong> the modern copula &quot;is.&quot; The tree shows 是 occupying the pre-verbal Object slot, pointing back to the entire Topic proposition.</>
+                    }
+                </p>
+            </section>
+
+            {/* ── 12. Topic-Comment (主題) ── */}
+            <section>
+                <h3 className="text-[10px] font-bold uppercase tracking-widest text-amber-400 mb-1.5">
+                    {isZh ? '话题—评论（主題）' : 'Topic-Comment (主題)'}
+                </h3>
+                <p className="text-[11px] text-slate-300 leading-relaxed">
+                    {isZh
+                        ? <>文言文可以用<strong>裸形容词</strong>做谓语——不需要"是"、"很"或任何系词。如cc40中<strong>蒹葭蒼蒼</strong>（芦苇苍翠），蒼蒼直接充当评论，没有动词。这是文言和现代汉语之间最根本的结构差异。文言还用<strong>為</strong>做<strong>准系词</strong>，表达"算作/被视为"：如cc39中<strong>民為貴</strong>（人民算是最重要的）。</>
+                        : <>Classical Chinese can predicate with a <strong>bare adjective</strong> — no 是, no 很, no copula at all. In cc40, <strong>蒹葭蒼蒼</strong> (&quot;the reeds are lush&quot;) has 蒼蒼 directly as the Comment, with no verb. This is the most fundamental structural difference between classical and modern Chinese. Classical also uses <strong>為</strong> as a <strong>quasi-copula</strong> meaning &quot;counts as / is valued as&quot;: cc39&apos;s <strong>民為貴</strong> (&quot;the people count as most important&quot;).</>
+                    }
+                </p>
+                <p className="text-[11px] text-amber-200/80 leading-relaxed mt-1.5">
+                    {isZh
+                        ? <>⚠️ <strong>重要区分</strong>：此处的<strong>為</strong>意为"算作/被视为"，<strong>不是</strong>现代"为"（为了/因为）。文言為至少有三种读法：系词"算作"（cc39）、转化动词"变成"（cc40白露為霜）、被动标记（cc41）。</>
+                        : <>⚠️ <strong>Critical distinction</strong>: <strong>為</strong> here means &quot;counts as,&quot; <strong>NOT</strong> modern 为 (&quot;for/because&quot;). Classical 為 has at least three readings: copula &quot;counts as&quot; (cc39), transformative &quot;become&quot; (cc40: 白露為霜), and passive marker (cc41).</>
+                    }
+                </p>
+            </section>
+
+            {/* ── 13. Classical Passive (為…所…) ── */}
+            <section>
+                <h3 className="text-[10px] font-bold uppercase tracking-widest text-indigo-400 mb-1.5">
+                    {isZh ? '被动句（為…所…）' : 'Classical Passive (為…所…)'}
+                </h3>
+                <p className="text-[11px] text-slate-300 leading-relaxed">
+                    {isZh
+                        ? <>文言被动句有<strong>三层结构</strong>：<strong>為</strong>引出施事者，<strong>所</strong>将动词名词化，主动词传递动作。公式：<strong>受事 + 為 + 施事 + 所 + 动词</strong>。如cc41中<strong>信為人所笑</strong>（韩信被人嘲笑）——為引出agent（人），所将笑名词化为"所笑"（嘲笑这件事），整体读作"韩信遭受了人们的嘲笑"。</>
+                        : <>The classical passive has a <strong>three-layer architecture</strong>: <strong>為</strong> introduces the agent, <strong>所</strong> nominalizes the verb, and the main verb delivers the action. The formula is: <strong>Patient + 為 + Agent + 所 + Verb</strong>. In cc41, <strong>信為人所笑</strong> (&quot;Xin was laughed at by others&quot;) — 為 introduces the agent (人), 所 wraps the verb into the nominalized form 所笑 (&quot;the laughing-at&quot;), and the whole reads as &quot;Xin underwent the people&apos;s laughing-at.&quot;</>
+                    }
+                </p>
+                <p className="text-[11px] text-slate-300 leading-relaxed mt-1.5">
+                    {isZh
+                        ? <>為 平行于现代<strong>被</strong>，但所字名词化层是文言独有的——现代被字句没有这一层。如果你已经学了cc37的者字名词化，所字层的逻辑完全一样：把动词变成名词。</>
+                        : <>為 parallels modern <strong>被</strong>, but the 所-nominalization layer is unique to classical Chinese — modern 被 sentences have no equivalent. If you have already studied cc37&apos;s 者-nominalization, the 所-layer works the same way: it turns a verb into a noun.</>
+                    }
+                </p>
+            </section>
+
+            {/* ── 14. Tree Labels ── */}
             <section>
                 <h3 className="text-[10px] font-bold uppercase tracking-widest text-amber-400 mb-2">
                     {isZh ? '树标签速览' : 'Tree labels at a glance'}
@@ -376,7 +459,7 @@ export const ClassicalGrammarGuide: React.FC = () => {
                 </div>
             </section>
 
-            {/* ── 10. Reading the tree ── */}
+            {/* ── 15. Reading the tree ── */}
             <section>
                 <h3 className="text-[10px] font-bold uppercase tracking-widest text-stone-400 mb-1.5">
                     {isZh ? '使用语法树' : 'Using the tree'}
