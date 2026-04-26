@@ -43,7 +43,7 @@
 
 | Line | Assigned To | Task | Urgency |
 |------|-------------|------|---------|
-| 671 | Educational Publisher | Add 4 missing grammar role entries to classicalGlossary.ts | LOW |
+| 706 | Educational Publisher | Add 5 new category sections to ClassicalGrammarGuide.tsx | MEDIUM |
 
 ---
 
@@ -700,6 +700,71 @@ If no issues are found, state that explicitly.
 
 **Issues Encountered:**
 1. The 4 entries already existed (added during Phase 9d i18n). Only enriched the detail/detailZh fields with new sentence references.
+
+### [2026-04-26] Orchestrator -> Educational Publisher
+**Status**: ?? Active
+**Task**: Add 5 new category sections to ClassicalGrammarGuide.tsx
+**Branch**: main
+
+**File to edit:** src/components/ClassicalGrammarGuide.tsx
+**Insertion point:** After line 346 (the closing </section> of section 8 -- the ? connective). Before the {/* -- 9. Tree Labels -- */} comment.
+
+**Add 5 new <section> blocks, one per new category:**
+
+1. Classical Conditionals (?/?/?)
+   - Header color: text-sky-400
+   - Explain the if-then pattern: ?/?/? opens the condition, ? marks the consequence
+   - Show the formula: ?/? + [condition], ? + [consequence]
+   - Mention the three registers in the dataset: philosophical (cc31 ??), political (cc32 ???), and implicit/juxtaposed (cc34 ?? -- no explicit marker)
+   - Cross-reference: parallels modern ??…?…
+
+2. Classical Causatives (?/?)
+   - Header color: text-cyan-400
+   - Explain the pivotal construction: one person causes another to act
+   - Show the formula: Agent + ?/? + [Pivot NP] + [VP]
+   - Explain that classical Chinese also expresses causation implicitly through transitivity shift: intransitive verbs used transitively (?? = cause-state-to-prosper, ?? = cause-self-to-perish)
+   - Cross-reference: parallels modern ?/? pivotal constructions (???)
+
+3. Object Fronting (????)
+   - Header color: text-fuchsia-400
+   - Explain: classical word order can move the object BEFORE the verb -- opposite of modern Chinese
+   - Show two patterns: (a) interrogative fronting: ?/? + Verb (????,????) and (b) demonstrative ? resuming a clause-topic (???)
+   - Critical disambiguation: classical ? = demonstrative pronoun 'this', NOT the modern copula 'is'
+   - Cross-reference: modern word order SVO vs classical fronting
+
+4. Topic-Comment (??)
+   - Header color: text-amber-400 (matches the existing amber theme for classical-core content)
+   - Explain: classical Chinese can predicate with a BARE ADJECTIVE -- no ?, no ?, no copula
+   - Show the zero-copula pattern: Topic + [bare adjective] (???? = 'the reeds [are] lush')
+   - Show the ?-quasi-copula pattern: Topic + ? + [predicate] (??? = 'the people count as most important')
+   - CRITICAL: flag that ? here is NOT modern ? (for/because). It means 'counts as / is valued as'
+   - This is the most fundamental structural difference between classical and modern Chinese
+
+5. Classical Passive (?…?…)
+   - Header color: text-indigo-400
+   - Explain the three-layer architecture: ? (introduces agent) + Agent NP + ? (nominalizes verb) + Verb
+   - Show the formula: Patient + ? + Agent + ? + Verb
+   - Example: ????? = 'Xin underwent [the people's] laughing-at' = 'Xin was laughed at by people'
+   - Explain the ?-nominalization layer: ?? = 'the laughing-at' (? wraps the verb into a noun)
+   - Cross-reference: ? parallels modern ?; ?-layer has no modern equivalent (it is the unique classical layer)
+
+**Format to follow:** Match the existing section structure exactly:
+  {/* -- N. Title -- */}
+  <section>
+    <h3 className='text-[10px] font-bold uppercase tracking-widest text-XXX-400 mb-1.5'>
+      {isZh ? 'ZH_TITLE' : 'EN_TITLE'}
+    </h3>
+    <p className='text-[11px] text-slate-300 leading-relaxed'>
+      {isZh ? <> ... </> : <> ... </>}
+    </p>
+    {/* optional formula box or example */}
+  </section>
+
+All text must be bilingual -- both isZh and English branches required for every string.
+**After editing:** Run npm run qa and npx tsc -b --noEmit to confirm no build errors.
+**Mark this ticket done. Do NOT commit.**
+
+**Urgency**: MEDIUM
 
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 ### [2026-04-24] Orchestrator ? Linguistics Specialist
