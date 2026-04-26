@@ -25,6 +25,17 @@
 5. **Source citation accuracy**: Verify all source attributions.
 **Suggested Fix**: Dispatch the Educational Publisher to review and produce `classical_phaseB_pedagogical_review.md`.
 **Urgency**: MEDIUM
+
+### [2026-04-25] Linguistics Specialist → Orchestrator (follow-up)
+**Status**: 🟡 Pending
+**Task**: Classical Batch Review Fixes (4 issues)
+**Dependency**: The Linguistics Specialist has completed the structural review of cc31-cc43 in `docs/audits/classical_batch_review.md`. Four issues were found:
+1. **cc34**: Change 為 from `Copula` to `Head Verb (copulative)` [⚠️ Minor]
+2. **cc39**: Change root from `Sentence` to `Parallel Sentence` [⚠️ Minor]
+3. **cc34/cc43**: Standardize implicit pattern representation (remove cc34's empty Adjunct node or add one to cc43) [⚠️ Minor]
+4. **cc33**: Add `subRole: "quotative"` to 曰 Head Verb [🔴 Structural]
+**Suggested Fix**: Dispatch the Data Linguist to apply all 4 fixes.
+**Urgency**: MEDIUM
 <!-- INSERT NEW TICKETS ABOVE THIS LINE -->` sentinel in the `## Active Assignments` section.
 
 ## Active Ticket Summary
@@ -611,7 +622,7 @@ Add subRole: implicit conditional to its primary Adjunct node to distinguish it 
 **Urgency**: MEDIUM
 
 ### [2026-04-25] Orchestrator -> Linguistics Specialist
-**Status**: ?? Active
+**Status**: ✅ Done
 **Task**: Classical Dataset Structural Review -- cc31-cc43
 **Branch**: main
 
