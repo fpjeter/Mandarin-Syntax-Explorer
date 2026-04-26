@@ -5,13 +5,6 @@
 import type { BilingualString } from '../i18n/strings';
 
 export const CLASSICAL_CATEGORIES = [
-/**
- * Categories for the Classical Chinese explorer.
- * Mirrors the structure of categories.ts for consistency and scalability.
- */
-import type { BilingualString } from '../i18n/strings';
-
-export const CLASSICAL_CATEGORIES = [
     'Rhetorical Patterns (反問)',
     'Nominalizers (者/所)',
     'Classical Negation (非/勿/莫)',
