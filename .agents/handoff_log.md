@@ -43,7 +43,7 @@
 
 | Line | Assigned To | Task | Urgency |
 |------|-------------|------|---------|
-| 615 | Linguistics Specialist | Classical Dataset Structural Review -- cc31-cc43 | MEDIUM |
+| — | — | (none — all tickets resolved) | — |
 
 ---
 
