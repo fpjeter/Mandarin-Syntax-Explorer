@@ -43,7 +43,7 @@
 
 | Line | Assigned To | Task | Urgency |
 |------|-------------|------|---------|
-| — | — | (none — all tickets resolved) | — |
+| 671 | Educational Publisher | Add 4 missing grammar role entries to classicalGlossary.ts | LOW |
 
 ---
 
@@ -665,6 +665,32 @@ If no issues are found, state that explicitly.
 4. cc33-yue: added subRole: quotative
 
 **Urgency**: MEDIUM
+
+### [2026-04-25] Orchestrator -> Educational Publisher
+**Status**: ?? Active
+**Task**: Add 4 missing grammar role entries to classicalGlossary.ts
+**Branch**: main
+
+**Context**: The classical expansion (cc31-cc43) introduced 4 structural roles that are used in the new sentences but have no entry in src/data/classicalGlossary.ts. These roles ARE defined in the modern glossary (src/data/glossary.ts) -- use those as a starting point but adapt the examples and framing for classical Chinese.
+
+**Missing roles (add all 4):**
+1. Head Verb -- the main lexical verb of a clause. Adapt the modern definition; classical example: ? in cc33 (causative), ? in cc41 (passive marker), ?/? in cc43 (causative intransitive).
+2. Verb Phrase -- a verb and its dependents. Use cc33's serial verb chain ?…? as the classical example.
+3. Embedded Clause -- a clause that sits inside another clause, typically introduced by a causative or passive head verb. Use cc41's ??? as the example (the clause embedded under passive ?).
+4. Parallel Sentence -- a root-level node grouping two or more parallel clauses. Use cc39 (???,????,???) or cc43 (??????,??????) as the example.
+
+**Format to follow (from existing entries):**
+    'Head Verb': {
+        headline: '...',
+        detail: '...',
+        headlineZh: '...',
+        detailZh: '...',
+    },
+
+**After adding entries:** Run npm run qa. All tests must pass.
+**Mark this ticket done. Do NOT commit code.**
+
+**Urgency**: LOW
 
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 ### [2026-04-24] Orchestrator ? Linguistics Specialist
