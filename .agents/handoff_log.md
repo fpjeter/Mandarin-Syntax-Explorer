@@ -872,6 +872,70 @@ Do NOT edit any JSON files.
 **Issues Encountered:**
 1. No issues.
 
+### [2026-04-27] Orchestrator -> Data Linguist
+**Status**: 🔴 Active
+**Task**: Apply subRole taxonomy normalization + explanation label fixes
+**Branch**: main
+
+**Context**: Two audit reports are complete. Read both before starting:
+- docs/audits/subrole_taxonomy_audit.md  (subRole fixes)
+- docs/audits/explanation_label_audit.md (explanation fixes, 10 issues)
+
+=== PART A: subRole Taxonomy Fixes ===
+
+HIGH priority:
+- HV-1: 5 nodes: rename `adjectival` -> `adjectival predicate` (s80, s95, s98, s99 x2)
+- ADJ-1: rename `time (noun -> adverb)` -> `time` (cc8, cc15 x2); rename `time / frequency` -> `time` (cc1)
+- ADJ-4: rename `instrument` -> `instrumental` (s4, s105, s71); rename `instrumental (以)` -> `instrumental` (cc28); rename `以-construction (instrumental)` -> `instrumental` (cc21)
+- P-1: rename ALL non-standard nominalizer variants -> `nominalizer`:
+    `nominalizer (creates "the one that [verb]ed")` x4 -> `nominalizer`
+    `definitional nominalizer` x1 -> `nominalizer`
+    `means nominalizer` x1 -> `nominalizer`
+    `conditional nominalizer` x1 -> `nominalizer`
+    `object nominalizer` x2 -> `nominalizer`
+
+MEDIUM priority:
+- HV-3: Remove subRole entirely from s117 node s117-v1 (the `action 1` orphan)
+- ADJ-2: rename `rhetorical intensifier` -> `rhetorical` (cc1, cc18); rename `rhetorical challenge` -> `rhetorical` (cc9)
+- ADJ-3: rename `conditional marker` -> `conditional` (cc32, cc42); rename `condition (而-contrastive)` -> `conditional` (cc17 x2)
+- P-2: rename `assertion` -> `assertive` (cc34, cc37); rename `assertive (identity)` -> `assertive` (cc11, cc12)
+- P-5: rename `change of state / current relevance` -> `change of state` (s12); rename `change of state / ongoing` -> `change of state` (s110)
+
+LOW priority:
+- HV-2: rename `purpose verb` -> `purpose` (s91, s52)
+- ADJ-5: rename `sequential adverb` -> `sequential` (cc26); rename `sequence` -> `sequential` (cc38)
+- ADJ-6: rename `potential marker` -> `potential` (cc4)
+- P-3: rename `genitive marker` -> `genitive` (cc5, cc25, cc26)
+- P-4: rename `degree marker` -> `degree` (s121, s128)
+
+Skip HV-4 (embedded predicate x2) -- keeping as-is per audit.
+
+=== PART B: Explanation Label Fixes (classical_sentences.json) ===
+
+Apply all 10 fixes from explanation_label_audit.md (see file for exact recommended text):
+- cc2: Add Embedded Clause explanation at end
+- cc4: Replace "the subject 道" -> "the **Topic** 道"
+- cc6: Add Head Verb (copulative) mention for 為
+- cc8: Replace "the predicate" -> "the **Comment**"
+- cc15: Replace "the subject" -> "the **Topic**", "predicate" -> "**Comment**"; add T-C note
+- cc16: Replace "predicate" -> "**Comment**"
+- cc18: Replace "predicate" -> "**Comment**"
+- cc26: Clarify zero-copula phrasing to reference adjectival predicate label
+- cc33: Add Head Verb (causative) label reference for 使
+- cc34: Add Head Verb (copulative) label reference for 為
+- cc41: Add "Embedded Clause" term for 人所笑
+
+For ALL explanation changes: update both explanation.en AND explanation.zh.
+
+After ALL fixes:
+1. Run npm run qa -- 0 errors required
+2. Run npx tsc -b --noEmit -- 0 errors required
+3. Report which nodes/sentences were updated
+
+Do NOT commit. Mark ticket done.
+
+**Urgency**: MEDIUM
+
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 ### [2026-04-24] Orchestrator ? Linguistics Specialist
 **Status**: ✅ Done
