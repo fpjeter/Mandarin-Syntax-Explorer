@@ -43,7 +43,8 @@
 
 | Line | Assigned To | Task | Urgency |
 |------|-------------|------|---------|
-| 706 | Educational Publisher | Add 5 new category sections to ClassicalGrammarGuide.tsx | MEDIUM |
+| 782 | Linguistics Specialist | subRole Taxonomy Consistency Audit | MEDIUM |
+| 824 | Educational Publisher | Tree Label vs Explanation Consistency Audit | MEDIUM |
 
 ---
 
@@ -776,6 +777,83 @@ All text must be bilingual -- both isZh and English branches required for every 
 
 **Issues Encountered:**
 1. No issues.
+
+### [2026-04-27] Orchestrator -> Linguistics Specialist
+**Status**: ?? Active
+**Task**: subRole Taxonomy Consistency Audit -- modern + classical datasets
+**Branch**: main
+
+**Context**: A programmatic scan of all 176 sentences (133 modern + 43 classical) found 382 unique role+subRole combinations. Many subRoles that appear to describe the same grammatical function have inconsistent naming. Your job is to audit these inconsistencies and produce a normalized taxonomy with specific fix recommendations.
+
+**Confirmed inconsistency clusters to investigate:**
+
+**Head Verb subRoles:**
+- adjectival predicate (x6) vs adjectival (x5) -- are these the same? If so, which wins?
+- action 1 (x1) -- this looks like a temp label. Find the sentence and recommend the correct subRole
+- purpose (x1) vs purpose verb (x2) -- normalize to one
+- embedded predicate (x2) vs purpose verb (x2) -- do these overlap?
+
+**Adjunct subRoles -- high fragmentation:**
+- time (x15) vs time (noun -> adverb) (x3) vs time span (x1) vs time / frequency (x1) -- should be max 2 variants
+- rhetorical (x5) vs rhetorical intensifier (x2) vs rhetorical challenge (x1) -- normalize
+- conditional (x5) vs conditional marker (x2) vs condition (?-contrastive) (x2) -- normalize
+- instrumental: instrument (x3), instrumental (?) (x1), instrumental (x1), ?-construction (instrumental) (x1) -- normalize to one
+- purpose (?) (x1) vs standalone purpose -- need a consistent label
+- sequential (x1) vs sequential adverb (x1) vs sequence (x1) -- normalize
+- potential (x1) vs potential marker (x1) -- normalize
+
+**Particle subRoles -- highly fragmented nominalizer cluster:**
+- nominalizer (x12) vs nominalizer (creates the one that [verb]ed) (x4) vs definitional nominalizer (x1) vs means nominalizer (x1) vs conditional nominalizer (x1) vs object nominalizer (x2) -- normalize
+- assertive (x2) vs assertive (identity) (x2) vs assertion (x1) -- normalize
+- genitive marker (x3) vs genitive (x1) -- pick one
+- degree (x7) vs degree marker (x2) -- pick one
+- change of state (x3) vs change of state / current relevance (x1) vs change of state / ongoing (x1) -- normalize
+
+**Output:** Produce docs/audits/subrole_taxonomy_audit.md with:
+1. For each cluster: your recommended canonical label
+2. All sentence IDs + node IDs that need to be updated
+3. A clear rationale for each decision (pedagogical clarity, not linguistic formalism)
+4. A priority classification: HIGH (learner-visible, confusing), MEDIUM (inconsistent but not misleading), LOW (internal/cosmetic)
+
+Do NOT edit any JSON files. Just produce the audit document.
+**Mark this ticket done when subrole_taxonomy_audit.md is written.**
+
+**Urgency**: MEDIUM
+
+### [2026-04-27] Orchestrator -> Educational Publisher
+**Status**: ?? Active
+**Task**: Tree Label vs Explanation Consistency Audit
+**Branch**: main
+
+**Context**: The Linguistics Specialist is auditing structural label consistency (subRole taxonomy). Your parallel task is different: verify that the EXPLANATION text for each sentence correctly names and refers to the same labels that appear in the tree. A learner reads the explanation alongside the tree -- they should see the same terms in both places.
+
+**Scope -- check all 43 classical sentences (src/data/classical_sentences.json):**
+For each sentence, read the explanation.en field and cross-check against the tree node roles/subRoles.
+
+**Specifically look for:**
+1. **Mismatched role names** -- explanation says 'the subject' but the tree labels it 'Topic'; explanation says 'predicate' but tree shows 'Comment'
+2. **Missing label references** -- a key structural node (e.g. 'passive marker', 'quasi-copula') exists in the tree but is never mentioned in the explanation
+3. **Stale labels** -- explanation refers to a role name that was changed during the expansion (e.g. old 'Copula' label after it was changed to 'Head Verb (copulative)' in cc34)
+4. **Tone consistency** -- explanations should be written for learners, not linguists. Flag any explanation that is too technical or uses jargon without definition
+
+**Also check the 5 new classical sentences (cc39-cc43) specifically:**
+- cc39: explanation should mention ? as quasi-copula and reference the triple parallel structure
+- cc40: explanation should clarify zero-copula predication (no ?/?)
+- cc41: explanation should explain ?…?… frame AND the ?-nominalization layer
+- cc42: explanation should mention both the conditional pattern AND the ghost node (implicit speaker)
+- cc43: explanation should explain implicit causative (?/? used transitively)
+
+**Output:** Produce docs/audits/explanation_label_audit.md listing:
+- Sentence ID
+- Issue type (Mismatched / Missing / Stale / Tone)
+- The specific problem
+- Recommended fix (exact text change)
+
+If a sentence has no issues, do not list it (clean list only).
+Do NOT edit any JSON files.
+**Mark this ticket done when explanation_label_audit.md is written.**
+
+**Urgency**: MEDIUM
 
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 ### [2026-04-24] Orchestrator ? Linguistics Specialist
