@@ -50,8 +50,7 @@
 
 | Line | Assigned To | Task | Urgency |
 |------|-------------|------|---------|
-| 782 | Linguistics Specialist | subRole Taxonomy Consistency Audit | MEDIUM |
-| 824 | Educational Publisher | Tree Label vs Explanation Consistency Audit | MEDIUM |
+| 877 | Data Linguist | subRole normalization + explanation label fixes | MEDIUM |
 
 ---
 
