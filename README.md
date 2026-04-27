@@ -5,8 +5,8 @@ An interactive visualizer for Mandarin Chinese grammar structures. Select an exa
 ## Features
 
 - **Interactive syntax trees** — Nodes expand and collapse; pan and zoom the canvas freely
-- **Nearly 100 curated modern sentences** across 19 grammar categories
-- **30 annotated classical quotes** from Confucius, Laozi, Mencius, Xunzi, and more
+- **133 curated modern sentences** across 19 grammar categories
+- **43 annotated classical quotes** from Confucius, Laozi, Mencius, Xunzi, Zhuangzi, Ouyang Xiu, and more
 - **Fractal Logic Stream (FLS)** — Custom topic-comment Matryoshka framework replacing Eurocentric SVO parsing (serving as our strict internal AST architecture)
 - **Tree Toolbar & Semantic Roles** — A collapsible workspace toolbar containing all tree manipulations (Expand All, Ghost Node toggling) and the **Semantic Roles** toggle to flip visual nodes from structural framing (Topic/Comment) to semantic reality (Agent/Patient).
 - **Inline Pedagogical Explanations** — Expandable category breakdowns inside the sidebar written in a warm, accessible tutor tone
@@ -16,7 +16,7 @@ An interactive visualizer for Mandarin Chinese grammar structures. Select an exa
 - **Hover tooltips** — Contextual explanations for every node and badge
 - **Pinyin & translations** on every node, with ZCOOL XiaoWei display font for Chinese text
 - **Rich grammar notes** — Expandable per-sentence explanations written for learners, not linguists
-- **Bilingual UI toggle** — Switch the entire interface and all 123 grammar explanations between English and Mandarin Chinese (中文) via the globe button in the header
+- **Bilingual UI toggle** — Switch the entire interface and all grammar explanations between English and Mandarin Chinese (中文) via the globe button in the header
 - **Responsive layout** with mobile tab navigation and touch-friendly zoom controls
 - **Grammar guide** — Built-in article explaining the topic-prominent framework
 - **Classical Chinese Explorer** — Toggle into 古文 mode to explore famous classical quotes (see below)
@@ -44,11 +44,11 @@ Click the scroll icon (📜) next to the app title to toggle into **Classical Ch
 
 ### Classical Features
 
-- **30 annotated quotes** from the Analects (論語), Tao Te Ching (道德經), Mencius (孟子), Xunzi (荀子), Zuozhuan (左傳), Han Yu (韓愈), Su Shi (蘇軾), and Sun Tzu (孫子)
+- **43 annotated quotes** from the Analects (論語), Tao Te Ching (道德經), Mencius (孟子), Xunzi (荀子), Zhuangzi (莊子), Strategies of the Warring States (戰國策), Zuozhuan (左傳), Records of the Grand Historian (史記), Han Yu (韓愈), Su Shi (蘇軾), Ouyang Xiu (歐陽修), and Sun Tzu (孫子)
 - **Full syntax trees** — same interactive tree visualization applied to classical grammar
 - **Classical badge system** — 8 badges for function words (者, 所, 而, 非, 勿, 於, 焉, 之)
-- **Dedicated grammar guide** — covers function words (虛詞), the 之 system, rhetorical patterns (反問), negation (否定), coverbs (介詞), and the 而 connective
-- **Dedicated glossary** — classical grammar roles with period-appropriate definitions
+- **Dedicated grammar guide** — covers function words (虛詞), the 之 system, rhetorical patterns (反問), negation (否定), coverbs (介詞), the 而 connective, conditionals (若/苟/則), causatives (使/令), object fronting (賓語前置), topic-comment predication (主題), and the classical passive (為…所…)
+- **Dedicated glossary** — classical grammar roles enriched with examples from the dataset
 - **Amber/sepia theme** — distinct visual identity with warm stone tones and calligraphic fonts (Noto Serif SC, Ma Shan Zheng)
 - **Ink wash transition** — animated mode switch with a traditional ink wash effect
 - **Independent state** — your modern and classical sentence selections are preserved separately when switching modes
@@ -58,11 +58,16 @@ Click the scroll icon (📜) next to the app title to toggle into **Classical Ch
 | Category | Count | Description |
 |---|---|---|
 | Rhetorical Patterns (反問) | 5 | Sentence-final particles 乎/哉 for rhetorical questions |
-| Nominalizers (者/所) | 4 | 者 and 所 as nominalizing particles |
+| Nominalizers (者/所) | 6 | 者 and 所 as nominalizing particles |
 | Classical Negation (非/勿/莫) | 5 | Negation with different scopes and strengths |
 | Coverbs & Prepositions (於/以/焉) | 6 | Pre-verbal prepositional phrases |
 | Sequential Actions (而) | 5 | 而 linking sequential, contrastive, or conditional clauses |
 | Genitive & Modification (之) | 5 | 之 as genitive marker, object pronoun, or structural filler |
+| Classical Conditionals (若/苟/則) | 4 | If-then logic; includes implicit juxtaposed conditionals |
+| Classical Causatives (使/令) | 2 | Pivotal causative constructions; includes implicit transitivity shift |
+| Object Fronting (賓語前置) | 2 | Interrogative and demonstrative object fronting |
+| Topic-Comment (主題) | 2 | Zero-copula predication and 為 quasi-copula |
+| Classical Passive (為…所…) | 1 | Classical passive with embedded 所-nominalization |
 
 ### Adding Classical Quotes
 
@@ -146,8 +151,8 @@ src/
 ├── contexts/
 │   └── AppModeContext.tsx          # Modern/classical mode context provider
 ├── data/
-│   ├── modern_sentences.json       # 123 curated Modern Mandarin JSON sentences
-│   ├── classical_sentences.json    # 30 curated Classical Chinese JSON quotes
+│   ├── modern_sentences.json       # 133 curated Modern Mandarin JSON sentences
+│   ├── classical_sentences.json    # 43 curated Classical Chinese JSON quotes (11 categories)
 │   ├── categories.ts               # Modern category list and descriptions
 │   ├── badges.ts                   # Modern badge specs and matching rules
 │   ├── glossary.ts                 # Modern grammar role definitions
