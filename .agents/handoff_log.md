@@ -36,6 +36,13 @@
 4. **cc33**: Add `subRole: "quotative"` to 曰 Head Verb [🔴 Structural]
 **Suggested Fix**: Dispatch the Data Linguist to apply all 4 fixes.
 **Urgency**: MEDIUM
+
+### [2026-04-27] Linguistics Specialist → Orchestrator (follow-up)
+**Status**: 🟡 Pending
+**Task**: Apply subRole Taxonomy Normalization (13 clusters, ~54 node fixes)
+**Dependency**: The Linguistics Specialist has produced `docs/audits/subrole_taxonomy_audit.md` identifying 13 inconsistency clusters across Head Verb, Adjunct, and Particle subRoles. 4 clusters are HIGH priority (learner-visible), 4 MEDIUM, 5 LOW.
+**Suggested Fix**: Dispatch the Data Linguist to apply fixes in priority order (HIGH first). Each cluster has specific node IDs and canonical labels listed in the audit doc.
+**Urgency**: MEDIUM
 <!-- INSERT NEW TICKETS ABOVE THIS LINE -->` sentinel in the `## Active Assignments` section.
 
 ## Active Ticket Summary
@@ -779,7 +786,7 @@ All text must be bilingual -- both isZh and English branches required for every 
 1. No issues.
 
 ### [2026-04-27] Orchestrator -> Linguistics Specialist
-**Status**: ?? Active
+**Status**: ✅ Done
 **Task**: subRole Taxonomy Consistency Audit -- modern + classical datasets
 **Branch**: main
 
@@ -821,7 +828,7 @@ Do NOT edit any JSON files. Just produce the audit document.
 **Urgency**: MEDIUM
 
 ### [2026-04-27] Orchestrator -> Educational Publisher
-**Status**: ?? Active
+**Status**: Done
 **Task**: Tree Label vs Explanation Consistency Audit
 **Branch**: main
 
@@ -839,7 +846,7 @@ For each sentence, read the explanation.en field and cross-check against the tre
 **Also check the 5 new classical sentences (cc39-cc43) specifically:**
 - cc39: explanation should mention ? as quasi-copula and reference the triple parallel structure
 - cc40: explanation should clarify zero-copula predication (no ?/?)
-- cc41: explanation should explain ?�?� frame AND the ?-nominalization layer
+- cc41: explanation should explain ?�?� frame AND the ?-nominalization layer
 - cc42: explanation should mention both the conditional pattern AND the ghost node (implicit speaker)
 - cc43: explanation should explain implicit causative (?/? used transitively)
 
@@ -853,7 +860,17 @@ If a sentence has no issues, do not list it (clean list only).
 Do NOT edit any JSON files.
 **Mark this ticket done when explanation_label_audit.md is written.**
 
-**Urgency**: MEDIUM
+> [!NOTE]
+> Produced docs/audits/explanation_label_audit.md. Found 10 issues across 43 sentences:
+> - **5 Mismatched role names**: cc4/cc8/cc15/cc16/cc18 use "subject"/"predicate" but tree uses Topic/Comment
+> - **4 Missing label references**: cc2 (Embedded Clause), cc6/cc34 (copulative subRole), cc33 (causative subRole)
+> - **1 Stale label**: cc26 mentions "copula" but tree has no Copula node
+> - **cc41 additional**: Embedded Clause node exists in tree but not named in explanation
+> - **cc39-cc43**: All 5 new sentences pass the label check
+> Most systematic pattern: "predicate" vs "Comment" (4 of 10 issues). No tone issues found.
+
+**Issues Encountered:**
+1. No issues.
 
 <!-- INSERT NEW TICKETS ABOVE THIS LINE - do NOT append to the bottom of the file -->
 ### [2026-04-24] Orchestrator ? Linguistics Specialist
