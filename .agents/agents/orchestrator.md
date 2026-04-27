@@ -62,3 +62,44 @@ When you encounter a problem outside your permitted files, you MUST NOT attempt 
 
 Instead, append a **Handoff Request** to `.agents/handoff_log.md` using the template defined in that file. Describe exactly what dependency you are missing. Then instruct the user to relay it to the **Orchestrator**. The Orchestrator will review the log, handle any global architecture changes, and dispatch the correct specialist to unblock your workflow.
 
+---
+
+## 🔁 Session Checklist
+
+Run these checks at the **start** and **end** of every session. They take < 2 minutes and prevent compounding stale state.
+
+### ▶ Session Start
+
+```bash
+git pull                    # sync with remote before doing anything
+npm run qa                  # confirm clean baseline — never start on a broken state
+```
+
+Then verify the following by inspection:
+
+| Check | What to look for |
+|---|---|
+| **README counts** | `modern_sentences.json` count, `classical_sentences.json` count, and classical category table match actual data |
+| **Handoff log active tickets** | Read the Active Ticket Summary table (top of `.agents/handoff_log.md`) — are there open tickets from last session? |
+| **Queued audits** | Check `docs/audits/queued_audits.md` — is there actionable work to dispatch? |
+
+### ⏹ Session End
+
+```bash
+npm run qa                  # confirm clean ending state
+npx tsc -b --noEmit         # confirm TypeScript is clean
+git status                  # make sure nothing is uncommitted
+git push                    # confirm push succeeded (look for -> origin/ in output)
+```
+
+Then verify the following by inspection:
+
+| Check | What to update |
+|---|---|
+| **README** | Sentence counts, category table, file references, author list in Classical section |
+| **ARCHITECTURE.md** | Update if any new structural patterns, node roles, or data conventions were introduced |
+| **Handoff log** | Update the Active Ticket Summary table — close completed tickets, add any new ones |
+| **Audit queue** | Mark completed audits in `docs/audits/queued_audits.md` |
+
+> [!TIP]
+> The README check is the anchor. If sentence counts changed, authors were added, categories were added, or scripts were added — the README needs a line. Everything else follows.

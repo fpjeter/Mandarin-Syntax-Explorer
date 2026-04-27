@@ -71,9 +71,9 @@ Click the scroll icon (📜) next to the app title to toggle into **Classical Ch
 
 ### Adding Classical Quotes
 
-Each quote lives in `src/data/classicalSentences.ts` as a `SentenceData` object. Classical entries include two additional fields:
+Each quote lives in `src/data/classical_sentences.json` as a `SentenceData` object. Classical entries include two additional fields:
 
-- `source` — the text the quote comes from (e.g. `"《論語·學而》"`)
+- `source` — the text the quote comes from, formatted as `"《論語》· 學而篇"`
 - `author` — attribution (e.g. `"Confucius"`)
 
 The `category` field must match a value in `src/data/classicalCategories.ts`. Everything else (`chinese`, `pinyin`, `translation`, `explanation`, `tree`) follows the same structure as modern sentences.
