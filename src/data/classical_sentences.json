@@ -1351,7 +1351,7 @@
   {
     "id": "cc12",
     "category": "Nominalizers (者/所)",
-    "source": "韓愈《師說》",
+    "source": "《師說》",
     "author": "Han Yu",
     "chinese": "師者，所以傳道授業解惑也。",
     "pinyin": "Shī zhě, suǒ yǐ chuán dào shòu yè jiě huò yě.",
@@ -1652,45 +1652,59 @@
       "role": "Sentence",
       "children": [
         {
-          "id": "cc14-neg",
-          "role": "Adjunct",
-          "subRole": "temporal negation",
-          "text": {
-            "hanzi": "未",
-            "pinyin": "wèi",
-            "translation": "never / not yet"
-          }
+          "id": "cc14-ghost",
+          "role": "Topic",
+          "isDropped": true,
+          "subRole": "pro-drop",
+          "refersToId": null,
+          "impliedText": "(implied from prior discourse)"
         },
         {
-          "id": "cc14-obj",
-          "role": "Object",
-          "subRole": "fronted pronoun (negation inversion)",
-          "text": {
-            "hanzi": "之",
-            "pinyin": "zhī",
-            "translation": "such a thing"
-          },
-          "semanticRole": "Patient"
-        },
-        {
-          "id": "cc14-v",
-          "role": "Head Verb",
-          "subRole": "existential",
-          "text": {
-            "hanzi": "有",
-            "pinyin": "yǒu",
-            "translation": "exist / occur"
-          }
-        },
-        {
-          "id": "cc14-ye",
-          "role": "Particle",
-          "subRole": "assertive",
-          "text": {
-            "hanzi": "也",
-            "pinyin": "yě",
-            "translation": "(emphatic assertion)"
-          }
+          "id": "cc14-comment",
+          "role": "Comment",
+          "children": [
+            {
+              "id": "cc14-neg",
+              "role": "Adjunct",
+              "subRole": "temporal negation",
+              "text": {
+                "hanzi": "未",
+                "pinyin": "wèi",
+                "translation": "never / not yet"
+              }
+            },
+            {
+              "id": "cc14-obj",
+              "role": "Object",
+              "subRole": "fronted pronoun (negation inversion)",
+              "text": {
+                "hanzi": "之",
+                "pinyin": "zhī",
+                "translation": "such a thing"
+              },
+              "semanticRole": "Patient"
+            },
+            {
+              "id": "cc14-v",
+              "role": "Head Verb",
+              "subRole": "existential",
+              "text": {
+                "hanzi": "有",
+                "pinyin": "yǒu",
+                "translation": "exist / occur"
+              }
+            },
+            {
+              "id": "cc14-ye",
+              "role": "Particle",
+              "subRole": "assertive",
+              "text": {
+                "hanzi": "也",
+                "pinyin": "yě",
+                "translation": "(emphatic assertion)"
+              }
+            }
+          ]
         }
       ]
     }
@@ -3808,7 +3822,8 @@
           ]
         }
       ]
-    }
+    },
+    "author": "Zhuangzi"
   },
   {
     "id": "cc32",
@@ -3906,7 +3921,8 @@
           ]
         }
       ]
-    }
+    },
+    "author": "Anonymous (Warring States period)"
   },
   {
     "id": "cc33",
@@ -4018,7 +4034,8 @@
           ]
         }
       ]
-    }
+    },
+    "author": "Anonymous (Warring States period)"
   },
   {
     "id": "cc34",
@@ -4027,7 +4044,7 @@
     "pinyin": "Huò ér bù cóng shī, qí wéi huò yě zhōng bù jiě yǐ.",
     "modernChinese": "有了疑惑却不跟从老师（学习），那些疑惑最终不会解开了。",
     "translation": "If one is confused but does not follow a teacher, those confusions will ultimately never be resolved.",
-    "source": "韓愈《師說》",
+    "source": "《師說》",
     "explanation": {
       "en": "An **implicit conditional** — no 若/苟/則 marker, but the logical structure is clearly \"if X, then Y.\" The first clause is the condition: 惑(be confused) **而**(contrastive: \"but\") 不從師(not follow a teacher). The second clause is the consequence: **其**(those, referring back to 惑) 為惑也 (where **為** is tagged `Head Verb (copulative)` — a linking verb meaning \"constitutes\")(being confusion) 終不解矣(ultimately never resolved). This gives the Conditionals category a gradient: cc31 (explicit 則), cc32 (苟), cc34 (implicit).",
       "zh": "**隐含条件句**——没有若/苟/則标记，但逻辑结构明确是\"如果X，则Y\"。第一分句是条件：惑（困惑）**而**（转折）不從師。第二分句是结果：**其**（回指\"惑\"）為惑也（**為**标记为`Head Verb (copulative)`，系动词，意为\"构成\"）終不解矣。"
@@ -4045,7 +4062,8 @@
               "id": "cc34-ghost",
               "role": "Topic",
               "subRole": "pro-drop",
-              "isDropped": true, "refersToId": null,
+              "isDropped": true,
+              "refersToId": null,
               "impliedText": "[人]",
               "semanticRole": "Agent"
             },
@@ -4208,7 +4226,8 @@
           ]
         }
       ]
-    }
+    },
+    "author": "Han Yu"
   },
   {
     "id": "cc35",
@@ -4272,7 +4291,8 @@
           ]
         }
       ]
-    }
+    },
+    "author": "Zhuangzi"
   },
   {
     "id": "cc36",
@@ -4392,7 +4412,8 @@
           ]
         }
       ]
-    }
+    },
+    "author": "Sima Qian"
   },
   {
     "id": "cc37",
@@ -4517,7 +4538,8 @@
           ]
         }
       ]
-    }
+    },
+    "author": "Zhuangzi"
   },
   {
     "id": "cc38",
@@ -4647,7 +4669,8 @@
           ]
         }
       ]
-    }
+    },
+    "author": "Anonymous (ritual compilation)"
   },
   {
     "id": "cc39",
@@ -4775,7 +4798,8 @@
           ]
         }
       ]
-    }
+    },
+    "author": "Mencius"
   },
   {
     "id": "cc40",
@@ -4873,7 +4897,8 @@
           ]
         }
       ]
-    }
+    },
+    "author": "Anonymous (folk poetry)"
   },
   {
     "id": "cc41",
@@ -4960,7 +4985,8 @@
           ]
         }
       ]
-    }
+    },
+    "author": "Sima Qian"
   },
   {
     "id": "cc42",
@@ -5117,7 +5143,8 @@
           ]
         }
       ]
-    }
+    },
+    "author": "Zuoqiu Ming"
   },
   {
     "id": "cc43",
@@ -5126,7 +5153,7 @@
     "pinyin": "Yōu láo kě yǐ xīng guó, yì yù kě yǐ wáng shēn.",
     "modernChinese": "忧虑辛劳可以使国家兴盛，安逸享乐可以使自身灭亡。",
     "translation": "Worry and toil can make a state prosper; ease and pleasure can ruin oneself.",
-    "source": "歐陽修《伶官傳序》",
+    "source": "《伶官傳序》",
     "explanation": {
       "en": "The **implicit causative** — classical Chinese's most common causative pattern. Unlike cc33 (explicit 使-causative), **興** and **亡** are intransitive verbs USED TRANSITIVELY to express causation, with no 使/令 marker. \"Prosper\" becomes \"cause to prosper\"; \"perish\" becomes \"cause to perish.\" The tree reveals this by placing 國/身 as direct Objects of semantically intransitive verbs — the structural mismatch IS the teaching point. This completes the causative picture: explicit (cc33) + implicit (cc43).",
       "zh": "**隐含使动**——文言最常见的使动用法。与cc33（显性使字句）不同，**興**和**亡**是不及物动词被**用作及物动词**来表达使动，没有使/令标记。\"兴盛\"变成\"使兴盛\"；\"灭亡\"变成\"使灭亡\"。树通过将國/身放在语义上不及物动词的宾语位置来揭示这一点。"
@@ -5230,6 +5257,7 @@
           ]
         }
       ]
-    }
+    },
+    "author": "Ouyang Xiu"
   }
 ]
