@@ -3045,7 +3045,7 @@
                 {
                   "id": "s102-ghost-agent",
                   "role": "Topic",
-                  "subRole": "implied topic",
+                  "subRole": "pro-drop",
                   "semanticRole": "Agent",
                   "text": {
                     "hanzi": "[有人]",
@@ -8515,7 +8515,7 @@
           "id": "s119-ghost",
           "role": "Topic",
           "semanticRole": "Agent",
-          "subRole": "implied topic",
+          "subRole": "pro-drop",
           "text": {
             "hanzi": "[这里]",
             "pinyin": "zhè lǐ",
@@ -11196,7 +11196,7 @@
           "id": "s109-ghost",
           "role": "Topic",
           "semanticRole": "Agent",
-          "subRole": "implied topic",
+          "subRole": "pro-drop",
           "text": {
             "hanzi": "[我]",
             "pinyin": "wǒ",

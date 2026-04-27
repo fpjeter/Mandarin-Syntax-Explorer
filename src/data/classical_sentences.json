@@ -2907,7 +2907,7 @@
         {
           "id": "cc24-reason",
           "role": "Adjunct",
-          "subRole": "以-clause (causal)",
+          "subRole": "causal",
           "children": [
             {
               "id": "cc24-yi",
@@ -3559,7 +3559,7 @@
             {
               "id": "cc30-purpose",
               "role": "Adjunct",
-              "subRole": "purpose (以)",
+              "subRole": "purpose",
               "children": [
                 {
                   "id": "cc30-yi",
@@ -4045,7 +4045,7 @@
               "id": "cc34-ghost",
               "role": "Topic",
               "subRole": "pro-drop",
-              "isDropped": true,
+              "isDropped": true, "refersToId": null,
               "impliedText": "[人]",
               "semanticRole": "Agent"
             },
