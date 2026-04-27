@@ -42,7 +42,7 @@
             {
               "id": "cc1-c1-adv",
               "role": "Adjunct",
-              "subRole": "time / frequency",
+              "subRole": "time",
               "text": {
                 "hanzi": "時",
                 "pinyin": "shí",
@@ -89,7 +89,7 @@
             {
               "id": "cc1-c2-yi",
               "role": "Adjunct",
-              "subRole": "rhetorical intensifier",
+              "subRole": "rhetorical",
               "text": {
                 "hanzi": "亦",
                 "pinyin": "yì",
@@ -130,8 +130,8 @@
     "pinyin": "Zhī zhī zhě bù rú hào zhī zhě, hào zhī zhě bù rú lè zhī zhě.",
     "translation": "One who knows it is not as good as one who loves it; one who loves it is not as good as one who delights in it.",
     "explanation": {
-      "en": "Confucius argues that **genuine engagement** surpasses mere knowledge: loving what you study is better than simply knowing it, and finding joy in it is the highest form of mastery. The progression from knowing → loving → delighting maps out a hierarchy of learning that remains influential in Chinese pedagogy today. *Grammatically,* the sentence showcases the classical **者** (zhě) nominalizer, which turns a verb phrase into \"the one who [verb]s.\" The **不如** comparative pattern (\"is not as good as\") builds a rising chain, and each clause follows the same template: **[verb] 之 者 不如 [verb] 之 者**. The **之** (zhī) in each phrase is an object pronoun (\"it\"), placed between the verb and 者. This repetitive parallel structure is a hallmark of classical rhetoric: it builds rhythm and emphasis while making the grammar crystal clear.",
-      "zh": "孔子论述了三个层次的递进：**知之者**（知道它的人）不如**好之者**（爱好它的人），好之者不如**乐之者**（以之为乐的人）。**者**是文言代词，相当于\"……的人\"。**不如**表示\"比不上\"。三个**之**字都指前文提到的某种学问或技艺。孔子用递进式排比说明：真正的精通不在于头脑里知道多少，而在于内心是否真正热爱。"
+      "en": "Confucius argues that **genuine engagement** surpasses mere knowledge: loving what you study is better than simply knowing it, and finding joy in it is the highest form of mastery. The progression from knowing → loving → delighting maps out a hierarchy of learning that remains influential in Chinese pedagogy today. *Grammatically,* the sentence showcases the classical **者** (zhě) nominalizer, which turns a verb phrase into \"the one who [verb]s.\" The **不如** comparative pattern (\"is not as good as\") builds a rising chain, and each clause follows the same template: **[verb] 之 者 不如 [verb] 之 者**. The **之** (zhī) in each phrase is an object pronoun (\"it\"), placed between the verb and 者. This repetitive parallel structure is a hallmark of classical rhetoric: it builds rhythm and emphasis while making the grammar crystal clear. In the tree, each comparison tier is wrapped in an **Embedded Clause** node — a mini-sentence nested inside the larger parallel frame.",
+      "zh": "孔子论述了三个层次的递进：**知之者**（知道它的人）不如**好之者**（爱好它的人），好之者不如**乐之者**（以之为乐的人）。**者**是文言代词，相当于\"……的人\"。**不如**表示\"比不上\"。三个**之**字都指前文提到的某种学问或技艺。孔子用递进式排比说明：真正的精通不在于头脑里知道多少，而在于内心是否真正热爱。在树中，每个比较层级都被包裹在**嵌入从句**（Embedded Clause）节点中——嵌套在更大并列框架里的小句子。"
     },
     "tree": {
       "id": "cc2-root",
@@ -472,7 +472,7 @@
     "pinyin": "Dào kě dào, fēi cháng dào.",
     "translation": "The Way that can be spoken of is not the constant Way.",
     "explanation": {
-      "en": "The famous opening of the **Tao Te Ching** announces that ultimate reality, the Dao, **transcends language**. Any \"Way\" that can be captured in words is, by definition, not the eternal, unchanging Way. Laozi is warning the reader at the outset that his entire text is a paradox: words pointing toward something beyond words. *Grammatically,* the same character **道** (dào) appears three times with three different roles: first as a noun (\"the Way\"), then as a verb (\"to speak/articulate\"), and finally as a noun again (\"the [true] Way\"). **可** (kě) before the verb means \"can be,\" similar to the modern potential complement pattern. **非** (fēi) is the classical copula negator, meaning \"is not,\" negating the entire identity of the subject. **常** (cháng) means \"constant/eternal.\"",
+      "en": "The famous opening of the **Tao Te Ching** announces that ultimate reality, the Dao, **transcends language**. Any \"Way\" that can be captured in words is, by definition, not the eternal, unchanging Way. Laozi is warning the reader at the outset that his entire text is a paradox: words pointing toward something beyond words. *Grammatically,* the same character **道** (dào) appears three times with three different roles: first as a noun (\"the Way\"), then as a verb (\"to speak/articulate\"), and finally as a noun again (\"the [true] Way\"). **可** (kě) before the verb means \"can be,\" similar to the modern potential complement pattern. **非** (fēi) is the classical copula negator, meaning \"is not,\" negating the entire identity of the **Topic**. **常** (cháng) means \"constant/eternal.\"",
       "zh": "《道德经》最著名的开头宣告：终极真理无法被语言捕捉。第一个**道**是名词（\"道理、真理\"），**可道**中的第二个\"道\"是动词（\"说出来\"）。**非常道**：**非**是否定，**常**是\"恒久的\"，**常道**即\"永恒不变的道\"。语法核心是一个条件—否定结构：如果能说出来→那就不是永恒之道。老子用三个完全相同的字构成了一个自我否定的哲学命题。"
     },
     "tree": {
@@ -501,7 +501,7 @@
                 {
                   "id": "cc4-t-pred-ke",
                   "role": "Adjunct",
-                  "subRole": "potential marker",
+                  "subRole": "potential",
                   "text": {
                     "hanzi": "可",
                     "pinyin": "kě",
@@ -602,7 +602,7 @@
                 {
                   "id": "cc5-t-attr-zhi",
                   "role": "Particle",
-                  "subRole": "genitive marker",
+                  "subRole": "genitive",
                   "text": {
                     "hanzi": "之",
                     "pinyin": "zhī",
@@ -691,8 +691,8 @@
     "pinyin": "Wēn gù ér zhī xīn, kě yǐ wéi shī yǐ.",
     "translation": "To review the old and understand the new, with this one can be a teacher.",
     "explanation": {
-      "en": "Confucius defines the essence of good teaching: a true teacher does not merely memorize the past but **gains fresh insight from revisiting old material**. The ability to draw new understanding from familiar knowledge is what qualifies someone to guide others. This idea shaped the Chinese educational tradition of repeated, reflective study. *Grammatically,* **而** (ér) chains two actions: **溫故** (\"review the old\") and **知新** (\"understand the new\"), implying the second *arises from* the first. The verbs **溫** and **知** take adjective-turned-nouns as objects: **故** (old things) and **新** (new things); classical Chinese freely converts adjectives to nouns without morphological change. The second clause introduces **可以** (kě yǐ, \"can thereby\") and **為** (wéi, \"serve as\"), followed by **矣** (yǐ), a sentence-final particle expressing a settled conclusion.",
-      "zh": "孔子定义好老师的本质：真正的老师能从旧知识中发现新道理。**温**是\"温习\"，**故**是\"旧的知识\"。**而**连接因果：因为温习旧知→所以获得新知。**知新**是\"获得新的理解\"。**可以为师矣**：**可以**表示\"够资格\"，**为**是\"成为\"，**师**是\"老师\"，**矣**是语气词表确认。整句是一个条件→资格判断的结构。"
+      "en": "Confucius defines the essence of good teaching: a true teacher does not merely memorize the past but **gains fresh insight from revisiting old material**. The ability to draw new understanding from familiar knowledge is what qualifies someone to guide others. This idea shaped the Chinese educational tradition of repeated, reflective study. *Grammatically,* **而** (ér) chains two actions: **溫故** (\"review the old\") and **知新** (\"understand the new\"), implying the second *arises from* the first. The verbs **溫** and **知** take adjective-turned-nouns as objects: **故** (old things) and **新** (new things); classical Chinese freely converts adjectives to nouns without morphological change. The second clause introduces **可以** (kě yǐ, \"can thereby\") and **為** (wéi, \"serve as\"), followed by **矣** (yǐ), a sentence-final particle expressing a settled conclusion. The verb **為** is tagged `Head Verb (copulative)` in the tree — it functions as a linking verb connecting 師 to the preceding clause.",
+      "zh": "孔子定义好老师的本质：真正的老师能从旧知识中发现新道理。**温**是\"温习\"，**故**是\"旧的知识\"。**而**连接因果：因为温习旧知→所以获得新知。**知新**是\"获得新的理解\"。**可以为师矣**：**可以**表示\"够资格\"，**为**是\"成为\"，**师**是\"老师\"，**矣**是语气词表确认。整句是一个条件→资格判断的结构。动词**為**在树中标记为`Head Verb (copulative)`——在此用作连接\"師\"与前一分句的系动词。"
     },
     "tree": {
       "id": "cc6-root",
@@ -851,7 +851,7 @@
             {
               "id": "cc7-t-suo",
               "role": "Particle",
-              "subRole": "object nominalizer",
+              "subRole": "nominalizer",
               "text": {
                 "hanzi": "所",
                 "pinyin": "suǒ",
@@ -943,7 +943,7 @@
     "pinyin": "Wú rì sān xǐng wú shēn.",
     "translation": "Each day I examine myself on three points.",
     "explanation": {
-      "en": "**Zengzi** (曾子), a disciple of Confucius, describes his daily practice of rigorous **self-examination**: reflecting on whether he has been loyal to others, trustworthy with friends, and diligent in study. It captures the Confucian emphasis on constant moral self-cultivation rather than outward judgment. *Grammatically,* this compact sentence demonstrates several signature classical features in just six characters. **吾** (wú) is the archaic first-person pronoun, more literary than 我. **日** (rì, \"daily\") functions as a time adverb directly before the predicate without any preposition; classical Chinese freely repurposes nouns as modifiers. **三** (sān, \"three / three times\") acts as a frequency adverb modifying the verb **省** (xǐng, \"examine/reflect\"). The object **吾身** (\"my person/self\") is a reflexive construction.",
+      "en": "**Zengzi** (曾子), a disciple of Confucius, describes his daily practice of rigorous **self-examination**: reflecting on whether he has been loyal to others, trustworthy with friends, and diligent in study. It captures the Confucian emphasis on constant moral self-cultivation rather than outward judgment. *Grammatically,* this compact sentence demonstrates several signature classical features in just six characters. **吾** (wú) is the archaic first-person pronoun, more literary than 我. **日** (rì, \"daily\") functions as a time adverb directly before the **Comment** without any preposition; classical Chinese freely repurposes nouns as modifiers. **三** (sān, \"three / three times\") acts as a frequency adverb modifying the verb **省** (xǐng, \"examine/reflect\"). The object **吾身** (\"my person/self\") is a reflexive construction.",
       "zh": "曾子（孔子弟子）描述他每日自省的修养功夫。**吾**是文言第一人称\"我\"。**日**做副词\"每天\"。**三**不是字面的\"三次\"，而是\"多次\"。**省**（xǐng）是\"反省、检查\"。**吾身**是\"我自身\"。整句结构极为紧凑：主语（吾）+ 时间副词（日）+ 频率（三）+ 动词（省）+ 宾语（吾身）。"
     },
     "tree": {
@@ -967,7 +967,7 @@
             {
               "id": "cc8-c-time",
               "role": "Adjunct",
-              "subRole": "time (noun → adverb)",
+              "subRole": "time",
               "text": {
                 "hanzi": "日",
                 "pinyin": "rì",
@@ -1074,7 +1074,7 @@
             {
               "id": "cc9-c-adv",
               "role": "Adjunct",
-              "subRole": "rhetorical challenge",
+              "subRole": "rhetorical",
               "text": {
                 "hanzi": "寧",
                 "pinyin": "nìng",
@@ -1315,7 +1315,7 @@
                 {
                   "id": "cc11-c-pred-suo",
                   "role": "Particle",
-                  "subRole": "object nominalizer",
+                  "subRole": "nominalizer",
                   "text": {
                     "hanzi": "所",
                     "pinyin": "suǒ",
@@ -1336,7 +1336,7 @@
             {
               "id": "cc11-c-ye",
               "role": "Particle",
-              "subRole": "assertive (identity)",
+              "subRole": "assertive",
               "text": {
                 "hanzi": "也",
                 "pinyin": "yě",
@@ -1381,7 +1381,7 @@
             {
               "id": "cc12-t-zhe",
               "role": "Particle",
-              "subRole": "definitional nominalizer",
+              "subRole": "nominalizer",
               "text": {
                 "hanzi": "者",
                 "pinyin": "zhě",
@@ -1399,7 +1399,7 @@
             {
               "id": "cc12-c-suoyi",
               "role": "Particle",
-              "subRole": "means nominalizer",
+              "subRole": "nominalizer",
               "text": {
                 "hanzi": "所以",
                 "pinyin": "suǒ yǐ",
@@ -1484,7 +1484,7 @@
             {
               "id": "cc12-c-ye",
               "role": "Particle",
-              "subRole": "assertive (identity)",
+              "subRole": "assertive",
               "text": {
                 "hanzi": "也",
                 "pinyin": "yě",
@@ -1704,7 +1704,7 @@
     "pinyin": "Zhāo wén dào, xī sǐ kě yǐ.",
     "translation": "If in the morning one hears the Way, one could die that evening without regret.",
     "explanation": {
-      "en": "Confucius expresses the **supreme value of truth**: understanding the Dao is so important that even death the same day would be worthwhile. It speaks to the urgency of moral and philosophical clarity; a life without understanding the Way is not truly lived. *Grammatically,* **朝** (zhāo, \"morning\") and **夕** (xī, \"evening\") are bare time adverbs, with no preposition needed. Classical Chinese freely repurposes nouns as temporal modifiers by placing them before the verb. The first clause **朝聞道** follows a simple S-V-O pattern with the subject dropped (implied): \"(if one) hears the Way in the morning.\" The second clause uses **可** (kě, \"acceptable/permissible\") as a predicate, and **矣** (yǐ) is a sentence-final particle expressing a settled, satisfied conclusion.",
+      "en": "Confucius expresses the **supreme value of truth**: understanding the Dao is so important that even death the same day would be worthwhile. It speaks to the urgency of moral and philosophical clarity; a life without understanding the Way is not truly lived. *Grammatically,* **朝** (zhāo, \"morning\") and **夕** (xī, \"evening\") are bare time adverbs, with no preposition needed. Classical Chinese freely repurposes nouns as temporal modifiers by placing them before the verb. The first clause **朝聞道** follows a simple S-V-O pattern with the **Topic** dropped (implied): \"(if one) hears the Way in the morning.\" The second clause uses **可** (kě, \"acceptable/permissible\") as a **Comment**, and **矣** (yǐ) is a sentence-final particle expressing a settled, satisfied conclusion. Classical Chinese uses Topic-Comment structure rather than Subject-Predicate.",
       "zh": "孔子表达了对真理的至高追求：理解了大道，即使当晚就死也心甘情愿。**朝**是\"早上\"，**闻**是\"听闻/领悟\"，**道**是\"大道、真理\"。**夕**是\"傍晚\"。**死可矣**：**可**是\"可以接受\"，**矣**是确认语气词。整句是一个时间对比框架：朝（条件）→ 夕（后果），用极端的时间压缩表达无条件的精神渴望。"
     },
     "tree": {
@@ -1719,7 +1719,7 @@
             {
               "id": "cc15-t-time",
               "role": "Adjunct",
-              "subRole": "time (noun → adverb)",
+              "subRole": "time",
               "text": {
                 "hanzi": "朝",
                 "pinyin": "zhāo",
@@ -1754,7 +1754,7 @@
             {
               "id": "cc15-c-time",
               "role": "Adjunct",
-              "subRole": "time (noun → adverb)",
+              "subRole": "time",
               "text": {
                 "hanzi": "夕",
                 "pinyin": "xī",
@@ -1804,7 +1804,7 @@
     "pinyin": "Zhī bǐ zhī jǐ, bǎi zhàn bù dài.",
     "translation": "Know the enemy, know yourself, a hundred battles, no peril.",
     "explanation": {
-      "en": "Sun Tzu's most famous maxim distills an entire military philosophy into eight characters: **victory comes from understanding both your opponent and yourself**. The parallel structure emphasizes that self-knowledge is equally as important as intelligence-gathering. This principle has been applied far beyond warfare, extending into business, diplomacy, and personal growth. *Grammatically,* the sentence demonstrates classical **parallel structure** and **omitted subjects**. The first clause pairs two verb-object phrases: **知彼** (\"know the other/enemy\") and **知己** (\"know oneself\"), with the same verb **知** repeated for rhetorical balance and no conjunction; classical Chinese relies on juxtaposition. The second clause **百戰不殆** is equally compressed: **百戰** (\"a hundred battles\") acts as a topic-like conditional, and **不殆** (\"not perilous\") is the predicate.",
+      "en": "Sun Tzu's most famous maxim distills an entire military philosophy into eight characters: **victory comes from understanding both your opponent and yourself**. The parallel structure emphasizes that self-knowledge is equally as important as intelligence-gathering. This principle has been applied far beyond warfare, extending into business, diplomacy, and personal growth. *Grammatically,* the sentence demonstrates classical **parallel structure** and **omitted subjects**. The first clause pairs two verb-object phrases: **知彼** (\"know the other/enemy\") and **知己** (\"know oneself\"), with the same verb **知** repeated for rhetorical balance and no conjunction; classical Chinese relies on juxtaposition. The second clause **百戰不殆** is equally compressed: **百戰** (\"a hundred battles\") acts as a topic-like conditional, and **不殆** (\"not perilous\") is the **Comment**.",
       "zh": "孙子最著名的格言将整套军事哲学浓缩为十个字。**知彼**是\"了解对方\"。**知己**是\"了解自己\"。**百战**是\"一百场战斗\"（泛指所有战斗）。**不殆**：**殆**是\"危险\"，**不殆**=\"不会有危险\"。语法结构是一个省略了连词的条件句：知彼知己（条件）→ 百战不殆（结果）。孙子把复杂的战略学说压缩为一个因果公式。"
     },
     "tree": {
@@ -1948,7 +1948,7 @@
             {
               "id": "cc17-c1-cond",
               "role": "Adjunct",
-              "subRole": "condition (而-contrastive)",
+              "subRole": "conditional",
               "children": [
                 {
                   "id": "cc17-c1-v1",
@@ -1998,7 +1998,7 @@
                 {
                   "id": "cc17-c1-ze",
                   "role": "Particle",
-                  "subRole": "conditional marker",
+                  "subRole": "conditional",
                   "text": {
                     "hanzi": "則",
                     "pinyin": "zé",
@@ -2027,7 +2027,7 @@
             {
               "id": "cc17-c2-cond",
               "role": "Adjunct",
-              "subRole": "condition (而-contrastive)",
+              "subRole": "conditional",
               "children": [
                 {
                   "id": "cc17-c2-v1",
@@ -2077,7 +2077,7 @@
                 {
                   "id": "cc17-c2-ze",
                   "role": "Particle",
-                  "subRole": "conditional marker",
+                  "subRole": "conditional",
                   "text": {
                     "hanzi": "則",
                     "pinyin": "zé",
@@ -2110,7 +2110,7 @@
     "pinyin": "Rén bù zhī ér bù yùn, bù yì jūnzǐ hū?",
     "translation": "If others do not recognize you, yet you are not resentful, is that not the mark of a noble person?",
     "explanation": {
-      "en": "The third and final line of the Analects' famous opening passage defines the **jūnzǐ (君子, noble person)**: someone who remains serene even when their merits go unrecognized by others. True virtue, Confucius implies, is **its own reward**: it does not depend on external validation. *Grammatically,* the sentence combines **而** in its *concessive* sense (\"yet/even so\") with the **不亦…乎** rhetorical question pattern. The first clause **人不知** means \"others do not know/recognize (you),\" with an implied object. **而** then introduces a surprising contrast: **不慍** (\"not resentful\"). The second half uses the same 不亦…乎 frame from the passage's first line (cc1), creating a structural bookend. **君子** (jūnzǐ) is a noun acting as a predicate: \"is a noble person.\"",
+      "en": "The third and final line of the Analects' famous opening passage defines the **jūnzǐ (君子, noble person)**: someone who remains serene even when their merits go unrecognized by others. True virtue, Confucius implies, is **its own reward**: it does not depend on external validation. *Grammatically,* the sentence combines **而** in its *concessive* sense (\"yet/even so\") with the **不亦…乎** rhetorical question pattern. The first clause **人不知** means \"others do not know/recognize (you),\" with an implied object. **而** then introduces a surprising contrast: **不慍** (\"not resentful\"). The second half uses the same 不亦…乎 frame from the passage's first line (cc1), creating a structural bookend. **君子** (jūnzǐ) is a noun acting as a **Comment**: \"is a noble person.\"",
       "zh": "《论语》开篇三句的最后一句。**人不知**是\"别人不了解（你）\"。**而**是转折\"但是\"。**不愠**：**愠**是\"恼怒\"，**不愠**=\"不生气\"。**不亦君子乎**用反问确认：\"这难道不正是君子吗？\"孔子用这个反问定义了君子的精神境界：不依赖外界认可来确认自身价值。"
     },
     "tree": {
@@ -2214,7 +2214,7 @@
             {
               "id": "cc18-c-yi",
               "role": "Adjunct",
-              "subRole": "rhetorical intensifier",
+              "subRole": "rhetorical",
               "text": {
                 "hanzi": "亦",
                 "pinyin": "yì",
@@ -2560,7 +2560,7 @@
         {
           "id": "cc21-pp",
           "role": "Adjunct",
-          "subRole": "以-construction (instrumental)",
+          "subRole": "instrumental",
           "children": [
             {
               "id": "cc21-yi",
@@ -3018,7 +3018,7 @@
             {
               "id": "cc25-zhi",
               "role": "Particle",
-              "subRole": "genitive marker",
+              "subRole": "genitive",
               "text": {
                 "hanzi": "之",
                 "pinyin": "zhī",
@@ -3159,7 +3159,7 @@
             {
               "id": "cc26-ranhou",
               "role": "Adjunct",
-              "subRole": "sequential adverb",
+              "subRole": "sequential",
               "text": {
                 "hanzi": "然後",
                 "pinyin": "rán hòu",
@@ -3193,7 +3193,7 @@
                 {
                   "id": "cc26-zhi-p",
                   "role": "Particle",
-                  "subRole": "genitive marker",
+                  "subRole": "genitive",
                   "text": {
                     "hanzi": "之",
                     "pinyin": "zhī",
@@ -3372,7 +3372,7 @@
             {
               "id": "cc28-yi-phrase",
               "role": "Adjunct",
-              "subRole": "instrumental (以)",
+              "subRole": "instrumental",
               "children": [
                 {
                   "id": "cc28-yi",
@@ -3834,7 +3834,7 @@
             {
               "id": "cc32-gou",
               "role": "Adjunct",
-              "subRole": "conditional marker",
+              "subRole": "conditional",
               "text": {
                 "hanzi": "苟",
                 "pinyin": "gǒu",
@@ -3917,8 +3917,8 @@
     "translation": "The King of Qin sent someone to say to Lord Anling.",
     "source": "《戰國策》· 趙策",
     "explanation": {
-      "en": "A classic **pivotal construction** using **使** (\"send/cause\"). This is exactly the same structure as modern 妈妈让我去买牛奶 — the person being sent (**人**) is the pivot noun playing two roles: object of 使 and subject of the embedded action. The embedded VP chains two verbs: **謂** (\"say to/address\") takes 安陵君 as its object, then **曰** (\"say/spoke thus\") follows. Cross-reference modern pivotal s32.",
-      "zh": "经典**兼语式**，用**使**（派遣）。**人**是兼语：既是\"使\"的宾语，又是后续动作的主语。内嵌VP串联两个动词：**謂**（对…说）接宾语安陵君，**曰**（说道）跟随其后。"
+      "en": "A classic **pivotal construction** using **使** (\"send/cause\"). This is exactly the same structure as modern 妈妈让我去买牛奶 — the person being sent (**人**) is the pivot noun playing two roles: object of 使 and subject of the embedded action. The embedded VP chains two verbs: **謂** (\"say to/address\") takes 安陵君 as its object, then **曰** (\"say/spoke thus\") follows. Cross-reference modern pivotal s32. **使** is tagged as `Head Verb (causative)` in the tree — it is the verb that initiates the entire causative chain.",
+      "zh": "经典**兼语式**，用**使**（派遣）。**人**是兼语：既是\"使\"的宾语，又是后续动作的主语。内嵌VP串联两个动词：**謂**（对…说）接宾语安陵君，**曰**（说道）跟随其后。**使**在树中标记为`Head Verb (causative)`——它是启动整个使动链的动词。"
     },
     "tree": {
       "id": "cc33-root",
@@ -4029,8 +4029,8 @@
     "translation": "If one is confused but does not follow a teacher, those confusions will ultimately never be resolved.",
     "source": "韓愈《師說》",
     "explanation": {
-      "en": "An **implicit conditional** — no 若/苟/則 marker, but the logical structure is clearly \"if X, then Y.\" The first clause is the condition: 惑(be confused) **而**(contrastive: \"but\") 不從師(not follow a teacher). The second clause is the consequence: **其**(those, referring back to 惑) 為惑也(being confusion) 終不解矣(ultimately never resolved). This gives the Conditionals category a gradient: cc31 (explicit 則), cc32 (苟), cc34 (implicit).",
-      "zh": "**隐含条件句**——没有若/苟/則标记，但逻辑结构明确是\"如果X，则Y\"。第一分句是条件：惑（困惑）**而**（转折）不從師。第二分句是结果：**其**（回指\"惑\"）為惑也終不解矣。"
+      "en": "An **implicit conditional** — no 若/苟/則 marker, but the logical structure is clearly \"if X, then Y.\" The first clause is the condition: 惑(be confused) **而**(contrastive: \"but\") 不從師(not follow a teacher). The second clause is the consequence: **其**(those, referring back to 惑) 為惑也 (where **為** is tagged `Head Verb (copulative)` — a linking verb meaning \"constitutes\")(being confusion) 終不解矣(ultimately never resolved). This gives the Conditionals category a gradient: cc31 (explicit 則), cc32 (苟), cc34 (implicit).",
+      "zh": "**隐含条件句**——没有若/苟/則标记，但逻辑结构明确是\"如果X，则Y\"。第一分句是条件：惑（困惑）**而**（转折）不從師。第二分句是结果：**其**（回指\"惑\"）為惑也（**為**标记为`Head Verb (copulative)`，系动词，意为\"构成\"）終不解矣。"
     },
     "tree": {
       "id": "cc34-root",
@@ -4196,7 +4196,7 @@
                 {
                   "id": "cc34-yi",
                   "role": "Particle",
-                  "subRole": "assertion",
+                  "subRole": "assertive",
                   "text": {
                     "hanzi": "矣",
                     "pinyin": "yǐ",
@@ -4507,7 +4507,7 @@
             {
               "id": "cc37-ye",
               "role": "Particle",
-              "subRole": "assertion",
+              "subRole": "assertive",
               "text": {
                 "hanzi": "也",
                 "pinyin": "yě",
@@ -4587,7 +4587,7 @@
             {
               "id": "cc38-zhe",
               "role": "Particle",
-              "subRole": "conditional nominalizer",
+              "subRole": "nominalizer",
               "text": {
                 "hanzi": "者",
                 "pinyin": "zhě",
@@ -4603,7 +4603,7 @@
             {
               "id": "cc38-xian",
               "role": "Adjunct",
-              "subRole": "sequence",
+              "subRole": "sequential",
               "text": {
                 "hanzi": "先",
                 "pinyin": "xiān",
@@ -4884,8 +4884,8 @@
     "translation": "[Han] Xin was laughed at by others.",
     "source": "《史記》· 淮陰侯列傳",
     "explanation": {
-      "en": "The **為…所…** passive has three layers: (1) **為** opens the passive frame (like modern 被), (2) **人** is the agent, (3) **所** wraps the verb into a nominalized VP — \"the laughing-at.\" This extra 所-layer has no modern equivalent; 被 passives skip it entirely. The tree shows 所 as a distinct nominalizer node wrapping 笑, revealing the layer that disappears in modern Chinese. Cross-reference cc37 (者-nominalization) and modern BEI sentences (s128, s132) to see the evolutionary chain: classical 為…所… → modern 被.",
-      "zh": "**為…所…**被动有三层：(1)**為**开启被动框架（类似现代\"被\"），(2)**人**是施事者，(3)**所**将动词名词化——\"所笑\"=\"被嘲笑的事\"。这层**所**在现代汉语中已消失。树展示**所**作为独立名词化节点包裹**笑**。参见cc37（者字句）和现代被字句（s128, s132）。"
+      "en": "The **為…所…** passive has three layers: (1) **為** opens the passive frame (like modern 被), (2) **人** is the agent, (3) **所** wraps the verb into a nominalized VP — \"the laughing-at.\" This extra 所-layer has no modern equivalent; 被 passives skip it entirely. The tree shows 所 as a distinct nominalizer node wrapping 笑, revealing the layer that disappears in modern Chinese. Cross-reference cc37 (者-nominalization) and modern BEI sentences (s128, s132) to see the evolutionary chain: classical 為…所… → modern 被. The tree wraps 人所笑 in an **Embedded Clause** node inside the passive 為 frame.",
+      "zh": "**為…所…**被动有三层：(1)**為**开启被动框架（类似现代\"被\"），(2)**人**是施事者，(3)**所**将动词名词化——\"所笑\"=\"被嘲笑的事\"。这层**所**在现代汉语中已消失。树展示**所**作为独立名词化节点包裹**笑**。参见cc37（者字句）和现代被字句（s128, s132）。树将\"人所笑\"包裹在被动**為**框架内的**嵌入从句**（Embedded Clause）节点中。"
     },
     "tree": {
       "id": "cc41-root",
@@ -4986,7 +4986,7 @@
             {
               "id": "cc42-ruo",
               "role": "Adjunct",
-              "subRole": "conditional marker",
+              "subRole": "conditional",
               "text": {
                 "hanzi": "若",
                 "pinyin": "ruò",

@@ -872,7 +872,7 @@ Do NOT edit any JSON files.
 1. No issues.
 
 ### [2026-04-27] Orchestrator -> Data Linguist
-**Status**: 🔴 Active
+**Status**: ✅ Done
 **Task**: Apply subRole taxonomy normalization + explanation label fixes
 **Branch**: main
 

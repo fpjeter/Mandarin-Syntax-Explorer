@@ -1877,7 +1877,7 @@
             {
               "id": "n4-p-adv2",
               "role": "Adjunct",
-              "subRole": "instrument",
+              "subRole": "instrumental",
               "children": [
                 {
                   "id": "n4-p-adv2-prep",
@@ -2988,7 +2988,7 @@
             {
               "id": "s80-lan",
               "role": "Head Verb",
-              "subRole": "adjectival",
+              "subRole": "adjectival predicate",
               "text": {
                 "hanzi": "蓝",
                 "pinyin": "lán",
@@ -3315,7 +3315,7 @@
             {
               "id": "n8-p-de",
               "role": "Particle",
-              "subRole": "nominalizer (creates \"the one that [verb]ed\")",
+              "subRole": "nominalizer",
               "text": {
                 "hanzi": "的",
                 "pinyin": "de",
@@ -3416,7 +3416,7 @@
             {
               "id": "n23-de",
               "role": "Particle",
-              "subRole": "nominalizer (creates \"the one that [verb]ed\")",
+              "subRole": "nominalizer",
               "text": {
                 "hanzi": "的",
                 "pinyin": "de",
@@ -3498,7 +3498,7 @@
             {
               "id": "n50-de",
               "role": "Particle",
-              "subRole": "nominalizer (creates \"the one that [verb]ed\")",
+              "subRole": "nominalizer",
               "text": {
                 "hanzi": "的",
                 "pinyin": "de",
@@ -3610,7 +3610,7 @@
             {
               "id": "n51-de",
               "role": "Particle",
-              "subRole": "nominalizer (creates \"the one that [verb]ed\")",
+              "subRole": "nominalizer",
               "text": {
                 "hanzi": "的",
                 "pinyin": "de",
@@ -3870,7 +3870,7 @@
             {
               "id": "s105-method",
               "role": "Adjunct",
-              "subRole": "instrument",
+              "subRole": "instrumental",
               "children": [
                 {
                   "id": "s105-vp-hv",
@@ -5443,7 +5443,7 @@
             {
               "id": "n12-p-le",
               "role": "Particle",
-              "subRole": "change of state / current relevance",
+              "subRole": "change of state",
               "text": {
                 "hanzi": "了",
                 "pinyin": "le",
@@ -5846,7 +5846,6 @@
             {
               "id": "s117-v1",
               "role": "Head Verb",
-              "subRole": "action 1",
               "text": {
                 "hanzi": "去",
                 "pinyin": "qù",
@@ -6927,7 +6926,7 @@
                     {
                       "id": "s91-zuo",
                       "role": "Head Verb",
-                      "subRole": "purpose verb",
+                      "subRole": "purpose",
                       "text": {
                         "hanzi": "做",
                         "pinyin": "zuò",
@@ -7269,7 +7268,7 @@
                 {
                   "id": "n95-hv",
                   "role": "Head Verb",
-                  "subRole": "adjectival",
+                  "subRole": "adjectival predicate",
                   "text": {
                     "hanzi": "累",
                     "pinyin": "lèi",
@@ -8109,7 +8108,7 @@
                         {
                           "id": "n52-embedded-v2",
                           "role": "Head Verb",
-                          "subRole": "purpose verb",
+                          "subRole": "purpose",
                           "text": {
                             "hanzi": "谈判",
                             "pinyin": "tán pàn",
@@ -9704,7 +9703,7 @@
             {
               "id": "s121-de",
               "role": "Particle",
-              "subRole": "degree marker",
+              "subRole": "degree",
               "text": {
                 "hanzi": "得",
                 "pinyin": "de",
@@ -10837,7 +10836,7 @@
                     {
                       "id": "n98-hv1",
                       "role": "Head Verb",
-                      "subRole": "adjectival",
+                      "subRole": "adjectival predicate",
                       "text": {
                         "hanzi": "冷",
                         "pinyin": "lěng",
@@ -10959,7 +10958,7 @@
                     {
                       "id": "n99-hv1",
                       "role": "Head Verb",
-                      "subRole": "adjectival",
+                      "subRole": "adjectival predicate",
                       "text": {
                         "hanzi": "高",
                         "pinyin": "gāo",
@@ -11027,7 +11026,7 @@
                     {
                       "id": "n99-hv2",
                       "role": "Head Verb",
-                      "subRole": "adjectival",
+                      "subRole": "adjectival predicate",
                       "text": {
                         "hanzi": "大",
                         "pinyin": "dà",
@@ -11686,7 +11685,7 @@
             {
               "id": "s110-le2",
               "role": "Particle",
-              "subRole": "change of state / ongoing",
+              "subRole": "change of state",
               "text": {
                 "hanzi": "了",
                 "pinyin": "le",
@@ -12027,7 +12026,7 @@
             {
               "id": "s71-yy",
               "role": "Adjunct",
-              "subRole": "instrument",
+              "subRole": "instrumental",
               "text": {
                 "hanzi": "用语言",
                 "pinyin": "yòng yǔ yán",
@@ -13258,7 +13257,7 @@
                     {
                       "id": "s128-de",
                       "role": "Particle",
-                      "subRole": "degree marker",
+                      "subRole": "degree",
                       "text": {
                         "hanzi": "得",
                         "pinyin": "de",
