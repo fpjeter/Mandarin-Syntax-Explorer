@@ -1657,7 +1657,7 @@
           "isDropped": true,
           "subRole": "pro-drop",
           "refersToId": null,
-          "impliedText": "(implied from prior discourse)"
+          "impliedText": "[此]"
         },
         {
           "id": "cc14-comment",
