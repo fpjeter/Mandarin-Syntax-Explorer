@@ -1657,7 +1657,7 @@
           "isDropped": true,
           "subRole": "pro-drop",
           "refersToId": null,
-          "impliedText": "[此]"
+          "impliedText": "此"
         },
         {
           "id": "cc14-comment",
@@ -4064,7 +4064,7 @@
               "subRole": "pro-drop",
               "isDropped": true,
               "refersToId": null,
-              "impliedText": "[人]",
+              "impliedText": "人",
               "semanticRole": "Agent"
             },
             {
@@ -5098,7 +5098,7 @@
               "role": "Topic",
               "subRole": "pro-drop",
               "isDropped": true,
-              "impliedText": "[我]",
+              "impliedText": "我",
               "semanticRole": "Agent",
               "refersToId": null
             },

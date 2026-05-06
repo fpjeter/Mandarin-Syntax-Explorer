@@ -3048,7 +3048,7 @@
                   "subRole": "pro-drop",
                   "semanticRole": "Agent",
                   "text": {
-                    "hanzi": "[有人]",
+                    "hanzi": "有人",
                     "pinyin": "yǒu rén",
                     "translation": "someone"
                   }
@@ -11532,7 +11532,7 @@
           "role": "Topic",
           "semanticRole": "Theme",
           "isDropped": true,
-          "impliedText": "[现场]",
+          "impliedText": "现场",
           "subRole": "expletive",
           "refersToId": null
         },
@@ -13779,7 +13779,7 @@
                   "subRole": "pro-drop",
                   "semanticRole": "Agent",
                   "isDropped": true,
-                  "impliedText": "[有人]",
+                  "impliedText": "有人",
                   "refersToId": "s132-t"
                 },
                 {
