@@ -30,9 +30,9 @@ git push                # Orchestrator only — specialists do NOT run git comma
 
 | Priority | Owner | Task |
 |---|---|---|
-| 🔴 HIGH | Data Linguist | `relatedIds` wiring — ALL 176 sentences have empty `relatedIds[]`. "See Also" feature is dark. |
-| 🟡 MEDIUM | Data Linguist | Classical batch fixes: `cc34` 為→Head Verb, `cc39` root→Parallel Sentence, `cc33` add subRole quotative |
-| 🟡 MEDIUM | Data Linguist | subRole taxonomy normalization — see `docs/audits/subrole_taxonomy_audit.md` (13 clusters) |
+| 🔴 HIGH | Corpus Engineer | `relatedIds` wiring — ALL 176 sentences have empty `relatedIds[]`. "See Also" feature is dark. |
+| 🟡 MEDIUM | Corpus Engineer | Classical batch fixes: `cc34` 為→Head Verb, `cc39` root→Parallel Sentence, `cc33` add subRole quotative |
+| 🟡 MEDIUM | Corpus Engineer | subRole taxonomy normalization — see `docs/audits/subrole_taxonomy_audit.md` (13 clusters) |
 | 🟡 MEDIUM | Ed. Publisher | Expand `s129`–`s137` explanations — currently 36–48 words, target ~75 (dataset avg) |
 | 🟢 LOW | Ling. Specialist | Second pass audit of Topic/Comment subRole labels (whitelisted but non-canonical) |
 | 🟢 LOW | All | Phase C classical expansion — 4 thin categories: Classical Passive (1), Causatives (2), Object Fronting (2), Topic-Comment (2) |
@@ -59,7 +59,7 @@ Queued future audits: `docs/audits/queued_audits.md`
 **Never do:**
 - Run `git add / commit / push` (specialists) — Orchestrator handles all VCS
 - Edit tree structure (`tree:`) if you are the Educational Publisher
-- Edit `explanation:` content if you are the Data Linguist
+- Edit `explanation:` content if you are the Corpus Engineer
 - Add subRole labels to JSON data without first adding them to `VALID_SUBROLES`
 
 ---
@@ -81,8 +81,8 @@ Queued future audits: `docs/audits/queued_audits.md`
 ```
 src/
 ├── data/
-│   ├── modern_sentences.json       # 133 modern sentences (Data Linguist owns tree/text)
-│   ├── classical_sentences.json    # 43 classical sentences (Data Linguist owns tree/text)
+│   ├── modern_sentences.json       # 133 modern sentences (Corpus Engineer owns tree/text)
+│   ├── classical_sentences.json    # 43 classical sentences (Corpus Engineer owns tree/text)
 │   ├── categories.ts               # Modern category list (Educational Publisher)
 │   ├── classicalCategories.ts      # Classical category list (Educational Publisher)
 │   ├── glossary.ts                 # Modern role definitions (Educational Publisher)
@@ -105,7 +105,7 @@ docs/audits/                        # Audit reports and queued audit backlog
 | Role | File | Owns |
 |---|---|---|
 | Orchestrator | `.agents/agents/orchestrator.md` | Architecture, scripts, git, README |
-| Data Linguist | `.agents/agents/linguist.md` | `*_sentences.json` tree data |
+| Corpus Engineer | `.agents/agents/linguist.md` | `*_sentences.json` tree data |
 | Linguistics Specialist | `.agents/agents/linguistics-specialist.md` | Theoretical audits, Markdown reports |
 | Educational Publisher | `.agents/agents/educational-publisher.md` | Explanations, glossaries, guides |
 | Frontend Engineer | `.agents/agents/frontend-engineer.md` | Components, CSS, UI |
