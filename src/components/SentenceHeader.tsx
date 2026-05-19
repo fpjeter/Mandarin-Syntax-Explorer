@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, ChevronDown, Lightbulb, BookMarked } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ChevronDown, Lightbulb, BookMarked, ArrowRightLeft } from 'lucide-react';
 import { useRef } from 'react';
 import { RubyText } from './RubyText';
 import type { SentenceData } from '../types/grammar';
@@ -9,6 +9,11 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { renderExplanation } from '../utils/renderExplanation';
 
 const springTransition = { type: 'spring' as const, stiffness: 300, damping: 28 };
+
+/** Truncate Chinese text to at most `maxChars` chars, appending … if needed */
+function truncateChinese(text: string, maxChars = 10): string {
+    return text.length > maxChars ? text.slice(0, maxChars) + '…' : text;
+}
 
 
 interface SentenceHeaderProps {
@@ -23,6 +28,10 @@ interface SentenceHeaderProps {
     categoryTotal?: number;
     hasPrev?: boolean;
     hasNext?: boolean;
+    /** Full sentence lookup map so See Also chips can resolve IDs → Chinese text */
+    allSentences?: Map<string, SentenceData>;
+    /** Navigate to a sentence by ID (same callback used by sidebar) */
+    onSelectSentence?: (id: string) => void;
 }
 
 export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
@@ -35,6 +44,8 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
     categoryTotal,
     hasPrev,
     hasNext,
+    allSentences,
+    onSelectSentence,
 }) => {
     const isClassical = useIsClassical();
     const { language } = useLanguage();
@@ -151,6 +162,41 @@ export const SentenceHeader: React.FC<SentenceHeaderProps> = ({
                                 {sentence.author && <span>{sentence.author}</span>}
                             </div>
                         )}
+
+                        {/* ── See Also chips ── */}
+                        {sentence.relatedIds && sentence.relatedIds.length > 0 && allSentences && onSelectSentence && (() => {
+                            const related = sentence.relatedIds!
+                                .map(id => ({ id, s: allSentences.get(id) }))
+                                .filter((r): r is { id: string; s: SentenceData } => r.s !== undefined);
+                            if (related.length === 0) return null;
+                            return (
+                                <div className="mt-3 xl:mt-4 flex items-center gap-2 flex-wrap justify-center">
+                                    <span className={`flex items-center gap-1 text-[9px] xl:text-[10px] font-bold uppercase tracking-[0.16em] ${
+                                        isClassical ? 'text-amber-500/60' : 'text-purple-400/60'
+                                    }`}>
+                                        <ArrowRightLeft className="w-2.5 h-2.5" />
+                                        See Also
+                                    </span>
+                                    {related.map(({ id, s }) => (
+                                        <button
+                                            key={id}
+                                            onClick={() => onSelectSentence(id)}
+                                            className={`group flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-[10px] xl:text-[11px] font-medium transition-all duration-200 ${
+                                                isClassical
+                                                    ? 'border-amber-600/30 bg-amber-900/20 text-amber-200/80 hover:border-amber-500/60 hover:bg-amber-800/40 hover:text-amber-100'
+                                                    : 'border-purple-600/30 bg-purple-900/20 text-purple-200/80 hover:border-purple-500/60 hover:bg-purple-800/40 hover:text-purple-100'
+                                            }`}
+                                            title={`${s.chinese} — ${s.translation}`}
+                                        >
+                                            <span className="font-chinese-ui">{truncateChinese(s.chinese)}</span>
+                                            <span className={`text-[8px] xl:text-[9px] tabular-nums font-mono opacity-50 group-hover:opacity-75 ${
+                                                isClassical ? 'text-amber-400' : 'text-purple-400'
+                                            }`}>{id}</span>
+                                        </button>
+                                    ))}
+                                </div>
+                            );
+                        })()}
                     </motion.div>
 
                     {/* Persistent Sentence Notes Drawer */}

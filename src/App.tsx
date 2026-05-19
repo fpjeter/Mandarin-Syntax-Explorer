@@ -397,6 +397,8 @@ function App() {
                 categoryTotal={categoryTotal}
                 hasPrev={hasPrev}
                 hasNext={hasNext}
+                allSentences={activeData.byId}
+                onSelectSentence={handleSelectSentence}
               />
             )}
 
