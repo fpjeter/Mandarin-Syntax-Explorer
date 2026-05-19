@@ -74,7 +74,7 @@
         {
           "id": "cc1-clause2",
           "role": "Comment",
-          "subRole": "rhetorical question (不亦…乎)",
+          "subRole": "rhetorical question",
           "children": [
             {
               "id": "cc1-c2-neg",
@@ -89,7 +89,7 @@
             {
               "id": "cc1-c2-yi",
               "role": "Adjunct",
-              "subRole": "rhetorical",
+              "subRole": "rhetorical question",
               "text": {
                 "hanzi": "亦",
                 "pinyin": "yì",
@@ -148,7 +148,6 @@
             {
               "id": "cc2-clause1",
               "role": "Embedded Clause",
-              "subRole": "first comparison",
               "children": [
                 {
                   "id": "cc2-c1-subj",
@@ -246,7 +245,7 @@
             {
               "id": "cc2-clause2",
               "role": "Embedded Clause",
-              "subRole": "second comparison (climax)",
+              "subRole": "comparison clause",
               "children": [
                 {
                   "id": "cc2-c2-subj",
@@ -494,7 +493,6 @@
         {
           "id": "cc4-topic",
           "role": "Topic",
-          "subRole": "relative clause (the Way that can be spoken)",
           "children": [
             {
               "id": "cc4-t-subj",
@@ -537,7 +535,7 @@
         {
           "id": "cc4-comment",
           "role": "Comment",
-          "subRole": "negated identity (非…)",
+          "subRole": "identity statement",
           "children": [
             {
               "id": "cc4-c-fei",
@@ -721,7 +719,7 @@
         {
           "id": "cc6-topic",
           "role": "Topic",
-          "subRole": "sequential actions (而)",
+          "subRole": "sequential clauses",
           "children": [
             {
               "id": "cc6-t-vp1",
@@ -860,7 +858,6 @@
         {
           "id": "cc7-topic",
           "role": "Topic",
-          "subRole": "所-nominalization (that which…)",
           "children": [
             {
               "id": "cc7-t-self",
@@ -1075,7 +1072,6 @@
         {
           "id": "cc9-topic",
           "role": "Topic",
-          "subRole": "compound subject",
           "children": [
             {
               "id": "cc9-t-n1",
@@ -1101,12 +1097,12 @@
         {
           "id": "cc9-comment",
           "role": "Comment",
-          "subRole": "rhetorical question (寧…乎)",
+          "subRole": "rhetorical question",
           "children": [
             {
               "id": "cc9-c-adv",
               "role": "Adjunct",
-              "subRole": "rhetorical",
+              "subRole": "rhetorical question",
               "text": {
                 "hanzi": "寧",
                 "pinyin": "nìng",
@@ -1326,7 +1322,7 @@
         {
           "id": "cc11-comment",
           "role": "Comment",
-          "subRole": "identity statement (…也)",
+          "subRole": "identity statement",
           "children": [
             {
               "id": "cc11-c-adv",
@@ -1411,7 +1407,7 @@
         {
           "id": "cc12-topic",
           "role": "Topic",
-          "subRole": "者-definition",
+          "subRole": "definition topic",
           "children": [
             {
               "id": "cc12-t-n",
@@ -1438,7 +1434,7 @@
         {
           "id": "cc12-comment",
           "role": "Comment",
-          "subRole": "identity (所以…也)",
+          "subRole": "identity statement",
           "children": [
             {
               "id": "cc12-c-suoyi",
@@ -1888,7 +1884,7 @@
         {
           "id": "cc16-topic",
           "role": "Topic",
-          "subRole": "parallel conditions",
+          "subRole": "conditional clause",
           "children": [
             {
               "id": "cc16-t-vp1",
@@ -2021,12 +2017,12 @@
         {
           "id": "cc17-clause1",
           "role": "Topic",
-          "subRole": "first conditional",
+          "subRole": "conditional clause",
           "children": [
             {
               "id": "cc17-c1-cond",
               "role": "Adjunct",
-              "subRole": "conditional",
+              "subRole": "conditional clause",
               "children": [
                 {
                   "id": "cc17-c1-v1",
@@ -2076,7 +2072,7 @@
                 {
                   "id": "cc17-c1-ze",
                   "role": "Particle",
-                  "subRole": "conditional",
+                  "subRole": "conditional clause",
                   "text": {
                     "hanzi": "則",
                     "pinyin": "zé",
@@ -2100,12 +2096,12 @@
         {
           "id": "cc17-clause2",
           "role": "Comment",
-          "subRole": "second conditional (parallel)",
+          "subRole": "consequence clause",
           "children": [
             {
               "id": "cc17-c2-cond",
               "role": "Adjunct",
-              "subRole": "conditional",
+              "subRole": "conditional clause",
               "children": [
                 {
                   "id": "cc17-c2-v1",
@@ -2155,7 +2151,7 @@
                 {
                   "id": "cc17-c2-ze",
                   "role": "Particle",
-                  "subRole": "conditional",
+                  "subRole": "conditional clause",
                   "text": {
                     "hanzi": "則",
                     "pinyin": "zé",
@@ -2281,7 +2277,7 @@
         {
           "id": "cc18-comment",
           "role": "Comment",
-          "subRole": "rhetorical question (不亦…乎)",
+          "subRole": "rhetorical question",
           "children": [
             {
               "id": "cc18-c-neg",
@@ -2296,7 +2292,7 @@
             {
               "id": "cc18-c-yi",
               "role": "Adjunct",
-              "subRole": "rhetorical",
+              "subRole": "rhetorical question",
               "text": {
                 "hanzi": "亦",
                 "pinyin": "yì",
@@ -2482,7 +2478,6 @@
         {
           "id": "cc20-clause1",
           "role": "Topic",
-          "subRole": "first comparison",
           "children": [
             {
               "id": "cc20-c1-subj",
@@ -2557,7 +2552,7 @@
         {
           "id": "cc20-clause2",
           "role": "Comment",
-          "subRole": "second comparison (climax)",
+          "subRole": "comparison clause",
           "children": [
             {
               "id": "cc20-c2-subj",
@@ -2729,7 +2724,7 @@
         {
           "id": "cc22-c1",
           "role": "Topic",
-          "subRole": "first clause (thesis)",
+          "subRole": "thesis clause",
           "children": [
             {
               "id": "cc22-c1-v",
@@ -2773,7 +2768,7 @@
         {
           "id": "cc22-c2",
           "role": "Comment",
-          "subRole": "second clause (antithesis)",
+          "subRole": "antithesis clause",
           "children": [
             {
               "id": "cc22-c2-v",
@@ -3113,7 +3108,6 @@
         {
           "id": "cc25-topic",
           "role": "Topic",
-          "subRole": "之 genitive phrase",
           "children": [
             {
               "id": "cc25-ren",
@@ -3268,7 +3262,7 @@
         {
           "id": "cc26-comment",
           "role": "Comment",
-          "subRole": "consequent realization",
+          "subRole": "consequence clause",
           "children": [
             {
               "id": "cc26-ranhou",
@@ -3373,7 +3367,7 @@
         {
           "id": "cc27-q1",
           "role": "Topic",
-          "subRole": "first rhetorical question",
+          "subRole": "rhetorical question",
           "children": [
             {
               "id": "cc27-wu",
@@ -3410,7 +3404,7 @@
         {
           "id": "cc27-q2",
           "role": "Comment",
-          "subRole": "escalating rhetorical question",
+          "subRole": "rhetorical question",
           "children": [
             {
               "id": "cc27-qi2",
@@ -3546,7 +3540,7 @@
         {
           "id": "cc29-topic",
           "role": "Topic",
-          "subRole": "negated condition (非…)",
+          "subRole": "conditional clause",
           "children": [
             {
               "id": "cc29-fei",
@@ -3574,7 +3568,7 @@
         {
           "id": "cc29-comment",
           "role": "Comment",
-          "subRole": "negative consequence",
+          "subRole": "consequence clause",
           "children": [
             {
               "id": "cc29-wuyi",
@@ -3973,7 +3967,7 @@
             {
               "id": "cc32-gou",
               "role": "Adjunct",
-              "subRole": "conditional",
+              "subRole": "conditional clause",
               "text": {
                 "hanzi": "苟",
                 "pinyin": "gǒu",
@@ -4840,7 +4834,6 @@
         {
           "id": "cc39-c1",
           "role": "Comment",
-          "subRole": "clause 1",
           "children": [
             {
               "id": "cc39-min",
@@ -4876,7 +4869,6 @@
         {
           "id": "cc39-c2",
           "role": "Comment",
-          "subRole": "clause 2",
           "children": [
             {
               "id": "cc39-sheji",
@@ -4913,7 +4905,6 @@
         {
           "id": "cc39-c3",
           "role": "Comment",
-          "subRole": "clause 3",
           "children": [
             {
               "id": "cc39-jun",
@@ -4972,7 +4963,6 @@
         {
           "id": "cc40-c1",
           "role": "Comment",
-          "subRole": "clause 1",
           "children": [
             {
               "id": "cc40-jj",
@@ -4999,7 +4989,6 @@
         {
           "id": "cc40-c2",
           "role": "Comment",
-          "subRole": "clause 2",
           "children": [
             {
               "id": "cc40-bl",
@@ -5168,7 +5157,7 @@
             {
               "id": "cc42-ruo",
               "role": "Adjunct",
-              "subRole": "conditional",
+              "subRole": "conditional clause",
               "text": {
                 "hanzi": "若",
                 "pinyin": "ruò",
@@ -5325,7 +5314,6 @@
         {
           "id": "cc43-c1",
           "role": "Comment",
-          "subRole": "clause 1",
           "children": [
             {
               "id": "cc43-t1",
@@ -5372,7 +5360,6 @@
         {
           "id": "cc43-c2",
           "role": "Comment",
-          "subRole": "clause 2",
           "children": [
             {
               "id": "cc43-t2",

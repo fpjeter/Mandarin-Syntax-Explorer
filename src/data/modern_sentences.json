@@ -345,7 +345,6 @@
             {
               "id": "n7-p-vp1",
               "role": "Verb Phrase",
-              "subRole": "clause 1",
               "children": [
                 {
                   "id": "n7-p-vp1-hv",
@@ -381,7 +380,6 @@
             {
               "id": "n7-p-vp2",
               "role": "Verb Phrase",
-              "subRole": "clause 2",
               "children": [
                 {
                   "id": "n7-p-vp2-adv",
@@ -431,7 +429,7 @@
                 {
                   "id": "n7-p-vp3-adv1",
                   "role": "Adjunct",
-                  "subRole": "consequence",
+                  "subRole": "consequence clause",
                   "text": {
                     "hanzi": "就",
                     "pinyin": "jiù",
@@ -715,7 +713,6 @@
         {
           "id": "n19-c",
           "role": "Comment",
-          "subRole": "duration complement (verb repetition)",
           "children": [
             {
               "id": "n19-vp1",
@@ -831,7 +828,6 @@
         {
           "id": "s70-topic",
           "role": "Topic",
-          "subRole": "situational frame",
           "children": [
             {
               "id": "s70-jgr",
@@ -1026,7 +1022,6 @@
         {
           "id": "s86-c1",
           "role": "Topic",
-          "subRole": "serial verb 1",
           "children": [
             {
               "id": "s86-s1",
@@ -1076,7 +1071,6 @@
         {
           "id": "s86-c2",
           "role": "Comment",
-          "subRole": "serial verb 2",
           "children": [
             {
               "id": "s86-s2",
@@ -1156,7 +1150,6 @@
         {
           "id": "s90-c1",
           "role": "Topic",
-          "subRole": "serial verb 1",
           "children": [
             {
               "id": "s90-t1",
@@ -1231,7 +1224,6 @@
         {
           "id": "s90-c2",
           "role": "Comment",
-          "subRole": "serial verb 2",
           "children": [
             {
               "id": "s90-t2",
@@ -1328,7 +1320,6 @@
           "id": "n11-t",
           "role": "Topic",
           "semanticRole": "Agent",
-          "subRole": "sentence topic",
           "children": [
             {
               "id": "n11-t-attr",
@@ -1618,7 +1609,6 @@
           "id": "s125-t",
           "role": "Topic",
           "semanticRole": "Agent",
-          "subRole": "Location",
           "children": [
             {
               "id": "s125-t-hn",
@@ -2514,7 +2504,6 @@
         {
           "id": "n6-t",
           "role": "Topic",
-          "subRole": "possessor / context",
           "semanticRole": "Theme",
           "children": [
             {
@@ -3056,7 +3045,7 @@
         {
           "id": "s80-c2",
           "role": "Comment",
-          "subRole": "comparative clause",
+          "subRole": "comparison clause",
           "children": [
             {
               "id": "s80-ds",
@@ -3334,7 +3323,7 @@
         {
           "id": "n8-c",
           "role": "Comment",
-          "subRole": "pseudo-cleft frame (是…的)",
+          "subRole": "shi-de focus",
           "children": [
             {
               "id": "n8-p-shi",
@@ -3468,7 +3457,7 @@
         {
           "id": "n23-c",
           "role": "Comment",
-          "subRole": "shì–de focus construction",
+          "subRole": "shi-de focus",
           "children": [
             {
               "id": "n23-shi",
@@ -3573,7 +3562,7 @@
         {
           "id": "n50-c",
           "role": "Comment",
-          "subRole": "pseudo-cleft frame (是…的)",
+          "subRole": "shi-de focus",
           "children": [
             {
               "id": "n50-shi",
@@ -3672,7 +3661,7 @@
         {
           "id": "n51-c",
           "role": "Comment",
-          "subRole": "pseudo-cleft frame (是…的)",
+          "subRole": "shi-de focus",
           "children": [
             {
               "id": "n51-shi",
@@ -3770,7 +3759,7 @@
         {
           "id": "s79-c",
           "role": "Comment",
-          "subRole": "shi-de definition",
+          "subRole": "shi-de focus",
           "children": [
             {
               "id": "s79-shi",
@@ -4092,7 +4081,7 @@
         {
           "id": "n9-c",
           "role": "Comment",
-          "subRole": "adjectival / comparative",
+          "subRole": "comparison clause",
           "children": [
             {
               "id": "n9-p-bi",
@@ -4242,12 +4231,12 @@
         {
           "id": "n20-c",
           "role": "Comment",
-          "subRole": "comparison",
+          "subRole": "comparison clause",
           "children": [
             {
               "id": "n20-c-pp",
               "role": "Preposition",
-              "subRole": "comparison",
+              "subRole": "comparison clause",
               "children": [
                 {
                   "id": "n20-c-pp-prep",
@@ -4357,7 +4346,7 @@
         {
           "id": "n21-c",
           "role": "Comment",
-          "subRole": "comparison",
+          "subRole": "comparison clause",
           "children": [
             {
               "id": "n21-vp",
@@ -4470,12 +4459,12 @@
         {
           "id": "s69-c",
           "role": "Comment",
-          "subRole": "comparison",
+          "subRole": "comparison clause",
           "children": [
             {
               "id": "s69-c1",
               "role": "Verb Phrase",
-              "subRole": "comparison",
+              "subRole": "comparison clause",
               "children": [
                 {
                   "id": "s69-s1",
@@ -4541,7 +4530,7 @@
             {
               "id": "s69-c2",
               "role": "Verb Phrase",
-              "subRole": "comparison",
+              "subRole": "comparison clause",
               "children": [
                 {
                   "id": "s69-s2",
@@ -4639,12 +4628,12 @@
         {
           "id": "s87-c",
           "role": "Comment",
-          "subRole": "comparison",
+          "subRole": "comparison clause",
           "children": [
             {
               "id": "s87-c1",
               "role": "Verb Phrase",
-              "subRole": "comparison",
+              "subRole": "comparison clause",
               "children": [
                 {
                   "id": "s87-s1",
@@ -4710,7 +4699,7 @@
             {
               "id": "s87-c2",
               "role": "Verb Phrase",
-              "subRole": "comparison",
+              "subRole": "comparison clause",
               "children": [
                 {
                   "id": "s87-s2",
@@ -4785,7 +4774,6 @@
           "id": "s112-t",
           "role": "Topic",
           "semanticRole": "Agent",
-          "subRole": "item A",
           "text": {
             "hanzi": "我",
             "pinyin": "wǒ",
@@ -4854,7 +4842,6 @@
           "id": "s113-t",
           "role": "Topic",
           "semanticRole": "Agent",
-          "subRole": "item A",
           "text": {
             "hanzi": "他",
             "pinyin": "tā",
@@ -4868,7 +4855,7 @@
             {
               "id": "s113-comp-phrase",
               "role": "Adjunct",
-              "subRole": "comparison",
+              "subRole": "comparison clause",
               "children": [
                 {
                   "id": "s113-bi",
@@ -4967,7 +4954,7 @@
             {
               "id": "n56-rhet",
               "role": "Adjunct",
-              "subRole": "rhetorical",
+              "subRole": "rhetorical question",
               "text": {
                 "hanzi": "难道",
                 "pinyin": "nán dào",
@@ -5045,12 +5032,12 @@
         {
           "id": "s76-c",
           "role": "Comment",
-          "subRole": "rhetorical",
+          "subRole": "rhetorical question",
           "children": [
             {
               "id": "s76-nd",
               "role": "Adjunct",
-              "subRole": "rhetorical",
+              "subRole": "rhetorical question",
               "text": {
                 "hanzi": "难道",
                 "pinyin": "nán dào",
@@ -5124,7 +5111,7 @@
             {
               "id": "n100-nd",
               "role": "Adjunct",
-              "subRole": "rhetorical",
+              "subRole": "rhetorical question",
               "text": {
                 "hanzi": "难道",
                 "pinyin": "nán dào",
@@ -5306,7 +5293,7 @@
             {
               "id": "n101-cl2",
               "role": "Embedded Clause",
-              "subRole": "rhetorical",
+              "subRole": "rhetorical question",
               "children": [
                 {
                   "id": "n101-vp2",
@@ -5315,7 +5302,7 @@
                     {
                       "id": "n101-nd",
                       "role": "Adjunct",
-                      "subRole": "rhetorical",
+                      "subRole": "rhetorical question",
                       "text": {
                         "hanzi": "难道",
                         "pinyin": "nán dào",
@@ -5413,7 +5400,7 @@
             {
               "id": "s114-cop",
               "role": "Copula",
-              "subRole": "rhetorical",
+              "subRole": "rhetorical question",
               "text": {
                 "hanzi": "不是",
                 "pinyin": "bú shì",
@@ -5508,7 +5495,7 @@
             {
               "id": "s115-adv",
               "role": "Adjunct",
-              "subRole": "rhetorical",
+              "subRole": "rhetorical question",
               "text": {
                 "hanzi": "怎么",
                 "pinyin": "zěn me",
@@ -5876,7 +5863,6 @@
             {
               "id": "n55-cl1",
               "role": "Verb Phrase",
-              "subRole": "clause 1",
               "children": [
                 {
                   "id": "n55-vm",
@@ -5911,7 +5897,6 @@
             {
               "id": "n55-cl2",
               "role": "Verb Phrase",
-              "subRole": "clause 2",
               "children": [
                 {
                   "id": "n55-adv",
@@ -6046,7 +6031,7 @@
         {
           "id": "s117-c",
           "role": "Comment",
-          "subRole": "serial verb chain",
+          "subRole": "serial verb construction",
           "children": [
             {
               "id": "s117-v1",
@@ -6127,7 +6112,6 @@
             {
               "id": "n13-vp1",
               "role": "Verb Phrase",
-              "subRole": "clause 1",
               "children": [
                 {
                   "id": "n13-vp1-hv",
@@ -6163,7 +6147,6 @@
             {
               "id": "n13-vp2",
               "role": "Verb Phrase",
-              "subRole": "clause 2",
               "children": [
                 {
                   "id": "n13-vp2-hv",
@@ -6619,7 +6602,6 @@
             {
               "id": "n14-vp1",
               "role": "Verb Phrase",
-              "subRole": "clause 1",
               "children": [
                 {
                   "id": "n14-vp1-hv",
@@ -6645,7 +6627,6 @@
             {
               "id": "n14-vp2",
               "role": "Verb Phrase",
-              "subRole": "clause 2",
               "children": [
                 {
                   "id": "n14-vp2-hv",
@@ -6748,12 +6729,11 @@
         {
           "id": "n58-c",
           "role": "Comment",
-          "subRole": "serial verb construction (same subject)",
+          "subRole": "serial verb construction",
           "children": [
             {
               "id": "n58-vp1",
               "role": "Verb Phrase",
-              "subRole": "serial verb 1",
               "children": [
                 {
                   "id": "n58-hv1",
@@ -6779,7 +6759,6 @@
             {
               "id": "n58-vp2",
               "role": "Verb Phrase",
-              "subRole": "serial verb 2",
               "text": {
                 "hanzi": "去",
                 "pinyin": "qù",
@@ -6832,12 +6811,11 @@
         {
           "id": "n59-c",
           "role": "Comment",
-          "subRole": "serial verb (V1着 concurrent with V2)",
+          "subRole": "serial verb construction",
           "children": [
             {
               "id": "n59-vp1",
               "role": "Verb Phrase",
-              "subRole": "serial verb 1",
               "children": [
                 {
                   "id": "n59-hv1",
@@ -6873,7 +6851,6 @@
             {
               "id": "n59-vp2",
               "role": "Verb Phrase",
-              "subRole": "serial verb 2",
               "children": [
                 {
                   "id": "n59-hv2",
@@ -6922,7 +6899,6 @@
         {
           "id": "s68-c1",
           "role": "Topic",
-          "subRole": "clause 1",
           "children": [
             {
               "id": "s68-v1",
@@ -6997,7 +6973,7 @@
         {
           "id": "s68-c2",
           "role": "Comment",
-          "subRole": "result clause",
+          "subRole": "consequence clause",
           "children": [
             {
               "id": "s68-zy",
@@ -7681,7 +7657,7 @@
             {
               "id": "n25-c-p1",
               "role": "Comment",
-              "subRole": "inner comment 1",
+              "subRole": "inner comment",
               "children": [
                 {
                   "id": "n25-c-p1-adv",
@@ -7717,7 +7693,7 @@
             {
               "id": "n25-c-p2",
               "role": "Comment",
-              "subRole": "inner comment 2",
+              "subRole": "inner comment",
               "children": [
                 {
                   "id": "n25-c-p2-adv1",
@@ -7801,7 +7777,7 @@
             {
               "id": "n26-c-p1",
               "role": "Comment",
-              "subRole": "inner comment 1: adjectival predicate",
+              "subRole": "inner comment",
               "children": [
                 {
                   "id": "n26-c-p1-adj",
@@ -7828,7 +7804,7 @@
             {
               "id": "n26-c-p2",
               "role": "Comment",
-              "subRole": "inner comment 2: adjectival predicate",
+              "subRole": "inner comment",
               "children": [
                 {
                   "id": "n26-c-p2-adj",
@@ -7868,7 +7844,7 @@
           "id": "n27-t",
           "role": "Topic",
           "semanticRole": "Experiencer",
-          "subRole": "outer discourse frame",
+          "subRole": "outer topic",
           "children": [
             {
               "id": "n27-t-attr",
@@ -8919,7 +8895,6 @@
           "id": "n34-t",
           "role": "Topic",
           "semanticRole": "Agent",
-          "subRole": "outer frame",
           "children": [
             {
               "id": "n34-t-attr",
@@ -8944,12 +8919,11 @@
         {
           "id": "n34-c",
           "role": "Comment",
-          "subRole": "two sequential clauses",
+          "subRole": "sequential clauses",
           "children": [
             {
               "id": "n34-cl1",
               "role": "Verb Phrase",
-              "subRole": "clause 1",
               "children": [
                 {
                   "id": "n34-cl1-adv",
@@ -9060,12 +9034,11 @@
         {
           "id": "n35-c",
           "role": "Comment",
-          "subRole": "two sequential clauses",
+          "subRole": "sequential clauses",
           "children": [
             {
               "id": "n35-cl1",
               "role": "Verb Phrase",
-              "subRole": "clause 1",
               "children": [
                 {
                   "id": "n35-cl1-hv",
@@ -9334,7 +9307,6 @@
             {
               "id": "n45-cl2",
               "role": "Verb Phrase",
-              "subRole": "clause 2",
               "children": [
                 {
                   "id": "n45-adv",
@@ -9527,7 +9499,7 @@
                     {
                       "id": "n36-comp",
                       "role": "Verb Phrase",
-                      "subRole": "consequence",
+                      "subRole": "consequence clause",
                       "children": [
                         {
                           "id": "n36-comp-hv",
@@ -10757,7 +10729,6 @@
             {
               "id": "n60-cl1",
               "role": "Verb Phrase",
-              "subRole": "serial verb 1",
               "children": [
                 {
                   "id": "n60-yue1",
@@ -10783,7 +10754,6 @@
             {
               "id": "n60-cl2",
               "role": "Verb Phrase",
-              "subRole": "serial verb 2",
               "children": [
                 {
                   "id": "n60-yue2",
@@ -10852,7 +10822,7 @@
                 {
                   "id": "n61-yi",
                   "role": "Adjunct",
-                  "subRole": "conditional",
+                  "subRole": "conditional clause",
                   "text": {
                     "hanzi": "一",
                     "pinyin": "yī",
@@ -10873,12 +10843,12 @@
             {
               "id": "n61-cl2",
               "role": "Verb Phrase",
-              "subRole": "consequence",
+              "subRole": "consequence clause",
               "children": [
                 {
                   "id": "n61-jiu",
                   "role": "Adjunct",
-                  "subRole": "consequence",
+                  "subRole": "consequence clause",
                   "text": {
                     "hanzi": "就",
                     "pinyin": "jiù",
@@ -10928,7 +10898,7 @@
             {
               "id": "s84-premise1",
               "role": "Adjunct",
-              "subRole": "conditional",
+              "subRole": "conditional clause",
               "text": {
                 "hanzi": "只学习不思考",
                 "pinyin": "zhǐ xué xí bù sī kǎo",
@@ -10983,7 +10953,7 @@
             {
               "id": "s84-premise2",
               "role": "Adjunct",
-              "subRole": "conditional",
+              "subRole": "conditional clause",
               "text": {
                 "hanzi": "只思考不学习",
                 "pinyin": "zhǐ sī kǎo bù xué xí",
@@ -11108,7 +11078,7 @@
             {
               "id": "n97-cl2",
               "role": "Embedded Clause",
-              "subRole": "consequence",
+              "subRole": "consequence clause",
               "children": [
                 {
                   "id": "n97-subj2",
@@ -12229,12 +12199,12 @@
           "id": "n64-cl1",
           "role": "Topic",
           "semanticRole": "Agent",
-          "subRole": "condition clause (如果…)",
+          "subRole": "conditional clause",
           "children": [
             {
               "id": "n64-ruguo",
               "role": "Adjunct",
-              "subRole": "conditional",
+              "subRole": "conditional clause",
               "text": {
                 "hanzi": "如果",
                 "pinyin": "rú guǒ",
@@ -12265,7 +12235,7 @@
         {
           "id": "n64-cl2",
           "role": "Comment",
-          "subRole": "consequence",
+          "subRole": "consequence clause",
           "children": [
             {
               "id": "n64-subj",
@@ -12280,7 +12250,7 @@
             {
               "id": "n64-jiu",
               "role": "Adjunct",
-              "subRole": "consequence",
+              "subRole": "consequence clause",
               "text": {
                 "hanzi": "就",
                 "pinyin": "jiù",
@@ -12343,12 +12313,12 @@
           "id": "n65-cl1",
           "role": "Topic",
           "semanticRole": "Agent",
-          "subRole": "condition clause (只要…)",
+          "subRole": "conditional clause",
           "children": [
             {
               "id": "n65-zhiyao",
               "role": "Adjunct",
-              "subRole": "conditional",
+              "subRole": "conditional clause",
               "text": {
                 "hanzi": "只要",
                 "pinyin": "zhǐ yào",
@@ -12379,12 +12349,12 @@
         {
           "id": "n65-cl2",
           "role": "Comment",
-          "subRole": "consequence",
+          "subRole": "consequence clause",
           "children": [
             {
               "id": "n65-jiu",
               "role": "Adjunct",
-              "subRole": "consequence",
+              "subRole": "consequence clause",
               "text": {
                 "hanzi": "就",
                 "pinyin": "jiù",
@@ -12436,7 +12406,7 @@
         {
           "id": "s71-cond",
           "role": "Topic",
-          "subRole": "conditional",
+          "subRole": "conditional clause",
           "children": [
             {
               "id": "s71-rg",
@@ -12490,7 +12460,7 @@
         {
           "id": "s71-result",
           "role": "Comment",
-          "subRole": "consequence",
+          "subRole": "consequence clause",
           "children": [
             {
               "id": "s71-na",
@@ -12580,7 +12550,7 @@
         {
           "id": "s73-cond",
           "role": "Topic",
-          "subRole": "conditional",
+          "subRole": "conditional clause",
           "children": [
             {
               "id": "s73-rg",
@@ -12649,7 +12619,7 @@
         {
           "id": "s73-result",
           "role": "Comment",
-          "subRole": "consequence",
+          "subRole": "consequence clause",
           "children": [
             {
               "id": "s73-jn",
@@ -12720,7 +12690,7 @@
         {
           "id": "s82-cond",
           "role": "Topic",
-          "subRole": "conditional",
+          "subRole": "conditional clause",
           "children": [
             {
               "id": "s82-rg",
@@ -12853,7 +12823,7 @@
         {
           "id": "s83-cond",
           "role": "Topic",
-          "subRole": "conditional",
+          "subRole": "conditional clause",
           "children": [
             {
               "id": "s83-v1",
@@ -13000,7 +12970,7 @@
           "id": "s122-cond",
           "role": "Topic",
           "semanticRole": "Agent",
-          "subRole": "condition clause",
+          "subRole": "conditional clause",
           "children": [
             {
               "id": "s122-cond-conj",
@@ -13026,7 +12996,7 @@
         {
           "id": "s122-c",
           "role": "Comment",
-          "subRole": "result clause",
+          "subRole": "consequence clause",
           "children": [
             {
               "id": "s122-c-t",
@@ -13094,7 +13064,7 @@
           "id": "s123-cond",
           "role": "Topic",
           "semanticRole": "Agent",
-          "subRole": "condition clause",
+          "subRole": "conditional clause",
           "children": [
             {
               "id": "s123-cond-conj",
@@ -13131,7 +13101,7 @@
         {
           "id": "s123-c",
           "role": "Comment",
-          "subRole": "result clause",
+          "subRole": "consequence clause",
           "children": [
             {
               "id": "s123-c-conj",
@@ -13229,7 +13199,7 @@
         {
           "id": "n66-c",
           "role": "Comment",
-          "subRole": "连…都… (even X)",
+          "subRole": "lian-construction comment",
           "children": [
             {
               "id": "n66-lian",
@@ -13338,7 +13308,7 @@
         {
           "id": "n67-c",
           "role": "Comment",
-          "subRole": "连…也… (even X)",
+          "subRole": "lian-construction comment",
           "children": [
             {
               "id": "n67-lian",
@@ -13432,7 +13402,7 @@
         {
           "id": "s72-topic",
           "role": "Topic",
-          "subRole": "连-construction (even)",
+          "subRole": "lian-construction topic",
           "children": [
             {
               "id": "s72-lian",
@@ -13547,7 +13517,7 @@
         {
           "id": "s85-lian",
           "role": "Topic",
-          "subRole": "lian-construction",
+          "subRole": "lian-construction topic",
           "children": [
             {
               "id": "s85-l",
@@ -13607,7 +13577,7 @@
         {
           "id": "s85-judge",
           "role": "Comment",
-          "subRole": "judgment clause",
+          "subRole": "identity statement",
           "children": [
             {
               "id": "s85-zhe",
@@ -13823,7 +13793,7 @@
         {
           "id": "s129-c",
           "role": "Comment",
-          "subRole": "连…都… (even X)",
+          "subRole": "lian-construction comment",
           "children": [
             {
               "id": "s129-lian",
@@ -14004,7 +13974,7 @@
             {
               "id": "s130-ic",
               "role": "Comment",
-              "subRole": "是…的 focus",
+              "subRole": "shi-de focus",
               "children": [
                 {
                   "id": "s130-shi",
@@ -14072,7 +14042,6 @@
         {
           "id": "s131-c1",
           "role": "Topic",
-          "subRole": "clause 1",
           "children": [
             {
               "id": "s131-t1",
@@ -14484,7 +14453,6 @@
             {
               "id": "s134-vp1",
               "role": "Verb Phrase",
-              "subRole": "clause 1",
               "children": [
                 {
                   "id": "s134-hv1",
@@ -14520,7 +14488,6 @@
             {
               "id": "s134-vp2",
               "role": "Verb Phrase",
-              "subRole": "clause 2",
               "children": [
                 {
                   "id": "s134-hv2",
