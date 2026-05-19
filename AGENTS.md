@@ -30,7 +30,6 @@ git push                # Orchestrator only — specialists do NOT run git comma
 
 | Priority | Owner | Task |
 |---|---|---|
-| 🟡 MEDIUM | Corpus Engineer | Topic/Comment subRole normalization — implement `docs/audits/topic_comment_subrole_audit.md` |
 | 🟢 LOW | All | Phase C classical expansion — 4 thin categories: Classical Passive (1), Causatives (2), Object Fronting (2), Topic-Comment (2) |
 
 Full audit findings: `docs/audits/audit_results_2026-04-27.md`
