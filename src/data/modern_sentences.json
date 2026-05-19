@@ -13812,8 +13812,8 @@
     "pinyin": "Tā lián tā jiào shén me míng zi dōu bú jì de le.",
     "translation": "She can't even remember what his name is.",
     "explanation": {
-      "en": "Most 连…都 sentences emphasize a single noun. But here, the 连 bracket wraps an **entire embedded clause**: 他叫什么名字 (\"what his name is\"). The tree shows this dramatically — the 连 node contains a full topic-comment structure inside it.",
-      "zh": "大多数**连…都**句子强调单个名词。但这里，**连**括住了**整个嵌入从句**：**他叫什么名字**。树清楚地展示了这一点——**连**节点内包含完整的主谓结构。"
+      "en": "Most 连…都 sentences emphasize a single noun: 连水都没有 (\"not even water\"). But here, the 连 bracket wraps an **entire embedded clause**: 他叫什么名字 (\"what his name is\"). That clause has its own Topic (他) and Comment (叫什么名字) nested inside the scope marker. The tree shows this dramatically — the 连 node contains a full topic-comment structure. The result intensifies the forgetting: not just a name, but even *the complete fact* of knowing his name has been erased.",
+      "zh": "大多数**连…都**句子强调单个名词：连水都没有（甚至连水都没有）。但这里，**连**括住了**整个嵌入从句**：**他叫什么名字**。该从句内部有自己的话题（他）和评论（叫什么名字）。树清楚地展示了这一点——**连**节点内包含完整的主谓结构。这样的用法加深了遗忘的程度：不只是名字本身，连知道他叫什么名字这件事本身都被抹去了。"
     },
     "tree": {
       "id": "s129-root",
@@ -13962,8 +13962,8 @@
     "pinyin": "Nà běn shū, zuò zhě shì zài Běi jīng xiě de.",
     "translation": "That book — the author wrote it in Beijing.",
     "explanation": {
-      "en": "This sentence stacks two patterns: a **double topic** and a **是…的 focus**. The outer Topic is 那本书 (\"that book\"), setting the frame. The inner Topic is 作者 (\"the author\"). Then the comment uses 是…的 to spotlight *where* the writing happened: 在北京.",
-      "zh": "这句话叠加了**双主题**和**是…的聚焦**两种结构。外层话题是**那本书**，设定大框架。内层话题是**作者**。评论部分用**是…的**聚焦写作地点：**在北京**。"
+      "en": "This sentence stacks two patterns at once: a **double topic** and a **是…的 focus construction**. First, **那本书** (\"that book\") opens as the outer Topic, setting the conversational frame. Then inside the Comment, **作者** (\"the author\") acts as an inner Topic — narrowing our attention. Finally, 是…的 frames the action: **是** signals that 写 is known to have happened, and **的** closes the bracket, spotlighting exactly *where*: 在北京. Learners often find 是…的 tricky because 是 here is not a copula — it is a focus device.",
+      "zh": "这句话一次叠加了两种结构：**双主题**和**是…的聚焦**。首先，**那本书**作为外层话题开篇，设定对话框架。然后在评论内部，**作者**充当内层话题——进一步缩小焦点。最后，是…的框定动作：**是**表示写这件事已经发生，**的**封闭括号，精确聚焦*地点*：在北京。学习者常觉得是…的难掌握，因为这里的**是**不是系动词，而是聚焦标记。"
     },
     "tree": {
       "id": "s130-root",
@@ -14071,8 +14071,8 @@
     "pinyin": "Zhè ge xiāng zi tài zhòng le, wǒ yí ge rén bān bú shàng qù.",
     "translation": "This box is too heavy — I can't carry it upstairs by myself.",
     "explanation": {
-      "en": "The interesting part is the **three-layer complement stack**: the verb 搬 (\"carry\"), then 不 (\"cannot\"), then the direction 上 (\"up\"), then 去 (\"away from speaker\"). Each layer adds meaning: carry — cannot — upward — away.",
-      "zh": "有趣的是**三层补语叠加**：动词**搬**，然后**不**（不能），然后方向**上**（向上），然后**去**（离开说话者）。每层都增加意义。"
+      "en": "The sentence opens with a context clause (**太重了**, \"too heavy\") that explains *why* what follows is impossible — a classic Mandarin setup-then-consequence structure. The real heart is the **potential complement stack**: 搬 (\"carry\") + 不 (impossibility) + 上 (\"upward\") + 去 (\"away from speaker\"). Each element adds a layer: the action, its impossibility, the target direction, and the speaker-relative movement. Contrast with 搬得上去 (\"can carry up\"), where 不 flips to 得 and the whole meaning reverses — that single syllable swap is one of Mandarin's most elegant grammatical toggles.",
+      "zh": "句子以一个情境分句（**太重了**）开头，解释为什么接下来的事不可能发生——这是中文先铺垫、后结论的经典结构。真正的核心是**可能补语的叠加**：搬（搬运）+ 不（不可能）+ 上（向上）+ 去（离说话者而去）。每个成分各添一层：动作、不可能性、目标方向、以及相对说话者的移动方向。对比**搬得上去**（能搬上去）——把**不**换成**得**，整个意思完全翻转。这一个音节的替换，是中文语法中最优雅的开关之一。"
     },
     "tree": {
       "id": "s131-root",
@@ -14236,8 +14236,8 @@
     "pinyin": "Wǒ zuó tiān bèi tōu le yí ge shǒu jī.",
     "translation": "Yesterday I had a phone stolen (from me).",
     "explanation": {
-      "en": "In most 被 sentences, the thing affected sits at the front as the Topic. But here, **the person** (我) is the topic, and the thing stolen (手机) stays *after* the verb as a **retained object**. The tree makes this visible: 我 is the *experiencer*, not the thing stolen.",
-      "zh": "大多数**被**字句中，受影响的事物作为话题放在前面。但这里，**人**（我）是话题，被偷的东西（手机）作为**保留宾语**留在动词后面。"
+      "en": "Standard 被 sentences front the *thing* that was affected: 手机被偷了 (\"the phone was stolen\"). But here, **我** (\"I\") is the Topic — the *person* who suffered the loss, not the object. The phone (手机) appears after the verb as a **retained object**, clinging to 偷了 inside the embedded clause. The tree makes the structure vivid: 我 carries the semantic role of Patient/Experiencer at the top, while the thief (ghost node, 有人) is implied but dropped. This \"person-as-topic\" 被 pattern conveys personal impact more strongly than the plain 被 form.",
+      "zh": "标准被字句把*受影响的事物*放在前面：手机被偷了。但这里，**我**是话题——受损失的*人*，而非物品。手机作为**保留宾语**出现在动词之后，附着在嵌入从句内的偷了上。树清晰地呈现了这一结构：我在顶层承担受事/经历者的语义角色，而小偷（幽灵节点，有人）则被省略。这种人为话题的被字句比普通被字句更能传达切身的损失感。"
     },
     "tree": {
       "id": "s132-root",
@@ -14468,8 +14468,8 @@
     "pinyin": "Tā zǒu lèi le, zuò xià lái xiū xi.",
     "translation": "She walked until she was tired, then sat down to rest.",
     "explanation": {
-      "en": "This sentence chains two verb-result pairs. In the first clause, **走** (\"walk\") + **累** (\"tired\") means she walked so much she became tired. In the second, **坐** (\"sit\") + **下来** (\"down\") is a directional complement, followed by the purpose verb **休息** (\"rest\").",
-      "zh": "这句话串联了两个动补结构。第一个分句：**走**+**累**表示走到累了。第二个分句：**坐**+**下来**是趋向补语，后接目的动词**休息**。"
+      "en": "This sentence chains two different complement types back to back. In the first clause, **走累了** is a **resultative complement**: 走 (\"walk\") causes the result 累 (\"tired\") — she walked *to the point of* exhaustion. The 了 seals the result. In the second clause, **坐下来** is a **directional complement**: 坐 (\"sit\") + 下来 (\"downward, toward rest\"). Then 休息 follows as a purpose verb — no connecting word needed. What makes this a great study case is seeing both complement types in one breath: one describes an outcome, the other describes movement direction.",
+      "zh": "这句话连续串联了两种不同类型的补语。第一个分句**走累了**是**结果补语**：走（行走）导致累（疲惫）的结果——她走到*精疲力竭*为止。了封闭该结果。第二个分句**坐下来**是**趋向补语**：坐（坐下）+ 下来（向下、趋向静止）。然后**休息**作为目的动词跟上，不需要任何连接词。这句话之所以值得细研，正是因为它在一口气内展示了两种补语：一种描述结果，另一种描述移动方向。"
     },
     "tree": {
       "id": "s134-root",
@@ -14578,8 +14578,8 @@
     "pinyin": "Zhè ge rén, pí qi dào shì tǐng hǎo de.",
     "translation": "This person — their temper, actually, is quite good.",
     "explanation": {
-      "en": "A double topic sentence with a contrastive twist. The outer Topic **这个人** sets the frame. The inner Topic **脾气** (\"temper\") narrows focus. The adverb **倒是** (\"actually\") signals surprise — perhaps the speaker expected a bad temper.",
-      "zh": "带有对比转折的双主题句。外层话题**这个人**设定大框架。内层话题**脾气**聚焦具体方面。副词**倒是**表示出乎意料。"
+      "en": "A double topic sentence with a contrastive twist. The outer Topic **这个人** (\"this person\") sets the conversational frame. The inner Topic **脾气** (\"temper\") zooms in on one specific aspect — a classic Chinese rhetorical move: first introduce the entity, then comment on one of its properties. The adverb **倒是** (\"actually / I'll admit\") is the key spice: it signals mild surprise or concession, hinting the speaker expected something worse. **挺好的** (\"quite good\") rounds it off with breezy informality. Compare the neutral 脾气很好 — **倒是** turns a flat claim into a genuine character assessment.",
+      "zh": "这是一个带有对比转折的双主题句。外层话题**这个人**设定对话框架。内层话题**脾气**聚焦于这个人某一具体方面——先点名实体，再评论其某项属性，这是中文经典的修辞手法。副词**倒是**（其实/说起来）是关键的调味剂：它传递轻微的惊讶或让步，暗示说话者原本预期情况更糟。**挺好的**以轻松的口语感收尾。对比中性说法脾气很好——加上**倒是**，那句平淡的陈述就变成了真实的性格评判。"
     },
     "tree": {
       "id": "s135-root",
@@ -14672,8 +14672,8 @@
     "pinyin": "Zhè zhǒng bìng zhì bù hǎo.",
     "translation": "This kind of illness can't be cured.",
     "explanation": {
-      "en": "A \"subjectless potential complement\": the Topic is not the doer but the *thing acted upon*. **这种病** is the patient — the illness that gets treated. The agent is completely absent. The verb phrase **治不好** splits into: 治 (\"treat\") + 不 (impossibility) + 好 (\"cured\").",
-      "zh": "**无主语可能补语**：话题不是施事者而是*受事者*。**这种病**是患者——被治疗的疾病。施事者完全省略。动词短语**治不好**拆分为：治（治疗）+ 不（不可能）+ 好（治愈）。"
+      "en": "A **subjectless potential complement** — one of the most natural constructions in everyday Mandarin. The Topic **这种病** (\"this kind of illness\") is not the doer but the *thing acted upon*: a patient-as-topic pattern. The agent (doctors, medicine, anyone) is left completely unspoken — the focus is on the illness and its resistance to treatment. The verb phrase **治不好** is the payload: 治 (\"treat\") + 不 (impossibility) + 好 (\"cured/well\"). Compare 治得好 (\"can be cured\") — swapping 不 for 得 flips the prognosis entirely.",
+      "zh": "这是**无主语可能补语**——日常中文中最自然的结构之一。话题**这种病**不是施事者，而是*受事者*：受事为话题的句型。施事者（医生、药物或任何人）完全不说——焦点落在疾病本身及其顽固性上。动词短语**治不好**是核心：治（治疗）+ 不（不可能）+ 好（痊愈）。对比**治得好**（能治好）——把**不**换成**得**，预后完全翻转。"
     },
     "tree": {
       "id": "s136-root",
@@ -14753,8 +14753,8 @@
     "pinyin": "Wǒ de shǒu jī bèi dì di gěi shuāi huài le.",
     "translation": "My phone was broken by my little brother (he dropped and broke it).",
     "explanation": {
-      "en": "This adds a layer to the standard BEI passive: the colloquial **给** insertion. Speakers insert 给 between the agent and verb for emphasis or indignation. **被** opens the passive, **弟弟** is the agent, **给** adds emphasis, and **摔坏** (\"drop-break\") is a resultative compound.",
-      "zh": "在标准**被**字句基础上增加了口语化的**给**插入。说话者在施事者和动词之间插入**给**以增加强调或愤慨语气。**被**开启被动，**弟弟**是施事者，**给**增强语气，**摔坏**是动补结构。"
+      "en": "This sentence layers the **被…给** colloquial passive, one step beyond standard 被. The Topic **我的手机** (\"my phone\") is the patient up front. Then **被** opens the passive structure, **弟弟** names the agent, and **给** slots in before the verb — purely for emotional color. Colloquially, 给 amplifies grievance or exasperation: *the little brother really did a number on it*. The verb payload is **摔坏了**: 摔 (\"drop/fall\") + 坏 (\"broken\") is a tight resultative compound, sealed by 了. Compare 被弟弟摔坏了 — grammatically equivalent, but the 给 version sounds considerably more aggrieved.",
+      "zh": "这句话叠加了口语**被…给**被动结构，比标准被字句多走一步。话题**我的手机**（受事者）置于句首。然后**被**开启被动结构，**弟弟**点名施事者，**给**插入动词前——纯粹用于情感渲染。口语中，**给**放大了委屈或愤慨感：弟弟把它摔得够呛。动词核心是**摔坏了**：摔（摔落）+ 坏（损坏）构成紧密的动补复合词，由了封闭。对比**被弟弟摔坏了**——语法上等价，但加了**给**的版本听起来明显更委屈。"
     },
     "tree": {
       "id": "s137-root",

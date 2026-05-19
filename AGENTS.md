@@ -30,7 +30,6 @@ git push                # Orchestrator only — specialists do NOT run git comma
 
 | Priority | Owner | Task |
 |---|---|---|
-| 🟡 MEDIUM | Corpus Engineer | Classical batch fixes: `cc34` 為→Head Verb, `cc39` root→Parallel Sentence, `cc33` add subRole quotative |
 | 🟡 MEDIUM | Corpus Engineer | subRole taxonomy normalization — see `docs/audits/subrole_taxonomy_audit.md` (13 clusters) |
 | 🟡 MEDIUM | Ed. Publisher | Expand `s129`–`s137` explanations — currently 36–48 words, target ~75 (dataset avg) |
 | 🟢 LOW | Ling. Specialist | Second pass audit of Topic/Comment subRole labels (whitelisted but non-canonical) |
