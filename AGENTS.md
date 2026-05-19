@@ -30,7 +30,6 @@ git push                # Orchestrator only — specialists do NOT run git comma
 
 | Priority | Owner | Task |
 |---|---|---|
-| 🔴 HIGH | Corpus Engineer | `relatedIds` wiring — ALL 176 sentences have empty `relatedIds[]`. "See Also" feature is dark. |
 | 🟡 MEDIUM | Corpus Engineer | Classical batch fixes: `cc34` 為→Head Verb, `cc39` root→Parallel Sentence, `cc33` add subRole quotative |
 | 🟡 MEDIUM | Corpus Engineer | subRole taxonomy normalization — see `docs/audits/subrole_taxonomy_audit.md` (13 clusters) |
 | 🟡 MEDIUM | Ed. Publisher | Expand `s129`–`s137` explanations — currently 36–48 words, target ~75 (dataset avg) |
