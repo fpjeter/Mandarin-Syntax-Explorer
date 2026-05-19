@@ -3349,7 +3349,6 @@
             {
               "id": "n8-p-vp",
               "role": "Verb Phrase",
-              "subRole": "embedded predicate",
               "children": [
                 {
                   "id": "n8-p-vp-tp",
@@ -3389,7 +3388,6 @@
                 {
                   "id": "n8-p-vp-verb",
                   "role": "Verb Phrase",
-                  "subRole": "embedded predicate",
                   "children": [
                     {
                       "id": "n8-p-vp-verb-hv",
@@ -3485,7 +3483,6 @@
             {
               "id": "n23-p-vp",
               "role": "Verb Phrase",
-              "subRole": "embedded predicate",
               "children": [
                 {
                   "id": "n23-lp",
@@ -3591,7 +3588,6 @@
             {
               "id": "n50-p-vp",
               "role": "Verb Phrase",
-              "subRole": "embedded predicate",
               "children": [
                 {
                   "id": "n50-focus",
@@ -3606,7 +3602,6 @@
                 {
                   "id": "n50-hv",
                   "role": "Head Verb",
-                  "subRole": "embedded predicate",
                   "text": {
                     "hanzi": "到",
                     "pinyin": "dào",
@@ -3692,7 +3687,6 @@
             {
               "id": "n51-p-vp",
               "role": "Verb Phrase",
-              "subRole": "embedded predicate",
               "children": [
                 {
                   "id": "n51-focus",
@@ -3722,7 +3716,6 @@
                 {
                   "id": "n51-hv",
                   "role": "Head Verb",
-                  "subRole": "embedded predicate",
                   "text": {
                     "hanzi": "买",
                     "pinyin": "mǎi",
@@ -8182,7 +8175,6 @@
                     {
                       "id": "n32-embedded",
                       "role": "Verb Phrase",
-                      "subRole": "embedded predicate",
                       "children": [
                         {
                           "id": "n32-embedded-hv",
@@ -8491,7 +8483,6 @@
                     {
                       "id": "n53-embedded",
                       "role": "Verb Phrase",
-                      "subRole": "embedded predicate",
                       "children": [
                         {
                           "id": "n53-embedded-hv",
