@@ -104,7 +104,6 @@ Key differences from formal linguistic models:
 The FLS framework draws on the following foundational works:
 
 - Chao, Y.R. (1968). *A Grammar of Spoken Chinese*. Berkeley: University of California Press.
-- Chomsky, N. (1981). *Lectures on Government and Binding*. Dordrecht: Foris. — Referenced for ECM/X-bar comparison.
 - Huang, C.T.J. (1984). "On the Distribution and Reference of Empty Pronouns." *Linguistic Inquiry*, 15(4), 531–574.
 - Huang, Chu-Ren & Dingxu Shi (Eds.). (2016). *A Reference Grammar of Chinese*. Cambridge: Cambridge University Press.
 - Huang, C.-T.J., Li, Y.-H.A. & Simpson, A. (Eds.). (2014). *The Handbook of Chinese Linguistics*. Oxford: Wiley-Blackwell.

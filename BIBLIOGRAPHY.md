@@ -40,8 +40,6 @@ Wang Li 王力 (1962–1964). *古代汉语* [Ancient Chinese]. 4 vols. Beijing:
 
 Bisang, W. (2020). "Grammaticalization in Chinese — A Cross-Linguistic Perspective." In J.Z. Xing (Ed.), *A Typological Approach to Grammaticalization and Lexicalization: East Meets West* (pp. 17–54). Berlin: De Gruyter Mouton.
 
-Chomsky, N. (1981). *Lectures on Government and Binding*. Dordrecht: Foris.
-
 Huang, C.T.J. (1984). "On the Distribution and Reference of Empty Pronouns." *Linguistic Inquiry*, 15(4), 531–574.
 
 Huang, C.-T.J. (2015). "On Syntactic Analyticity and Parametric Theory." In A. Li, A. Simpson & W.-T.D. Tsai (Eds.), *Chinese Syntax in a Cross-Linguistic Perspective* (pp. 1–48). Oxford: Oxford University Press.

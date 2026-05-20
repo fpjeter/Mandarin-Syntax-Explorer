@@ -176,7 +176,6 @@ The role of the Linguistics Specialist is to act as the silent structural archit
 
 ### General Linguistics / Typology
 
-- Chomsky, N. (1981). *Lectures on Government and Binding*. Dordrecht: Foris. — Referenced for ECM and X-bar comparison in §2.5.
 - Huang, C.-T.J. (2015). "On Syntactic Analyticity and Parametric Theory." In A. Li, A. Simpson & W.-T.D. Tsai (Eds.), *Chinese Syntax in a Cross-Linguistic Perspective* (pp. 1–48). Oxford: Oxford University Press. — Updates Huang (1984) with 30 years of refined parametric theory on pro-drop and analyticity; directly relevant to §2.3.
 - Huang, C.T.J. (1984). "On the Distribution and Reference of Empty Pronouns." *Linguistic Inquiry*, 15(4), 531–574.
 - Huang, C.-T.J., Li, Y.-H.A. & Simpson, A. (Eds.). (2014). *The Handbook of Chinese Linguistics*. Oxford: Wiley-Blackwell. — Broad survey of current Chinese linguistics; contextualizes the FLS within the field.
