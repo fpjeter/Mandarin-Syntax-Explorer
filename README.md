@@ -97,7 +97,21 @@ Key differences from formal linguistic models:
 | **Pivot** (兼语) is a labeled role for nouns serving two functions simultaneously | Handled through Exceptional Case Marking (ECM) or control structures |
 | Dropped pronouns are **visible ghost nodes** with coreference links (`isDropped`, `refersToId`) | Null pronouns are abstract empty categories (pro / PRO) |
 
-**Why?** The goal is helping Mandarin learners see sentence structure at a glance — not modeling formal competence grammar. Chinese is a [topic-prominent language](https://en.wikipedia.org/wiki/Topic-prominent_language), and the Topic–Comment split reflects how sentences are actually constructed and taught, particularly at institutions like BLCU (北京语言大学). Role names like 状语, 补语, and 兼语 map directly to the terms learners encounter in Chinese-language textbooks.
+**Why?** The goal is helping Mandarin learners see sentence structure at a glance — not modeling formal competence grammar. Chinese is a [topic-prominent language](https://en.wikipedia.org/wiki/Topic-prominent_language) (Li & Thompson, 1976), and the Topic–Comment split reflects how sentences are actually constructed and taught, as commonly taught in Chinese-language pedagogy. Role names like 状语, 补语, and 兼语 map directly to the terms learners encounter in Chinese-language textbooks.
+
+### References
+
+The FLS framework draws on the following foundational works:
+
+- Chao, Y.R. (1968). *A Grammar of Spoken Chinese*. Berkeley: University of California Press.
+- Chomsky, N. (1981). *Lectures on Government and Binding*. Dordrecht: Foris. — Referenced for ECM/X-bar comparison.
+- Huang, C.T.J. (1984). "On the Distribution and Reference of Empty Pronouns." *Linguistic Inquiry*, 15(4), 531–574.
+- Li, C.N. & Thompson, S.A. (1976). "Subject and Topic: A New Typology of Language." In C.N. Li (Ed.), *Subject and Topic* (pp. 457–489). New York: Academic Press.
+- Li, C.N. & Thompson, S.A. (1981). *Mandarin Chinese: A Functional Reference Grammar*. Berkeley: University of California Press.
+- Lü Shuxiang 吕叔湘 (1979/1999). *现代汉语八百词* [800 Words of Modern Chinese]. Beijing: Commercial Press.
+- Zhu Dexi 朱德熙 (1982). *语法讲义* [Lectures on Grammar]. Beijing: Commercial Press.
+
+See [BIBLIOGRAPHY.md](BIBLIOGRAPHY.md) for the full consolidated reference list.
 
 ---
 

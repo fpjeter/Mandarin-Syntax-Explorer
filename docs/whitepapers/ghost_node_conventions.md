@@ -121,3 +121,12 @@ For each of the 17 ghost nodes:
 - [ ] `semanticRole` is inherited from referent per Convention 5 (or `Theme` for expletives)
 - [ ] `subRole` is one of: `pro-drop`, `topic-chain`, `expletive`
 - [ ] No ghost uses the deprecated `subRole: "implied topic"`
+
+---
+
+## References
+
+- Huang, C.T.J. (1984). "On the Distribution and Reference of Empty Pronouns." *Linguistic Inquiry*, 15(4), 531–574. — Foundational analysis of null pronouns (*pro*) in Chinese; establishes the Generalized Control Rule (GCR) referenced in Convention 1 and the pro-drop typology underlying Convention 4.
+- Li, C.N. & Thompson, S.A. (1981). *Mandarin Chinese: A Functional Reference Grammar*. Berkeley: University of California Press. — Standard reference for discourse-oriented pro-drop in Mandarin; motivates the distinction between structural omission and discourse recoverability in Conventions 1–4.
+- Rizzi, L. (1986). "Null Objects in Italian and the Theory of *pro*." *Linguistic Inquiry*, 17(3), 501–557. — Cross-linguistic null subject/object typology; provides the formal framework distinguishing pro-drop subjects from null discourse-bound objects (Convention 1 Addendum, Convention 4).
+- Tsao, F.-F. (1990). *Sentence and Clause Structure in Chinese: A Functional Perspective*. Taipei: Student Book Co. — Primary source on topic-chain structure in Chinese discourse; directly informs the `"topic-chain"` subRole in Convention 4.

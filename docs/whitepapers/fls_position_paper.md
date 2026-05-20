@@ -42,7 +42,7 @@ The Comment is a **container**, not a constituent. Every predicative unit in Man
 ### 2.3. Asymmetric Identity Subscription and the GCR
 
 **FLS Principle:** To maintain efficiency, nested topics ($T_2$) are often set to Null ($\emptyset$). The FLS identifies an asymmetry in how these empty slots bind to identities:
-- **Subject Subscription (pro)**: Null subjects follow C.T. James Huang's (1984) Generalized Control Rule (GCR), co-indexing with the closest nominal element—usually the Global Anchor ($T_1$).
+- **Subject Subscription (pro)**: Null subjects follow Huang's (1984) Generalized Control Rule (GCR), co-indexing with the closest nominal element—usually the Global Anchor ($T_1$).
 - **Object Mapping (Variable)**: Null objects are parsed as variables bound by a Null Discourse Operator, mapped to the established "Topic Window" of the conversation rather than directly appending to $T_1$.
 
 **What this means for us:**
@@ -52,7 +52,7 @@ Our ghost nodes (`isDropped: true`) are structurally mandatory null positions.
 
 ### 2.4. The Relay Hypothesis (Mixed-Mode Chains)
 
-**FLS Principle:** What traditional grammar calls "Serial Verb Constructions" (SVCs) are modeled in the FLS as Atomic Sequences—streams of individual $S$ units ($T+C$). Most Chinese linguists analyze SVCs as multi-verb predicates sharing a single subject within one clause; the FLS reframes them as chained $T+C$ units where subsequent verbs "subscribe" back to the original Topic via null positions. This reframing is a modeling choice that keeps our trees structurally consistent, not a claim that SVCs cannot be analyzed as single-clause phenomena.
+**FLS Principle:** What traditional grammar calls "Serial Verb Constructions" (SVCs) are modeled in the FLS as Atomic Sequences—streams of individual $S$ units ($T+C$). Most Chinese linguists (Li & Thompson, 1981; Zhu Dexi, 1982) analyze SVCs as multi-verb predicates sharing a single subject within one clause; the FLS reframes them as chained $T+C$ units where subsequent verbs "subscribe" back to the original Topic via null positions. This reframing is a modeling choice that keeps our trees structurally consistent, not a claim that SVCs cannot be analyzed as single-clause phenomena.
 - **Parallel Transitions (The Stream):** `Logic: S_1 + S_2`. Subsequent units "subscribe" back to the Global Anchor ($T_1$) via a Null Topic. Same actor chronologically.
 - **Chained Transitions (The Waterfall):** `Logic: C_1 \rightarrow \text{becomes Topic for} \rightarrow [C_2]`. A subsequent unit uses the entirety of the previous $S$ unit as its Topic, creating causal/resultative fusion.
 
@@ -70,11 +70,11 @@ Our ghost nodes (`isDropped: true`) are structurally mandatory null positions.
 > **Modeling Decision: 被 as Head Verb**
 >
 > **The case against (linguistic reality):**
-> Modern consensus (Shi Yuzhi, Peyraube, et al.) holds that 被 has **grammaticalized** from a full lexical verb ("to suffer / to be covered by") into a preposition or passive marker. The evidence is clear:
+> Modern consensus (Shi Yuzhi, 2004; Peyraube, 1996; et al.) holds that 被 has **grammaticalized** from a full lexical verb ("to suffer / to be covered by") into a preposition or passive marker. The evidence is clear:
 > - 被 cannot stand alone as a predicate. 我让 ("I yield") is valid; 我被 is meaningless.
 > - 被 carries no independent lexical meaning in modern usage. It functions purely as a structural signal.
 > - In agentless passives (钱包被偷了), there is no agent NP between 被 and the verb. Forcing a ghost node into the "empty agent" slot props up a structural model rather than reflecting native speaker intuition.
-> - Mainstream Chinese linguists classify 被 as a grammaticalized preposition, not a verb.
+> - Mainstream Chinese linguists (Lü Shuxiang, 1979; Zhu Dexi, 1982) classify 被 as a grammaticalized preposition, not a verb.
 >
 > **The case for (modeling elegance):**
 > - Causative verbs (让/叫/请/派) are undisputed verbs. The surface structure `NP₁ + marker + NP₂ + VP` is identical for both causatives and passives. Giving 被 the same `Head Verb → Embedded Clause` blueprint means learners see one consistent tree shape instead of two.
@@ -109,7 +109,7 @@ By treating the object slot as a "Situation Container" (`Embedded Clause`), we e
 >
 > 把+NP functions as a **pre-verbal adjunct** — structurally parallel to other adverbial phrases like 在厨房里 (location), 用爪子 (instrument), and 不小心 (manner). All are siblings modifying the main VP. The main verb of a 把 sentence is the action verb (打碎), not 把 itself.
 >
-> **Our decision:** The FLS maps 把 as an `Adjunct (disposal marker)` containing a `Head Verb: 把` + `Object: NP`. The main `Verb Phrase` remains a sibling of the 把-adjunct inside the Comment, preserving the VP as the true predicate. This aligns with mainstream Chinese grammar (Lü Shuxiang, Zhu Dexi) and pedagogical grammars (HSK, NPCR), which classify 把 as a preposition/coverb.
+> **Our decision:** The FLS maps 把 as an `Adjunct (disposal marker)` containing a `Head Verb: 把` + `Object: NP`. The main `Verb Phrase` remains a sibling of the 把-adjunct inside the Comment, preserving the VP as the true predicate. This aligns with mainstream Chinese grammar (Lü Shuxiang, 1979; Zhu Dexi, 1982) and pedagogical grammars (HSK, NPCR), which classify 把 as a preposition/coverb.
 >
 > **Amendment note (2026-04-25):** An earlier version of this paper incorrectly included 把 in the §2.5 template unification with 被/让/叫. This was an overextension of the Recursive Situational Object principle. The surface syntax `NP₁ + marker + NP₂ + VP` is shared, but the semantics are fundamentally different: 被/让/叫 introduce new actors; 把 does not. Template unification applies only to situation-taking verbs that open genuine embedded events.
 
@@ -158,7 +158,26 @@ The role of the Linguistics Specialist is to act as the silent structural archit
 
 ## Works Referenced
 
-- The Fractal Logic Stream: A Fractal Approach to Structural Logic (2026 Revision)
-- Chao, Y.R. (1968). *A Grammar of Spoken Chinese*
-- Li, C.N. & Thompson, S.A. (1976). "Subject and Topic: A New Typology of Language"
-- Huang, C.T.J. (1984). "On the Distribution and Reference of Empty Pronouns"
+### Modern Chinese Linguistics
+
+- Chao, Y.R. (1968). *A Grammar of Spoken Chinese*. Berkeley: University of California Press.
+- Li, C.N. & Thompson, S.A. (1981). *Mandarin Chinese: A Functional Reference Grammar*. Berkeley: University of California Press.
+- Liu Yuehua 刘月华 et al. (2001). *实用现代汉语语法* [Practical Modern Chinese Grammar]. Beijing: Commercial Press.
+- Lü Shuxiang 吕叔湘 (1979/1999). *现代汉语八百词* [800 Words of Modern Chinese]. Beijing: Commercial Press.
+- Zhu Dexi 朱德熙 (1982). *语法讲义* [Lectures on Grammar]. Beijing: Commercial Press.
+
+### Classical Chinese & Historical Syntax
+
+- Peyraube, A. (1996). "Recent Issues in Chinese Historical Syntax." In C.-T.J. Huang & Y.-H.A. Li (Eds.), *New Horizons in Chinese Linguistics* (pp. 161–213). Dordrecht: Kluwer.
+
+### General Linguistics / Typology
+
+- Chomsky, N. (1981). *Lectures on Government and Binding*. Dordrecht: Foris. — Referenced for ECM and X-bar comparison in §2.5.
+- Huang, C.T.J. (1984). "On the Distribution and Reference of Empty Pronouns." *Linguistic Inquiry*, 15(4), 531–574.
+- Li, C.N. & Thompson, S.A. (1976). "Subject and Topic: A New Typology of Language." In C.N. Li (Ed.), *Subject and Topic* (pp. 457–489). New York: Academic Press.
+- Rizzi, L. (1986). "Null Objects in Italian and the Theory of *pro*." *Linguistic Inquiry*, 17(3), 501–557. — Cross-linguistic null pronoun typology relevant to §2.3.
+- Tsao, F.-F. (1990). *Sentence and Clause Structure in Chinese: A Functional Perspective*. Taipei: Student Book Co.
+
+### Internal
+
+- The Fractal Logic Stream: A Fractal Approach to Structural Logic (2026 Revision).
