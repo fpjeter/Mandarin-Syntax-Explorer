@@ -7,7 +7,7 @@ Interactive syntax tree visualizer for Mandarin Chinese grammar. 133 modern sent
 ## Commands
 
 ```bash
-npm run qa              # validate all trees — REQUIRED before any commit (133 modern ✅, 43 classical ✅)
+npm run qa              # validate all trees — REQUIRED before any commit (133 modern ✅, 52 classical ✅)
 npx tsc -b --noEmit     # TypeScript check — run at session end
 npm run dev             # dev server at http://localhost:5173
 git pull                # always first — run before touching anything
@@ -19,10 +19,10 @@ git push                # Orchestrator only — specialists do NOT run git comma
 | | Count | Location |
 |---|---|---|
 | Modern sentences | 133 | `src/data/modern_sentences.json` |
-| Classical sentences | 43 | `src/data/classical_sentences.json` |
+| Classical sentences | 52 | `src/data/classical_sentences.json` |
 | Modern categories | 19 | `src/data/categories.ts` |
 | Classical categories | 11 | `src/data/classicalCategories.ts` |
-| Total nodes validated | 2081 | (1532 modern + 549 classical) |
+| Total nodes validated | 2184 | (1532 modern + 652 classical) |
 
 **Branch:** `main` — trunk-based development. Never create feature branches.
 
