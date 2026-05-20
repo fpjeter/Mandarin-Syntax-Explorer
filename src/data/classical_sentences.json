@@ -5413,14 +5413,14 @@
   {
     "id": "cc44",
     "category": "Classical Passive (為…所…)",
-    "source": "[PENDING PUBLISHER]",
-    "author": "[PENDING PUBLISHER]",
+    "source": "Mencius",
+    "author": "Mencius",
     "chinese": "勞力者治於人。",
     "pinyin": "Láo lì zhě zhì yú rén.",
-    "translation": "[PENDING PUBLISHER]",
+    "translation": "Those who labor with their strength are governed by others.",
     "explanation": {
-      "en": "[PENDING PUBLISHER]",
-      "zh": "[PENDING PUBLISHER]"
+      "en": "This sentence uses the classical passive marker 於 (yú). In Classical Chinese, 於 introduces the agent of an action (the doer), functioning similarly to 'by' in English. The structure is 'Verb + 於 + Agent'. Here, 治 (governed) is followed by 於人 (by others). The topic 勞力者 (those who labor with their strength) acts as the patient receiving the action, emphasizing a fundamental socio-political division in ancient Chinese philosophy.",
+      "zh": "這個句子使用了文言文的被動標記「於」。在文言文中，「於」引出動作的執行者（施事），類似於英文中的「by」。結構為「動詞 + 於 + 施事」。在這裡，「治」（被治理）後面跟著「於人」（被別人）。主題「勞力者」（憑藉體力勞動的人）是動作的受事者，強調了古代中國哲學中基本的社會政治分工。"
     },
     "tree": {
       "id": "cc44-root",
@@ -5517,14 +5517,14 @@
   {
     "id": "cc45",
     "category": "Classical Passive (為…所…)",
-    "source": "[PENDING PUBLISHER]",
-    "author": "[PENDING PUBLISHER]",
+    "source": "Mencius",
+    "author": "Mencius",
     "chinese": "盆成括見殺。",
     "pinyin": "Pénchéng Guā jiàn shā.",
-    "translation": "[PENDING PUBLISHER]",
+    "translation": "Pencheng Gua was killed.",
     "explanation": {
-      "en": "[PENDING PUBLISHER]",
-      "zh": "[PENDING PUBLISHER]"
+      "en": "This sentence demonstrates the classical passive construction using 見 (jiàn). Unlike its common meaning 'to see', here 見 functions as a passive voice marker placed directly before the verb. The structure is 'Subject + 見 + Verb', translating to 'Subject is [Verb]-ed'. Here, 見殺 means 'was killed', with the patient 盆成括 (Pencheng Gua) placed in the subject position. This form does not inherently specify the agent who performed the action.",
+      "zh": "這句話展示了使用「見」的文言被動句式。與其常見的意思「看見」不同，這裡的「見」作為被動語態標記直接放在動詞前面。結構為「主語 + 見 + 動詞」，意思是「主語被[動詞]」。在這裡，「見殺」的意思是「被殺」，受事者「盆成括」放在主語位置。這種形式本身並沒有指出執行該動作的施事者。"
     },
     "tree": {
       "id": "cc45-root",
@@ -5585,14 +5585,14 @@
   {
     "id": "cc46",
     "category": "Classical Passive (為…所…)",
-    "source": "[PENDING PUBLISHER]",
-    "author": "[PENDING PUBLISHER]",
+    "source": "Zhuangzi",
+    "author": "Zhuangzi",
     "chinese": "吾常見笑於大方之家。",
     "pinyin": "Wú cháng jiàn xiào yú dà fāng zhī jiā.",
-    "translation": "[PENDING PUBLISHER]",
+    "translation": "I would often be laughed at by experts of great wisdom.",
     "explanation": {
-      "en": "[PENDING PUBLISHER]",
-      "zh": "[PENDING PUBLISHER]"
+      "en": "This sentence features a complete classical passive structure combining both 見 (jiàn) and 於 (yú). The marker 見 is placed before the verb 笑 (laugh at) to indicate passive voice ('be laughed at'), while 於 introduces the agent, 大方之家 (experts of great wisdom). The pattern '見 + Verb + 於 + Agent' unambiguously marks both the passive action and the doer, making it one of the most explicit passive constructions in Classical Chinese.",
+      "zh": "這句話包含了一個完整的文言被動結構，同時使用了「見」和「於」。標記「見」放在動詞「笑」之前表示被動（「被見笑」），而「於」則引出施事者「大方之家」。這種「見 + 動詞 + 於 + 施事」的句型明確標示了被動動作和執行者，是文言文中最清晰的被動句式之一。"
     },
     "tree": {
       "id": "cc46-root",
@@ -5720,14 +5720,14 @@
   {
     "id": "cc47",
     "category": "Classical Causatives (使/令)",
-    "source": "[PENDING PUBLISHER]",
-    "author": "[PENDING PUBLISHER]",
+    "source": "Mencius",
+    "author": "Mencius",
     "chinese": "必先苦其心志，勞其筋骨。",
     "pinyin": "Bì xiān kǔ qí xīn zhì, láo qí jīn gǔ.",
-    "translation": "[PENDING PUBLISHER]",
+    "translation": "[Heaven] must first make his mind and will suffer, and make his muscles and bones labor.",
     "explanation": {
-      "en": "[PENDING PUBLISHER]",
-      "zh": "[PENDING PUBLISHER]"
+      "en": "This illustrates the morphological causative in Classical Chinese. Intransitive verbs or adjectives like 苦 (bitter/suffer) and 勞 (labor/toil) function causatively when taking an object. Instead of 'to suffer his mind', 苦其心志 means 'to cause his mind to suffer'. The agent ('Heaven') implicitly brings about a change in state for the experiencer (the chosen person's mind and body). This concise causativity relies purely on syntactic position without explicit causative verbs like 使 (shǐ).",
+      "zh": "這說明了文言文中的意動或使動用法。不及物動詞或形容詞如「苦」和「勞」，在帶賓語時具有使動的意義。「苦其心志」不是「他的心志受苦」，而是「使他的心志受苦」。施事者（「天」）暗中使經歷者（被選中者的身心）的狀態發生改變。這種簡潔的使動完全依賴於語法位置，而不需要像「使」這樣明確的使動動詞。"
     },
     "tree": {
       "id": "cc47-root",
@@ -5858,14 +5858,14 @@
   {
     "id": "cc48",
     "category": "Classical Causatives (使/令)",
-    "source": "[PENDING PUBLISHER]",
-    "author": "[PENDING PUBLISHER]",
+    "source": "Zhan Guo Ce",
+    "author": "Zhan Guo Ce",
     "chinese": "天帝使我長百獸。",
     "pinyin": "Tiān dì shǐ wǒ zhǎng bǎi shòu.",
-    "translation": "[PENDING PUBLISHER]",
+    "translation": "The Emperor of Heaven made me rule over all beasts.",
     "explanation": {
-      "en": "[PENDING PUBLISHER]",
-      "zh": "[PENDING PUBLISHER]"
+      "en": "This sentence uses a pivotal causative construction built around the explicit causative verb 使 (shǐ, 'to make' or 'to order'). The structure '使 + Pivot + Verb' acts as a causative chain. The pronoun 我 (me) serves as the 'pivot': it is simultaneously the object of 使 (being ordered by the Emperor of Heaven) and the subject of the second verb 長 (to rule over). This explicit causative pattern remains highly influential in Modern Mandarin.",
+      "zh": "這句話使用了以明確的使動動詞「使」為核心的兼語使動結構。「使 + 兼語 + 動詞」的結構形成了一個使動鏈。代詞「我」作為「兼語」：它同時是「使」的賓語（被天帝命令）和第二個動詞「長」（統治）的主語。這種明確的使動句型對現代漢語仍有很大影響。"
     },
     "tree": {
       "id": "cc48-root",
@@ -5968,14 +5968,14 @@
   {
     "id": "cc49",
     "category": "Object Fronting (賓語前置)",
-    "source": "[PENDING PUBLISHER]",
-    "author": "[PENDING PUBLISHER]",
+    "source": "Analects",
+    "author": "Analects",
     "chinese": "吾誰欺？欺天乎？",
     "pinyin": "Wú shéi qī? Qī tiān hū?",
-    "translation": "[PENDING PUBLISHER]",
+    "translation": "Whom do I deceive? Do I deceive Heaven?",
     "explanation": {
-      "en": "[PENDING PUBLISHER]",
-      "zh": "[PENDING PUBLISHER]"
+      "en": "This classical structure demonstrates interrogative object fronting. In an interrogative sentence (a question), if the object is an interrogative pronoun like 誰 (shéi, 'whom' or 'who'), it must be placed before the verb instead of after it. Thus, rather than the expected '吾欺誰？' (I deceive whom?), Classical Chinese syntax dictates '吾誰欺？' (I whom deceive?). The second clause, '欺天乎' (deceive Heaven), restores normal SVO order because the object '天' is a regular noun, not a question word.",
+      "zh": "這個文言結構展示了疑問代詞賓語前置。在疑問句中，如果賓語是疑問代詞，如「誰」，它必須放在動詞之前而不是之後。因此，文言文的語法規定是「吾誰欺？」（我誰欺騙？），而不是預期的「吾欺誰？」。第二個分句「欺天乎」恢復了正常的SVO語序，因為賓語「天」是一個普通名詞，而不是疑問詞。"
     },
     "tree": {
       "id": "cc49-root",
@@ -6087,14 +6087,14 @@
   {
     "id": "cc50",
     "category": "Object Fronting (賓語前置)",
-    "source": "[PENDING PUBLISHER]",
-    "author": "[PENDING PUBLISHER]",
+    "source": "Analects",
+    "author": "Analects",
     "chinese": "何陋之有？",
     "pinyin": "Hé lòu zhī yǒu?",
-    "translation": "[PENDING PUBLISHER]",
+    "translation": "What crudeness is there?",
     "explanation": {
-      "en": "[PENDING PUBLISHER]",
-      "zh": "[PENDING PUBLISHER]"
+      "en": "This is a famous example of object fronting used for emphasis, marked by the structural particle 之 (zhī). The natural order would be '有何陋？' (have what crudeness?). To emphasize the rhetorical question, the object '何陋' (what crudeness) is fronted, and '之' is inserted between the fronted object and the verb '有' (to have/exist). The structure 'Object + 之 + Verb' effectively highlights the object, transforming the sentence into an elegant and forceful denial.",
+      "zh": "這是一個著名的用結構助詞「之」標記以表示強調的賓語前置的例子。正常的語序應該是「有何陋？」。為了強調這個反問，賓語「何陋」被提前，並在提前的賓語和動詞「有」之間插入「之」。「賓語 + 之 + 動詞」的結構有效地突出了賓語，將句子轉變為優雅而有力的否定。"
     },
     "tree": {
       "id": "cc50-root",
@@ -6170,14 +6170,14 @@
   {
     "id": "cc51",
     "category": "Topic-Comment (主題)",
-    "source": "[PENDING PUBLISHER]",
-    "author": "[PENDING PUBLISHER]",
+    "source": "Mencius",
+    "author": "Mencius",
     "chinese": "魚，我所欲也。",
     "pinyin": "Yú, wǒ suǒ yù yě.",
-    "translation": "[PENDING PUBLISHER]",
+    "translation": "Fish is what I desire.",
     "explanation": {
-      "en": "[PENDING PUBLISHER]",
-      "zh": "[PENDING PUBLISHER]"
+      "en": "This embodies the fundamental Topic-Comment structure combined with a classical nominalization pattern. '魚' (fish) stands as the topic. The comment uses the '所 + Verb' construction, which nominalizes the verb '欲' (desire) into 'that which is desired'. The final particle 也 (yě) marks a declarative judgment or equation. The sentence equates the topic (Fish) with the comment (that which I desire), functioning similarly to a copula 'is' in English without needing an actual 'to be' verb.",
+      "zh": "這體現了基本的主題-評論結構與文言名詞化句型的結合。「魚」作為主題。評論部分使用了「所 + 動詞」的結構，將動詞「欲」名詞化為「所想要的東西」。句末助詞「也」標記陳述性判斷或等式。這個句子將主題（魚）與評論（我所想要的東西）等同起來，其作用類似於英文中的系動詞「is」，而不需要實際的「是」動詞。"
     },
     "tree": {
       "id": "cc51-root",
@@ -6269,14 +6269,14 @@
   {
     "id": "cc52",
     "category": "Topic-Comment (主題)",
-    "source": "[PENDING PUBLISHER]",
-    "author": "[PENDING PUBLISHER]",
+    "source": "Laozi",
+    "author": "Laozi",
     "chinese": "兵者，不祥之器。",
     "pinyin": "Bīng zhě, bù xiáng zhī qì.",
-    "translation": "[PENDING PUBLISHER]",
+    "translation": "As for weapons, they are instruments of ill omen.",
     "explanation": {
-      "en": "[PENDING PUBLISHER]",
-      "zh": "[PENDING PUBLISHER]"
+      "en": "This sentence uses the classic 'Topic + 者 (zhě) ..., Comment' formula to define or explain a concept. The particle 者 isolates and highlights '兵' (weapons) as the topic of discussion, functioning like 'as for...' in English. The comment '不祥之器' (instruments of ill omen) provides an equational definition. This '者...也' pattern (though 也 is omitted here, as is common when context is clear) is the standard Classical Chinese way to present definitions, judgments, or universal truths.",
+      "zh": "這句話使用了經典的「主題 + 者…，評論」公式來定義或解釋一個概念。助詞「者」將「兵」（武器）獨立出來並突出作為討論的主題，作用類似於英文中的「as for...」。評論「不祥之器」提供了一個等式定義。這種「者…也」句型（雖然這裡省略了「也」，這在語境清楚時很常見）是文言文中表達定義、判斷或普遍真理的標準方式。"
     },
     "tree": {
       "id": "cc52-root",
