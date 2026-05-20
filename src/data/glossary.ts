@@ -11,7 +11,7 @@
  * - Huang, C.T.J. (1984). "On the Distribution and Reference of Empty
  *   Pronouns." Linguistic Inquiry, 15(4).
  * - Zhu Dexi 朱德熙 (1982). 语法讲义 [Lectures on Grammar]. Commercial Press.
- * - Lü Shuxiang 吕叔湘 (1979/1999). 现代汉语八百词 [800 Words of Modern
+ * - Lü Shuxiang 吕叔湘 (1980/1999). 现代汉语八百词 [800 Words of Modern
  *   Chinese]. Commercial Press.
  * - Liu Yuehua et al. (2001). 实用现代汉语语法 [Practical Modern Chinese
  *   Grammar]. Commercial Press.

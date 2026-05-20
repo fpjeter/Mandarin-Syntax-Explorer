@@ -74,7 +74,7 @@ Our ghost nodes (`isDropped: true`) are structurally mandatory null positions.
 > - 被 cannot stand alone as a predicate. 我让 ("I yield") is valid; 我被 is meaningless.
 > - 被 carries no independent lexical meaning in modern usage. It functions purely as a structural signal.
 > - In agentless passives (钱包被偷了), there is no agent NP between 被 and the verb. Forcing a ghost node into the "empty agent" slot props up a structural model rather than reflecting native speaker intuition.
-> - Mainstream Chinese linguists (Lü Shuxiang, 1979; Zhu Dexi, 1982) classify 被 as a grammaticalized preposition, not a verb.
+> - Mainstream Chinese linguists (Lü Shuxiang, 1980; Zhu Dexi, 1982) classify 被 as a grammaticalized preposition, not a verb.
 >
 > **The case for (modeling elegance):**
 > - Causative verbs (让/叫/请/派) are undisputed verbs. The surface structure `NP₁ + marker + NP₂ + VP` is identical for both causatives and passives. Giving 被 the same `Head Verb → Embedded Clause` blueprint means learners see one consistent tree shape instead of two.
@@ -109,7 +109,7 @@ By treating the object slot as a "Situation Container" (`Embedded Clause`), we e
 >
 > 把+NP functions as a **pre-verbal adjunct** — structurally parallel to other adverbial phrases like 在厨房里 (location), 用爪子 (instrument), and 不小心 (manner). All are siblings modifying the main VP. The main verb of a 把 sentence is the action verb (打碎), not 把 itself.
 >
-> **Our decision:** The FLS maps 把 as an `Adjunct (disposal marker)` containing a `Head Verb: 把` + `Object: NP`. The main `Verb Phrase` remains a sibling of the 把-adjunct inside the Comment, preserving the VP as the true predicate. This aligns with mainstream Chinese grammar (Lü Shuxiang, 1979; Zhu Dexi, 1982) and pedagogical grammars (HSK, NPCR), which classify 把 as a preposition/coverb.
+> **Our decision:** The FLS maps 把 as an `Adjunct (disposal marker)` containing a `Head Verb: 把` + `Object: NP`. The main `Verb Phrase` remains a sibling of the 把-adjunct inside the Comment, preserving the VP as the true predicate. This aligns with mainstream Chinese grammar (Lü Shuxiang, 1980; Zhu Dexi, 1982) and pedagogical grammars (HSK, NPCR), which classify 把 as a preposition/coverb.
 >
 > **Amendment note (2026-04-25):** An earlier version of this paper incorrectly included 把 in the §2.5 template unification with 被/让/叫. This was an overextension of the Recursive Situational Object principle. The surface syntax `NP₁ + marker + NP₂ + VP` is shared, but the semantics are fundamentally different: 被/让/叫 introduce new actors; 把 does not. Template unification applies only to situation-taking verbs that open genuine embedded events.
 
@@ -163,7 +163,7 @@ The role of the Linguistics Specialist is to act as the silent structural archit
 - Chao, Y.R. (1968). *A Grammar of Spoken Chinese*. Berkeley: University of California Press.
 - Li, C.N. & Thompson, S.A. (1981). *Mandarin Chinese: A Functional Reference Grammar*. Berkeley: University of California Press.
 - Liu Yuehua 刘月华 et al. (2001). *实用现代汉语语法* [Practical Modern Chinese Grammar]. Beijing: Commercial Press.
-- Lü Shuxiang 吕叔湘 (1979/1999). *现代汉语八百词* [800 Words of Modern Chinese]. Beijing: Commercial Press.
+- Lü Shuxiang 吕叔湘 (1980/1999). *现代汉语八百词* [800 Words of Modern Chinese]. Beijing: Commercial Press.
 - Zhu Dexi 朱德熙 (1982). *语法讲义* [Lectures on Grammar]. Beijing: Commercial Press.
 
 ### Classical Chinese & Historical Syntax

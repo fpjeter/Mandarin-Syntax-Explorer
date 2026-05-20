@@ -318,7 +318,7 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                             </span>
                         </li>
                         <li>
-                            <span className="text-slate-300 font-semibold">Lü Shuxiang 吕叔湘 (1979/1999).</span>{' '}
+                            <span className="text-slate-300 font-semibold">Lü Shuxiang 吕叔湘 (1980/1999).</span>{' '}
                             <em>现代汉语八百词</em> [800 Words of Modern Chinese]. Commercial Press.{' '}
                             <span className="text-slate-500">
                                 {isZh ? '— 现代汉语虚词和常用词的权威用法辞典。' : '— The definitive usage dictionary for modern Chinese function words and high-frequency vocabulary.'}

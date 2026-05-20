@@ -12,7 +12,7 @@ Li, C.N. & Thompson, S.A. (1981). *Mandarin Chinese: A Functional Reference Gram
 
 Liu Yuehua 刘月华 et al. (2001). *实用现代汉语语法* [Practical Modern Chinese Grammar]. Beijing: Commercial Press.
 
-Lü Shuxiang 吕叔湘 (1979/1999). *现代汉语八百词* [800 Words of Modern Chinese]. Beijing: Commercial Press.
+Lü Shuxiang 吕叔湘 (1980/1999). *现代汉语八百词* [800 Words of Modern Chinese]. Beijing: Commercial Press.
 
 Zhu Dexi 朱德熙 (1982). *语法讲义* [Lectures on Grammar]. Beijing: Commercial Press.
 

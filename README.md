@@ -108,7 +108,7 @@ The FLS framework draws on the following foundational works:
 - Huang, C.T.J. (1984). "On the Distribution and Reference of Empty Pronouns." *Linguistic Inquiry*, 15(4), 531–574.
 - Li, C.N. & Thompson, S.A. (1976). "Subject and Topic: A New Typology of Language." In C.N. Li (Ed.), *Subject and Topic* (pp. 457–489). New York: Academic Press.
 - Li, C.N. & Thompson, S.A. (1981). *Mandarin Chinese: A Functional Reference Grammar*. Berkeley: University of California Press.
-- Lü Shuxiang 吕叔湘 (1979/1999). *现代汉语八百词* [800 Words of Modern Chinese]. Beijing: Commercial Press.
+- Lü Shuxiang 吕叔湘 (1980/1999). *现代汉语八百词* [800 Words of Modern Chinese]. Beijing: Commercial Press.
 - Zhu Dexi 朱德熙 (1982). *语法讲义* [Lectures on Grammar]. Beijing: Commercial Press.
 
 See [BIBLIOGRAPHY.md](BIBLIOGRAPHY.md) for the full consolidated reference list.
