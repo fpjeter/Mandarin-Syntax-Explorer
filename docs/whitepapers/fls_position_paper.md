@@ -161,19 +161,25 @@ The role of the Linguistics Specialist is to act as the silent structural archit
 ### Modern Chinese Linguistics
 
 - Chao, Y.R. (1968). *A Grammar of Spoken Chinese*. Berkeley: University of California Press.
+- Fisac, T. & Moratto, R. (Eds.). (2024). *Pedagogical Grammar of Chinese: Topic-Comment Approaches*. London: Routledge. — Pedagogical topic-comment framework aligning with our §5 principle of keeping FLS behind the interface.
+- Huang, Chu-Ren & Dingxu Shi (Eds.). (2016). *A Reference Grammar of Chinese*. Cambridge: Cambridge University Press. — Comprehensive modern reference grammar; corroborates synchronic category analyses across §2.5–§2.7.
 - Li, C.N. & Thompson, S.A. (1981). *Mandarin Chinese: A Functional Reference Grammar*. Berkeley: University of California Press.
 - Liu Yuehua 刘月华 et al. (2001). *实用现代汉语语法* [Practical Modern Chinese Grammar]. Beijing: Commercial Press.
 - Lü Shuxiang 吕叔湘 (1980/1999). *现代汉语八百词* [800 Words of Modern Chinese]. Beijing: Commercial Press.
+- Paul, W. (2015). *New Perspectives on Chinese Syntax*. Berlin: De Gruyter Mouton. — Topic/focus partition analysis relevant to the Atomic Unit (§2.1) and Focused Scope (§2.7).
 - Zhu Dexi 朱德熙 (1982). *语法讲义* [Lectures on Grammar]. Beijing: Commercial Press.
 
 ### Classical Chinese & Historical Syntax
 
+- Bisang, W. (2020). *Grammaticalization in Chinese: A Cross-Linguistic Perspective*. Oxford: Oxford University Press. — Updates Peyraube (1996) on 被 grammaticalization continuum referenced in §2.5.
 - Peyraube, A. (1996). "Recent Issues in Chinese Historical Syntax." In C.-T.J. Huang & Y.-H.A. Li (Eds.), *New Horizons in Chinese Linguistics* (pp. 161–213). Dordrecht: Kluwer.
 
 ### General Linguistics / Typology
 
 - Chomsky, N. (1981). *Lectures on Government and Binding*. Dordrecht: Foris. — Referenced for ECM and X-bar comparison in §2.5.
+- Huang, C.-T.J. (2015). "On Syntactic Analyticity and Parametric Theory." In A. Li, A. Simpson & W.-T.D. Tsai (Eds.), *Chinese Syntax in a Cross-Linguistic Perspective* (pp. 1–48). Oxford: Oxford University Press. — Updates Huang (1984) with 30 years of refined parametric theory on pro-drop and analyticity; directly relevant to §2.3.
 - Huang, C.T.J. (1984). "On the Distribution and Reference of Empty Pronouns." *Linguistic Inquiry*, 15(4), 531–574.
+- Huang, C.-T.J., Li, Y.-H.A. & Simpson, A. (Eds.). (2014). *The Handbook of Chinese Linguistics*. Oxford: Wiley-Blackwell. — Broad survey of current Chinese linguistics; contextualizes the FLS within the field.
 - Li, C.N. & Thompson, S.A. (1976). "Subject and Topic: A New Typology of Language." In C.N. Li (Ed.), *Subject and Topic* (pp. 457–489). New York: Academic Press.
 - Rizzi, L. (1986). "Null Objects in Italian and the Theory of *pro*." *Linguistic Inquiry*, 17(3), 501–557. — Cross-linguistic null pronoun typology relevant to §2.3.
 - Tsao, F.-F. (1990). *Sentence and Clause Structure in Chinese: A Functional Perspective*. Taipei: Student Book Co.
