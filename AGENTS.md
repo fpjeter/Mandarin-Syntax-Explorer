@@ -30,7 +30,7 @@ git push                # Orchestrator only — specialists do NOT run git comma
 
 | Priority | Owner | Task |
 |---|---|---|
-| 🎉 DONE | All | The queue is completely empty! |
+| 🔵 FUTURE | Linguistics Specialist | Audit theoretical pieces (FLS framework, pedagogical explanations) and add proper linguistic citations/credit |
 
 Full audit findings: `docs/audits/audit_results_2026-04-27.md`
 Queued future audits: `docs/audits/queued_audits.md`
