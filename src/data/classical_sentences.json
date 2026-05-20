@@ -5422,7 +5422,7 @@
   {
     "id": "cc44",
     "category": "Classical Passive (為…所…)",
-    "source": "Mencius",
+    "source": "《孟子·滕文公上》",
     "author": "Mencius",
     "chinese": "勞力者治於人。",
     "pinyin": "Láo lì zhě zhì yú rén.",
@@ -5529,7 +5529,7 @@
   {
     "id": "cc45",
     "category": "Classical Passive (為…所…)",
-    "source": "Mencius",
+    "source": "《孟子·盡心下》",
     "author": "Mencius",
     "chinese": "盆成括見殺。",
     "pinyin": "Pénchéng Guā jiàn shā.",
@@ -5600,7 +5600,7 @@
   {
     "id": "cc46",
     "category": "Classical Passive (為…所…)",
-    "source": "Zhuangzi",
+    "source": "《莊子·秋水》",
     "author": "Zhuangzi",
     "chinese": "吾常見笑於大方之家。",
     "pinyin": "Wú cháng jiàn xiào yú dà fāng zhī jiā.",
@@ -5738,7 +5738,7 @@
   {
     "id": "cc47",
     "category": "Classical Causatives (使/令)",
-    "source": "Mencius",
+    "source": "《孟子·告子下》",
     "author": "Mencius",
     "chinese": "必先苦其心志，勞其筋骨。",
     "pinyin": "Bì xiān kǔ qí xīn zhì, láo qí jīn gǔ.",
@@ -5879,8 +5879,8 @@
   {
     "id": "cc48",
     "category": "Classical Causatives (使/令)",
-    "source": "Zhan Guo Ce",
-    "author": "Zhan Guo Ce",
+    "source": "《戰國策·楚策一》",
+    "author": "Liu Xiang",
     "chinese": "天帝使我長百獸。",
     "pinyin": "Tiān dì shǐ wǒ zhǎng bǎi shòu.",
     "translation": "The Emperor of Heaven made me rule over all beasts.",
@@ -5992,8 +5992,8 @@
   {
     "id": "cc49",
     "category": "Object Fronting (賓語前置)",
-    "source": "Analects",
-    "author": "Analects",
+    "source": "《論語·子罕》",
+    "author": "Confucius",
     "chinese": "吾誰欺？欺天乎？",
     "pinyin": "Wú shéi qī? Qī tiān hū?",
     "translation": "Whom do I deceive? Do I deceive Heaven?",
@@ -6114,8 +6114,8 @@
   {
     "id": "cc50",
     "category": "Object Fronting (賓語前置)",
-    "source": "Analects",
-    "author": "Analects",
+    "source": "《論語·子罕》",
+    "author": "Confucius",
     "chinese": "何陋之有？",
     "pinyin": "Hé lòu zhī yǒu?",
     "translation": "What crudeness is there?",
@@ -6200,7 +6200,7 @@
   {
     "id": "cc51",
     "category": "Topic-Comment (主題)",
-    "source": "Mencius",
+    "source": "《孟子·告子上》",
     "author": "Mencius",
     "chinese": "魚，我所欲也。",
     "pinyin": "Yú, wǒ suǒ yù yě.",
@@ -6302,7 +6302,7 @@
   {
     "id": "cc52",
     "category": "Topic-Comment (主題)",
-    "source": "Laozi",
+    "source": "《道德經·第三十一章》",
     "author": "Laozi",
     "chinese": "兵者，不祥之器。",
     "pinyin": "Bīng zhě, bù xiáng zhī qì.",
