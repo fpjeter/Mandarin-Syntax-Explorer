@@ -106,9 +106,12 @@ The FLS framework draws on the following foundational works:
 - Chao, Y.R. (1968). *A Grammar of Spoken Chinese*. Berkeley: University of California Press.
 - Chomsky, N. (1981). *Lectures on Government and Binding*. Dordrecht: Foris. — Referenced for ECM/X-bar comparison.
 - Huang, C.T.J. (1984). "On the Distribution and Reference of Empty Pronouns." *Linguistic Inquiry*, 15(4), 531–574.
+- Huang, Chu-Ren & Dingxu Shi (Eds.). (2016). *A Reference Grammar of Chinese*. Cambridge: Cambridge University Press.
+- Huang, C.-T.J., Li, Y.-H.A. & Simpson, A. (Eds.). (2014). *The Handbook of Chinese Linguistics*. Oxford: Wiley-Blackwell.
 - Li, C.N. & Thompson, S.A. (1976). "Subject and Topic: A New Typology of Language." In C.N. Li (Ed.), *Subject and Topic* (pp. 457–489). New York: Academic Press.
 - Li, C.N. & Thompson, S.A. (1981). *Mandarin Chinese: A Functional Reference Grammar*. Berkeley: University of California Press.
 - Lü Shuxiang 吕叔湘 (1980/1999). *现代汉语八百词* [800 Words of Modern Chinese]. Beijing: Commercial Press.
+- Paul, W. (2015). *New Perspectives on Chinese Syntax*. Berlin: De Gruyter Mouton.
 - Zhu Dexi 朱德熙 (1982). *语法讲义* [Lectures on Grammar]. Beijing: Commercial Press.
 
 See [BIBLIOGRAPHY.md](BIBLIOGRAPHY.md) for the full consolidated reference list.
