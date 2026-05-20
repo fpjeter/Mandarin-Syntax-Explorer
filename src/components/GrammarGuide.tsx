@@ -275,6 +275,64 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
 
                 {/* ── Linguistic footnote (collapsible) ── */}
                 <LinguisticFootnote />
+
+                {/* ── References & Further Reading ── */}
+                <section className="border-t border-slate-700/40 pt-4 mt-1">
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2">
+                        {isZh ? '参考文献与延伸阅读' : 'References & Further Reading'}
+                    </h3>
+                    <ul className="space-y-2 text-[10px] text-slate-400 leading-relaxed">
+                        <li>
+                            <span className="text-slate-300 font-semibold">Li, C.N. &amp; Thompson, S.A. (1976).</span>{' '}
+                            "Subject and Topic: A New Typology of Language." In <em>Subject and Topic</em>, Academic Press.{' '}
+                            <span className="text-slate-500">
+                                {isZh ? '— 首次将汉语归类为话题突出型语言的里程碑式类型学研究。' : '— The landmark typological study that first classified Mandarin as a topic-prominent language.'}
+                            </span>
+                        </li>
+                        <li>
+                            <span className="text-slate-300 font-semibold">Li, C.N. &amp; Thompson, S.A. (1981).</span>{' '}
+                            <em>Mandarin Chinese: A Functional Reference Grammar</em>. UC Press.{' '}
+                            <span className="text-slate-500">
+                                {isZh ? '— 现代汉语功能语法的权威参考，涵盖话题—评论结构、兼语句和补语体系。' : '— The authoritative functional grammar of modern Mandarin, covering topic-comment structure, pivotal constructions, and the complement system.'}
+                            </span>
+                        </li>
+                        <li>
+                            <span className="text-slate-300 font-semibold">Chao, Y.R. (1968).</span>{' '}
+                            <em>A Grammar of Spoken Chinese</em>. Berkeley: University of California Press.{' '}
+                            <span className="text-slate-500">
+                                {isZh ? '— 赵元任对口语汉语语法的开创性描写，至今仍是语法分类的重要基础。' : '— Chao Yuen Ren\'s pioneering description of spoken Chinese grammar, still a foundation for grammatical categories.'}
+                            </span>
+                        </li>
+                        <li>
+                            <span className="text-slate-300 font-semibold">Huang, C.T.J. (1984).</span>{' '}
+                            "On the Distribution and Reference of Empty Pronouns." <em>Linguistic Inquiry</em>, 15(4).{' '}
+                            <span className="text-slate-500">
+                                {isZh ? '— 对汉语代词省略（pro-drop）现象的形式化分析，为本应用的"幽灵节点"提供了理论基础。' : '— A formal analysis of Mandarin pro-drop, the theoretical basis for the "ghost nodes" in this app.'}
+                            </span>
+                        </li>
+                        <li>
+                            <span className="text-slate-300 font-semibold">Zhu Dexi 朱德熙 (1982).</span>{' '}
+                            <em>语法讲义</em> [Lectures on Grammar]. Commercial Press.{' '}
+                            <span className="text-slate-500">
+                                {isZh ? '— 朱德熙先生关于汉语语法结构的经典讲义，本应用的词类和短语结构分析参考了这部著作。' : '— Zhu Dexi\'s classic lectures on Chinese grammatical structure, a key reference for the word-class and phrase-structure analyses used in this app.'}
+                            </span>
+                        </li>
+                        <li>
+                            <span className="text-slate-300 font-semibold">Lü Shuxiang 吕叔湘 (1979/1999).</span>{' '}
+                            <em>现代汉语八百词</em> [800 Words of Modern Chinese]. Commercial Press.{' '}
+                            <span className="text-slate-500">
+                                {isZh ? '— 现代汉语虚词和常用词的权威用法辞典。' : '— The definitive usage dictionary for modern Chinese function words and high-frequency vocabulary.'}
+                            </span>
+                        </li>
+                        <li>
+                            <span className="text-slate-300 font-semibold">Liu Yuehua et al. (2001).</span>{' '}
+                            <em>实用现代汉语语法</em> [Practical Modern Chinese Grammar]. Commercial Press.{' '}
+                            <span className="text-slate-500">
+                                {isZh ? '— 全面的现代汉语语法参考，特别适合教学使用。' : '— A comprehensive modern Chinese grammar reference, especially useful for teaching.'}
+                            </span>
+                        </li>
+                    </ul>
+                </section>
             </div>
         );
     }

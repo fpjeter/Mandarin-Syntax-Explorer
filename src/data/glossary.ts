@@ -1,3 +1,22 @@
+/**
+ * Modern Grammar Glossary — Role Definitions
+ *
+ * The terminology and role classifications in this glossary draw from:
+ *
+ * - Chao, Y.R. (1968). A Grammar of Spoken Chinese. UC Press.
+ * - Li, C.N. & Thompson, S.A. (1976). "Subject and Topic: A New Typology
+ *   of Language." In Subject and Topic, Academic Press.
+ * - Li, C.N. & Thompson, S.A. (1981). Mandarin Chinese: A Functional
+ *   Reference Grammar. UC Press.
+ * - Huang, C.T.J. (1984). "On the Distribution and Reference of Empty
+ *   Pronouns." Linguistic Inquiry, 15(4).
+ * - Zhu Dexi 朱德熙 (1982). 语法讲义 [Lectures on Grammar]. Commercial Press.
+ * - Lü Shuxiang 吕叔湘 (1979/1999). 现代汉语八百词 [800 Words of Modern
+ *   Chinese]. Commercial Press.
+ * - Liu Yuehua et al. (2001). 实用现代汉语语法 [Practical Modern Chinese
+ *   Grammar]. Commercial Press.
+ */
+
 import type { GrammarRole } from '../types/grammar';
 import type { GlossaryEntry } from '../i18n/strings';
 

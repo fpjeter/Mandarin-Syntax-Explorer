@@ -1,3 +1,17 @@
+/**
+ * Classical Chinese Grammar Glossary — Role Definitions
+ *
+ * The terminology and role classifications in this glossary draw from:
+ *
+ * - Wang Li 王力 (1962–1964). 古代汉语 [Ancient Chinese]. Zhonghua Book Company.
+ * - Pulleyblank, E.G. (1995). Outline of Classical Chinese Grammar. UBC Press.
+ * - Peyraube, A. (1996). "Recent Issues in Chinese Historical Syntax."
+ *   In New Horizons in Chinese Linguistics, Kluwer.
+ * - Ma Jianzhong 马建忠 (1898). 马氏文通 [Ma's Grammar].
+ * - Li, C.N. & Thompson, S.A. (1976). "Subject and Topic: A New Typology
+ *   of Language." In Subject and Topic, Academic Press.
+ */
+
 import type { GrammarRole } from '../types/grammar';
 import type { GlossaryEntry } from '../i18n/strings';
 

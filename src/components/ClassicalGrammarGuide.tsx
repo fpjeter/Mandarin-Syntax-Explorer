@@ -482,6 +482,50 @@ export const ClassicalGrammarGuide: React.FC = () => {
                     )}
                 </ul>
             </section>
+
+            {/* ── References & Further Reading ── */}
+            <section className="border-t border-stone-700/40 pt-4 mt-1">
+                <h3 className="text-[10px] font-bold uppercase tracking-widest text-stone-500 mb-2">
+                    {isZh ? '参考文献与延伸阅读' : 'References & Further Reading'}
+                </h3>
+                <ul className="space-y-2 text-[10px] text-slate-400 leading-relaxed">
+                    <li>
+                        <span className="text-slate-300 font-semibold">Wang Li 王力 (1962–1964).</span>{' '}
+                        <em>古代汉语</em> [Ancient Chinese]. Zhonghua Book Company.{' '}
+                        <span className="text-slate-500">
+                            {isZh ? '— 古代汉语语法与词汇的权威教材，至今仍是文言文研究的基石。' : '— The authoritative textbook on classical Chinese grammar and vocabulary, still the cornerstone of literary Chinese studies.'}
+                        </span>
+                    </li>
+                    <li>
+                        <span className="text-slate-300 font-semibold">Pulleyblank, E.G. (1995).</span>{' '}
+                        <em>Outline of Classical Chinese Grammar</em>. UBC Press.{' '}
+                        <span className="text-slate-500">
+                            {isZh ? '— 面向英语读者的古汉语语法系统概述，涵盖虚词、句法和词类活用。' : '— A systematic overview of classical Chinese grammar for English-speaking readers, covering function words, syntax, and word-class flexibility.'}
+                        </span>
+                    </li>
+                    <li>
+                        <span className="text-slate-300 font-semibold">Peyraube, A. (1996).</span>{' '}
+                        "Recent Issues in Chinese Historical Syntax." In <em>New Horizons in Chinese Linguistics</em>, Kluwer.{' '}
+                        <span className="text-slate-500">
+                            {isZh ? '— 探讨汉语句法从古代到现代演变的重要学术综述。' : '— An important scholarly survey of how Chinese syntax evolved from ancient to modern forms.'}
+                        </span>
+                    </li>
+                    <li>
+                        <span className="text-slate-300 font-semibold">Ma Jianzhong 马建忠 (1898).</span>{' '}
+                        <em>马氏文通</em> [Ma's Grammar].{' '}
+                        <span className="text-slate-500">
+                            {isZh ? '— 中国第一部系统化的汉语语法著作，将西方语法框架应用于文言文分析。' : '— The first systematic Chinese grammar, applying Western grammatical frameworks to classical Chinese analysis.'}
+                        </span>
+                    </li>
+                    <li>
+                        <span className="text-slate-300 font-semibold">Li, C.N. &amp; Thompson, S.A. (1976).</span>{' '}
+                        "Subject and Topic: A New Typology of Language." In <em>Subject and Topic</em>, Academic Press.{' '}
+                        <span className="text-slate-500">
+                            {isZh ? '— 提出话题突出型语言分类的里程碑论文，其话题—评论框架同样适用于文言文分析。' : '— The landmark paper proposing topic-prominent language typology, whose Topic-Comment framework applies equally to classical Chinese.'}
+                        </span>
+                    </li>
+                </ul>
+            </section>
         </div>
     );
 };
