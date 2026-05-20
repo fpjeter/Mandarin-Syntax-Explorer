@@ -22,9 +22,12 @@ export const SENTENCE_CATEGORIES = [
     'Separable Verbs (离合词)',
     'Double Topic (双主题)',
     'Conditional Sentences (如果…就…)',
-    'Rhetorical Questions (反问句)',
+    'Emphatic & Rhetorical (强调与反问)',
     'Even (连…都/也)',
     'Discourse Context (跨句语境)',
+    'Existential / Locative (存现句)',
+    'Patient-Topic (受事话题)',
+    'Verb-Copying (动词拷贝)',
 ] as const;
 
 export type SentenceCategory = (typeof SENTENCE_CATEGORIES)[number];
@@ -98,9 +101,9 @@ export const CATEGORY_DESCRIPTIONS: Record<SentenceCategory, BilingualString> = 
         en: 'Set up "if...then" reasoning with patterns like 如果…就…, 只要…就…, or 要是…就…',
         zh: '用"如果……就……""只要……就……"等句式建立条件关系。',
     },
-    'Rhetorical Questions (反问句)': {
-        en: 'Use 难道 or 非…不可 to make a strong point rather than ask for information.',
-        zh: '用"难道"或"非……不可"来强调观点，而非真正提问。',
+    'Emphatic & Rhetorical (强调与反问)': {
+        en: 'Use 难道, 非…不可, or other emphatic patterns to make a strong point or express something as inevitable.',
+        zh: '用"难道"、"非……不可"或其他强调句式来表达强烈观点，或说明某事不可避免。',
     },
     'Even (连…都/也)': {
         en: 'Use 连…都 or 连…也 to express "even X" for emphasis, surprise, or disappointment.',
@@ -109,6 +112,18 @@ export const CATEGORY_DESCRIPTIONS: Record<SentenceCategory, BilingualString> = 
     'Discourse Context (跨句语境)': {
         en: 'When context from a previous sentence lets Mandarin leave out the subject entirely.',
         zh: '当前句的语境让中文可以完全省略主语时的情况。',
+    },
+    'Existential / Locative (存现句)': {
+        en: 'Describe what exists, appears, or disappears at a specific location by putting the place first, followed by the verb and the item.',
+        zh: '通过把地点放在最前，接着是动词和物品，来描述在某个特定地点存在、出现或消失的事物。',
+    },
+    'Patient-Topic (受事话题)': {
+        en: 'Emphasize the receiver of an action by moving it to the very front of the sentence, shifting the focus to what happened to it.',
+        zh: '通过把动作的承受者移到句子最前面来强调它，将焦点转移到它发生了什么事。',
+    },
+    'Verb-Copying (动词拷贝)': {
+        en: 'Repeat the verb when it has both an object and a duration or degree. The first verb takes the object, the second takes the complement.',
+        zh: '当动词同时带有宾语和时长或程度补语时，需要重复该动词。第一个动词带宾语，第二个带补语。',
     },
 };
 
@@ -184,9 +199,9 @@ export const FULL_CATEGORY_EXPLANATIONS: Record<SentenceCategory, BilingualStrin
         en: 'Conditional sentences set up an "if...then" relationship. The most common pattern is **如果…就…**, but you will also see **只要…就…** ("as long as...then...") and **要是…就…** (a more colloquial "if...then"). The condition clause acts as the Topic, and the result clause is the Comment.',
         zh: '条件句建立"如果……那么……"的关系。最常见的句式是**如果……就……**，你还会看到**只要……就……**（"只要……就……"）和**要是……就……**（更口语化的"如果……就……"）。条件分句充当话题，结果分句充当评论。',
     },
-    'Rhetorical Questions (反问句)': {
-        en: 'Rhetorical questions in Mandarin are not really questions; they are emphatic statements in disguise. **难道** ("could it really be that...") signals that the speaker expects the opposite of what the sentence literally says. **非…不可** ("must") uses double negation to express absolute necessity.',
-        zh: '中文的反问句并不是真正的提问，而是伪装成问题的强调性陈述。**难道**（"难道……"）表示说话人期待的答案与字面意思相反。**非……不可**（"非……不可"）用双重否定表达绝对必要性。',
+    'Emphatic & Rhetorical (强调与反问)': {
+        en: 'Some of the most emphatic sentences in Mandarin are not questions at all. **难道** ("could it really be that...") frames a rhetorical question where the speaker expects the opposite answer. **非…不可** uses double negation to express absolute necessity — "it must be done." Both patterns give a statement far more force than a plain assertion.',
+        zh: '中文最有力的强调句型中，有一些根本不是真正的疑问句。**难道**（"难道……"）以反问的形式表达说话人期待相反的答案。**非……不可**则用双重否定表达绝对的必要性——"非做不可"。这两种句式都让陈述比普通的肯定句有力得多。',
     },
     'Even (连…都/也)': {
         en: 'The **连…都** and **连…也** patterns express "even" by fronting the extreme or surprising item with 连, then reinforcing it with 都 or 也. "连小孩都知道" means "even children know." The implied logic: if even the extreme case is true, everything else certainly is too.',
@@ -195,5 +210,17 @@ export const FULL_CATEGORY_EXPLANATIONS: Record<SentenceCategory, BilingualStrin
     'Discourse Context (跨句语境)': {
         en: 'Mandarin is very comfortable leaving out information that the listener can infer from context. If the previous sentence already named the subject, the next sentence can drop it entirely. The tree visualization uses **Ghost Nodes** to show where these omitted words would go, and red arcs to trace what they refer back to.',
         zh: '中文非常习惯省略听话人能从上下文推知的信息。如果前一句已经说明了主语，下一句就可以完全省略。语法树用**幽灵节点**来标示这些被省略的词原本所在的位置，用红色弧线追溯它们指代的对象。',
+    },
+    'Existential / Locative (存现句)': {
+        en: 'When you want to talk about something existing, appearing, or disappearing at a location, Mandarin puts the location first. The place acts as the Topic to set the scene. Then comes the verb, and finally the object that exists or arrives there. "On the wall hangs a picture" (墙上挂着一幅画) is a classic example: you first establish the location, then reveal what is happening there.',
+        zh: '当你想谈论某地存在、出现或消失的事物时，中文会把地点放在最前面。地点充当话题来设定场景，接着是动词，最后是在那里存在或出现的事物。"墙上挂着一幅画"就是一个经典的例子：你先确立了位置，然后再揭示那里发生了什么。',
+    },
+    'Patient-Topic (受事话题)': {
+        en: 'Mandarin frequently takes the object of an action and moves it to the front of the sentence to make it the Topic. Instead of saying "I have eaten the apple," you say "The apple, I have eaten" (苹果我已经吃了). This instantly draws attention to the object and what happened to it. If a specific item is the main point of your message, move it to the front.',
+        zh: '中文经常把动作的承受者移到句子最前面，让它成为话题。与其说"我已经吃了苹果"，不如说"苹果我已经吃了"。这能立刻把注意力集中到这个物品以及它遭遇了什么。如果某个特定的东西是你讲述的重点，把它放到最前面准没错。',
+    },
+    'Verb-Copying (动词拷贝)': {
+        en: 'In Mandarin, a verb cannot easily carry both an object and a duration or degree complement at the same time. If you want to say "I studied Chinese for five years," you must copy the verb: "I studied Chinese, studied for five years" (学中文学了五年了). The first verb introduces the object, and the copied verb introduces the time or description. This verb-copying pattern is essential for talking about how long or how well you do something.',
+        zh: '在中文里，动词通常不能同时带宾语和时长或程度补语。如果你想表达"我学中文学了五年了"，不能像英文那样直接把词排在一起，而必须重复这个动词："学中文，学了五年"。第一个动词引出宾语，复制的第二个动词引出时间或描述。这种动词拷贝句在谈论做某事做了多久或做得多好时不可或缺。',
     },
 };

@@ -315,7 +315,7 @@
   },
   {
     "id": "s7",
-    "category": "Basic Topic–Comment (主题评论)",
+    "category": "Potential Complements (可能补语)",
     "chinese": "我看了半天，还是看不了，就不看了。",
     "pinyin": "Wǒ kàn le bàn tiān, hái shì kàn bù liǎo, jiù bù kàn le.",
     "translation": "I looked at it for a long time, still couldn't finish, so I gave up looking.",
@@ -478,7 +478,7 @@
   },
   {
     "id": "s15",
-    "category": "Basic Topic–Comment (主题评论)",
+    "category": "Existential / Locative (存现句)",
     "chinese": "那本书，放在桌子上了。",
     "pinyin": "Nà běn shū , fàng zài zhuō zi shàng le .",
     "translation": "That book, (it's been) put on the table.",
@@ -688,7 +688,7 @@
   },
   {
     "id": "s19",
-    "category": "Basic Topic–Comment (主题评论)",
+    "category": "Verb-Copying (动词拷贝)",
     "chinese": "他学中文学了五年了。",
     "pinyin": "Tā xué Zhōng wén xué le wǔ nián le.",
     "translation": "He has been studying Chinese for five years now.",
@@ -1304,7 +1304,7 @@
   },
   {
     "id": "s11",
-    "category": "Basic Topic–Comment (主题评论)",
+    "category": "Emphatic & Rhetorical (强调与反问)",
     "chinese": "这件事非你亲自去办不可。",
     "pinyin": "Zhè jiàn shì fēi nǐ qīn zì qù bàn bù kě.",
     "translation": "This matter absolutely must be handled by you yourself; there is no way around it.",
@@ -1435,7 +1435,7 @@
   },
   {
     "id": "s57",
-    "category": "Basic Topic–Comment (主题评论)",
+    "category": "Emphatic & Rhetorical (强调与反问)",
     "chinese": "这件事非解决不可。",
     "pinyin": "Zhè jiàn shì fēi jiě jué bù kě.",
     "translation": "This matter absolutely must be resolved.",
@@ -1517,7 +1517,7 @@
   },
   {
     "id": "s124",
-    "category": "Basic Topic–Comment (主题评论)",
+    "category": "Patient-Topic (受事话题)",
     "chinese": "苹果我已经吃了。",
     "pinyin": "Píng guǒ wǒ yǐ jīng chī le.",
     "translation": "The apple, I've already eaten it.",
@@ -1593,7 +1593,7 @@
   },
   {
     "id": "s125",
-    "category": "Basic Topic–Comment (主题评论)",
+    "category": "Existential / Locative (存现句)",
     "chinese": "墙上挂着一幅画。",
     "pinyin": "Qiáng shàng guà zhe yī fú huà.",
     "translation": "On the wall hangs a painting.",
