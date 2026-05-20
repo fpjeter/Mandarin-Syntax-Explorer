@@ -30,7 +30,7 @@ git push                # Orchestrator only — specialists do NOT run git comma
 
 | Priority | Owner | Task |
 |---|---|---|
-| 🟢 LOW | All | Phase C classical expansion — 4 thin categories: Classical Passive (1), Causatives (2), Object Fronting (2), Topic-Comment (2) |
+| 🎉 DONE | All | The queue is completely empty! |
 
 Full audit findings: `docs/audits/audit_results_2026-04-27.md`
 Queued future audits: `docs/audits/queued_audits.md`
