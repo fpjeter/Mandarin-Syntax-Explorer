@@ -4159,6 +4159,7 @@
     },
     "author": "Anonymous (Warring States period)",
     "relatedIds": [
+      "cc48",
       "cc43"
     ]
   },
@@ -4423,6 +4424,7 @@
     },
     "author": "Zhuangzi",
     "relatedIds": [
+      "cc50",
       "cc36"
     ]
   },
@@ -4547,7 +4549,8 @@
     },
     "author": "Sima Qian",
     "relatedIds": [
-      "cc35"
+      "cc35",
+      "cc49"
     ]
   },
   {
@@ -4941,6 +4944,7 @@
     },
     "author": "Mencius",
     "relatedIds": [
+      "cc52",
       "cc40"
     ]
   },
@@ -5041,7 +5045,8 @@
     },
     "author": "Anonymous (folk poetry)",
     "relatedIds": [
-      "cc39"
+      "cc39",
+      "cc51"
     ]
   },
   {
@@ -5131,7 +5136,10 @@
       ]
     },
     "author": "Sima Qian",
-    "relatedIds": []
+    "relatedIds": [
+      "cc46",
+      "cc44"
+    ]
   },
   {
     "id": "cc42",
@@ -5407,7 +5415,8 @@
     },
     "author": "Ouyang Xiu",
     "relatedIds": [
-      "cc33"
+      "cc33",
+      "cc47"
     ]
   },
   {
@@ -5512,7 +5521,10 @@
         }
       ]
     },
-    "relatedIds": []
+    "relatedIds": [
+      "cc41",
+      "cc45"
+    ]
   },
   {
     "id": "cc45",
@@ -5580,7 +5592,10 @@
         }
       ]
     },
-    "relatedIds": []
+    "relatedIds": [
+      "cc44",
+      "cc46"
+    ]
   },
   {
     "id": "cc46",
@@ -5715,7 +5730,10 @@
         }
       ]
     },
-    "relatedIds": []
+    "relatedIds": [
+      "cc45",
+      "cc41"
+    ]
   },
   {
     "id": "cc47",
@@ -5853,7 +5871,10 @@
         }
       ]
     },
-    "relatedIds": []
+    "relatedIds": [
+      "cc43",
+      "cc48"
+    ]
   },
   {
     "id": "cc48",
@@ -5963,7 +5984,10 @@
         }
       ]
     },
-    "relatedIds": []
+    "relatedIds": [
+      "cc47",
+      "cc33"
+    ]
   },
   {
     "id": "cc49",
@@ -6082,7 +6106,10 @@
         }
       ]
     },
-    "relatedIds": []
+    "relatedIds": [
+      "cc36",
+      "cc50"
+    ]
   },
   {
     "id": "cc50",
@@ -6165,7 +6192,10 @@
         }
       ]
     },
-    "relatedIds": []
+    "relatedIds": [
+      "cc49",
+      "cc35"
+    ]
   },
   {
     "id": "cc51",
@@ -6264,7 +6294,10 @@
         }
       ]
     },
-    "relatedIds": []
+    "relatedIds": [
+      "cc40",
+      "cc52"
+    ]
   },
   {
     "id": "cc52",
@@ -6378,6 +6411,9 @@
         }
       ]
     },
-    "relatedIds": []
+    "relatedIds": [
+      "cc51",
+      "cc39"
+    ]
   }
 ]
