@@ -331,6 +331,48 @@ export const GrammarGuide: React.FC<GrammarGuideProps> = ({ tab, selectedSentenc
                                 {isZh ? '— 全面的现代汉语语法参考，特别适合教学使用。' : '— A comprehensive modern Chinese grammar reference, especially useful for teaching.'}
                             </span>
                         </li>
+                        <li>
+                            <span className="text-slate-300 font-semibold">Paul, W. (2015).</span>{' '}
+                            <em>New Perspectives on Chinese Syntax</em>. De Gruyter Mouton.{' '}
+                            <span className="text-slate-500">
+                                {isZh ? '— 对汉语话题和焦点位置的现代生成语法分析。' : '— Modern generative analysis of topic/focus positions in Chinese.'}
+                            </span>
+                        </li>
+                        <li>
+                            <span className="text-slate-300 font-semibold">Paul, W. &amp; Whitman, J. (2017).</span>{' '}
+                            "Topic Prominence." <em>Blackwell Companion to Syntax</em>, 2nd ed.{' '}
+                            <span className="text-slate-500">
+                                {isZh ? '— 跨语言视角下话题突出性的权威最新综述。' : '— Definitive recent survey of topic prominence cross-linguistically.'}
+                            </span>
+                        </li>
+                        <li>
+                            <span className="text-slate-300 font-semibold">Huang, C.-T.J. (2015).</span>{' '}
+                            "On Syntactic Analyticity and Parametric Theory." In <em>Chinese Syntax in a Cross-Linguistic Perspective</em>. OUP.{' '}
+                            <span className="text-slate-500">
+                                {isZh ? '— 将代词省略重新定位为更大的分析性宏参数的一部分。' : '— Reframes pro-drop as part of a larger analyticity macro-parameter.'}
+                            </span>
+                        </li>
+                        <li>
+                            <span className="text-slate-300 font-semibold">Huang, Chu-Ren &amp; Shi, Dingxu (Eds.). (2016).</span>{' '}
+                            <em>A Reference Grammar of Chinese</em>. Cambridge University Press.{' '}
+                            <span className="text-slate-500">
+                                {isZh ? '— 最全面的现代汉语参考语法。' : '— The most comprehensive modern reference grammar.'}
+                            </span>
+                        </li>
+                        <li>
+                            <span className="text-slate-300 font-semibold">Fisac, T. &amp; Moratto, R. (2024).</span>{' '}
+                            <em>Fundamental Structures of the Chinese Language: Topic-Comment and Other Key Structures</em>. Routledge.{' '}
+                            <span className="text-slate-500">
+                                {isZh ? '— 以话题—评论框架编写的教学语法。' : '— Pedagogical grammar using topic-comment framework.'}
+                            </span>
+                        </li>
+                        <li>
+                            <span className="text-slate-300 font-semibold">Huang, C.-T.J., Li, Y.-H.A. &amp; Simpson, A. (Eds.). (2014).</span>{' '}
+                            <em>The Handbook of Chinese Linguistics</em>. Wiley-Blackwell.{' '}
+                            <span className="text-slate-500">
+                                {isZh ? '— 权威的25章汉语语言学手册。' : '— Authoritative 25-chapter handbook.'}
+                            </span>
+                        </li>
                     </ul>
                 </section>
             </div>

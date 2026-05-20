@@ -524,6 +524,34 @@ export const ClassicalGrammarGuide: React.FC = () => {
                             {isZh ? '— 提出话题突出型语言分类的里程碑论文，其话题—评论框架同样适用于文言文分析。' : '— The landmark paper proposing topic-prominent language typology, whose Topic-Comment framework applies equally to classical Chinese.'}
                         </span>
                     </li>
+                    <li>
+                        <span className="text-slate-300 font-semibold">Meisterernst, B. (Ed.). (2016).</span>{' '}
+                        <em>New Aspects of Classical Chinese Grammar</em>. Harrassowitz.{' '}
+                        <span className="text-slate-500">
+                            {isZh ? '— 关于古汉语句法最重要的近年论文集。' : '— Most important recent volume on classical Chinese syntax.'}
+                        </span>
+                    </li>
+                    <li>
+                        <span className="text-slate-300 font-semibold">Aldridge, E. (2013).</span>{' '}
+                        "Survey of Chinese Historical Syntax." <em>Language and Linguistics Compass</em> 7(1).{' '}
+                        <span className="text-slate-500">
+                            {isZh ? '— 运用现代生成语法方法研究上古汉语句法的综述。' : '— Modern generative approaches to archaic Chinese syntax.'}
+                        </span>
+                    </li>
+                    <li>
+                        <span className="text-slate-300 font-semibold">Bisang, W. (2020).</span>{' '}
+                        "Grammaticalization in Chinese." In <em>A Typological Approach to Grammaticalization and Lexicalization</em>. De Gruyter.{' '}
+                        <span className="text-slate-500">
+                            {isZh ? '— 从跨语言类型学视角探讨汉语语法化。' : '— Cross-linguistic perspective on Chinese grammaticalization.'}
+                        </span>
+                    </li>
+                    <li>
+                        <span className="text-slate-300 font-semibold">Huang, C.-T.J., Li, Y.-H.A. &amp; Simpson, A. (Eds.). (2014).</span>{' '}
+                        <em>The Handbook of Chinese Linguistics</em>. Wiley-Blackwell.{' '}
+                        <span className="text-slate-500">
+                            {isZh ? '— 包含历史句法章节的权威汉语语言学手册。' : '— Authoritative handbook with historical syntax chapters.'}
+                        </span>
+                    </li>
                 </ul>
             </section>
         </div>
