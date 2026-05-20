@@ -5409,5 +5409,975 @@
     "relatedIds": [
       "cc33"
     ]
+  },
+  {
+    "id": "cc44",
+    "category": "Classical Passive (為…所…)",
+    "source": "[PENDING PUBLISHER]",
+    "author": "[PENDING PUBLISHER]",
+    "chinese": "勞力者治於人。",
+    "pinyin": "Láo lì zhě zhì yú rén.",
+    "translation": "[PENDING PUBLISHER]",
+    "explanation": {
+      "en": "[PENDING PUBLISHER]",
+      "zh": "[PENDING PUBLISHER]"
+    },
+    "tree": {
+      "id": "cc44-root",
+      "role": "Sentence",
+      "children": [
+        {
+          "id": "cc44-topic",
+          "role": "Topic",
+          "children": [
+            {
+              "id": "cc44-t-subj",
+              "role": "Subject",
+              "subRole": "者-nominalization",
+              "semanticRole": "Patient",
+              "children": [
+                {
+                  "id": "cc44-t-v",
+                  "role": "Head Verb",
+                  "text": {
+                    "hanzi": "勞",
+                    "pinyin": "láo",
+                    "translation": "labor"
+                  }
+                },
+                {
+                  "id": "cc44-t-obj",
+                  "role": "Object",
+                  "text": {
+                    "hanzi": "力",
+                    "pinyin": "lì",
+                    "translation": "strength"
+                  }
+                },
+                {
+                  "id": "cc44-t-zhe",
+                  "role": "Particle",
+                  "subRole": "nominalizer",
+                  "text": {
+                    "hanzi": "者",
+                    "pinyin": "zhě",
+                    "translation": "(the ones who)"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cc44-comment",
+          "role": "Comment",
+          "children": [
+            {
+              "id": "cc44-c-v",
+              "role": "Head Verb",
+              "subRole": "passive marker",
+              "text": {
+                "hanzi": "治",
+                "pinyin": "zhì",
+                "translation": "are governed"
+              }
+            },
+            {
+              "id": "cc44-c-comp",
+              "role": "Complement",
+              "subRole": "於-phrase (source/cause)",
+              "children": [
+                {
+                  "id": "cc44-c-prep",
+                  "role": "Preposition",
+                  "text": {
+                    "hanzi": "於",
+                    "pinyin": "yú",
+                    "translation": "by"
+                  }
+                },
+                {
+                  "id": "cc44-c-n",
+                  "role": "Head Noun",
+                  "text": {
+                    "hanzi": "人",
+                    "pinyin": "rén",
+                    "translation": "others"
+                  },
+                  "semanticRole": "Agent"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "relatedIds": []
+  },
+  {
+    "id": "cc45",
+    "category": "Classical Passive (為…所…)",
+    "source": "[PENDING PUBLISHER]",
+    "author": "[PENDING PUBLISHER]",
+    "chinese": "盆成括見殺。",
+    "pinyin": "Pénchéng Guā jiàn shā.",
+    "translation": "[PENDING PUBLISHER]",
+    "explanation": {
+      "en": "[PENDING PUBLISHER]",
+      "zh": "[PENDING PUBLISHER]"
+    },
+    "tree": {
+      "id": "cc45-root",
+      "role": "Sentence",
+      "children": [
+        {
+          "id": "cc45-topic",
+          "role": "Topic",
+          "children": [
+            {
+              "id": "cc45-t-n",
+              "role": "Head Noun",
+              "text": {
+                "hanzi": "盆成括",
+                "pinyin": "Pénchéng Guā",
+                "translation": "Pencheng Gua"
+              },
+              "semanticRole": "Patient"
+            }
+          ]
+        },
+        {
+          "id": "cc45-comment",
+          "role": "Comment",
+          "children": [
+            {
+              "id": "cc45-c-vp",
+              "role": "Verb Phrase",
+              "subRole": "passive verbal",
+              "children": [
+                {
+                  "id": "cc45-c-v1",
+                  "role": "Head Verb",
+                  "subRole": "passive marker",
+                  "text": {
+                    "hanzi": "見",
+                    "pinyin": "jiàn",
+                    "translation": "(passive marker)"
+                  }
+                },
+                {
+                  "id": "cc45-c-v2",
+                  "role": "Head Verb",
+                  "text": {
+                    "hanzi": "殺",
+                    "pinyin": "shā",
+                    "translation": "killed"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "relatedIds": []
+  },
+  {
+    "id": "cc46",
+    "category": "Classical Passive (為…所…)",
+    "source": "[PENDING PUBLISHER]",
+    "author": "[PENDING PUBLISHER]",
+    "chinese": "吾常見笑於大方之家。",
+    "pinyin": "Wú cháng jiàn xiào yú dà fāng zhī jiā.",
+    "translation": "[PENDING PUBLISHER]",
+    "explanation": {
+      "en": "[PENDING PUBLISHER]",
+      "zh": "[PENDING PUBLISHER]"
+    },
+    "tree": {
+      "id": "cc46-root",
+      "role": "Sentence",
+      "children": [
+        {
+          "id": "cc46-topic",
+          "role": "Topic",
+          "children": [
+            {
+              "id": "cc46-t-pro",
+              "role": "Pronoun",
+              "text": {
+                "hanzi": "吾",
+                "pinyin": "wú",
+                "translation": "I"
+              },
+              "semanticRole": "Patient"
+            }
+          ]
+        },
+        {
+          "id": "cc46-comment",
+          "role": "Comment",
+          "children": [
+            {
+              "id": "cc46-c-adv",
+              "role": "Adjunct",
+              "subRole": "frequency",
+              "text": {
+                "hanzi": "常",
+                "pinyin": "cháng",
+                "translation": "often"
+              }
+            },
+            {
+              "id": "cc46-c-vp",
+              "role": "Verb Phrase",
+              "subRole": "passive verbal",
+              "children": [
+                {
+                  "id": "cc46-c-v1",
+                  "role": "Head Verb",
+                  "subRole": "passive marker",
+                  "text": {
+                    "hanzi": "見",
+                    "pinyin": "jiàn",
+                    "translation": "(passive marker)"
+                  }
+                },
+                {
+                  "id": "cc46-c-v2",
+                  "role": "Head Verb",
+                  "text": {
+                    "hanzi": "笑",
+                    "pinyin": "xiào",
+                    "translation": "laughed at"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "cc46-c-comp",
+              "role": "Complement",
+              "subRole": "於-phrase (source/cause)",
+              "children": [
+                {
+                  "id": "cc46-c-prep",
+                  "role": "Preposition",
+                  "text": {
+                    "hanzi": "於",
+                    "pinyin": "yú",
+                    "translation": "by"
+                  }
+                },
+                {
+                  "id": "cc46-c-np",
+                  "role": "Noun Phrase",
+                  "children": [
+                    {
+                      "id": "cc46-c-attr",
+                      "role": "Attributive",
+                      "children": [
+                        {
+                          "id": "cc46-c-attr-n",
+                          "role": "Noun",
+                          "text": {
+                            "hanzi": "大方",
+                            "pinyin": "dà fāng",
+                            "translation": "great wisdom"
+                          }
+                        },
+                        {
+                          "id": "cc46-c-attr-zhi",
+                          "role": "Particle",
+                          "subRole": "genitive",
+                          "text": {
+                            "hanzi": "之",
+                            "pinyin": "zhī",
+                            "translation": "('s)"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "cc46-c-n",
+                      "role": "Head Noun",
+                      "text": {
+                        "hanzi": "家",
+                        "pinyin": "jiā",
+                        "translation": "experts"
+                      },
+                      "semanticRole": "Agent"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "relatedIds": []
+  },
+  {
+    "id": "cc47",
+    "category": "Classical Causatives (使/令)",
+    "source": "[PENDING PUBLISHER]",
+    "author": "[PENDING PUBLISHER]",
+    "chinese": "必先苦其心志，勞其筋骨。",
+    "pinyin": "Bì xiān kǔ qí xīn zhì, láo qí jīn gǔ.",
+    "translation": "[PENDING PUBLISHER]",
+    "explanation": {
+      "en": "[PENDING PUBLISHER]",
+      "zh": "[PENDING PUBLISHER]"
+    },
+    "tree": {
+      "id": "cc47-root",
+      "role": "Sentence",
+      "children": [
+        {
+          "id": "cc47-topic",
+          "role": "Topic",
+          "subRole": "pro-drop",
+          "isDropped": true,
+          "refersToId": null,
+          "impliedText": "天",
+          "semanticRole": "Causer"
+        },
+        {
+          "id": "cc47-comment",
+          "role": "Comment",
+          "subRole": "sequential clauses",
+          "children": [
+            {
+              "id": "cc47-c-adv1",
+              "role": "Adjunct",
+              "subRole": "certainty",
+              "text": {
+                "hanzi": "必",
+                "pinyin": "bì",
+                "translation": "must"
+              }
+            },
+            {
+              "id": "cc47-c-adv2",
+              "role": "Adjunct",
+              "subRole": "time",
+              "text": {
+                "hanzi": "先",
+                "pinyin": "xiān",
+                "translation": "first"
+              }
+            },
+            {
+              "id": "cc47-c-vp1",
+              "role": "Verb Phrase",
+              "children": [
+                {
+                  "id": "cc47-c-v1",
+                  "role": "Head Verb",
+                  "subRole": "causative intransitive",
+                  "text": {
+                    "hanzi": "苦",
+                    "pinyin": "kǔ",
+                    "translation": "make suffer"
+                  }
+                },
+                {
+                  "id": "cc47-c-obj1",
+                  "role": "Object",
+                  "children": [
+                    {
+                      "id": "cc47-c-attr1",
+                      "role": "Attributive",
+                      "text": {
+                        "hanzi": "其",
+                        "pinyin": "qí",
+                        "translation": "his"
+                      }
+                    },
+                    {
+                      "id": "cc47-c-n1",
+                      "role": "Head Noun",
+                      "text": {
+                        "hanzi": "心志",
+                        "pinyin": "xīn zhì",
+                        "translation": "mind and will"
+                      }
+                    }
+                  ],
+                  "semanticRole": "Experiencer"
+                }
+              ]
+            },
+            {
+              "id": "cc47-c-vp2",
+              "role": "Verb Phrase",
+              "children": [
+                {
+                  "id": "cc47-c-v2",
+                  "role": "Head Verb",
+                  "subRole": "causative intransitive",
+                  "text": {
+                    "hanzi": "勞",
+                    "pinyin": "láo",
+                    "translation": "make labor"
+                  }
+                },
+                {
+                  "id": "cc47-c-obj2",
+                  "role": "Object",
+                  "children": [
+                    {
+                      "id": "cc47-c-attr2",
+                      "role": "Attributive",
+                      "text": {
+                        "hanzi": "其",
+                        "pinyin": "qí",
+                        "translation": "his"
+                      }
+                    },
+                    {
+                      "id": "cc47-c-n2",
+                      "role": "Head Noun",
+                      "text": {
+                        "hanzi": "筋骨",
+                        "pinyin": "jīn gǔ",
+                        "translation": "muscles and bones"
+                      }
+                    }
+                  ],
+                  "semanticRole": "Experiencer"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "relatedIds": []
+  },
+  {
+    "id": "cc48",
+    "category": "Classical Causatives (使/令)",
+    "source": "[PENDING PUBLISHER]",
+    "author": "[PENDING PUBLISHER]",
+    "chinese": "天帝使我長百獸。",
+    "pinyin": "Tiān dì shǐ wǒ zhǎng bǎi shòu.",
+    "translation": "[PENDING PUBLISHER]",
+    "explanation": {
+      "en": "[PENDING PUBLISHER]",
+      "zh": "[PENDING PUBLISHER]"
+    },
+    "tree": {
+      "id": "cc48-root",
+      "role": "Sentence",
+      "children": [
+        {
+          "id": "cc48-topic",
+          "role": "Topic",
+          "children": [
+            {
+              "id": "cc48-t-n",
+              "role": "Head Noun",
+              "text": {
+                "hanzi": "天帝",
+                "pinyin": "Tiān dì",
+                "translation": "The Emperor of Heaven"
+              },
+              "semanticRole": "Causer"
+            }
+          ]
+        },
+        {
+          "id": "cc48-comment",
+          "role": "Comment",
+          "children": [
+            {
+              "id": "cc48-c-pred",
+              "role": "Predicate",
+              "subRole": "pivotal construction",
+              "children": [
+                {
+                  "id": "cc48-c-v1",
+                  "role": "Head Verb",
+                  "subRole": "causative",
+                  "text": {
+                    "hanzi": "使",
+                    "pinyin": "shǐ",
+                    "translation": "make / order"
+                  }
+                },
+                {
+                  "id": "cc48-c-pivot",
+                  "role": "Pivot",
+                  "subRole": "object of 使, subject of action",
+                  "text": {
+                    "hanzi": "我",
+                    "pinyin": "wǒ",
+                    "translation": "me"
+                  },
+                  "semanticRole": "Agent"
+                },
+                {
+                  "id": "cc48-c-vp",
+                  "role": "Verb Phrase",
+                  "children": [
+                    {
+                      "id": "cc48-c-v2",
+                      "role": "Head Verb",
+                      "text": {
+                        "hanzi": "長",
+                        "pinyin": "zhǎng",
+                        "translation": "rule over"
+                      }
+                    },
+                    {
+                      "id": "cc48-c-obj",
+                      "role": "Object",
+                      "children": [
+                        {
+                          "id": "cc48-c-attr",
+                          "role": "Attributive",
+                          "text": {
+                            "hanzi": "百",
+                            "pinyin": "bǎi",
+                            "translation": "a hundred (all)"
+                          }
+                        },
+                        {
+                          "id": "cc48-c-n2",
+                          "role": "Head Noun",
+                          "text": {
+                            "hanzi": "獸",
+                            "pinyin": "shòu",
+                            "translation": "beasts"
+                          }
+                        }
+                      ],
+                      "semanticRole": "Patient"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "relatedIds": []
+  },
+  {
+    "id": "cc49",
+    "category": "Object Fronting (賓語前置)",
+    "source": "[PENDING PUBLISHER]",
+    "author": "[PENDING PUBLISHER]",
+    "chinese": "吾誰欺？欺天乎？",
+    "pinyin": "Wú shéi qī? Qī tiān hū?",
+    "translation": "[PENDING PUBLISHER]",
+    "explanation": {
+      "en": "[PENDING PUBLISHER]",
+      "zh": "[PENDING PUBLISHER]"
+    },
+    "tree": {
+      "id": "cc49-root",
+      "role": "Sentence",
+      "children": [
+        {
+          "id": "cc49-parallel",
+          "role": "Parallel Sentence",
+          "children": [
+            {
+              "id": "cc49-c1",
+              "role": "Embedded Clause",
+              "children": [
+                {
+                  "id": "cc49-c1-subj",
+                  "role": "Subject",
+                  "text": {
+                    "hanzi": "吾",
+                    "pinyin": "wú",
+                    "translation": "I"
+                  },
+                  "semanticRole": "Agent"
+                },
+                {
+                  "id": "cc49-c1-pred",
+                  "role": "Predicate",
+                  "children": [
+                    {
+                      "id": "cc49-c1-obj",
+                      "role": "Object",
+                      "subRole": "fronted interrogative",
+                      "text": {
+                        "hanzi": "誰",
+                        "pinyin": "shéi",
+                        "translation": "whom"
+                      },
+                      "semanticRole": "Patient"
+                    },
+                    {
+                      "id": "cc49-c1-v",
+                      "role": "Head Verb",
+                      "text": {
+                        "hanzi": "欺",
+                        "pinyin": "qī",
+                        "translation": "deceive"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "cc49-c2",
+              "role": "Embedded Clause",
+              "subRole": "rhetorical question",
+              "children": [
+                {
+                  "id": "cc49-c2-subj",
+                  "role": "Subject",
+                  "subRole": "topic-chain",
+                  "isDropped": true,
+                  "refersToId": "cc49-c1-subj",
+                  "impliedText": "吾",
+                  "semanticRole": "Agent"
+                },
+                {
+                  "id": "cc49-c2-pred",
+                  "role": "Predicate",
+                  "children": [
+                    {
+                      "id": "cc49-c2-v",
+                      "role": "Head Verb",
+                      "text": {
+                        "hanzi": "欺",
+                        "pinyin": "qī",
+                        "translation": "deceive"
+                      }
+                    },
+                    {
+                      "id": "cc49-c2-obj",
+                      "role": "Object",
+                      "text": {
+                        "hanzi": "天",
+                        "pinyin": "tiān",
+                        "translation": "Heaven"
+                      },
+                      "semanticRole": "Patient"
+                    },
+                    {
+                      "id": "cc49-c2-hu",
+                      "role": "Particle",
+                      "subRole": "interrogative (rhetorical)",
+                      "text": {
+                        "hanzi": "乎",
+                        "pinyin": "hū",
+                        "translation": "(question particle)"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "relatedIds": []
+  },
+  {
+    "id": "cc50",
+    "category": "Object Fronting (賓語前置)",
+    "source": "[PENDING PUBLISHER]",
+    "author": "[PENDING PUBLISHER]",
+    "chinese": "何陋之有？",
+    "pinyin": "Hé lòu zhī yǒu?",
+    "translation": "[PENDING PUBLISHER]",
+    "explanation": {
+      "en": "[PENDING PUBLISHER]",
+      "zh": "[PENDING PUBLISHER]"
+    },
+    "tree": {
+      "id": "cc50-root",
+      "role": "Sentence",
+      "children": [
+        {
+          "id": "cc50-topic",
+          "role": "Topic",
+          "subRole": "pro-drop",
+          "isDropped": true,
+          "refersToId": null,
+          "impliedText": "此",
+          "semanticRole": "Theme"
+        },
+        {
+          "id": "cc50-comment",
+          "role": "Comment",
+          "subRole": "rhetorical question",
+          "children": [
+            {
+              "id": "cc50-c-obj",
+              "role": "Object",
+              "subRole": "fronted interrogative",
+              "children": [
+                {
+                  "id": "cc50-c-attr",
+                  "role": "Attributive",
+                  "subRole": "interrogative",
+                  "text": {
+                    "hanzi": "何",
+                    "pinyin": "hé",
+                    "translation": "what"
+                  }
+                },
+                {
+                  "id": "cc50-c-n",
+                  "role": "Head Noun",
+                  "text": {
+                    "hanzi": "陋",
+                    "pinyin": "lòu",
+                    "translation": "crudeness"
+                  }
+                },
+                {
+                  "id": "cc50-c-zhi",
+                  "role": "Particle",
+                  "subRole": "emphatic fronting",
+                  "text": {
+                    "hanzi": "之",
+                    "pinyin": "zhī",
+                    "translation": "(fronting marker)"
+                  }
+                }
+              ],
+              "semanticRole": "Theme"
+            },
+            {
+              "id": "cc50-c-v",
+              "role": "Head Verb",
+              "subRole": "existential",
+              "text": {
+                "hanzi": "有",
+                "pinyin": "yǒu",
+                "translation": "is there"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "relatedIds": []
+  },
+  {
+    "id": "cc51",
+    "category": "Topic-Comment (主題)",
+    "source": "[PENDING PUBLISHER]",
+    "author": "[PENDING PUBLISHER]",
+    "chinese": "魚，我所欲也。",
+    "pinyin": "Yú, wǒ suǒ yù yě.",
+    "translation": "[PENDING PUBLISHER]",
+    "explanation": {
+      "en": "[PENDING PUBLISHER]",
+      "zh": "[PENDING PUBLISHER]"
+    },
+    "tree": {
+      "id": "cc51-root",
+      "role": "Sentence",
+      "children": [
+        {
+          "id": "cc51-topic",
+          "role": "Topic",
+          "children": [
+            {
+              "id": "cc51-t-n",
+              "role": "Head Noun",
+              "text": {
+                "hanzi": "魚",
+                "pinyin": "yú",
+                "translation": "Fish"
+              },
+              "semanticRole": "Theme"
+            },
+            {
+              "id": "cc51-t-comma",
+              "role": "Particle",
+              "subRole": "topic pause",
+              "text": {
+                "hanzi": "，",
+                "pinyin": ",",
+                "translation": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "cc51-comment",
+          "role": "Comment",
+          "subRole": "identity statement",
+          "children": [
+            {
+              "id": "cc51-c-pred",
+              "role": "Predicate",
+              "subRole": "所-nominalization",
+              "children": [
+                {
+                  "id": "cc51-c-subj",
+                  "role": "Subject",
+                  "text": {
+                    "hanzi": "我",
+                    "pinyin": "wǒ",
+                    "translation": "I"
+                  },
+                  "semanticRole": "Experiencer"
+                },
+                {
+                  "id": "cc51-c-suo",
+                  "role": "Particle",
+                  "subRole": "nominalizer",
+                  "text": {
+                    "hanzi": "所",
+                    "pinyin": "suǒ",
+                    "translation": "that which"
+                  }
+                },
+                {
+                  "id": "cc51-c-v",
+                  "role": "Head Verb",
+                  "text": {
+                    "hanzi": "欲",
+                    "pinyin": "yù",
+                    "translation": "desire"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "cc51-c-ye",
+              "role": "Particle",
+              "subRole": "assertive",
+              "text": {
+                "hanzi": "也",
+                "pinyin": "yě",
+                "translation": "(assertion)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "relatedIds": []
+  },
+  {
+    "id": "cc52",
+    "category": "Topic-Comment (主題)",
+    "source": "[PENDING PUBLISHER]",
+    "author": "[PENDING PUBLISHER]",
+    "chinese": "兵者，不祥之器。",
+    "pinyin": "Bīng zhě, bù xiáng zhī qì.",
+    "translation": "[PENDING PUBLISHER]",
+    "explanation": {
+      "en": "[PENDING PUBLISHER]",
+      "zh": "[PENDING PUBLISHER]"
+    },
+    "tree": {
+      "id": "cc52-root",
+      "role": "Sentence",
+      "children": [
+        {
+          "id": "cc52-topic",
+          "role": "Topic",
+          "subRole": "definition topic",
+          "children": [
+            {
+              "id": "cc52-t-n",
+              "role": "Head Noun",
+              "text": {
+                "hanzi": "兵",
+                "pinyin": "bīng",
+                "translation": "Weapons"
+              },
+              "semanticRole": "Theme"
+            },
+            {
+              "id": "cc52-t-zhe",
+              "role": "Particle",
+              "subRole": "topic pause marker",
+              "text": {
+                "hanzi": "者",
+                "pinyin": "zhě",
+                "translation": "(as for)"
+              }
+            },
+            {
+              "id": "cc52-t-comma",
+              "role": "Particle",
+              "subRole": "topic pause",
+              "text": {
+                "hanzi": "，",
+                "pinyin": ",",
+                "translation": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "cc52-comment",
+          "role": "Comment",
+          "subRole": "identity statement",
+          "children": [
+            {
+              "id": "cc52-c-np",
+              "role": "Noun Phrase",
+              "children": [
+                {
+                  "id": "cc52-c-attr",
+                  "role": "Attributive",
+                  "children": [
+                    {
+                      "id": "cc52-c-attr-neg",
+                      "role": "Adjunct",
+                      "subRole": "negation",
+                      "text": {
+                        "hanzi": "不",
+                        "pinyin": "bù",
+                        "translation": "not"
+                      }
+                    },
+                    {
+                      "id": "cc52-c-attr-adj",
+                      "role": "Adjective",
+                      "text": {
+                        "hanzi": "祥",
+                        "pinyin": "xiáng",
+                        "translation": "auspicious"
+                      }
+                    },
+                    {
+                      "id": "cc52-c-attr-zhi",
+                      "role": "Particle",
+                      "subRole": "genitive",
+                      "text": {
+                        "hanzi": "之",
+                        "pinyin": "zhī",
+                        "translation": "('s)"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "cc52-c-n",
+                  "role": "Head Noun",
+                  "text": {
+                    "hanzi": "器",
+                    "pinyin": "qì",
+                    "translation": "instruments"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "relatedIds": []
   }
 ]
