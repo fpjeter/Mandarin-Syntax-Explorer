@@ -43,6 +43,15 @@
 **Dependency**: The Linguistics Specialist has produced `docs/audits/subrole_taxonomy_audit.md` identifying 13 inconsistency clusters across Head Verb, Adjunct, and Particle subRoles. 4 clusters are HIGH priority (learner-visible), 4 MEDIUM, 5 LOW.
 **Suggested Fix**: Dispatch the Data Linguist to apply fixes in priority order (HIGH first). Each cluster has specific node IDs and canonical labels listed in the audit doc.
 **Urgency**: MEDIUM
+### [2026-05-20] Linguistics Specialist → Orchestrator
+**Status**: 🟡 Pending
+**Task**: Add 3 contemporary references to README.md FLS References section
+**Dependency**: `README.md` is outside my permitted files. The `### References` block (lines 102–114) needs 3 new works added alphabetically:
+1. `- Huang, C.-T.J., Li, Y.-H.A. & Simpson, A. (Eds.). (2014). *The Handbook of Chinese Linguistics*. Oxford: Wiley-Blackwell.` — insert after Huang (1984)
+2. `- Huang, Chu-Ren & Dingxu Shi (Eds.). (2016). *A Reference Grammar of Chinese*. Cambridge: Cambridge University Press.` — insert after the Handbook entry
+3. `- Paul, W. (2015). *New Perspectives on Chinese Syntax*. Berlin: De Gruyter Mouton.` — insert after Lü (1980/1999)
+**Suggested Fix**: Orchestrator or another agent with README.md write access applies the 3-line insertion.
+**Urgency**: LOW
 <!-- INSERT NEW TICKETS ABOVE THIS LINE -->` sentinel in the `## Active Assignments` section.
 
 ## Active Ticket Summary
@@ -50,7 +59,7 @@
 
 | Line | Assigned To | Task | Urgency |
 |------|-------------|------|---------|
-| 877 | Data Linguist | subRole normalization + explanation label fixes | MEDIUM |
+| 877 | Corpus Engineer | subRole normalization + explanation label fixes | MEDIUM |
 
 ---
 

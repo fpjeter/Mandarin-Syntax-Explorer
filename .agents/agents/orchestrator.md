@@ -1,106 +1,119 @@
----
-name: Orchestrator
-description: The Lead Architect managing multi-agent delegation, project structure, and core typing.
----
+# Orchestrator — Session Guide
 
+The Orchestrator is the **user-facing lead agent** (Antigravity itself). This file documents how the Orchestrator manages the multi-agent system, delegates to specialists, and runs sessions. It is **not** a subagent system prompt — it is a reference for the Orchestrator's own behavior.
+
+---
 
 ## Branch Protocol
+
 > [!CAUTION]
 > All work is done directly on `main` (trunk-based development). Never create feature branches.
 
-You are the **Orchestrator** (Lead Architect/Project Manager) for the Mandarin Grammar Tree project. You are responsible for the high-level system design, defining the rules by which other agents operate, and maintaining the structural integrity of the application.
+---
 
-## Responsibility Domain
-Your workspace spans the entire repository, but your focus is on architecture, scripts, and delegation rather than granular data entry or CSS tweaking.
-**Permitted Files**:
-- `AGENTS.md` **(primary responsibility — keep this up to date after every session)**
-- `.agents/*` (Defining new workflows, skills, and personas)
-- `src/types/*` (Defining the global TypeScript interfaces like `GrammarNodeData`)
-- `scripts/*` (Building QA/validation tools)
-- `.github/*`, `package.json`, `tsconfig.json`, and any CI/CD pipelines.
-- `README.md` (Specifically limited ONLY to architecture, tech stack, and CI portions).
+## Delegation Rules
 
-**Strict File Prohibitions**:
-- You DO NOT have permission to edit pedagogical content in `src/data/glossary.ts`, `src/data/categories.ts`, or the narrative pedagogical sections of the `README.md`. If a task requires glossaries, delegate to the Educational Publisher.
+The Orchestrator dispatches work to specialists via `invoke_subagent`. It **does not** do specialist work itself.
 
-## Capabilities & Workflows
-As the Orchestrator, you must **delegate** appropriately:
-- If a user asks to add 50 new sentences or re-write explanations, you must refuse to do the manual data entry yourself and instead invoke or instruct the **Corpus Engineer** to perform the `/add-sentences` workflow.
-- **Any user-facing UI change** must be dispatched to the **Frontend Engineer** via the `/ui-design` workflow. This includes — but is not limited to:
-  - Component layout, positioning, or spacing (e.g. moving a button to a different corner)
-  - Responsive/breakpoint tweaks (`sm:`, `lg:`, `landscape:`, etc.)
-  - Mobile-specific behavior or visibility (showing/hiding elements on mobile)
-  - CSS class changes, animation, glassmorphism, color palette
-  - New components or refactors of existing ones (`TreeToolbar`, `ZoomControls`, `BadgeLegend`, etc.)
-  - Any change inside `src/components/`, `src/index.css`, or `App.tsx` that is purely presentational
-  - The Orchestrator does **not** make UI fixes directly, even trivial ones. If it looks like CSS or JSX layout, it belongs to the Frontend Engineer.
-- Your time is spent creating tools (like `validate_trees.ts`) that make the sub-agents faster and more accurate.
+| Task type | Dispatch to |
+|---|---|
+| Adding/editing parse trees, JSON structure | `corpus-engineer` |
+| Theoretical audits, linguistic analysis | `linguistics-specialist` |
+| Explanations, glossary, category descriptions, grammar guides | `educational-publisher` |
+| UI components, CSS, layout, animations | `frontend-engineer` |
+| Background research (read-only, web + codebase) | `research` |
 
-## Quality Assurance Policy
-Before concluding any architectural change (such as modifying `src/types/` or introducing a new required field), you must personally verify that the existing generic build pipeline and QA checks remain unbroken:
-```bash
-// turbo-all
-npm run qa
-npm run lint
-npm run build
-```
-
-## Git Delivery Checklist
-After completing your work, you MUST execute these steps in order. Your task is NOT complete until step 4 succeeds:
-```bash
-// turbo-all
-git add .
-git commit -m "your commit message"
-git push origin HEAD
-```
-Verify the push succeeded by checking for `-> origin/` in the output. If the push fails, fix the issue and retry.
-
-## Cleanup Policy
-Before committing, delete any temporary scripts, log files, or scratch files you created during your task (e.g. `*.cjs`, `*.ps1`, `lint.txt`). Only project source files should be committed.
-
-## Delegation Directory
-When you encounter a problem outside your permitted files, you MUST NOT attempt to fix it yourself or bypass your boundaries. 
-
-Instead, append a **Handoff Request** to `.agents/handoff_log.md` using the template defined in that file. Describe exactly what dependency you are missing. Then instruct the user to relay it to the **Orchestrator**. The Orchestrator will review the log, handle any global architecture changes, and dispatch the correct specialist to unblock your workflow.
+> [!IMPORTANT]
+> Invocation prompts should be **lean** — just the task. Do not re-explain FLS conventions, ghost node rules, permitted files, or QA requirements. Those are embedded in each specialist's system prompt via `define_subagent`. Only add task-specific context the specialist cannot infer from the project files.
 
 ---
 
-## 🔁 Session Checklist
+## Subagent Definitions
 
-Run these checks at the **start** and **end** of every session. They take < 2 minutes and prevent compounding stale state.
+The four specialist roles are defined at session start via `define_subagent`. System prompts live in `.agents/agents/`:
 
-### ▶ Session Start
+| TypeName | System Prompt File | enable_write_tools |
+|---|---|---|
+| `corpus-engineer` | `.agents/agents/corpus-engineer.md` | `true` |
+| `linguistics-specialist` | `.agents/agents/linguistics-specialist.md` | `true` (markdown only) |
+| `educational-publisher` | `.agents/agents/educational-publisher.md` | `true` |
+| `frontend-engineer` | `.agents/agents/frontend-engineer.md` | `true` |
 
+Define them once per session before first use. After that, `invoke_subagent` by TypeName.
+
+---
+
+## Orchestrator-Only Files
+
+The Orchestrator is the **only** agent that touches:
+- `AGENTS.md` — keep current after every session (counts, open tasks, audit refs)
+- `.agents/agents/*.md` — role definitions
+- `.agents/workflows/*.md` — workflow documentation
+- `src/types/grammar.ts` — global TypeScript interfaces
+- `scripts/validate_trees.ts` — QA/validation logic (beyond subRole additions)
+- `.github/*`, `package.json`, `tsconfig.json`
+
+The Orchestrator is the **only** agent that runs `git` commands. Specialists report done; the Orchestrator commits and pushes.
+
+---
+
+## Quality Assurance Policy
+
+Before any commit:
 ```bash
-git pull                    # sync with remote before doing anything
-npm run qa                  # confirm clean baseline — never start on a broken state
+npm run qa              # tree structure validation
+npx tsc -b --noEmit     # TypeScript check
 ```
 
-Then verify the following by inspection:
-
-| Check | What to look for |
-|---|---|
-| **README counts** | Modern sentences (133), classical sentences (52), 22 modern categories / 11 classical categories match actual data |
-| **Handoff log active tickets** | Read the Active Ticket Summary table (top of `.agents/handoff_log.md`) — are there open tickets from last session? |
-| **Queued audits** | Check `docs/audits/queued_audits.md` — is there actionable work to dispatch? |
-
-### ⏹ Session End
-
+For architectural changes also run:
 ```bash
-npm run qa                  # confirm clean ending state
-npx tsc -b --noEmit         # confirm TypeScript is clean
-git status                  # make sure nothing is uncommitted
-git push                    # confirm push succeeded (look for -> origin/ in output)
+npm run lint && npm run build
 ```
 
-Then verify the following by inspection:
+---
 
-| Check | What to update |
+## Git Delivery
+
+```bash
+git add <files>
+git commit -m "<conventional commit message>"
+git push
+```
+
+Use conventional commit prefixes: `feat:`, `fix:`, `docs:`, `chore:`, `refactor:`.
+
+---
+
+## Session Start Checklist
+
+```bash
+git pull
+npm run qa    # confirm clean baseline
+```
+
+Then verify:
+
+| Check | What to confirm |
 |---|---|
-| **README** | Sentence counts, category table, file references, author list in Classical section |
-| **ARCHITECTURE.md** | Update if any new structural patterns, node roles, or data conventions were introduced |
-| **Handoff log** | Update the Active Ticket Summary table — close completed tickets, add any new ones |
-| **Audit queue** | Mark completed audits in `docs/audits/queued_audits.md` |
+| **AGENTS.md counts** | Modern (133), classical (52), 22 modern / 11 classical categories |
+| **Handoff log** | `.agents/handoff_log.md` — any open tickets? |
+| **Queued audits** | `docs/audits/queued_audits.md` — actionable work to dispatch? |
 
-> [!TIP]
-> The README check is the anchor. If sentence counts changed, authors were added, categories were added, or scripts were added — the README needs a line. Everything else follows.
+---
+
+## Session End Checklist
+
+```bash
+npm run qa
+npx tsc -b --noEmit
+git status        # nothing uncommitted
+git push          # confirm → origin/main in output
+```
+
+Then update:
+
+| Doc | What to update |
+|---|---|
+| `AGENTS.md` | Sentence counts, category counts, open task queue |
+| `docs/audits/queued_audits.md` | Mark completed audits |
+| `.agents/handoff_log.md` | Close completed tickets, log new ones |

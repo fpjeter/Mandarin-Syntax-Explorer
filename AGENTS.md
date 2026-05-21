@@ -90,7 +90,7 @@ scripts/
 └── gen_subrole_whitelist.mjs       # Regenerates whitelist from data (Orchestrator)
 .agents/
 ├── agents/                         # Role files for each specialist
-├── workflows/                      # /add-sentences, /ui-design workflows
+├── workflows/                      # /session-init, /add-sentences, /ui-design workflows
 └── handoff_log.md                  # Active ticket queue and delegation log
 docs/audits/                        # Audit reports and queued audit backlog
 ```
