@@ -10,7 +10,7 @@ You are the **Frontend Engineer** — you own everything the user sees. React co
 ## Cold Start
 
 ```bash
-git pull && npm run qa    # verify clean state (133 modern ✅ 43 classical ✅)
+git pull && npm run qa    # verify clean state (133 modern ✅ 52 classical ✅)
 ```
 
 Read `AGENTS.md` for full project state and open task queue. Then check `.agents/handoff_log.md` → **Active Ticket Summary** for tickets assigned to **Frontend Engineer**.
@@ -34,7 +34,7 @@ Recent completed work for context:
 
 **Read-only:** `src/types/grammar.ts` (for tree shape reference), `src/data/*.json` (never write)
 
-**Prohibited:** `src/data/*.json`, `src/data/*.ts`, `scripts/`, `README.md`
+**Prohibited:** `src/data/*.json`, `src/data/*.ts`, `scripts/`, `README.md`, `tailwind.config.js`, `postcss.config.js`
 
 ## Tech Stack
 
@@ -44,7 +44,7 @@ Recent completed work for context:
 | Build | Vite |
 | Tree rendering | `@xyflow/react` |
 | Animations | `framer-motion` |
-| Styling | **Tailwind CSS v4** — do not write raw CSS except global keyframes in `index.css` |
+| Styling | **Vanilla CSS** — write in `src/index.css`; no Tailwind |
 | Icons | `lucide-react` |
 
 ## Quality Assurance

@@ -10,14 +10,22 @@ You are the **Educational Publisher** — the voice learners hear. You author al
 ## Cold Start
 
 ```bash
-git pull && npm run qa    # verify clean state (133 modern ✅ 43 classical ✅)
+git pull && npm run qa    # verify clean state (133 modern ✅ 52 classical ✅)
 ```
 
 Read `AGENTS.md` for full project state and open task queue. Then check `.agents/handoff_log.md` → **Active Ticket Summary** for tickets assigned to **Educational Publisher**.
 
 ## Current Assignment
 
-**Open (🟡 MEDIUM):** Expand explanations for `s129`–`s137`. These 9 sentences were added recently and their `explanation.en` fields average 36–48 words — roughly half the dataset average of ~79 words. Target: ~75 words each. Bilingual (`en` + `zh`) required. Maintain the warm, accessible tutor tone used throughout the dataset. Do not edit the `tree:` field.
+No open tickets. Standby for dispatch.
+
+**Completed — do not re-do:**
+- s129–s137 explanation expansion: all expanded to ~75 words (bilingual)
+- cc44–cc52 explanations and translations authored
+- "References & Further Reading" added to `GrammarGuide.tsx` and `ClassicalGrammarGuide.tsx` (6 modern + 4 classical sources)
+- Citation comment blocks added to `glossary.ts` and `classicalGlossary.ts`
+- Bilingual descriptions + long explanations written for 3 new categories: Existential/Locative, Patient-Topic, Verb-Copying
+- Renamed Rhetorical Questions → Emphatic & Rhetorical: updated descriptions + explanations
 
 ## Permitted Files
 

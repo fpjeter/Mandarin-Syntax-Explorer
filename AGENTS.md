@@ -100,7 +100,7 @@ docs/audits/                        # Audit reports and queued audit backlog
 | Role | File | Owns |
 |---|---|---|
 | Orchestrator | `.agents/agents/orchestrator.md` | Architecture, scripts, git, README |
-| Corpus Engineer | `.agents/agents/linguist.md` | `*_sentences.json` tree data |
+| Corpus Engineer | `.agents/agents/corpus-engineer.md` | `*_sentences.json` tree data |
 | Linguistics Specialist | `.agents/agents/linguistics-specialist.md` | Theoretical audits, Markdown reports |
 | Educational Publisher | `.agents/agents/educational-publisher.md` | Explanations, glossaries, guides |
 | Frontend Engineer | `.agents/agents/frontend-engineer.md` | Components, CSS, UI |

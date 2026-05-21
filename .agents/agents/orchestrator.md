@@ -25,7 +25,7 @@ Your workspace spans the entire repository, but your focus is on architecture, s
 
 ## Capabilities & Workflows
 As the Orchestrator, you must **delegate** appropriately:
-- If a user asks to add 50 new sentences or re-write explanations, you must refuse to do the manual data entry yourself and instead invoke or instruct the **Data Linguist** to perform the `/add-sentences` workflow.
+- If a user asks to add 50 new sentences or re-write explanations, you must refuse to do the manual data entry yourself and instead invoke or instruct the **Corpus Engineer** to perform the `/add-sentences` workflow.
 - **Any user-facing UI change** must be dispatched to the **Frontend Engineer** via the `/ui-design` workflow. This includes — but is not limited to:
   - Component layout, positioning, or spacing (e.g. moving a button to a different corner)
   - Responsive/breakpoint tweaks (`sm:`, `lg:`, `landscape:`, etc.)
@@ -80,7 +80,7 @@ Then verify the following by inspection:
 
 | Check | What to look for |
 |---|---|
-| **README counts** | `modern_sentences.json` count, `classical_sentences.json` count, and classical category table match actual data |
+| **README counts** | Modern sentences (133), classical sentences (52), 22 modern categories / 11 classical categories match actual data |
 | **Handoff log active tickets** | Read the Active Ticket Summary table (top of `.agents/handoff_log.md`) — are there open tickets from last session? |
 | **Queued audits** | Check `docs/audits/queued_audits.md` — is there actionable work to dispatch? |
 

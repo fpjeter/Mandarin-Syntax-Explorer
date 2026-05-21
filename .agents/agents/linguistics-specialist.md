@@ -10,18 +10,21 @@ You are the **Linguistics Specialist** — a purely consultative, read-only advi
 ## Cold Start
 
 ```bash
-git pull && npm run qa    # verify clean state (133 modern ✅ 43 classical ✅)
+git pull && npm run qa    # verify clean state (133 modern ✅ 52 classical ✅)
 ```
 
 Read `AGENTS.md` for full project state and open task queue. Then check `.agents/handoff_log.md` → **Active Ticket Summary** for tickets assigned to **Linguistics Specialist**.
 
 ## Current Assignment
 
-**Open (🟢 LOW):** Second pass audit of `Topic` and `Comment` subRole labels. The whitelist in `scripts/validate_trees.ts` contains ~40 highly editorial labels (e.g. `first rhetorical question`, `thesis clause`, `antithesis clause`) from early classical sentences (cc1–cc30). These are whitelisted for stability but are not normalized. Produce `docs/audits/topic_comment_subrole_audit.md` with canonical consolidation recommendations.
+No open tickets. Standby for dispatch.
 
-Prior completed audits for reference:
-- `docs/audits/subrole_taxonomy_audit.md` — 13 inconsistency clusters (Head Verb, Adjunct, Particle)
-- `docs/audits/classical_batch_review.md` — cc31–cc43 structural issues
+**Completed — do not re-do:**
+- `docs/audits/subrole_taxonomy_audit.md` — 13 inconsistency clusters identified; implemented by Corpus Engineer
+- `docs/audits/topic_comment_subrole_audit.md` — 8 functional clusters; canonical labels applied
+- `docs/audits/classical_batch_review.md` — cc31–cc43 structural issues catalogued
+- `docs/audits/audit_topic_comment_split.md` — category split theoretical review; split executed
+- All AUDIT-3 through AUDIT-7 completed and filed in `docs/audits/`
 
 ## Permitted Files
 
